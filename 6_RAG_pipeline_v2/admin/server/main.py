@@ -1,16 +1,14 @@
 import os
-import io
 import json
 import uuid
-import time
 import boto3
 import psycopg2
 import numpy as np
-from fastapi import FastAPI, File, UploadFile, HTTPException, Form, WebSocket, WebSocketDisconnect
+from fastapi import FastAPI, File, UploadFile, HTTPException, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
-from typing import List, Optional, Dict
+from typing import Optional, Dict
 from pathlib import Path
 from dotenv import load_dotenv
 from langchain_aws import ChatBedrock, BedrockEmbeddings
@@ -304,66 +302,6 @@ async def delete_document(doc_id: int):
 build_dir = os.path.join(os.path.dirname(__file__), "../client/build")
 if os.path.exists(build_dir):
     app.mount("/", StaticFiles(directory=build_dir, html=True), name="static")
-
-# 문서 임베딩 엔드포인트
-@app.post("/api/admin/embed", response_model=ApiResponse)
-async def embed_text(text: str = Form(...)):
-    try:
-        bedrock_client = get_bedrock_client()
-        embedding = get_embedding(text, bedrock_client)
-        return ApiResponse(
-            status="success",
-            message="텍스트 임베딩 생성 완료",
-            data={"embedding": embedding}
-        )
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-# 유사도 검색 엔드포인트
-@app.post("/api/admin/similarity-search", response_model=ApiResponse)
-async def similarity_search(query: str = Form(...), k: int = Form(3)):
-    try:
-        bedrock_client = get_bedrock_client()
-        query_embedding = get_embedding(query, bedrock_client)
-        similar_chunks = find_similar_chunks(query_embedding, k)
-        
-        return ApiResponse(
-            status="success",
-            message=f"상위 {k}개의 유사 문서 찾음",
-            data={
-                "similar_documents": [
-                    {
-                        "content": chunk[0],
-                        "metadata": chunk[1],
-                        "similarity": 1 - np.linalg.norm(query_embedding - chunk[2])  # 유사도 계산
-                    } for chunk in similar_chunks
-                ]
-            }
-        )
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-# 문서 유사도 비교 엔드포인트
-@app.post("/api/admin/document-similarity", response_model=ApiResponse)
-async def compare_document_similarity(doc1: str = Form(...), doc2: str = Form(...)):
-    try:
-        bedrock_client = get_bedrock_client()
-        embedding1 = get_embedding(doc1, bedrock_client)
-        embedding2 = get_embedding(doc2, bedrock_client)
-        
-        # 코사인 유사도 계산
-        similarity = np.dot(embedding1, embedding2) / (np.linalg.norm(embedding1) * np.linalg.norm(embedding2))
-        
-        return ApiResponse(
-            status="success",
-            message="문서 간 유사도 계산 완료",
-            data={
-                "similarity_score": float(similarity),
-                "is_similar": similarity > 0.7  # 유사도 임계값 설정
-            }
-        )
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
 
 # 메인 실행
 if __name__ == "__main__":

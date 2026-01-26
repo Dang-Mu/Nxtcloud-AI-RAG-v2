@@ -71,11 +71,6 @@ number_of_users = 2  # 생성할 사용자 및 데이터베이스 수
 for i in range(1, number_of_users + 1):
     print(f'{i} 번째 유저의 데이터베이스 정보 생성중...\n\n')
     create_database_and_user(i)
-    
-# cursor = conn.cursor()
-# cursor.execute("SELECT datname FROM pg_database;")
-# result = cursor.fetchall()
-# print("All databases:", result)
 
 # 연결 종료
 conn.close()
