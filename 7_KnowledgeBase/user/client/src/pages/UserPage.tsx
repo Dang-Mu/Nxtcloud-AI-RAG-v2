@@ -1,30 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import { Message, Document } from '../types';
+import React, { useState } from 'react';
+import { Message } from '../types';
 import { ChatInterface } from '../components/ChatInterface';
 import { apiClient } from '../services/api';
 import '../styles/UserPage.css';
 
-export const UserPage: React.FC = () => {
+interface UserPageProps {
+  selectedKBIds: string[];
+}
+
+export const UserPage: React.FC<UserPageProps> = ({ selectedKBIds }) => {
   const [messages, setMessages] = useState<Message[]>([]);
-  const [documents, setDocuments] = useState<Document[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [sessionId] = useState(`user_${Date.now()}`);
 
-  useEffect(() => {
-    loadDocuments();
-  }, []);
-
-   const loadDocuments = async () => {
-     try {
-       const docs = await apiClient.getDocuments();
-       setDocuments(Array.isArray(docs) ? docs : []);
-     } catch (error) {
-       console.error('Failed to load documents:', error);
-       setDocuments([]);
-     }
-   };
-
   const handleSendMessage = async (query: string) => {
+    if (selectedKBIds.length === 0) {
+      const errorMessage: Message = {
+        id: `msg_${Date.now()}_error`,
+        type: 'assistant',
+        content: '검색할 Knowledge Base를 선택해주세요.',
+        timestamp: new Date()
+      };
+      setMessages((prev) => [...prev, errorMessage]);
+      return;
+    }
+
     const userMessage: Message = {
       id: `msg_${Date.now()}_user`,
       type: 'user',
@@ -38,7 +38,8 @@ export const UserPage: React.FC = () => {
     try {
       const response = await apiClient.chat({
         query,
-        session_id: sessionId
+        session_id: sessionId,
+        kb_ids: selectedKBIds
       });
 
       const assistantMessage: Message = {
@@ -50,8 +51,7 @@ export const UserPage: React.FC = () => {
       };
 
       setMessages((prev) => [...prev, assistantMessage]);
-    } catch (error) {
-      console.error('Chat error:', error);
+    } catch {
       const errorMessage: Message = {
         id: `msg_${Date.now()}_error`,
         type: 'assistant',
@@ -65,48 +65,23 @@ export const UserPage: React.FC = () => {
   };
 
   const handleClearHistory = async () => {
-    try {
-      await apiClient.clearChatHistory(sessionId);
-      setMessages([]);
-    } catch (error) {
-      console.error('Clear history error:', error);
-    }
+    await apiClient.clearChatHistory(sessionId);
+    setMessages([]);
   };
 
   return (
     <div className="user-page">
-      <aside className="app-sidebar">
-        <div className="sidebar-header">
-          <h2>📚 문서 목록</h2>
-        </div>
-        {documents.length === 0 ? (
-          <div className="no-docs">
-            <p>등록된 문서가 없습니다</p>
-          </div>
-        ) : (
-          <div className="documents-list">
-            {documents.map((doc) => (
-              <div key={doc.id} className="document-item">
-                <div className="doc-icon">📄</div>
-                <div className="doc-info">
-                  <h4>{doc.title}</h4>
-                  <span className="doc-meta">
-                    {doc.chunk_count} chunks • {new Date(doc.created_at || 0).toLocaleDateString('ko-KR')}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </aside>
-
       <main className="chat-layout">
         <header className="chat-header">
           <div className="header-content">
-            <h1>RAG Chat Assistant</h1>
+            <h1>Knowledge Base Chat Assistant</h1>
             <span className="status-badge">Online</span>
           </div>
-          <p className="subtitle">문서 기반 질의응답 시스템</p>
+          <p className="subtitle">
+            {selectedKBIds.length > 0 
+              ? `${selectedKBIds.length}개 KB 선택됨` 
+              : 'Knowledge Base를 선택해주세요'}
+          </p>
         </header>
 
         <div className="chat-container-wrapper">

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Message, Source } from '../types';
+import { Message } from '../types';
 import '../styles/ChatInterface.css';
 
 interface ChatInterfaceProps {
@@ -46,7 +46,7 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({
         {messages.length === 0 ? (
           <div className="empty-state">
             <p>💬 대화를 시작해보세요</p>
-            <p className="hint">문서에 대한 질문을 입력하면 답변을 얻을 수 있습니다</p>
+            <p className="hint">Knowledge Base에 대한 질문을 입력하면 답변을 얻을 수 있습니다</p>
           </div>
         ) : (
           messages.map((msg) => (
@@ -62,10 +62,16 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({
                     {msg.sources.map((source, idx) => (
                       <div key={idx} className="source-item">
                         <span className="page-number">
-                          {source.document_title ? `${source.document_title} - ` : ''}
-                          {source.page}페이지
+                          {source.document_title ? `${source.document_title} • ` : ''}
+                          {source.page ? `${source.page}페이지` : ''}
+                          {source.score ? ` • 점수: ${source.score.toFixed(4)}` : ''}
                         </span>
                         <p className="source-text">{source.content}</p>
+                        {source.location?.s3Location?.uri && (
+                          <p className="source-uri" style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>
+                            {source.location.s3Location.uri}
+                          </p>
+                        )}
                       </div>
                     ))}
                   </div>
@@ -82,7 +88,7 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({
         )}
         {isLoading && (
           <div className="message assistant-message">
-            <div className="loading">
+            <div className="loading-container">
               <span className="dot"></span>
               <span className="dot"></span>
               <span className="dot"></span>
@@ -108,7 +114,7 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({
             disabled={isLoading || !input.trim()}
             className="send-button"
           >
-            ✉️
+            보내기
           </button>
         </div>
         <button onClick={onClearHistory} className="clear-button">

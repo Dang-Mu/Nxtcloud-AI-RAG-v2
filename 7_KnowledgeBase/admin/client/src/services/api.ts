@@ -6,7 +6,6 @@ import {
   KBUploadResponse,
   IngestStatusResponse,
   ApiResponse,
-  Document,
   ChatRequest,
   ChatResponse
 } from '../types';
@@ -50,95 +49,58 @@ class ApiClient {
   }
 
   async getKBs(): Promise<KnowledgeBase[]> {
-    try {
-      const response = await this.client.get<ApiResponse<any>>('/admin/kbs');
-      const data = response.data.data?.kbs;
-      return Array.isArray(data) ? data : [];
-    } catch (error) {
-      console.error('Error fetching KBs:', error);
-      throw error;
-    }
+    const response = await this.client.get<ApiResponse<any>>('/admin/kbs');
+    const data = response.data.data?.kbs;
+    return Array.isArray(data) ? data : [];
   }
 
   async registerKB(data: KBRegistrationRequest): Promise<ApiResponse<null>> {
-    try {
-      const response = await this.client.post<ApiResponse<null>>('/admin/kbs', data);
-      return response.data;
-    } catch (error) {
-      console.error('Error registering KB:', error);
-      throw error;
-    }
+    const response = await this.client.post<ApiResponse<null>>('/admin/kbs', data);
+    return response.data;
   }
 
   async deleteKB(kbId: string): Promise<ApiResponse<null>> {
-    try {
-      const response = await this.client.delete<ApiResponse<null>>(`/admin/kbs/${kbId}`);
-      return response.data;
-    } catch (error) {
-      console.error('Error deleting KB:', error);
-      throw error;
-    }
+    const response = await this.client.delete<ApiResponse<null>>(`/admin/kbs/${kbId}`);
+    return response.data;
   }
 
   async uploadAndSync(data: KBUploadRequest): Promise<ApiResponse<KBUploadResponse>> {
-    try {
-      const formData = new FormData();
-      formData.append('kb_id', data.kb_id);
-      formData.append('ds_id', data.ds_id);
-      formData.append('bucket', data.bucket);
-      formData.append('file', data.file);
+    const formData = new FormData();
+    formData.append('kb_id', data.kb_id);
+    formData.append('ds_id', data.ds_id);
+    formData.append('bucket', data.bucket);
+    formData.append('file', data.file);
 
-      const response = await this.client.post<ApiResponse<KBUploadResponse>>(
-        '/admin/upload-and-sync',
-        formData
-      );
-      return response.data;
-    } catch (error) {
-      console.error('Error uploading and syncing:', error);
-      throw error;
-    }
+    const response = await this.client.post<ApiResponse<KBUploadResponse>>(
+      '/admin/upload-and-sync',
+      formData
+    );
+    return response.data;
   }
 
   async getIngestStatus(kbId: string, dsId: string, jobId: string): Promise<IngestStatusResponse> {
-    try {
-      const response = await this.client.get<ApiResponse<IngestStatusResponse>>(
-        `/admin/ingest-status/${kbId}/${dsId}/${jobId}`
-      );
-      return response.data.data || { status: 'ERROR' };
-    } catch (error) {
-      console.error('Error checking ingest status:', error);
-      return { status: 'ERROR' };
-    }
+    const response = await this.client.get<ApiResponse<IngestStatusResponse>>(
+      `/admin/ingest-status/${kbId}/${dsId}/${jobId}`
+    );
+    return response.data.data || { status: 'ERROR' };
   }
 
-  async getDocuments(): Promise<Document[]> {
+  async getDocumentsByDsId(dsId: string): Promise<any> {
     try {
-      const response = await this.client.get<ApiResponse<any>>('/documents');
-      const data = response.data.data?.documents;
-      return Array.isArray(data) ? data : [];
+      const response = await this.client.get<ApiResponse<any>>(`/admin/documents/${dsId}`);
+      return response.data.data || { documents: [] };
     } catch (error) {
-      console.error('Error fetching documents:', error);
-      throw error;
+      return { documents: [], error: String(error) };
     }
   }
 
   async chat(request: ChatRequest): Promise<ChatResponse> {
-    try {
-      const response = await this.client.post<ChatResponse>('/chat', request);
-      return response.data;
-    } catch (error) {
-      console.error('Error sending chat message:', error);
-      throw error;
-    }
+    const response = await this.client.post<ChatResponse>('/chat', request);
+    return response.data;
   }
 
   async clearChatHistory(sessionId: string): Promise<void> {
-    try {
-      await this.client.delete(`/chat-history/${sessionId}`);
-    } catch (error) {
-      console.error('Error clearing chat history:', error);
-      throw error;
-    }
+    await this.client.delete(`/chat-history/${sessionId}`);
   }
 }
 

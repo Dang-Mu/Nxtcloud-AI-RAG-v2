@@ -23,6 +23,12 @@ export const KBList: React.FC<KBListProps> = ({
            kb.kb_id.toLowerCase().includes(searchTerm.toLowerCase());
   });
 
+  // Data Source ID를 파싱하여 배열로 변환 (쉼표로 구분된 경우 처리)
+  const parseDataSourceIds = (dsId: string): string[] => {
+    if (!dsId) return [];
+    return dsId.split(',').map(id => id.trim()).filter(id => id.length > 0);
+  };
+
   const handleDeleteClick = (kbId: string) => {
     setDeleteConfirm(kbId);
   };
@@ -70,8 +76,6 @@ export const KBList: React.FC<KBListProps> = ({
               <tr>
                 <th>KB 정보</th>
                 <th>Data Source ID</th>
-                <th>S3 Bucket</th>
-                <th>S3 Prefix</th>
                 <th>관리</th>
               </tr>
             </thead>
@@ -85,13 +89,36 @@ export const KBList: React.FC<KBListProps> = ({
                     </div>
                   </td>
                   <td>
-                    <span className="chunk-badge">{kb.ds_id}</span>
-                  </td>
-                  <td>
-                    <span className="doc-meta">{kb.bucket}</span>
-                  </td>
-                  <td>
-                    <span className="doc-meta">{kb.prefix || '-'}</span>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', alignItems: 'flex-start' }}>
+                      {parseDataSourceIds(kb.ds_id).map((dsId, idx) => (
+                        <span 
+                          key={idx} 
+                          className="chunk-badge" 
+                          style={{ 
+                            display: 'inline-block', 
+                            width: 'auto',
+                            maxWidth: '100%',
+                            whiteSpace: 'nowrap'
+                          }}
+                        >
+                          {dsId}
+                        </span>
+                      ))}
+                      {parseDataSourceIds(kb.ds_id).length === 0 && (
+                        <span 
+                          className="chunk-badge" 
+                          style={{ 
+                            color: '#999', 
+                            display: 'inline-block', 
+                            width: 'auto',
+                            maxWidth: '100%',
+                            whiteSpace: 'nowrap'
+                          }}
+                        >
+                          {kb.ds_id || '-'}
+                        </span>
+                      )}
+                    </div>
                   </td>
                   <td>
                     <div className="action-buttons">
