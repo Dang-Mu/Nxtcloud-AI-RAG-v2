@@ -3,18 +3,17 @@ import {
   Document,
   ChatRequest,
   ChatResponse,
-  DocumentUploadRequest,
-  DocumentUploadResponse,
   ApiResponse
 } from '../types';
 
 const getBaseUrl = () => {
-  if (process.env.REACT_APP_API_URL) return process.env.REACT_APP_API_URL;
-  if (typeof window !== 'undefined') {
-    if (window.location.port === '8001' || window.location.port === '8002') {
-      return `${window.location.origin}/api`;
-    }
+  // 환경 변수에서 API URL 가져오기
+  const apiUrl = process.env.REACT_APP_API_URL;
+  if (apiUrl) {
+    // 이미 /api가 포함되어 있으면 그대로 사용, 없으면 추가
+    return apiUrl.includes('/api') ? apiUrl : `${apiUrl.replace(/\/$/, '')}/api`;
   }
+  // 개발 환경에서 기본값 사용
   return '/api';
 };
 
@@ -69,57 +68,7 @@ class ApiClient {
     }
   }
 
-  async getAdminDocuments(): Promise<Document[]> {
-    try {
-      const response = await this.client.get<ApiResponse<any>>('/admin/documents');
-      const data = response.data.data?.documents;
-      return Array.isArray(data) ? data : [];
-    } catch (error) {
-      console.error('Error fetching admin documents:', error);
-      throw error;
-    }
-  }
 
-  async uploadDocument(data: DocumentUploadRequest): Promise<DocumentUploadResponse> {
-    try {
-      const formData = new FormData();
-      formData.append('file', data.file);
-
-      const response = await axios.post<DocumentUploadResponse>(
-        `${API_BASE_URL}/admin/documents`,
-        formData
-      );
-      return response.data;
-    } catch (error) {
-      console.error('Error uploading document:', error);
-      throw error;
-    }
-  }
-
-  async deleteDocument(docId: number): Promise<ApiResponse<null>> {
-    try {
-      const response = await this.client.delete<ApiResponse<null>>(
-        `/admin/documents/${docId}`
-      );
-      return response.data;
-    } catch (error) {
-      console.error('Error deleting document:', error);
-      throw error;
-    }
-  }
-
-  async updateDocument(docId: number, guidelines: any): Promise<ApiResponse<Document>> {
-    try {
-      const response = await this.client.put<ApiResponse<Document>>(
-        `/admin/documents/${docId}`,
-        guidelines
-      );
-      return response.data;
-    } catch (error) {
-      console.error('Error updating document:', error);
-      throw error;
-    }
-  }
 }
 
 export const apiClient = new ApiClient();

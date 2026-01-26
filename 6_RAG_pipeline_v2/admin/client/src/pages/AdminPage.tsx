@@ -35,8 +35,8 @@ export const AdminPage: React.FC = () => {
         await new Promise(resolve => setTimeout(resolve, 10000));
         await loadDocuments(true); // 이미 isLoading이 true이므로 silent 모드로 호출
       }
-    } catch {
-      // Error handling removed
+    } catch (error) {
+      console.error('Failed to upload document:', error);
     } finally {
       setIsLoading(false);
     }
@@ -51,8 +51,8 @@ export const AdminPage: React.FC = () => {
       if (response.status === 'success') {
         await loadDocuments(true); // 이미 isLoading이 true이므로 silent 모드로 호출
       }
-    } catch {
-      // Error handling removed
+    } catch (error) {
+      console.error('Failed to delete document:', error);
     } finally {
       setIsLoading(false);
     }

@@ -1,24 +1,28 @@
 import React from 'react';
+import { ThemeProvider } from './contexts/ThemeContext';
+import { LayoutProvider } from './contexts/LayoutContext';
 import { UserPage } from './pages/UserPage';
+import Sidebar from './components/Sidebar';
 import './styles/globals.css';
+
+const AppContent: React.FC = () => {
+  return (
+    <div className="app-layout">
+      <Sidebar />
+      <main className="app-main-content">
+        <UserPage />
+      </main>
+    </div>
+  );
+};
 
 function App() {
   return (
-    <div className="app-container">
-      <nav className="app-nav">
-        <div className="nav-logo">
-          <h1>📚 RAG 사용자 서비스</h1>
-        </div>
-      </nav>
-
-      <main className="app-main">
-        <UserPage />
-      </main>
-
-      <footer className="app-footer">
-        <p>&copy; 2024 RAG Chatbot v2 - User. All rights reserved.</p>
-      </footer>
-    </div>
+    <ThemeProvider>
+      <LayoutProvider>
+        <AppContent />
+      </LayoutProvider>
+    </ThemeProvider>
   );
 }
 

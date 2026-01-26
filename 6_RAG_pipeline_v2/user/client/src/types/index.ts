@@ -2,7 +2,6 @@
 export interface Document {
   id: number;
   title: string;
-  s3_key: string;
   chunk_count: number;
   created_at?: string;
 }
@@ -35,21 +34,7 @@ export interface ChatResponse {
   sources: Source[];
 }
 
-// 문서 업로드 요청
-export interface DocumentUploadRequest {
-  file: File;
-  title: string;
-  description: string;
-  category: string;
-  queryable_topics: string[];
-  example_questions: string[];
-}
 
-export interface DocumentUploadResponse {
-  status: 'success' | 'error';
-  document_id?: number;
-  message: string;
-}
 
 // API 응답 래퍼
 export interface ApiResponse<T> {

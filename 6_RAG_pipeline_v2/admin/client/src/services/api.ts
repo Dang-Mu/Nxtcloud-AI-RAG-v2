@@ -9,7 +9,13 @@ import {
 } from '../types';
 
 const getBaseUrl = () => {
-  if (process.env.REACT_APP_API_URL) return process.env.REACT_APP_API_URL;
+  // 환경 변수에서 API URL 가져오기
+  const apiUrl = process.env.REACT_APP_API_URL;
+  if (apiUrl) {
+    // 이미 /api가 포함되어 있으면 그대로 사용, 없으면 추가
+    return apiUrl.includes('/api') ? apiUrl : `${apiUrl.replace(/\/$/, '')}/api`;
+  }
+  
   if (typeof window !== 'undefined') {
     // 8001(admin) 또는 8002(user) 포트에서 실행 중이면 해당 origin 사용
     // npm start(3000) 등에서 실행 중이면 proxy 설정을 타도록 상대 경로만 반환
@@ -110,18 +116,6 @@ class ApiClient {
     }
   }
 
-  async updateDocumentGuidelines(docId: number, guidelines: any): Promise<ApiResponse<Document>> {
-    try {
-      const response = await this.client.put<ApiResponse<Document>>(
-        `/admin/documents/${docId}`,
-        guidelines
-      );
-      return response.data;
-    } catch (error) {
-      console.error('Error updating document guidelines:', error);
-      throw error;
-    }
-  }
 }
 
 export const apiClient = new ApiClient();

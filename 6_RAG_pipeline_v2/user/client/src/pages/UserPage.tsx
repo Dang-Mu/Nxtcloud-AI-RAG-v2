@@ -1,28 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { Message, Document } from '../types';
+import React, { useState } from 'react';
+import { Message } from '../types';
 import { ChatInterface } from '../components/ChatInterface';
 import { apiClient } from '../services/api';
 import '../styles/UserPage.css';
 
 export const UserPage: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([]);
-  const [documents, setDocuments] = useState<Document[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [sessionId] = useState(`user_${Date.now()}`);
-
-  useEffect(() => {
-    loadDocuments();
-  }, []);
-
-   const loadDocuments = async () => {
-     try {
-       const docs = await apiClient.getDocuments();
-       setDocuments(Array.isArray(docs) ? docs : []);
-     } catch (error) {
-       console.error('Failed to load documents:', error);
-       setDocuments([]);
-     }
-   };
 
   const handleSendMessage = async (query: string) => {
     const userMessage: Message = {
@@ -75,31 +60,6 @@ export const UserPage: React.FC = () => {
 
   return (
     <div className="user-page">
-      <aside className="app-sidebar">
-        <div className="sidebar-header">
-          <h2>📚 문서 목록</h2>
-        </div>
-        {documents.length === 0 ? (
-          <div className="no-docs">
-            <p>등록된 문서가 없습니다</p>
-          </div>
-        ) : (
-          <div className="documents-list">
-            {documents.map((doc) => (
-              <div key={doc.id} className="document-item">
-                <div className="doc-icon">📄</div>
-                <div className="doc-info">
-                  <h4>{doc.title}</h4>
-                  <span className="doc-meta">
-                    {doc.chunk_count} chunks • {new Date(doc.created_at).toLocaleDateString('ko-KR')}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </aside>
-
       <main className="chat-layout">
         <header className="chat-header">
           <div className="header-content">
