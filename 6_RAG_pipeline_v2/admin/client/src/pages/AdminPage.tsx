@@ -13,16 +13,16 @@ export const AdminPage: React.FC = () => {
     loadDocuments();
   }, []);
 
-  const loadDocuments = async () => {
+  const loadDocuments = async (silent = false) => {
     try {
-      setIsLoading(true);
+      if (!silent) setIsLoading(true);
       const docs = await apiClient.getAdminDocuments();
       setDocuments(docs);
     } catch (error) {
       console.error('Failed to load documents:', error);
       setDocuments([]);
     } finally {
-      setIsLoading(false);
+      if (!silent) setIsLoading(false);
     }
   };
 
@@ -31,7 +31,9 @@ export const AdminPage: React.FC = () => {
       setIsLoading(true);
       const response = await apiClient.uploadDocument(data);
       if (response.status === 'success') {
-        await loadDocuments();
+        // 사용자 요청에 따른 10초 인위적 딜레이 (업로드 처리 및 인덱싱 대기 연출)
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        await loadDocuments(true); // 이미 isLoading이 true이므로 silent 모드로 호출
       }
     } catch {
       // Error handling removed
@@ -43,9 +45,11 @@ export const AdminPage: React.FC = () => {
   const handleDelete = async (docId: number) => {
     try {
       setIsLoading(true);
+      // 사용자 요청에 따른 5초 인위적 딜레이 (자연스러운 로딩 연출)
+      await new Promise(resolve => setTimeout(resolve, 5000));
       const response = await apiClient.deleteDocument(docId);
       if (response.status === 'success') {
-        await loadDocuments();
+        await loadDocuments(true); // 이미 isLoading이 true이므로 silent 모드로 호출
       }
     } catch {
       // Error handling removed

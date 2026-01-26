@@ -276,6 +276,30 @@ async def upload_document(file: UploadFile = File(...)):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+# 문서 삭제
+@app.delete("/api/admin/documents/{doc_id}", response_model=ApiResponse)
+async def delete_document(doc_id: int):
+    try:
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        
+        cursor.execute("""
+            DELETE FROM documents 
+            WHERE metadata->>'document_file_id' = %s
+        """, (str(doc_id),))
+        
+        deleted_count = cursor.rowcount
+        cursor.close()
+        conn.close()
+        
+        return ApiResponse(
+            status="success",
+            message=f"Document and {deleted_count} chunks deleted successfully",
+            data={"deleted_chunks": deleted_count}
+        )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 # 정적 파일 서빙 (기존과 동일)
 build_dir = os.path.join(os.path.dirname(__file__), "../client/build")
 if os.path.exists(build_dir):

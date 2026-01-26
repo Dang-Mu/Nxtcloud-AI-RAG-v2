@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Document } from '../types';
 import '../styles/DocumentList.css';
+import '../styles/Modal.css';
 
 interface DocumentListProps {
   documents: Document[];
@@ -129,20 +130,29 @@ export const DocumentList: React.FC<DocumentListProps> = ({
             <div className="modal-body">
               <p>이 문서를 삭제하시겠습니까? 삭제 후에는 복구할 수 없습니다.</p>
             </div>
-            <div className="modal-footer">
-              <button
-                onClick={handleCancelDelete}
-                className="btn-secondary"
-              >
-                취소
-              </button>
-              <button
-                onClick={() => handleConfirmDelete(deleteConfirm)}
-                className="btn-danger"
-              >
-                삭제하기
-              </button>
-            </div>
+              <div className="modal-footer">
+                <button
+                  onClick={handleCancelDelete}
+                  className="btn-secondary"
+                  disabled={isLoading}
+                >
+                  취소
+                </button>
+                <button
+                  onClick={() => handleConfirmDelete(deleteConfirm)}
+                  className="btn-danger"
+                  disabled={isLoading}
+                >
+                  {isLoading ? (
+                    <span className="btn-loading-content">
+                      <span className="spinner-small"></span>
+                      삭제 중...
+                    </span>
+                  ) : (
+                    '삭제하기'
+                  )}
+                </button>
+              </div>
           </div>
         </div>
       )}

@@ -107,6 +107,32 @@
   box-shadow: 0 4px 6px -1px rgba(239, 68, 68, 0.4);
 }
 
+.btn-danger:disabled {
+  background-color: #fca5a5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn-loading-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.spinner-small {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 .notification {
   position: fixed;
   bottom: 2rem;

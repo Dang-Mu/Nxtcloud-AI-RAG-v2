@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { DocumentUploadRequest } from '../types';
 import '../styles/DocumentUpload.css';
+import '../styles/Modal.css';
 
 interface DocumentUploadProps {
   onUpload: (data: DocumentUploadRequest) => Promise<void>;
@@ -89,7 +90,14 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({
         )}
 
         <button type="submit" disabled={isLoading || !file} className="btn-upload">
-          {isLoading ? '업로드 중...' : '데이터 베이스에 추가하기'}
+          {isLoading ? (
+            <span className="btn-loading-content">
+              <span className="spinner-small"></span>
+              업로드 중...
+            </span>
+          ) : (
+            '데이터 베이스에 추가하기'
+          )}
         </button>
 
         {message && (
