@@ -120,6 +120,17 @@ class DatabaseInitializer:
                 print(f"  ✓ Vector extension installed")
 
                 cursor.execute('''
+                    CREATE TABLE IF NOT EXISTS document_files (
+                        id SERIAL PRIMARY KEY,
+                        filename TEXT,
+                        s3_key TEXT UNIQUE,
+                        chunk_count INTEGER,
+                        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+                    )
+                ''')
+                print(f"  ✓ Table document_files created")
+
+                cursor.execute('''
                     CREATE TABLE IF NOT EXISTS documents (
                         id SERIAL PRIMARY KEY,
                         content TEXT NOT NULL,
