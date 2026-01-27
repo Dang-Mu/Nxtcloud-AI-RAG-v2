@@ -4,9 +4,9 @@ import sys
 from typing import List, Optional
 
 # 연결 정보 (create_db.py와 동일한 설정 사용)
-rds_host = "nxt-ella-rag-db.cj24wem202yj.us-east-1.rds.amazonaws.com"
-db_username = 'postgres'
-db_password = '12345678aA'
+rds_host = ""
+db_username = ''
+db_password = ''
 
 
 def get_all_user_databases() -> List[str]:
