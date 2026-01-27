@@ -43,15 +43,6 @@ def create_database_and_user(user_index):
         cursor.execute(f"ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO {user_name}")
         cursor.execute("CREATE EXTENSION IF NOT EXISTS vector;")
         cursor.execute('''
-           CREATE TABLE IF NOT EXISTS document_files (
-               id SERIAL PRIMARY KEY,
-               filename TEXT,
-               s3_key TEXT UNIQUE,
-               chunk_count INTEGER,
-               created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-           )
-        ''')
-        cursor.execute('''
            CREATE TABLE IF NOT EXISTS documents (
                id SERIAL PRIMARY KEY,
                content TEXT,
