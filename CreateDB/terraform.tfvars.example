@@ -7,3 +7,4 @@ allocated_storage       = 20
 database_name           = "nxtcloud_db"
 db_master_username      = "postgres"
 db_master_password      = "your-secure-password"
+num_users               = 2

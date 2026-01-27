@@ -15,12 +15,12 @@ variable "db_instance_identifier" {
 
 variable "postgres_version" {
   type    = string
-  default = "15.4"
+  default = "17.1"
 }
 
 variable "postgres_family_version" {
   type    = string
-  default = "15"
+  default = "17"
 }
 
 variable "instance_class" {
@@ -46,4 +46,10 @@ variable "db_master_username" {
 variable "db_master_password" {
   type      = string
   sensitive = true
+}
+
+variable "num_users" {
+  type        = number
+  default     = 2
+  description = "Number of users/databases to create (default: 2)"
 }

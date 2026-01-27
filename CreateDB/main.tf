@@ -48,13 +48,18 @@ resource "aws_db_instance" "postgres" {
   performance_insights_enabled    = false
 
   provisioner "local-exec" {
-    command     = <<-EOT
+    command = <<-EOT
+      python3 -m venv venv
+      source venv/bin/activate
+      pip install psycopg2-binary python-dotenv
       python3 init_database.py \
-        --host=${aws_db_instance.postgres.address} \
-        --port=${aws_db_instance.postgres.port} \
-        --database=${aws_db_instance.postgres.db_name} \
+        --host=${self.address} \
+        --port=${self.port} \
+        --database=${var.database_name} \
         --username=${var.db_master_username} \
         --password=${var.db_master_password}
+      deactivate
+      rm -rf venv
     EOT
     interpreter = ["/bin/bash", "-c"]
   }

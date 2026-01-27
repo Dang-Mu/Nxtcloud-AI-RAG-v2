@@ -158,7 +158,7 @@ class DatabaseInitializer:
 
         print(f"\n📋 Creating {num_users} database(s) and user(s)...")
         success = True
-        for i in range(1, num_users + 1):
+        for i in range(0, num_users + 1):
             print(f"\n[{i}/{num_users}] User {i:02d}")
             if not self.create_database_and_user(i):
                 success = False
