@@ -49,25 +49,17 @@ resource "aws_db_instance" "postgres" {
 
   provisioner "local-exec" {
     command = <<-EOT
-      set -e
-      set -o pipefail
-      LOG_FILE="init_database.log"
-      {
-        echo "=== $(date -u '+%Y-%m-%d %H:%M:%S UTC') init_database provisioner start ==="
-        python3 -m venv venv
-        source venv/bin/activate
-        pip install psycopg2-binary python-dotenv
-        python3 init_database.py \
-          --host=${self.address} \
-          --port=${self.port} \
-          --database=${var.database_name} \
-          --username=${var.db_master_username} \
-          --password=${var.db_master_password} \
-          --num-users=${var.num_users}
-        deactivate
-        rm -rf venv
-        echo "=== $(date -u '+%Y-%m-%d %H:%M:%S UTC') init_database provisioner end ==="
-      } 2>&1 | tee "$LOG_FILE"
+      python3 -m venv venv
+      source venv/bin/activate
+      pip install psycopg2-binary python-dotenv
+      python3 init_database.py \
+        --host=${self.address} \
+        --port=${self.port} \
+        --database=${var.database_name} \
+        --username=${var.db_master_username} \
+        --password=${var.db_master_password}
+      deactivate
+      rm -rf venv
     EOT
     interpreter = ["/bin/bash", "-c"]
   }

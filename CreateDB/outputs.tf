@@ -1,3 +1,3 @@
 output "endpoint" {
-  value = aws_db_instance.postgres.endpoint
+  value = split(":", aws_db_instance.postgres.endpoint)[0]
 }
