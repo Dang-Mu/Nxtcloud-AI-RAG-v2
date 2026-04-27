@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>resoueceKB — Bedrock Knowledge Base 일괄 삭제 가이드</title>
+<style>
+  :root {
+    --primary: #cc4400;
+    --primary-dark: #993300;
+    --bg: #f7f8fa;
+    --surface: #ffffff;
+    --border: #e2e6eb;
+    --text: #1a1d21;
+    --text-muted: #5a6068;
+    --code-bg: #1e1e2e;
+    --code-text: #e4e4e7;
+    --warn-bg: #fff7e6;
+    --warn-border: #ffa940;
+    --danger-bg: #fff1f0;
+    --danger-border: #ff4d4f;
+    --success-bg: #f6ffed;
+    --success-border: #52c41a;
+    --info-bg: #e6f4ff;
+    --info-border: #1890ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Apple SD Gothic Neo", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    margin: 0;
+    padding: 0;
+  }
+  .layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    max-width: 1180px;
+    margin: 0 auto;
+    gap: 32px;
+    padding: 24px;
+  }
+  nav.toc {
+    position: sticky;
+    top: 24px;
+    align-self: start;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    font-size: 14px;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+  }
+  nav.toc h3 {
+    margin: 0 0 12px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+  }
+  nav.toc ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: step;
+  }
+  nav.toc li {
+    counter-increment: step;
+    margin: 6px 0;
+  }
+  nav.toc a {
+    color: var(--text);
+    text-decoration: none;
+    display: block;
+    padding: 6px 8px;
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  nav.toc a:hover { background: var(--bg); color: var(--primary); }
+  nav.toc a::before {
+    content: counter(step) ".";
+    color: var(--text-muted);
+    margin-right: 8px;
+    font-weight: 600;
+  }
+  main {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 40px 48px;
+    min-width: 0;
+  }
+  header.hero {
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+  }
+  header.hero h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+  }
+  header.hero p { margin: 0; color: var(--text-muted); }
+  h2 {
+    font-size: 22px;
+    margin-top: 48px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    scroll-margin-top: 24px;
+  }
+  h3 {
+    font-size: 17px;
+    margin-top: 28px;
+    margin-bottom: 12px;
+  }
+  p { margin: 12px 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  th, td {
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    text-align: left;
+  }
+  th {
+    background: var(--bg);
+    font-weight: 600;
+  }
+  td code, th code {
+    background: rgba(0,0,0,0.06);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+  }
+  .code-block {
+    position: relative;
+    margin: 16px 0;
+  }
+  pre {
+    background: var(--code-bg);
+    color: var(--code-text);
+    padding: 16px 18px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 0;
+    font-size: 13.5px;
+    font-family: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+    line-height: 1.55;
+  }
+  pre code { background: transparent; padding: 0; color: inherit; }
+  .copy-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(255,255,255,0.1);
+    color: var(--code-text);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s, background 0.15s;
+  }
+  .code-block:hover .copy-btn { opacity: 1; }
+  .copy-btn:hover { background: rgba(255,255,255,0.2); }
+  .copy-btn.copied { background: var(--success-border); border-color: var(--success-border); }
+  .callout {
+    border-left: 4px solid;
+    padding: 12px 16px;
+    margin: 16px 0;
+    border-radius: 6px;
+    font-size: 14.5px;
+  }
+  .callout.warn   { background: var(--warn-bg); border-color: var(--warn-border); }
+  .callout.danger { background: var(--danger-bg); border-color: var(--danger-border); }
+  .callout.info   { background: var(--info-bg); border-color: var(--info-border); }
+  .callout.success { background: var(--success-bg); border-color: var(--success-border); }
+  .callout strong { display: block; margin-bottom: 4px; }
+  .step {
+    background: var(--bg);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    border-left: 4px solid var(--primary);
+  }
+  .step-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .step-num {
+    background: var(--primary);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+  ul, ol { padding-left: 24px; }
+  li { margin: 4px 0; }
+  .required {
+    background: var(--danger-bg);
+    color: var(--danger-border);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-left: 6px;
+  }
+  details {
+    background: var(--bg);
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin: 12px 0;
+    border: 1px solid var(--border);
+  }
+  details summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--primary-dark);
+  }
+  details[open] summary { margin-bottom: 10px; }
+  .danger-banner {
+    background: linear-gradient(135deg, #ff4d4f 0%, #cf1322 100%);
+    color: white;
+    padding: 16px 20px;
+    border-radius: 10px;
+    margin: 0 0 24px;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(207, 19, 34, 0.25);
+  }
+  @media (max-width: 860px) {
+    .layout { grid-template-columns: 1fr; padding: 12px; gap: 16px; }
+    nav.toc { position: static; max-height: none; }
+    main { padding: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="toc">
+    <h3>가이드 목차</h3>
+    <ol>
+      <li><a href="#prereq">사전 요구사항</a></li>
+      <li><a href="#quickstart">빠른 시작 (3단계)</a></li>
+      <li><a href="#warning">주의사항</a></li>
+      <li><a href="#troubleshoot">트러블슈팅</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <header class="hero">
+      <h1>resoueceKB — Bedrock Knowledge Base 일괄 삭제</h1>
+      <p>이름에 특정 <strong>키워드가 포함된 Bedrock Knowledge Base</strong>와 거기에 딸린 IAM Role / S3 버킷을 한 번에 정리해주는 스크립트입니다.</p>
+    </header>
+
+    <div class="danger-banner">
+      🚨 이 스크립트는 데이터를 영구히 삭제합니다. 키워드를 매우 신중하게 설정하세요.
+    </div>
+
+    <p><strong>python3 delete-kb.py -p &lt;프로필&gt;</strong> 한 번 실행하면 다음 순서로 처리돼요:</p>
+    <div class="code-block">
+      <button class="copy-btn">복사</button>
+<pre><code>1. Bedrock Knowledge Base 목록 조회 (keyword 포함된 것만)
+   ↓
+2. 각 KB에 연결된 Data Source / S3 버킷 / IAM Role 수집
+   ↓
+3. 삭제 대상 목록 출력 → 사용자 확인 (y/n)
+   ↓
+4. 순서대로 삭제:
+   - Data Source 삭제
+   - Knowledge Base 삭제
+   - S3 버킷 비우기 + 삭제 (모든 버전 포함)
+   - IAM Role 삭제 (인라인/관리형 정책 detach 후)</code></pre>
+    </div>
+
+    <!-- 사전 요구사항 -->
+    <h2 id="prereq">1. 사전 요구사항</h2>
+    <table>
+      <thead>
+        <tr><th>도구</th><th>버전</th><th>설치 방법</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Python</td><td>3.8+</td><td><code>brew install python3</code></td></tr>
+        <tr><td>boto3</td><td>latest</td><td><code>pip install boto3</code></td></tr>
+        <tr><td>AWS CLI</td><td>2.x</td><td><code>brew install awscli</code></td></tr>
+      </tbody>
+    </table>
+
+    <h3>AWS 자격증명 설정</h3>
+    <div class="code-block">
+      <button class="copy-btn">복사</button>
+<pre><code>aws configure --profile default
+# Bedrock + IAM + S3 삭제 권한이 있는 계정 자격증명</code></pre>
+    </div>
+
+    <h3>필요한 IAM 권한</h3>
+    <ul>
+      <li><code>bedrock:ListKnowledgeBases</code>, <code>GetKnowledgeBase</code>, <code>DeleteKnowledgeBase</code></li>
+      <li><code>bedrock:ListDataSources</code>, <code>GetDataSource</code>, <code>DeleteDataSource</code></li>
+      <li><code>iam:ListRolePolicies</code>, <code>DeleteRolePolicy</code>, <code>ListAttachedRolePolicies</code>, <code>DetachRolePolicy</code>, <code>DeleteRole</code></li>
+      <li><code>s3:ListBucket</code>, <code>DeleteObject</code>, <code>DeleteObjectVersion</code>, <code>DeleteBucket</code></li>
+    </ul>
+
+    <!-- 빠른 시작 -->
+    <h2 id="quickstart">2. 빠른 시작 (3단계)</h2>
+
+    <div class="step">
+      <div class="step-title"><span class="step-num">1</span>boto3 설치</div>
+      <div class="code-block">
+        <button class="copy-btn">복사</button>
+<pre><code>pip install boto3</code></pre>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-title"><span class="step-num">2</span>삭제 대상 설정 <span class="required">필수</span></div>
+      <p><code>delete-kb.py</code> 파일을 열어 <strong>상단 두 값</strong>을 변경하세요:</p>
+      <div class="code-block">
+        <button class="copy-btn">복사</button>
+<pre><code>### 지워야하는 리소스 키워드 ###
+keyword = "kmucd1-"          # ⚠️ 삭제할 KB 이름에 포함된 키워드 (대소문자 무시)
+
+### 대상 리전 지정 ###
+region_name = 'us-east-1'    # ⚠️ KB가 만들어진 리전</code></pre>
+      </div>
+      <p><strong><code>keyword</code> 작동 방식</strong></p>
+      <ul>
+        <li>이름에 이 문자열이 포함된 KB만 삭제 대상</li>
+        <li>예: <code>keyword = "kmucd1-"</code> → <code>kmucd1-team1-kb</code>, <code>kmucd1-team2-kb</code> 모두 매칭</li>
+        <li>너무 짧거나 일반적인 단어(예: <code>"test"</code>, <code>"kb"</code>)는 의도치 않은 삭제 위험</li>
+      </ul>
+      <div class="callout warn">
+        <strong>⚠️ 사전 검증</strong>
+        실행 전 AWS 콘솔(Bedrock → Knowledge bases)에서 키워드 매칭 결과를 미리 확인하세요.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-title"><span class="step-num">3</span>실행</div>
+      <div class="code-block">
+        <button class="copy-btn">복사</button>
+<pre><code>python3 delete-kb.py -p default</code></pre>
+      </div>
+      <p><code>-p</code> 옵션은 AWS CLI 프로파일명입니다.</p>
+
+      <p><strong>실행 흐름:</strong></p>
+      <div class="code-block">
+<pre><code>시작
+
+찾은 Knowledge Base 목록:
+
+[KB] kmucd1-team1-kb (ID: ABCD1234)
+  IAM Role : AmazonBedrockExecutionRoleForKnowledgeBase_xxx
+  S3 버킷  : kmucd1-team1-data-bucket
+
+[KB] kmucd1-team2-kb (ID: EFGH5678)
+  IAM Role : AmazonBedrockExecutionRoleForKnowledgeBase_yyy
+  S3 버킷  : kmucd1-team2-data-bucket
+
+이 모든 KB / IAM Role / S3 버킷을 삭제하시겠습니까? (y/n):</code></pre>
+      </div>
+
+      <ul>
+        <li><code>y</code> 입력 → <strong>모든 대상 일괄 삭제</strong></li>
+        <li><code>n</code> 입력 → 각 KB마다 개별 확인 (선택 삭제 가능)</li>
+      </ul>
+    </div>
+
+    <!-- 주의사항 -->
+    <h2 id="warning">3. 주의사항</h2>
+
+    <div class="callout danger">
+      <strong>🚨 삭제는 되돌릴 수 없습니다</strong>
+      <ul style="margin: 6px 0 0;">
+        <li>KB가 삭제되면 임베딩된 모든 벡터 데이터가 사라집니다</li>
+        <li>S3 버킷이 비워지고 삭제되면 원본 문서도 모두 사라집니다</li>
+        <li>IAM Role이 삭제되면 그 Role을 사용하던 다른 리소스도 영향받을 수 있습니다</li>
+      </ul>
+    </div>
+
+    <h3>키워드를 신중하게 선택하세요</h3>
+    <table>
+      <thead>
+        <tr><th>❌ 위험한 키워드</th><th>✅ 안전한 키워드</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>"kb"</code> (모든 KB 매칭)</td><td><code>"kmucd1-"</code> (특정 워크숍만)</td></tr>
+        <tr><td><code>"-"</code> (대부분의 이름 매칭)</td><td><code>"workshop-2026q1-"</code> (시기 명시)</td></tr>
+        <tr><td><code>"test"</code> (너무 일반적)</td><td><code>"sandbox-team-a-"</code> (구체적)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>사전 검증 절차</h3>
+    <ol>
+      <li>Bedrock 콘솔 → Knowledge bases 메뉴 진입</li>
+      <li>검색창에 <code>keyword</code> 값 입력</li>
+      <li>매칭되는 KB 목록 확인 → 의도한 대상이 맞는지 검증</li>
+    </ol>
+
+    <!-- 트러블슈팅 -->
+    <h2 id="troubleshoot">4. 트러블슈팅</h2>
+
+    <details>
+      <summary>botocore.exceptions.NoCredentialsError</summary>
+      <p>AWS 자격증명이 설정되지 않았어요. <code>aws configure --profile &lt;프로필명&gt;</code> 실행 후 동일한 프로필명을 <code>-p</code> 옵션으로 넘기세요.</p>
+    </details>
+
+    <details>
+      <summary>AccessDeniedException</summary>
+      <p>사용 중인 IAM 사용자/역할에 권한이 부족합니다. 위 [사전 요구사항]의 IAM 권한 목록을 참고해 정책을 추가하세요.</p>
+    </details>
+
+    <details>
+      <summary>ConflictException: Knowledge base in use</summary>
+      <p>KB가 다른 곳(Agent, Application 등)에서 참조되고 있어요. 참조하는 리소스를 먼저 삭제하거나 disconnect 후 재시도하세요.</p>
+    </details>
+
+    <details>
+      <summary>S3 버킷 삭제 실패</summary>
+      <p>버전 관리가 활성화된 버킷에 삭제 마커가 남아있을 수 있어요. AWS 콘솔에서 직접 "비어 있음" 상태 확인 후 삭제하세요.</p>
+    </details>
+
+    <details>
+      <summary>"지정된 키워드가 포함된 Knowledge Base를 찾을 수 없습니다"</summary>
+      <p><code>keyword</code> 값과 <code>region_name</code>이 실제 KB와 일치하는지 확인하세요. 다른 리전에 KB가 있을 수 있어요.</p>
+    </details>
+  </main>
+</div>
+
+<script>
+document.querySelectorAll('.copy-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const code = btn.parentElement.querySelector('code').innerText;
+    navigator.clipboard.writeText(code).then(() => {
+      btn.textContent = '복사됨 ✓';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = '복사';
+        btn.classList.remove('copied');
+      }, 1500);
+    });
+  });
+});
+</script>
+</body>
+</html>
