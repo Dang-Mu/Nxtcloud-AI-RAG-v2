@@ -4,7 +4,9 @@
 terraform.tfstate
 terraform.tfstate.*
 *.tfvars
-!terraform.tfvars.example
+
+# Config (비밀번호 포함)
+config.yaml
 
 # Python
 __pycache__/

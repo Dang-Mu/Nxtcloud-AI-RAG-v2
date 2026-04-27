@@ -1,0 +1,64 @@
+# CreateDB 설정 파일
+# 사용 전: cp config.example.yaml config.yaml 후 값 수정
+
+# ============================================
+# AWS 설정
+# ============================================
+
+# AWS CLI 프로파일 (선택, 기본: default)
+# - ~/.aws/credentials의 프로파일 이름
+# - 예: default, ella-dev, prod
+aws_profile: "default"
+
+# AWS 리전 (선택, 기본: us-east-1)
+# - RDS 인스턴스가 생성될 리전
+# - 예: us-east-1, ap-northeast-2
+aws_region: "us-east-1"
+
+# ============================================
+# RDS 인스턴스 설정
+# ============================================
+
+# RDS 인스턴스 이름 (필수, 반드시 변경)
+# - AWS 콘솔에서 보이는 식별자
+# - 같은 계정/리전 내에서 유일해야 하므로 환경별로 구분되는 이름 사용
+# - 예: nxtcloud-postgres-dev, kmucd-2026, workshop-team-a
+db_instance_identifier: "nxtcloud-postgres"
+
+# PostgreSQL 버전 (선택, 기본: 17.6)
+# - postgres_family_version은 메이저 버전과 일치해야 함
+# - 예: postgres_version="17.6" → postgres_family_version="17"
+postgres_version: "17.6"
+postgres_family_version: "17"
+
+# 인스턴스 타입 (선택, 기본: db.t3.micro)
+# - db.t3.micro: AWS 프리티어 (월 750시간 무료)
+# - 운영용으로는 db.t3.medium 이상 권장
+instance_class: "db.t3.micro"
+
+# 저장소 크기 GB (선택, 기본: 20)
+# - 프리티어 최대 20GB
+allocated_storage: 20
+
+# ============================================
+# 데이터베이스 설정
+# ============================================
+
+# RDS 생성 시 자동 생성되는 초기 DB (선택, 기본: nxtcloud_db)
+# - init_database.py 스크립트의 진입점
+database_name: "nxtcloud_db"
+
+# 마스터 사용자명 (필수)
+# - PostgreSQL 슈퍼유저 계정
+db_master_username: "postgres"
+
+# 마스터 비밀번호 (필수, 반드시 변경)
+# - 8자 이상, 특수문자 사용 권장
+# - / @ " 공백 사용 불가
+db_master_password: "your-secure-password"
+
+# 추가 생성할 사용자/DB 개수 (필수, 반드시 변경)
+# - 사용 목적/학생 수에 맞춰 설정 (예: 워크숍 참가자 20명 → 20)
+# - 2면 user_01, user_02 + db_01, db_02 생성
+# - 각 DB에 document_files, documents (pgvector) 테이블 자동 생성
+num_users: 2
