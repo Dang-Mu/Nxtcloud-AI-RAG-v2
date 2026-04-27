@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CreateDB — PostgreSQL RDS 배포 가이드</title>
+<style>
+  :root {
+    --primary: #0066cc;
+    --primary-dark: #004999;
+    --bg: #f7f8fa;
+    --surface: #ffffff;
+    --border: #e2e6eb;
+    --text: #1a1d21;
+    --text-muted: #5a6068;
+    --code-bg: #1e1e2e;
+    --code-text: #e4e4e7;
+    --warn-bg: #fff7e6;
+    --warn-border: #ffa940;
+    --danger-bg: #fff1f0;
+    --danger-border: #ff4d4f;
+    --success-bg: #f6ffed;
+    --success-border: #52c41a;
+    --info-bg: #e6f4ff;
+    --info-border: #1890ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Apple SD Gothic Neo", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    margin: 0;
+    padding: 0;
+  }
+  .layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    max-width: 1180px;
+    margin: 0 auto;
+    gap: 32px;
+    padding: 24px;
+  }
+  nav.toc {
+    position: sticky;
+    top: 24px;
+    align-self: start;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    font-size: 14px;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+  }
+  nav.toc h3 {
+    margin: 0 0 12px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+  }
+  nav.toc ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: step;
+  }
+  nav.toc li {
+    counter-increment: step;
+    margin: 6px 0;
+  }
+  nav.toc a {
+    color: var(--text);
+    text-decoration: none;
+    display: block;
+    padding: 6px 8px;
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  nav.toc a:hover { background: var(--bg); color: var(--primary); }
+  nav.toc a::before {
+    content: counter(step) ".";
+    color: var(--text-muted);
+    margin-right: 8px;
+    font-weight: 600;
+  }
+  main {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 40px 48px;
+    min-width: 0;
+  }
+  header.hero {
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+  }
+  header.hero h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+  }
+  header.hero p { margin: 0; color: var(--text-muted); }
+  h2 {
+    font-size: 22px;
+    margin-top: 48px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    scroll-margin-top: 24px;
+  }
+  h3 {
+    font-size: 17px;
+    margin-top: 28px;
+    margin-bottom: 12px;
+  }
+  p { margin: 12px 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  th, td {
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    text-align: left;
+  }
+  th {
+    background: var(--bg);
+    font-weight: 600;
+  }
+  td code, th code {
+    background: rgba(0,0,0,0.06);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+  }
+  .code-block {
+    position: relative;
+    margin: 16px 0;
+  }
+  pre {
+    background: var(--code-bg);
+    color: var(--code-text);
+    padding: 16px 18px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 0;
+    font-size: 13.5px;
+    font-family: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+    line-height: 1.55;
+  }
+  pre code { background: transparent; padding: 0; color: inherit; }
+  .copy-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(255,255,255,0.1);
+    color: var(--code-text);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s, background 0.15s;
+  }
+  .code-block:hover .copy-btn { opacity: 1; }
+  .copy-btn:hover { background: rgba(255,255,255,0.2); }
+  .copy-btn.copied { background: var(--success-border); border-color: var(--success-border); }
+  .callout {
+    border-left: 4px solid;
+    padding: 12px 16px;
+    margin: 16px 0;
+    border-radius: 6px;
+    font-size: 14.5px;
+  }
+  .callout.warn   { background: var(--warn-bg); border-color: var(--warn-border); }
+  .callout.danger { background: var(--danger-bg); border-color: var(--danger-border); }
+  .callout.info   { background: var(--info-bg); border-color: var(--info-border); }
+  .callout.success { background: var(--success-bg); border-color: var(--success-border); }
+  .callout strong { display: block; margin-bottom: 4px; }
+  .step {
+    background: var(--bg);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    border-left: 4px solid var(--primary);
+  }
+  .step-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .step-num {
+    background: var(--primary);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+  ul, ol { padding-left: 24px; }
+  li { margin: 4px 0; }
+  .required {
+    background: var(--danger-bg);
+    color: var(--danger-border);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-left: 6px;
+  }
+  details {
+    background: var(--bg);
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin: 12px 0;
+    border: 1px solid var(--border);
+  }
+  details summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--primary-dark);
+  }
+  details[open] summary { margin-bottom: 10px; }
+  @media (max-width: 860px) {
+    .layout { grid-template-columns: 1fr; padding: 12px; gap: 16px; }
+    nav.toc { position: static; max-height: none; }
+    main { padding: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="toc">
+    <h3>가이드 목차</h3>
+    <ol>
+      <li><a href="#prereq">사전 요구사항</a></li>
+      <li><a href="#quickstart">빠른 시작 (3단계)</a></li>
+      <li><a href="#destroy">정리 (삭제)</a></li>
+      <li><a href="#config">설정 항목</a></li>
+      <li><a href="#troubleshoot">트러블슈팅</a></li>
+      <li><a href="#cost">비용 안내</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <header class="hero">
+      <h1>CreateDB — PostgreSQL RDS 배포 가이드</h1>
+      <p>AWS Default VPC에 PostgreSQL RDS 인스턴스를 만들고, 사용자/DB/테이블(pgvector 포함)을 자동으로 초기화합니다.</p>
+    </header>
+
+    <p><strong>./deploy.sh</strong> 한 번 실행하면 다음이 자동으로 만들어져요:</p>
+    <div class="code-block">
+      <button class="copy-btn">복사</button>
+<pre><code>RDS 인스턴스 (nxtcloud-postgres)
+└─ 초기 DB: nxtcloud_db ⭐ (RDS 생성 시 자동 생성)
+   │
+   ├─ db_01  (소유자: user_01)
+   │  ├─ document_files          # 원본 파일 메타데이터
+   │  └─ documents (pgvector)    # 임베딩 벡터 저장
+   │
+   └─ db_02  (소유자: user_02)
+      ├─ document_files
+      └─ documents (pgvector)</code></pre>
+    </div>
+    <p><code>num_users</code> 값을 바꾸면 <code>user_03</code>, <code>db_03</code>... 도 자동 생성됩니다.</p>
+
+    <!-- 사전 요구사항 -->
+    <h2 id="prereq">1. 사전 요구사항</h2>
+    <table>
+      <thead>
+        <tr><th>도구</th><th>버전</th><th>설치 방법</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Terraform</td><td>1.0+</td><td><a href="https://www.terraform.io/downloads">terraform.io/downloads</a></td></tr>
+        <tr><td>AWS CLI</td><td>2.x</td><td><code>brew install awscli</code></td></tr>
+        <tr><td>Python</td><td>3.8+</td><td><code>brew install python3</code></td></tr>
+      </tbody>
+    </table>
+
+    <h3>AWS 자격증명 설정</h3>
+    <div class="code-block">
+      <button class="copy-btn">복사</button>
+<pre><code>aws configure --profile default
+# AWS Access Key ID, Secret Key, region, output 입력</code></pre>
+    </div>
+
+    <!-- 빠른 시작 -->
+    <h2 id="quickstart">2. 빠른 시작 (3단계)</h2>
+
+    <div class="step">
+      <div class="step-title"><span class="step-num">1</span>설정 파일 생성</div>
+      <div class="code-block">
+        <button class="copy-btn">복사</button>
+<pre><code>cp config.example.yaml config.yaml</code></pre>
+      </div>
+      <p><code>config.yaml</code>을 열어 <strong>반드시 변경할 값</strong>:</p>
+      <div class="code-block">
+        <button class="copy-btn">복사</button>
+<pre><code>aws_profile:            "default"             # AWS CLI 프로필명
+aws_region:             "us-east-1"           # 배포 리전
+db_instance_identifier: "nxtcloud-postgres"   # ⚠️ 환경별로 유일한 이름 (예: workshop-team-a)
+db_master_password:     "your-secure-pwd"     # ⚠️ 강력한 비밀번호로 변경 (8자 이상)
+num_users:              2                     # ⚠️ 워크숍 참가자/학생 수에 맞춰 설정</code></pre>
+      </div>
+      <div class="callout warn">
+        <strong>⚠️ 주의</strong>
+        비밀번호에 <code>/</code>, <code>@</code>, <code>"</code>, 공백은 사용할 수 없어요.<br>
+        <code>db_instance_identifier</code>는 같은 계정/리전 안에서 유일해야 합니다.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-title"><span class="step-num">2</span>배포 실행</div>
+      <div class="code-block">
+        <button class="copy-btn">복사</button>
+<pre><code>./deploy.sh</code></pre>
+      </div>
+      <p>배포 진행 단계:</p>
+      <ol>
+        <li>AWS 자격증명 확인</li>
+        <li>Terraform 초기화 (1분)</li>
+        <li>RDS 인스턴스 생성 <strong>(5~10분 소요)</strong></li>
+        <li><code>init_database.py</code> 자동 실행 → DB/사용자/테이블 생성</li>
+      </ol>
+      <p>성공하면 마지막에 엔드포인트가 출력돼요:</p>
+      <div class="code-block">
+<pre><code>[DEBUG]   엔드포인트:  nxtcloud-postgres.xxxxx.us-east-1.rds.amazonaws.com
+[DEBUG]   포트:        5432</code></pre>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-title"><span class="step-num">3</span>접속 테스트</div>
+      <div class="code-block">
+        <button class="copy-btn">복사</button>
+<pre><code># 엔드포인트 가져오기
+ENDPOINT=$(terraform output -raw endpoint)
+
+# 마스터 DB 접속
+psql -h $ENDPOINT -U postgres -d nxtcloud_db
+
+# DB 목록 확인
+\l
+
+# 사용자 db_01에 접속해서 테이블 확인
+psql -h $ENDPOINT -U user_01 -d db_01
+\dt</code></pre>
+      </div>
+      <div class="callout info">
+        <strong>💡 참고</strong>
+        <code>psql</code>이 없다면 <code>brew install postgresql</code> 또는 DBeaver / TablePlus 같은 GUI 클라이언트로 접속하셔도 됩니다.
+      </div>
+    </div>
+
+    <!-- 정리 -->
+    <h2 id="destroy">3. 정리 (삭제)</h2>
+    <div class="code-block">
+      <button class="copy-btn">복사</button>
+<pre><code>./destroy.sh</code></pre>
+    </div>
+    <p>확인 프롬프트(<code>yes</code> 입력)를 거친 후 RDS 인스턴스와 모든 데이터를 삭제합니다.</p>
+    <div class="callout danger">
+      <strong>🚨 주의</strong>
+      DB 데이터는 복구되지 않아요.
+    </div>
+
+    <!-- 설정 항목 -->
+    <h2 id="config">4. 설정 항목</h2>
+    <p>전체 설정은 <code>config.example.yaml</code>에 주석과 함께 있어요. 자주 바꾸는 항목만 정리하면:</p>
+    <table>
+      <thead>
+        <tr><th>항목</th><th>기본값</th><th>설명</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>aws_profile</code></td><td><code>default</code></td><td>AWS CLI 프로필</td></tr>
+        <tr><td><code>aws_region</code></td><td><code>us-east-1</code></td><td>배포 리전</td></tr>
+        <tr><td><code><strong>db_instance_identifier</strong></code><span class="required">필수</span></td><td><code>nxtcloud-postgres</code></td><td>계정/리전 내 유일한 이름</td></tr>
+        <tr><td><code>instance_class</code></td><td><code>db.t3.micro</code></td><td>프리티어. 운영용은 <code>db.t3.medium</code>+</td></tr>
+        <tr><td><code>allocated_storage</code></td><td><code>20</code></td><td>GB. 프리티어 최대 20</td></tr>
+        <tr><td><code>database_name</code></td><td><code>nxtcloud_db</code></td><td>초기 DB 이름 (자동 생성)</td></tr>
+        <tr><td><code>db_master_username</code></td><td><code>postgres</code></td><td>마스터 사용자명</td></tr>
+        <tr><td><code><strong>db_master_password</strong></code><span class="required">필수</span></td><td>—</td><td>강력한 비밀번호</td></tr>
+        <tr><td><code><strong>num_users</strong></code><span class="required">필수</span></td><td><code>2</code></td><td>워크숍 참가자/학생 수에 맞춰 설정</td></tr>
+      </tbody>
+    </table>
+
+    <h3>고정 설정 (변경 불가)</h3>
+    <p>비용 절감을 위해 다음 값은 코드에 고정되어 있어요:</p>
+    <table>
+      <thead>
+        <tr><th>설정</th><th>값</th><th>이유</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>skip_final_snapshot</code></td><td><code>true</code></td><td>삭제 시 스냅샷 비용 발생 안함</td></tr>
+        <tr><td><code>performance_insights_enabled</code></td><td><code>false</code></td><td>비용 절감</td></tr>
+        <tr><td><code>enabled_cloudwatch_logs_exports</code></td><td><code>[]</code></td><td>비용 절감</td></tr>
+        <tr><td><code>publicly_accessible</code></td><td><code>true</code></td><td>외부 접속 허용 (보안그룹 0.0.0.0/0)</td></tr>
+      </tbody>
+    </table>
+    <div class="callout warn">
+      <strong>운영 환경 주의사항</strong>
+      <code>publicly_accessible</code>을 <code>false</code>로, 보안그룹 CIDR을 회사 IP로 제한하세요.
+    </div>
+
+    <!-- 트러블슈팅 -->
+    <h2 id="troubleshoot">5. 트러블슈팅</h2>
+
+    <details>
+      <summary>AWS 자격증명 확인 실패</summary>
+      <p><code>aws configure --profile &lt;프로파일명&gt;</code>으로 자격증명 등록 후 <code>config.yaml</code>의 <code>aws_profile</code>과 일치시키세요.</p>
+    </details>
+
+    <details>
+      <summary>db_master_password를 안전한 값으로 변경하세요</summary>
+      <p><code>config.yaml</code>에서 <code>db_master_password</code>가 기본값(<code>your-secure-password</code>) 그대로면 차단됩니다. 변경 후 다시 실행하세요.</p>
+    </details>
+
+    <details>
+      <summary>RDS 생성은 됐는데 init_database.py 실행에서 실패</summary>
+      <p><code>init_database.log</code> 파일을 확인하세요. 보통 보안그룹이 외부 IP를 막고 있는 경우인데, <code>main.tf</code>의 보안그룹은 기본적으로 <code>0.0.0.0/0</code> 5432를 열어둡니다. 회사 방화벽이 아웃바운드 5432를 막고 있다면 다른 네트워크에서 시도해보세요.</p>
+    </details>
+
+    <details>
+      <summary>다시 배포하고 싶어요</summary>
+      <p><code>./destroy.sh</code> 후 <code>./deploy.sh</code> 다시 실행하세요. 같은 식별자(<code>db_instance_identifier</code>)로 재생성하면 시간이 약간 걸릴 수 있습니다 (스냅샷 정리).</p>
+    </details>
+
+    <details>
+      <summary>terraform.tfstate가 사라졌어요</summary>
+      <p>Terraform 상태 파일이 없으면 <code>destroy.sh</code>로는 리소스를 지울 수 없습니다. AWS 콘솔에서 직접 RDS 인스턴스를 삭제해야 해요.</p>
+    </details>
+
+    <!-- 비용 안내 -->
+    <h2 id="cost">6. 비용 안내</h2>
+    <h3>프리티어 기준 (12개월)</h3>
+    <ul>
+      <li>db.t3.micro: 월 750시간 무료</li>
+      <li>20GB gp3 스토리지: 무료</li>
+      <li>백업 스토리지: DB 사이즈만큼 무료</li>
+    </ul>
+
+    <h3>프리티어 종료 후 예상 비용 (us-east-1, 24/7 가동)</h3>
+    <ul>
+      <li>db.t3.micro: 약 $13/월</li>
+      <li>스토리지 20GB: 약 $2.3/월</li>
+      <li><strong>합계: 약 $15/월</strong></li>
+    </ul>
+
+    <div class="callout danger">
+      <strong>🚨 비용 주의</strong>
+      테스트 후 사용하지 않으면 반드시 <code>./destroy.sh</code>로 삭제하세요.
+    </div>
+  </main>
+</div>
+
+<script>
+document.querySelectorAll('.copy-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const code = btn.parentElement.querySelector('code').innerText;
+    navigator.clipboard.writeText(code).then(() => {
+      btn.textContent = '복사됨 ✓';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = '복사';
+        btn.classList.remove('copied');
+      }, 1500);
+    });
+  });
+});
+</script>
+</body>
+</html>
