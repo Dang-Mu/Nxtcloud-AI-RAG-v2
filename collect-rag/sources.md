@@ -1,0 +1,294 @@
+# 출처 목록
+
+> 형식: `- [제목](URL) — 발행일 · 도메인 태그 · 한 줄 요약`
+>
+> 도메인 태그: `[enterprise]` `[architecture]` `[agentic]` `[industry:금융]` `[industry:의료]` `[industry:법률]` `[industry:교육]` `[korea]`
+
+## 1차 자료 (엔지니어링 블로그·사례 연구·컨퍼런스)
+
+### 한국 (엔터프라이즈 사내 지식)
+- [네이버 플레이스 개발 블로그 — Backoffice AI Agent 구축기 RAG+MCP](https://medium.com/naver-place-dev/backoffice-ai-agent-%EA%B5%AC%EC%B6%95%EA%B8%B0-rag-mcp-%EA%B8%B0%EB%B0%98-%ED%94%8C%EB%A0%88%EC%9D%B4%EC%8A%A4ai-%ED%8A%B9%ED%99%94-%EC%A7%80%EC%8B%9D-%EA%B2%80%EC%83%89-%EC%8B%9C%EC%8A%A4%ED%85%9C-9a66b4afa1aa) — 2025 · [enterprise] [korea] · 플레이스 백오피스 RAG+MCP 에이전트, 토큰 -66% 툴호출 -49%
+- [우아한형제들 — AI 데이터 분석가 '물어보새' 등장 1부](https://techblog.woowahan.com/18144/) — 2024 · [enterprise] [korea] · GPT-4o+RAG+Text-To-SQL 사내 Slackbot
+- [우아한형제들 기술블로그](https://techblog.woowahan.com/) — 상시 · [enterprise] [korea] · 우아한공방 Bedrock KB 기반 디자인시스템 RAG 챗봇 등
+- [LY Corp Tech Blog — 엔터프라이즈 LLM 서비스 구축기 1 컨텍스트 엔지니어링](https://techblog.lycorp.co.jp/ko/building-an-llm-service-for-enterprise-1-context-engineering) — 2025 · [enterprise] [korea] · Flava AI Assistant 사내 LLM
+- [LY Corp Tech Blog — 2 에이전트 엔지니어링](https://techblog.lycorp.co.jp/ko/building-an-llm-service-for-enterprise-2-agent-engineering) — 2025 · [enterprise] [korea] · plan-and-execute vs ReAct 패턴
+- [LY Corp Tech Blog — Tech-Verse 2025 AI 회고](https://techblog.lycorp.co.jp/en/tech-verse-2025-recap-current-state-of-ly-ai-tech) — 2025 · [enterprise] [korea] · LY AI 기술 현황
+- [바이라인네트워크 — if(kakaoAI)2024 카카오엔터프라이즈의 RAG '청크'가 핵심](https://byline.network/2024/10/241022_kakaorag_3/) — 2024-10 · [enterprise] [korea] · Koworker 사내 챗봇 + 청크 전략
+- [if(kakaoAI)2024](https://if.kakao.com/2024) — 2024-10 · [enterprise] [korea] · 카카오 컨퍼런스
+- [딜사이트 — SKT 자체 LLM A.X 4.0 한국어 1위](https://dealsite.co.kr/articles/143106/068020) — 2025 · [enterprise] [korea] · A.X 4.0 + RAG 운영비 -65%
+- [SK Planet — 멀티 LLM 플레이그라운드](https://techtopic.skplanet.com/skp-prompthon24/) — 2024 · [enterprise] [korea] · 사내 LLM 실험 환경
+- [카카오뱅크 — 2300만 고객 AI](https://ai.kakaobank.com/b0f79cf9-a280-4ff5-af94-c9c38ef54956) — 2025 · [enterprise] [korea] · AI 플레이그라운드 + 가드레일 + RAG
+- [카카오뱅크 기술블로그](https://tech.kakaobank.com/) — 상시 · [enterprise] [korea] · 카카오뱅크 엔지니어링
+- [네이트뉴스 — 카카오뱅크 코드러너 2025](https://news.nate.com/view/20250922n12626) — 2025-09 · [enterprise] [korea] · 비기술 직군 참여 사내 컨퍼런스
+- [CIO Korea — 포스코홀딩스 Gemini 1.5 기반 뉴스·지식 검색 포털](https://www.cio.com/article/3538228/) — 2024 · [enterprise] [korea] · 포스코그룹 사내 RAG, 설비/전기 3만+ 페이지
+- [POSCO DX 뉴스룸](https://www.poscodx.com/kor/pr/newsRoom.do) — 상시 · [enterprise] [korea] · 포스코 DX 뉴스
+- [PRESS9 — 신한은행 '실행하는 AI'](http://www.press9.kr/news/articleView.html?idxno=64316) — 2025 · [enterprise] [korea] · AI ONE + LG CNS 협력 RAG
+- [삼성SDS 인사이트 — 2025 국내 은행 AI 전망](https://www.samsungsds.com/kr/insights/ai-in-banking-in-2025.html) — 2025 · [enterprise] [korea] · 국내 은행 AI 도입 분석
+- [THE AI — 스켈터랩스 벨라 큐나 LLM 연동 강화](https://www.newstheai.com/news/articleView.html?idxno=5199) — 2024 · [enterprise] [korea] · BELLA QNA RAG + 하이브리드 검색
+- [AI타임스 — 국민카드 이벤트 Q&AI 베타](https://www.aitimes.com/news/articleView.html?idxno=154625) — 2024 · [enterprise] [korea] · KB국민카드 LLM 챗봇 출시
+- [스켈터랩스 — 금융업 LLM 활용 사례](https://www.skelterlabs.com/blog/llm-usecase) — 2024 · [enterprise] [korea] · KB국민카드 RAG 도입 상세
+- [KT Cloud 기술 블로그 — Opensource Summit 2025 AI Foundry 챗봇 구축기](https://tech.ktcloud.com/entry/2025-11-ktcloud-ai-chatbot-%EC%B1%97%EB%B4%87%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95) — 2025-11 · [enterprise] [korea] · AI Foundry RAG Suite
+- [KT Cloud — Tech Series RAG #1 시스템 구조](https://tech.ktcloud.com/entry/2025-08-ktcloud-ai-rag-%EC%8B%9C%EC%8A%A4%ED%85%9C%EA%B5%AC%EC%A1%B0-%EC%9D%B4%ED%95%B4) — 2025-08 · [enterprise] [korea] · RAG 핵심 개념과 시스템 구조
+- [KT Cloud — Tech Series RAG #2 데이터 파싱·전처리](https://tech.ktcloud.com/entry/2025-09-ktcloud-ai-rag-parsing-%EC%A0%84%EC%B2%98%EB%A6%AC-%EC%B5%9C%EC%A0%81%ED%99%94) — 2025-09 · [enterprise] [korea] · RAG 전처리 최적화
+- [포스타입 팀 블로그 — 사내 AI 챗봇 도입기 1부](https://www.postype.com/@team/post/21465430) — 2025 · [enterprise] [korea] · 백엔드 스펙 RAG 챗봇
+- [포스타입 팀 블로그 — 2부 RAG부터 에이전트까지](https://www.postype.com/@team/post/21464482) — 2025 · [enterprise] [korea] · Bedrock KB 기반 사내 어시스턴트
+
+### 글로벌 (엔터프라이즈 사내 지식)
+- [How Copilot Uses Microsoft Graph](https://www.m365.fm/blog/how-copilot-uses-microsoft-graph-behind-the-scenes/) — 2025 · [enterprise] · M365 Copilot Semantic Index + Graph 동작 원리
+- [Microsoft — Knowledge in Microsoft Copilot Studio](https://www.microsoft.com/en-us/power-platform/blog/2025/03/27/knowledge-in-microsoft-copilot-studio/) — 2025-03 · [enterprise] · Copilot Studio 지식 연결
+- [Glean — Definitive Guide to AI Enterprise Search 2025](https://www.glean.com/blog/the-definitive-guide-to-ai-based-enterprise-search-for-2025) — 2025 · [enterprise] · 통합 인덱스 + 지식 그래프
+- [Fine-Tuning Embedding Models for Enterprise RAG (Jason Liu, Glean lessons)](https://jxnl.co/writing/2025/03/06/fine-tuning-embedding-models-for-enterprise-rag-lessons-from-glean/) — 2025-03 · [enterprise] · Glean 임베딩 fine-tune 교훈
+- [ZenML LLMOps DB — Glean Custom Embeddings](https://www.zenml.io/llmops-database/fine-tuning-custom-embedding-models-for-enterprise-search) — 2025 · [enterprise] · Glean LLMOps 요약
+- [AgentMarketCap — Glean $7.2B 분석](https://agentmarketcap.ai/blog/2026/04/07/glean-7b-enterprise-knowledge-search-agentic-category) — 2026-04 · [enterprise] · Glean 카테고리 분석
+- [Atlassian — Rovo](https://www.atlassian.com/software/rovo) — 상시 · [enterprise] · Rovo 제품 소개
+- [NetEye Blog — Atlassian Rovo Today: Architecture and Trust](https://www.neteye-blog.com/2025/12/atlassian-rovo-today-architecture-technologies-and-enterprise-trust/) — 2025-12 · [enterprise] · BM25+kNN OpenSearch + Knowledge Graph
+- [MindStudio — Rovo 지식 그래프 vs RAG](https://www.mindstudio.ai/blog/atlassian-rovo-knowledge-graph-vs-rag-arr-growth) — 2025 · [enterprise] · Rovo ARR 2배 성장
+- [Slack Engineering — How we built enterprise search to be secure and private](https://slack.engineering/how-we-built-enterprise-search-to-be-secure-and-private/) — 2025 · [enterprise] · Federated Search + 권한 보존 RAG
+- [Salesforce — Slack as Agentic Surface](https://www.salesforce.com/blog/slack-agentic-enterprise-architecture/) — 2025 · [enterprise] · Slack agentic 아키텍처
+- [Salesforce Slack Native AI](https://www.salesforce.com/slack/native-ai/) — 상시 · [enterprise] · Slack 네이티브 AI
+- [Cisco Blog — Transforming work with internal AI assistant](https://blogs.cisco.com/cisco-on-cisco/cisco-secure-internal-ai-assistant) — 2025 · [enterprise] · 45M+ 인터랙션 사내 어시스턴트
+- [Cisco — AI in the Workplace 케이스](https://www.cisco.com/site/us/en/solutions/cisco-on-cisco/ai-in-the-workplace.html) — 2025 · [enterprise] · 사내 AI 어시스턴트 성과
+- [Salesforce — Agentforce](https://www.salesforce.com/agentforce/) — 상시 · [enterprise] · Agentforce 플랫폼
+- [Gruve — Agentforce 내부 영업 지원 파일럿](https://gruve.ai/blog/boosting-sales-team-efficiency-with-agentforce-a-pilot-implementation-for-internal-sales-enablement-assistant/) — 2025 · [enterprise] · 사내 영업 어시스턴트
+- [Klarna 공식 — AI Assistant 1개월 성과](https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/) — 2024-02 · [enterprise] · 67% 자동화
+- [LangChain Blog — Klarna 사례](https://blog.langchain.com/customers-klarna/) — 2024 · [enterprise] · Klarna AI 아키텍처
+- [Sequoia — Klarna CEO 인터뷰](https://sequoiacap.com/podcast/training-data-sebastian-siemiatkowski/) — 2024 · [enterprise] · Klarna AI 전략 회고
+- [Twig — Klarna 30일 무엇이 망가졌나](https://www.twig.so/blog/how-klarna-is-revolutionizing-customer-support-with-ai) — 2025 · [enterprise] · Klarna 실패 분석
+- [Morgan Stanley — Key Milestone with OpenAI](https://www.morganstanley.com/press-releases/key-milestone-in-innovation-journey-with-openai) — 2024 · [enterprise] · GPT-4 사내 어시스턴트
+- [Morgan Stanley — AskResearchGPT](https://www.morganstanley.com/press-releases/morgan-stanley-research-announces-askresearchgpt) — 2024 · [enterprise] · 35만+ 리서치 문서 RAG
+- [OpenAI — Morgan Stanley evals](https://openai.com/index/morgan-stanley/) — 2024 · [enterprise] · AI evals + HITL
+- [ZenML — Morgan Stanley GPT-4 LLMOps](https://www.zenml.io/llmops-database/enterprise-knowledge-management-with-llms-morgan-stanley-s-gpt-4-implementation) — 2024 · [enterprise] · Morgan Stanley 구현 상세
+- [VentureBeat — JP Morgan 50% AI adoption](https://venturebeat.com/orchestration/jp-morgans-ai-adoption-hit-50-of-employees-the-secret-a-connectivity-first) — 2025 · [enterprise] · 60K 직원 어시스턴트
+- [JPMorgan Dev Blog — Virtual Assistant for Commerce Center](https://developer.payments.jpmorgan.com/blog/product/virtual-assistant-ai-reporting) — 2025 · [enterprise] · EVEE QA 시스템
+- [Uber Blog — Enhanced Agentic-RAG](https://www.uber.com/blog/enhanced-agentic-rag/) — 2025 · [enterprise] · EAg-RAG +27% 정확도
+- [Uber Blog — Genie On-Call Copilot](https://www.uber.com/en-GB/blog/genie-ubers-gen-ai-on-call-copilot/) — 2024 · [enterprise] · Slack on-call copilot
+- [ZenML — Enhanced Agentic RAG case](https://www.zenml.io/llmops-database/enhanced-agentic-rag-for-on-call-engineering-support) — 2025 · [enterprise] · Uber Genie LLMOps 사례
+- [The New Stack — Introducing AiKA](https://thenewstack.io/introducing-aika-backstage-portal-ai-knowledge-assistant/) — 2025 · [enterprise] · Spotify AiKA Backstage
+- [Backstage Blog — AiKA Data Plugins](https://backstage.spotify.com/discover/blog/aika-data-plugins-coming-to-portal) — 2025 · [enterprise] · AiKA 데이터 플러그인
+- [NerdOut@Spotify Ep.30 — Building AiKA](https://creators.spotify.com/pod/profile/engineeringatspotify/episodes/30-Building-AiKA-Spotifys-AI-Knowledge-Assistant-e36rlbd) — 2025 · [enterprise] · AiKA 빌딩 팟캐스트
+- [Class Central — Leveraging Internal Knowledge at Spotify (CNCF)](https://www.classcentral.com/course/youtube-leveraging-internal-knowledge-building-aika-at-spotify-majd-salman-jofre-mateu-matesanz-444896) — 2025 · [enterprise] · AiKA CNCF 토크
+- [DoorDash — Path to High-Quality LLM-Based Dasher Support](https://careersatdoordash.com/blog/large-language-modules-based-dasher-support-automation/) — 2025 · [enterprise] · Dasher 지원 RAG + Guardrail + Judge
+- [DoorDash — Summer 2025 Intern Projects (Chatbot-as-a-Service)](https://careersatdoordash.com/blog/part-1-doordash-2025-summer-intern-projects/) — 2025 · [enterprise] · KB Management + Chatbot-as-a-Service
+- [AWS Case Study — DoorDash + Bedrock + Claude](https://aws.amazon.com/solutions/case-studies/doordash-bedrock-case-study/) — 2025 · [enterprise] · 컨택센터 + Claude
+- [Walmart Corporate — Expanding GenAI Tool to 11 Countries](https://corporate.walmart.com/news/2024/01/09/walmarts-expanding-one-of-a-kind-associate-genai-tool-to-11-countries-in-2024) — 2024-01 · [enterprise] · My Assistant 글로벌 확장
+- [Walmart Corporate — 1.5M Associates AI Tools](https://corporate.walmart.com/news/2025/06/24/walmart-unveils-new-ai-powered-tools-to-empower-1-5-million-associates) — 2025-06 · [enterprise] · 매장 직원 AI 도구
+- [CIO Dive — Walmart 50K rollout](https://www.ciodive.com/news/Walmart-generative-AI-tool-My-Assistant/692385/) — 2024 · [enterprise] · My Assistant 5만 직원 배포
+- [Stack Overflow Blog — Enterprise AI needs more than foundation models](https://stackoverflow.blog/2026/03/12/enterprise-ai-needs-more-than-foundation-models/) — 2026-03 · [enterprise] · Stack Internal 컨텍스트 전략
+- [Stack Overflow — RAG topic](https://stackoverflow.blog/retrieval-augmented-generation/) — 상시 · [enterprise] · Stack Overflow RAG 토픽
+- [Anthropic — How AI is Transforming Work at Anthropic](https://www.anthropic.com/research/how-ai-is-transforming-work-at-anthropic) — 2025 · [enterprise] · 사내 Claude Enterprise 49% 활용
+- [Anthropic — Contextual Retrieval](https://www.anthropic.com/news/contextual-retrieval) — 2024-09 · [enterprise] · 실패 검색 -49%/-67%
+- [Anthropic — Claude Customer Stories](https://claude.com/customers) — 상시 · [enterprise] · Lyft 등 고객 사례
+- [AWS — Contextual Retrieval with Bedrock KB](https://aws.amazon.com/blogs/machine-learning/contextual-retrieval-in-anthropic-using-amazon-bedrock-knowledge-bases/) — 2024 · [enterprise] · Anthropic 기법 Bedrock 통합
+- [Google Cloud — NotebookLM for Enterprise](https://cloud.google.com/resources/notebooklm-enterprise) — 2025 · [enterprise] · 엔터프라이즈 티어
+- [Google Blog — NotebookLM Plus business tips](https://blog.google/innovation-and-ai/models-and-research/google-labs/notebooklm-business-tips/) — 2025 · [enterprise] · 비즈니스 활용 사례
+
+### 코드베이스 RAG
+- [GitHub Next — Copilot for Your Codebase](https://githubnext.com/projects/copilot-view/) — 상시 · [enterprise] · Copilot 코드베이스 컨텍스트
+- [Quastor — How GitHub Copilot Works](https://blog.quastor.org/p/github-copilot-works) — 2025 · [enterprise] · Copilot RAG 동작 원리
+- [Markaicode — GitHub Copilot RAG Architecture 2026](https://markaicode.com/architecture/github-copilot-rag-architecture/) — 2026 · [enterprise] · production 인시던트 분석
+- [Sourcegraph Blog — How Cody Understands Your Codebase](https://sourcegraph.com/blog/how-cody-understands-your-codebase) — 2025 · [enterprise] · search-first RAG
+- [Augment Code — Cursor vs Tabnine](https://www.augmentcode.com/tools/cursor-vs-tabnine) — 2026 · [enterprise] · Global RAG 멀티레포 비교
+- [Augment Code — Sourcegraph Cody vs Cursor vs Augment](https://www.augmentcode.com/tools/sourcegraph-cody-vs-cursor-vs-augment-code-for-enterprise-development) — 2026 · [enterprise] · 엔터프라이즈 코드 도구 비교
+- [Augment Code — Cursor freezes on large codebases](https://www.augmentcode.com/tools/why-cursor-freezes-on-large-codebases-5-alternatives) — 2026 · [enterprise] · 모노레포 성능 분석
+
+## 논문·기술 리포트
+- [arXiv 2404.17723 — Retrieval-Augmented Generation with KG for Customer Service (LinkedIn, SIGIR 2024)](https://arxiv.org/abs/2404.17723) — 2024-04 · [enterprise] · LinkedIn 이슈 KG RAG, -28.6% 해결시간
+- [arXiv 2408.04870 — ConfusedPilot: Confused Deputy Risks in RAG-based LLMs](https://arxiv.org/pdf/2408.04870) — 2024-08 · [enterprise] · M365 Copilot류 권한 우회 리스크
+
+## 벤더·플랫폼 공식 문서
+- [Atlassian — Rovo](https://www.atlassian.com/software/rovo) — 상시 · [enterprise] · Atlassian Rovo 공식
+- [Salesforce — Agentforce 플랫폼](https://www.salesforce.com/agentforce/) — 상시 · [enterprise] · Agentforce 공식
+- [Salesforce — Agentforce Workshop: Ground Agent with Einstein Search](https://developer.salesforce.com/workshops/agentforce-workshop/employee-agents/2-unstructured-search) — 2025 · [enterprise] · Employee Agent 실습
+- [Google Cloud — NotebookLM for Enterprise](https://cloud.google.com/resources/notebooklm-enterprise) — 상시 · [enterprise] · NotebookLM Enterprise
+- [Anthropic — Claude Customer Stories](https://claude.com/customers) — 상시 · [enterprise] · 고객 사례 허브
+
+---
+
+## 02. 프로덕션 아키텍처 도메인 출처 (2026-06-10 추가)
+
+### 청킹·검색 기법 1차 자료
+- [Introducing Contextual Retrieval](https://www.anthropic.com/news/contextual-retrieval) — 2024-09-19 · [architecture] · Anthropic 공식. Contextual Embeddings + BM25로 retrieval failure 49% 감소, 리랭커 결합 시 67% 감소.
+- [Enhancing RAG with contextual retrieval (Claude Cookbook)](https://platform.claude.com/cookbook/capabilities-contextual-embeddings-guide) — 2024 · [architecture] · Anthropic 공식 구현 가이드.
+- [Late Chunking: Contextual Chunk Embeddings Using Long-Context Embedding Models (arXiv 2409.04701)](https://arxiv.org/pdf/2409.04701) — 2024-09 (EMNLP 2024) · [architecture] · Jina AI. long-context 모델로 전체 문서 임베딩 후 청크 풀링.
+- [Jina AI: Late Chunking 소개](https://www.marktechpost.com/2024/08/27/jina-ai-introduced-late-chunking-a-simple-ai-approach-to-embed-short-chunks-by-leveraging-the-power-of-long-context-embedding-models/) — 2024-08-27 · [architecture] · MarkTechPost 정리.
+- [Late chunking in Elasticsearch with Jina Embeddings v2](https://www.elastic.co/search-labs/blog/late-chunking-elasticsearch-jina-embeddings) — 2024 · [architecture] · Elastic Search Labs.
+- [The Chunking Paradigm: Recursive Semantic for RAG Optimization (ICNLSP 2025)](https://aclanthology.org/2025.icnlsp-1.15.pdf) — 2025 · [architecture] · 의미 vs 재귀 청킹 비교.
+- [Best Chunking Strategies for RAG (Firecrawl)](https://www.firecrawl.dev/blog/best-chunking-strategies-rag) — 2026 · [architecture] · 청킹 전략 벤치마크 정리.
+
+### 하이브리드 검색 / RRF
+- [Introducing reciprocal rank fusion for hybrid search (OpenSearch Blog)](https://opensearch.org/blog/introducing-reciprocal-rank-fusion-hybrid-search/) — 2024 · [architecture] · OpenSearch 2.12+ RRF 정식 지원.
+- [Hybrid Text Search Tutorial (Vespa)](https://docs.vespa.ai/en/learn/tutorials/hybrid-search.html) — 2024 · [architecture] · Vespa hybrid-rrf / hybrid-linear-normalize 옵션.
+- [What is hybrid search? (Elastic)](https://www.elastic.co/what-is/hybrid-search) — 2025 · [architecture] · Elasticsearch retriever API 8.14+ RRF.
+- [Hybrid Search Scoring (RRF) - Azure AI Search](https://learn.microsoft.com/en-us/azure/search/hybrid-search-ranking) — 2025 · [architecture] · Azure AI Search RRF 공식 문서.
+- [Reciprocal Rank Fusion: the one-line algorithm behind hybrid search](https://blog.serghei.pl/posts/reciprocal-rank-fusion-explained/) — 2025 · [architecture] · RRF 알고리즘 분석.
+- [BM42: New Baseline for Hybrid Search (Qdrant)](https://qdrant.tech/articles/bm42/) — 2024 · [architecture] · BM25 + self-attention 가중.
+- [SPLATE: Sparse Late Interaction Retrieval (arXiv 2404.13950)](https://www.emergentmind.com/papers/2404.13950) — 2024 · [architecture] · ColBERTv2 + sparse adapter.
+
+### 멀티벡터·비전 검색
+- [ColPali: Efficient Document Retrieval with Vision Language Models (arXiv 2407.01449)](https://arxiv.org/abs/2407.01449) — 2024-07 (ICLR 2025 accepted) · [architecture] · PaliGemma + ColBERT, ViDoRe SOTA.
+- [ColPali (HuggingFace blog)](https://huggingface.co/blog/manu/colpali) — 2024 · [architecture] · ColPali 저자 소개 글.
+- [Multimodal Document RAG with Llama 3.2 Vision and ColQwen2 (Together AI)](https://www.together.ai/blog/multimodal-document-rag-with-llama-3-2-vision-and-colqwen2) — 2024 · [architecture] · ColQwen2 + Llama Vision 멀티모달 RAG 가이드.
+- [multi-modal-rag-with-colpali (Microsoft)](https://github.com/microsoft/multi-modal-rag-with-colpali) — 2024 · [architecture] · Microsoft 공식 ColPali 멀티모달 RAG 샘플.
+
+### 벡터DB·매니지드 RAG
+- [Introducing Pinecone Serverless](https://www.pinecone.io/blog/serverless/) — 2024-01 · [architecture] · storage/compute 분리, 10~100배 비용 절감 주장.
+- [Reimagining the vector database (Pinecone)](https://www.pinecone.io/blog/serverless-architecture/) — 2024 · [architecture] · slab/log-structured 인덱싱.
+- [Pgvector vs. Qdrant (Tiger Data)](https://www.tigerdata.com/blog/pgvector-vs-qdrant) — 2025 · [architecture] · pgvectorscale로 Qdrant와 경쟁.
+- [pgvector vs Pinecone vs Qdrant vs Weaviate (Kalvium Labs)](https://www.kalviumlabs.ai/blog/vector-databases-compared-pgvector-pinecone-qdrant-weaviate/) — 2026 · [architecture] · 5M 벡터에서의 지연/비용 비교.
+- [Foundation Models for RAG - Amazon Bedrock Knowledge Bases](https://aws.amazon.com/bedrock/knowledge-bases/) — 2025 · [architecture] · AWS 매니지드 RAG, vector store 옵션 정리.
+- [Amazon Bedrock Knowledge Bases supports OpenSearch Service managed cluster](https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-knowledge-bases-now-supports-amazon-opensearch-service-managed-cluster-as-vector-store/) — 2025 · [architecture] · OpenSearch 매니지드 vector store 지원.
+- [Semantic Ranking Overview - Azure AI Search](https://learn.microsoft.com/en-us/azure/search/semantic-search-overview) — 2025 · [architecture] · Azure transformer cross-encoder 리랭커.
+- [Vertex AI RAG Engine: Build & deploy RAG implementations](https://cloud.google.com/blog/products/ai-machine-learning/introducing-vertex-ai-rag-engine) — 2025 · [architecture] · Google Cloud RAG Engine GA.
+- [Search from Vertex AI | Google Cloud](https://cloud.google.com/enterprise-search) — 2025 · [architecture] · 엔터프라이즈 RAG용 매니지드 검색.
+- [Snowflake Cortex Search: Unmatched Search Quality and Simplicity](https://www.snowflake.com/en/engineering-blog/cortex-search-unmatched-quality-simplicity/) — 2024-2025 · [architecture] · TREC 규모 1시간 내 서비스 생성.
+- [Cortex Search Documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-search/cortex-search-overview) — 2025 · [architecture] · Snowflake Cortex Search 공식.
+
+### 임베딩·리랭커
+- [voyage-3 & voyage-3-lite (Voyage AI Blog)](https://blog.voyageai.com/2024/09/18/voyage-3/) — 2024-09-18 · [architecture] · OpenAI v3-large 대비 7.55% 우위.
+- [voyage-3-large (Voyage AI Blog)](https://blog.voyageai.com/2025/01/07/voyage-3-large/) — 2025-01-07 · [architecture] · 신규 SOTA 범용 임베딩.
+- [voyage-finance-2 (Voyage AI Blog)](https://blog.voyageai.com/2024/06/03/domain-specific-embeddings-finance-edition-voyage-finance-2/) — 2024-06-03 · [architecture] · 금융 특화, OpenAI 대비 +7%.
+- [voyage-code-3 (Voyage AI Blog)](https://blog.voyageai.com/2024/12/04/voyage-code-3/) — 2024-12-04 · [architecture] · 코드 검색 +13.8~16.8%.
+- [voyage-multimodal-3 (Voyage AI Blog)](https://blog.voyageai.com/2024/11/12/voyage-multimodal-3/) — 2024-11-12 · [architecture] · 텍스트·이미지·스크린샷 통합 임베딩.
+- [Nomic Embed paper (arXiv 2402.01613)](https://arxiv.org/pdf/2402.01613) — 2024-02 · [architecture] · 첫 완전 오픈 8K context 임베딩.
+- [BAAI/BGE Reranker v2 M3 vs Cohere Rerank (Agentset)](https://agentset.ai/rerankers/compare/baaibge-reranker-v2-m3-vs-cohere-rerank-35) — 2025 · [architecture] · CPU 350ms / GPU 80ms.
+- [Best Reranker Models for RAG 2026 (BSWEN)](https://docs.bswen.com/blog/2026-02-25-best-reranker-models/) — 2026 · [architecture] · 리랭커 선택 가이드.
+
+### PDF·멀티모달 파싱
+- [Docling vs LlamaParse vs Unstructured vs Reducto (Reducto)](https://llms.reducto.ai/document-parser-comparison) — 2025 · [architecture] · 파서 비교.
+- [Best PDF Parsers for AI and RAG Workflows (Firecrawl)](https://www.firecrawl.dev/blog/best-pdf-parsers) — 2026 · [architecture] · 파서 카테고리 정리.
+- [PDF Data Extraction Benchmark 2025 (Procycons)](https://procycons.com/en/blogs/pdf-data-extraction-benchmark/) — 2025 · [architecture] · Docling/Unstructured/LlamaParse 비교.
+
+### GraphRAG
+- [Project GraphRAG (Microsoft Research)](https://www.microsoft.com/en-us/research/project/graphrag/) — 2024-2025 · [architecture] · Microsoft GraphRAG 공식.
+- [microsoft/graphrag (GitHub)](https://github.com/microsoft/graphrag) — 2024 · [architecture] · 오픈소스 구현.
+- [LazyGraphRAG sets a new standard for quality and cost](https://www.microsoft.com/en-us/research/blog/lazygraphrag-setting-a-new-standard-for-quality-and-cost/) — 2024-11 · [architecture] · 인덱싱 비용 1/1000.
+
+### 평가·관측
+- [LangSmith - Ragas integration](https://docs.ragas.io/en/stable/howtos/integrations/langsmith/) — 2025 · [architecture] · RAGAS+LangSmith 워크플로.
+- [Arize Phoenix (GitHub)](https://github.com/arize-ai/phoenix) — 2024-2025 · [architecture] · OTel 기반 오픈소스 LLM 관측.
+- [Choosing the Right LLM Evaluation Framework in 2025](https://medium.com/@mahernaija/choosing-the-right-llm-evaluation-framework-in-2025-deepeval-ragas-giskard-langsmith-and-c7133520770c) — 2025 · [architecture] · DeepEval/RAGAS/LangSmith/TruLens 비교.
+
+### 비용·캐싱
+- [Prompt caching with Claude (Anthropic)](https://www.anthropic.com/news/prompt-caching) — 2024-08 · [architecture] · 비용 -90%, 지연 -85%.
+- [Prompt caching - Claude API Docs](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) — 2024-2025 · [architecture] · cache write 1.25~2×, cache read 0.1× pricing.
+
+### 질의 변환
+- [Develop a RAG Solution—Information-Retrieval Phase (Azure)](https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-information-retrieval) — 2025 · [architecture] · HyDE·multi-query·decomposition 가이드.
+- [Advanced RAG: Query Decomposition and Reasoning (Haystack)](https://haystack.deepset.ai/cookbook/query_decomposition) — 2024-2025 · [architecture] · 질의 분해 패턴.
+
+### 프레임워크
+- [LangChain vs LlamaIndex 2025 (Latenode)](https://latenode.com/blog/platform-comparisons-alternatives/automation-platform-comparisons/langchain-vs-llamaindex-2025-complete-rag-framework-comparison) — 2025 · [architecture] · LlamaIndex 92% retrieval 정확도, LangGraph 도입.
+- [RAFT: Adapting Language Model to Domain Specific RAG (arXiv 2403.10131)](https://arxiv.org/abs/2403.10131) — 2024-03 · [architecture] · UC Berkeley, retrieval-augmented fine-tuning.
+
+### 신선도·파이프라인
+- [How to Build a RAG Pipeline from Scratch in 2026 (kapa.ai)](https://www.kapa.ai/blog/how-to-build-a-rag-pipeline-from-scratch-in-2026) — 2026 · [architecture] · 인덱싱·신선도.
+- [The Knowledge Decay Problem (Generation RAG)](https://ragaboutit.com/the-knowledge-decay-problem-how-to-build-rag-systems-that-stay-fresh-at-scale/) — 2025 · [architecture] · 60% 실패가 freshness에서.
+
+### 보안·거버넌스
+- [The Complete Guide to Enterprise AI Security: RAG, Agents & Compliance in 2025 (Ragwalla)](https://ragwalla.com/docs/guides/the-complete-guide-to-enterprise-ai-security-rag-agents-compliance-in-2025) — 2025 · [architecture] · NIST/IETF 동향.
+- [Governed RAG (Infiligence)](https://www.infiligence.com/post/governed-rag-secure-policy-driven-ai-retrieval-for-enterprises) — 2025 · [architecture] · ACL·콘텐츠 마스킹·감사 로그.
+
+### 한국 환경
+- [nlpai-lab/KURE (GitHub)](https://github.com/nlpai-lab/KURE) — 2024-12 · [korea][architecture] · 고려대 한국어 검색 특화 임베딩.
+- [KURE: Embedding Model for Korean-Specific Retrieval (HCLT 학술대회)](https://koreascience.kr/article/CFKO202533761230731.page) — 2025 · [korea][architecture] · KURE 논문.
+- [upskyy/kf-deberta-multitask (GitHub)](https://github.com/upskyy/kf-deberta-multitask) — 2024 · [korea][architecture][industry:금융] · 카카오뱅크 KF-DeBERTa 금융 특화.
+- [ddobokki/KoSimCSE (GitHub)](https://github.com/ddobokki/KoSimCSE) — 2024 · [korea][architecture] · 한국어 SimCSE 임베딩.
+- [KomuRet: Korean Community-style Retrieval Benchmark](https://www.koreascience.kr/article/CFKO202533757619425.view) — 2025 · [korea][architecture] · 나무위키 기반 한국어 검색 벤치.
+- [ssisOneTeam/Korean-Embedding-Model-Performance-Benchmark-for-Retriever](https://github.com/ssisOneTeam/Korean-Embedding-Model-Performance-Benchmark-for-Retriever) — 2024-2025 · [korea][architecture] · 한국어 임베딩 RAG 벤치.
+- [allganize/RAG-Evaluation-Dataset-KO (HuggingFace)](https://huggingface.co/datasets/allganize/RAG-Evaluation-Dataset-KO) — 2024 · [korea][architecture] · 한국 RAG 평가 표준 데이터셋.
+- [Upstage Solar Mini Now Available on AWS](https://www.upstage.ai/news/solarmini-aws) — 2024-03 · [korea][architecture] · 한국어 특화 SLM 클라우드 출시.
+- [The Upstage AI Consortium Taps Allganize (KoreaTechDesk)](https://koreatechdesk.com/allganize-upstage-ai-consortium-korea) — 2025 · [korea][architecture] · Solar + Allganize RAG 파트너십.
+
+## 산업별 사례 (04-산업별-사례.md)
+
+### 금융 — 글로벌
+- [BloombergGPT: A Large Language Model for Finance (arXiv 2303.17564)](https://arxiv.org/abs/2303.17564) — 2023-03 · [industry:금융] · 50B 파라미터 금융 LLM.
+- [Bloomberg AI Powered Document Insights](https://www.bloomberg.com/professional/insights/data/bloomberg-launches-ai-powered-document-insights/) — 2024 · [industry:금융] · 금융 문서 QA.
+- [Morgan Stanley & OpenAI](https://openai.com/index/morgan-stanley/) — 2023-2024 · [industry:금융] · GPT-4 기반 사내 지식 어시스턴트.
+- [Morgan Stanley AI @ Work](https://www.morganstanley.com/articles/ai-work-financial-advisors) — 2024 · [industry:금융] · FA 자료 검색 채택.
+- [JPMorgan IndexGPT/LLM Suite](https://www.cnbc.com/2024/08/09/jpmorgan-launches-in-house-chatbot-as-ai-based-research-analyst.html) — 2024 · [industry:금융] · 60K+ 직원 사내 LLM.
+- [Goldman Sachs GS AI Assistant](https://www.reuters.com/technology/artificial-intelligence/goldman-sachs-rolls-out-ai-assistant-firmwide-2025-06-23/) — 2025-06 · [industry:금융] · 전사 배포.
+- [Citi AI Tools 140K Employees](https://www.reuters.com/technology/artificial-intelligence/citi-deploys-ai-tools-thousands-employees-eight-countries-2024-06-12/) — 2024-06 · [industry:금융] · Citi Assist + Stylus.
+
+### 금융 — 한국
+- [신한투자증권 RAG 사례 (AWS Industry Week 2024)](https://www.itworld.co.kr/news/364486) — 2024 · [korea][industry:금융] · 사내 RAG 자료 검색.
+- [Hana Bank LLM 도입 사례 (Megazone Cloud)](https://www.megazone.com/kr/customers/hana-bank/) — 2024 · [korea][industry:금융] · 사내 RAG·콜센터.
+- [KB Financial Group: KB-GPT](https://www.kbfg.com/) — 2024-2025 · [korea][industry:금융] · KB-GPT·KB-RAG 폐쇄망 구축.
+- [Kakao Bank KF-DeBERTa](https://github.com/upskyy/kf-deberta-multitask) — 2024 · [korea][industry:금융] · 한국어 금융 임베딩 오픈소스.
+- [Toss Tech Blog: AI](https://toss.tech/) — 2024-2025 · [korea][industry:금융] · Toss AI 챗봇·LLM 활용.
+
+### 의료 — 글로벌
+- [Epic Cosmos & AI](https://www.epic.com/about/cosmos) — 2024-2025 · [industry:의료] · EHR + LLM 통합.
+- [Microsoft Dragon Copilot](https://blogs.microsoft.com/blog/2025/03/03/empowering-clinicians-with-dragon-copilot-microsofts-new-voice-first-ai-assistant-for-healthcare/) — 2025-03 · [industry:의료] · Nuance DAX + GPT 통합.
+- [Abridge AI](https://www.abridge.com/) — 2024-2025 · [industry:의료] · ambient scribe + RAG.
+- [Nabla Copilot](https://www.nabla.com/) — 2024-2025 · [industry:의료] · 의사용 ambient scribe.
+- [Hippocratic AI Polaris 3.0](https://hippocraticai.com/polaris-3/) — 2025 · [industry:의료] · constellation 안전 모델.
+- [Hippocratic AI Constellation](https://hippocraticai.com/constellation/) — 2025 · [industry:의료] · 안전 모델 군집 아키텍처.
+- [OpenEvidence Funding Round](https://www.openevidence.com/announcements/openevidence-the-fastest-growing-application-for-physicians-in-history-announces-dollar210-million-round-at-dollar35-billion-valuation) — 2025 · [industry:의료] · peer-reviewed RAG.
+- [medRxiv: OpenEvidence pilot](https://www.medrxiv.org/content/10.64898/2025.11.29.25341091v1.full) — 2025 · [industry:의료] · 임상 평가.
+- [NBC News: OpenEvidence](https://www.nbcnews.com/tech/tech-news/openevidence-ai-doctor-medical-physician-login-app-what-npi-uptodate-rcna341064) — 2025 · [industry:의료] · NPI 인증 의사 채택.
+- [Glass Health: AI for Doctors](https://glass.health/resources/ai-for-doctors) — 2024-2025 · [industry:의료] · purpose-built clinical AI.
+- [Mayo Clinic Library AI Guide](https://libraryguides.mayo.edu/AI) — 2024-2025 · [industry:의료] · 임상 RAG 권고.
+- [MDPI: RAG variants for CDS](https://www.mdpi.com/2079-9292/14/21/4227) — 2025 · [industry:의료] · RAG 환각 70-90% 감소.
+- [Mayo Innovation Exchange GenAI](https://innovationexchange.mayoclinic.org/accelerating-generative-ai-from-concept-to-care/) — 2024 · [industry:의료] · 임상 GenAI 도입.
+
+### 의료 — 한국
+- [서울대병원](https://www.snuh.org/) — 2024-2025 · [korea][industry:의료] · 한국형 의료 LLM·지식그래프 RAG.
+- [J Korean Med Sci: Medical LLM](https://jkms.org/) — 2024-2025 · [korea][industry:의료] · 한국어 의료 LLM 연구.
+- [서울아산병원 빅데이터센터](https://www.amc.seoul.kr/asan/depts/bigdata/K/main.do) — 2024-2025 · [korea][industry:의료] · 임상 RAG.
+- [Lunit Newsroom](https://www.lunit.io/en/company/news) — 2024-2025 · [korea][industry:의료] · 영상 + LLM 보고서.
+- [VUNO Med](https://www.vuno.co/en/vunomed) — 2024-2025 · [korea][industry:의료] · SaMD + RAG.
+
+### 법률 — 글로벌
+- [Harvey: Product](https://www.harvey.ai/products) — 2024-2025 · [industry:법률] · 600+ 로펌 도입.
+- [Harvey BigLaw Bench](https://www.harvey.ai/blog/biglaw-bench) — 2024 · [industry:법률] · 공개 평가.
+- [A&O Shearman ContractMatrix](https://www.aoshearman.com/en/news/a-and-o-shearman-makes-contractmatrix-available-to-clients) — 2024 · [industry:법률] · 로펌 + Harvey 공동.
+- [Thomson Reuters CoCounsel](https://www.thomsonreuters.com/en/products/cocounsel) — 2024-2025 · [industry:법률] · Westlaw RAG.
+- [Stanford RegLab: Legal AI Hallucinations](https://dho.stanford.edu/wp-content/uploads/Legal_RAG_Hallucinations.pdf) — 2024 · [industry:법률] · 17-33% 환각률 측정.
+- [LexisNexis Protégé](https://www.lexisnexis.com/en-us/products/protege.page) — 2025 · [industry:법률] · agentic 법률 AI.
+- [Hebbia](https://www.hebbia.com/) — 2024-2025 · [industry:법률] · Matrix 대규모 문서 분석.
+- [Robin AI](https://www.robinai.com/) — 2024-2025 · [industry:법률] · 계약 검토 + 인간 리뷰.
+
+### 법률 — 한국
+- [인텔리콘 메타연구소](https://www.intellicon.co.kr/) — 2024-2025 · [korea][industry:법률] · 법률 AI 플랫폼.
+- [LBox](https://lbox.kr/) — 2024-2025 · [korea][industry:법률] · 200만+ 판례 검색.
+- [로톡](https://www.lawtalk.co.kr/) — 2024-2025 · [korea][industry:법률] · 법률 상담 매칭.
+- [Thomson Reuters Korea](https://www.thomsonreuters.co.kr/) — 2024-2025 · [korea][industry:법률] · 로펌 RAG 도입.
+
+### 교육 — 글로벌
+- [Khanmigo](https://www.khanmigo.ai/) — 2024-2025 · [industry:교육] · Socratic 튜터.
+- [Khan Academy + Microsoft Partnership](https://blog.khanacademy.org/khan-academy-and-microsoft-partner/) — 2024 · [industry:교육] · 교사용 무료 확대.
+- [Duolingo Max](https://blog.duolingo.com/duolingo-max/) — 2024-2025 · [industry:교육] · Explain My Answer + Roleplay.
+- [MagicSchool](https://www.magicschool.ai/) — 2024-2025 · [industry:교육] · 5M+ 교사 K-12.
+- [MagicSchool Trust Center](https://www.magicschool.ai/trust) — 2024 · [industry:교육] · FERPA·COPPA 준수.
+- [Google NotebookLM](https://notebooklm.google/) — 2024-2025 · [industry:교육] · 사용자 업로드 RAG.
+- [Google Cloud NotebookLM](https://cloud.google.com/products/notebooklm) — 2025 · [industry:교육] · 엔터프라이즈 RAG.
+- [OpenAI Study Mode](https://openai.com/index/chatgpt-study-mode/) — 2025 · [industry:교육] · Socratic 학습 모드.
+- [Quizlet](https://quizlet.com/) — 2024-2025 · [industry:교육] · UGC + RAG 학습.
+
+### 교육 — 한국
+- [QANDA](https://qanda.ai/) — 2024-2025 · [korea][industry:교육] · 60억 풀이 RAG.
+- [Riiid SANTA](https://www.riiid.com/) — 2024-2025 · [korea][industry:교육] · 적응형 외국어 학습.
+- [클래스팅 AI](https://www.classting.com/) — 2024-2025 · [korea][industry:교육] · K-12 플랫폼.
+- [Classum](https://www.classum.com/) — 2024-2025 · [korea][industry:교육] · 대학 강의 RAG.
+- [교육부 AI 디지털교과서](https://aidt.keris.or.kr/) — 2025 · [korea][industry:교육] · AIDT 도입.
+
+### 실패·논란 사례
+- [Reuters: Mata v. Avianca](https://www.reuters.com/legal/transactional/lawyers-blame-ai-fake-citations-avianca-case-2023-06-22/) — 2023-06 · [industry:법률] · 환각 판례 인용 사건.
+- [Court Order: Mata v. Avianca](https://storage.courtlistener.com/recap/gov.uscourts.nysd.575368/gov.uscourts.nysd.575368.54.0_2.pdf) — 2023 · [industry:법률] · 변호사 제재 명령.
+- [BBC: Air Canada chatbot](https://www.bbc.com/travel/article/20240222-air-canada-chatbot-misinformation-what-travellers-should-know) — 2024-02 · · 챗봇 환불 분쟁 판결.
+- [CRT Decision: Moffatt v. Air Canada](https://canlii.ca/t/k2spq) — 2024 · · 캐나다 민사재판소 판결.
+- [JAMA Network Open: AI-generated patient messages](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2823978) — 2024 · [industry:의료] · Epic MyChart AI 환각 연구.
+- [Stat News: Epic AI messages](https://www.statnews.com/2024/07/15/health-care-ai-epic-patient-messages-hallucinations/) — 2024-07 · [industry:의료] · 자동화 편향 우려.
+- [The Lawyer: Robin AI](https://www.thelawyer.com/) — 2025 · [industry:법률] · Robin AI 구조조정 보도.
+- [Reuters: Chegg AI impact](https://www.reuters.com/technology/chegg-shares-tumble-chatgpt-threat-2023-05-02/) — 2023-05 · [industry:교육] · 시가총액 급락.
+
+### 규제·거버넌스
+- [ABA Formal Opinion 512: Generative AI Tools](https://www.americanbar.org/) — 2024 · [industry:법률] · 변호사 GenAI 사용 가이드.
+- [EU AI Act](https://artificialintelligenceact.eu/) — 2024 · · 고위험 AI 규제(2026 전면).
+- [HHS Health AI Strategy](https://www.hhs.gov/) — 2024-2025 · [industry:의료] · 미국 헬스케어 AI 정책.
+- [한국 인공지능기본법](https://www.law.go.kr/) — 2025 통과 / 2026 시행 · [korea] · 고영향 AI 영향평가.
+- [식약처 의료기기 SW 가이드라인](https://www.mfds.go.kr/) — 2024 · [korea][industry:의료] · SaMD 인허가.
+- [교육부 생성형 AI 교육 활용 가이드라인](https://www.moe.go.kr/) — 2024 · [korea][industry:교육] · 초·중등 활용 가이드.
+- [금감원 AI 가이드라인](https://www.fss.or.kr/) — 2024-2025 · [korea][industry:금융] · 금융 AI 운영 가이드.
+
