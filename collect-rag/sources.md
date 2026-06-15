@@ -292,3 +292,11 @@
 - [교육부 생성형 AI 교육 활용 가이드라인](https://www.moe.go.kr/) — 2024 · [korea][industry:교육] · 초·중등 활용 가이드.
 - [금감원 AI 가이드라인](https://www.fss.or.kr/) — 2024-2025 · [korea][industry:금융] · 금융 AI 운영 가이드.
 
+---
+
+## 2026-06-15 일일 누적 추가 출처
+
+- [카카오페이 기술 블로그 — AI 에이전트와 카카오페이 결제 오픈 API 연동하기: MCP Agent Toolkit 개발기](https://tech.kakaopay.com/post/kakaopay-mcp-agent-toolkit/) — 2025-08-07 · [agentic] [korea] · MCP 기반 결제 API 에이전트 툴킷 개발기. 8개 결제·구독 툴, LangChain·Vercel·OpenAI SDK 지원. 핀테크 MCP 최초 공개 사례.
+- [올거나이즈 — RAG 리더보드 공개(금융·공공·의료·법률·커머스 한국어 RAG 성능 평가)](https://www.allganize.ai/ko/blog-posts-ko/rag-leaderboard) — 2024-2025 · [korea] [industry:금융] [industry:의료] [industry:법률] · 5개 한국어 도메인 RAG 벤치마크. 실제 업무 문서(표·이미지 포함) 기반, 테스트 데이터 전체 공개.
+- [arXiv 2603.07379 — SoK: Agentic Retrieval-Augmented Generation: Taxonomy, Architectures, Evaluation, and Research Directions](https://arxiv.org/abs/2603.07379) — 2026-03-07 · [agentic] [architecture] · Agentic RAG를 POMDP로 형식화. 에이전트 위상·계획·메모리·툴 조정 5축 분류. 평가 방법론 부재·신뢰성 리스크 지적.
+
