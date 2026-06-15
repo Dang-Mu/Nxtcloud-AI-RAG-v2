@@ -301,9 +301,15 @@
 
 ---
 
-## 2026-06-15 일일 누적 추가 출처
+## 2026-06-15 일일 누적 추가 출처 (합산 11건)
 
+### 한국
 - [카카오페이 기술 블로그 — AI 에이전트와 카카오페이 결제 오픈 API 연동하기: MCP Agent Toolkit 개발기](https://tech.kakaopay.com/post/kakaopay-mcp-agent-toolkit/) — 2025-08-07 · [agentic] [korea] · MCP 기반 결제 API 에이전트 툴킷 개발기. 8개 결제·구독 툴, LangChain·Vercel·OpenAI SDK 지원. 핀테크 MCP 최초 공개 사례.
+- [Samsung Research Tech Blog — 업무 생산성 향상을 위한 Agentic RAG 기반 서비스](https://techblog.samsung.com/blog/article/76) — 2025 (Samsung AI Forum 2025) · [agentic] [korea] [enterprise] · 삼성리서치 DeepDive: Planner/Supervisor/Researcher 3계층 멀티에이전트가 사내 문서 → 텍스트·PPTX·HTML·팟캐스트 보고서 자동 생성
+- [LY Corp Tech Blog — ODW #5: 벡터 DB와 에이전트 스킬로 RAG 시스템 만들기](https://techblog.lycorp.co.jp/ko/building-rag-system-with-vector-db-and-agent-skills) — 2026-05-07 · [agentic] [korea] [architecture] · Flava 내부 클라우드에서 에이전트 스킬(MCP 툴 래퍼)로 벡터 DB RAG 구현, tool-discovery 비용 절감 패턴
 - [올거나이즈 — RAG 리더보드 공개(금융·공공·의료·법률·커머스 한국어 RAG 성능 평가)](https://www.allganize.ai/ko/blog-posts-ko/rag-leaderboard) — 2024-2025 · [korea] [industry:금융] [industry:의료] [industry:법률] · 5개 한국어 도메인 RAG 벤치마크. 실제 업무 문서(표·이미지 포함) 기반, 테스트 데이터 전체 공개.
+
+### 글로벌 — 아키텍처
+- [Google Blog — Gemini Embedding 2: Our first natively multimodal embedding model](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2/) — 2026-03-11 · [architecture] · 텍스트·이미지·비디오·오디오·PDF를 단일 호출로 동일 벡터 공간 매핑, 3072d MRL, ColPali 수준 시각 문서 검색 API화
 - [arXiv 2603.07379 — SoK: Agentic Retrieval-Augmented Generation: Taxonomy, Architectures, Evaluation, and Research Directions](https://arxiv.org/abs/2603.07379) — 2026-03-07 · [agentic] [architecture] · Agentic RAG를 POMDP로 형식화. 에이전트 위상·계획·메모리·툴 조정 5축 분류. 평가 방법론 부재·신뢰성 리스크 지적.
 
