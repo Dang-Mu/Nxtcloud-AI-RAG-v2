@@ -1,5 +1,20 @@
 # 업데이트 로그
 
+## 2026-06-16 (일일 누적 — 사례 3건)
+
+### 추가 내용
+- **[01-엔터프라이즈-사내지식.md]** 삼성리서치 — DeepDive Agentic RAG 보고서 생성 서비스 (2026-06-01 Samsung Tech Blog, 작성자 정윤환). Planner/Supervisor/Researcher 멀티에이전트, PPTX·HTML·팟캐스트 등 다형식 출력.
+- **[01-엔터프라이즈-사내지식.md]** SK하이닉스 — GaiA 반도체 업무 특화 생성형 AI 플랫폼 (2025-08-14 공식 뉴스룸). RAG+LLM → Agentic AI → A2A 단계적 로드맵, 장비보전·글로벌 정책·HR·회의 4종 에이전트.
+- **[03-에이전트-툴유즈-MCP.md]** Google Research — Gemini Enterprise Agent Platform의 Sufficient Context Agent (2026-06 Google Research Blog). multi-hop 쿼리를 스스로 판단하고 재검색, 표준 RAG 대비 factuality +34%.
+- **[sources.md]** 위 3건 출처 추가 (Samsung Tech Blog, SK하이닉스 뉴스룸, Google Research Blog)
+- **[01-엔터프라이즈-사내지식.md]** 개요·카운트 업데이트 (한국 11→13, 총 26→28)
+
+### 검증 메모
+- URL 검증: WebFetch가 이 실행 환경에서 모든 외부 URL에 HTTP 403 반환 (네트워크 봇 차단). 대신 복수의 독립 검색 결과(5건 이상)로 URL 생존 및 내용 일치를 교차 확인.
+- 단언 톤다운: 0건 (단언 표현 미사용)
+- 중복 폐기: 0건
+- 발굴 시도 → 최종 채택: 6건 시도 → 3건 채택 (SK하이닉스 AWS 블로그 2025-02는 기존 AWS 출처 중복 인접, arXiv 2506.00054는 2025-06 논문으로 실무 사례 아님으로 폐기)
+
 ## 2026-06-10 (초기 셋업)
 - 리서치 폴더 구조 생성
 - 4개 도메인 병렬 초기 리서치 시작

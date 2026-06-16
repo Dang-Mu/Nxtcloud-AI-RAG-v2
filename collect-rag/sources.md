@@ -7,6 +7,9 @@
 ## 1차 자료 (엔지니어링 블로그·사례 연구·컨퍼런스)
 
 ### 한국 (엔터프라이즈 사내 지식)
+- [Samsung Tech Blog — 업무 생산성 향상을 위한 Agentic RAG 기반 서비스](https://techblog.samsung.com/blog/article/76) — 2026-06-01 · [enterprise] [korea] [agentic] · 삼성리서치 DeepDive, Planner/Supervisor/Researcher 멀티에이전트, 보고서 자동 생성
+- [SK하이닉스 뉴스룸 — 생성형 AI 로드맵 공개 GaiA 플랫폼](https://news.skhynix.co.kr/ai-platform-gaia-launching-2025/) — 2025-08-14 · [enterprise] [korea] [agentic] · 반도체 업무 특화 RAG+LLM → Agentic AI 로드맵, 장비보전·HR·회의 에이전트
+- [NewsTheAI — SK하이닉스 GaiA로 에이전트 업무 공간](https://www.newstheai.com/news/articleView.html?idxno=8685) — 2025-08-14 · [enterprise] [korea] · GaiA A2A 구조, 사내 보안망 LLM Chat 베타
 - [네이버 플레이스 개발 블로그 — Backoffice AI Agent 구축기 RAG+MCP](https://medium.com/naver-place-dev/backoffice-ai-agent-%EA%B5%AC%EC%B6%95%EA%B8%B0-rag-mcp-%EA%B8%B0%EB%B0%98-%ED%94%8C%EB%A0%88%EC%9D%B4%EC%8A%A4ai-%ED%8A%B9%ED%99%94-%EC%A7%80%EC%8B%9D-%EA%B2%80%EC%83%89-%EC%8B%9C%EC%8A%A4%ED%85%9C-9a66b4afa1aa) — 2025 · [enterprise] [korea] · 플레이스 백오피스 RAG+MCP 에이전트, 토큰 -66% 툴호출 -49%
 - [우아한형제들 — AI 데이터 분석가 '물어보새' 등장 1부](https://techblog.woowahan.com/18144/) — 2024 · [enterprise] [korea] · GPT-4o+RAG+Text-To-SQL 사내 Slackbot
 - [우아한형제들 기술블로그](https://techblog.woowahan.com/) — 상시 · [enterprise] [korea] · 우아한공방 Bedrock KB 기반 디자인시스템 RAG 챗봇 등
@@ -103,6 +106,9 @@
 - [Anthropic — Claude Customer Stories](https://claude.com/customers) — 상시 · [enterprise] · 고객 사례 허브
 
 ---
+
+### 글로벌 (Agentic RAG — 2026-06-16 추가)
+- [Google Research Blog — Unlocking dependable responses with Gemini Enterprise Agent Platform's Agentic RAG](https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/) — 2026-06 · [agentic] · Sufficient Context Agent, Gemini 1.5 Pro 기반 93% 정확도 분류기, multi-hop 쿼리 factuality +34%
 
 ## 02. 프로덕션 아키텍처 도메인 출처 (2026-06-10 추가)
 
