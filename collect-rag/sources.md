@@ -4,6 +4,12 @@
 >
 > 도메인 태그: `[enterprise]` `[architecture]` `[agentic]` `[industry:금융]` `[industry:의료]` `[industry:법률]` `[industry:교육]` `[korea]`
 
+## 2026-06-17 추가 출처
+
+- [GitHub — onyx-dot-app/EnterpriseRAG-Bench](https://github.com/onyx-dot-app/EnterpriseRAG-Bench) — 2026-05 · [architecture] · 엔터프라이즈 특화 RAG 벤치마크. Slack 275K·Gmail 120K 등 9개 소스 50만+ 문서, 500 질문 10카테고리, MIT 라이선스, 공개 리더보드. arXiv 2605.05253.
+- [GitHub — Tencent/WeKnora](https://github.com/Tencent/WeKnora) — 2026-06-10 (v0.6.2) · [enterprise] · 텐센트 오픈소스 엔터프라이즈 RAG 플랫폼. RAG Q&A + ReAct Agent(MCP+웹) + Wiki Mode 3-in-1, Go+Vue+TS, 20+ LLM 지원, Langfuse, 4단계 RBAC. 16.4k stars, MIT.
+- [GitHub — Marker-Inc-Korea/AutoRAG](https://github.com/Marker-Inc-Korea/AutoRAG) — 2026-04 (v0.3.22) · [architecture] [korea] · 한국 Markr.AI의 RAG AutoML 프레임워크. 파싱→청킹→임베딩→검색→리랭킹→생성 전 단계 자동 최적화, 골든셋 기반 스윕, Apache-2.0, 4.8k stars.
+
 ## 1차 자료 (엔지니어링 블로그·사례 연구·컨퍼런스)
 
 ### 한국 (엔터프라이즈 사내 지식)
