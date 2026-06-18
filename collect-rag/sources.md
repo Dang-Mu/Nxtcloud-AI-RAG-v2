@@ -32,6 +32,8 @@
 - [KT Cloud — Tech Series RAG #2 데이터 파싱·전처리](https://tech.ktcloud.com/entry/2025-09-ktcloud-ai-rag-parsing-%EC%A0%84%EC%B2%98%EB%A6%AC-%EC%B5%9C%EC%A0%81%ED%99%94) — 2025-09 · [enterprise] [korea] · RAG 전처리 최적화
 - [포스타입 팀 블로그 — 사내 AI 챗봇 도입기 1부](https://www.postype.com/@team/post/21465430) — 2025 · [enterprise] [korea] · 백엔드 스펙 RAG 챗봇
 - [포스타입 팀 블로그 — 2부 RAG부터 에이전트까지](https://www.postype.com/@team/post/21464482) — 2025 · [enterprise] [korea] · Bedrock KB 기반 사내 어시스턴트
+- [SK하이닉스 뉴스룸 — 생성형 AI 로드맵 공개 플랫폼 GaiA](https://news.skhynix.co.kr/ai-platform-gaia-launching-2025/) — 2025-08 · [enterprise] [korea] · 반도체 특화 RAG→Agentic AI 4단계 로드맵, Biz 에이전트(장비보전·HR·글로벌정책·회의) 베타
+- [AWS 기술 블로그 — SK하이닉스 RAG 플랫폼 구축 및 성능 평가/분석](https://aws.amazon.com/ko/blogs/tech/sk-hynix-rag-platfrom-analysis-evaluation/) — 2025 · [enterprise] [korea] · AWS Cloud 기반 SK하이닉스 RAG 플랫폼 구축 연구 사례
 
 ### 글로벌 (엔터프라이즈 사내 지식)
 - [How Copilot Uses Microsoft Graph](https://www.m365.fm/blog/how-copilot-uses-microsoft-graph-behind-the-scenes/) — 2025 · [enterprise] · M365 Copilot Semantic Index + Graph 동작 원리
@@ -94,6 +96,7 @@
 ## 논문·기술 리포트
 - [arXiv 2404.17723 — Retrieval-Augmented Generation with KG for Customer Service (LinkedIn, SIGIR 2024)](https://arxiv.org/abs/2404.17723) — 2024-04 · [enterprise] · LinkedIn 이슈 KG RAG, -28.6% 해결시간
 - [arXiv 2408.04870 — ConfusedPilot: Confused Deputy Risks in RAG-based LLMs](https://arxiv.org/pdf/2408.04870) — 2024-08 · [enterprise] · M365 Copilot류 권한 우회 리스크
+- [arXiv 2606.04435 — Cascading Hallucination in Agentic RAG: The CHARM Framework](https://arxiv.org/abs/2606.04435) — 2026-06-03 · [agentic] · 멀티스텝 agentic RAG의 cascading hallucination 감지·차단, 89.4% 감지율·82.1% 에러 전파 감소
 
 ## 벤더·플랫폼 공식 문서
 - [Atlassian — Rovo](https://www.atlassian.com/software/rovo) — 상시 · [enterprise] · Atlassian Rovo 공식
@@ -183,6 +186,10 @@
 ### 신선도·파이프라인
 - [How to Build a RAG Pipeline from Scratch in 2026 (kapa.ai)](https://www.kapa.ai/blog/how-to-build-a-rag-pipeline-from-scratch-in-2026) — 2026 · [architecture] · 인덱싱·신선도.
 - [The Knowledge Decay Problem (Generation RAG)](https://ragaboutit.com/the-knowledge-decay-problem-how-to-build-rag-systems-that-stay-fresh-at-scale/) — 2025 · [architecture] · 60% 실패가 freshness에서.
+
+### Instructed Retrieval (2026 신기술)
+- [Databricks Blog — Instructed Retriever: Unlocking System-Level Reasoning in Search Agents](https://www.databricks.com/blog/instructed-retriever-unlocking-system-level-reasoning-search-agents) — 2026-01-06 · [architecture] · InstructedRetriever-4B, 메타데이터 인식 멀티스텝 검색 플랜, recall 35-50% ↑·답변 정확도 70% ↑
+- [Databricks Blog — 3x Faster Search: Parallel Test-Time Scaling with Instructed-Retriever-1](https://www.databricks.com/blog/3x-faster-search-parallel-test-time-scaling-instructed-retriever-1) — 2026-06-04 · [architecture] · MoE + 병렬 query gen + reranking, 검색 3배 빠름·TTFT ~2초
 
 ### 보안·거버넌스
 - [The Complete Guide to Enterprise AI Security: RAG, Agents & Compliance in 2025 (Ragwalla)](https://ragwalla.com/docs/guides/the-complete-guide-to-enterprise-ai-security-rag-agents-compliance-in-2025) — 2025 · [architecture] · NIST/IETF 동향.
@@ -291,4 +298,18 @@
 - [식약처 의료기기 SW 가이드라인](https://www.mfds.go.kr/) — 2024 · [korea][industry:의료] · SaMD 인허가.
 - [교육부 생성형 AI 교육 활용 가이드라인](https://www.moe.go.kr/) — 2024 · [korea][industry:교육] · 초·중등 활용 가이드.
 - [금감원 AI 가이드라인](https://www.fss.or.kr/) — 2024-2025 · [korea][industry:금융] · 금융 AI 운영 가이드.
+
+---
+
+## 2026-06-15 일일 누적 추가 출처 (합산 11건)
+
+### 한국
+- [카카오페이 기술 블로그 — AI 에이전트와 카카오페이 결제 오픈 API 연동하기: MCP Agent Toolkit 개발기](https://tech.kakaopay.com/post/kakaopay-mcp-agent-toolkit/) — 2025-08-07 · [agentic] [korea] · MCP 기반 결제 API 에이전트 툴킷 개발기. 8개 결제·구독 툴, LangChain·Vercel·OpenAI SDK 지원. 핀테크 MCP 최초 공개 사례.
+- [Samsung Research Tech Blog — 업무 생산성 향상을 위한 Agentic RAG 기반 서비스](https://techblog.samsung.com/blog/article/76) — 2025 (Samsung AI Forum 2025) · [agentic] [korea] [enterprise] · 삼성리서치 DeepDive: Planner/Supervisor/Researcher 3계층 멀티에이전트가 사내 문서 → 텍스트·PPTX·HTML·팟캐스트 보고서 자동 생성
+- [LY Corp Tech Blog — ODW #5: 벡터 DB와 에이전트 스킬로 RAG 시스템 만들기](https://techblog.lycorp.co.jp/ko/building-rag-system-with-vector-db-and-agent-skills) — 2026-05-07 · [agentic] [korea] [architecture] · Flava 내부 클라우드에서 에이전트 스킬(MCP 툴 래퍼)로 벡터 DB RAG 구현, tool-discovery 비용 절감 패턴
+- [올거나이즈 — RAG 리더보드 공개(금융·공공·의료·법률·커머스 한국어 RAG 성능 평가)](https://www.allganize.ai/ko/blog-posts-ko/rag-leaderboard) — 2024-2025 · [korea] [industry:금융] [industry:의료] [industry:법률] · 5개 한국어 도메인 RAG 벤치마크. 실제 업무 문서(표·이미지 포함) 기반, 테스트 데이터 전체 공개.
+
+### 글로벌 — 아키텍처
+- [Google Blog — Gemini Embedding 2: Our first natively multimodal embedding model](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2/) — 2026-03-11 · [architecture] · 텍스트·이미지·비디오·오디오·PDF를 단일 호출로 동일 벡터 공간 매핑, 3072d MRL, ColPali 수준 시각 문서 검색 API화
+- [arXiv 2603.07379 — SoK: Agentic Retrieval-Augmented Generation: Taxonomy, Architectures, Evaluation, and Research Directions](https://arxiv.org/abs/2603.07379) — 2026-03-07 · [agentic] [architecture] · Agentic RAG를 POMDP로 형식화. 에이전트 위상·계획·메모리·툴 조정 5축 분류. 평가 방법론 부재·신뢰성 리스크 지적.
 

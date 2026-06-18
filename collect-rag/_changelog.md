@@ -1,5 +1,32 @@
 # 업데이트 로그
 
+## 2026-06-15 (일일 누적 — 사례 9건 합산)
+
+### 추가된 사례
+- **[01-엔터프라이즈-사내지식.md]** SK하이닉스 GaiA — 반도체 특화 사내 생성형 AI 플랫폼. Native RAG+LLM → 에이전트 → Agentic AI → A2A 오케스트레이션 4단계 로드맵 공개. Biz 특화 에이전트(장비보전·글로벌정책분석·HR·회의) 2025-07 베타.
+- **[02-프로덕션-아키텍처.md]** Databricks Instructed Retriever — 메타데이터 인식 멀티스텝 검색 플랜 생성. InstructedRetriever-4B (TAO + Offline RL), StaRK-Instruct recall 35-50% ↑·답변 정확도 70% ↑. Instructed-Retriever-1(2026-06-04)은 MoE + 병렬 처리로 검색 3배 빠름.
+- **[02-프로덕션-아키텍처.md]** Google Gemini Embedding 2 (2026-03-11) — 텍스트·이미지·비디오·오디오·PDF 통합 멀티모달 임베딩, MRL 3072d, ColPali 수준 시각 문서 검색 API화; 트렌드 요약 갱신
+- **[03-에이전트-툴유즈-MCP.md]** 카카오페이 결제 MCP Agent Toolkit (2025-08) — MCP 표준으로 결제 API 8개를 AI 에이전트 도구로 노출, LangChain·Vercel·OpenAI SDK 멀티프레임워크 지원. 핀테크 MCP 최초 공개 사례.
+- **[03-에이전트-툴유즈-MCP.md]** 삼성리서치 DeepDive — Planner/Supervisor/Researcher 3계층 멀티에이전트가 사내 문서를 리서치·보고서 자동화, Samsung AI Forum 2025 발표
+- **[03-에이전트-툴유즈-MCP.md]** LY Corp ODW #5 (2026-05-07) — Flava 벡터 DB + 에이전트 스킬(MCP 툴 래퍼)로 RAG 구현하는 워크숍 실습; tool-discovery 비용 절감 패턴 소개
+- **[03-에이전트-툴유즈-MCP.md]** arXiv 2603.07379 SoK: Agentic RAG (2026-03) — Agentic RAG를 POMDP로 형식화, 에이전트 위상·계획·메모리·툴 조정 5축 분류, 평가 방법론 부재·신뢰성 리스크 지적.
+- **[03-에이전트-툴유즈-MCP.md]** arXiv 2606.04435 CHARM — Agentic RAG 멀티스텝 파이프라인의 cascading hallucination 감지·차단 프레임워크. 89.4% 감지율·82.1% 에러 전파 감소.
+- **[04-산업별-사례.md]** 올거나이즈 한국어 RAG 리더보드(금융·공공·의료·법률·커머스) — 실제 업무 문서(표·이미지 포함) 기반 5개 도메인 한국어 RAG 공개 벤치마크. 테스트 데이터 전체 공개.
+
+### 파일 업데이트 요약
+- 01-엔터프라이즈-사내지식.md: 한국 사례 11→12건 (SK하이닉스 GaiA 추가)
+- 02-프로덕션-아키텍처.md: Instructed Retrieval 신기술 섹션 신설 + Gemini Embedding 2 추가 + 트렌드 요약 갱신
+- 03-에이전트-툴유즈-MCP.md: 카카오페이 MCP·SoK 논문·삼성리서치 DeepDive·LY Corp ODW #5 추가, "2026년 주목할 신규 연구" 섹션 신설 (CHARM 논문)
+- 04-산업별-사례.md: 올거나이즈 한국어 RAG 리더보드 추가
+- 00-요약-트렌드.md: 한국 사례 목록 업데이트 + 멀티모달 임베딩 트렌드(1.3항) 갱신
+- sources.md: 출처 11건 추가
+
+### 검증 메모
+- URL 살아있음 검증: 이 실행 환경에서 WebFetch가 HTTP 403(봇 차단)을 반환. 죽은 링크(404)가 아닌 접근 차단이며, 동일 URL에 대해 복수의 독립 검색 결과가 페이지 존재·내용을 확인함.
+- 단언 톤다운: 0건
+- 중복 폐기: 0건 (Kanana-2 기존 문서 중복 확인 후 폐기)
+- 발굴 시도 → 최종 채택: 약 20건 시도 → 9건 채택 (두 에이전트 합산)
+
 ## 2026-06-10 (초기 셋업)
 - 리서치 폴더 구조 생성
 - 4개 도메인 병렬 초기 리서치 시작
