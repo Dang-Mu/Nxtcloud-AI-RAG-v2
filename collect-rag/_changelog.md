@@ -1,5 +1,20 @@
 # 업데이트 로그
 
+## 2026-06-18 (일일 루프 #2)
+- **신규 사례 3건** 추가 (WebFetch 403 차단 환경, snippet-verified 3건)
+  1. **LY Corporation Agent i** (2026-04-20 출시): LINE·Yahoo! JAPAN 통합 AI 에이전트 브랜드. 100+ 서비스 데이터 RAG 지식 기반, 7개 도메인 전문 에이전트 + 오케스트레이터 구조, 메모리 기능 2026-06 예정 → `01-엔터프라이즈-사내지식.md` 한국 사례 추가
+  2. **LATAM Airlines 컨시어지 에이전트** (LangChain Interrupt 2026, 2026-05): Supervisor+6 전문 에이전트, DAU 4,000명, LangSmith 초기부터 통합 → `03-에이전트-툴유즈-MCP.md` 글로벌 프로덕션 사례 신설
+  3. **Google Research Cross-Corpus Retrieval** (2026-06-05): Sufficient Context Agent 포함 5-에이전트 Agentic RAG, 표준 RAG 대비 +34% 정확도, 퍼블릭 프리뷰 → `03-에이전트-툴유즈-MCP.md` 2026년 주목할 신규 연구 추가
+- `sources.md`에 3개 출처 추가
+- `00-요약-트렌드.md` 1.4 Agentic RAG 섹션 2026-06 갱신 (Interrupt 2026 프로덕션 사례·Google Gemini 수치 반영)
+
+### 검증 결과
+- URL 200 OK: 0/3건 (WebFetch 전체 403 차단)
+- snippet-verified: 3/3건 (각각 2개 이상 독립 출처 교차확인)
+- 단언 톤다운: 1건 (Agent i "일본 최초" → 구체적 주장 제거)
+- 중복 폐기: 0건
+- 발굴 시도 → 최종 채택: 약 12건 시도 → 3건 채택
+
 ## 2026-06-17 (일일 루프 #1)
 - **신규 사례 3건** 추가 (GitHub HTTP 200 검증 완료)
   1. **EnterpriseRAG-Bench** (Onyx팀, arXiv 2605.05253, 2026-05): 엔터프라이즈 특화 RAG 벤치마크. 50만+ 문서·500 질문·10카테고리·공개 리더보드 → `02-프로덕션-아키텍처.md` 벤치마크 섹션 추가

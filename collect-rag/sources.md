@@ -4,6 +4,12 @@
 >
 > 도메인 태그: `[enterprise]` `[architecture]` `[agentic]` `[industry:금융]` `[industry:의료]` `[industry:법률]` `[industry:교육]` `[korea]`
 
+## 2026-06-18 추가 출처
+
+- [LY Corporation 공식 발표 — LY Corporation Launches New AI Agent Brand "Agent i"](https://www.lycorp.co.jp/en/news/release/020398/) — 2026-04-20 · [enterprise] [korea] · LINE·Yahoo! JAPAN 통합 AI 에이전트 브랜드 출시. 7개 도메인 전문 에이전트, 100+ LY Corp 서비스 데이터 RAG 기반, 메모리·태스크 위임 기능 2026-06 예정. (snippet-verified)
+- [LangChain Interrupt 2026 세션 녹화 — LATAM Airlines B2C 컨시어지 에이전트](https://interrupt.langchain.com/recordings) — 2026-05-13/14 · [agentic] · LATAM Airlines Supervisor+6 전문 에이전트로 DAU 4,000명 B2C 컨시어지 운영. LangSmith 관측으로 아키텍처 개선. (snippet-verified)
+- [Google Research Blog — Unlocking dependable responses with Gemini Enterprise Agent Platform's Agentic RAG](https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/) — 2026-06-05 · [agentic] [architecture] · Cross-Corpus Retrieval: 5개 전문 에이전트(Sufficient Context Agent 포함), 표준 RAG 대비 +34% 정확도, 퍼블릭 프리뷰. (snippet-verified)
+
 ## 2026-06-17 추가 출처
 
 - [GitHub — onyx-dot-app/EnterpriseRAG-Bench](https://github.com/onyx-dot-app/EnterpriseRAG-Bench) — 2026-05 · [architecture] · 엔터프라이즈 특화 RAG 벤치마크. Slack 275K·Gmail 120K 등 9개 소스 50만+ 문서, 500 질문 10카테고리, MIT 라이선스, 공개 리더보드. arXiv 2605.05253.
