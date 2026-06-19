@@ -4,6 +4,12 @@
 >
 > 도메인 태그: `[enterprise]` `[architecture]` `[agentic]` `[industry:금융]` `[industry:의료]` `[industry:법률]` `[industry:교육]` `[korea]`
 
+## 2026-06-19 추가 출처
+
+- [ZDNet Korea — KT, 연내 초개인화 AI 에이전트 상용화 (품질·안정성 차별화)](https://zdnet.co.kr/view/?no=20260617130027) — 2026-06-17 · [enterprise] [korea] · KT 자체 개발 K-RAG 기반 에이전틱 AI 전략 발표. 산업별 RAG 유형 분화(그래프/에이전트/멀티모달), MY K·지니TV·사장이지 등 B2C 서비스 H2 2026 상용화 예정. (snippet-verified)
+- [arXiv:2606.04127 — When Retrieval Doesn't Help: A Large-Scale Study of Biomedical RAG](https://arxiv.org/abs/2606.04127) — 2026-06-02 · [industry:의료] [architecture] · 5모델×10의료QA×4검색방법×4코퍼스 대규모 실험. RAG가 no-retrieval 대비 1~2% 향상에 그침. 백본 모델 선택이 검색기 선택보다 훨씬 큰 영향. 주요 병목은 검색 품질이 아닌 모델의 증거 활용 능력. (snippet-verified)
+- [arXiv:2606.00610 — MemGraphRAG: Memory-based Multi-Agent System for Graph Retrieval-Augmented Generation](https://arxiv.org/abs/2606.00610) — 2026-06 (KDD 2026) · [architecture] [agentic] · 공유 메모리 기반 멀티 에이전트로 그래프 구성의 주제 일관성·논리 충돌 해소. 메모리 인식 계층적 검색 알고리즘 제안. 복수 벤치마크 SOTA 능가. GitHub: XMUDeepLIT/MemGraphRAG. (snippet-verified)
+
 ## 2026-06-18 추가 출처
 
 - [LY Corporation 공식 발표 — LY Corporation Launches New AI Agent Brand "Agent i"](https://www.lycorp.co.jp/en/news/release/020398/) — 2026-04-20 · [enterprise] [korea] · LINE·Yahoo! JAPAN 통합 AI 에이전트 브랜드 출시. 7개 도메인 전문 에이전트, 100+ LY Corp 서비스 데이터 RAG 기반, 메모리·태스크 위임 기능 2026-06 예정. (snippet-verified)
