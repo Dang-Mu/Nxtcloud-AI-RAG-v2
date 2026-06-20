@@ -1,5 +1,20 @@
 # 업데이트 로그
 
+## 2026-06-20 (일일 루프 #4)
+- **신규 사례 3건** 추가 (GitHub URL 200 OK 2건, snippet-verified 1건)
+  1. **RAGFlow v0.26.1** (InfiniFlow, 2026-06-17): 오픈소스 RAG 엔진 83k stars. 주요 신규: Slack/Teams/SharePoint/Salesforce 커넥터, GraphRAG 체크포인트/재개, Ψ-RAG(RAPTOR+AHC) 모드, 메시징 채널 직접 배포 → `01-엔터프라이즈-사내지식.md` 글로벌 섹션 추가 (글로벌 12→13건)
+  2. **headroom** (v0.26.0, 2026-06-16, Apache-2.0, ⭐41.8k): RAG 청크·도구 출력 컨텍스트 압축 레이어. 코드검색 92%·SRE 92%·이슈 73% 토큰 절감, SmartCrusher/CodeCompressor/CacheAligner 포함 6종 알고리즘, MCP 서버 배포 지원 → `02-프로덕션-아키텍처.md` 비용·지연 섹션 신설
+  3. **UniversalRAG** [ACL 2026] (arXiv 2504.20734, KAIST AI 그룹): 모달리티 인식 라우팅으로 텍스트·이미지·비디오 이질적 코퍼스 처리. 학습/무학습 기반 라우터 모두 지원 → `02-프로덕션-아키텍처.md` 멀티모달 섹션 추가 (한국 연구)
+- `sources.md`에 3개 출처 추가
+- `01-엔터프라이즈-사내지식.md` 헤더 수정: 글로벌 12→13건, 총 30→31건
+
+### 검증 결과
+- URL 200 OK: 3/3건 (GitHub 접근 성공)
+- snippet-verified: 1/3건 (UniversalRAG arXiv 403, GitHub README 교차 확인)
+- 단언 톤다운: 0건
+- 중복 폐기: 0건
+- 발굴 시도 → 최종 채택: 약 12건 시도 → 3건 채택
+
 ## 2026-06-19 (일일 루프 #3)
 - **신규 사례 3건** 추가 (WebFetch 403 차단 환경, snippet-verified 3건)
   1. **KT — K-RAG 기반 에이전틱 AI 전략** (2026-06-17 기자간담회): 자체 개발 K-RAG(검색→생성→학습→실행 전 단계 통합), 산업 특성별 RAG 유형 분화(그래프/에이전트/멀티모달 RAG), B2C·B2B 에이전트 H2 2026 상용화 예정 → `01-엔터프라이즈-사내지식.md` 한국 사례 추가

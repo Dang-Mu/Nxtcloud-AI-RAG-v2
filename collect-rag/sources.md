@@ -4,6 +4,12 @@
 >
 > 도메인 태그: `[enterprise]` `[architecture]` `[agentic]` `[industry:금융]` `[industry:의료]` `[industry:법률]` `[industry:교육]` `[korea]`
 
+## 2026-06-20 추가 출처
+
+- [GitHub — infiniflow/ragflow](https://github.com/infiniflow/ragflow) — 2026-06-17 (v0.26.1) · [enterprise] [architecture] · 오픈소스 RAG+에이전트 엔진. 83k stars. 최신 업데이트: Slack/Teams/Salesforce/SharePoint 커넥터, Ψ-RAG(RAPTOR+AHC) 모드, GraphRAG 체크포인트, 메시징 채널 직접 배포.
+- [GitHub — chopratejas/headroom](https://github.com/chopratejas/headroom) — 2026-06-16 (v0.26.0) · [architecture] · RAG 청크·도구 출력 컨텍스트 압축 레이어. Python/Rust/TypeScript, Apache-2.0, 41.8k stars. 6종 압축 알고리즘으로 60-95% 토큰 절감. MCP 서버 배포 지원. 품질 보존(GSM8K 87% 동일).
+- [arXiv:2504.20734 — UniversalRAG: Retrieval-Augmented Generation over Corpora of Diverse Modalities and Granularities](https://arxiv.org/abs/2504.20734) — 2025-04 (ACL 2026) · [architecture] [korea] · KAIST AI 그룹. 모달리티 인식 라우팅으로 텍스트·이미지·비디오 이질적 코퍼스 RAG. 학습/무학습 기반 라우터 지원. GitHub: wgcyeo/UniversalRAG. (snippet-verified)
+
 ## 2026-06-19 추가 출처
 
 - [ZDNet Korea — KT, 연내 초개인화 AI 에이전트 상용화 (품질·안정성 차별화)](https://zdnet.co.kr/view/?no=20260617130027) — 2026-06-17 · [enterprise] [korea] · KT 자체 개발 K-RAG 기반 에이전틱 AI 전략 발표. 산업별 RAG 유형 분화(그래프/에이전트/멀티모달), MY K·지니TV·사장이지 등 B2C 서비스 H2 2026 상용화 예정. (snippet-verified)
