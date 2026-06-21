@@ -1,5 +1,19 @@
 # 업데이트 로그
 
+## 2026-06-21 (일일 루프 #5)
+- **업데이트 1건 + 신규 2건** (WebFetch 403 차단 환경, snippet-verified 3건)
+  1. **우아한형제들 물어보새 v1.5** (2026 상반기, AWS re:Invent 2025 발표): 기존 v1(2024, GPT-4o+RAG) 항목을 v1.5 하이브리드 에이전트 구조로 업데이트. 슈퍼바이저 에이전트가 SQL에이전트·지식에이전트·서포트에이전트로 라우팅. Amazon Bedrock + Claude 스택으로 전환. 전사 도입률 30%+. v2.0(MCP+ReAct+Reflect) 로드맵 공개 → `01-엔터프라이즈-사내지식.md` 기존 항목 업데이트
+  2. **FIDES** (arXiv 2606.05644, 2026-06-04, Zhejiang Univ.·Guangzhou Univ.·GenTel.io): RAG 검색-메모리 충돌을 디코딩 단계에서 해소하는 training-free 디코더. Opposition·Shift·Noise 3신호가 충돌 집중 토큰을 탐지 → `02-프로덕션-아키텍처.md` 검색·리랭킹 섹션 신규 추가
+  3. **CONCORD** (arXiv 2606.15179, 2026-06-13, IEEE ICWS 2026): 기기-클라우드 분산 RAG. 문서 격리 환경(HIPAA·법률·금융)에서 Waiting Debt Control + Certificate-guided Minimal Supplementation으로 대역폭 최소화 → `02-프로덕션-아키텍처.md` 보안·거버넌스 섹션 신규 추가
+- `sources.md`에 3개 출처 추가
+
+### 검증 결과
+- URL 200 OK: 0/3건 (WebFetch 전체 403 차단)
+- snippet-verified: 3/3건 (물어보새: 3개 이상 독립 뉴스 출처, arXiv 논문 2건: 각각 arXiv 페이지 + HTML 버전 2개 이상 출처 확인)
+- 단언 톤다운: 0건
+- 중복 폐기: 0건 (arXiv 2606.04127 기존 수록 확인 → 제외)
+- 발굴 시도 → 최종 채택: 약 8건 시도 → 3건 채택
+
 ## 2026-06-20 (일일 루프 #4)
 - **신규 사례 3건** 추가 (GitHub URL 200 OK 2건, snippet-verified 1건)
   1. **RAGFlow v0.26.1** (InfiniFlow, 2026-06-17): 오픈소스 RAG 엔진 83k stars. 주요 신규: Slack/Teams/SharePoint/Salesforce 커넥터, GraphRAG 체크포인트/재개, Ψ-RAG(RAPTOR+AHC) 모드, 메시징 채널 직접 배포 → `01-엔터프라이즈-사내지식.md` 글로벌 섹션 추가 (글로벌 12→13건)
