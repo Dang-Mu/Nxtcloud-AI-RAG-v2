@@ -4,6 +4,12 @@
 >
 > 도메인 태그: `[enterprise]` `[architecture]` `[agentic]` `[industry:금융]` `[industry:의료]` `[industry:법률]` `[industry:교육]` `[korea]`
 
+## 2026-06-21 추가 출처
+
+- [블로터 — AWS re:Invent 2025 우아한형제들, AI 에이전트로 업무 혁신...전사 30% 도입해 효율성 향상](https://www.bloter.net/news/articleView.html?idxno=649250) — 2025-12 · [enterprise] [agentic] [korea] · 물어보새 v1.5 하이브리드 에이전트 구조(슈퍼바이저 → SQL에이전트·지식에이전트 라우팅), 전사 30% 도입, AWS Bedrock + Claude 스택. v2.0 MCP+ReAct 로드맵. (snippet-verified)
+- [arXiv:2606.05644 — FIDES: Faithful Inference via Deep Evidence Signals for Retrieval-Memory Conflict in RAG](https://arxiv.org/abs/2606.05644) — 2026-06-04 · [architecture] · 검색-메모리 충돌 집중 디코딩 단계를 Opposition·Shift·Noise 3신호로 탐지하는 training-free 디코더. Zhejiang Univ.·Guangzhou Univ.·GenTel.io. (snippet-verified)
+- [arXiv:2606.15179 — CONCORD: Asynchronous Sparse Aggregation for Device-Cloud RAG under Document Isolation](https://arxiv.org/abs/2606.15179) — 2026-06-13 · [architecture] · 문서 격리 환경(기기-클라우드 분산 RAG). Waiting Debt Control + Certificate-guided Minimal Supplementation으로 대역폭 최소화. IEEE ICWS 2026. (snippet-verified)
+
 ## 2026-06-20 추가 출처
 
 - [GitHub — infiniflow/ragflow](https://github.com/infiniflow/ragflow) — 2026-06-17 (v0.26.1) · [enterprise] [architecture] · 오픈소스 RAG+에이전트 엔진. 83k stars. 최신 업데이트: Slack/Teams/Salesforce/SharePoint 커넥터, Ψ-RAG(RAPTOR+AHC) 모드, GraphRAG 체크포인트, 메시징 채널 직접 배포.
