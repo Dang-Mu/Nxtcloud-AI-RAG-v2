@@ -4,6 +4,12 @@
 >
 > 도메인 태그: `[enterprise]` `[architecture]` `[agentic]` `[industry:금융]` `[industry:의료]` `[industry:법률]` `[industry:교육]` `[korea]`
 
+## 2026-06-22 추가 출처
+
+- [LY Corp Tech Blog — Uniting analytics with AI agents as work and roles shift in the GenAI era](https://techblog.lycorp.co.jp/en/techverse2026-105) — 2026-06-22 · [enterprise] [agentic] [korea] · PJ One Piece: 사내 데이터 분석 AI 에이전트. 자연어 → 기존 2주 소요 분석을 10분으로 단축. 파일럿 사업 부문 50%+ 일상 사용. Application+Agents+Tools+Knowledge+Measurement 5계층 아키텍처. (snippet-verified)
+- [arXiv:2605.29523 — K-FinHallu: A Hallucination Detection Benchmark for Multi-Turn RAG in Korean Finance](https://arxiv.org/abs/2605.29523) — 2026-05-28 · [korea] [industry:금융] [architecture] · KAIST AI + KakaoBank Financial Tech Lab. 한국 금융 RAG 멀티턴 환각 탐지 벤치마크. answerability 기반 계층적 분류체계(5종 환각 유형). (snippet-verified)
+- [arXiv:2606.11350 — When More Documents Hurt RAG: Mitigating Vector Search Dilution with Domain-Scoped, Model-Agnostic Retrieval](https://arxiv.org/abs/2606.11350) — 2026-06-09 · [architecture] · University of Wyoming. 문서 수 증가 시 RAG 정확도 급락(75%→<40%) 원인을 Vector Search Dilution으로 명명. MASDR-RAG(도메인 스코핑+멀티에이전트)로 해결. 200 전문가 검증 질의, 5 LLM, 6 코퍼스 평가. (snippet-verified)
+
 ## 2026-06-21 추가 출처
 
 - [블로터 — AWS re:Invent 2025 우아한형제들, AI 에이전트로 업무 혁신...전사 30% 도입해 효율성 향상](https://www.bloter.net/news/articleView.html?idxno=649250) — 2025-12 · [enterprise] [agentic] [korea] · 물어보새 v1.5 하이브리드 에이전트 구조(슈퍼바이저 → SQL에이전트·지식에이전트 라우팅), 전사 30% 도입, AWS Bedrock + Claude 스택. v2.0 MCP+ReAct 로드맵. (snippet-verified)
