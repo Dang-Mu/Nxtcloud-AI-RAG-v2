@@ -4,6 +4,12 @@
 >
 > 도메인 태그: `[enterprise]` `[architecture]` `[agentic]` `[industry:금융]` `[industry:의료]` `[industry:법률]` `[industry:교육]` `[korea]`
 
+## 2026-06-23 추가 출처
+
+- [Toss Tech Blog — 토스플레이스 데이터봇 '판다(PANDA)'를 소개합니다](https://toss.tech/article/da-assistant-panda) — 2026-04-22 · [enterprise] [korea] · 토스플레이스 내부 데이터 추출 에이전트. LLM + Text-to-SQL + ReAct 루프. 오픈 첫날 팀원 1/3, 1주일 내 1/2 사용. 메시지 4,000건+. (snippet-verified)
+- [arXiv:2506.12071 — T²-RAGBench: Text-and-Table Benchmark for Evaluating Retrieval-Augmented Generation](https://arxiv.org/abs/2506.12071) — EACL 2026 · [industry:금융] [architecture] · University of Hamburg. 금융 문서 텍스트+테이블 혼합 RAG 벤치마크. 23,088 트리플. Hybrid BM25가 text-embedding-3-large 능가. (snippet-verified)
+- [블로터 — KT RAG, 산업 최적화·데이터 선순환 '강점'](https://www.bloter.net/news/articleView.html?idxno=665779) — 2026-06 · [enterprise] [korea] · KT 사내 AI 에이전트: 임직원 약 1만 4,000명 사용, 사용률 97%. 모듈형 아키텍처로 산업별 RAG 유형(그래프·멀티모달·에이전트) 조합. (snippet-verified)
+
 ## 2026-06-22 추가 출처
 
 - [LY Corp Tech Blog — Uniting analytics with AI agents as work and roles shift in the GenAI era](https://techblog.lycorp.co.jp/en/techverse2026-105) — 2026-06-22 · [enterprise] [agentic] [korea] · PJ One Piece: 사내 데이터 분석 AI 에이전트. 자연어 → 기존 2주 소요 분석을 10분으로 단축. 파일럿 사업 부문 50%+ 일상 사용. Application+Agents+Tools+Knowledge+Measurement 5계층 아키텍처. (snippet-verified)

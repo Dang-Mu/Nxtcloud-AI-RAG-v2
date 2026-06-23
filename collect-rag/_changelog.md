@@ -1,5 +1,20 @@
 # 업데이트 로그
 
+## 2026-06-23 (일일 루프 #7)
+- **신규 사례 2건 + 기존 업데이트 1건** (WebFetch 403 차단 환경, snippet-verified 3건)
+  1. **토스플레이스 PANDA** (2026-04-22, Toss Tech Blog): 내부 데이터봇. LLM + Text-to-SQL + ReAct 루프 구조. 70% 단순 추출 요청을 자동화. 오픈 첫날 팀 1/3 사용, 1주일 내 절반, 메시지 4,000건+ → `01-엔터프라이즈-사내지식.md` 신규 항목 추가
+  2. **T²-RAGBench** (arXiv 2506.12071, EACL 2026, University of Hamburg): 금융 문서 텍스트+테이블 RAG 평가 벤치마크. 23,088 트리플. Hybrid BM25가 text-embedding-3-large 능가 — 도메인 특화 어휘는 렉시컬 매칭이 유효함을 재확인 → `04-산업별-사례.md` 금융 벤치마크 섹션 추가
+  3. **KT RAG 사내 사용 지표 업데이트** (블로터 idxno=665779, 2026-06): 임직원 약 1만 4,000명 / 사용률 97% 확인. 기존 KT K-RAG 항목에 수치 보강 + 블로터 출처 추가 → `01-엔터프라이즈-사내지식.md` 기존 항목 업데이트
+- `sources.md`에 3개 출처 추가
+- `01-엔터프라이즈-사내지식.md` 헤더 수정: 한국 15→16건, 총 32→33건
+
+### 검증 결과
+- URL 200 OK: 0/3건 (WebFetch 전체 403 차단)
+- snippet-verified: 3/3건 (PANDA: toss.tech + newsworks 2개 출처; T²-RAGBench: arXiv·ResearchGate·HuggingFace·ACL Anthology 4개 출처; KT bloter: 2개 검색 결과 교차확인)
+- 단언 톤다운: 0건
+- 중복 폐기: 0건
+- 발굴 시도 → 최종 채택: 약 10건 시도 → 신규 2건 + 업데이트 1건 채택
+
 ## 2026-06-22 (일일 루프 #6)
 - **신규 사례 3건** 추가 (WebFetch 403 차단 환경, snippet-verified 3건)
   1. **LY Corporation — PJ One Piece 분석 AI 에이전트** (Tech-Verse 2026, 2026-06-22): 사내 데이터 분석 AI 에이전트. 자연어 질의로 기존 2주 소요 분석을 10분으로 단축. 파일럿 사업 부문 50%+ 일상 사용 → `01-엔터프라이즈-사내지식.md` LY Corp 신규 항목 추가
