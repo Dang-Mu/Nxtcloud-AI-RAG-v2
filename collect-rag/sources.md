@@ -4,6 +4,12 @@
 >
 > 도메인 태그: `[enterprise]` `[architecture]` `[agentic]` `[industry:금융]` `[industry:의료]` `[industry:법률]` `[industry:교육]` `[korea]`
 
+## 2026-06-24 추가 출처
+
+- [ITing — [AWS SUMMIT 2025] 쿠팡의 생성형AI기반 광고플랫폼 혁신](https://iting.co.kr/aws-summit-seoul-2025-techblog-7/) — 2025 · [enterprise] [korea] · 쿠팡 광고 에이전트: Bedrock + Knowledge Base RAG, 수치 일치 기반 응답 품질 점수화, 프롬프트 캐싱 비용 최적화. AWS Summit Seoul 2025 발표. (snippet-verified)
+- [Databricks Blog — Agent Bricks: Data + AI Summit 2026](https://www.databricks.com/blog/agent-bricks-dais-2026) — 2026-06 · [architecture] · DAIS 2026 Agent Bricks 확장 발표. Knowledge Assistant GA(단순 RAG 대비 최대 70% 품질 향상), Lakebase 에이전트 메모리, 100k+ 에이전트 빌드, Unity Catalog 메타데이터 + 검색 통합. (snippet-verified)
+- [arXiv:2606.15971 — SAG: SQL-Retrieval Augmented Generation with Query-Time Dynamic Hyperedges](https://arxiv.org/abs/2606.15971) — 2026-06-14 · [architecture] · Zleap AI. 청크를 이벤트+엔티티로 변환, SQL JOIN으로 쿼리 시점에 동적 하이퍼에지 생성. 그래프 사전 구축 없이 구조화 필터링·의미 확장·LLM 리랭킹 통합. 증분 업데이트 자연 지원. (snippet-verified)
+
 ## 2026-06-23 추가 출처
 
 - [Toss Tech Blog — 토스플레이스 데이터봇 '판다(PANDA)'를 소개합니다](https://toss.tech/article/da-assistant-panda) — 2026-04-22 · [enterprise] [korea] · 토스플레이스 내부 데이터 추출 에이전트. LLM + Text-to-SQL + ReAct 루프. 오픈 첫날 팀원 1/3, 1주일 내 1/2 사용. 메시지 4,000건+. (snippet-verified)

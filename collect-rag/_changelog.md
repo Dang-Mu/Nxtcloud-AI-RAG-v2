@@ -1,5 +1,19 @@
 # 업데이트 로그
 
+## 2026-06-24 (일일 루프 #8)
+- **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 3건)
+  1. **쿠팡 생성형AI 광고 에이전트** (AWS Summit Seoul 2025): Bedrock + Knowledge Base RAG 기반 광고 인사이트·입찰가 자동화. 수치 일치 기반 RAG 응답 품질 점수화, 프롬프트 캐싱 비용 최적화 → `01-엔터프라이즈-사내지식.md` 한국 사례 추가 (한국 16→17건)
+  2. **Databricks Agent Bricks & Knowledge Assistant GA** (DAIS 2026, 2026-06): Instructed Retriever 위에 구축된 Knowledge Assistant GA — Unity Catalog 메타데이터 내재화로 단순 RAG 대비 최대 70% 품질 향상(내부 기준). Lakebase 에이전트 메모리, 100k+ 에이전트, 1+ quadrillion 토큰/년 → `02-프로덕션-아키텍처.md` Instructed Retrieval 섹션에 하위 항목 추가
+  3. **SAG** (arXiv:2606.15971, 2026-06-14, Zleap AI): 청크를 이벤트+엔티티로 변환, SQL JOIN으로 쿼리 시점 동적 하이퍼에지 생성. 그래프 사전 구축 없이 구조화 필터링·의미 확장·LLM 리랭킹 통합 → `02-프로덕션-아키텍처.md` GraphRAG 섹션 추가
+- `sources.md`에 3개 출처 추가
+
+### 검증 결과
+- URL 200 OK: 0/3건 (WebFetch 전체 403 차단)
+- snippet-verified: 3/3건 (쿠팡: iting.co.kr + aws.amazon.com 2개 출처; Databricks: databricks.com 블로그 + docs.databricks.com + community.databricks.com 3개 출처; SAG: arxiv.org + huggingface.co/papers + github.com/Zleap-AI 3개 출처)
+- 단언 톤다운: 1건 (Databricks 70% 수치에 "자체 내부 비교 기준" 명시)
+- 중복 폐기: 0건
+- 발굴 시도 → 최종 채택: 약 10건 시도 → 3건 채택
+
 ## 2026-06-23 (일일 루프 #7)
 - **신규 사례 2건 + 기존 업데이트 1건** (WebFetch 403 차단 환경, snippet-verified 3건)
   1. **토스플레이스 PANDA** (2026-04-22, Toss Tech Blog): 내부 데이터봇. LLM + Text-to-SQL + ReAct 루프 구조. 70% 단순 추출 요청을 자동화. 오픈 첫날 팀 1/3 사용, 1주일 내 절반, 메시지 4,000건+ → `01-엔터프라이즈-사내지식.md` 신규 항목 추가
