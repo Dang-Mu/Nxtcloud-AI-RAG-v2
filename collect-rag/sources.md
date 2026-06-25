@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-06-25 추가 출처
+
+- [디지털데일리 — 클로바 스튜디오 포 거브, 개발 도구서 공통기반으로 진화](https://www.ddaily.co.kr/page/view/2026062416435873544) — 2026-06-24 · [enterprise] [korea] · 네이버클라우드 CLOVA Studio for Gov: 행안부·과기부 등 40개+ 부처·기관 확산, 하반기 GraphRAG·멀티모달 RAG·MCP 연동 에이전트 빌더 강화 계획. '2026 공공 AI 박람회' 발표. (snippet-verified)
+- [ZDNet Korea — 삼성SDS 패브릭스로 행정 혁신 가속](https://zdnet.co.kr/view/?no=20260624173649) — 2026-06-24 · [enterprise] [agentic] [korea] · 삼성SDS 패브릭스: 공공기관 직원이 직접 AI 에이전트 개발. 정부24 AI(RAG 4단계 구조), AI 민원서포터, AI 조달법령 해석 등 공개. '2026 공공 AI 박람회' 참가. (snippet-verified)
+- [arXiv:2506.05690 — When to use Graphs in RAG: A Comprehensive Analysis for Graph Retrieval-Augmented Generation](https://arxiv.org/abs/2506.05690) — 2025-06-06 (ICLR 2026) · [architecture] · GraphRAG-Bench 제안. GraphRAG가 Natural Questions에서 vanilla RAG 대비 13.4% 정확도 하락, 멀티홉 추론에서만 4.5% 향상(지연 2.3배). 그래프를 써야 하는 시나리오를 체계적 분석. (snippet-verified)
+
 > 형식: `- [제목](URL) — 발행일 · 도메인 태그 · 한 줄 요약`
 >
 > 도메인 태그: `[enterprise]` `[architecture]` `[agentic]` `[industry:금융]` `[industry:의료]` `[industry:법률]` `[industry:교육]` `[korea]`
