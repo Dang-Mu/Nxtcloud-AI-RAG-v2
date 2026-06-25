@@ -1,5 +1,20 @@
 # 업데이트 로그
 
+## 2026-06-25 (일일 루프 #9)
+- **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 3건)
+  1. **네이버클라우드 CLOVA Studio for Gov** (2026-06-24, 공공 AI 박람회): 2026년 3월 서비스 개시 후 40개+ 부처·기관 확산. 하반기 GraphRAG·멀티모달 RAG·MCP 연동 에이전트 빌더·국산 NPU 강화 계획. 범정부 AI 공통기반으로의 진화 방향 발표 → `01-엔터프라이즈-사내지식.md` 한국 사례 추가 (한국 17→19건)
+  2. **삼성SDS 패브릭스 공공 AI 에이전트** (2026-06-24, 공공 AI 박람회): 패브릭스로 공공기관 직원이 직접 AI 에이전트 구축. 정부24 AI (RAG 검색 → 연관성 검증 → 답변 4단계), AI 민원서포터, 조달법령 해석 서비스 공개. 법제처 등 자체 에이전트 구축 추진 중 → `01-엔터프라이즈-사내지식.md` 한국 사례 추가
+  3. **GraphRAG-Bench** (arXiv:2506.05690, ICLR 2026, 2025-06-06): GraphRAG가 Natural Questions에서 vanilla RAG 대비 13.4% 낮은 정확도 확인. 멀티홉 추론에서만 4.5% 향상(지연 2.3배). 그래프를 써야 하는 시나리오를 최초로 체계적 분석 → `02-프로덕션-아키텍처.md` GraphRAG 섹션 추가
+- `sources.md`에 3개 출처 추가
+- `01-엔터프라이즈-사내지식.md` 헤더 수정: 한국 17→19건, 총 34→36건
+
+### 검증 결과
+- URL 200 OK: 0/3건 (WebFetch 전체 403 차단)
+- snippet-verified: 3/3건 (CLOVA Studio for Gov: ddaily.co.kr + zdnet.co.kr + financialpost.co.kr 3개 이상 출처; 삼성SDS 패브릭스: zdnet.co.kr + inews24.com + etoday.co.kr + dailysecu.com 4개 이상 출처; GraphRAG-Bench: arxiv.org + researchgate.net + github.com/GraphRAG-Bench + huggingface.co + dblp.org 5개 이상 출처)
+- 단언 톤다운: 0건
+- 중복 폐기: 0건
+- 발굴 시도 → 최종 채택: 약 12건 시도 → 3건 채택
+
 ## 2026-06-24 (일일 루프 #8)
 - **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 3건)
   1. **쿠팡 생성형AI 광고 에이전트** (AWS Summit Seoul 2025): Bedrock + Knowledge Base RAG 기반 광고 인사이트·입찰가 자동화. 수치 일치 기반 RAG 응답 품질 점수화, 프롬프트 캐싱 비용 최적화 → `01-엔터프라이즈-사내지식.md` 한국 사례 추가 (한국 16→17건)
