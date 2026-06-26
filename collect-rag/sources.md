@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-06-26 추가 출처
+
+- [LY Corp Tech Blog — Architecting Semantic Context OS: Beyond token stuffing in agentic systems](https://techblog.lycorp.co.jp/en/techverse2026-59) — 2026-06-22~26 · [agentic] [architecture] [korea] · LY Corp Tech-Verse 2026 세션 59. 코드 RAG에서 벡터 검색이 AST를 파괴하는 문제를 PathAlign(AST 기반 컨텍스트 격리)으로 해결. 소프트웨어 인텔리전스 에이전트용 Semantic Context OS 아키텍처 제안. (snippet-verified)
+- [arXiv:2606.01240 — Efficient RAG with Intent-Aware Retrieval and Semantics-Preserving Chunking](https://arxiv.org/abs/2606.01240) — 2026-06 · [architecture] · InSemRAG: IAR(쿼리 의도 기반 동적 하이브리드 검색) + SPC(손상된 증거 청크 탐지·복원) + SLM 기반 반복 검색-확인 루프. HotPotQA F1 +2.65, FEVER 정확도 +1.5. (snippet-verified)
+- [KT Enterprise — MWC26, KT가 세계에 선보인 AI 인프라 혁신](https://enterprise.kt.com/bt/dxstory/3782.do) — 2026-03-02 · [enterprise] [korea] [agentic] · KT 에이전틱 패브릭: 기업용 AI 운영체제. 5계층(Experience-Intelligence-Context-Execution-Governance), Context Layer에 Memory+RAG 내재화, Zero Trust 보안, 대법원·금융기관·제조사 사례. (snippet-verified)
+
 ## 2026-06-25 추가 출처
 
 - [디지털데일리 — 클로바 스튜디오 포 거브, 개발 도구서 공통기반으로 진화](https://www.ddaily.co.kr/page/view/2026062416435873544) — 2026-06-24 · [enterprise] [korea] · 네이버클라우드 CLOVA Studio for Gov: 행안부·과기부 등 40개+ 부처·기관 확산, 하반기 GraphRAG·멀티모달 RAG·MCP 연동 에이전트 빌더 강화 계획. '2026 공공 AI 박람회' 발표. (snippet-verified)

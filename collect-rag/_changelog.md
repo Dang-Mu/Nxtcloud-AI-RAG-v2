@@ -1,5 +1,20 @@
 # 업데이트 로그
 
+## 2026-06-26 (일일 루프 #10)
+- **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 3건)
+  1. **LY Corporation — Semantic Context OS** (Tech-Verse 2026, 2026-06-22~26): 코드 RAG에서 벡터 검색이 AST·import 그래프를 파괴하는 문제를 PathAlign(AST 기반 컨텍스트 격리)으로 해결. 소프트웨어 인텔리전스 에이전트(코드 리뷰·취약점 발견·리팩터링)를 위한 Semantic Context OS 아키텍처 제안. "문서 청킹≠코드 청킹" 공식화 → `03-에이전트-툴유즈-MCP.md` 한국 사례 신규 추가
+  2. **InSemRAG** (arXiv:2606.01240, 2026-06): IAR(의도 인식 동적 하이브리드 검색) + SPC(손상된 증거 청크 탐지·복원) + SLM 기반 반복 검색-확인 루프. HotPotQA F1 +2.65점, FEVER 정확도 +1.5점 → `02-프로덕션-아키텍처.md` 신규 섹션 추가
+  3. **KT 에이전틱 패브릭 (Agentic Fabric)** (MWC 2026, 2026-03-02): 기업용 AI 운영체제. 5계층(Experience-Intelligence-Context-Execution-Governance), Context Layer에 Memory+RAG 내재화, Zero Trust 보안. 대법원·금융기관·제조사·실종자 수색 실증 사례 → `01-엔터프라이즈-사내지식.md` 한국 사례 신규 추가 (한국 19→20건, 총 36→37건)
+- `sources.md`에 3개 출처 추가
+- `01-엔터프라이즈-사내지식.md` 헤더 수정: 한국 19→20건, 총 36→37건
+
+### 검증 결과
+- URL 200 OK: 0/3건 (WebFetch 전체 403 차단)
+- snippet-verified: 3/3건 (LY Corp Semantic Context OS: techblog.lycorp.co.jp 공식 + 다중 검색 스니펫; InSemRAG: arxiv.org/abs/2606.01240 + arxiv.org/html/2606.01240 2개 arXiv 출처; KT 에이전틱 패브릭: enterprise.kt.com + ebn.co.kr + financialpost.co.kr + epnc.co.kr 4개 이상 출처)
+- 단언 톤다운: 0건
+- 중복 폐기: 0건
+- 발굴 시도 → 최종 채택: 약 12건 시도 → 3건 채택
+
 ## 2026-06-25 (일일 루프 #9)
 - **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 3건)
   1. **네이버클라우드 CLOVA Studio for Gov** (2026-06-24, 공공 AI 박람회): 2026년 3월 서비스 개시 후 40개+ 부처·기관 확산. 하반기 GraphRAG·멀티모달 RAG·MCP 연동 에이전트 빌더·국산 NPU 강화 계획. 범정부 AI 공통기반으로의 진화 방향 발표 → `01-엔터프라이즈-사내지식.md` 한국 사례 추가 (한국 17→19건)

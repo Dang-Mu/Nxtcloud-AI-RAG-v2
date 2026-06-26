@@ -265,6 +265,16 @@ FAA 시리즈에서 한 발짝 더 나아간 워크숍(Open Dev Workshop) 아티
 - **결과·교훈**: AI 에이전트가 상태 조회·취소까지 실시간 처리 가능 확인. **"사내 문서 검색 MCP"를 넘어 외부 API를 에이전트 도구로 개방하는 생태계 확장** 패턴 제시. 한국 핀테크 최초의 MCP 공개 구현 사례.
 - **출처**: [카카오페이 기술 블로그 — AI 에이전트와 카카오페이 결제 오픈 API 연동하기: MCP Agent Toolkit 개발기](https://tech.kakaopay.com/post/kakaopay-mcp-agent-toolkit/) (2025-08-07)
 
+### LY Corporation — Semantic Context OS: 코드 에이전트를 위한 AST 기반 컨텍스트 검색 (Tech-Verse 2026, 2026-06)
+
+- **회사/팀**: LY Corporation (LINE + Yahoo Japan 통합법인)
+- **목적**: 자동화된 코드 리뷰·취약점 발견·리팩터링 같은 소프트웨어 인텔리전스 태스크에 LLM 에이전트를 투입할 때, 표준 벡터 RAG가 코드베이스에 실패하는 근본 원인을 해결.
+- **데이터 소스**: 사내 소스코드 저장소.
+- **스택**: Semantic Context OS(자체 프레임워크) + PathAlign(AST 기반 컨텍스트 분리 단계). POSIX 유사 가상 파일시스템으로 AI 커널이 상태 토폴로지를 관리, 비동기 톱니파형 메모리 모델로 인플라이트 토큰 최적화.
+- **아키텍처 특이점**: 표준 벡터 RAG의 한계를 정면으로 지적한다 — 고정 글자 수 기준으로 코드베이스를 청킹하면 AST(추상 구문 트리)와 import 그래프·부모-자식 의존성이 파괴되어, 의미 있는 코드 컨텍스트 검색 자체가 불가능해진다. **PathAlign** 단계가 이를 해결한다: 타겟 소스 파일을 메모리에 계층적 구문 트리로 컴파일 → 클래스 정의·인터페이스 구현·함수 호출·변수를 식별 → 벡터 거리 탐색 대신 AST 기반 격리로 관련 컨텍스트를 정밀 추출. 이 접근은 "Large Context Window = 지능 향상"이라는 "실리콘 오류(Silicon Fallacy)"를 반박한다.
+- **결과·교훈**: Tech-Verse 2026(2026-06-29 개최, 사전 기사 2026-06-22~26 공개)에서 발표. **"코드 RAG에서는 청킹 단위가 토큰이 아니라 AST 노드여야 한다"** — 문서 RAG와 코드 RAG의 청킹 전략이 근본적으로 달라야 한다는 것을 공식화한 사례. 에이전틱 소프트웨어 인텔리전스 워크플로에서 LLM 컨텍스트 관리를 운영체제(OS) 개념으로 추상화하는 방향을 제시.
+- **출처**: [LY Corp Tech Blog — Architecting Semantic Context OS: Beyond token stuffing in agentic systems](https://techblog.lycorp.co.jp/en/techverse2026-59) (Tech-Verse 2026, 2026-06-22~26 공개, snippet-verified)
+
 ### 그 외
 
 - **KT Cloud** — RAG 시스템 구조 해설 시리즈 (사례 자체보단 교육 자료에 가까움).
