@@ -275,6 +275,16 @@ FAA 시리즈에서 한 발짝 더 나아간 워크숍(Open Dev Workshop) 아티
 - **결과·교훈**: Tech-Verse 2026(2026-06-29 개최, 사전 기사 2026-06-22~26 공개)에서 발표. **"코드 RAG에서는 청킹 단위가 토큰이 아니라 AST 노드여야 한다"** — 문서 RAG와 코드 RAG의 청킹 전략이 근본적으로 달라야 한다는 것을 공식화한 사례. 에이전틱 소프트웨어 인텔리전스 워크플로에서 LLM 컨텍스트 관리를 운영체제(OS) 개념으로 추상화하는 방향을 제시.
 - **출처**: [LY Corp Tech Blog — Architecting Semantic Context OS: Beyond token stuffing in agentic systems](https://techblog.lycorp.co.jp/en/techverse2026-59) (Tech-Verse 2026, 2026-06-22~26 공개, snippet-verified)
 
+### LG CNS — 에이전틱웍스(AgenticWorks) + PerfecTwin ERP Edition (2025-08 출시 · 2026-06-25 글로벌 확장)
+
+- **회사/팀**: LG CNS (LG 그룹 IT 서비스 계열사)
+- **목적**: 기업이 에이전틱 AI 서비스를 설계·구축·운영·관리하는 전 주기를 지원하는 풀스택 플랫폼 제공. 내부 업무 혁신(보고서 생성·데이터 분석)과 외부 ERP 테스트 자동화를 동일 플랫폼으로 처리.
+- **데이터 소스**: 사내 문서(ERP 거래 데이터·기업 지식 베이스·정책 문서) + 외부 SaaS(ERP·CRM 시스템 연동).
+- **스택**: 에이전틱웍스 6개 모듈 — △**널리지 레이크**(Knowledge Lake, 데이터 전처리) △**리파이너**(모델 학습·미세조정) △**빌더**(에이전트 개발도구) △**허브**(에이전트 운영환경) △**스튜디오**(최적화·배포, RAG 체계 구축 지원) △**라우터**(모델 자동 매칭 엔진). MCP(Model Context Protocol) + A2A(Agent to Agent) 통신 지원으로 ERP·CRM 등 기업 시스템을 코드 수정 없이 에이전트에 연결.
+- **아키텍처 특이점**: 스튜디오 모듈이 사전제작(Pre-Built) 에이전트에 RAG 체계를 구축하는 고도화 작업을 지원하며, MCP 표준을 통해 기존 시스템과 에이전트 간 연동 코드를 별도 개발하지 않아도 되는 점이 핵심. **PerfecTwin ERP Edition**(SAP 전용 ERP 테스트 자동화): 실거래 데이터 기반으로 테스트 시나리오를 자동 생성해 SAP S/4HANA 전환·ERP 신규 오픈 전 잠재 결함을 사전 탐지. 시나리오 설계 시간을 수 시간으로 단축. 하반기 중 **Agent Orchestration 프레임워크** 도입 예정 — 여러 AI 에이전트가 시나리오 생성→실행→오류 분석→수정→검증 전 주기를 협업 처리.
+- **결과·교훈**: LG디스플레이 적용에서 일일 업무 생산성 **10% 향상**, 외부 유사 서비스 대비 **연간 100억원 이상 비용 절감** 검증. 출시 한 달 만에 10여 개 고객사와 PoC 진행 중. 2026년 6월 SAP Sapphire 2026(올랜도) 및 Japan IT Week 참가로 글로벌 전개. 히타치 솔루션즈 크리에이트(HSC)와 일본 리셀러 파트너십 체결. **교훈**: MCP + A2A 표준을 채택하면 기업 시스템 연동 커스텀 코드 개발 부담이 대폭 감소하며, 모듈형 판매(필요 기능만 선택)가 기업 도입 장벽을 낮추는 핵심 요소.
+- **출처**: [LG 공식 보도자료 — 에이전틱웍스 발표](https://www.lg.co.kr/media/release/29289) (2025-08-25, snippet-verified) · [Korea Times — LG CNS debuts agentic AI testing tool in push for global ERP market](https://www.koreatimes.co.kr/amp/business/companies/20260625/lg-cns-debuts-agentic-ai-testing-tool-in-push-for-global-erp-market) (2026-06-25, snippet-verified) · [PRNewswire — LG CNS Expands Global Footprint with Latest ERP Testing Solution Powered by Agentic AI](https://www.prnewswire.com/news-releases/lg-cns-expands-global-footprint-with-latest-erp-testing-solution-powered-by-agentic-ai-302807074.html) (2026-06-25, snippet-verified)
+
 ### 그 외
 
 - **KT Cloud** — RAG 시스템 구조 해설 시리즈 (사례 자체보단 교육 자료에 가까움).
