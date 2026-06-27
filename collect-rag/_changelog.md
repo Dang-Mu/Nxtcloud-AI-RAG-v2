@@ -1,5 +1,19 @@
 # 업데이트 로그
 
+## 2026-06-27 (일일 루프 #11)
+- **신규 사례 2건** (WebFetch 403 차단 환경, snippet-verified 2건)
+  1. **LG CNS 에이전틱웍스(AgenticWorks) + PerfecTwin ERP Edition** (2025-08 출시·2026-06-25 글로벌 확장): 6모듈 풀스택 에이전틱 AI 플랫폼(MCP+A2A+RAG 지원). LG디스플레이 적용 시 일일 생산성 10% 향상·연간 100억원 비용 절감 검증. 2026-06-25 SAP Sapphire 2026에서 ERP 테스트 자동화 솔루션 PerfecTwin ERP Edition 공개·글로벌 확장. 히타치 솔루션즈 크리에이트(HSC)와 일본 파트너십 → `03-에이전트-툴유즈-MCP.md` 한국 사례 신규 추가
+  2. **MKG-RAG-Bench** (arXiv:2606.26458, 2026-06-24, Penn State Univ. 외): 멀티모달 지식 그래프 RAG의 검색 병목을 전문적으로 평가하는 첫 크로스도메인 벤치마크. 일반 도메인 + 의료 도메인 두 MKG 기반, 검색·생성 단계 모두 통제 평가. "비정형 RAG 벤치마크(BEIR·MTEB)는 멀티모달 KG 환경에 부적합"을 정량화 → `02-프로덕션-아키텍처.md` GraphRAG 섹션에 추가
+- `sources.md`에 2개 출처 추가
+- `00-요약-트렌드.md` GraphRAG 섹션 업데이트 (MKG-RAG-Bench 평가 관점 추가)
+
+### 검증 결과
+- URL 200 OK: 0/2건 (WebFetch 전체 403 차단)
+- snippet-verified: 2/2건 (LG CNS: lg.co.kr + koreatimes.co.kr + prnewswire.com + thelec.kr 4개 이상 출처; MKG-RAG-Bench: arxiv.org/abs/2606.26458 + arxiv.org/html/2606.26458 2개 arXiv 출처 + researchgate.net·semanticscholar.org 교차확인)
+- 단언 톤다운: 1건 ("국내 유일의 플랫폼" 등 회사 자체 주장은 맥락 표기로 처리)
+- 중복 폐기: 0건
+- 발굴 시도 → 최종 채택: 약 10건 시도 → 2건 채택
+
 ## 2026-06-26 (일일 루프 #10)
 - **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 3건)
   1. **LY Corporation — Semantic Context OS** (Tech-Verse 2026, 2026-06-22~26): 코드 RAG에서 벡터 검색이 AST·import 그래프를 파괴하는 문제를 PathAlign(AST 기반 컨텍스트 격리)으로 해결. 소프트웨어 인텔리전스 에이전트(코드 리뷰·취약점 발견·리팩터링)를 위한 Semantic Context OS 아키텍처 제안. "문서 청킹≠코드 청킹" 공식화 → `03-에이전트-툴유즈-MCP.md` 한국 사례 신규 추가

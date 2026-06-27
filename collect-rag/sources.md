@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-06-27 추가 출처
+
+- [LG 공식 보도자료 — LG CNS, 기업용 에이전틱 AI 플랫폼 '에이전틱웍스'와 업무혁신 서비스 '에이엑스씽크' 공개](https://www.lg.co.kr/media/release/29289) — 2025-08-25 · [enterprise] [agentic] [korea] · LG CNS 에이전틱웍스 6모듈 플랫폼(MCP+A2A+RAG) 발표. LG디스플레이 일일 생산성 10% 향상·연간 100억원 비용 절감 검증. (snippet-verified)
+- [PRNewswire — LG CNS Expands Global Footprint with Latest ERP Testing Solution Powered by Agentic AI](https://www.prnewswire.com/news-releases/lg-cns-expands-global-footprint-with-latest-erp-testing-solution-powered-by-agentic-ai-302807074.html) — 2026-06-25 · [enterprise] [agentic] [korea] · PerfecTwin ERP Edition 공개. SAP Sapphire 2026, 실거래 데이터 기반 ERP 테스트 시나리오 자동 생성, 히타치 솔루션즈 크리에이트(HSC) 일본 파트너십. (snippet-verified)
+- [arXiv:2606.26458 — MKG-RAG-Bench: Benchmarking Retrieval in Multimodal Knowledge Graph-Augmented Generation](https://arxiv.org/abs/2606.26458) — 2026-06-24 · [architecture] · Penn State Univ. 외. 멀티모달 지식 그래프 RAG 검색 전문 크로스도메인 벤치마크(일반+의료 도메인). 검색이 MKG-RAG의 결정적 병목임을 정량화. 기존 BEIR·MTEB의 한계 실증. (snippet-verified)
+
 ## 2026-06-26 추가 출처
 
 - [LY Corp Tech Blog — Architecting Semantic Context OS: Beyond token stuffing in agentic systems](https://techblog.lycorp.co.jp/en/techverse2026-59) — 2026-06-22~26 · [agentic] [architecture] [korea] · LY Corp Tech-Verse 2026 세션 59. 코드 RAG에서 벡터 검색이 AST를 파괴하는 문제를 PathAlign(AST 기반 컨텍스트 격리)으로 해결. 소프트웨어 인텔리전스 에이전트용 Semantic Context OS 아키텍처 제안. (snippet-verified)
