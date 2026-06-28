@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-06-28 추가 출처
+
+- [카카오뱅크 테크 블로그 — 2025 금융 AI Challenge 후기: LostCow팀의 RAG 챌린지 도전기](https://tech.kakaobank.com/posts/2602-financial-security-ai-challenge-review/) — 2026-02 · [industry:금융] [korea] · MoE+CPT+BM25 하이브리드 검색 + 13단계 필터링 파이프라인. 금융 규제 법령 QA, 기준 대비 +0.9pp, 우수상. 금융 도메인 BM25 우위 실증. (snippet-verified)
+- [arXiv:2606.15906 — MAGE-RAG: Multigranular Adaptive Graph Evidence for Agentic Multimodal Long-Document QA](https://arxiv.org/abs/2606.15906) — 2026-06-14 · [architecture] · 멀티그레뉴러 증거 그래프(페이지+요소 노드 계층), 적응형 컨텍스트 예산, 에이전틱 검색-생성-재검색 루프. 장문서 멀티모달 QA 특화. (snippet-verified)
+- [KT Cloud 기술 블로그 — RAG 성능 최적화 가이드 (TopK·Rerank·Dedup·Compression)](https://tech.ktcloud.com/entry/2026-04-ktcloud-ai-rag-성능-최적화) — 2026-04 · [enterprise] [korea] · AI Foundry 기반 RAG 4대 최적화 축(TopK 튜닝·Reranking·Deduplication·Compression) 실험 수치 포함. KT Cloud 시리즈 #3. (snippet-verified)
+
 ## 2026-06-27 추가 출처
 
 - [LG 공식 보도자료 — LG CNS, 기업용 에이전틱 AI 플랫폼 '에이전틱웍스'와 업무혁신 서비스 '에이엑스씽크' 공개](https://www.lg.co.kr/media/release/29289) — 2025-08-25 · [enterprise] [agentic] [korea] · LG CNS 에이전틱웍스 6모듈 플랫폼(MCP+A2A+RAG) 발표. LG디스플레이 일일 생산성 10% 향상·연간 100억원 비용 절감 검증. (snippet-verified)

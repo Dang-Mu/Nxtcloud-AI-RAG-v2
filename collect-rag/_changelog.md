@@ -1,5 +1,20 @@
 # 업데이트 로그
 
+## 2026-06-28 (일일 루프 #12)
+- **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 3건)
+  1. **카카오뱅크 LostCow팀 — 2025 금융보안원 AI Challenge RAG** (2026-02): MoE+CPT+BM25 위주 하이브리드 검색 + 13단계 필터링 파이프라인으로 금융 규제 법령 QA 수행. 기준 대비 +0.9pp 정확도 향상, 우수상 수상. 금융 도메인 BM25 우위 실증 → `04-산업별-사례.md` 금융 > 한국 섹션 추가
+  2. **MAGE-RAG** (arXiv:2606.15906, 2026-06-14): 멀티그레뉴러 증거 그래프(페이지 노드+요소 노드 계층) 기반 에이전틱 장문서 멀티모달 QA. 적응형 컨텍스트 예산으로 쿼리 복잡도에 따라 검색 깊이·증거 노드 수 동적 조절 → `02-프로덕션-아키텍처.md` 멀티모달/표·PDF·이미지 섹션 추가
+  3. **KT Cloud — RAG 성능 최적화 실전 가이드** (2026-04): AI Foundry 기반 RAG의 TopK 튜닝·Reranking·Deduplication·Compression 4대 최적화 축을 단계별 실험 수치와 함께 공개한 시리즈 #3 → `01-엔터프라이즈-사내지식.md` KT Cloud 섹션 추가 (한국 20→21건, 총 37→38건)
+- `sources.md`에 3개 출처 추가
+- `01-엔터프라이즈-사내지식.md` 헤더 수정: 한국 20→21건, 총 37→38건
+
+### 검증 결과
+- URL 200 OK: 0/3건 (WebFetch 전체 403 차단)
+- snippet-verified: 3/3건 (카카오뱅크 LostCow: tech.kakaobank.com 공식 블로그 + 복수 검색 스니펫 교차확인; MAGE-RAG: arxiv.org/abs/2606.15906 + 복수 arXiv/검색 출처; KT Cloud 최적화: tech.ktcloud.com 공식 블로그 + 기존 시리즈 연속성 확인)
+- 단언 톤다운: 0건
+- 중복 폐기: 4건 (EraRAG 2506.20963 — 날짜 2025년 해당, FlexRAG 2506.12494 — 2025-06월 오래됨, 우아한형제들 RAG 챗봇 — sources.md 이미 등록, T-RAG arXiv:2504.01346 — ICLR 2026 Withdrawn)
+- 발굴 시도 → 최종 채택: 약 10건 시도 → 3건 채택
+
 ## 2026-06-27 (일일 루프 #11)
 - **신규 사례 2건** (WebFetch 403 차단 환경, snippet-verified 2건)
   1. **LG CNS 에이전틱웍스(AgenticWorks) + PerfecTwin ERP Edition** (2025-08 출시·2026-06-25 글로벌 확장): 6모듈 풀스택 에이전틱 AI 플랫폼(MCP+A2A+RAG 지원). LG디스플레이 적용 시 일일 생산성 10% 향상·연간 100억원 비용 절감 검증. 2026-06-25 SAP Sapphire 2026에서 ERP 테스트 자동화 솔루션 PerfecTwin ERP Edition 공개·글로벌 확장. 히타치 솔루션즈 크리에이트(HSC)와 일본 파트너십 → `03-에이전트-툴유즈-MCP.md` 한국 사례 신규 추가
