@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-06-29 추가 출처
+
+- [인사이트코리아 — 네이버, 대화형 검색 서비스 'AI탭' 정식 출시](https://www.insightkorea.co.kr/news/articleView.html?idxno=248924) — 2026-06-26 · [enterprise] [korea] [agentic] · 네이버 AI탭 5,000만 사용자 대상 정식 출시. HyperCLOVA X 기반 프로덕트 네이티브 LLM + 버티컬 RAG + Tool Calling. 베타 2개월 만에 400만 사용자. 에이전트N 로드맵 시작점. (snippet-verified)
+- [arXiv:2606.21649 — EvoEmbedding: Evolvable Representations for Long-Context Retrieval and Agentic Memory](https://arxiv.org/abs/2606.21649) — 2026-06-24 · [architecture] · Chang Nie, Chaoyou Fu 외. 연속 메모리 큐 기반 진화 가능 임베딩. Qwen3-Embedding-8B 등 대형 모델 능가, naive RAG에 장착 시 전용 에이전틱 메모리 시스템 능가. GitHub: MiG-NJU/EvoEmbedding (0.8B·4B). (snippet-verified)
+- [arXiv:2606.05901 — Reducing Hallucinations in Complex Question Answering using Simple Graph-based RAG (long version)](https://arxiv.org/abs/2606.05901) — 2026-06-04 · [architecture] · Wedge, Stutter, Dixon, Cała (Newcastle Univ.·EPCC 외). 단순 그래프 스키마 + 벡터 검색 하이브리드로 MoNaCo 벤치마크에서 복잡한 질의 거부율 절반 이상 감소, 정답률 향상. "안전한 거부" 원칙 적용. (snippet-verified)
+
 ## 2026-06-28 추가 출처
 
 - [카카오뱅크 테크 블로그 — 2025 금융 AI Challenge 후기: LostCow팀의 RAG 챌린지 도전기](https://tech.kakaobank.com/posts/2602-financial-security-ai-challenge-review/) — 2026-02 · [industry:금융] [korea] · MoE+CPT+BM25 하이브리드 검색 + 13단계 필터링 파이프라인. 금융 규제 법령 QA, 기준 대비 +0.9pp, 우수상. 금융 도메인 BM25 우위 실증. (snippet-verified)
