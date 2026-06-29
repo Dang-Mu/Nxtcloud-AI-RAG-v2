@@ -1,5 +1,20 @@
 # 업데이트 로그
 
+## 2026-06-29 (일일 루프 #13)
+- **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 3건)
+  1. **네이버 AI탭** (2026-06-26 정식 출시): HyperCLOVA X 기반 "프로덕트 네이티브 LLM" + 버티컬 데이터 RAG + Tool Calling으로 5,000만 사용자 대상 에이전틱 대화형 검색 서비스 정식 출시. 베타 2개월 만에 누적 400만 사용자. 에이전트N 로드맵의 첫 단계 → `01-엔터프라이즈-사내지식.md` 한국 섹션 추가 (한국 21→22건, 총 38→39건)
+  2. **EvoEmbedding** (arXiv:2606.21649, 2026-06-24, Nanjing Univ.·CASIA): 임베딩 모델이 연속 메모리 큐를 유지하며 장문 컨텍스트 처리 시 표현을 동적으로 진화시키는 새 패러다임. Qwen3-Embedding-8B 등 대형 전문 모델 능가, naive RAG에 장착 시 전용 에이전틱 메모리 시스템 능가 → `02-프로덕션-아키텍처.md` 임베딩 섹션 신규 항목 추가
+  3. **그래프 기반 RAG로 복잡한 질의 환각 반감** (arXiv:2606.05901, 2026-06-04, Newcastle Univ.·EPCC 외): 단순 그래프 스키마 + 벡터 검색 하이브리드로 Wikipedia MoNaCo 벤치마크에서 복잡한 질의 거부율을 절반 이상 감소하면서 정답률도 개선. "안전한 거부" 원칙 적용 → `02-프로덕션-아키텍처.md` GraphRAG 섹션 추가
+- `sources.md`에 3개 출처 추가
+- `01-엔터프라이즈-사내지식.md` 헤더 수정: 한국 21→22건, 총 38→39건
+
+### 검증 결과
+- URL 200 OK: 0/3건 (WebFetch 전체 403 차단)
+- snippet-verified: 3/3건 (네이버 AI탭: insightkorea.co.kr + digitaltoday.co.kr + ajunews.com + thelec.kr 4개 이상 독립 출처; EvoEmbedding: arxiv.org/abs/2606.21649 + huggingface.co/papers/2606.21649 + github.com/MiG-NJU/EvoEmbedding 3개 출처; arXiv:2606.05901: arxiv.org/abs/2606.05901 + arxiv.org/html/2606.05901 2개 arXiv 출처 교차확인)
+- 단언 톤다운: 1건 (네이버 AI탭 "한국 최초" 표현 → "한국 첫 사례 중 하나"로 조정)
+- 중복 폐기: 2건 (PentaRAG arXiv:2506.21593 — 2025-06-18 제출로 2025년 논문, LY Corp techverse2026-219 — RAG 직접 관련성 부족)
+- 발굴 시도 → 최종 채택: 약 10건 시도 → 3건 채택
+
 ## 2026-06-28 (일일 루프 #12)
 - **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 3건)
   1. **카카오뱅크 LostCow팀 — 2025 금융보안원 AI Challenge RAG** (2026-02): MoE+CPT+BM25 위주 하이브리드 검색 + 13단계 필터링 파이프라인으로 금융 규제 법령 QA 수행. 기준 대비 +0.9pp 정확도 향상, 우수상 수상. 금융 도메인 BM25 우위 실증 → `04-산업별-사례.md` 금융 > 한국 섹션 추가
