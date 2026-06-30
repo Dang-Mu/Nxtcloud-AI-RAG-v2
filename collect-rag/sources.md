@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-06-30 추가 출처
+
+- [Samsung Tech Blog — RAG의 진화: 검색을 넘어, 나를 이해하는 'Personal Context'의 시대로](https://techblog.samsung.com/blog/article/80) — 2026-02-10 · [enterprise] [korea] · 삼성리서치 데이터 분석 연구실(이철준). SLM 기반 온디바이스 Semantic Router + NPU 로컬 임베딩·인덱싱 + 클라우드 LLM 하이브리드. 온디바이스 개인 데이터(일정·메모·앱 이력) 프라이버시 보존 처리. (snippet-verified)
+- [arXiv:2606.19602 — Configurable Clinical Information Extraction with Agentic RAG: What Works, What Breaks, and Why](https://arxiv.org/abs/2606.19602) — 2026-06-17 · [industry:의료] · 독일 에센대학병원 핵의학과. 에이전틱 RAG 기반 온프레미스 임상 정보 추출. 74개 필드·99명 환자·7,326건 판정, 임상의 수용률 96.5%. HIPAA/GDPR 온프레미스 준수. (snippet-verified)
+- [arXiv:2606.28365 — CAMI: Cost-Aware Agent-Guided Multi-Indexing for Semantic Retrieval](https://arxiv.org/abs/2606.28365) — 2026-06-28 · [architecture] · Adnan Qidwai, Anand Eswaran, Sonam Mishra, Jaydeep Sen, Sachindra Joshi (IBM Research). 샘플 기반 비용-품질 트레이드오프 추정으로 최적 의미 풍부화 인덱싱 구성 자동 결정. ACM CAIS 2026 채택. (snippet-verified)
+
 ## 2026-06-29 추가 출처
 
 - [인사이트코리아 — 네이버, 대화형 검색 서비스 'AI탭' 정식 출시](https://www.insightkorea.co.kr/news/articleView.html?idxno=248924) — 2026-06-26 · [enterprise] [korea] [agentic] · 네이버 AI탭 5,000만 사용자 대상 정식 출시. HyperCLOVA X 기반 프로덕트 네이티브 LLM + 버티컬 RAG + Tool Calling. 베타 2개월 만에 400만 사용자. 에이전트N 로드맵 시작점. (snippet-verified)
