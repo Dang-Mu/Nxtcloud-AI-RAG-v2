@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-07-01 추가 출처
+
+- [SK텔레콤 뉴스룸 — SKT 독자 AI 모델, 철강·자동차 부품 공장 들어간다](https://news.sktelecom.com/227025) — 2026-06-25 · [enterprise] [korea] [industry:제조] · SKT A.X K1 기반 제조업 특화 AI 에이전트. KG스틸·코넥과 MOU. 온프레미스 RAG(보안 문서 참조)로 제조 현장 오답 차단, 하반기 당진공장·주조 공정 실증 예정. (snippet-verified)
+- [arXiv:2606.07235 — FLOWREADER: Min-Cost Flow Optimization for Multi-Modal Long Document Q&A](https://arxiv.org/abs/2606.07235) — 2026-06 · [architecture] · A. Mehrish, S. Vascon. 멀티모달 장문서 QA를 최소 비용 흐름 최적화로 재정의. 엔트로피 정규화 리플리케이터 다이나믹스로 증거 압축, 이중 프로세스 게이트로 불필요 재검색 방지. VisDoMBench PaperTab/SlideVQA 최상위 성능. (snippet-verified)
+- [AI타임스 — KAIST, AI 환각 줄이고 속도 20배 높인 차세대 '옴니 RAG' 기술 개발](https://www.aitimes.com/news/articleView.html?idxno=211929) — 2026-06-19 보도 (ACM SIGMOD 2026 발표 2026-06-02) · [architecture] [korea] · KAIST 김민수 교수팀 + 그래파이. AkasicDB(벡터+그래프+관계형 통합 DBMS) + OmniRAG. 정확도 78% 향상, 속도 20배 향상. (snippet-verified, 5개 이상 독립 출처)
+
 ## 2026-06-30 추가 출처
 
 - [Samsung Tech Blog — RAG의 진화: 검색을 넘어, 나를 이해하는 'Personal Context'의 시대로](https://techblog.samsung.com/blog/article/80) — 2026-02-10 · [enterprise] [korea] · 삼성리서치 데이터 분석 연구실(이철준). SLM 기반 온디바이스 Semantic Router + NPU 로컬 임베딩·인덱싱 + 클라우드 LLM 하이브리드. 온디바이스 개인 데이터(일정·메모·앱 이력) 프라이버시 보존 처리. (snippet-verified)
