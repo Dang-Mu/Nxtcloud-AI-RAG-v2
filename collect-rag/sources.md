@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-07-02 추가 출처
+
+- [SKT 뉴스룸 — "사람과 AI가 원팀" SKT, AX 혁신 2.0 드라이브](https://news.sktelecom.com/226646) — 2026-06-16 · [enterprise] [korea] [agentic] · SKT AX 혁신 2.0 공식 선언. 에이닷 비즈 코워크 사내 배포, AI 에이전트에 사번 부여·디지털 직원 편입, CEO 직속 AI 보드 신설, AXMS 1.5 전사 AX 관리. (snippet-verified, 4개 이상 독립 출처)
+- [AWS News Blog — Introducing Amazon Bedrock Managed Knowledge Base for faster, more accurate enterprise AI applications](https://aws.amazon.com/blogs/aws/introducing-amazon-bedrock-managed-knowledge-base-for-faster-more-accurate-enterprise-ai-applications/) — 2026-06-17 · [architecture] · AWS Summit New York 2026 발표, GA. RAG 파이프라인 전체 매니지드화. Smart Parsing(멀티모달 자동 파싱) + Agentic Retriever(멀티홉 복잡 질의) + 6개 네이티브 커넥터 + MCP 호환. (snippet-verified, 8개 이상 독립 출처)
+- [arXiv:2607.00895 — Beyond Document Grounding: Span-Level Hallucination Detection over Code, Tool Output, and Documents](https://arxiv.org/abs/2607.00895) — 2026-07-01 · [architecture] · Ádám Kovács 외. 코드·툴 출력·구조화 문서를 포함하는 스팬 레벨 환각 탐지 통합 벤치마크. Qwen3.5-2B span-F1 0.689 달성, LettuceDetect-large(0.17) 대비 큰 향상. (snippet-verified, 2개 arXiv 출처)
+
 ## 2026-07-01 추가 출처
 
 - [SK텔레콤 뉴스룸 — SKT 독자 AI 모델, 철강·자동차 부품 공장 들어간다](https://news.sktelecom.com/227025) — 2026-06-25 · [enterprise] [korea] [industry:제조] · SKT A.X K1 기반 제조업 특화 AI 에이전트. KG스틸·코넥과 MOU. 온프레미스 RAG(보안 문서 참조)로 제조 현장 오답 차단, 하반기 당진공장·주조 공정 실증 예정. (snippet-verified)

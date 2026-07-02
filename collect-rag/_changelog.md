@@ -1,5 +1,20 @@
 # 업데이트 로그
 
+## 2026-07-02 (일일 루프 #16)
+- **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 3건)
+  1. **SKT AX 혁신 2.0 — 에이닷 비즈 코워크 전사 배포** (2026-05-28 베타 배포 · 2026-06-16 공식 선언): 에이닷 비즈 코워크(ReAct 기반 AI 에이전트)를 사내에 배포하고 AI 에이전트에 사번을 부여하는 "디지털 직원" 모델을 도입. AXMS 1.5 전사 AX 관리 플랫폼 운영. AX 혁신 1.0(효율화)에서 2.0(일하는 방식 근본 재설계)으로 전환 공식화 → `01-엔터프라이즈-사내지식.md` 한국 사례 추가 (한국 24→25건, 총 41→42건)
+  2. **Amazon Bedrock Managed Knowledge Base GA** (AWS Summit New York 2026, 2026-06-17): RAG 파이프라인 전체를 단일 매니지드 프리미티브로 추상화. Smart Parsing(멀티모달 자동 파싱) + Agentic Retriever(멀티홉 복잡 질의 자율 처리) + 6개 네이티브 커넥터(S3·SharePoint·Confluence·Google Drive·OneDrive·Web Crawler) + MCP 호환. 쿼리당 고정 과금 모델 → `02-프로덕션-아키텍처.md` 클라우드 매니지드 RAG 섹션 추가
+  3. **Span-Level 환각 탐지 — 코드·툴 출력 확장** (arXiv:2607.00895, 2026-07-01): 코드·툴 출력·구조화 문서·NL RAG를 통합하는 스팬 레벨 환각 탐지 벤치마크. Qwen3.5-2B 미세조정 탐지기가 span-F1 0.689로 LettuceDetect-large(0.17) 크게 능가. 에이전틱 RAG의 생성 품질 모니터링 확장 방향 제시 → `02-프로덕션-아키텍처.md` 검색·리랭킹 섹션에 추가
+- `sources.md`에 3개 출처 추가
+- `01-엔터프라이즈-사내지식.md` 헤더 수정: 한국 24→25건, 총 41→42건
+
+### 검증 결과
+- URL 200 OK: 0/3건 (WebFetch 전체 403 차단)
+- snippet-verified: 3/3건 (SKT AX 혁신 2.0: SKT 뉴스룸 + ZDNet + 머니투데이 + 서울경제 4개 이상 독립 출처; Amazon Bedrock MKB: aws.amazon.com 공식 블로그 + 8개 이상 독립 출처; arXiv:2607.00895: arxiv.org/abs + arxiv.org/html 2개 arXiv 출처 교차확인)
+- 단언 톤다운: 0건
+- 중복 폐기: 없음 (sources.md 및 domain 파일 grep 확인, 에이닷 비즈·AX 혁신·Managed Knowledge Base·2607.00895 모두 미수록 확인)
+- 발굴 시도 → 최종 채택: 약 12건 시도 → 3건 채택
+
 ## 2026-07-01 (일일 루프 #15)
 - **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 3건)
   1. **SKT A.X K1 기반 제조업 특화 AI 에이전트** (2026-06-25 MOU 발표): A.X K1(5,190억 매개변수, 추론 시 330억 활성화) 기반 제조업 특화 AI 에이전트. KG스틸·코넥과 MOU 체결, 온프레미스 RAG로 설비 매뉴얼·장애 분석 리포트 참조. 하반기 철강·자동차부품 공장 현장 실증 예정 → `01-엔터프라이즈-사내지식.md` 한국 사례 추가 (한국 23→24건, 총 40→41건)
