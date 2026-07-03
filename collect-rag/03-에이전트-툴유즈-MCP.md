@@ -348,6 +348,25 @@ Google Research와 Google Cloud가 2026년 6월 5일 발표. Gemini Enterprise A
 
 - **출처**: [Google Research Blog — Unlocking dependable responses with Gemini Enterprise Agent Platform's Agentic RAG](https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/) (2026-06-05, snippet-verified) · [MarkTechPost 커버리지](https://www.marktechpost.com/2026/06/08/google-research-adds-agentic-rag-to-gemini-enterprise-agent-platform-with-a-sufficient-context-agent-for-multi-hop-queries/)
 
+### Bayesian Uncertainty Propagation for Agentic RAG — 베이즈 불확실성 전파 (arXiv:2607.00972, 2026-07-01)
+
+멀티홉 질의 응답을 중심으로 에이전틱 RAG 파이프라인 전체의 불확실성을 추적·전파하는 proof-of-concept 프레임워크.
+
+**핵심 문제의식**: 에이전틱 RAG 파이프라인에서 플래너(planner)·평가자(evaluator)·생성자(generator) 각 단계는 독립적으로 오류를 일으킬 수 있고, 이 오류가 다음 단계로 누적될 때 최종 출력의 신뢰도를 추정하기 어렵다. 기존 단순 confidence score는 단계 간 전파 메커니즘이 없어 시스템 레벨 품질 보증이 불가능하다.
+
+**핵심 아이디어**:
+1. 각 단계에서 **의미 발산(semantic divergence)** + **생성자 자기 평가(generator self-evaluation)**로 불확실성 신호를 생성
+2. **베이즈 네트워크(Bayesian Network)**를 통해 단계별 불확실성을 시스템 레벨로 전파·집계
+3. 최종적으로 전체 파이프라인의 시스템 레벨 불확실성 추정치 + 노드별 잠재 실패 지점 지표 도출
+
+**실험 설정**: GPT-3.5-Turbo·GPT-4.1-Nano로 StrategyQA·HotpotQA 평가. 지표: AUROC, AUARC, ECE, Brier Score(판별력·선택적 예측·보정 전반).
+
+**주요 결과**: HotpotQA(멀티홉)에서 베이즈 전파가 효과적 — 불확실성이 단계를 거치며 누적되는 패턴에서 강점 발휘. StrategyQA에서는 상류 신호의 오보정(miscalibration)이 한계로 작용. 연구진은 "promising but preliminary"로 규정, 오프쇼어 풍력(OSW) 등 산업 도메인 검증이 추가로 필요하다고 명시.
+
+**의의**: 단계별 신뢰도 추적은 엔터프라이즈 에이전틱 RAG의 **관측성(observability) + 안전 게이팅** 강화의 다음 단계로 주목받는 연구 방향. CHARM 프레임워크(2606.04435)의 cascade hallucination 감지와 상호 보완적인 접근이다.
+
+- **출처**: [arXiv:2607.00972 — Bayesian Uncertainty Propagation for Agentic RAG Pipelines: A Proof-of-Concept Study on Multi-Hop Question Answering](https://arxiv.org/abs/2607.00972) (2026-07-01, snippet-verified, arxiv abs + html 2개 출처)
+
 ---
 
 ## 이 도메인의 공통 패턴

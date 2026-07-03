@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-07-03 추가 출처
+
+- [ET News — 채널코퍼레이션, 'AI 상담 시뮬레이션' 기능 출시](https://www.etnews.com/20260527000164) — 2026-05-27 · [industry:커머스] [korea] · 채널톡 ALF 도입 기업이 자사 홈페이지 URL만으로 가상 AI 상담 체험. RAG 기반 웹 크롤링 + 자연어 의도 파악 + 워크플로우 실행. 23만+ B2B 고객사, 반복 문의 80% 자동화. (snippet-verified, 6개 이상 독립 출처)
+- [arXiv:2607.00570 — Dual-Confidence Contrastive Decoding for Retrieval-Augmented Generation](https://arxiv.org/abs/2607.00570) — 2026-07-01 · [architecture] · 멀티문서 RAG 내 충돌 정보 해소 training-free 디코딩(DCCD). 문서 레벨 + 토큰 레벨 신뢰도 결합. DRQA 엔터프라이즈 심층 리서치 벤치마크 제안. (snippet-verified, 복수 독립 출처)
+- [arXiv:2607.00972 — Bayesian Uncertainty Propagation for Agentic RAG Pipelines: A Proof-of-Concept Study on Multi-Hop Question Answering](https://arxiv.org/abs/2607.00972) — 2026-07-01 · [agentic] [architecture] · 에이전틱 RAG 플래너·평가자·생성자 단계 불확실성을 베이즈 네트워크로 전파. HotpotQA 멀티홉에서 효과 확인, StrategyQA에서 한계 노출. (snippet-verified, arxiv abs + html 2개 출처)
+
 ## 2026-07-02 추가 출처
 
 - [SKT 뉴스룸 — "사람과 AI가 원팀" SKT, AX 혁신 2.0 드라이브](https://news.sktelecom.com/226646) — 2026-06-16 · [enterprise] [korea] [agentic] · SKT AX 혁신 2.0 공식 선언. 에이닷 비즈 코워크 사내 배포, AI 에이전트에 사번 부여·디지털 직원 편입, CEO 직속 AI 보드 신설, AXMS 1.5 전사 AX 관리. (snippet-verified, 4개 이상 독립 출처)
