@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-07-04 추가 출처
+
+- [Samsung Tech Blog — Agentic Search: 에이전트가 스스로 검색하는 방법](https://techblog.samsung.com/blog/article/82) — 2026년 상반기 · [enterprise] [korea] [agentic] · 삼성리서치가 LangGraph 기반 에이전트 런타임으로 구현한 Agentic Search 프레임워크. 반복 검색(Iterative Retrieval)으로 멀티 홉 복잡 질의에서 단순 RAG 대비 정확도 향상 실증. (snippet-verified)
+- [arXiv:2607.01115](https://arxiv.org/abs/2607.01115) — 2026-07 · [education] [multimodal] · 대학 강의 슬라이드(텍스트·다이어그램·수식) 대상 VLM 기반 멀티모달 RAG. 텍스트 전용 RAG 대비 환각률 31.7%→6.6% 감소. 시각 정보 직접 처리가 핵심. (snippet-verified)
+- [arXiv:2607.01659](https://arxiv.org/abs/2607.01659) — 2026-07 · [science] [architecture] · Rubin Observatory LSST 프로젝트 기술 문서 RAG 시스템. Weaviate+LangChain+GPT 오픈소스 스택으로 천문 레거시 문서 지식화. 연구자 자연어 질의 즉시 응답 실현. (snippet-verified)
+
 ## 2026-07-03 추가 출처
 
 - [ET News — 채널코퍼레이션, 'AI 상담 시뮬레이션' 기능 출시](https://www.etnews.com/20260527000164) — 2026-05-27 · [industry:커머스] [korea] · 채널톡 ALF 도입 기업이 자사 홈페이지 URL만으로 가상 AI 상담 체험. RAG 기반 웹 크롤링 + 자연어 의도 파악 + 워크플로우 실행. 23만+ B2B 고객사, 반복 문의 80% 자동화. (snippet-verified, 6개 이상 독립 출처)
