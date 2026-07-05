@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-07-05 추가 출처
+
+- [카카오페이 기술 블로그 — 페이증권의 업무도우미 AI봇을 소개합니다! 근데 이제 춘식이를 곁들인](https://tech.kakaopay.com/post/choonsiri/) — 2026-06-12 · [enterprise] [korea] [finance] · 카카오페이증권이 Confluence 사내 문서 RAG 기반으로 구축한 업무도우미 AI봇 춘시리. Amazon Bedrock + PGVector 스택. 보안 규정상 외부 AI 사용 불가 환경의 내부 RAG 대체 사례. (snippet-verified, 2개 이상 독립 출처)
+- [arXiv:2607.00725 — What Survives Into Context: A Diagnostic for Budget-Constrained Multi-Hop RAG and When Submodular Evidence Packing Improves It](https://arxiv.org/abs/2607.00725) — 2026-07-01 · [architecture] [retrieval] · 예산 제약 멀티홉 RAG에서 문서 리콜 대신 answer-in-context 진단 지표 제안. HotpotQA F1 예측 상관관계 0.39~0.55로 리콜의 ~0.31 능가. 서브모듈러 증거 패킹으로 답변 품질 향상. (snippet-verified, 2개 arXiv 출처)
+- [arXiv:2607.00798 — ClinRAG-GRAPH: Clinical-prior Retrieval-Augmented Graph Model with Domain Adversarial Learning for Breast pCR Prediction](https://arxiv.org/abs/2607.00798) — 2026-07-01 · [medical] [graph] · 유방암 pCR 예측 RAG 그래프 모델. 내부 AUC 0.815, 외부 2센터 AUC 0.774/0.712. RAG를 임상 사례 기반 사전 지식 검색에 활용하는 새 패턴. (snippet-verified, 2개 arXiv 출처)
+
 ## 2026-07-04 추가 출처
 
 - [Samsung Tech Blog — Agentic Search: 에이전트가 스스로 검색하는 방법](https://techblog.samsung.com/blog/article/82) — 2026년 상반기 · [enterprise] [korea] [agentic] · 삼성리서치가 LangGraph 기반 에이전트 런타임으로 구현한 Agentic Search 프레임워크. 반복 검색(Iterative Retrieval)으로 멀티 홉 복잡 질의에서 단순 RAG 대비 정확도 향상 실증. (snippet-verified)
