@@ -1,5 +1,22 @@
 # 업데이트 로그
 
+## 2026-07-06 (일일 루프 #20)
+- **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 3건)
+  1. **KT Cloud × 카카오 — RAG Suite 2.0 + Kanana Safeguard 공공 AI 안전 파트너십 (2026-06-23/26)**: KT Cloud가 공공기관 고객용 RAG Suite 2.0(PII 마스킹·가드레일·한국어 파서·리랭킹 탑재)을 출시하고, 카카오와 MOU 체결해 Kanana Safeguard(국내 기업 최초 오픈소스 공개된 한국어 AI 가드레일 모델)를 통합. 망분리 환경 공공·금융 기관 대상 안전 RAG 아키텍처 구현 → `01-엔터프라이즈-사내지식.md` 한국 사례 추가 (한국 27→28건, 총 44→45건)
+  2. **arXiv:2607.00012 — PRA-RAG: 검색 오염 공격 대응 이론적 강건성 RAG (2026-07)**: 임베딩 공간의 기하학적 구조로 독성 문서를 탐지하고 안정적 집합 표현을 도출하는 RAG 방어 기법. 이론적 강건성 상한(theoretical bound) 수학적 증명. Fudan University·WPI → `02-프로덕션-아키텍처.md` 검색·리랭킹 섹션에 추가
+  3. **arXiv:2606.01613 — TechRAG: Goodyear 타이어·차량 동역학 기술 문서 에이전틱 멀티모달 RAG (2026-06)**: FAISS+BM25+cross-encoder + Neo4j 지식 그래프 + ColSmol+MUVERA 시각 검색 + evidence-gated 재시도 구조로 40,000+ 기술 논문 페이지 처리. 제조 분야 첫 에이전틱 멀티모달 RAG 사례 → `04-산업별-사례.md` 신규 "## 제조·자동차" 섹션 생성
+- `sources.md`에 3개 출처 추가
+- `01-엔터프라이즈-사내지식.md` 헤더 수정: 한국 27→28건, 총 44→45건, 날짜 2026-07-05→2026-07-06
+- `02-프로덕션-아키텍처.md` 날짜 2026-07-02→2026-07-06
+- `04-산업별-사례.md` 날짜 2026-07-04→2026-07-06, 신규 "제조·자동차" 섹션 생성
+
+### 검증 결과
+- URL 200 OK: 0/3건 (WebFetch 전체 403 차단)
+- snippet-verified: 3/3건 (KT Cloud×카카오: kakaocorp.com + ajunews + etoday + insightkorea + thelec + digitaltoday 6개 이상 독립 출처; arXiv:2607.00012: abs + html 2개 arXiv 출처; arXiv:2606.01613: abs + html + pdf 3개 arXiv 출처)
+- 단언 톤다운: 0건
+- 중복 폐기: 0건
+- 발굴 시도 → 최종 채택: 약 7건 시도 → 3건 채택
+
 ## 2026-07-05 (일일 루프 #19)
 - **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 3건)
   1. **카카오페이증권 — 춘시리(ChoonSiri) RAG 업무도우미 봇 (2026-06-12)**: Confluence 사내 문서를 Amazon Bedrock + PGVector 스택으로 RAG화. 보안 정책상 외부 AI 사용 불가 환경에서의 내부 RAG 실증. RAG 모드/일반 LLM 모드 자동 분기 → `01-엔터프라이즈-사내지식.md` 한국 사례 추가 (한국 26→27건, 총 43→44건)
