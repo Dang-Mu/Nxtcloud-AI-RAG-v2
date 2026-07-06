@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-07-06 추가 출처
+
+- [카카오 뉴스룸 — 카카오·kt cloud, 안전한 AI 생태계 구축을 위한 MOU 체결](https://www.kakaocorp.com/page/detail/12072) — 2026-06-26 · [enterprise] [korea] [security] · KT Cloud가 RAG Suite 2.0(PII 마스킹·가드레일·한국어 파서·리랭킹)을 출시하고 카카오 Kanana Safeguard를 통합. 공공·금융 기관 대상 AI 안전 RAG 서비스 제공. 국내 최초 공공 RAG Safety 통합 사례. (snippet-verified, 6개 이상 독립 출처)
+- [arXiv:2607.00012 — PRA-RAG: Provably Robust Aggregation in Retrieval-Augmented Generation against Retrieval Corruption](https://arxiv.org/abs/2607.00012) — 2026-07 · [architecture] [security] · 검색 오염 공격에 대한 이론적 강건성 보장 RAG. 임베딩 기하학적 구조로 독성 문서 탐지, 안정적 집합 표현 도출. 이론적 상한 증명. Fudan University·WPI. (snippet-verified, 2개 arXiv 출처: abs + html)
+- [arXiv:2606.01613 — TechRAG: Evidence-Gated Multimodal Agentic RAG for Technical Literature Reasoning](https://arxiv.org/abs/2606.01613) — 2026-06 · [agentic] [multimodal] [industry:제조] · Goodyear의 타이어·차량 동역학 기술 문서 40,000+ 페이지 RAG. FAISS+BM25+cross-encoder, Neo4j 지식 그래프, ColSmol+MUVERA 시각 검색, evidence-gated 재시도 구조. (snippet-verified, 3개 arXiv 출처: abs + html + pdf)
+
 ## 2026-07-05 추가 출처
 
 - [카카오페이 기술 블로그 — 페이증권의 업무도우미 AI봇을 소개합니다! 근데 이제 춘식이를 곁들인](https://tech.kakaopay.com/post/choonsiri/) — 2026-06-12 · [enterprise] [korea] [finance] · 카카오페이증권이 Confluence 사내 문서 RAG 기반으로 구축한 업무도우미 AI봇 춘시리. Amazon Bedrock + PGVector 스택. 보안 규정상 외부 AI 사용 불가 환경의 내부 RAG 대체 사례. (snippet-verified, 2개 이상 독립 출처)
