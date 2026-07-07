@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-07-07 추가 출처
+
+- [LY Corp Tech Blog — From legacy to AI-driven: An AX transformation roadmap](https://techblog.lycorp.co.jp/en/legacy-to-ai-driven-project-ax-roadmap) — 2026-07-06 · [enterprise] [korea] [agentic] · 레거시 소프트웨어를 AI 주도 개발로 전환하는 4단계 AX 로드맵. RAG를 지식 레이어로 활용해 스펙→PR 워크플로를 CI 이벤트 트리거로 자동화하는 Agentic 개발 파이프라인 구현. (snippet-verified, 2개 이상 독립 출처: 영문·일문 버전)
+- [arXiv:2607.01852 — Evaluating Chunking Strategies for Retrieval-Augmented Generation on Academic Texts](https://arxiv.org/abs/2607.01852) — 2026-07-02 · [architecture] [chunking] · 스위스 대학원 논문 대상 RAGAs 기반 청킹 전략 비교. 클러스터 기반 시맨틱 청킹이 고정 크기·재귀 청킹 대비 일관된 우위를 보이지 않음. RAGAs faithfulness 신뢰도 한계도 확인. (snippet-verified, 2개 arXiv 출처: abs + html)
+- [arXiv:2607.02966 — Distill Where the Student Goes: Teacher-Regularized RL for English-Evidence Cross-Lingual RAG](https://arxiv.org/abs/2607.02966) — 2026-07 · [architecture] [retrieval] [multilingual] · 교차언어 RAG에서 언어 표류(language drift) 억제를 위한 Teacher-Regularized RL(TR-RAG). 언어 일관성 붕괴율 약 27pp 감소. BioASQ-ENKB5·HotPot-ENKB5·MKQA 벤치마크. (snippet-verified, 복수 독립 출처)
+
 ## 2026-07-06 추가 출처
 
 - [카카오 뉴스룸 — 카카오·kt cloud, 안전한 AI 생태계 구축을 위한 MOU 체결](https://www.kakaocorp.com/page/detail/12072) — 2026-06-26 · [enterprise] [korea] [security] · KT Cloud가 RAG Suite 2.0(PII 마스킹·가드레일·한국어 파서·리랭킹)을 출시하고 카카오 Kanana Safeguard를 통합. 공공·금융 기관 대상 AI 안전 RAG 서비스 제공. 국내 최초 공공 RAG Safety 통합 사례. (snippet-verified, 6개 이상 독립 출처)
