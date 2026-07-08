@@ -439,3 +439,14 @@
 - [Google Blog — Gemini Embedding 2: Our first natively multimodal embedding model](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2/) — 2026-03-11 · [architecture] · 텍스트·이미지·비디오·오디오·PDF를 단일 호출로 동일 벡터 공간 매핑, 3072d MRL, ColPali 수준 시각 문서 검색 API화
 - [arXiv 2603.07379 — SoK: Agentic Retrieval-Augmented Generation: Taxonomy, Architectures, Evaluation, and Research Directions](https://arxiv.org/abs/2603.07379) — 2026-03-07 · [agentic] [architecture] · Agentic RAG를 POMDP로 형식화. 에이전트 위상·계획·메모리·툴 조정 5축 분류. 평가 방법론 부재·신뢰성 리스크 지적.
 
+---
+
+## 2026-07-08 일일 누적 추가 출처 (3건, 루프 #22)
+
+### 한국
+- [다음뉴스 — 다음, AI 요약 서비스 베타 출시…36년 뉴스 데이터 활용](https://v.daum.net/v/20260701170435278) — 2026-07-01 · [korea] [enterprise] · 업스테이지×다음 Solar RAG 기반 포털 AI 요약 베타. 36년 치 뉴스 PGC·사전·버티컬 DB 연동.
+
+### 글로벌 — 아키텍처·의료
+- [arXiv:2607.04391 — MOSS: Memory-Orchestrated Semantic System](https://arxiv.org/abs/2607.04391) — 2026-07-05 · [architecture] · 관계형 DB 기반 감사 가능한 에이전트 메모리 아키텍처. 임베딩 RAG 불투명성 비판. 1년 실프로덕션 운영(44M 토큰, 11만 세그먼트, 16만 문서).
+- [arXiv:2607.05055 — Toward Trustworthy Large Language Model Agents in Healthcare: A CareConnect Case Study](https://arxiv.org/abs/2607.05055) — 2026-07-06 · [industry:의료] · 의료 물류 안전 우선 대화 에이전트. RAG + LLM 함수 호출 + 계층적 결정론적 안전 가드레일 3중 구조.
+
