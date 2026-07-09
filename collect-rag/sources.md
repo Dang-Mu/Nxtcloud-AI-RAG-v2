@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-07-09 추가 출처
+
+- [Digital Today — Naver unveils core technology behind AI Tab](https://www.digitaltoday.co.kr/en/view/78099/naver-unveils-core-technology-behind-ai-tab) — 2026-07-02 · [enterprise] [korea] [architecture] · 네이버 AI탭 아키텍처 공식 공개: 하네스 엔지니어링 4단계 파이프라인, Clarify RL(모호 시 추가 질문), 분업형 SLM 구조. 기존 HCX 대비 환각 30%p 감소·속도 2배·비용 1/3. (snippet-verified, 7개 이상 독립 출처: digitaltoday + asiae + edaily + etoday + theguru + sedaily.en + koreatimes)
+- [arXiv:2607.00013 — GRACE-RAG: Governed Retrieval Architecture for Canonical Evidence Synthesis, Enabling Lightweight Deployment in Closed-Domain Institutional Settings](https://arxiv.org/abs/2607.00013) — 2026-07 · [architecture] [graph] · Asit Desai, Aman Kumar, Prashant Devadiga (National Payments Corporation of India). 그래프 증강 검색 레이어로 구조적 추론을 오프라인 사전 처리. 중간 규모 모델에서 최대 20% 품질 향상. 폐쇄 도메인 기관 특화 경량 배포 지원. (snippet-verified, arXiv abs + html 2개 독립 출처)
+- [arXiv:2607.06964 — End-to-End LLM Flight Planning with RAG-based Memory and Multi-modal Coach Agent](https://arxiv.org/abs/2607.06964) — 2026-07 · [agentic] [multimodal] [industry:과학·항공] · Tabrizian et al. ICML 2026 LM4Plan Workshop. 항공기 비행 계획 LLM+RAG 메모리+멀티모달 코치 에이전트 엔드투엔드 파이프라인. (snippet-verified, arXiv robotics list + LM4Plan ICML26 workshop 2개 독립 출처)
+
 ## 2026-07-07 추가 출처
 
 - [LY Corp Tech Blog — From legacy to AI-driven: An AX transformation roadmap](https://techblog.lycorp.co.jp/en/legacy-to-ai-driven-project-ax-roadmap) — 2026-07-06 · [enterprise] [korea] [agentic] · 레거시 소프트웨어를 AI 주도 개발로 전환하는 4단계 AX 로드맵. RAG를 지식 레이어로 활용해 스펙→PR 워크플로를 CI 이벤트 트리거로 자동화하는 Agentic 개발 파이프라인 구현. (snippet-verified, 2개 이상 독립 출처: 영문·일문 버전)
