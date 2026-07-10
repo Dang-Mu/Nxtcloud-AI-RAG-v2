@@ -1,5 +1,10 @@
 # 출처 목록
 
+## 2026-07-10 추가 출처
+
+- [arXiv:2607.06641 — Healthier LLMs: Retrieval-Augmented Generation for Public Health Question Answering](https://arxiv.org/abs/2607.06641) — 2026-07-07 · [medical] [architecture] [retrieval] · 영국 기반 연구팀. PubHealthBench(UK 공중보건 지침 7,929개 Q&A)를 RAG 설정으로 확장. 하이브리드 검색이 리콜·랭킹 품질 일관 향상. 최적 청크 크기가 도메인·주제별로 달라짐을 실증. 개방형 응답 평가의 필요성 제기. (snippet-verified, 2개 arXiv 출처: abs + html)
+- [arXiv:2607.07302 — Evaluating RAG Metrics in Applied Contexts: An Experiment, Its Findings and Its Limitations](https://arxiv.org/abs/2607.07302) — 2026-07-08 · [architecture] [evaluation] · Quentin Brabant, Orange Research. EvalLLM 2026 프랑스어 워크숍 발표 영문 번역. Ragas·DeepEval·RAGChecker·Opik 4개 라이브러리의 자동 지표를 실제 비즈니스 QA 데이터셋에 적용, 인간 평가·recall과의 상관관계 체계 분석. 자동 지표가 실무 맥락에서 인간 평가와 항상 일치하지 않음을 실증. (snippet-verified, 2개 arXiv 출처: abs + html)
+
 ## 2026-07-09 추가 출처
 
 - [Digital Today — Naver unveils core technology behind AI Tab](https://www.digitaltoday.co.kr/en/view/78099/naver-unveils-core-technology-behind-ai-tab) — 2026-07-02 · [enterprise] [korea] [architecture] · 네이버 AI탭 아키텍처 공식 공개: 하네스 엔지니어링 4단계 파이프라인, Clarify RL(모호 시 추가 질문), 분업형 SLM 구조. 기존 HCX 대비 환각 30%p 감소·속도 2배·비용 1/3. (snippet-verified, 7개 이상 독립 출처: digitaltoday + asiae + edaily + etoday + theguru + sedaily.en + koreatimes)
