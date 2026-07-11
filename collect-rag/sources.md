@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-07-11 추가 출처
+
+- [bizwatch.co.kr — 네이버, 쇼핑앱에 AI 에이전트 출시](https://www.bizwatch.co.kr/) — 2026-07-01 · [enterprise] [korea] [commerce] · 네이버 쇼핑앱 쇼핑 AI 에이전트 공식 출시. 커머스 특화 LLM "Shopping Intelligence"(100억 건 쇼핑 기록 학습) + 탐색·비교·추천 멀티 에이전트 + 사용자 쇼핑 맥락 기반 프로액티브 대화 트리거. (snippet-verified, 5개 이상 독립 출처: navercorp.com + daum.net + bizwatch.co.kr + etoday.co.kr + designcompass.org)
+- [AI21 Blog — Query-Dependent Chunking](https://www.ai21.com/blog/query-dependent-chunking/) — 2026-03 · [architecture] [chunking] · 최적 청크 크기가 쿼리 의존적임을 실증(oracle gap 20–40%+). 100/200/500 토큰 멀티 인덱스 + RRF로 1–37% 리콜 향상. AIEWF 2026 "Stop Chunking Like It's 2022" 발표. GitHub: AI21Labs/multi-window-chunk-size. (snippet-verified, 3개 이상 독립 출처)
+- [arXiv:2607.03880 — Next-Gen Sponsored Search: Crafting the Perfect Query with Inventory-Aware RAG (InvAwr-RAG) Based GenAI](https://arxiv.org/abs/2607.03880) — 2024-07-18 원발표(SIGIR eCom 2024), 2026-07 arXiv 게시 · [commerce] [architecture] [retrieval] · Walmart AdTech. 의미 검색 + 실시간 재고 필터링 RAG로 스폰서드 검색 키워드 자동 생성. Fill Rate 68% 향상(GPT-4 기준선 대비). 동적 생성 + 히스토리 기반 + RRF 앙상블. (snippet-verified, 4개 독립 출처: arXiv abs + html + semanticscholar.org + sigir-ecom.github.io)
+
 ## 2026-07-10 추가 출처
 
 - [arXiv:2607.06641 — Healthier LLMs: Retrieval-Augmented Generation for Public Health Question Answering](https://arxiv.org/abs/2607.06641) — 2026-07-07 · [medical] [architecture] [retrieval] · 영국 기반 연구팀. PubHealthBench(UK 공중보건 지침 7,929개 Q&A)를 RAG 설정으로 확장. 하이브리드 검색이 리콜·랭킹 품질 일관 향상. 최적 청크 크기가 도메인·주제별로 달라짐을 실증. 개방형 응답 평가의 필요성 제기. (snippet-verified, 2개 arXiv 출처: abs + html)
