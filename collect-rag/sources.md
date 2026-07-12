@@ -1,5 +1,10 @@
 # 출처 목록
 
+## 2026-07-12 추가 출처
+
+- [arXiv:2604.26649 — When to Retrieve During Reasoning: Adaptive Retrieval for Large Reasoning Models](https://arxiv.org/abs/2604.26649) — 2026-04 · [architecture] [retrieval] [reasoning] · Dongxin Guo, Jikun Wu, Siu Ming Yiu. SIGIR 2026. 대형 추론 모델(DeepSeek-R1·o1)의 확장 CoT 체인과 RAG 컨텍스트 주입 간 구조적 불일치 해소. 단계별 불확실성 감지기·검색 개입 정책으로 추론 중 선택적 검색 개입. 나이브 통합 대비 3.2배 오버헤드 감소. (snippet-verified, 4개 독립 출처: arXiv abs + SIGIR 2026 프로그램 + ACL Anthology + arXiv pdf)
+- [arXiv:2606.29645 — Metadata, Structure, or Strategy? A Decomposition of RAG Context Enrichment](https://arxiv.org/abs/2606.29645) — 2026-06-29 · [architecture] [retrieval] [chunking] · Saber Zerhoudi, Michael Granitzer, Jelena Mitrovic. ECML-PKDD 2026. 처리 가능성 위계(Processability Hierarchy): 사전 학습 특성 기반 메타데이터 활용 예측. 정렬된 환경에서 소형 모델이 프론티어 모델을 F1 19점 상회. RAG 설계를 메타데이터 축적→모델-컨텍스트 정렬으로 전환 제안. (snippet-verified, 2개 이상 독립 출처)
+
 ## 2026-07-11 추가 출처
 
 - [bizwatch.co.kr — 네이버, 쇼핑앱에 AI 에이전트 출시](https://www.bizwatch.co.kr/) — 2026-07-01 · [enterprise] [korea] [commerce] · 네이버 쇼핑앱 쇼핑 AI 에이전트 공식 출시. 커머스 특화 LLM "Shopping Intelligence"(100억 건 쇼핑 기록 학습) + 탐색·비교·추천 멀티 에이전트 + 사용자 쇼핑 맥락 기반 프로액티브 대화 트리거. (snippet-verified, 5개 이상 독립 출처: navercorp.com + daum.net + bizwatch.co.kr + etoday.co.kr + designcompass.org)
