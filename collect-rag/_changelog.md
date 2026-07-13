@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-07-13 (일일 루프 #27)
+- **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 3건; 한국 사례 1건 포함)
+  1. **LY Corp Tech-Verse 2026 — Semantic Context OS / PathAlign (2026-06-29)**: 코드 인텔리전스 AI 에이전트용 RAG 대체 아키텍처. 벡터 거리 탐색 대신 정적 AST 파싱 기반 PathAlign으로 구문 트리 보존 컨텍스트 수집. LINE Yahoo(LY Corp) 내부 에이전트 운용 사례. → `02-프로덕션-아키텍처.md` 한국 환경 특이점 > 한국 기업·솔루션 섹션에 추가 [한국 사례]
+  2. **arXiv:2607.07721 — Context Graphs for Proactive Enterprise Agents (2026-07)**: 반응형 RAG 한계 비판 + 선제형 에이전트 아키텍처 제안. Context Graph(라이브 엔티티·관계·상태 모델) + Delta Detection Engine + Proactivity Scorer + Claude API 기반 Surfacing Layer. Precision@5=0.83, FP=0.11, 컨텍스트 인지→알림 47분→30초 미만. NetworkX + Anthropic Claude API Python 구현. → `03-에이전트-툴유즈-MCP.md` 2026년 주목할 신규 연구 섹션에 추가
+  3. **arXiv:2607.08269 — PolyUQuest: Verifiable Structure-Aware Web RAG (2026-07)**: 웹 RAG를 위한 이종 그래프(hyperlink topology + DOM hierarchy + entity-relation) 기반 구조 인식 검색. PolyU 4,240페이지 공식 웹사이트 평가. 기존 RAG 대비 정확성·커버리지·충실성 우위, LLM 토큰 절감. 학생 대상 QA 서비스 배포 준비 중. → `04-산업별-사례.md` 교육 > 글로벌 섹션에 추가
+- `sources.md`에 3개 출처 추가
+- `02-프로덕션-아키텍처.md` 날짜 2026-07-12→2026-07-13, 한국 기업·솔루션 섹션에 LY Corp 항목 추가
+- `03-에이전트-툴유즈-MCP.md` 신규 연구 섹션에 arXiv:2607.07721 추가
+- `04-산업별-사례.md` 날짜 2026-07-11→2026-07-13, 교육 > 글로벌 섹션에 arXiv:2607.08269 추가
+
+### 검증 결과
+- URL 200 OK: 0/3건 (WebFetch 전체 403 차단)
+- snippet-verified: 3/3건 (LY Corp Semantic Context OS: techblog.lycorp.co.jp 한/영/일 3개 이상 독립 출처; arXiv:2607.07721: arXiv abs + html + arxiv-sanity 복수 독립 출처; arXiv:2607.08269: arXiv abs + html 2개 독립 출처)
+- 단언 톤다운: 0건
+- 중복 폐기: 0건 (3건 모두 sources.md 미수록 확인)
+- 한국 사례: 1건 (LY Corp Semantic Context OS — LINE Yahoo 엔지니어링 블로그)
+- 발굴 시도 → 최종 채택: 약 5건 시도 → 3건 채택
+
 ## 2026-07-12 (일일 루프 #26)
 - **신규 사례 2건** (WebFetch 403 차단 환경, snippet-verified 2건; 한국 사례 0건 — 7월 7-12일 대상 접근 가능한 1차 출처 발굴 실패)
   1. **arXiv:2604.26649 — ReaLM-Retrieve: 추론 모델 단계별 불확실성 감지 적응형 검색 (SIGIR 2026, 2026-04)**: DeepSeek-R1·o1 계열 대형 추론 모델(LRM)의 확장 CoT 체인과 RAG의 "추론 전 컨텍스트 주입" 간 구조적 불일치를 해소하는 적응형 검색 프레임워크. 단계별 불확실성 감지기 + 검색 개입 정책 + 효율 최적화(나이브 통합 대비 3.2배 오버헤드 감소). SIGIR 2026(2026-07-20~24, 멜버른) 발표 8일 전 타이밍. → `02-프로덕션-아키텍처.md` 검색·리랭킹 섹션에 추가

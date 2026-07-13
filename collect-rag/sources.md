@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-07-13 추가 출처
+
+- [LY Corp Tech-Verse 2026 — Semantic Context OS](https://techblog.lycorp.co.jp/ko/techverse2026-59) — 2026-06-29 · [architecture] [code-intelligence] [korea] · LY Corp(LINE Yahoo). 코드 인텔리전스 AI 에이전트용 RAG 대체 아키텍처. PathAlign 스테이지: 벡터 거리 탐색 대신 정적 AST 파싱으로 구문 트리 보존 계층적 컨텍스트 수집. Tech-Verse 2026 컨퍼런스 발표(2026-06-29). (snippet-verified, 한/영/일 3개 이상 독립 출처)
+- [arXiv:2607.07721 — Context Graphs for Proactive Enterprise Agents](https://arxiv.org/abs/2607.07721) — 2026-07 · [agentic] [enterprise] [proactive] · Avinash Kumar. cs.AI, cs.LG. Context Graph + Delta Detection Engine + Proactivity Scorer + Claude API Surfacing Layer. Precision@5=0.83, FP=0.11, 알림 시간 47분→30초 미만. 계약·인시던트·영업 파이프라인 3건 평가. (snippet-verified, 복수 독립 출처)
+- [arXiv:2607.08269 — PolyUQuest: Verifiable Structure-Aware Web Retrieval-Augmented Generation](https://arxiv.org/abs/2607.08269) — 2026-07 · [education] [graph] [web-rag] · Ying Liu, Yi Ye, Quanyu Feng et al. (홍콩폴리텍대). 이종 그래프(hyperlink topology + DOM hierarchy + entity-relation) 기반 대학 웹사이트 RAG. 4,240페이지·31,086 DOM 블록·29,119 엔티티·37,680 관계. 기존 RAG 대비 정확성·커버리지·충실성 우위. (snippet-verified, 2개 독립 출처)
+
 ## 2026-07-12 추가 출처
 
 - [arXiv:2604.26649 — When to Retrieve During Reasoning: Adaptive Retrieval for Large Reasoning Models](https://arxiv.org/abs/2604.26649) — 2026-04 · [architecture] [retrieval] [reasoning] · Dongxin Guo, Jikun Wu, Siu Ming Yiu. SIGIR 2026. 대형 추론 모델(DeepSeek-R1·o1)의 확장 CoT 체인과 RAG 컨텍스트 주입 간 구조적 불일치 해소. 단계별 불확실성 감지기·검색 개입 정책으로 추론 중 선택적 검색 개입. 나이브 통합 대비 3.2배 오버헤드 감소. (snippet-verified, 4개 독립 출처: arXiv abs + SIGIR 2026 프로그램 + ACL Anthology + arXiv pdf)
