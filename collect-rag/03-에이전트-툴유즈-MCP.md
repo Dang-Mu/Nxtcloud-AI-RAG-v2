@@ -367,6 +367,26 @@ Google Research와 Google Cloud가 2026년 6월 5일 발표. Gemini Enterprise A
 
 - **출처**: [arXiv:2607.00972 — Bayesian Uncertainty Propagation for Agentic RAG Pipelines: A Proof-of-Concept Study on Multi-Hop Question Answering](https://arxiv.org/abs/2607.00972) (2026-07-01, snippet-verified, arxiv abs + html 2개 출처)
 
+### Context Graphs for Proactive Enterprise Agents — 반응형→선제형 RAG 아키텍처 전환 (arXiv:2607.07721, 2026-07)
+
+표준 RAG·에이전틱 프레임워크가 본질적으로 **반응형(reactive)**—인간의 질의를 기다린 후 검색·응답—인 한계를 정면으로 비판하고, 엔터프라이즈 에이전트가 **선제적으로(proactively)** 컨텍스트를 인지하고 행동을 제안하는 아키텍처를 제안한다.
+
+**핵심 구성 요소**:
+1. **Context Graph**: 엔터프라이즈 엔티티(계약·인시던트·영업 기회 등), 관계, 상태 전이를 실시간으로 모델링하는 라이브 관계형 데이터 구조. NetworkX 기반 Python 구현.
+2. **Delta Detection Engine**: 컨텍스트 그래프의 상태 변화를 모니터링하고 의미 있는 델타를 식별.
+3. **Proactivity Scorer**: 발견된 변화를 긴급도·관련성·페르소나 적합성(urgency, relevance, persona-fit) 기준으로 순위화.
+4. **Surfacing Layer**: LLM(Anthropic Claude API) 기반 랭킹 알림 생성 및 전달.
+
+**성과**:
+- Precision@5 = **0.83**, False Positive 비율 = **0.11**
+- 컨텍스트 인지부터 알림까지 평균 시간: **47분 → 30초 미만**
+- 평가 시나리오 3건: 계약 라이프사이클 관리, 엔지니어링 인시던트 대응, 영업 파이프라인 위생
+
+**의의**: "RAG = 질의 응답"이라는 기존 프레임을 벗어나, 에이전트가 스스로 엔터프라이즈 상태 변화를 감지하고 관련 페르소나에게 선제적으로 알리는 패턴을 제시. MCP 서버가 엔터프라이즈 시스템 연결 표준으로 자리잡는 흐름과 결합하면, "MCP로 상태를 읽고 → Context Graph로 변화 감지 → 선제 알림"의 파이프라인이 현실적인 구현 경로가 된다.
+
+- **저자**: Avinash Kumar
+- **출처**: [arXiv:2607.07721 — Context Graphs for Proactive Enterprise Agents](https://arxiv.org/abs/2607.07721) (2026-07, cs.AI, cs.LG, snippet-verified, 복수 독립 출처)
+
 ---
 
 ## 이 도메인의 공통 패턴
