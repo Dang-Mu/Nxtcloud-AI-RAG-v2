@@ -1,5 +1,21 @@
 # 업데이트 로그
 
+## 2026-07-14 (일일 루프 #28)
+- **신규 사례 2건** (WebFetch 403 차단 환경, snippet-verified 2건; 한국 사례 1건 포함)
+  1. **arXiv:2607.09092 — AgentKGV: NAVER × 성균관대 에이전틱 LLM-RAG 기반 지식 그래프 팩트 검증 (2026-07-10)**: 자동 구성된 대규모 KG의 사실 오류를 산업 규모에서 검증하는 에이전틱 LLM-RAG 프레임워크. NAVER 엔지니어(Hyeon-gu Lee, Sumin Seo)와 성균관대(Yumin Heo, Youngjoong Ko 교수) 공동 개발. 동적 라우팅(파라메트릭 vs 외부 검색) + 반복 쿼리 재작성으로 표면 표현 불일치 극복. SFT+GRPO 2단계 학습으로 T-REx 및 NAVER 한국 엔터프라이즈 KG 벤치마크 모두 최고 성능. → `03-에이전트-툴유즈-MCP.md` 2026년 주목할 신규 연구 섹션에 추가 [한국 사례]
+  2. **arXiv:2607.11683 — RAGU: 컴팩트 도메인 특화 LLM 기반 멀티스텝 GraphRAG 엔진 (2026-07-13)**: 기존 GraphRAG 단일 패스 추출의 노이즈·불안정 검색 문제를 추출-통합 분리 2단계 파이프라인으로 해결한 오픈소스 GraphRAG 엔진. Meno-Lite-0.1(7B)이 Qwen2.5-32B를 KG 구성에서 +12.5% 조화평균 초과. 저자: Mikhail Komarov 외 (ITMO Univ. 등). → `02-프로덕션-아키텍처.md` GraphRAG / 지식 그래프 결합 섹션에 추가
+- `sources.md`에 2개 출처 추가
+- `02-프로덕션-아키텍처.md` 날짜 2026-07-13→2026-07-14, GraphRAG 섹션에 RAGU 추가
+- `03-에이전트-툴유즈-MCP.md` 2026년 주목할 신규 연구 섹션에 AgentKGV 추가
+
+### 검증 결과
+- URL 200 OK: 0/2건 (WebFetch 전체 403 차단)
+- snippet-verified: 2/2건 (arXiv:2607.09092: arXiv abs + html + cs.CL listing + ResearchGate 저자 소속 3개 이상 독립 출처; arXiv:2607.11683: arXiv abs + html + 검색 스니펫 2개 이상 독립 출처)
+- 단언 톤다운: 0건
+- 중복 폐기: 0건 (2607.09092·2607.11683 모두 sources.md 미수록 확인)
+- 한국 사례: 1건 (AgentKGV — NAVER × 성균관대 산학협력 논문, NAVER 한국 엔터프라이즈 KG 평가)
+- 발굴 시도 → 최종 채택: 약 4건 시도 → 2건 채택 (SK하이닉스 AWS 블로그: 2025-02 발행으로 대상 기간 외 → 제외)
+
 ## 2026-07-13 (일일 루프 #27)
 - **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 3건; 한국 사례 1건 포함)
   1. **LY Corp Tech-Verse 2026 — Semantic Context OS / PathAlign (2026-06-29)**: 코드 인텔리전스 AI 에이전트용 RAG 대체 아키텍처. 벡터 거리 탐색 대신 정적 AST 파싱 기반 PathAlign으로 구문 트리 보존 컨텍스트 수집. LINE Yahoo(LY Corp) 내부 에이전트 운용 사례. → `02-프로덕션-아키텍처.md` 한국 환경 특이점 > 한국 기업·솔루션 섹션에 추가 [한국 사례]
