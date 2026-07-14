@@ -1,5 +1,10 @@
 # 출처 목록
 
+## 2026-07-14 추가 출처
+
+- [arXiv:2607.09092 — AgentKGV: Agentic LLM-RAG Framework with Two-Stage Training for the Fact Verification of Knowledge Graphs](https://arxiv.org/abs/2607.09092) — 2026-07-10 · [agentic] [knowledge-graph] [korea] · Yumin Heo, Hyeon-gu Lee (NAVER), Sumin Seo (NAVER), Youngjoong Ko (성균관대). 에이전틱 LLM-RAG 기반 지식 그래프 팩트 검증. 동적 라우팅(파라메트릭 vs 외부 검색)·반복 쿼리 재작성 + SFT+GRPO 2단계 학습. T-REx 및 NAVER 한국 엔터프라이즈 KG 벤치마크에서 최고 성능. (snippet-verified, arXiv abs + html + cs.CL listing 3개 독립 출처; NAVER·SKKU 저자 소속 확인)
+- [arXiv:2607.11683 — RAGU: A Multi-Step GraphRAG Engine with a Compact Domain-Adapted LLM](https://arxiv.org/abs/2607.11683) — 2026-07-13 · [architecture] [graph] [open-source] · Mikhail Komarov, Ivan Bondarenko, Stanislav Shtuka 외 (ITMO Univ., Novosibirsk State Univ., Far Eastern Federal Univ.). 추출-통합 분리 2단계 유형 추출 + DBSCAN 중복 제거 + Leiden 커뮤니티 탐지. Meno-Lite-0.1(7B)이 Qwen2.5-32B를 KG 구성에서 +12.5% 조화평균 초과. 오픈소스 모듈형 GraphRAG 엔진. (snippet-verified, arXiv abs + html 2개 독립 출처)
+
 ## 2026-07-13 추가 출처
 
 - [LY Corp Tech-Verse 2026 — Semantic Context OS](https://techblog.lycorp.co.jp/ko/techverse2026-59) — 2026-06-29 · [architecture] [code-intelligence] [korea] · LY Corp(LINE Yahoo). 코드 인텔리전스 AI 에이전트용 RAG 대체 아키텍처. PathAlign 스테이지: 벡터 거리 탐색 대신 정적 AST 파싱으로 구문 트리 보존 계층적 컨텍스트 수집. Tech-Verse 2026 컨퍼런스 발표(2026-06-29). (snippet-verified, 한/영/일 3개 이상 독립 출처)

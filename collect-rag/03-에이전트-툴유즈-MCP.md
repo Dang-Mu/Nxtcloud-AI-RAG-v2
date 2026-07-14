@@ -387,6 +387,27 @@ Google Research와 Google Cloud가 2026년 6월 5일 발표. Gemini Enterprise A
 - **저자**: Avinash Kumar
 - **출처**: [arXiv:2607.07721 — Context Graphs for Proactive Enterprise Agents](https://arxiv.org/abs/2607.07721) (2026-07, cs.AI, cs.LG, snippet-verified, 복수 독립 출처)
 
+### AgentKGV — 에이전틱 LLM-RAG 기반 지식 그래프 팩트 검증 (NAVER × 성균관대, arXiv:2607.09092, 2026-07-10) [한국 사례]
+
+자동 구성된 대규모 지식 그래프(KG)에 포함된 사실 오류를 산업 규모에서 검증하는 에이전틱 LLM-RAG 프레임워크. NAVER(Hyeon-gu Lee, Sumin Seo)와 성균관대 NLP 연구실(Yumin Heo, Youngjoong Ko 교수)이 공동 개발했으며, NAVER 내부 한국 엔터프라이즈 KG 데이터셋으로 평가한 한국 산학협력 사례다.
+
+**핵심 문제**: KG 트리플(엔티티-관계-엔티티)의 표면 표현이 검색 대상 문서 코퍼스의 자연어 표현과 불일치하는 **표면 표현 불일치(surface-form mismatch)** 문제. 단순 검색 기반 접근은 KG 표현과 문서 언어 사이의 간극을 처리하지 못해 정확한 팩트 검증이 불가능하다.
+
+**두 가지 핵심 메커니즘**:
+1. **Dynamic Routing**: 에이전트가 입력 트리플을 보고 파라메트릭 지식(내부 지식)으로 처리 가능한지, 외부 문서 검색이 필요한지를 먼저 판단해 불필요한 검색 호출을 차단.
+2. **Iterative Query Rewriting**: 외부 검색이 필요하다고 판단되면 KG 트리플을 문서 수준 검색에 적합한 자연어 쿼리로 반복 변환하여 표현 불일치 극복.
+
+**2단계 학습 전략**:
+- **SFT (Turn-level Distillation)**: 대형 교사 모델의 추론 능력을 소형 모델로 지식 증류 — 안정적인 쿼리 재작성·추론 능력 확보.
+- **GRPO (Trajectory-level RL)**: 검색 정책을 최적화해 불필요한 검색 호출 횟수를 줄이면서 F1을 향상시키는 효율 중심 강화학습.
+
+**성과**: T-REx 표준 벤치마크(seen/unseen 두 분할)에서 모든 베이스라인 초과. **NAVER 한국 엔터프라이즈 KG**(언어·도메인·검색기가 다른 환경)에서도 가장 높은 Pos-F1·Macro-F1을 기록하여, 2단계 학습이 언어·도메인 무관하게 일반화됨을 실증.
+
+**의의**: 동적 라우팅으로 불필요한 검색을 줄이고 반복 재작성으로 표현 간극을 극복하는 이 패턴은, 사내 지식 그래프·온톨로지를 운영하는 기업의 KG 품질 보증 자동화에 직접 적용 가능한 아키텍처. KG 팩트 검증이 단순 QA와 구별되는 고유 에이전틱 RAG 태스크임을 NAVER 산업 사례로 뒷받침한다.
+
+- **저자**: Yumin Heo (성균관대), Hyeon-gu Lee (NAVER), Sumin Seo (NAVER), Youngjoong Ko (성균관대)
+- **출처**: [arXiv:2607.09092 — AgentKGV: Agentic LLM-RAG Framework with Two-Stage Training for the Fact Verification of Knowledge Graphs](https://arxiv.org/abs/2607.09092) (2026-07-10, snippet-verified, arXiv abs + html + cs.CL listing 3개 독립 출처; NAVER 저자 소속 ResearchGate 확인)
+
 ---
 
 ## 이 도메인의 공통 패턴
