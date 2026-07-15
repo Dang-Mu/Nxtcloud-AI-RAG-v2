@@ -1,5 +1,20 @@
 # 업데이트 로그
 
+## 2026-07-15 (일일 루프 #29)
+- **신규 사례 2건** (WebFetch 403 차단 환경, snippet-verified 2건; 한국 사례 2건 포함)
+  1. **arXiv:2512.20136 — M³KG-RAG: 고려대·성균관대·NVIDIA·한화시스템 CVPR 2026 멀티홉 멀티모달 KG-RAG (2026-06)**: 기존 MMKG의 멀티홉 연결성 부재 + 공유 임베딩 유사도 검색의 무관·중복 지식 여과 실패 두 가지 한계를 동시에 해소. GRASP(Grounded Retrieval And Selective Pruning): 시각·청각 그라운딩으로 무관 트리플렛 제거하는 경량 선택적 프루닝. 멀티 에이전트 파이프라인으로 멀티홉 M³KG 자동 구축. 오디오·비디오·오디오-비주얼 QA 복수 벤치마크에서 베이스 MLLM 대비 유의미한 성능 향상. 저자: Hyeongcheol Park(고려대), Jiyoung Seo(성균관대), Wonmin Byeon(NVIDIA), JeungSub Lee(한화시스템), Sangpil Kim(고려대). → `02-프로덕션-아키텍처.md` GraphRAG / 지식 그래프 결합 섹션에 추가 [한국 사례]
+  2. **arXiv:2509.15577 — R2U: 서울대 Seung-won Hwang 팀 ACL 2026 Findings 관련성→유용성 프로세스 감독 재작성 (2026-07)**: 검색 관련성(topical relevance)과 생성 유용성(generation utility) 간 구조적 간극을 직접 최소화하는 프로세스 감독 재작성 프레임워크. 재작성과 답변 생성을 추론 과정에서 동시에 관찰해 진정한 유용성 근사. 나이브 RAG 대비 평균 F1 +6.8%p, 최고 기존 기준선 대비 +5.6%p. 저자: Jaeyoung Kim, Jongho Kim, Seung-won Hwang(서울대), Seoho Song, Young-In Song. → `02-프로덕션-아키텍처.md` 질의 변환·확장 섹션에 추가 [한국 사례]
+- `sources.md`에 2개 출처 추가 (## 2026-07-15 추가 출처 섹션 신설)
+- `02-프로덕션-아키텍처.md` 날짜 2026-07-14→2026-07-15, GraphRAG 섹션에 M³KG-RAG 추가, 질의 변환·확장 섹션에 R2U 추가
+
+### 검증 결과
+- URL 200 OK: 0/2건 (WebFetch 전체 403 차단)
+- snippet-verified: 2/2건 (arXiv:2512.20136: arXiv abs + NVIDIA Research + CVPR OpenAccess PDF + YouTube 발표 영상 4개 독립 출처; arXiv:2509.15577: arXiv abs + ACL 2026 Findings 목록 + Seung-won Hwang SNU 프로필 3개 독립 출처)
+- 단언 톤다운: 0건
+- 중복 폐기: 2건 (KT K-RAG: 01-엔터프라이즈-사내지식.md 2026-06-17 기수록 확인; LangChain Interrupt 2026 LATAM Airlines: sources.md 기수록 확인)
+- 한국 사례: 2건 (M³KG-RAG — 고려대·성균관대·한화시스템 산학협력 CVPR 2026; R2U — 서울대 Seung-won Hwang 팀 ACL 2026 Findings)
+- 발굴 시도 → 최종 채택: 약 4건 시도 → 2건 채택
+
 ## 2026-07-14 (일일 루프 #28)
 - **신규 사례 2건** (WebFetch 403 차단 환경, snippet-verified 2건; 한국 사례 1건 포함)
   1. **arXiv:2607.09092 — AgentKGV: NAVER × 성균관대 에이전틱 LLM-RAG 기반 지식 그래프 팩트 검증 (2026-07-10)**: 자동 구성된 대규모 KG의 사실 오류를 산업 규모에서 검증하는 에이전틱 LLM-RAG 프레임워크. NAVER 엔지니어(Hyeon-gu Lee, Sumin Seo)와 성균관대(Yumin Heo, Youngjoong Ko 교수) 공동 개발. 동적 라우팅(파라메트릭 vs 외부 검색) + 반복 쿼리 재작성으로 표면 표현 불일치 극복. SFT+GRPO 2단계 학습으로 T-REx 및 NAVER 한국 엔터프라이즈 KG 벤치마크 모두 최고 성능. → `03-에이전트-툴유즈-MCP.md` 2026년 주목할 신규 연구 섹션에 추가 [한국 사례]
