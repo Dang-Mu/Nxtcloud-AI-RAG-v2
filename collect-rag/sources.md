@@ -1,5 +1,10 @@
 # 출처 목록
 
+## 2026-07-15 추가 출처
+
+- [arXiv:2512.20136 — M³KG-RAG: Multi-hop Multimodal Knowledge Graph-enhanced Retrieval-Augmented Generation](https://arxiv.org/abs/2512.20136) — 2026-06 · [architecture] [graph] [multimodal] [korea] · Hyeongcheol Park(고려대), Jiyoung Seo(성균관대), Wonmin Byeon(NVIDIA), JeungSub Lee(한화시스템), Sangpil Kim(고려대) 외. 멀티홉 멀티모달 지식 그래프(M³KG) + GRASP 선택적 프루닝으로 오디오-비주얼 QA에서 유의미한 성능 향상. CVPR 2026 발표. (snippet-verified: arXiv abs + NVIDIA Research + CVPR OpenAccess + YouTube 발표 영상 4개 독립 출처)
+- [arXiv:2509.15577 — Relevance to Utility: Process-Supervised Rewrite for RAG](https://arxiv.org/abs/2509.15577) — 2026-07 · [architecture] [retrieval] [korea] · Jaeyoung Kim, Jongho Kim, Seung-won Hwang(서울대), Seoho Song, Young-In Song. 검색 관련성→생성 유용성 간극을 재작성으로 해소. R2U: 나이브 RAG 대비 F1 +6.8%p, 최고 기존 기준선 대비 +5.6%p. ACL 2026 Findings 채택. (snippet-verified: arXiv abs + ACL 2026 Findings 목록 + SNU 교수 프로필 3개 독립 출처)
+
 ## 2026-07-14 추가 출처
 
 - [arXiv:2607.09092 — AgentKGV: Agentic LLM-RAG Framework with Two-Stage Training for the Fact Verification of Knowledge Graphs](https://arxiv.org/abs/2607.09092) — 2026-07-10 · [agentic] [knowledge-graph] [korea] · Yumin Heo, Hyeon-gu Lee (NAVER), Sumin Seo (NAVER), Youngjoong Ko (성균관대). 에이전틱 LLM-RAG 기반 지식 그래프 팩트 검증. 동적 라우팅(파라메트릭 vs 외부 검색)·반복 쿼리 재작성 + SFT+GRPO 2단계 학습. T-REx 및 NAVER 한국 엔터프라이즈 KG 벤치마크에서 최고 성능. (snippet-verified, arXiv abs + html + cs.CL listing 3개 독립 출처; NAVER·SKKU 저자 소속 확인)
