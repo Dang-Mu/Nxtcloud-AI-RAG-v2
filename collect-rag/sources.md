@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-07-16 추가 출처
+
+- [LG AI Research × KOSCOM — EXAONE Business Intelligence 금융 AI 에이전트](https://www.koreatimes.co.kr/www/tech/2026/07/129_exaone-koscom.html) — 2026-07-07 · [industry] [finance] [agentic] [korea] · LG AI Research × KOSCOM. ChatEXAONE RAG 기반 4-에이전트 구조(저널리스트→이코노미스트→애널리스트→의사결정)로 한국·미국 상장사 8,000개 이상 매일 자동 분석, 예측 점수 + 코멘터리 생성. 2026-07-07 KOSCOM 계약 체결. (snippet-verified: Korea Times + Asia Business Daily + Seoul Economic Daily + Korea Herald + BigGo Finance 5개 이상 독립 출처)
+- [arXiv:2607.11933 — Knowledge Distillation from LLM to Cross-Encoder for RAG Reranking](https://arxiv.org/abs/2607.11933) — 2026-07-11 · [architecture] [retrieval] [reranking] · Shreeya Dasa Lakshminath, Shubhan S. LLaMA 3 (8B)를 LoRA SFT + 4비트 양자화로 파인튜닝해 크로스 인코더 드롭인 대체 리랭커 구현. 답변 정확도 +21%, 크로스 인코더 이차 비용 해소. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+- [arXiv:2607.11464 — FAIR GraphRAG: Integrating FAIR Digital Objects in Graph Retrieval-Augmented Generation](https://arxiv.org/abs/2607.11464) — 2026-07-13 · [architecture] [graph] [scientific] · Marlena Flüh, Soo-Yon Kim, Carolin Victoria Schneider, Sandra Geisler (RWTH Aachen Univ.). FAIR 디지털 오브젝트(FDO)를 그래프 노드로 통합해 과학·의료 RAG의 추적성·재현성·상호운용성 구조적 보장. (snippet-verified: arXiv abs + arXiv html + IEEE Xplore + RWTH Publications 4개 독립 출처)
+
 ## 2026-07-15 추가 출처
 
 - [arXiv:2512.20136 — M³KG-RAG: Multi-hop Multimodal Knowledge Graph-enhanced Retrieval-Augmented Generation](https://arxiv.org/abs/2512.20136) — 2026-06 · [architecture] [graph] [multimodal] [korea] · Hyeongcheol Park(고려대), Jiyoung Seo(성균관대), Wonmin Byeon(NVIDIA), JeungSub Lee(한화시스템), Sangpil Kim(고려대) 외. 멀티홉 멀티모달 지식 그래프(M³KG) + GRASP 선택적 프루닝으로 오디오-비주얼 QA에서 유의미한 성능 향상. CVPR 2026 발표. (snippet-verified: arXiv abs + NVIDIA Research + CVPR OpenAccess + YouTube 발표 영상 4개 독립 출처)
