@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-07-17 추가 출처
+
+- [arXiv:2604.19047 — RARE: Redundancy-Aware Retrieval Evaluation Framework for High-Similarity Corpora](https://arxiv.org/abs/2604.19047) — 2026-07-02 (ACL 2026 Main Conference) · [enterprise] [evaluation] [korea] · Hanjun Cho(Allganize), Jay-Yoon Lee(SNU). 기업 코퍼스(금융·법률)의 고중복 문서 환경에서 RAG 검색 정확도가 77.9%→8.5%(금융)→5.0%(법률)로 급락함을 실증. RARE 프레임워크(원자적 사실 분해 + CRRF)로 엔터프라이즈 특화 평가 설계 제안. (snippet-verified: arXiv abs + arXiv html + platum.kr + venturesquare.net 4개 이상 독립 출처)
+- [arXiv:2508.03306 — Reliable Evaluation Protocol for Low-Precision Retrieval](https://arxiv.org/abs/2508.03306) — 2026-07-02 (ACL 2026 Main Conference) · [architecture] [retrieval] [korea] · Kisu Yang, Yoonna Jang, Hwanseok Jang, Kenneth Choi, Isabelle Augenstein, Heuiseok Lim (VAIV Company, Korea University, Univ. of Copenhagen, UC Berkeley). 저정밀 환경의 RAG 검색 동점 문제를 최종 레이어만 FP32 업캐스트(HPS)로 해소. Tie-aware Retrieval Metric(TRM)으로 평가 불확실성 정량화. (snippet-verified: arXiv abs + businesskorea.co.kr + newsprime.co.kr 3개 이상 독립 출처)
+- [arXiv:2606.02581 — Cost-Aware Query Routing in RAG: Empirical Analysis of Retrieval Depth Tradeoffs](https://arxiv.org/abs/2606.02581) — 2026-06 · [architecture] [cost] [retrieval] · Sanjay Mishra. 쿼리별 검색 깊이를 동적 선택하는 CA-RAG 라우터로 항상-밀집-검색 대비 토큰 비용 26% 절감, 항상-직접-추론 대비 지연 34% 감소하면서 품질 동등 유지. (snippet-verified: arXiv abs + arXiv html + ResearchGate + preprints.org 4개 이상 독립 출처)
+
 ## 2026-07-16 추가 출처
 
 - [LG AI Research × KOSCOM — EXAONE Business Intelligence 금융 AI 에이전트](https://www.koreatimes.co.kr/www/tech/2026/07/129_exaone-koscom.html) — 2026-07-07 · [industry] [finance] [agentic] [korea] · LG AI Research × KOSCOM. ChatEXAONE RAG 기반 4-에이전트 구조(저널리스트→이코노미스트→애널리스트→의사결정)로 한국·미국 상장사 8,000개 이상 매일 자동 분석, 예측 점수 + 코멘터리 생성. 2026-07-07 KOSCOM 계약 체결. (snippet-verified: Korea Times + Asia Business Daily + Seoul Economic Daily + Korea Herald + BigGo Finance 5개 이상 독립 출처)
