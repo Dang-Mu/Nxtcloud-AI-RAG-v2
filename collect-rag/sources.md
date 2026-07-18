@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-07-18 추가 출처
+
+- [서울경제 — 현대차증권, AI 에이전트 HAI 도입](https://m.sedaily.com/amparticle/20065936) — 2026-07-09 · [industry] [finance] [korea] · 현대차증권. Claude Sonnet 4.5 기반 클라우드 플랫폼 + RAG 파이프라인으로 사내 규정·지침·업무 문서 Q&A + 문서 요약 시스템 HAI 1.0 구축. AX 전략 하에 중소형 증권사 최초 클라우드 AI 에이전트 도입. 연내 HAI 2.0 구축 예정. (snippet-verified: 서울경제 한국어 + en.sedaily.com 영문 + 추가 미디어 3건 이상)
+- [AI타임스 — 과기정통부, '모두의 AI' 사업 공모 시작](https://www.aitimes.com/news/articleView.html?idxno=212718) — 2026-07-13 · [industry] [public-sector] [agentic] [korea] · 과학기술정보통신부. 전 국민(5,200만명) 무료·무제한 AI 챗봇 + RAG 기반 공공서비스 신청 대행 에이전트. 국내 독자 AI 모델 50%+ 의무 사용, 정부 B200 GPU 512개 제공. 8월 사업자 선정·9월 베타·12월 정식 출시 예정. (snippet-verified: AI타임스 + ZDNet Korea + 전자신문 + 파이낸셜뉴스 + 추가 미디어 5건 이상 독립 출처)
+- [arXiv:2601.01513 — FastV-RAG: Enhancing Video Question Answering RAG with Speculative Decoding](https://arxiv.org/abs/2601.01513) — ACL 2026 Main Conference · [architecture] [multimodal] [video] · Gen Li (UESTC), Peiyu Liu (UIBE). 유사도 기반 필터링으로 개체 인식 오류 완화 + 경량 드래프트 모델→고성능 검증 모델 추측적 디코딩 구조로 약 2배 추론 속도 향상. VideoQA 도메인 RAG 최초 추측적 디코딩 결합 ACL 2026 Main 채택 사례. (snippet-verified: arXiv abs + arXiv html + ACL Anthology + ACL 2026 수락 논문 목록 4개 이상 독립 출처)
+
 ## 2026-07-17 추가 출처
 
 - [arXiv:2604.19047 — RARE: Redundancy-Aware Retrieval Evaluation Framework for High-Similarity Corpora](https://arxiv.org/abs/2604.19047) — 2026-07-02 (ACL 2026 Main Conference) · [enterprise] [evaluation] [korea] · Hanjun Cho(Allganize), Jay-Yoon Lee(SNU). 기업 코퍼스(금융·법률)의 고중복 문서 환경에서 RAG 검색 정확도가 77.9%→8.5%(금융)→5.0%(법률)로 급락함을 실증. RARE 프레임워크(원자적 사실 분해 + CRRF)로 엔터프라이즈 특화 평가 설계 제안. (snippet-verified: arXiv abs + arXiv html + platum.kr + venturesquare.net 4개 이상 독립 출처)
