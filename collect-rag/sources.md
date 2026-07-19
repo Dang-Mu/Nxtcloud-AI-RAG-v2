@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-07-19 추가 출처
+
+- [LG AI Research — LG Showcases EXAONE's Real-World Industry Impact at ICML 2026](https://www.lgresearch.ai/news/view?seq=664) — 2026-07-08 · [industry] [public-sector] [data-generation] [korea] · LG AI Research × 국민연금공단. EXAONE Data Foundry: 생성형 AI + 장문 컨텍스트 처리(최대 32,768 토큰) 기반 도메인 전문 데이터 자동 생성 플랫폼. 국민연금공단 파일럿에서 하루 1만 건+ 전문 데이터 자동 구축, 생산성 1,000배 이상 향상, 데이터 품질 평균 20% 이상 향상(회사 발표 기준). ICML 2026(서울, 2026-07-06~11) 발표. (snippet-verified: Korea Times + Herald경제 + 이투데이 + 서울경제 + Businesskorea + Korea Herald + BigGo Finance 7개 이상 독립 출처)
+- [arXiv:2605.28522 — Search for Coverage: Sub-Question Answerability Augmentation for Long-Form RAG](https://arxiv.org/abs/2605.28522) — SIGIR 2026 (DOI: 10.1145/3805712.3809752, 2026-07-20~24 멜버른) · [architecture] [retrieval] [long-form] · Tzu-Wen Yeh 외. 장문형 RAG에서 관련성 최적화 검색기의 커버리지 저하 문제를 원자적 서브 질문 분해 + 응답 가능성 증강으로 직접 해결. 13개 BEIR + 3개 nugget-based 커버리지 벤치마크에서 유의미한 향상. (snippet-verified: arXiv pdf + SIGIR 2026 공식 proceedings DOI + SIGIR accepted papers 목록 3개 이상 독립 출처)
+- [ACL Anthology — AED-RAG: Adaptive Ensemble Decoding for Multi-Granular RAG Context Fusion](https://aclanthology.org/2026.findings-acl.1148/) — ACL 2026 Findings · [architecture] [retrieval] [decoding] · Junzhe Zhou, Fulin Lin, Tairan Cheng, Shaowen Chen, Hongwei Wang. 비구조화 패시지·구조화 트리플렛·파라메트릭 메모리를 단일 확률 공간으로 투영, 소프트 토큰 레벨 퓨전으로 정보 이득 동적 최적화. 유용성 예측기(대조 퍼플렉시티) 파인튜닝으로 세분화 불일치 사전 제거. (snippet-verified: ACL Anthology + ACL 2026 Findings 목록 2개 이상 독립 출처)
+
 ## 2026-07-18 추가 출처
 
 - [서울경제 — 현대차증권, AI 에이전트 HAI 도입](https://m.sedaily.com/amparticle/20065936) — 2026-07-09 · [industry] [finance] [korea] · 현대차증권. Claude Sonnet 4.5 기반 클라우드 플랫폼 + RAG 파이프라인으로 사내 규정·지침·업무 문서 Q&A + 문서 요약 시스템 HAI 1.0 구축. AX 전략 하에 중소형 증권사 최초 클라우드 AI 에이전트 도입. 연내 HAI 2.0 구축 예정. (snippet-verified: 서울경제 한국어 + en.sedaily.com 영문 + 추가 미디어 3건 이상)
