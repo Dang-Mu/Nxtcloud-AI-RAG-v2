@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-07-20 추가 출처
+
+- [뉴스웍스 — LG전자, AI로 부품탐색 시간 수일→30분 단축…신규 개발 부품 25% 절감](https://www.newsworks.co.kr/news/articleView.html?idxno=845553) — 2026-07-03 · [industry] [manufacturing] [agentic] [multimodal] [korea] · LG전자. 부품(Part) + 되찾다(Retrieve)를 결합한 파트리버(PartRiever) RAG 에이전트. 자연어 질의로 2D 도면·3D 형상·기술 문서 종합 분석. 부품 탐색 수일→30분, 신규 개발 부품 수 25% 절감. PoC 단계, 연내 전사 확대 예정. (snippet-verified: 뉴스웍스·더퍼블릭·EBN·이데일리·네이트·포인트데일리·시사저널e·소셜밸류 8개 독립 출처)
+- [ACM DL — SRAG: Lightweight and Specialized RAG at the Edge](https://dl.acm.org/doi/10.1145/3805712.3809702) — 49th ACM SIGIR 2026, 2026-07-20 · [architecture] [edge] [distributed] · 엣지 서버별 도메인 인식 특화 지식 베이스 유지 + 버퍼 기반 지식 마이그레이션. 단일 범용 지식 베이스의 한계(이질적 쿼리·자원 제약 엣지 환경)를 극복. retrieval relevance·generation quality·storage efficiency 향상, end-to-end 지연 감소. (snippet-verified: SIGIR 2026 RAG Systems 세션 + ACM DOI 2개 독립 출처)
+- [arXiv:2606.29328 — GeoRAG: Optimizing Information Demand Coverage in Retrieval-Augmented Generation](https://arxiv.org/abs/2606.29328) — ICTIR'26 @ SIGIR 2026 (2026-07-25, Melbourne) · [architecture] [retrieval] [coverage] [context-selection] · Bingxue Zhang, Jianying Jia (USST), Feida Zhu (SMU). 컨텍스트 선택을 정보 수요 커버리지 최적화로 재정의. 다양성 서브 질의 + 역방향 검증 품질 가중치 + Sinkhorn-Wasserstein 거리 최소화. 6개 오픈도메인 QA 벤치마크 top-k 대비 EM +6.5~+7.5%p. (snippet-verified: arXiv abs + arXiv html + ICTIR'26 proceedings 3개 독립 출처)
+
 ## 2026-07-19 추가 출처
 
 - [LG AI Research — LG Showcases EXAONE's Real-World Industry Impact at ICML 2026](https://www.lgresearch.ai/news/view?seq=664) — 2026-07-08 · [industry] [public-sector] [data-generation] [korea] · LG AI Research × 국민연금공단. EXAONE Data Foundry: 생성형 AI + 장문 컨텍스트 처리(최대 32,768 토큰) 기반 도메인 전문 데이터 자동 생성 플랫폼. 국민연금공단 파일럿에서 하루 1만 건+ 전문 데이터 자동 구축, 생산성 1,000배 이상 향상, 데이터 품질 평균 20% 이상 향상(회사 발표 기준). ICML 2026(서울, 2026-07-06~11) 발표. (snippet-verified: Korea Times + Herald경제 + 이투데이 + 서울경제 + Businesskorea + Korea Herald + BigGo Finance 7개 이상 독립 출처)
