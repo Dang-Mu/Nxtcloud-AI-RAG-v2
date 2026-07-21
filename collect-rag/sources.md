@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-07-21 추가 출처
+
+- [뉴스핌 — 공무원이 만든 'AI 법령 비서' 14일 시범 개시…법령 검토 시간 단축 기대](https://www.newspim.com/news/view/20260713000229) — 2026-07-13 · [korea] [industry:공공] [architecture] · 법제처·행정안전부·과기정통부 합동. RAG 기반 법령·판례 QA 시스템. 대법원 판례 6만 건 + 법령 24만 건 + 자치법규 5만 건. 공무원 직접 개발(약 1개월), 범정부 AI 공통 인프라 활용. 2026-07-14 시범 개시. (snippet-verified: 뉴스핌+ZDNet Korea+아시아투데이+이데일리+다음뉴스+디지털타임스+헬로디디+네이트뉴스 8개 이상 독립 출처)
+- [arXiv:2607.16604 — When Do Multimodal and Graph-Augmented RAG Help? A Controlled Evaluation for Document Question Answering](https://arxiv.org/abs/2607.16604) — 2026-07-18 · [architecture] [multimodal] [graph] [evaluation] · Sokipriala Jonah. PubLayNet 1,000페이지 4-way 소거 실험. KG 증강 효과 미검증, 시각 증강은 픽셀 전용 질의에서만 유효, 이미지 토크나이저별 토큰 수 최대 11배 차이. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+- [arXiv:2607.17538 — D-NOVA: In-Storage Retrieval Accelerator via Dual-Bound 3D NAND-Optimized Similarity Search with Vector Adaptation](https://arxiv.org/abs/2607.17538) — MICRO 2026(아테네) · [architecture] [hardware] [retrieval] · Chang Eun Song 외 UC San Diego. 3D NAND 스토리지 내 IVF 벡터 검색 내재화. CPU 대비 41.7배 속도·71배 에너지 효율, 최신 인스토리지 가속기 대비 12.13배 처리량. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+
 ## 2026-07-20 추가 출처
 
 - [뉴스웍스 — LG전자, AI로 부품탐색 시간 수일→30분 단축…신규 개발 부품 25% 절감](https://www.newsworks.co.kr/news/articleView.html?idxno=845553) — 2026-07-03 · [industry] [manufacturing] [agentic] [multimodal] [korea] · LG전자. 부품(Part) + 되찾다(Retrieve)를 결합한 파트리버(PartRiever) RAG 에이전트. 자연어 질의로 2D 도면·3D 형상·기술 문서 종합 분석. 부품 탐색 수일→30분, 신규 개발 부품 수 25% 절감. PoC 단계, 연내 전사 확대 예정. (snippet-verified: 뉴스웍스·더퍼블릭·EBN·이데일리·네이트·포인트데일리·시사저널e·소셜밸류 8개 독립 출처)
