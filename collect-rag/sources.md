@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-07-22 추가 출처
+
+- [arXiv:2607.16973 — TurboVec: Cost-Efficient Private Retrieval for Enterprise RAG via Codebook-Oblivious Scalar Quantization](https://arxiv.org/abs/2607.16973) — 2026-07-18 · [architecture] [enterprise] [privacy] [vector-index] · TurboQuant 4-bit scalar quantizer(코퍼스 학습 불필요, per-vector min/max 정규화). FAISS PQ 대비 Recall@5 +8.5–8.9pp, 동일 메모리. 멀티테넌트 커널 얼로우리스트 필터링으로 Recall@10 0.86–0.93 유지(post-filter 대비 5–10×). 멤버십 추론 ~50%(랜덤 수준) vs PQ 코드북 57.3%. Rust 오픈소스. (snippet-verified: alphamatch.ai + larsroettig.me + knightli.com + medevel.com + Medium 포함 6개 이상 독립 출처)
+- [arXiv:2607.18756 — RAGAL: Frugal, Fully Local RAG for a Romanian Government Agency](https://arxiv.org/abs/2607.18756) — 2026-07-21 · [industry] [public-sector] [architecture] [edge] · 루마니아 농업 지원 기관 AFIR. 제약: 데이터 외부 전송 금지·읽기 전용·단일 8GB 소비자 노트북. 루마니아어 코퍼스 ~25,000 청크(실제 티켓 15,073건 + 규범 문서). 하이브리드 dense-sparse + 의도 라우팅. 평가 62%→81%. bge-m3 파인튜닝으로 recall@10 0.663. (snippet-verified: arxiv.org abs + html 3개 이상 독립 출처)
+- [arXiv:2607.18102 — FinSAgent: Corpus-Aligned Multi-Agent RAG for SEC Financial Filings QA](https://arxiv.org/abs/2607.18102) — 2026-07 · [industry] [finance] [agentic] [architecture] · SEC 10-K 공시 QA. 사전 코퍼스 미정렬(prior-corpus misalignment) 문제 해결: 역할-특화 병렬 에이전트(10-K 아이템 구조 앵커) + DB-인식 쿼리 분해(공시 DB 요약 뷰 조건화) + 멀티패스 검색 + 피처-게이팅 리랭킹. (snippet-verified: arxiv.org abs + html 2개 이상 독립 출처)
+
 ## 2026-07-21 추가 출처
 
 - [뉴스핌 — 공무원이 만든 'AI 법령 비서' 14일 시범 개시…법령 검토 시간 단축 기대](https://www.newspim.com/news/view/20260713000229) — 2026-07-13 · [korea] [industry:공공] [architecture] · 법제처·행정안전부·과기정통부 합동. RAG 기반 법령·판례 QA 시스템. 대법원 판례 6만 건 + 법령 24만 건 + 자치법규 5만 건. 공무원 직접 개발(약 1개월), 범정부 AI 공통 인프라 활용. 2026-07-14 시범 개시. (snippet-verified: 뉴스핌+ZDNet Korea+아시아투데이+이데일리+다음뉴스+디지털타임스+헬로디디+네이트뉴스 8개 이상 독립 출처)
