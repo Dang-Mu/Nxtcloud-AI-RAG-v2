@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-07-23 추가 출처
+
+- [서울신문 — 미디어젠, 생성형 AI 검색 정확도 향상 특허 등록…에이전틱 RAG 기술 확보로 AI 에이전트·리걸 AI 사업 확대](https://www.seoul.co.kr/news/economy/2026/07/23/20260723500054) — 2026-07-23 · [korea] [industry:법률] [architecture] [agentic] · 미디어젠 MIRAGE(MediaZen Intelligent Retrieval And Generative Engine) — 자체 sLLM 기반 에이전틱 RAG 엔진. klaw-Contriever 기반 한국어 법규 특화 검색(법령 검색 최대 33% 향상). 공정거래위원회 불공정 약관 심사·하도급 계약 AI 시스템 적용. 도메인 특화 검색 모델 원천 특허 등록. (snippet-verified: 서울신문 + aisakorea.com + dailyinvest.kr + newspim.com KCC 2026 4개 이상 독립 출처)
+- [arXiv:2607.16431 — RIMS: Preference Optimization via Smoothed Multi-pair Aggregation for Small-Scale LLM Retrieval-Augmented Generation](https://arxiv.org/abs/2607.16431) — 2026-07-17 · [architecture] [retrieval] [small-model] · Columbia Univ., Rutgers Univ., Purdue Univ., SUNY Albany. SLM의 노이즈 검색 증거 민감성 해소. 3단계: 자체 SLM rejection sampling 합성 데이터 생성 + differentiable soft aggregation(그래디언트 신호 보존) + 멀티 쌍 선호도 최적화. hard argmin/argmax 기반 단일 쌍 선호도 학습의 신호 낭비 문제 극복. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+- [arXiv:2607.19830 — VizRAG: Enhancing Retrieval-Augmented Generation with Hypergraph Visualization](https://arxiv.org/abs/2607.19830) — 2026-07-22 · [architecture] [graph] [multimodal] · Yanbin Wei, Yang Chen 외 (SUSTech·HKUST·Huawei Research·Beihang Univ.). 하이퍼그래프 기반 RAG의 텍스트 단일 모달 한계 극복. HyperViz 툴킷으로 n원 원자 사실 하이퍼에지를 시각 표현으로 변환해 MLLM 검색·추론에 주입. 시각 과부하·렌더링 편향 해결. 강력한 기준선 대비 유의미한 성능 향상. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+
 ## 2026-07-22 추가 출처
 
 - [arXiv:2607.16973 — TurboVec: Cost-Efficient Private Retrieval for Enterprise RAG via Codebook-Oblivious Scalar Quantization](https://arxiv.org/abs/2607.16973) — 2026-07-18 · [architecture] [enterprise] [privacy] [vector-index] · TurboQuant 4-bit scalar quantizer(코퍼스 학습 불필요, per-vector min/max 정규화). FAISS PQ 대비 Recall@5 +8.5–8.9pp, 동일 메모리. 멀티테넌트 커널 얼로우리스트 필터링으로 Recall@10 0.86–0.93 유지(post-filter 대비 5–10×). 멤버십 추론 ~50%(랜덤 수준) vs PQ 코드북 57.3%. Rust 오픈소스. (snippet-verified: alphamatch.ai + larsroettig.me + knightli.com + medevel.com + Medium 포함 6개 이상 독립 출처)
