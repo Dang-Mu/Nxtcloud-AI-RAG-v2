@@ -408,6 +408,24 @@ Google Research와 Google Cloud가 2026년 6월 5일 발표. Gemini Enterprise A
 - **저자**: Yumin Heo (성균관대), Hyeon-gu Lee (NAVER), Sumin Seo (NAVER), Youngjoong Ko (성균관대)
 - **출처**: [arXiv:2607.09092 — AgentKGV: Agentic LLM-RAG Framework with Two-Stage Training for the Fact Verification of Knowledge Graphs](https://arxiv.org/abs/2607.09092) (2026-07-10, snippet-verified, arXiv abs + html + cs.CL listing 3개 독립 출처; NAVER 저자 소속 ResearchGate 확인)
 
+### Salience Induction — 멀티홉 RAG 에이전트 대상 현저성 채널 공격과 방어 (arXiv:2607.17535, 2026-07-20)
+
+멀티홉 RAG 에이전트에서 개별 사실이 모두 참인 상태에서도 **사실의 위치·강조·표현 방식(현저성 채널, salience channel)**을 조작해 에이전트 추론을 원하는 방향으로 유도하는 신규 공격 유형. 국방과학기술대학교(중국) Xingfu Zhou, Pengfei Wang, Yuan Zhou, Wei Xie, Xu Zhou 연구팀이 제안.
+
+**문제**: 기존 RAG 보안 연구는 검색 오염(독성 문서 주입)이나 프롬프트 인젝션 두 가지 공격 면(attack surface)에 집중했다. Salience Induction은 **제3의 공격 면**을 정의한다 — 검색된 문서의 모든 주장이 사실이지만, 어떤 사실이 얼마나 두드러지는지(현저성)를 조절해 에이전트 추론 경로를 오염시킨다.
+
+**핵심 기여**:
+1. **6가지 Salience-Editing 연산자 클래스 정의**: 사실 위치(position), 강조(emphasis), 프레이밍(framing), 의미적 근접성(semantic proximity) 등 현저성 조작 방식을 체계적으로 분류.
+2. **반복적 제안자-검증자 파이프라인(Iterative Proposer-Verifier Pipeline)**: 사실성(factual accuracy)과 스텔스(stealth) 제약 하에서 편집 예산(edit budget) 내 공격 시퀀스를 탐색.
+3. **SalientWiki-MH 벤치마크**: 기만 주석(decoy annotation)이 포함된 멀티홉 평가 데이터셋 신규 구축.
+
+**실험 결과**: 30% 편집 예산 내 **공격 성공률(ASR) 83.3%**; 가장 강한 방어 적용 후에도 **사후 방어 ASR 75.7%** — 현재 방어 기법으로 충분히 막기 어려움을 실증. GPT, Claude, Gemini, DeepSeek, Qwen 5개 프론티어 모델군 + ReAct, Reflexion, tool-calling 3가지 에이전트 아키텍처에서 일관되게 확인.
+
+**의의**: "검색 결과가 사실이면 안전하다"는 전제를 무너뜨림. 멀티홉 RAG 에이전트 설계 시 현저성 조작에 대한 별도 방어 계층(사실 위치 무관 추론, 적대적 현저성 정규화 등)이 필요함을 시사. 에이전트 RAG의 신뢰성 평가 기준을 확장하는 연구.
+
+- **저자**: Xingfu Zhou, Pengfei Wang, Yuan Zhou, Wei Xie, Xu Zhou (National University of Defense Technology, China)
+- **출처**: [arXiv:2607.17535 — Salience Induction against Multi-Hop RAG Agents: Threat and Defense](https://arxiv.org/abs/2607.17535) (2026-07-20, snippet-verified, arXiv abs + cs.CR listing 2개 독립 출처)
+
 ---
 
 ## 이 도메인의 공통 패턴
