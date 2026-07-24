@@ -1,5 +1,29 @@
 # 업데이트 로그
 
+## 2026-07-24 (일일 루프 #38)
+- **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 0건 — 2026-07-17~24 기간 내 검증 가능한 신규 한국 RAG 사례 미발굴)
+  1. **Salience Induction (arXiv:2607.17535, 2026-07-20)**: 멀티홉 RAG 에이전트에서 개별 사실이 모두 참인 상태에서 현저성 채널(사실 위치·강조·프레이밍·의미적 근접성)을 조작해 에이전트 추론을 오염시키는 신규 공격 유형. 6개 Salience-Editing 연산자 정의 + 반복적 제안자-검증자 파이프라인 + SalientWiki-MH 벤치마크 구축. 30% 편집 예산 내 ASR 83.3%; 최강 방어 후 사후 ASR 75.7%. GPT/Claude/Gemini/DeepSeek/Qwen 5개 모델 + ReAct/Reflexion/tool-calling 3가지 아키텍처 실험. National University of Defense Technology(중국). → `03-에이전트-툴유즈-MCP.md` 주목할 신규 연구 섹션에 추가
+  2. **SelectBench / RL Selective Evidence (arXiv:2607.20090, 2026-07-22)**: 오염된 RAG 컨텍스트에서 유효 증거와 오해 유발 콘텐츠를 구별하는 선택적 증거 채택 능력을 강화학습(DAPO)으로 학습. SelectBench 벤치마크 + 훈련 세트. Qwen3.5-4B 포스트 트레이닝. strict success 22.46%→25.54%(DAPO-Rule)/26.46%(DAPO-DeepSeek). → `02-프로덕션-아키텍처.md` 검색·리랭킹 섹션에 추가
+  3. **TopoGuard (arXiv:2607.20437, 2026-07)**: 분할 지식 공격(각각 무해한 문서가 조합되면 허위 관계 형성, LlamaGuard 등 문서별 필터 우회) 탐지를 위한 검색 문서 의미적 유사도 그래프 위상 분석 방어 프레임워크. 이론적 효과성 증명, 서브밀리초 지연, 적응형 공격자 및 양성 교차 도메인 쿼리 환경 강건성. University of Nevada, Las Vegas. → `02-프로덕션-아키텍처.md` 보안·거버넌스 섹션에 추가
+- `sources.md`에 3개 출처 추가 (## 2026-07-24 일일 누적 추가 출처 섹션 신설)
+- `03-에이전트-툴유즈-MCP.md`: Salience Induction 항목 추가
+- `02-프로덕션-아키텍처.md` 날짜 2026-07-23→2026-07-24, SelectBench 항목 + TopoGuard 항목 추가
+- `00-요약-트렌드.md` 날짜·사례 수·출처 수 갱신 (154+→157+, 260+→263+)
+
+### 검증 결과 (루프 #38)
+| # | 사례 | URL 유효 | 요약-출처 일치 | 단언 완화 | ID/날짜 형식 | 중복 없음 |
+|---|------|-----------|----------------|-----------|-------------|-----------|
+| 1 | Salience Induction (arXiv:2607.17535) | snippet-verified (arXiv abs + cs.CR listing 2개 독립 출처) | ✓ | ✓ | 2607.17535, 2026-07-20 | ✓ |
+| 2 | SelectBench (arXiv:2607.20090) | snippet-verified (arXiv abs + cs.CL listing 2개 독립 출처) | ✓ | ✓ | 2607.20090, 2026-07-22 | ✓ |
+| 3 | TopoGuard (arXiv:2607.20437) | snippet-verified (arXiv abs + cs.CR listing 2개 독립 출처) | ✓ | ✓ (제출일 불확실, 아이디 기준 2026-07 표기) | 2607.20437, 2026-07 | ✓ |
+
+- URL 200 OK: 0/3건 (WebFetch 전체 403 차단)
+- snippet-verified: 3/3건
+- 단언 톤다운: 1건 (TopoGuard 제출 정확일 불확실 → "2026-07" 기간 표기)
+- 중복 폐기: 0건 (3건 모두 sources.md 미수록 확인)
+- 한국 사례: 0건 (2026-07-17~24 기간 내 검증 가능 신규 한국 RAG 사례 미발굴)
+- 발굴 시도 → 최종 채택: 약 8건 시도 → 3건 채택 (HG-RAG 날짜 불확실 폐기, VoiceAgentRAG 7일 경과 폐기, KT RAG 이미 sources.md 수록 폐기)
+
 ## 2026-07-23 (일일 루프 #37)
 - **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
   1. **미디어젠 — MIRAGE 에이전틱 RAG + 공정거래위원회 AI 시스템 (2026-07-23)**: 자체 sLLM 기반 에이전틱 RAG 엔진 MIRAGE로 공정거래위원회 불공정 약관 심사 AI 시스템·하도급 계약 AI 지원 시스템 구축. klaw-Contriever 기반 한국어 법규 특화 검색 모델로 법령 검색 성능 최대 33% 향상, 도메인 특화 검색 모델 원천 특허 등록(2026-07-23). → `04-산업별-사례.md` 법률 > 한국 섹션에 추가 [한국 사례]

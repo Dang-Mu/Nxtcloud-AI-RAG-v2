@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-07-24 일일 누적 추가 출처 (3건, 루프 #38)
+
+- [arXiv:2607.17535 — Salience Induction against Multi-Hop RAG Agents: Threat and Defense](https://arxiv.org/abs/2607.17535) — 2026-07-20 · [agentic] [security] · Xingfu Zhou, Pengfei Wang, Yuan Zhou, Wei Xie, Xu Zhou (National University of Defense Technology, China). 멀티홉 RAG 에이전트의 현저성 채널(사실 위치·강조·프레이밍) 공격 — 모든 사실이 참인 상태에서 추론을 오염. 6개 Salience-Editing 연산자 + 반복적 제안자-검증자 파이프라인 + SalientWiki-MH 벤치마크. 30% 편집 예산 내 ASR 83.3%; 최강 방어 후 사후 ASR 75.7%. GPT/Claude/Gemini/DeepSeek/Qwen 5개 프론티어 모델 + ReAct/Reflexion/tool-calling 3가지 아키텍처에서 실험. (snippet-verified: arXiv abs + cs.CR listing 2개 독립 출처)
+- [arXiv:2607.20090 — Reinforcement Learning for Large Language Model Selective Evidence Adoption from Contaminated Retrieval Results](https://arxiv.org/abs/2607.20090) — 2026-07-22 · [architecture] [retrieval] [security] · Yanyu Chen, Yue Li, Yongyi Cui, Dongsheng Shi, Lichang Dai. 오염된 RAG 컨텍스트에서 유효 증거와 오해 유발 콘텐츠를 구별하는 선택적 증거 채택 강화학습. SelectBench 통제 벤치마크 + 훈련 세트. Qwen3.5-4B를 DAPO로 포스트 트레이닝(Rule/DeepSeek 보상). strict success 22.46%→25.54%/26.46% 향상. (snippet-verified: arXiv abs + cs.CL listing 2개 독립 출처)
+- [arXiv:2607.20437 — TopoGuard: Graph Theory Based Defenses Against Split-Knowledge Attacks on RAG](https://arxiv.org/abs/2607.20437) — 2026-07 · [architecture] [security] · Chahana Dahal, Zuobin Xiong (University of Nevada, Las Vegas). 분할 지식 공격(각각 무해하나 조합 시 허위 관계 형성) 탐지를 위한 검색 문서 의미적 유사도 그래프 위상 분석 방어 프레임워크. 이론적 효과성 증명, 서브밀리초 지연, 적응형 공격자 및 양성 교차 도메인 쿼리 환경에서 강건성 유지. (snippet-verified: arXiv abs + cs.CR listing 2개 독립 출처)
+
 ## 2026-07-23 추가 출처
 
 - [서울신문 — 미디어젠, 생성형 AI 검색 정확도 향상 특허 등록…에이전틱 RAG 기술 확보로 AI 에이전트·리걸 AI 사업 확대](https://www.seoul.co.kr/news/economy/2026/07/23/20260723500054) — 2026-07-23 · [korea] [industry:법률] [architecture] [agentic] · 미디어젠 MIRAGE(MediaZen Intelligent Retrieval And Generative Engine) — 자체 sLLM 기반 에이전틱 RAG 엔진. klaw-Contriever 기반 한국어 법규 특화 검색(법령 검색 최대 33% 향상). 공정거래위원회 불공정 약관 심사·하도급 계약 AI 시스템 적용. 도메인 특화 검색 모델 원천 특허 등록. (snippet-verified: 서울신문 + aisakorea.com + dailyinvest.kr + newspim.com KCC 2026 4개 이상 독립 출처)
