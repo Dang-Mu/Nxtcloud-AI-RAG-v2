@@ -426,6 +426,24 @@ Google Research와 Google Cloud가 2026년 6월 5일 발표. Gemini Enterprise A
 - **저자**: Xingfu Zhou, Pengfei Wang, Yuan Zhou, Wei Xie, Xu Zhou (National University of Defense Technology, China)
 - **출처**: [arXiv:2607.17535 — Salience Induction against Multi-Hop RAG Agents: Threat and Defense](https://arxiv.org/abs/2607.17535) (2026-07-20, snippet-verified, arXiv abs + cs.CR listing 2개 독립 출처)
 
+### GRADRAG — 멀티에이전트 RAG 파이프라인 크로스-컴포넌트 프롬프트 적응 (arXiv:2607.21324, 2026-07-23)
+
+멀티 에이전트 RAG 시스템에서 각 컴포넌트(검색기·그래프 구성기·답변 생성기)를 **격리해 최적화하는 기존 접근법**은 파이프라인 전체의 조율된 성능 향상을 이끌어내지 못한다는 문제를 해결하는 프레임워크. RAG 파이프라인을 **계산 그래프(computational graph)**로 모델링하고, 하류 평가 피드백을 역방향으로 전파해 상류 에이전트 프롬프트를 업데이트한다.
+
+**핵심 아키텍처**:
+1. **평가자(Evaluator)**: 하류 답변과 지지 증거를 비판적으로 검토하고, 구체적인 실행 가능 피드백(actionable feedback)을 생성.
+2. **프롬프트 최적화기(Prompt Optimizer)**: 평가자의 피드백을 받아 검색기·그래프 구성기·답변 생성기 등 업스트림 적응형 에이전트(adaptive agents)의 프롬프트를 반복적으로 업데이트. 출력이 만족스러우면 조기 종료(early stopping) 신호를 발생시켜 불필요한 반복을 차단.
+3. **계산 그래프 기반 역전파**: 컴포넌트 간 의존성을 그래프로 표현해 피드백이 어느 컴포넌트까지 전파되어야 하는지를 구조적으로 결정.
+
+**평가**: SQUALITY(긴 문서 요약·QA) + QMSUM(회의 요약·QA) 두 벤치마크에서 **두 가지 검색 패러다임** 하에 평가.
+  - 플랫 청크 기반 검색: IRCoT 스타일 쿼리 정제 방식.
+  - 그래프 기반 검색: 엔티티-관계 그래프를 문서에서 구성하고 반복적으로 풍부화하는 방식.
+
+**의의**: 기존 RAG 컴포넌트 최적화 연구가 개별 컴포넌트의 독립 튜닝에 집중한 것과 달리, GRADRAG는 파이프라인 전체를 하나의 계산 그래프로 보고 **컴포넌트 간 조율(cross-component coordination)**을 명시적으로 모델링한다. "평가자가 상류 컴포넌트 프롬프트를 직접 수정"하는 설계는 컴파일러 최적화의 데이터 흐름 분석과 유사한 발상으로, 멀티에이전트 RAG 자동 최적화의 새 방향을 제시한다.
+
+- **저자**: Paolo Pedinotti, Enrico Santus
+- **출처**: [arXiv:2607.21324 — GRADRAG: Cross-Component Prompt Adaptation for Coordinated Multi-Agent RAG](https://arxiv.org/abs/2607.21324) (2026-07-23, snippet-verified: arXiv abs + arXiv html + cs.CL listing + cs.AI listing 4개 독립 출처)
+
 ---
 
 ## 이 도메인의 공통 패턴
