@@ -1,5 +1,29 @@
 # 업데이트 로그
 
+## 2026-07-25 (일일 루프 #39)
+- **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
+  1. **GraphContainer (arXiv:2607.19362, KAIST, VLDB 2026 Demo)** [한국 사례]: 이종 Graph RAG 프레임워크(Microsoft GraphRAG·LightRAG·MemGraphRAG 등)의 구조적 파편화 문제를 해결하는 통합 비교·디버깅 플랫폼. UGR(Unified Graph Representation) 레이어로 다양한 그래프 포맷을 표준화하고, Graph Recorder로 검색 단계별 시각 재현 가능. VLDB 2026 Demo 채택. KAIST 저자(Seonho An, Chaejeong Hyun, Min-Soo Kim). → `02-프로덕션-아키텍처.md` GraphRAG / 지식 그래프 결합 섹션에 추가
+  2. **PAGE-RAG (arXiv:2607.19301, 2026-07-21)**: 자동 구성 그래프가 원문의 불완전한 투영임을 인정하고, 그래프를 독립 지식 소스 대신 의미적 골격으로 취급하는 장문서 QA 프레임워크. 태스크 적응형 검색 라우팅으로 그래프 traversal과 원문 직접 접근을 동적 선택. 증거 근거 설계로 환각 구조적 억제. 오픈소스. → `02-프로덕션-아키텍처.md` GraphRAG / 지식 그래프 결합 섹션에 추가
+  3. **GRADRAG (arXiv:2607.21324, 2026-07-23)**: RAG 파이프라인을 계산 그래프로 모델링해 평가자 피드백을 역방향 전파, 검색기·그래프 구성기·생성기 프롬프트를 조율 업데이트하는 멀티에이전트 RAG 크로스-컴포넌트 최적화 프레임워크. 조기 종료 신호로 불필요한 반복 차단. SQUALITY + QMSUM 벤치마크. → `03-에이전트-툴유즈-MCP.md` 주목할 신규 연구 섹션에 추가
+- `sources.md`에 3개 출처 추가 (## 2026-07-25 일일 누적 추가 출처 섹션 신설)
+- `02-프로덕션-아키텍처.md` 날짜 2026-07-24→2026-07-25, GraphRAG 섹션에 GraphContainer(한국 사례) + PAGE-RAG 추가
+- `03-에이전트-툴유즈-MCP.md` 신규 연구 섹션에 GRADRAG 추가
+- `00-요약-트렌드.md` 날짜·사례 수·출처 수 갱신 (157+→160+, 263+→266+)
+
+### 검증 결과 (루프 #39)
+| # | 사례 | URL 유효 | 요약-출처 일치 | 단언 완화 | ID/날짜 형식 | 중복 없음 |
+|---|------|-----------|----------------|-----------|-------------|-----------|
+| 1 | GraphContainer (arXiv:2607.19362) | snippet-verified (arXiv abs + arXiv html + VLDB 2026 demonstrations 3개 독립 출처) | ✓ (KAIST 저자·VLDB 2026 Demo 채택·UGR+Graph Recorder 기능 확인) | ✓ | 2607.19362, 2026-07 | ✓ |
+| 2 | PAGE-RAG (arXiv:2607.19301) | snippet-verified (arXiv abs + arXiv html + cs.IR listing 3개 독립 출처) | ✓ (저자·날짜·핵심 기여 확인) | ✓ | 2607.19301, 2026-07-21 | ✓ |
+| 3 | GRADRAG (arXiv:2607.21324) | snippet-verified (arXiv abs + arXiv html + cs.CL listing + cs.AI listing 4개 독립 출처) | ✓ (저자·날짜·벤치마크·아키텍처 확인) | ✓ | 2607.21324, 2026-07-23 | ✓ |
+
+- URL 200 OK: 0/3건 (WebFetch 전체 403 차단)
+- snippet-verified: 3/3건
+- 단언 톤다운: 0건
+- 중복 폐기: 0건
+- 한국 사례: 1건 (GraphContainer — KAIST, VLDB 2026 Demo)
+- 발굴 시도 → 최종 채택: 약 7건 시도 → 3건 채택
+
 ## 2026-07-24 (일일 루프 #38)
 - **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 0건 — 2026-07-17~24 기간 내 검증 가능한 신규 한국 RAG 사례 미발굴)
   1. **Salience Induction (arXiv:2607.17535, 2026-07-20)**: 멀티홉 RAG 에이전트에서 개별 사실이 모두 참인 상태에서 현저성 채널(사실 위치·강조·프레이밍·의미적 근접성)을 조작해 에이전트 추론을 오염시키는 신규 공격 유형. 6개 Salience-Editing 연산자 정의 + 반복적 제안자-검증자 파이프라인 + SalientWiki-MH 벤치마크 구축. 30% 편집 예산 내 ASR 83.3%; 최강 방어 후 사후 ASR 75.7%. GPT/Claude/Gemini/DeepSeek/Qwen 5개 모델 + ReAct/Reflexion/tool-calling 3가지 아키텍처 실험. National University of Defense Technology(중국). → `03-에이전트-툴유즈-MCP.md` 주목할 신규 연구 섹션에 추가

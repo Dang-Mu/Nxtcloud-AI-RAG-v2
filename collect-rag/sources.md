@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-07-25 일일 누적 추가 출처 (3건, 루프 #39)
+
+- [arXiv:2607.19362 — GraphContainer: A Unified Platform for Comparing and Debugging Graph RAG Methods](https://arxiv.org/abs/2607.19362) — 2026-07 · [korea] [architecture] [graph] [tooling] · Seonho An, Chaejeong Hyun, Min-Soo Kim (KAIST). VLDB 2026 Demo 채택. UGR(Unified Graph Representation) 레이어로 이종 그래프 포맷 표준화 + Graph Recorder로 검색 단계별 시각 재현. 이종 Graph RAG 프레임워크 비교·디버깅 최초 통합 플랫폼. (snippet-verified: arXiv abs + arXiv html + VLDB 2026 demonstrations 프로그램 3개 독립 출처)
+- [arXiv:2607.19301 — PAGE-RAG: Evidence-Grounded Adaptive Graph Retrieval for Long-Document Question Answering](https://arxiv.org/abs/2607.19301) — 2026-07-21 · [architecture] [graph] [long-doc] · Xingyu Chen, Junxiu An, Jun Guo, Li Wang. 자동 구성 그래프를 독립 지식 소스 대신 의미적 골격(semantic skeleton)으로 취급. 태스크 적응형 검색 라우팅으로 그래프 traversal과 원문 접근을 동적 선택. 장문서 QA 신뢰성 향상. 오픈소스. (snippet-verified: arXiv abs + arXiv html + cs.IR listing 3개 독립 출처)
+- [arXiv:2607.21324 — GRADRAG: Cross-Component Prompt Adaptation for Coordinated Multi-Agent RAG](https://arxiv.org/abs/2607.21324) — 2026-07-23 · [agentic] [architecture] · Paolo Pedinotti, Enrico Santus. RAG 파이프라인을 계산 그래프로 모델링, 평가자 피드백을 역방향 전파해 검색기·그래프 구성기·생성기 프롬프트를 조율 업데이트. 조기 종료 신호로 비효율 반복 차단. SQUALITY + QMSUM 벤치마크 평가. (snippet-verified: arXiv abs + arXiv html + cs.CL listing + cs.AI listing 4개 독립 출처)
+
 ## 2026-07-24 일일 누적 추가 출처 (3건, 루프 #38)
 
 - [arXiv:2607.17535 — Salience Induction against Multi-Hop RAG Agents: Threat and Defense](https://arxiv.org/abs/2607.17535) — 2026-07-20 · [agentic] [security] · Xingfu Zhou, Pengfei Wang, Yuan Zhou, Wei Xie, Xu Zhou (National University of Defense Technology, China). 멀티홉 RAG 에이전트의 현저성 채널(사실 위치·강조·프레이밍) 공격 — 모든 사실이 참인 상태에서 추론을 오염. 6개 Salience-Editing 연산자 + 반복적 제안자-검증자 파이프라인 + SalientWiki-MH 벤치마크. 30% 편집 예산 내 ASR 83.3%; 최강 방어 후 사후 ASR 75.7%. GPT/Claude/Gemini/DeepSeek/Qwen 5개 프론티어 모델 + ReAct/Reflexion/tool-calling 3가지 아키텍처에서 실험. (snippet-verified: arXiv abs + cs.CR listing 2개 독립 출처)
