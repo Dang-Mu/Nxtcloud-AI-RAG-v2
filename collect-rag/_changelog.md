@@ -1,5 +1,29 @@
 # 업데이트 로그
 
+## 2026-07-26 (일일 루프 #40)
+- **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
+  1. **서울아산병원 — 폐쇄망 기반 프라이빗 AI 지식 검색 시스템 (2026-05-18)** [한국 사례]: 국내 의료기관 최초 완전 폐쇄망 기반 프라이빗 AI 지식 관리 시스템. 벡터 데이터베이스 + RAG로 임상지침·규정 문서 인덱싱, 온프레미스 100%(외부 클라우드 0%). RAG 기반 환각 방지 + 의료 데이터 외부 전송 0의 동시 달성. rapportian.com + etnews.com + docdocdoc.co.kr + khanews.com + thefirstmedi.co.kr + medicalinfo.co.kr 6개 이상 독립 출처 snippet-verified. → `04-산업별-사례.md` 의료 > 한국 섹션에 추가
+  2. **IteraSim RAG (arXiv:2607.20346, 2026-07-22)**: OpenFOAM CFD 비전문가 장벽 해소를 위한 멀티스테이지 에이전틱 RAG. LLM 기반 멀티-변형 쿼리 확장(물리·솔버-키워드·트러블슈팅) → RRF → MMR → HNSW 밀집 벡터 검색; 초안·검토 에이전트 분리로 자기 검토 한계 극복. Computer Physics Communications 제출. → `04-산업별-사례.md` 과학·연구 > 글로벌 섹션에 추가
+  3. **MetaRAG 재현성 연구 (arXiv:2604.19899, SIGIR 2026)**: 메타인지 RAG의 상대적 개선은 재현 가능하나 절대 점수는 원논문보다 낮음(폐쇄소스 LLM 버전 변경·구현 세부 사항 부재가 원인). PointWise·ListWise 리랭커 + SIM-RAG 비교 확장. DOI: 10.1145/3805712.3808551. GitHub: iai-group/sigir2026-metarag. → `02-프로덕션-아키텍처.md` 평가 섹션에 추가
+- `sources.md`에 3개 출처 추가 (## 2026-07-26 일일 누적 추가 출처 섹션 신설)
+- `04-산업별-사례.md` 날짜 2026-07-23→2026-07-26, 의료>한국 섹션에 서울아산병원 폐쇄망 AI 추가, 과학·연구>글로벌 섹션에 IteraSim RAG 추가
+- `02-프로덕션-아키텍처.md` 날짜 2026-07-25→2026-07-26, 평가 섹션에 MetaRAG 재현성 연구 추가
+- `00-요약-트렌드.md` 날짜·사례 수·출처 수 갱신 (160+→163+, 266+→269+)
+
+### 검증 결과 (루프 #40)
+| # | 사례 | URL 유효 | 요약-출처 일치 | 단언 완화 | ID/날짜 형식 | 중복 없음 |
+|---|------|-----------|----------------|-----------|-------------|-----------|
+| 1 | 서울아산병원 폐쇄망 프라이빗 AI (2026-05-18) | snippet-verified (rapportian.com + etnews.com + docdocdoc.co.kr + khanews.com + thefirstmedi.co.kr + medicalinfo.co.kr 6개 이상 독립 출처) | ✓ (공식 발표일·기술 스택·아키텍처 특이점 확인) | ✓ | 2026-05-18 | ✓ (기존 서울아산병원 스마트청킹 항목과 별도 사례) |
+| 2 | IteraSim RAG (arXiv:2607.20346) | snippet-verified (arXiv abs + arXiv html + bohrium.com 3개 독립 출처) | ✓ (저자·제출일·CFD 도메인·아키텍처 확인) | ✓ | 2607.20346, 2026-07-22 | ✓ |
+| 3 | MetaRAG 재현성 연구 (arXiv:2604.19899) | snippet-verified (arXiv abs + SIGIR 2026 ACM DOI + GitHub iai-group/sigir2026-metarag 3개 독립 출처) | ✓ (SIGIR 2026 발표·DOI·재현성 결과 확인) | ✓ | 2604.19899, SIGIR 2026 2026-07-20~24 | ✓ |
+
+- URL 200 OK: 0/3건 (WebFetch 전체 403 차단)
+- snippet-verified: 3/3건
+- 단언 톤다운: 0건
+- 중복 폐기: 0건
+- 한국 사례: 1건 (서울아산병원 폐쇄망 기반 프라이빗 AI — 2026-05-18, 이전 루프 미수록)
+- 발굴 시도 → 최종 채택: 약 15건 시도 → 3건 채택
+
 ## 2026-07-25 (일일 루프 #39)
 - **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
   1. **GraphContainer (arXiv:2607.19362, KAIST, VLDB 2026 Demo)** [한국 사례]: 이종 Graph RAG 프레임워크(Microsoft GraphRAG·LightRAG·MemGraphRAG 등)의 구조적 파편화 문제를 해결하는 통합 비교·디버깅 플랫폼. UGR(Unified Graph Representation) 레이어로 다양한 그래프 포맷을 표준화하고, Graph Recorder로 검색 단계별 시각 재현 가능. VLDB 2026 Demo 채택. KAIST 저자(Seonho An, Chaejeong Hyun, Min-Soo Kim). → `02-프로덕션-아키텍처.md` GraphRAG / 지식 그래프 결합 섹션에 추가

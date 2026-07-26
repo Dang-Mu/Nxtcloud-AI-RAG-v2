@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-07-26 일일 누적 추가 출처 (3건, 루프 #40)
+
+- [Rapportian — 서울아산병원, 국내 의료기관 최초 폐쇄망 기반 프라이빗 AI 도입](https://www.rapportian.com/news/articleView.html?idxno=236096) — 2026-05-18 · [korea] [industry:의료] [architecture] [privacy] · 서울아산병원(Asan Medical Center). 벡터 데이터베이스 + RAG 기반 임상지침·규정 지식 검색 시스템. 온프레미스 100%(외부 클라우드 0%), 완전 폐쇄망. 국내 의료기관 최초 프라이빗 AI 지식 관리. RAG 기반 환각 방지 + 의료 데이터 외부 전송 0. (snippet-verified: rapportian.com + etnews.com + docdocdoc.co.kr + khanews.com + thefirstmedi.co.kr + medicalinfo.co.kr 6개 이상 독립 출처)
+- [arXiv:2607.20346 — IteraSim RAG: A Multi-Stage Retrieval-Augmented Agentic Back-End for OpenFOAM-Based Computational Fluid Dynamics](https://arxiv.org/abs/2607.20346) — 2026-07-22 · [architecture] [agentic] [scientific-computing] · Pratyush Kumar. OpenFOAM CFD 비전문가 장벽 해소. LLM 기반 멀티-변형 쿼리 확장(물리·솔버-키워드·트러블슈팅 변형) → RRF → MMR → HNSW 밀집 벡터 검색. 초안 에이전트 + 검토 에이전트 분리. Computer Physics Communications 제출. (snippet-verified: arXiv abs + arXiv html + bohrium.com 3개 독립 출처)
+- [arXiv:2604.19899 — A Reproducibility Study of Metacognitive Retrieval-Augmented Generation](https://arxiv.org/abs/2604.19899) — 2026-07-20~24 · [evaluation] [reproducibility] [reranking] · iai-group (SIGIR 2026, DOI: 10.1145/3805712.3808551). MetaRAG 상대적 개선은 재현 가능, 절대 점수는 원논문보다 낮음(LLM 버전 변경 + 구현 세부 사항 부재). PointWise·ListWise 리랭커 + SIM-RAG 비교 확장. GitHub: iai-group/sigir2026-metarag. (snippet-verified: arXiv abs + SIGIR 2026 ACM DOI + GitHub repo 3개 독립 출처)
+
 ## 2026-07-25 일일 누적 추가 출처 (3건, 루프 #39)
 
 - [arXiv:2607.19362 — GraphContainer: A Unified Platform for Comparing and Debugging Graph RAG Methods](https://arxiv.org/abs/2607.19362) — 2026-07 · [korea] [architecture] [graph] [tooling] · Seonho An, Chaejeong Hyun, Min-Soo Kim (KAIST). VLDB 2026 Demo 채택. UGR(Unified Graph Representation) 레이어로 이종 그래프 포맷 표준화 + Graph Recorder로 검색 단계별 시각 재현. 이종 Graph RAG 프레임워크 비교·디버깅 최초 통합 플랫폼. (snippet-verified: arXiv abs + arXiv html + VLDB 2026 demonstrations 프로그램 3개 독립 출처)
