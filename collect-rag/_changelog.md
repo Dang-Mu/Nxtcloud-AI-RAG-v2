@@ -1,5 +1,30 @@
 # 업데이트 로그
 
+## 2026-07-27 (일일 루프 #41)
+- **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
+  1. **올거나이즈 × 한국증권금융 — 온프레미스 전사 AI 비서 플랫폼 (2026-07-15)** [한국 사례]: 금융공기업 한국증권금융의 '생성형 AI 활용 플랫폼 내부 구축' 수주. 전사 임직원 대상 AI 플랫폼 + 업무별 AI 비서. 올거나이즈 FDSE 방법론, 온프레미스(외부 전송 금지), DRM·SSO·개인정보 비식별화·내부망 연동. AI 기본법·금감원 RMF·금융보안원 AI 보안 안내서 반영. edaily + zdnet + venturesquare + newstheai + ezyeconomy + digitalchosun 6개 이상 독립 출처 snippet-verified. → `04-산업별-사례.md` 금융 > 한국 섹션에 추가
+  2. **GRASP: GRanularity-Aware Search Policy for Agentic RAG (arXiv:2607.10463, 2026-07-11)**: 에이전트 RAG에서 semantic search, keyword search, paragraph reading 세 검색 액션을 RL로 동적 조율. 결합 보상(답변 정확도+근거 읽기+보완적 검색+턴 효율). 세분성 인식 정책으로 쿼리 복잡도·문서 구조에 따라 검색 깊이 자동 전환. UMass Amherst + Adobe Research. → `03-에이전트-툴유즈-MCP.md` 주목할 신규 연구 섹션에 추가
+  3. **From Prompts to Contracts: Harness Engineering for Auditable Enterprise LLM Agents (arXiv:2607.08028, 2026-07-09)**: 엔터프라이즈 LLM 앱을 추적·감사 가능 아키텍처로 재구성. RAG를 소스-근거 클레임 레이어로 명시 설계. 5가지 계약(소스 근거·엔티티 라우팅·추적·출력 위생·권고 언어). 한국 5개 대기업 그룹(25개 상장사) 검증. 3개 호스팅 모델 교체 실험에서 계약 유지 확인. AI Leadership Research Center(한국인 저자). → `02-프로덕션-아키텍처.md` 보안·거버넌스 섹션에 추가
+- `sources.md`에 3개 출처 추가 (## 2026-07-27 일일 누적 추가 출처 섹션 신설)
+- `04-산업별-사례.md` 금융 > 한국 섹션에 올거나이즈 × 한국증권금융 추가
+- `03-에이전트-툴유즈-MCP.md` 신규 연구 섹션에 GRASP 추가
+- `02-프로덕션-아키텍처.md` 보안·거버넌스 섹션에 Harness Engineering 추가
+- `00-요약-트렌드.md` 날짜·사례 수·출처 수 갱신 (163+→166+, 269+→272+)
+
+### 검증 결과 (루프 #41)
+| # | 사례 | URL 유효 | 요약-출처 일치 | 단언 완화 | ID/날짜 형식 | 중복 없음 |
+|---|------|-----------|----------------|-----------|-------------|-----------|
+| 1 | 올거나이즈 × 한국증권금융 (2026-07-15) | snippet-verified (edaily + zdnet + venturesquare + newstheai + ezyeconomy + digitalchosun 6개 이상 독립 출처) | ✓ (수주 사실·기술 스택·규제 대응 확인) | ✓ | 2026-07-15 | ✓ |
+| 2 | GRASP (arXiv:2607.10463) | snippet-verified (arXiv abs + arXiv html + HuggingFace papers + ResearchGate + X post 5개 독립 출처) | ✓ (저자·제출일·RL 프레임워크·벤치마크 확인) | ✓ | 2607.10463, 2026-07-11 | ✓ |
+| 3 | Harness Engineering (arXiv:2607.08028) | snippet-verified (arXiv abs + arXiv html + cs.CL listing + ORCID 4개 독립 출처) | ✓ (저자·날짜·5가지 계약·한국 기업 검증 확인) | ✓ | 2607.08028, 2026-07-09 | ✓ |
+
+- URL 200 OK: 0/3건 (WebFetch 전체 403 차단)
+- snippet-verified: 3/3건
+- 단언 톤다운: 0건
+- 중복 폐기: 0건
+- 한국 사례: 1건 (올거나이즈 × 한국증권금융 — 2026-07-15)
+- 발굴 시도 → 최종 채택: 약 10건 시도 → 3건 채택
+
 ## 2026-07-26 (일일 루프 #40)
 - **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
   1. **서울아산병원 — 폐쇄망 기반 프라이빗 AI 지식 검색 시스템 (2026-05-18)** [한국 사례]: 국내 의료기관 최초 완전 폐쇄망 기반 프라이빗 AI 지식 관리 시스템. 벡터 데이터베이스 + RAG로 임상지침·규정 문서 인덱싱, 온프레미스 100%(외부 클라우드 0%). RAG 기반 환각 방지 + 의료 데이터 외부 전송 0의 동시 달성. rapportian.com + etnews.com + docdocdoc.co.kr + khanews.com + thefirstmedi.co.kr + medicalinfo.co.kr 6개 이상 독립 출처 snippet-verified. → `04-산업별-사례.md` 의료 > 한국 섹션에 추가

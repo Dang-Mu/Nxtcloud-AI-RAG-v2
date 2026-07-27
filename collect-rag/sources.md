@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-07-27 일일 누적 추가 출처 (3건, 루프 #41)
+
+- [edaily — 올거나이즈, 한국증권금융 '생성형 AI 활용 플랫폼 구축' 수주](https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=03457126645514848) — 2026-07-15 · [korea] [industry:금융] [architecture] [privacy] · 올거나이즈(Allganize). 한국증권금융 전사 임직원 대상 생성형 AI 플랫폼 + 업무별 AI 비서. FDSE 방법론. 온프레미스(외부 전송 금지). DRM·SSO·개인정보 비식별화·내부망 연동. AI 기본법·금감원 RMF·금융보안원 AI 보안 안내서 반영. (snippet-verified: edaily + zdnet + venturesquare + newstheai + ezyeconomy + digitalchosun 6개 이상 독립 출처)
+- [arXiv:2607.10463 — GRASP: GRanularity-Aware Search Policy for Agentic RAG](https://arxiv.org/abs/2607.10463) — 2026-07-11 · [agentic] [architecture] [reinforcement-learning] · Varun Gandhi, Jaewook Lee, Shantanu Todmal, Franck Dernoncourt, Ryan Rossi, Zichao Wang, Andrew Lan (UMass Amherst + Adobe Research). 에이전트 RAG 검색 세분성 RL 최적화. semantic search·keyword search·paragraph reading 3가지 액션. 결합 보상(답변 정확도+근거 읽기+보완적 검색+턴 효율). 멀티홉 QA 벤치마크 우위. (snippet-verified: arXiv abs + arXiv html + HuggingFace papers + ResearchGate + X post 5개 독립 출처)
+- [arXiv:2607.08028 — From Prompts to Contracts: Harness Engineering for Auditable Enterprise LLM Agents](https://arxiv.org/abs/2607.08028) — 2026-07-09 · [architecture] [enterprise] [governance] [security] · Joongho Ahn, Moonsoo Kim (AI Leadership Research Center). 엔터프라이즈 LLM 앱을 추적·감사 가능 아키텍처로 재구성. RAG = 소스-근거 클레임 레이어. 5가지 계약(소스 근거·엔티티 라우팅·추적·출력 위생·권고 언어). 한국 5개 대기업 그룹(25개 상장사) 검증. 3개 모델 교체 실험에서 계약 유지. 참조 구현 공개. (snippet-verified: arXiv abs + arXiv html + cs.CL listing + ORCID 4개 독립 출처)
+
 ## 2026-07-26 일일 누적 추가 출처 (3건, 루프 #40)
 
 - [Rapportian — 서울아산병원, 국내 의료기관 최초 폐쇄망 기반 프라이빗 AI 도입](https://www.rapportian.com/news/articleView.html?idxno=236096) — 2026-05-18 · [korea] [industry:의료] [architecture] [privacy] · 서울아산병원(Asan Medical Center). 벡터 데이터베이스 + RAG 기반 임상지침·규정 지식 검색 시스템. 온프레미스 100%(외부 클라우드 0%), 완전 폐쇄망. 국내 의료기관 최초 프라이빗 AI 지식 관리. RAG 기반 환각 방지 + 의료 데이터 외부 전송 0. (snippet-verified: rapportian.com + etnews.com + docdocdoc.co.kr + khanews.com + thefirstmedi.co.kr + medicalinfo.co.kr 6개 이상 독립 출처)
