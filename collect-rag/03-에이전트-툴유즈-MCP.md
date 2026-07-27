@@ -444,6 +444,17 @@ Google Research와 Google Cloud가 2026년 6월 5일 발표. Gemini Enterprise A
 - **저자**: Paolo Pedinotti, Enrico Santus
 - **출처**: [arXiv:2607.21324 — GRADRAG: Cross-Component Prompt Adaptation for Coordinated Multi-Agent RAG](https://arxiv.org/abs/2607.21324) (2026-07-23, snippet-verified: arXiv abs + arXiv html + cs.CL listing + cs.AI listing 4개 독립 출처)
 
+#### GRASP: GRanularity-Aware Search Policy for Agentic RAG (arXiv:2607.10463, 2026-07-11)
+- **핵심 아이디어**: 에이전트 RAG에서 검색 액션의 **세분성(granularity)**을 동적으로 조절하는 강화학습(RL) 프레임워크. 에이전트가 semantic search, keyword search, paragraph reading 세 가지 검색 액션을 상황에 맞게 조율하도록 학습.
+- **설계**:
+  - 결합 보상(joint reward): 답변 정확도 + 근거 있는 읽기(grounded reading) + 보완적 검색(complementary search) + 턴 효율(turn efficiency).
+  - 세분성 인식 정책(granularity-aware policy): 쿼리 복잡도·문서 구조에 따라 넓은 semantic search에서 좁은 paragraph-level reading으로 자동 전환.
+  - 해석 가능한 스키밍/스캐닝 행동 학습 — 사람의 정보 검색 전략과 유사.
+- **평가**: 단일 스텝·프롬프팅·RL 베이스라인 대비 멀티홉 QA 벤치마크에서 우위. 검색 효율과 답변 정확도 동시 개선.
+- **의의**: 기존 에이전트 RAG 연구가 검색 횟수·도구 선택에 집중한 데 비해, GRASP는 각 검색 액션 내부의 세분성 레벨 자체를 정책의 결정 변수로 삼는다. "얼마나 깊이 읽을 것인가"를 RL로 학습하는 방향은 비용-정확도 트레이드오프 최적화에 새 차원을 추가한다.
+- **저자**: Varun Gandhi, Jaewook Lee, Shantanu Todmal, Franck Dernoncourt, Ryan Rossi, Zichao Wang, Andrew Lan (UMass Amherst + Adobe Research)
+- **출처**: [arXiv:2607.10463 — GRASP: GRanularity-Aware Search Policy for Agentic RAG](https://arxiv.org/abs/2607.10463) (2026-07-11, snippet-verified: arXiv abs + arXiv html + HuggingFace papers + ResearchGate + X post 5개 독립 출처)
+
 ---
 
 ## 이 도메인의 공통 패턴
