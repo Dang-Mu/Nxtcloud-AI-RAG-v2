@@ -455,6 +455,26 @@ Google Research와 Google Cloud가 2026년 6월 5일 발표. Gemini Enterprise A
 - **저자**: Varun Gandhi, Jaewook Lee, Shantanu Todmal, Franck Dernoncourt, Ryan Rossi, Zichao Wang, Andrew Lan (UMass Amherst + Adobe Research)
 - **출처**: [arXiv:2607.10463 — GRASP: GRanularity-Aware Search Policy for Agentic RAG](https://arxiv.org/abs/2607.10463) (2026-07-11, snippet-verified: arXiv abs + arXiv html + HuggingFace papers + ResearchGate + X post 5개 독립 출처)
 
+### VecTree-RAG — 벡터+트리 이중 검색 기반 에이전틱 과학 문헌 QA (arXiv:2607.23006, 2026-07-25)
+
+과학 문헌 QA에서 기존 RAG가 고정 길이 패시지로 문서 구조를 평탄화(flatten)해 "어떤 논문이 관련 있는가"와 "논문 내 어디에 증거가 있는가"를 모두 유사도 검색으로 처리하는 한계를 해결하는 에이전틱 RAG 프레임워크. **두 가지 질적으로 다른 검색 문제를 두 가지 상보적 메커니즘으로 분리 처리**하는 것이 핵심 설계 원칙.
+
+**핵심 아키텍처**:
+1. **벡터 검색(Vector Search)**: 문서 전체 표현과 섹션 수준 표현을 압축 벡터로 색인해 **코퍼스 전체에서 관련 논문을 랭킹**. raw 패시지를 임베딩하지 않아 인덱스 크기를 문서 구조 엔트리 수에만 비례하게 제어.
+2. **트리 순회(Tree Traversal)**: 소스 검증된 섹션 트리를 **추론 기반으로 순회해 단축리스트된 논문 내부에서 증거를 정밀 위치 파악**. 전체 원문은 페이지 스토어에 보존, 구조적 위치 파악 이후 점진적으로만 노출.
+
+**평가 결과**: 기존 Dense RAG·RAPTOR·Search-o1 등 베이스라인 대비 3개 벤치마크 최고 성능:
+- QASPER(300개 질의): LLM-judge 정답률 **0.800** (Dense RAG 대비 증거 페이지 정밀도 0.274 vs 0.046~0.071)
+- LitQA2(54개 질의, 오픈 액세스): 정확도 **0.925**
+- MOSAIC(49개 멀티문서 질의): 복합 점수 **0.547**
+
+**효율성**: LitQA2 절제 실험에서 트리 탐색 또는 코퍼스 수준 벡터 라우팅 없이는 더 많은 추론 토큰 필요 — 두 메커니즘이 상호 보완적임을 확인.
+
+**의의**: "문서 관련성 판별"과 "문서 내 증거 위치 파악"을 단일 유사도 검색으로 처리하는 기존 패러다임 한계를 명시하고, 각각에 맞는 전문 메커니즘을 조합하는 설계를 제안. 계층적 구조(섹션·챕터)를 가진 긴 문서 코퍼스 전반에 일반화 가능.
+
+- **저자**: Xinyan Zhong, Yuwei Shi, Yuqi Wei, Chen Shen, Tianhang Zhou, Zhenghao Wu (Xi'an Jiaotong-Liverpool University [XJTLU] · Suzhou Lab · China University of Petroleum)
+- **출처**: [arXiv:2607.23006 — VecTree-RAG: An Agentic Retrieval-Augmented Generation Framework Combining Vector and Tree Retrieval for Efficiency and Accuracy](https://arxiv.org/abs/2607.23006) (2026-07-25, snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+
 ---
 
 ## 이 도메인의 공통 패턴
