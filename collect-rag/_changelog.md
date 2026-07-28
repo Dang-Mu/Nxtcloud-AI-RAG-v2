@@ -1,5 +1,30 @@
 # 업데이트 로그
 
+## 2026-07-28 (일일 루프 #42)
+- **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
+  1. **ARI — 한국 고문서 복원 RAG (arXiv:2607.21936, ACL 2026 Findings, 2026-07-24)** [한국 사례]: 강원대학교 Gabeen Kim·Kyeongpil Kang 팀이 제안한 ARI(Attention-based Retrieval Integration) 프레임워크. 물리적 훼손으로 판독 불가능한 한국 역사 고문서에서 고유명사·인명·지명 등 외부 지식이 필요한 개체명을 정확히 복원. LLM 암묵적 지식 + RAG 외부 역사 지식을 어텐션 기반으로 이중 결합. 일반 문자·고유명사 복원 모두 베이스라인 대비 유의미한 성능 향상, ACL 2026 Findings 채택. arXiv abs + arXiv html + Scholar profile(Kyeongpil Kang) 3개 이상 독립 출처 snippet-verified. → `04-산업별-사례.md` 과학·연구 > 한국 섹션 신설 후 추가
+  2. **VecTree-RAG (arXiv:2607.23006, 2026-07-25)**: 과학 문헌 QA에서 "관련 논문 판별"과 "논문 내 증거 위치 파악"이라는 두 개의 질적으로 다른 문제를 벡터 검색(코퍼스 수준 랭킹)과 트리 순회(문서 내 정밀 위치 파악)로 분리 처리하는 에이전틱 RAG 프레임워크. XJTLU + Suzhou Lab + China Univ. of Petroleum. QASPER LLM-judge 0.800 · LitQA2 0.925 · MOSAIC 0.547 — 세 벤치마크 모두 최고 성능. arXiv abs + arXiv html 2개 독립 출처 snippet-verified. → `03-에이전트-툴유즈-MCP.md` 신규 연구 섹션에 추가
+  3. **Optimizing Hypergraph-Based RAG (arXiv:2607.20506, 2026-07)**: 하이퍼그래프 RAG의 두 가지 실용 병목(추출 오류·비효율 검색)을 EXT++(자기일관성 프롬프팅으로 추출 품질 향상) + Personalized PageRank(구조적 연결성 기반 청크 검색)로 동시 해결. Houda Khrouf, Pedro Fillastre, Sebastiao Correia. 소스 코드·평가 데이터 공개. arXiv abs + arXiv html 2개 독립 출처 snippet-verified. → `02-프로덕션-아키텍처.md` GraphRAG 섹션에 추가
+- `sources.md`에 3개 출처 추가 (## 2026-07-28 일일 누적 추가 출처 섹션 신설)
+- `04-산업별-사례.md` 과학·연구 섹션에 "### 한국" 서브섹션 신설 후 ARI 추가
+- `03-에이전트-툴유즈-MCP.md` 신규 연구 섹션에 VecTree-RAG 추가
+- `02-프로덕션-아키텍처.md` GraphRAG 섹션에 Optimizing Hypergraph-Based RAG 추가
+- `00-요약-트렌드.md` 날짜·사례 수·출처 수 갱신 (166+→169+, 272+→275+)
+
+### 검증 결과 (루프 #42)
+| # | 사례 | URL 유효 | 요약-출처 일치 | 단언 완화 | ID/날짜 형식 | 중복 없음 |
+|---|------|-----------|----------------|-----------|-------------|-----------|
+| 1 | ARI (arXiv:2607.21936, 2026-07-24) | snippet-verified (arXiv abs + arXiv html + Scholar profile 3개 독립 출처) | ✓ (저자·날짜·기관·ARI 프레임워크·ACL 2026 Findings·한국 고문서 실험 확인) | ✓ | 2607.21936, 2026-07-24 | ✓ |
+| 2 | VecTree-RAG (arXiv:2607.23006, 2026-07-25) | snippet-verified (arXiv abs + arXiv html 2개 독립 출처) | ✓ (저자·날짜·기관·QASPER 0.800·LitQA2 0.925·MOSAIC 0.547 벤치마크 수치 확인) | ✓ | 2607.23006, 2026-07-25 | ✓ |
+| 3 | Optimizing Hypergraph RAG (arXiv:2607.20506, 2026-07) | snippet-verified (arXiv abs + arXiv html 2개 독립 출처) | ✓ (저자·EXT++·PPR 방법론·공개 코드 확인) | ✓ | 2607.20506, 2026-07 (일자 미확인) | ✓ |
+
+- URL 200 OK: 0/3건 (WebFetch 전체 403 차단)
+- snippet-verified: 3/3건
+- 단언 톤다운: 0건
+- 중복 폐기: 0건
+- 한국 사례: 1건 (ARI — 강원대학교, 한국 고문서 RAG, ACL 2026 Findings)
+- 발굴 시도 → 최종 채택: 약 12건 시도 → 3건 채택
+
 ## 2026-07-27 (일일 루프 #41)
 - **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
   1. **올거나이즈 × 한국증권금융 — 온프레미스 전사 AI 비서 플랫폼 (2026-07-15)** [한국 사례]: 금융공기업 한국증권금융의 '생성형 AI 활용 플랫폼 내부 구축' 수주. 전사 임직원 대상 AI 플랫폼 + 업무별 AI 비서. 올거나이즈 FDSE 방법론, 온프레미스(외부 전송 금지), DRM·SSO·개인정보 비식별화·내부망 연동. AI 기본법·금감원 RMF·금융보안원 AI 보안 안내서 반영. edaily + zdnet + venturesquare + newstheai + ezyeconomy + digitalchosun 6개 이상 독립 출처 snippet-verified. → `04-산업별-사례.md` 금융 > 한국 섹션에 추가

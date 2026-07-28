@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-07-28 일일 누적 추가 출처 (3건, 루프 #42)
+
+- [arXiv:2607.21936 — Leveraging External Knowledge for Historical Document Restoration via Retrieval-Augmented Large Language Models](https://arxiv.org/abs/2607.21936) — 2026-07-24 · [korea] [architecture] [humanities] [nlp] · Gabeen Kim, Kyeongpil Kang (강원대학교 Kangwon National University). 한국 역사 고문서 복원에 RAG 적용. ARI 프레임워크로 LLM 내재 지식 + 외부 검색 지식 결합. 일반 문자·고유명사 복원 모두 베이스라인 대비 유의미한 향상. ACL 2026 Findings 채택. (snippet-verified: arXiv abs + arXiv html + Google Scholar/ResearchGate profile(Kyeongpil Kang) 3개 독립 출처)
+- [arXiv:2607.23006 — VecTree-RAG: An Agentic Retrieval-Augmented Generation Framework Combining Vector and Tree Retrieval for Efficiency and Accuracy](https://arxiv.org/abs/2607.23006) — 2026-07-25 · [architecture] [agentic] [scientific-computing] · Xinyan Zhong, Yuwei Shi, Yuqi Wei, Chen Shen, Tianhang Zhou, Zhenghao Wu (XJTLU · Suzhou Lab · China Univ. of Petroleum). 과학 문헌 QA를 위한 벡터+트리 이중 검색 에이전틱 RAG. 코퍼스 수준 벡터 랭킹 + 섹션 트리 추론 순회. QASPER 0.800 · LitQA2 0.925 · MOSAIC 0.547. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+- [arXiv:2607.20506 — Optimizing Hypergraph-Based RAG: Toward Better Fact Extraction and Chunk Retrieval](https://arxiv.org/abs/2607.20506) — 2026-07 · [architecture] [graph] · Houda Khrouf, Pedro Fillastre, Sebastiao Correia. 하이퍼그래프 RAG의 추출(EXT++ 자기일관성 프롬프팅) + 검색(Personalized PageRank 구조적 연결성) 최적화. 소스 코드·평가 데이터 공개. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+
 ## 2026-07-27 일일 누적 추가 출처 (3건, 루프 #41)
 
 - [edaily — 올거나이즈, 한국증권금융 '생성형 AI 활용 플랫폼 구축' 수주](https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=03457126645514848) — 2026-07-15 · [korea] [industry:금융] [architecture] [privacy] · 올거나이즈(Allganize). 한국증권금융 전사 임직원 대상 생성형 AI 플랫폼 + 업무별 AI 비서. FDSE 방법론. 온프레미스(외부 전송 금지). DRM·SSO·개인정보 비식별화·내부망 연동. AI 기본법·금감원 RMF·금융보안원 AI 보안 안내서 반영. (snippet-verified: edaily + zdnet + venturesquare + newstheai + ezyeconomy + digitalchosun 6개 이상 독립 출처)
