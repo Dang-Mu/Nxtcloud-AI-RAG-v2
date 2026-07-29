@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-07-29 일일 누적 추가 출처 (3건, 루프 #43)
+
+- [arXiv:2607.24165 — Do Current Retrievers Cover All the Evidence? A Controlled Study of Conjunctive Cross-Page Retrieval](https://arxiv.org/abs/2607.24165) — 2026-07 · [korea] [evaluation] [retrieval] · Sungguk Cha, DongWook Kim, Mintae Kim, Youngsub Han, Byoung-Ki Jeon, Sangyeob Lee (LG Uplus, 한국). 현행 RAG 검색기의 접합적 교차 페이지 커버리지 통제 실험. 단일 페이지 vs 다중 페이지 증거 요구 조건 분리. "관련성" 외 "접합적 커버리지"를 독립 평가 차원으로 제안. (snippet-verified: arXiv + ZoomInfo Sungguk Cha @ LG Uplus + sciprofiles 3개 독립 출처)
+- [Anthropic — Bringing MCP 2026-07-28 to Claude](https://claude.com/blog/bringing-mcp-2026-07-28-to-claude) — 2026-07-28 · [architecture] [agentic] [mcp] [enterprise] · Anthropic. MCP 신규 스펙: Stateless Core(서버리스·엣지 배포), OAuth 2.0/OIDC(Entra·Okta 통합), Versioned Extensions(Apps·Tasks). MCP SDK 월 4억 다운로드(전년 4× 성장). 엔터프라이즈 RAG 사내 지식 베이스의 MCP tool 노출 패턴 표준화. (snippet-verified: Anthropic 공식 블로그 + ClaudeDevs X 공식 계정 + explainx.ai + stacktr.ee + bovo-digital.tech + vindler.solutions 6개 독립 출처)
+- [arXiv:2607.18796 — TSGR: Taobao Search Generative Retrieval](https://arxiv.org/abs/2607.18796) — 2026-07-21 · [industry:커머스] [architecture] [generative-retrieval] · Tianyu Zhan, Gui Ling, Tong Xiong 등 (Alibaba/Taobao 검색팀). VRM(Value-aware Ranking Module)으로 비즈니스 가치를 SID 구성+랭킹 단계 양쪽에 내장. 단일 모델이 검색기+사전 랭커 동시 수행. 오프라인 +9.16% HR@1000; 온라인 +0.43% IPV, +1.12% TC, +1.64% GMV 프로덕션 A/B 결과. (snippet-verified: arXiv abs + arXiv html + X/@_reachsumit + Springer link 4개 독립 출처)
+
 ## 2026-07-28 일일 누적 추가 출처 (3건, 루프 #42)
 
 - [arXiv:2607.21936 — Leveraging External Knowledge for Historical Document Restoration via Retrieval-Augmented Large Language Models](https://arxiv.org/abs/2607.21936) — 2026-07-24 · [korea] [architecture] [humanities] [nlp] · Gabeen Kim, Kyeongpil Kang (강원대학교 Kangwon National University). 한국 역사 고문서 복원에 RAG 적용. ARI 프레임워크로 LLM 내재 지식 + 외부 검색 지식 결합. 일반 문자·고유명사 복원 모두 베이스라인 대비 유의미한 향상. ACL 2026 Findings 채택. (snippet-verified: arXiv abs + arXiv html + Google Scholar/ResearchGate profile(Kyeongpil Kang) 3개 독립 출처)
