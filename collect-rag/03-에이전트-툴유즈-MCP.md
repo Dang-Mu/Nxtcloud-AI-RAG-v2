@@ -81,6 +81,17 @@ MCP의 RAG 관련 의미는 두 가지다.
 - **결과: 응답 만족도 2배, 응답 속도 1.4배, 토큰 사용 66% 감소, 툴 호출 49% 감소.**
 - 핵심 메시지: "질의 해석부터 최종 답변까지 검색 프로세스 전반을 스스로 판단하고 제어하는 Agentic RAG 구조."
 
+**(4) MCP 2026-07-28 신규 스펙 — Stateless Core·OAuth 2.0/OIDC·Versioned Extensions**
+
+- **발표**: Anthropic 공식 블로그 (2026-07-28). Claude 제품군 및 MCP SDK 전반에 적용.
+- **핵심 변경사항**:
+  1. **Stateless Core**: 기존 양방향 상태 유지(bidirectional stateful) 연결에서 **요청-응답(request/response) 무상태 코어**로 전환. 서버리스·엣지 환경에 MCP 서버를 배포할 수 있어 진입 장벽이 크게 낮아짐.
+  2. **OAuth 2.0 + OIDC 엔터프라이즈 인증**: Microsoft Entra, Okta 등 기업 ID 제공자와 직접 통합. 엔터프라이즈 배포 시 별도 인증 레이어 없이 기존 SSO 인프라 활용 가능.
+  3. **버전화된 확장 프레임워크 (Versioned Extensions)**: Apps 확장(UI·권한 제어)과 Tasks 확장(비동기 장기 작업)을 명시적 버전으로 관리. 하위 호환성 보장.
+- **규모**: MCP SDK 월간 다운로드 **4억 회** (전년 대비 4× 성장), 2026-07-28 현재.
+- **RAG 관련 의미**: Stateless 전환으로 서버리스 RAG 검색 서버(Lambda, Cloudflare Workers 등)가 MCP 서버로 직접 노출 가능. OAuth/OIDC 통합으로 사내 지식 베이스를 기업 권한 모델 그대로 MCP tool로 안전하게 노출하는 엔터프라이즈 RAG 패턴이 표준화.
+- **출처**: [Anthropic — Bringing MCP 2026-07-28 to Claude](https://claude.com/blog/bringing-mcp-2026-07-28-to-claude) (snippet-verified: Anthropic 공식 블로그 + ClaudeDevs X 공식 계정 + explainx.ai + stacktr.ee + bovo-digital.tech + vindler.solutions 6개 독립 출처)
+
 ## 멀티에이전트 + 검색
 
 multi-agent + retrieval은 2025년에 가장 hype도 높고 동시에 가장 회의론도 강한 영역이다. 주요 프레임워크:

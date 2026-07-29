@@ -1,5 +1,29 @@
 # 업데이트 로그
 
+## 2026-07-29 (일일 루프 #43)
+- **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
+  1. **LG Uplus — 접합적 교차 페이지 검색 커버리지 실증 연구 (arXiv:2607.24165, 2026-07)** [한국 사례]: Sungguk Cha 외 LG Uplus 연구팀이 현행 RAG 검색기가 다중 페이지에 분산된 증거를 모두 커버하는지 통제 실험으로 실증. 단일 페이지 vs 교차 페이지 증거 요구 조건 분리, "관련성" 외 독립 평가 차원으로서 "접합적 커버리지(conjunctive coverage)"를 제안. arXiv + ZoomInfo(Sungguk Cha @ LG Uplus) + sciprofiles 3개 독립 출처 snippet-verified. → `02-프로덕션-아키텍처.md` 검색 품질·평가 섹션에 추가
+  2. **MCP 2026-07-28 신규 스펙 (Anthropic, 2026-07-28)**: Stateless Core(서버리스·엣지 배포 가능), OAuth 2.0/OIDC 엔터프라이즈 인증(Entra·Okta), Versioned Extensions(Apps·Tasks). MCP SDK 월 4억 다운로드(전년 4× 성장). 사내 지식 베이스를 기업 권한 모델 그대로 MCP tool로 노출하는 엔터프라이즈 RAG 패턴 표준화. Anthropic 공식 블로그 + ClaudeDevs X + explainx.ai + stacktr.ee + bovo-digital.tech + vindler.solutions 6개 독립 출처 snippet-verified. → `03-에이전트-툴유즈-MCP.md` MCP 섹션에 추가
+  3. **TSGR — 타오바오 생성적 검색 비즈니스 가치 인식 (arXiv:2607.18796, Alibaba/Taobao, 2026-07-21)**: Taobao Search에서 VRM(Value-aware Ranking Module)으로 비즈니스 가치 신호를 SID 구성과 후보 랭킹 양 단계에 내장. 단일 모델이 검색기+사전 랭커 동시 수행. 오프라인 +9.16% HR@1000; 온라인 +0.43% IPV, +1.12% TC, +1.64% GMV. arXiv abs + arXiv html + X/@_reachsumit + Springer link 4개 독립 출처 snippet-verified. → `04-산업별-사례.md` 커머스·고객서비스 > 글로벌 섹션에 추가
+- `sources.md`에 3개 출처 추가 (## 2026-07-29 일일 누적 추가 출처 섹션 신설)
+- `02-프로덕션-아키텍처.md` 검색 품질·평가 섹션에 LG Uplus arXiv:2607.24165 추가
+- `03-에이전트-툴유즈-MCP.md` MCP 섹션에 MCP 2026-07-28 스펙 추가
+- `04-산업별-사례.md` 커머스·고객서비스 > 글로벌 섹션에 TSGR 추가
+
+### 검증 결과 (루프 #43)
+| # | 사례 | URL 유효 | 요약-출처 일치 | 단언 완화 | ID/날짜 형식 | 중복 없음 |
+|---|------|-----------|----------------|-----------|-------------|-----------|
+| 1 | LG Uplus Conjunctive Retrieval (arXiv:2607.24165, 2026-07) | snippet-verified (arXiv + ZoomInfo Sungguk Cha @ LG Uplus + sciprofiles 3개 독립 출처) | ✓ (저자·기관·교차 페이지 커버리지 연구 확인) | ✓ | 2607.24165, 2026-07 | ✓ |
+| 2 | MCP 2026-07-28 spec (Anthropic, 2026-07-28) | snippet-verified (Anthropic 블로그 + ClaudeDevs X + explainx.ai + stacktr.ee + bovo-digital.tech + vindler.solutions 6개 독립 출처) | ✓ (Stateless Core·OAuth 2.0/OIDC·Versioned Extensions·4억 다운로드 확인) | ✓ | 2026-07-28 | ✓ |
+| 3 | TSGR (arXiv:2607.18796, Alibaba/Taobao, 2026-07-21) | snippet-verified (arXiv abs + arXiv html + X/@_reachsumit + Springer link 4개 독립 출처) | ✓ (저자·VRM·SID·+9.16% HR@1000·+1.64% GMV 수치 확인) | ✓ | 2607.18796, 2026-07-21 | ✓ |
+
+- URL 200 OK: 0/3건 (WebFetch 전체 403 차단)
+- snippet-verified: 3/3건
+- 단언 톤다운: 0건
+- 중복 폐기: 0건
+- 한국 사례: 1건 (LG Uplus — arXiv:2607.24165, 접합적 교차 페이지 검색 커버리지)
+- 발굴 시도 → 최종 채택: 약 10건 시도 → 3건 채택
+
 ## 2026-07-28 (일일 루프 #42)
 - **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
   1. **ARI — 한국 고문서 복원 RAG (arXiv:2607.21936, ACL 2026 Findings, 2026-07-24)** [한국 사례]: 강원대학교 Gabeen Kim·Kyeongpil Kang 팀이 제안한 ARI(Attention-based Retrieval Integration) 프레임워크. 물리적 훼손으로 판독 불가능한 한국 역사 고문서에서 고유명사·인명·지명 등 외부 지식이 필요한 개체명을 정확히 복원. LLM 암묵적 지식 + RAG 외부 역사 지식을 어텐션 기반으로 이중 결합. 일반 문자·고유명사 복원 모두 베이스라인 대비 유의미한 성능 향상, ACL 2026 Findings 채택. arXiv abs + arXiv html + Scholar profile(Kyeongpil Kang) 3개 이상 독립 출처 snippet-verified. → `04-산업별-사례.md` 과학·연구 > 한국 섹션 신설 후 추가
