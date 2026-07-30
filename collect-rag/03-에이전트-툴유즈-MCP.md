@@ -486,6 +486,22 @@ Google Research와 Google Cloud가 2026년 6월 5일 발표. Gemini Enterprise A
 - **저자**: Xinyan Zhong, Yuwei Shi, Yuqi Wei, Chen Shen, Tianhang Zhou, Zhenghao Wu (Xi'an Jiaotong-Liverpool University [XJTLU] · Suzhou Lab · China University of Petroleum)
 - **출처**: [arXiv:2607.23006 — VecTree-RAG: An Agentic Retrieval-Augmented Generation Framework Combining Vector and Tree Retrieval for Efficiency and Accuracy](https://arxiv.org/abs/2607.23006) (2026-07-25, snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
 
+### CMT-RAG — 멀티턴 멀티홉 RAG의 상호보완적 메모리 추적 (arXiv:2607.26470, 2026-07-29)
+
+멀티턴 대화에서 **멀티홉 추론**과 **장거리 의존성 추적**이 동시에 필요한 시나리오에서, 기존 RAG가 원시 대화 이력(raw dialogue history)에 의존해 교차-턴 서브 질문 의존성을 처리하지 못하는 한계를 해결하는 프레임워크.
+
+**핵심 아이디어**: 대화 컨텍스트를 원시 이력 대신 **서브 질문 수준의 추론 추적(sub-question-level reasoning traces)**으로 표현하는 "상호보완적 메모리 추적(Complementary Memory Traces, CMT)"을 도입.
+
+**핵심 기여**:
+1. **CMT**: 각 대화 턴의 멀티홉 추론 과정을 서브 질문 단위로 분해·추적하여 컨텍스트로 활용. 원시 대화 이력이 아닌 구조화된 추론 경로를 메모리로 유지.
+2. **MuMu-QA 벤치마크**: 교차-턴 서브 질문 의존성 주석(explicit cross-turn sub-question dependency annotations)을 포함한 신규 멀티턴 멀티홉 QA 벤치마크. 기존 멀티턴 QA 벤치마크의 교차-턴 의존성 평가 공백을 메움.
+
+**저자**: Lang Zhou, Yingjian Chen, Shuxuan Li, Kun-Yu Lin, Zhilin Zhao
+
+**의의**: 멀티턴 대화 RAG에서 "대화 이력을 어떻게 표현·압축할 것인가"가 핵심 병목임을 정면으로 다루는 연구. 교차-턴 서브 질문 의존성을 명시적으로 모델링하는 방향은 장기 대화 RAG 에이전트의 컨텍스트 관리 설계에 직접 영향을 준다.
+
+- **출처**: [arXiv:2607.26470 — CMT-RAG: Complementary Memory Traces for Multi-turn Multi-hop RAG](https://arxiv.org/abs/2607.26470) (2026-07-29, snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+
 ---
 
 ## 이 도메인의 공통 패턴
