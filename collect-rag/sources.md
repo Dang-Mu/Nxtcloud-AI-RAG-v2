@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-07-30 일일 누적 추가 출처 (3건, 루프 #44)
+
+- [아이피데일리 — 특허청, 예산 없이 AI 에이전트 3종 자체 구축](https://www.ipdaily.co.kr/news/articleView.html?idxno=49591) — 2026-07-25 · [korea] [industry:공공] [agentic] [architecture] · 특허청 IP-AX 추진단. 별도 예산·전문 개발 인력 없이 3종 AI 에이전트 자체 구축: 지식위키(정책 회의 문서 → LLM Wiki + RAG 검색), AI 보관소(해외 IP기관 보도자료 자동 수집·분류·분석), AI 에이전트(입법예고·발의법안 모니터링+담당부서 선정+법안검토). (snippet-verified: 아이피데일리 + 헤럴드경제 + 골든타임즈 + GNN뉴스 + 한국경찰뉴스 5개 독립 출처)
+- [arXiv:2607.26497 — Which RAG Paradigm Wins at Scale?](https://arxiv.org/abs/2607.26497) — 2026-07-29 · [evaluation] [architecture] [benchmark] · Pengyu Wang, Benfeng Xu, Shaohan Wang, Xin Zeng, Huarui Wu, Lei Zhang, Licheng Zhang. EnterpriseRAG-Bench(511,959 문서, 500 질문, 28 중첩 티어)로 RAG 패러다임 스케일 의존성 분석. BM25가 모든 티어에서 저비용 Pareto 프런티어 하단 정의 + 중규모 이상 정확도 선도. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+- [arXiv:2607.26470 — CMT-RAG: Complementary Memory Traces for Multi-turn Multi-hop RAG](https://arxiv.org/abs/2607.26470) — 2026-07-29 · [agentic] [architecture] [multi-turn] · Lang Zhou, Yingjian Chen, Shuxuan Li, Kun-Yu Lin, Zhilin Zhao. 멀티턴 대화 RAG에서 원시 대화 이력 대신 서브 질문 수준 추론 추적(CMT)으로 대화 컨텍스트 표현. MuMu-QA 벤치마크(교차-턴 서브 질문 의존성 주석 포함) 신규 구축. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+
 ## 2026-07-29 일일 누적 추가 출처 (3건, 루프 #43)
 
 - [arXiv:2607.24165 — Do Current Retrievers Cover All the Evidence? A Controlled Study of Conjunctive Cross-Page Retrieval](https://arxiv.org/abs/2607.24165) — 2026-07 · [korea] [evaluation] [retrieval] · Sungguk Cha, DongWook Kim, Mintae Kim, Youngsub Han, Byoung-Ki Jeon, Sangyeob Lee (LG Uplus, 한국). 현행 RAG 검색기의 접합적 교차 페이지 커버리지 통제 실험. 단일 페이지 vs 다중 페이지 증거 요구 조건 분리. "관련성" 외 "접합적 커버리지"를 독립 평가 차원으로 제안. (snippet-verified: arXiv + ZoomInfo Sungguk Cha @ LG Uplus + sciprofiles 3개 독립 출처)
