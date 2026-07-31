@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-07-31 일일 누적 추가 출처 (3건, 루프 #45)
+
+- [ZDNet Korea — 지미션, 도면 특화 '에이전틱 RAG 플랫폼' 개발 나선다](https://zdnet.co.kr/view/?no=20260731151945) — 2026-07-31 · [korea] [industry:제조] [agentic] [architecture] · 지미션(JIMISSION) × NC AI. NC AI 파운데이션 모델 기반 제조·산업 현장 도면 특화 에이전틱 RAG 플랫폼 R&D 착수. 과기정통부 '모두의 챌린지 AX-LLM 협업과제' 수행기관 선정(2026-07-18 협약). 설계도면·기술 문서 이해·검색·분석 특화. (snippet-verified: ZDNet Korea + BetaNews NC AI 에이전틱 AI 국책사업 선정 2개 독립 출처)
+- [arXiv:2607.27353 — LayerRAG-Bench: A Cross-Layer Reliability Benchmark for Agentic Retrieval-Augmented Generation](https://arxiv.org/abs/2607.27353) — 2026-07-29 · [agentic] [evaluation] [benchmark] [security] · Musa Shams (Independent Researcher; EY). 에이전틱 RAG의 4개 계층(증거·도구계약·권한·세션상태) 교차 신뢰성 벤치마크. 8개 엔터프라이즈 도메인·240 태스크·9개 장애 시나리오·38,880 레코드·9개 모델. 스키마 정규화는 schema-drift 해소(0.000→0.913)에만 효과적; stale 증거·권한 거부·wrong-session은 미해결. Groundedness-only 평가가 상당한 위양성 생성 실증. (snippet-verified: arXiv abs + arXiv html + LinkedIn Musa Shams 3개 독립 출처)
+- [arXiv:2607.28397 — GLM-RAG: Graph Language Models for Graph-Based Retrieval-Augmented Generation](https://arxiv.org/abs/2607.28397) — 2026-07-30 · [architecture] [graph] [knowledge-graph] · Maya Arseven, Anette Frank, Beni Egressy, Johann Higl, Moritz Plenz (Heidelberg Univ. + Aleph Alpha Research). KG 기반 RAG 검색기로 GLM·GNN·벡터 검색 체계적 비교. 파인튜닝된 GLM이 두 멀티홉 벤치마크 SOTA, 도메인 외 일반화에서 우위. 파라미터·서브그래프 커버리지 스케일링 효과 확인. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+
 ## 2026-07-30 일일 누적 추가 출처 (3건, 루프 #44)
 
 - [아이피데일리 — 특허청, 예산 없이 AI 에이전트 3종 자체 구축](https://www.ipdaily.co.kr/news/articleView.html?idxno=49591) — 2026-07-25 · [korea] [industry:공공] [agentic] [architecture] · 특허청 IP-AX 추진단. 별도 예산·전문 개발 인력 없이 3종 AI 에이전트 자체 구축: 지식위키(정책 회의 문서 → LLM Wiki + RAG 검색), AI 보관소(해외 IP기관 보도자료 자동 수집·분류·분석), AI 에이전트(입법예고·발의법안 모니터링+담당부서 선정+법안검토). (snippet-verified: 아이피데일리 + 헤럴드경제 + 골든타임즈 + GNN뉴스 + 한국경찰뉴스 5개 독립 출처)

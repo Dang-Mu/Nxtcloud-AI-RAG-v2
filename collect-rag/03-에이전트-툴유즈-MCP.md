@@ -502,6 +502,29 @@ Google Research와 Google Cloud가 2026년 6월 5일 발표. Gemini Enterprise A
 
 - **출처**: [arXiv:2607.26470 — CMT-RAG: Complementary Memory Traces for Multi-turn Multi-hop RAG](https://arxiv.org/abs/2607.26470) (2026-07-29, snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
 
+### LayerRAG-Bench — 에이전틱 RAG 계층별 신뢰성 벤치마크 (arXiv:2607.27353, 2026-07-29)
+
+에이전틱 RAG 시스템이 **증거 계층(evidence layer)·도구 계약 계층(tool-contract layer)·권한 계층(authorization layer)·세션 상태 계층(session-state layer)** 각각에서 별도로 실패할 수 있음을 체계적으로 정의하고, 계층 교차 신뢰성 벤치마크로 실증한 논문.
+
+**핵심 문제의식**: 에이전틱 RAG가 표면적으로는 근거(grounded) 답변처럼 보이면서도 아래 계층에서 조용히 실패하는 "은폐된 실패 모드"를 기존 평가 방법이 탐지하지 못한다. 특히 groundedness-only 평가(출력에 인용이 있는가)는 stale 증거나 wrong-session 컨텍스트 조건에서 **상당한 위양성(false positive)**을 생성한다.
+
+**벤치마크 설계**:
+- 8개 엔터프라이즈 도메인, 240개 태스크, **9개 장애 시나리오(fault scenarios)**
+- 2가지 계약 모드(contract modes)
+- **38,880개의 실시간 태스크 레벨 레코드**
+- OpenAI·Anthropic·Gemini 9개 모델 평가
+
+**핵심 발견**:
+1. **스키마 정규화(schema normalization)**: schema-drift 성공률 0.000 → **0.913**으로 극적 개선. 그러나 이 수정은 오직 schema-drift 장애에만 효과적.
+2. **스키마 정규화로 회복 불가능한 장애**: stale 증거, 도구 출력 누락(missing tool output), 권한 거부(denied permissions), wrong-session 컨텍스트 — 이 4가지는 스키마 수정으로 해결되지 않음.
+3. **계층별 평가 원칙**: 신뢰성 개입(reliability intervention)은 자신이 수리하는 목표 계층에 대해서만 공로를 인정받아야 하며, 범용 수정처럼 취급해서는 안 된다.
+
+**저자**: Musa Shams (Independent Researcher; LinkedIn: EY Data Engineer, Applied AI/RAG 전문가)
+
+**의의**: 에이전틱 RAG에서 "그라운딩(grounding)이 있으면 신뢰할 수 있다"는 단순 가정이 시스템 수준에서 틀릴 수 있음을 8개 도메인·38,880 레코드 규모로 실증. 엔터프라이즈 에이전틱 RAG 배포 시 **계층별 독립 평가**를 신뢰성 검증의 표준 단계로 편입해야 한다는 실무 원칙을 1차 자료로 뒷받침. 코드·데이터: GitHub [MusaShams/layerrag-bench](https://github.com/MusaShams/layerrag-bench).
+
+- **출처**: [arXiv:2607.27353 — LayerRAG-Bench: A Cross-Layer Reliability Benchmark for Agentic Retrieval-Augmented Generation](https://arxiv.org/abs/2607.27353) (2026-07-29, snippet-verified: arXiv abs + arXiv html + LinkedIn Musa Shams(EY) 3개 독립 출처)
+
 ---
 
 ## 이 도메인의 공통 패턴
