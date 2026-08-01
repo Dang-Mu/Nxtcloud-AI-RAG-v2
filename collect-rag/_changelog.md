@@ -1,5 +1,28 @@
 # 업데이트 로그
 
+## 2026-08-01 (일일 루프 #46)
+- **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
+  1. **금융보안원 × 한양대 — 계층적 리랭킹 기반 확장형 금융 RAG (arXiv:2607.27523, 2026-07-29)** [한국 사례]: 금융보안원(Joohyun Lee)·한양대(Sungwoo Hong) 공동 연구. 3대 혁신(Pre-Retrieval Optimization + Hierarchical Reranker Architecture + Long-Context Management)을 결합한 금융 특화 RAG 파이프라인. NDCG@20=0.7918(FinQA·FinanceBench·ConvFinQA 종합), ACM-ICAIF '24 FinanceRAG Challenge 2위. FinLLM @ IJCAI-ECAI 2026 채택. arXiv abs + arXiv html + 독립 검색 스니펫 3개 이상 snippet-verified. → `04-산업별-사례.md` 금융 > 한국 섹션에 추가
+  2. **예산-인식 능동 검색 평가 프레임워크 (arXiv:2607.24010, KDD 2026)**: 능동 RAG의 운영 지점 미지정 문제를 해소하기 위해 능동 검색을 효용 추정(marginal correctness change) 문제로 재정의. Pin Qian 외 7명, KDD 2026 Workshop on Evaluation and Trustworthiness of Agentic AI. arXiv abs + arXiv pdf + arXiv html 3개 독립 출처 snippet-verified. → `02-프로덕션-아키텍처.md` 검색·리랭킹 섹션에 추가
+  3. **JKO-RAG: Wasserstein-2 자유에너지 경사 흐름 기반 분산 검색 리랭킹 (arXiv:2607.24776)**: 리랭킹을 자유에너지 F(p)=관련성+엔트로피+중복성 최소화로 재정의. JKO 근위 도식으로 Wasserstein-2 경사 흐름을 통해 최적 문서 분포 계산. 기저 계량 C_ij=(1−cos⟨z_i,z_j⟩)²이 시맨틱 기하 인코딩. 선형 응답 이론으로 Wasserstein vs KL 차이 해석. Levi Segal, Murari Ambati. arXiv abs + arXiv pdf + ResearchGate 3개 독립 출처 snippet-verified. → `02-프로덕션-아키텍처.md` 검색·리랭킹 섹션에 추가
+- `sources.md`에 3개 출처 추가 (## 2026-08-01 일일 누적 추가 출처 섹션 신설)
+- `04-산업별-사례.md` 금융 > 한국 섹션에 금융보안원 × 한양대 계층적 리랭킹 추가
+- `02-프로덕션-아키텍처.md` 검색·리랭킹 섹션에 예산-인식 능동 검색 평가 + JKO-RAG 추가
+- `00-요약-트렌드.md` 날짜·사례 수·출처 수 갱신 (178+→181+, 284+→287+)
+
+### 검증 결과 (루프 #46)
+| # | 사례 | URL 유효 | 요약-출처 일치 | 단언 완화 | ID/날짜 형식 | 중복 없음 |
+|---|------|-----------|----------------|-----------|-------------|-----------|
+| 1 | 금융보안원 × 한양대 계층적 리랭킹 금융 RAG (arXiv:2607.27523, 2026-07-29) | snippet-verified (arXiv abs + arXiv html + 독립 검색 스니펫 3개 이상 출처) | ✓ (금융보안원·한양대 저자·NDCG@20=0.7918·FinanceRAG Challenge 2위·FinLLM@IJCAI-ECAI 2026 확인) | ✓ | 2607.27523, 2026-07-29 | ✓ |
+| 2 | 예산-인식 능동 검색 평가 (arXiv:2607.24010, KDD 2026) | snippet-verified (arXiv abs + arXiv pdf + arXiv html 3개 독립 출처) | ✓ (8명 저자·KDD 2026 Workshop·marginal correctness change 효용 정의 확인) | ✓ | 2607.24010 | ✓ |
+| 3 | JKO-RAG (arXiv:2607.24776) | snippet-verified (arXiv abs + arXiv pdf + ResearchGate 3개 독립 출처) | ✓ (JKO proximal scheme·Wasserstein-2·F(p)=관련성+엔트로피+중복성·Levi Segal 확인) | ✓ | 2607.24776 | ✓ |
+
+- URL 200 OK: 0/3건 (WebFetch 전체 403 차단)
+- snippet-verified: 3/3건
+- 단언 톤다운: 0건
+- 중복 폐기: 0건
+- 한국 사례: 1건 (금융보안원 × 한양대 — 계층적 리랭킹 기반 확장형 금융 RAG, arXiv:2607.27523, 2026-07-29)
+
 ## 2026-07-31 (일일 루프 #45)
 - **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
   1. **지미션(JIMISSION) × NC AI — 도면 특화 에이전틱 RAG 플랫폼 개발 착수 (2026-07-31)** [한국 사례]: 지미션이 과기정통부 '모두의 챌린지 AX-LLM 협업과제' 수행기관으로 선정되어 NC AI 파운데이션 모델 기반 도면 특화 에이전틱 RAG 플랫폼 R&D에 착수. 제조·산업 현장의 설계도면·기술 문서를 AI가 직접 이해·검색·분석하는 산업 특화 에이전틱 RAG. ZDNet Korea + BetaNews 2개 독립 출처 snippet-verified. → `04-산업별-사례.md` 제조·자동차 > 한국 섹션에 추가
