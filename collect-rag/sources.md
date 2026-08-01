@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-08-01 일일 누적 추가 출처 (3건, 루프 #46)
+
+- [arXiv:2607.27523 — Hierarchical Reranking for Scalable Financial RAG](https://arxiv.org/abs/2607.27523) — 2026-07-29 · [korea] [industry:금융] [retrieval] [reranking] · Joohyun Lee (금융보안원 Financial Security Institute), Sungwoo Hong (한양대 Hanyang University). 계층적 리랭킹 기반 확장형 금융 RAG. Pre-Retrieval Optimization + Hierarchical Reranker Architecture + Long-Context Management 3대 혁신. NDCG@20=0.7918(FinQA·FinanceBench·ConvFinQA), ACM-ICAIF '24 FinanceRAG Challenge 2위. FinLLM @ IJCAI-ECAI 2026 채택. (snippet-verified: arXiv abs + arXiv html + 독립 검색 스니펫 3개 이상 출처)
+- [arXiv:2607.24010 — Budget-Aware Evaluation of Active Retrieval in RAG](https://arxiv.org/abs/2607.24010) — 2026-07 · [evaluation] [retrieval] [active-rag] · Pin Qian, Su Wang, Chong Peng, Junxian You, Lifei Liu, Haoran Yu, Yihang Chen, Xiaochong Jiang (8명). 능동 RAG 평가의 운영 지점 미지정 문제를 효용 추정(marginal correctness change over 비검색 베이스라인)으로 재정의. 예산 제약 하 검색 결정을 비교 가능한 단위로 측정. KDD 2026 Workshop on Evaluation and Trustworthiness of Agentic AI. (snippet-verified: arXiv abs + arXiv pdf + arXiv html 3개 독립 출처)
+- [arXiv:2607.24776 — JKO-RAG: Distributional Retrieval as Wasserstein Free-Energy Gradient Flow](https://arxiv.org/abs/2607.24776) — 2026-07 · [architecture] [retrieval] [reranking] [optimal-transport] · Levi Segal, Murari Ambati. 리랭킹을 자유에너지 F(p)=관련성+엔트로피+중복성 최소화로 재정의. JKO(Jordan–Kinderlehrer–Otto) 근위 도식으로 Wasserstein-2 경사 흐름을 통해 최적 문서 분포 계산. 기저 계량 C_ij=(1−cos⟨z_i,z_j⟩)²이 시맨틱 기하 인코딩. 선형 응답 이론으로 Wasserstein vs KL 차이 해석. cs.IR + cs.LG. (snippet-verified: arXiv abs + arXiv pdf + ResearchGate 3개 독립 출처)
+
 ## 2026-07-31 일일 누적 추가 출처 (3건, 루프 #45)
 
 - [ZDNet Korea — 지미션, 도면 특화 '에이전틱 RAG 플랫폼' 개발 나선다](https://zdnet.co.kr/view/?no=20260731151945) — 2026-07-31 · [korea] [industry:제조] [agentic] [architecture] · 지미션(JIMISSION) × NC AI. NC AI 파운데이션 모델 기반 제조·산업 현장 도면 특화 에이전틱 RAG 플랫폼 R&D 착수. 과기정통부 '모두의 챌린지 AX-LLM 협업과제' 수행기관 선정(2026-07-18 협약). 설계도면·기술 문서 이해·검색·분석 특화. (snippet-verified: ZDNet Korea + BetaNews NC AI 에이전틱 AI 국책사업 선정 2개 독립 출처)
