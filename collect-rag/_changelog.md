@@ -1,5 +1,29 @@
 # 업데이트 로그
 
+## 2026-08-02 (일일 루프 #47)
+- **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
+  1. **우리은행 × 삼성SDS — AI 에이전트 뱅킹 구축 (2026-04-07)** [한국 사례]: 삼성SDS 패브릭스(FabriX) 플랫폼 기반 175개 AI 에이전트 구축. 5대 영역(기업여신·자산관리·내부통제·고객상담·업무자동화). RAG 기반 답변체계 + 가드레일 + 베테랑 직원 노하우 비정형 데이터 자산화. 2027년 8월 완료, 업무 처리 속도 ~30% 향상 전망. "국내 금융권 최초 대규모 AI 에이전트 적용". samsungsds.com + ZDNet Korea + 전자신문 + 파이낸셜뉴스 + 데이터넷 + 매일일보 + 디일렉 7개 독립 출처 snippet-verified. → `04-산업별-사례.md` 금융 > 한국 섹션에 추가
+  2. **MTGuard: MCP 도구 보안 하이브리드 분석 (arXiv:2607.25297, 2026-07-28)**: MCP 기반 LLM 에이전트 도구 사용의 안전 위협 완화를 위한 라이프사이클 인식 정적-동적 공동 분석(static-dynamic co-analysis). 다양한 유해 도구 사용 카테고리 완화·양성 성능 유지. Ping He, Yuexiang Xie, Yaliang Li, Shouling Ji. arXiv abs 2607.25297v1 + arXiv html 2607.25297v1 2개 독립 출처 snippet-verified. → `03-에이전트-툴유즈-MCP.md` 2026년 주목할 신규 연구 섹션에 추가
+  3. **GASP: RAG 환각 그라운딩 민감도 탐지 (arXiv:2607.04223, 2026-07-05)**: 지지 구절 제거 시 로그-우도 하락 + Jensen-Shannon Divergence로 스팬 레벨 환각 탐지. RAGTruth response-level AUC ~0.73·span-level AUC ~0.67. TofuEval 전이 가능. arXiv abs + arXiv html + arXiv pdf 3개 독립 출처 snippet-verified. → `02-프로덕션-아키텍처.md` 환각 탐지 섹션에 추가
+- `sources.md`에 3개 출처 추가 (## 2026-08-02 일일 누적 추가 출처 섹션 신설)
+- `04-산업별-사례.md` 금융 > 한국 섹션에 우리은행 × 삼성SDS AI 에이전트 뱅킹 추가
+- `03-에이전트-툴유즈-MCP.md` 2026년 신규 연구 섹션에 MTGuard 추가
+- `02-프로덕션-아키텍처.md` 환각 탐지 섹션에 GASP 추가
+- `00-요약-트렌드.md` 날짜·사례 수·출처 수 갱신 (181+→184+, 287+→290+)
+
+### 검증 결과 (루프 #47)
+| # | 사례 | URL 유효 | 요약-출처 일치 | 단언 완화 | ID/날짜 형식 | 중복 없음 |
+|---|------|-----------|----------------|-----------|-------------|-----------|
+| 1 | 우리은행 × 삼성SDS AI 에이전트 뱅킹 (2026-04-07) | snippet-verified (samsungsds.com + ZDNet Korea + 전자신문 + 파이낸셜뉴스 + 데이터넷 + 매일일보 + 디일렉 7개 독립 출처) | ✓ (175개 에이전트·5대 영역·FabriX 플랫폼·~30% 향상 전망 확인) | ✓ | 2026-04-07 | ✓ |
+| 2 | MTGuard (arXiv:2607.25297, 2026-07-28) | snippet-verified (arXiv abs 2607.25297v1 + arXiv html 2607.25297v1 2개 독립 출처) | ✓ (Ping He·Yuexiang Xie·lifecycle-aware static-dynamic co-analysis 확인) | ✓ | 2607.25297, 2026-07-28 | ✓ |
+| 3 | GASP (arXiv:2607.04223, 2026-07-05) | snippet-verified (arXiv abs + arXiv html + arXiv pdf 3개 독립 출처) | ✓ (log-likelihood·JSD·RAGTruth AUC ~0.73 확인) | ✓ | 2607.04223, 2026-07-05 | ✓ |
+
+- URL 200 OK: 0/3건 (WebFetch 전체 403 차단)
+- snippet-verified: 3/3건
+- 단언 톤다운: 0건
+- 중복 폐기: 0건
+- 한국 사례: 1건 (우리은행 × 삼성SDS AI 에이전트 뱅킹, 2026-04-07)
+
 ## 2026-08-01 (일일 루프 #46)
 - **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
   1. **금융보안원 × 한양대 — 계층적 리랭킹 기반 확장형 금융 RAG (arXiv:2607.27523, 2026-07-29)** [한국 사례]: 금융보안원(Joohyun Lee)·한양대(Sungwoo Hong) 공동 연구. 3대 혁신(Pre-Retrieval Optimization + Hierarchical Reranker Architecture + Long-Context Management)을 결합한 금융 특화 RAG 파이프라인. NDCG@20=0.7918(FinQA·FinanceBench·ConvFinQA 종합), ACM-ICAIF '24 FinanceRAG Challenge 2위. FinLLM @ IJCAI-ECAI 2026 채택. arXiv abs + arXiv html + 독립 검색 스니펫 3개 이상 snippet-verified. → `04-산업별-사례.md` 금융 > 한국 섹션에 추가
