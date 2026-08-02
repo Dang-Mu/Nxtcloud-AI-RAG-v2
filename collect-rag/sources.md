@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-08-02 일일 누적 추가 출처 (3건, 루프 #47)
+
+- [삼성SDS 보도자료: 우리은행 AI 에이전트 뱅킹 구축](https://www.samsungsds.com/kr/news/wr-260407.html) — 2026-04-07 · [korea] [industry:금융] [agentic] [architecture] · 우리은행 × 삼성SDS. 삼성SDS 패브릭스(FabriX) 플랫폼 기반 175개 AI 에이전트 구축. 5대 영역(기업여신·자산관리·내부통제·고객상담·업무자동화). RAG 기반 답변체계 + 가드레일 + 베테랑 직원 노하우 비정형 데이터 자산화. 2026년 12월 90개 선공개 → 2027년 8월 175개 완료. 업무 처리 속도 ~30% 향상 전망. "국내 금융권 최초 대규모 AI 에이전트 적용". (snippet-verified: samsungsds.com + ZDNet Korea + 전자신문 + 파이낸셜뉴스 + 데이터넷 + 매일일보 + 디일렉 7개 독립 출처)
+- [arXiv:2607.25297 — MTGuard: Towards Safe Tool Use for MCP-Based LLM Agents via Lifecycle-Aware Static-Dynamic Co-Analysis](https://arxiv.org/abs/2607.25297) — 2026-07-28 · [agentic] [security] [mcp] [tool-use] · Ping He, Yuexiang Xie, Yaliang Li, Shouling Ji. MCP 기반 LLM 에이전트 도구 사용의 안전 위협 완화. 라이프사이클 인식 정적-동적 공동 분석(lifecycle-aware static-dynamic co-analysis). 다양한 유해 도구 사용 카테고리 완화·양성 작업 성능 유지. (snippet-verified: arXiv abs 2607.25297v1 + arXiv html 2607.25297v1 2개 독립 출처)
+- [arXiv:2607.04223 — GASP: Grounding-Aware Sensitivity Probing for RAG Hallucination Detection](https://arxiv.org/abs/2607.04223) — 2026-07-05 · [architecture] [hallucination] [evaluation] · (저자 정보 snippet 미확인). 지지 구절 제거 시 로그-우도 하락 + Jensen-Shannon Divergence로 스팬 레벨 환각 탐지. RAGTruth response-level AUC ~0.73·span-level AUC ~0.67. TofuEval 전이 가능. RAGBench 단답형 QA에서 한계. 3개 벤치마크, 3개 스코어러, 신뢰구간·유의성 검정·소거 연구 포함. 23페이지, 9그림, 15표. (snippet-verified: arXiv abs + arXiv html + arXiv pdf 3개 독립 출처)
+
 ## 2026-08-01 일일 누적 추가 출처 (3건, 루프 #46)
 
 - [arXiv:2607.27523 — Hierarchical Reranking for Scalable Financial RAG](https://arxiv.org/abs/2607.27523) — 2026-07-29 · [korea] [industry:금융] [retrieval] [reranking] · Joohyun Lee (금융보안원 Financial Security Institute), Sungwoo Hong (한양대 Hanyang University). 계층적 리랭킹 기반 확장형 금융 RAG. Pre-Retrieval Optimization + Hierarchical Reranker Architecture + Long-Context Management 3대 혁신. NDCG@20=0.7918(FinQA·FinanceBench·ConvFinQA), ACM-ICAIF '24 FinanceRAG Challenge 2위. FinLLM @ IJCAI-ECAI 2026 채택. (snippet-verified: arXiv abs + arXiv html + 독립 검색 스니펫 3개 이상 출처)

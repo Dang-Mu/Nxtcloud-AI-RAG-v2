@@ -525,6 +525,13 @@ Google Research와 Google Cloud가 2026년 6월 5일 발표. Gemini Enterprise A
 
 - **출처**: [arXiv:2607.27353 — LayerRAG-Bench: A Cross-Layer Reliability Benchmark for Agentic Retrieval-Augmented Generation](https://arxiv.org/abs/2607.27353) (2026-07-29, snippet-verified: arXiv abs + arXiv html + LinkedIn Musa Shams(EY) 3개 독립 출처)
 
+### MTGuard — MCP 도구 사용의 안전 위협 완화: 라이프사이클 인식 정적-동적 하이브리드 분석 (arXiv:2607.25297, 2026-07-28)
+- **문제**: MCP 기반 도구 사용이 LLM 에이전트에 새로운 안전 위협을 도입한다. 도구 정의 자체가 악의적이거나 사이드채널로 악용될 수 있는데, 기존 정적 분석(static analysis)만으로는 런타임 동작을 포착하지 못해 유해 도구 사용을 막기 어렵다.
+- **기여**: **MTGuard** — 라이프사이클 인식(lifecycle-aware) 정적-동적 공동 분석(static-dynamic co-analysis) 프레임워크. 도구 실행 전 정적 검사와 실행 중 동적 모니터링을 결합해 다양한 카테고리의 유해 도구 사용을 완화하면서 양성 작업 성능을 유지.
+- **의의**: MCP 표준화 이후 "도구 안전"이 에이전틱 RAG 프로덕션 배포의 1차 과제로 부상한 시점에, 도구 수준 하이브리드 분석을 처음으로 체계화한 프레임워크. "MCP 도구를 RAG 파이프라인에 연결할 때 런타임 안전 검증 레이어를 함께 배포해야 한다"는 실무 원칙을 실증.
+- **저자**: Ping He, Yuexiang Xie, Yaliang Li, Shouling Ji
+- **출처**: [arXiv:2607.25297 — MTGuard: Towards Safe Tool Use for MCP-Based LLM Agents via Lifecycle-Aware Static-Dynamic Co-Analysis](https://arxiv.org/abs/2607.25297) (2026-07-28, snippet-verified: arXiv abs 2607.25297v1 + arXiv html 2607.25297v1 2개 독립 출처)
+
 ---
 
 ## 이 도메인의 공통 패턴
