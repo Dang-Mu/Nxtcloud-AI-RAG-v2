@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-08-03 일일 누적 추가 출처 (3건, 루프 #48)
+
+- [arXiv:2607.00422 — KidnapRAG: Black-box Adversarial Attacks on Agentic RAG](https://arxiv.org/abs/2607.00422) — 2026-07 · [korea] [agentic] [security] [adversarial] · Chanwoo Choi, Euntae Kim, Kyuho Lee, Youngsam Chun, Jinhee Jeong, Eunmi Kim, Myunggyo Oh, Junseo Jang, Buru Chang (고려대학교 Language & Intelligence Lab). 블랙박스 위협 모델 기반 에이전틱 RAG 공격. 공개 소스에 독소 문서 게시만으로 다단계 추론 체인 전체를 납치해 공격자 의도 답변 유도. 단일 검색 단계 포이즈닝과 달리 추론 체인 제어가 핵심. (snippet-verified: arXiv abs + arXiv 목록 + security 연구 저장소 3개 이상 독립 출처)
+- [arXiv:2603.05207 — Core-based Hierarchies for Efficient GraphRAG](https://arxiv.org/abs/2603.05207) — 2026-03 제출·2026-06 개정·KDD 2026 채택 · [architecture] [graph] [graphrag] [evaluation] · Jakir Hossain, Ahmet Erdem Sarıyüce (University at Buffalo). Leiden 모듈성 최적화의 비결정성을 이론 증명하고 k-코어 분해로 대체. 선형 시간 결정론적·밀도 인식 계층 생성 + 토큰 예산 인식 샘플링. 3개 데이터셋·3개 생성기·5개 판별기에서 포괄성·다양성 향상 + 토큰 감소 동시 달성. KDD 2026 (2026-08-09~13, 제주). GitHub: jakir-sust/Kcore-GraphRAG. (snippet-verified: arXiv abs + arXiv html + ResearchGate + alphaXiv + KDD 2026 목록 5개 이상 독립 출처)
+- [arXiv:2607.24748 — VLD-RAG: An Agentic Vision-Language Long-Document RAG Framework](https://arxiv.org/abs/2607.24748) — 2026-07 · [architecture] [multimodal] [agentic] [long-document] · Seonok Kim (Mazelone). 시각적으로 풍부한 장문서(보고서·슬라이드·매뉴얼) 대상 에이전틱 멀티모달 RAG. 페이지 보존 멀티모달 인덱스(파싱 텍스트 + 페이지 메타데이터 + 밀집 시각 표현) + 하이브리드 검색 + 반복적 멀티모달 질의로 다중 페이지 증거 검색 실현. (snippet-verified: arXiv html 목록 + cs.IR Information Retrieval 목록 2개 독립 출처)
+
 ## 2026-08-02 일일 누적 추가 출처 (3건, 루프 #47)
 
 - [삼성SDS 보도자료: 우리은행 AI 에이전트 뱅킹 구축](https://www.samsungsds.com/kr/news/wr-260407.html) — 2026-04-07 · [korea] [industry:금융] [agentic] [architecture] · 우리은행 × 삼성SDS. 삼성SDS 패브릭스(FabriX) 플랫폼 기반 175개 AI 에이전트 구축. 5대 영역(기업여신·자산관리·내부통제·고객상담·업무자동화). RAG 기반 답변체계 + 가드레일 + 베테랑 직원 노하우 비정형 데이터 자산화. 2026년 12월 90개 선공개 → 2027년 8월 175개 완료. 업무 처리 속도 ~30% 향상 전망. "국내 금융권 최초 대규모 AI 에이전트 적용". (snippet-verified: samsungsds.com + ZDNet Korea + 전자신문 + 파이낸셜뉴스 + 데이터넷 + 매일일보 + 디일렉 7개 독립 출처)

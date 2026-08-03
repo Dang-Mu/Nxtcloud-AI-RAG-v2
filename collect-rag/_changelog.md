@@ -1,5 +1,28 @@
 # 업데이트 로그
 
+## 2026-08-03 (일일 루프 #48)
+- **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
+  1. **KidnapRAG: 에이전틱 RAG 추론 체인 납치 블랙박스 공격 (arXiv:2607.00422, 2026-07)** [한국 사례]: 고려대학교 Language & Intelligence Lab (Buru Chang 교수) 주도 연구. 블랙박스 위협 모델로 공개 소스에 독소 문서를 게시하는 것만으로 에이전틱 RAG의 다단계 추론 체인 전체를 납치해 공격자 의도 답변을 유도. 단일 검색 단계 포이즈닝과 달리 추론 체인 제어가 핵심 기여. arXiv abs + arXiv 목록 + security 연구 저장소 3개 이상 snippet-verified. → `03-에이전트-툴유즈-MCP.md` 2026년 주목할 신규 연구 섹션에 추가
+  2. **Core-based Hierarchies for Efficient GraphRAG (arXiv:2603.05207, KDD 2026)**: Leiden 모듈성 최적화의 비결정성 문제를 이론적으로 증명하고 k-코어 분해로 대체하는 결정론적 GraphRAG. 3개 데이터셋·3개 LLM·5개 판별기 조건에서 포괄성·다양성 향상 + 토큰 사용량 감소 동시 달성. KDD 2026(2026-08-09~13, 제주) 발표. arXiv abs + arXiv html + ResearchGate + alphaXiv + KDD 2026 목록 5개 이상 snippet-verified. → `02-프로덕션-아키텍처.md` GraphRAG 섹션에 추가
+  3. **VLD-RAG: 에이전틱 비전-언어 장문서 멀티모달 RAG (arXiv:2607.24748, 2026-07)**: Seonok Kim(Mazelone). 다중 페이지 증거 검색·페이지 간 교차 추론을 위한 에이전틱 멀티모달 RAG. 페이지 보존 멀티모달 인덱스 + 하이브리드 검색 + 반복적 멀티모달 질의. arXiv html 목록 + cs.IR 목록 2개 독립 출처 snippet-verified. → `02-프로덕션-아키텍처.md` 멀티모달 섹션에 추가
+- `sources.md`에 3개 출처 추가 (## 2026-08-03 일일 누적 추가 출처 섹션 신설)
+- `03-에이전트-툴유즈-MCP.md` 2026년 신규 연구 섹션에 KidnapRAG 추가
+- `02-프로덕션-아키텍처.md` 멀티모달 섹션에 VLD-RAG 추가, GraphRAG 섹션에 Core-based Hierarchies 추가
+- `00-요약-트렌드.md` 날짜·사례 수·출처 수 갱신 (184+→187+, 290+→293+)
+
+### 검증 결과 (루프 #48)
+| # | 사례 | URL 유효 | 요약-출처 일치 | 단언 완화 | ID/날짜 형식 | 중복 없음 |
+|---|------|-----------|----------------|-----------|-------------|-----------|
+| 1 | KidnapRAG (arXiv:2607.00422, 2026-07) [한국] | snippet-verified (arXiv abs + arXiv 목록 + security 저장소 3개 이상) | ✓ (Buru Chang·고려대·블랙박스·추론 체인 납치 확인) | ✓ | 2607.00422, 2026-07 | ✓ |
+| 2 | Core-based Hierarchies GraphRAG (arXiv:2603.05207, KDD 2026) | snippet-verified (arXiv abs + html + ResearchGate + alphaXiv + KDD 2026 목록 5개 이상) | ✓ (Jakir Hossain·Univ. at Buffalo·k-코어 분해·KDD 2026 제주 확인) | ✓ | 2603.05207 | ✓ |
+| 3 | VLD-RAG (arXiv:2607.24748, 2026-07) | snippet-verified (arXiv html 목록 + cs.IR 목록 2개 독립 출처) | ✓ (Seonok Kim·Mazelone·페이지 보존 멀티모달 인덱스 확인) | ✓ | 2607.24748, 2026-07 | ✓ |
+
+- URL 200 OK: 0/3건 (WebFetch 전체 403 차단)
+- snippet-verified: 3/3건
+- 단언 톤다운: 0건
+- 중복 폐기: 0건
+- 한국 사례: 1건 (KidnapRAG, 고려대학교 Language & Intelligence Lab)
+
 ## 2026-08-02 (일일 루프 #47)
 - **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
   1. **우리은행 × 삼성SDS — AI 에이전트 뱅킹 구축 (2026-04-07)** [한국 사례]: 삼성SDS 패브릭스(FabriX) 플랫폼 기반 175개 AI 에이전트 구축. 5대 영역(기업여신·자산관리·내부통제·고객상담·업무자동화). RAG 기반 답변체계 + 가드레일 + 베테랑 직원 노하우 비정형 데이터 자산화. 2027년 8월 완료, 업무 처리 속도 ~30% 향상 전망. "국내 금융권 최초 대규모 AI 에이전트 적용". samsungsds.com + ZDNet Korea + 전자신문 + 파이낸셜뉴스 + 데이터넷 + 매일일보 + 디일렉 7개 독립 출처 snippet-verified. → `04-산업별-사례.md` 금융 > 한국 섹션에 추가
