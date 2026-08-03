@@ -532,6 +532,13 @@ Google Research와 Google Cloud가 2026년 6월 5일 발표. Gemini Enterprise A
 - **저자**: Ping He, Yuexiang Xie, Yaliang Li, Shouling Ji
 - **출처**: [arXiv:2607.25297 — MTGuard: Towards Safe Tool Use for MCP-Based LLM Agents via Lifecycle-Aware Static-Dynamic Co-Analysis](https://arxiv.org/abs/2607.25297) (2026-07-28, snippet-verified: arXiv abs 2607.25297v1 + arXiv html 2607.25297v1 2개 독립 출처)
 
+### KidnapRAG — 에이전틱 RAG 추론 체인 납치 블랙박스 공격 (arXiv:2607.00422, 2026-07) [한국 사례]
+- **문제**: 에이전틱 RAG 시스템은 다단계 추론 체인 전체를 공격자가 통제할 수 있는 새로운 위협에 노출된다. 단일 검색 단계만을 표적으로 하는 기존 RAG 포이즈닝 공격과 달리, 에이전틱 RAG에서는 LLM이 복수의 추론 스텝에 걸쳐 검색 결과를 조합하므로 공격 표면이 확장된다.
+- **기여**: **KidnapRAG** — 블랙박스 위협 모델(black-box threat model) 기반 에이전틱 RAG 공격 프레임워크. 공격자는 내부 모델·검색기·시스템 프롬프트에 접근하지 않고, 공개 소스에 독소 문서(poisoned documents)를 게시하는 것만으로 에이전틱 RAG의 다단계 추론 체인 전체를 납치(kidnap)해 공격자가 의도한 목표 답변을 유도한다. 단일 검색 단계 포이즈닝과 달리 **추론 체인 제어(reasoning chain control)**가 핵심 기여.
+- **의의**: 에이전틱 RAG 보안 연구의 위협 모델을 "검색 품질 저하"에서 "추론 체인 납치"로 격상. 실무적으로 퍼블릭 데이터 소스(웹, 오픈 DB 등)에 연결된 에이전틱 RAG 시스템은 블랙박스 환경에서도 추론 결과 전체가 조작될 수 있음을 시사하며, 검색 단계별 독립 신뢰성 검증과 입력 소독(input sanitization) 레이어의 필요성을 제기.
+- **저자**: Chanwoo Choi, Euntae Kim, Kyuho Lee, Youngsam Chun, Jinhee Jeong, Eunmi Kim, Myunggyo Oh, Junseo Jang, Buru Chang (고려대학교 Language & Intelligence Lab)
+- **출처**: [arXiv:2607.00422 — KidnapRAG: Black-box Adversarial Attacks on Agentic RAG](https://arxiv.org/abs/2607.00422) (2026-07, snippet-verified: arXiv abs + arXiv 목록 + security 연구 저장소 3개 이상 독립 출처)
+
 ---
 
 ## 이 도메인의 공통 패턴
