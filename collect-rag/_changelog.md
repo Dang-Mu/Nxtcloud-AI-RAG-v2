@@ -1,5 +1,28 @@
 # 업데이트 로그
 
+## 2026-08-04 (일일 루프 #49)
+- **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
+  1. **와이즈넛 WISE Agent Labs GS인증 1등급 획득 (2026-08-03)** [한국 사례]: 노코드(no-code) AI 에이전트 빌더로 과기정통부 산하 KTL GS(Good Software) 1등급 인증 취득. 코딩 없이 드래그 앤 드롭으로 AI 에이전트 구성. Multi-LLM 연동 + RAG 파이프라인 내장 + MCP 서버 연결 + 설계→개발→학습→검증→운영→개선 전 생애주기 통합. GS 1등급은 기능성·신뢰성·사용성·성능효율성·보안성 전 항목 최고 수준(ISO/IEC 25023 기반) 요건 충족. ZDNet Korea + VentureSquare + 뉴스웍스 3개 이상 snippet-verified. → `03-에이전트-툴유즈-MCP.md` 한국 사례 섹션에 추가
+  2. **RING: Retrieval-Internalized Generation via Mixture-of-Memory Experts (arXiv:2608.01630, 2026-08-03)**: 외부 검색기(external retriever)를 완전히 제거하고 대규모 외부 지식을 Mixture-of-Memory Experts(MoME)에 내재화하는 새로운 패러다임. 3단계 학습: Dual Causal Attention 기반 Knowledge Expert 지속 사전학습 → "search-then-answer" SFT → 계층적 보상 RL 최적화. CAS Institute of Computing Technology + Xiaohongshu Inc. arXiv abs + arXiv html 2개 독립 출처 snippet-verified. → `02-프로덕션-아키텍처.md` 2026년 주목할 신규 연구 섹션에 추가
+  3. **ACE-GraphRAG: Agentic Context Engineering for Hierarchical GraphRAG (arXiv:2608.01269, 2026-08-02)**: 계층형 GraphRAG의 표현-추론 간극(representation-inference gap)을 정의하고, 추론 시 초기 컨텍스트를 보완·적응하는 정책 레이어(ACE)로 해소. gap-aware refinement + 검색 브랜치 + 태스크 조건부 적응. HotpotQA, 2WikiMultiHopQA, UltraDomain 4개 서브셋에서 Full-ACE가 RAG·GraphRAG 베이스라인 전체 초과. CUHK + 武汉理工大学 + HKUST + Huawei Noah's Ark Lab. arXiv abs + arXiv html 2개 독립 출처 snippet-verified. → `02-프로덕션-아키텍처.md` GraphRAG 섹션에 추가
+- `sources.md`에 3개 출처 추가 (## 2026-08-04 일일 누적 추가 출처 섹션 신설)
+- `03-에이전트-툴유즈-MCP.md` 와이즈넛 WISE Agent Labs 섹션 추가 (한국 사례)
+- `02-프로덕션-아키텍처.md` GraphRAG 섹션에 ACE-GraphRAG 추가, 2026년 주목할 신규 연구 섹션 신설 후 RING 추가
+- `00-요약-트렌드.md` 날짜·사례 수·출처 수 갱신 (187+→190+, 293+→296+)
+
+### 검증 결과 (루프 #49)
+| # | 사례 | URL 유효 | 요약-출처 일치 | 단언 완화 | ID/날짜 형식 | 중복 없음 |
+|---|------|-----------|----------------|-----------|-------------|-----------|
+| 1 | 와이즈넛 WISE Agent Labs GS인증 (2026-08-03) [한국] | snippet-verified (ZDNet Korea + VentureSquare + 뉴스웍스 3개 이상 독립 출처) | ✓ (와이즈넛·WISE Agent Labs·GS 1등급·KTL·노코드·드래그 앤 드롭·Multi-LLM+RAG+MCP 확인) | ✓ | 2026-08-03 | ✓ |
+| 2 | RING (arXiv:2608.01630, 2026-08-03) | snippet-verified (arXiv abs + arXiv html 2개 독립 출처) | ✓ (MoME·Dual Causal Attention·CAS·Xiaohongshu·State Key Laboratory of AI Safety 확인) | ✓ | 2608.01630, 2026-08-03 | ✓ |
+| 3 | ACE-GraphRAG (arXiv:2608.01269, 2026-08-02) | snippet-verified (arXiv abs + arXiv html 2개 독립 출처) | ✓ (표현-추론 간극·gap-aware refinement·CUHK·Huawei Noah's Ark Lab·HotpotQA·UltraDomain 확인) | ✓ | 2608.01269, 2026-08-02 | ✓ |
+
+- URL 200 OK: 0/3건 (WebFetch 전체 403 차단)
+- snippet-verified: 3/3건
+- 단언 톤다운: 0건
+- 중복 폐기: 0건
+- 한국 사례: 1건 (와이즈넛 WISE Agent Labs, 2026-08-03)
+
 ## 2026-08-03 (일일 루프 #48)
 - **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
   1. **KidnapRAG: 에이전틱 RAG 추론 체인 납치 블랙박스 공격 (arXiv:2607.00422, 2026-07)** [한국 사례]: 고려대학교 Language & Intelligence Lab (Buru Chang 교수) 주도 연구. 블랙박스 위협 모델로 공개 소스에 독소 문서를 게시하는 것만으로 에이전틱 RAG의 다단계 추론 체인 전체를 납치해 공격자 의도 답변을 유도. 단일 검색 단계 포이즈닝과 달리 추론 체인 제어가 핵심 기여. arXiv abs + arXiv 목록 + security 연구 저장소 3개 이상 snippet-verified. → `03-에이전트-툴유즈-MCP.md` 2026년 주목할 신규 연구 섹션에 추가
