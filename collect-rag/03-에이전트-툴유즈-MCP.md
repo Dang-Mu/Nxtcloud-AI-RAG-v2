@@ -539,6 +539,13 @@ Google Research와 Google Cloud가 2026년 6월 5일 발표. Gemini Enterprise A
 - **저자**: Chanwoo Choi, Euntae Kim, Kyuho Lee, Youngsam Chun, Jinhee Jeong, Eunmi Kim, Myunggyo Oh, Junseo Jang, Buru Chang (고려대학교 Language & Intelligence Lab)
 - **출처**: [arXiv:2607.00422 — KidnapRAG: Black-box Adversarial Attacks on Agentic RAG](https://arxiv.org/abs/2607.00422) (2026-07, snippet-verified: arXiv abs + arXiv 목록 + security 연구 저장소 3개 이상 독립 출처)
 
+### 와이즈넛 WISE Agent Labs — GS인증 1등급 획득 (2026-08-03) [한국 사례]
+- **배경**: 와이즈넛(대표 이찬규)이 노코드(no-code) AI 에이전트 빌더 **WISE Agent Labs**로 과학기술정보통신부 산하 KTL(한국산업기술시험원) GS(Good Software) 1등급 인증을 취득했다.
+- **아키텍처**: 코딩 없이 드래그 앤 드롭(drag & drop) 방식으로 AI 에이전트를 구성하는 워크플로우 기반 플랫폼. **Multi-LLM 연동**(여러 LLM 모델 선택·혼용) + **RAG 파이프라인 내장** + **MCP(Model Context Protocol) 서버 연결** 기능을 단일 인터페이스에서 제공. 설계 → 개발 → 학습 → 검증 → 운영 → 개선의 **AI 에이전트 전 생애주기**를 통합 관리.
+- **GS인증 의의**: GS 1등급은 기능성·신뢰성·사용성·성능효율성·보안성 등 소프트웨어 품질 특성 전 항목에서 최고 수준(ISO/IEC 25023 기반)을 충족해야 취득 가능한 한국 정부 소프트웨어 품질 인증이다. 공공기관 우선 구매 요건을 충족하므로, 국내 공공 AI 에이전트 시장 진입 요건을 갖추게 된다.
+- **의의**: RAG+MCP+Multi-LLM을 통합한 노코드 에이전트 빌더가 국내 공공 품질 인증을 취득한 첫 사례. "에이전틱 RAG + 노코드 + 공공 인증"의 결합은 국내 기업 내 비개발 부서가 자체 AI 에이전트를 구축·운용하는 민주화 경로를 열며, 공공기관 우선 구매 혜택까지 더해져 국내 에이전틱 RAG 시장 접근성 확대에 기여한다.
+- **출처**: [ZDNet Korea — 와이즈넛 'WISE Agent Labs', 최상위 GS인증 1등급 획득](https://zdnet.co.kr/view/?no=20260803172254) (2026-08-03) · [VentureSquare](https://www.venturesquare.net/1103023) · 뉴스웍스 (snippet-verified: 3개 이상 독립 출처)
+
 ---
 
 ## 이 도메인의 공통 패턴

@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-08-04 일일 누적 추가 출처 (3건, 루프 #49)
+
+- [ZDNet Korea — 와이즈넛 'WISE Agent Labs', 최상위 GS인증 1등급 획득](https://zdnet.co.kr/view/?no=20260803172254) — 2026-08-03 · [korea] [agentic] [mcp] [no-code] [gs-certification] · 와이즈넛. 노코드 AI 에이전트 빌더 WISE Agent Labs로 KTL GS 1등급 인증 취득. 코딩 없이 드래그 앤 드롭으로 AI 에이전트 구성. Multi-LLM + RAG 내장 + MCP 연동 + 전 생애주기 통합. 공공기관 우선 구매 요건 충족. (snippet-verified: ZDNet Korea + VentureSquare + 뉴스웍스 3개 이상 독립 출처)
+- [arXiv:2608.01630 — RING: Retrieval-Internalized Generation via Mixture-of-Memory Experts](https://arxiv.org/abs/2608.01630) — 2026-08-03 · [architecture] [internalization] [mixture-of-experts] [rl] · CAS Institute of Computing Technology + Xiaohongshu Inc. (State Key Laboratory of AI Safety). 외부 검색기 완전 제거, 대규모 지식을 MoME에 내재화. 3단계 학습: Dual Causal Attention 지속 사전학습 → SFT → 계층적 보상 RL. 서빙 지연·엔지니어링 오버헤드 제거 목표. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+- [arXiv:2608.01269 — ACE-GraphRAG: Agentic Context Engineering for Hierarchical GraphRAG](https://arxiv.org/abs/2608.01269) — 2026-08-02 · [architecture] [graphrag] [context-engineering] [inference-time] · Yongfeng Huang, Yuren Lai, Ruiying Chen, Haoyu Huang, Mingming Zhao, James Cheng (CUHK · 武汉理工 · HKUST · Huawei Noah's Ark Lab). 계층형 GraphRAG의 표현-추론 간극(representation-inference gap)을 정의. gap-aware refinement + 검색 브랜치 + 태스크 조건부 적응 정책 레이어. HotpotQA·2WikiMultiHopQA·UltraDomain에서 Full-ACE가 RAG·GraphRAG 베이스라인 전체 초과. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+
 ## 2026-08-03 일일 누적 추가 출처 (3건, 루프 #48)
 
 - [arXiv:2607.00422 — KidnapRAG: Black-box Adversarial Attacks on Agentic RAG](https://arxiv.org/abs/2607.00422) — 2026-07 · [korea] [agentic] [security] [adversarial] · Chanwoo Choi, Euntae Kim, Kyuho Lee, Youngsam Chun, Jinhee Jeong, Eunmi Kim, Myunggyo Oh, Junseo Jang, Buru Chang (고려대학교 Language & Intelligence Lab). 블랙박스 위협 모델 기반 에이전틱 RAG 공격. 공개 소스에 독소 문서 게시만으로 다단계 추론 체인 전체를 납치해 공격자 의도 답변 유도. 단일 검색 단계 포이즈닝과 달리 추론 체인 제어가 핵심. (snippet-verified: arXiv abs + arXiv 목록 + security 연구 저장소 3개 이상 독립 출처)
