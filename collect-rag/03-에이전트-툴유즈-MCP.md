@@ -546,6 +546,19 @@ Google Research와 Google Cloud가 2026년 6월 5일 발표. Gemini Enterprise A
 - **의의**: RAG+MCP+Multi-LLM을 통합한 노코드 에이전트 빌더가 국내 공공 품질 인증을 취득한 첫 사례. "에이전틱 RAG + 노코드 + 공공 인증"의 결합은 국내 기업 내 비개발 부서가 자체 AI 에이전트를 구축·운용하는 민주화 경로를 열며, 공공기관 우선 구매 혜택까지 더해져 국내 에이전틱 RAG 시장 접근성 확대에 기여한다.
 - **출처**: [ZDNet Korea — 와이즈넛 'WISE Agent Labs', 최상위 GS인증 1등급 획득](https://zdnet.co.kr/view/?no=20260803172254) (2026-08-03) · [VentureSquare](https://www.venturesquare.net/1103023) · 뉴스웍스 (snippet-verified: 3개 이상 독립 출처)
 
+### DenialRAG — 단일 문서 임베디드 파라메트릭 부정 기반 RAG 중독 공격 (arXiv:2608.02678, 2026-08-02, ACSAC 2026 제출)
+
+RAG 시스템에 대한 기존 단일 문서 포이즈닝 공격은 독성 정보를 직접 삽입하는 방식이었다. DenialRAG는 올바른 답을 명시적으로 언급한 뒤 부정(denial)하고 공격자 제어 오답을 제시하는 새로운 단일 문서 중독 공격 전략이다. 올바른 답과 독성 답이 동일 검색 패시지에 함께 위치함으로써 갈등(conflict)이 컨텍스트 내에 직접 임베디드된다.
+
+핵심 기여:
+- 3가지 오픈도메인 QA 데이터셋 × 8개 LLM(4개 벤더) × 5개 추론-시점 방어 기법 평가로 단일 문서 포이즈닝 공격 체계적 벤치마크 최초 구성.
+- DenialRAG가 모든 Mistral-7B 데이터셋에서 기존 4개 단일 문서 포이즈닝 공격 대비 최고 공격 성공률(ASR) 달성.
+- 방어 기법들이 ASR을 낮추지만 비균일 보호 — 모든 방어가 일부 설정에서 잔류 ASR 존재.
+- 성분 분석에서 부정(denial) 요소가 가장 영향력 있는 성분으로 확인.
+
+- **저자**: Abay Zhurekbay, Tao Liu, Fan Li
+- **출처**: [arXiv:2608.02678 — DenialRAG: Single-Document RAG Poisoning via Embedded Parametric Denial](https://arxiv.org/abs/2608.02678) (2026-08-02, ACSAC 2026 제출, snippet-verified: arXiv abs + arXiv html + redteams.ai 3개 독립 출처)
+
 ---
 
 ## 이 도메인의 공통 패턴

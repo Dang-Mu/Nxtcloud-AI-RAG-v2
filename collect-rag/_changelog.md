@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-08-05 (일일 루프 #50)
+- **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
+  1. **삼성SDS — KDD 2026 Korea Day: 400+ 시스템·5M 문서 기반 엔터프라이즈 RAG 플랫폼 (2026-08-11 발표)** [한국 사례]: 그룹 전체 400개 이상 이기종 시스템(ERP·HR·업무 포털 등), 50,000+ 테이블, 500만+ 비정형 문서를 통합해 1,000개 이상의 AI 에이전트·LLM 챗봇을 운영하는 엔터프라이즈 AI 지식 기반 플랫폼. 보안 RAG 파이프라인 + 문서 접근 제어 + 셀프서비스 AI 플랫폼(도메인 전문가 노코드 에이전트 생성). KDD 2026 Korea Day 특별 플레너리 세션(2026-08-11, 제주 ICC)에서 Google Jeff Dean 기조연설 다음 발표 슬롯. kdd2026.kdd.org/korea-day/ + beri.net/events/kdd-2026 + samsungsds.com 3개 이상 독립 출처 snippet-verified. → `01-엔터프라이즈-사내지식.md` 한국 사례 섹션에 추가
+  2. **DocNavRAG: Document-Structured Graph RAG with Stateful Evidence Construction (arXiv:2608.01565, 2026-08-03)**: 문서 계층 구조와 문서 간 교차 영역 관계를 탐색 가능한 그래프(navigable graph)로 조직. 4가지 그래프 연산(locate·navigate·expand·fetch) + 상태 기반 증거(stateful evidence)로 충분한 증거 확보 시까지 검색 유도. 4개 장문서·멀티 문서 QA 벤치마크에서 답변 품질 +7.8%, 컨텍스트 충분성 +17.7%. Wuhan Univ. + HKUST + CUHK + ETH Zurich. arXiv abs + arXiv html 2개 독립 출처 snippet-verified. → `02-프로덕션-아키텍처.md` GraphRAG 섹션에 추가
+  3. **DenialRAG: Single-Document RAG Poisoning via Embedded Parametric Denial (arXiv:2608.02678, 2026-08-02, ACSAC 2026 제출)**: 올바른 답을 명시적으로 언급한 뒤 부정(denial)하고 공격자 제어 오답을 제시하는 단일 문서 중독 공격. 3가지 오픈도메인 QA × 8개 LLM(4개 벤더) × 5개 방어 기법 체계적 벤치마크. 모든 Mistral-7B 데이터셋에서 기존 4개 단일 문서 포이즈닝 공격 대비 최고 ASR 달성. arXiv abs + arXiv html + redteams.ai 3개 독립 출처 snippet-verified. → `03-에이전트-툴유즈-MCP.md` 보안/공격 섹션에 추가
+
+| 사례 | 도메인 | 검증 방법 | 출처 수 | 한국 여부 |
+|------|--------|-----------|---------|----------|
+| 삼성SDS KDD 2026 Korea Day | 01-엔터프라이즈 | snippet-verified | 3개 이상 | ✅ 한국 |
+| DocNavRAG (arXiv:2608.01565) | 02-프로덕션 GraphRAG | snippet-verified | 2개 | 글로벌 |
+| DenialRAG (arXiv:2608.02678) | 03-에이전트 보안 | snippet-verified | 3개 | 글로벌 |
+
+- `sources.md`에 3개 출처 추가 (## 2026-08-05 일일 누적 추가 출처 섹션 신설)
+- `01-엔터프라이즈-사내지식.md` 헤더 업데이트(2026-08-05, 한국 32→, 총 49건) + 삼성SDS 섹션 추가
+- `02-프로덕션-아키텍처.md` GraphRAG 섹션에 DocNavRAG 추가
+- `03-에이전트-툴유즈-MCP.md` 와이즈넛 이후 DenialRAG 섹션 추가
+- `00-요약-트렌드.md` 업데이트(2026-08-05, 사례 193+건, 출처 299+)
+
 ## 2026-08-04 (일일 루프 #49)
 - **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
   1. **와이즈넛 WISE Agent Labs GS인증 1등급 획득 (2026-08-03)** [한국 사례]: 노코드(no-code) AI 에이전트 빌더로 과기정통부 산하 KTL GS(Good Software) 1등급 인증 취득. 코딩 없이 드래그 앤 드롭으로 AI 에이전트 구성. Multi-LLM 연동 + RAG 파이프라인 내장 + MCP 서버 연결 + 설계→개발→학습→검증→운영→개선 전 생애주기 통합. GS 1등급은 기능성·신뢰성·사용성·성능효율성·보안성 전 항목 최고 수준(ISO/IEC 25023 기반) 요건 충족. ZDNet Korea + VentureSquare + 뉴스웍스 3개 이상 snippet-verified. → `03-에이전트-툴유즈-MCP.md` 한국 사례 섹션에 추가
