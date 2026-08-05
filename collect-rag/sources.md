@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-08-05 일일 누적 추가 출처 (3건, 루프 #50)
+
+- [KDD 2026 Korea Day](https://kdd2026.kdd.org/korea-day/) — 2026-08-11 (제주 ICC) · [korea] [enterprise] [agentic] [knowledge-platform] · 삼성SDS(Samsung DS) AI 플랫폼 사업부. 그룹 전체 400개 이상 이기종 시스템(ERP·HR·업무 포털 등), 50,000+ 테이블, 500만+ 비정형 문서를 통합해 1,000개 이상의 AI 에이전트·LLM 챗봇 운영. 보안 RAG 파이프라인 + 문서 접근 제어 + 셀프서비스 AI 플랫폼. KDD 2026 Korea Day 특별 플레너리 세션(Google Jeff Dean 기조연설 다음 슬롯). (snippet-verified: kdd2026.kdd.org/korea-day/ + beri.net/events/kdd-2026 + samsungsds.com 3개 이상 독립 출처)
+- [arXiv:2608.01565 — DocNavRAG: Document-Structured Graph RAG with Stateful Evidence Construction for Complex Document Question Answering](https://arxiv.org/abs/2608.01565) — 2026-08-03 · [architecture] [graphrag] [agentic] [long-document] · 武汉大学(Wuhan University) + HKUST + CUHK + ETH Zurich 공동 연구. 문서 계층 구조와 문서 간 교차 영역 관계를 탐색 가능한 그래프(navigable graph)로 조직. 4가지 그래프 연산(locate·navigate·expand·fetch) + 상태 기반 증거(stateful evidence). 4개 벤치마크에서 답변 품질 +7.8%, 컨텍스트 충분성 +17.7%. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+- [arXiv:2608.02678 — DenialRAG: Single-Document RAG Poisoning via Embedded Parametric Denial](https://arxiv.org/abs/2608.02678) — 2026-08-02 · [security] [poisoning] [adversarial] · Abay Zhurekbay, Tao Liu, Fan Li. ACSAC 2026 제출. 올바른 답을 명시적으로 언급 후 부정(denial)하고 공격자 제어 오답 제시하는 단일 문서 중독 공격. 3가지 QA 데이터셋 × 8개 LLM × 5개 방어 기법 체계적 벤치마크. Mistral-7B 전 데이터셋에서 기존 단일 문서 포이즈닝 공격 대비 최고 ASR. (snippet-verified: arXiv abs + arXiv html + redteams.ai 3개 독립 출처)
+
 ## 2026-08-04 일일 누적 추가 출처 (3건, 루프 #49)
 
 - [ZDNet Korea — 와이즈넛 'WISE Agent Labs', 최상위 GS인증 1등급 획득](https://zdnet.co.kr/view/?no=20260803172254) — 2026-08-03 · [korea] [agentic] [mcp] [no-code] [gs-certification] · 와이즈넛. 노코드 AI 에이전트 빌더 WISE Agent Labs로 KTL GS 1등급 인증 취득. 코딩 없이 드래그 앤 드롭으로 AI 에이전트 구성. Multi-LLM + RAG 내장 + MCP 연동 + 전 생애주기 통합. 공공기관 우선 구매 요건 충족. (snippet-verified: ZDNet Korea + VentureSquare + 뉴스웍스 3개 이상 독립 출처)
