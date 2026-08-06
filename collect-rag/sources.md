@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-08-06 일일 누적 추가 출처 (3건, 루프 #51)
+
+- [arXiv:2608.01389 — KoVRE: Training an Efficient Embedding Model for Korean Visual Document Retrieval](https://arxiv.org/abs/2608.01389) — 2026-08 · [korea] [architecture] [embedding] [visual-document] [multimodal] · Yongbin Choi (경희대학교 Kyung Hee University), Gyuho Shim, Youngjoon Jang (고려대학교 Korea University). 708,729개 한국어·영어 쿼리-페이지 쌍으로 한국어 시각 문서(PDF·슬라이드·표) 전용 단일 벡터 검색기 임베딩 모델 학습. 긍정 인식 하드 네거티브 마이닝 + 리랭커 기반 지식 증류 통제 실험으로 최적 학습 레시피 도출. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+- [arXiv:2608.00765 — RAGOCR: Optical Compression of Retrieval-Augmented Text via Visual Representation](https://arxiv.org/abs/2608.00765) — 2026-08-01 · [architecture] [context-compression] [multimodal] [visual] · Jiayang Yu, Jialun Zhong, Lei Zou (北京大学 Wangxuan Institute of Computer Technology). 검색 문서를 이미지로 렌더링 후 쿼리-인식 동적 해상도(query-aware dynamic resolution) 메커니즘으로 압축. 나이브 RAG 대비 정확도 +15% 이상, 입력 토큰 1/8 수준으로 절감. 하드/소프트 압축 트레이드오프를 동시에 해소하는 시각 표현 기반 컨텍스트 압축 새 패러다임. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+- [arXiv:2608.03860 — SciRet: A Compute-Aware Empirical Study of Retrieval and Reranking for Scientific RAG](https://arxiv.org/abs/2608.03860) — 2026-08-04 · [architecture] [retrieval] [reranking] [evaluation] [scientific] · Kaysarul Anas Apurba (Laurentian University, 캐나다) + 공동 연구진 (North South University). CORD-19 코퍼스 3개 규모(1K·5K·15K 논문) 통제 실험. BM25+BGE-M3+RRF 하이브리드 검색 전 규모 Recall@10=1.000. MS MARCO 학습 교차 인코더 리랭커가 과학 코퍼스에서 정밀도 낮춤(도메인 불일치 역효과 실증). 코퍼스 규모 증가 시 RAGAS 충실도 향상. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+
 ## 2026-08-05 일일 누적 추가 출처 (3건, 루프 #50)
 
 - [KDD 2026 Korea Day](https://kdd2026.kdd.org/korea-day/) — 2026-08-11 (제주 ICC) · [korea] [enterprise] [agentic] [knowledge-platform] · 삼성SDS(Samsung DS) AI 플랫폼 사업부. 그룹 전체 400개 이상 이기종 시스템(ERP·HR·업무 포털 등), 50,000+ 테이블, 500만+ 비정형 문서를 통합해 1,000개 이상의 AI 에이전트·LLM 챗봇 운영. 보안 RAG 파이프라인 + 문서 접근 제어 + 셀프서비스 AI 플랫폼. KDD 2026 Korea Day 특별 플레너리 세션(Google Jeff Dean 기조연설 다음 슬롯). (snippet-verified: kdd2026.kdd.org/korea-day/ + beri.net/events/kdd-2026 + samsungsds.com 3개 이상 독립 출처)

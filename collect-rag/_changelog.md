@@ -1,5 +1,22 @@
 # 업데이트 로그
 
+## 2026-08-06 (일일 루프 #51)
+- **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
+  1. **KoVRE: Training an Efficient Embedding Model for Korean Visual Document Retrieval (arXiv:2608.01389, 2026-08)** [한국 사례]: 경희대학교(Kyung Hee University) + 고려대학교(Korea University) 연구팀. 708,729개 한국어·영어 쿼리-페이지 쌍으로 단일 벡터 검색기(single-vector retriever) 임베딩 모델 학습. 긍정 인식 하드 네거티브 마이닝 + 리랭커 기반 지식 증류 통제 실험으로 최적 학습 레시피 도출. 한국어 시각 문서(PDF·슬라이드·표) 전용 공개 임베딩 모델. arXiv abs + arXiv html 2개 독립 출처 snippet-verified. → `02-프로덕션-아키텍처.md` 검색 섹션 LG Uplus 한국 사례 다음에 추가
+  2. **RAGOCR: Optical Compression of Retrieval-Augmented Text via Visual Representation (arXiv:2608.00765, 2026-08-01)**: 北京大学 왕쉬안 연구소. 검색 문서를 이미지로 렌더링 후 쿼리-인식 동적 해상도 메커니즘으로 압축. 나이브 RAG 대비 정확도 +15% 이상, 입력 토큰 1/8 수준으로 절감. 텍스트 대신 시각 표현으로 RAG 컨텍스트를 압축하는 새 패러다임. arXiv abs + arXiv html 2개 독립 출처 snippet-verified. → `02-프로덕션-아키텍처.md` JKO-RAG 다음에 추가
+  3. **SciRet: A Compute-Aware Empirical Study of Retrieval and Reranking for Scientific RAG (arXiv:2608.03860, 2026-08-04)**: Laurentian University + North South University. CORD-19 코퍼스 3개 규모(1K·5K·15K) 통제 실험. BM25+BGE-M3+RRF 하이브리드 검색이 전 규모에서 Recall@10=1.000 달성. MS MARCO 학습 교차 인코더 리랭커가 과학 코퍼스에서 정밀도를 오히려 낮춤(도메인 불일치). arXiv abs + arXiv html 2개 독립 출처 snippet-verified. → `04-산업별-사례.md` 신규 `## 과학·학술` 섹션 신설
+
+| 사례 | 도메인 | 검증 방법 | 출처 수 | 한국 여부 |
+|------|--------|-----------|---------|----------|
+| KoVRE (arXiv:2608.01389) | 02-프로덕션 임베딩 | snippet-verified | 2개 | ✅ 한국 (경희대+고려대) |
+| RAGOCR (arXiv:2608.00765) | 02-프로덕션 컨텍스트 압축 | snippet-verified | 2개 | 글로벌 (Peking Univ.) |
+| SciRet (arXiv:2608.03860) | 04-산업별 과학·학술 | snippet-verified | 2개 | 글로벌 (Laurentian+NSU) |
+
+- `sources.md`에 3개 출처 추가 (## 2026-08-06 일일 누적 추가 출처 섹션 신설)
+- `02-프로덕션-아키텍처.md` 헤더 업데이트(2026-08-06) + KoVRE·RAGOCR 추가
+- `04-산업별-사례.md` 헤더 업데이트(2026-08-06) + `## 과학·학술` 섹션 신설(SciRet)
+- `00-요약-트렌드.md` 업데이트(2026-08-06, 사례 196+건, 출처 302+)
+
 ## 2026-08-05 (일일 루프 #50)
 - **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
   1. **삼성SDS — KDD 2026 Korea Day: 400+ 시스템·5M 문서 기반 엔터프라이즈 RAG 플랫폼 (2026-08-11 발표)** [한국 사례]: 그룹 전체 400개 이상 이기종 시스템(ERP·HR·업무 포털 등), 50,000+ 테이블, 500만+ 비정형 문서를 통합해 1,000개 이상의 AI 에이전트·LLM 챗봇을 운영하는 엔터프라이즈 AI 지식 기반 플랫폼. 보안 RAG 파이프라인 + 문서 접근 제어 + 셀프서비스 AI 플랫폼(도메인 전문가 노코드 에이전트 생성). KDD 2026 Korea Day 특별 플레너리 세션(2026-08-11, 제주 ICC)에서 Google Jeff Dean 기조연설 다음 발표 슬롯. kdd2026.kdd.org/korea-day/ + beri.net/events/kdd-2026 + samsungsds.com 3개 이상 독립 출처 snippet-verified. → `01-엔터프라이즈-사내지식.md` 한국 사례 섹션에 추가
