@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-08-07 일일 누적 추가 출처 (3건, 루프 #52)
+
+- [arXiv:2608.06292 — NeSy-RAG: Neuro-Symbolic Retrieval-Augmented Generation](https://arxiv.org/abs/2608.06292) — 2026-08-06 · [architecture] [explainability] [symbolic-reasoning] [qa] · Jonas Gann, Michael Gertz (Heidelberg University, Data and Web Science Group). Prolog 모듈 기반 신경-기호 통합 RAG. 검색 패시지에서 1차 논리 사실 추출 → Prolog 적재 → 규칙 기반 추론. 대화형 QA ShARC: 61.1% vs. 표준 RAG 42.8%. 감사 추적·설명 책임이 필요한 금융·의료·법률 도메인 적용 가능. (snippet-verified: arXiv abs + arXiv html + Heidelberg DS Group + ResearchGate 4개 독립 출처)
+- [arXiv:2608.01311 — RH-RAG: A Multi-Agent RAG Framework for Privacy-Constrained Long-Form Generation from Confidential Reports](https://arxiv.org/abs/2608.01311) — 2026-08-02 · [architecture] [agentic] [privacy] [long-form] [multi-agent] · Raj Shekhar Singh (IIT Roorkee). Planner-Writer-Checker 3-에이전트 프레임워크. NLI 기반 Checker가 각 클레임을 소스로 검증해 PII 누출·사실 오류 동시 완화. 기밀 내부 문서(의료·법률·금융) 대상 장문 생성 워크플로우. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+- [JMIR Formative Research 2026;10:e72604 — Evaluation of Retrieval-Augmented Generation for Korean Medical Question Answering](https://formative.jmir.org/2026/1/e72604) — 2026-04-30 · [korea] [industry:의료] [evaluation] [metadata-filtering] · 10.4 GB 한국어 의료 코퍼스(487,277개 청크), 5개 LLM 비교 평가. 문서 유형 메타데이터 필터링이 한국 의료 RAG 성능 결정적 요인. 단순 의미 유사도 검색만으로는 한국어 의료 용어 다형성 처리 불충분. (snippet-verified: 2개 독립 WebSearch 출처)
+
 ## 2026-08-06 일일 누적 추가 출처 (3건, 루프 #51)
 
 - [arXiv:2608.01389 — KoVRE: Training an Efficient Embedding Model for Korean Visual Document Retrieval](https://arxiv.org/abs/2608.01389) — 2026-08 · [korea] [architecture] [embedding] [visual-document] [multimodal] · Yongbin Choi (경희대학교 Kyung Hee University), Gyuho Shim, Youngjoon Jang (고려대학교 Korea University). 708,729개 한국어·영어 쿼리-페이지 쌍으로 한국어 시각 문서(PDF·슬라이드·표) 전용 단일 벡터 검색기 임베딩 모델 학습. 긍정 인식 하드 네거티브 마이닝 + 리랭커 기반 지식 증류 통제 실험으로 최적 학습 레시피 도출. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
