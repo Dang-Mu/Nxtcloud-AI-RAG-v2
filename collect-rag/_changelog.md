@@ -1,5 +1,22 @@
 # 업데이트 로그
 
+## 2026-08-07 (일일 루프 #52)
+- **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
+  1. **NeSy-RAG: Neuro-Symbolic Retrieval-Augmented Generation (arXiv:2608.06292, 2026-08-06)**: Heidelberg University Data and Web Science Group (Jonas Gann, Michael Gertz). Prolog 모듈 기반 신경-기호 통합 RAG. 검색 패시지에서 1차 논리 사실 추출 → Prolog 적재 → 규칙 기반 추론으로 완전한 추론 추적(trace) 제공. 대화형 QA 벤치마크 ShARC: 61.1% vs. 표준 RAG 42.8%(+18pp). arXiv abs + arXiv html + Heidelberg DS Group + ResearchGate 4개 독립 출처 snippet-verified. → `02-프로덕션-아키텍처.md` 2026년 주목할 신규 연구 섹션에 추가
+  2. **RH-RAG: A Multi-Agent RAG Framework for Privacy-Constrained Long-Form Generation (arXiv:2608.01311, 2026-08-02)**: Raj Shekhar Singh (IIT Roorkee). Planner-Writer-Checker 3-에이전트 프레임워크로 기밀 내부 문서(의료·법률·금융) 대상 프라이버시 제약 장문 생성. NLI 기반 Checker가 각 클레임을 소스로 검증. arXiv abs + arXiv html 2개 독립 출처 snippet-verified. → `02-프로덕션-아키텍처.md` 보안·거버넌스 섹션에 추가
+  3. **JMIR 연구 — 한국 의료 RAG 평가 (JMIR Formative Research 2026;10:e72604, 2026-04-30)** [한국 사례]: 10.4 GB 한국어 의료 코퍼스, 487,277개 청크(의학 교과서·임상 가이드라인·학술 논문). 5개 LLM 비교 평가 및 메타데이터 필터링 효과 실증. 핵심 발견: 문서 유형 메타데이터 필터링이 한국 의료 RAG 성능의 결정적 요인. 2개 독립 WebSearch 출처 snippet-verified. → `04-산업별-사례.md` 의료 > 한국 섹션 뷰노 다음에 추가
+
+| 사례 | 도메인 | 검증 방법 | 출처 수 | 한국 여부 |
+|------|--------|-----------|---------|----------|
+| NeSy-RAG (arXiv:2608.06292) | 02-프로덕션 신규 연구 | snippet-verified | 4개 | 글로벌 (Heidelberg Univ.) |
+| RH-RAG (arXiv:2608.01311) | 02-프로덕션 보안·거버넌스 | snippet-verified | 2개 | 글로벌 (IIT Roorkee) |
+| JMIR 한국 의료 RAG (e72604) | 04-산업별 의료·한국 | snippet-verified | 2개 | ✅ 한국 |
+
+- `sources.md`에 3개 출처 추가 (## 2026-08-07 일일 누적 추가 출처 섹션 신설)
+- `02-프로덕션-아키텍처.md` NeSy-RAG(신규 연구 섹션) + RH-RAG(보안·거버넌스 섹션) 추가
+- `04-산업별-사례.md` 의료 > 한국 섹션 JMIR 연구 추가
+- `00-요약-트렌드.md` 업데이트(2026-08-07, 사례 199+건, 출처 305+)
+
 ## 2026-08-06 (일일 루프 #51)
 - **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
   1. **KoVRE: Training an Efficient Embedding Model for Korean Visual Document Retrieval (arXiv:2608.01389, 2026-08)** [한국 사례]: 경희대학교(Kyung Hee University) + 고려대학교(Korea University) 연구팀. 708,729개 한국어·영어 쿼리-페이지 쌍으로 단일 벡터 검색기(single-vector retriever) 임베딩 모델 학습. 긍정 인식 하드 네거티브 마이닝 + 리랭커 기반 지식 증류 통제 실험으로 최적 학습 레시피 도출. 한국어 시각 문서(PDF·슬라이드·표) 전용 공개 임베딩 모델. arXiv abs + arXiv html 2개 독립 출처 snippet-verified. → `02-프로덕션-아키텍처.md` 검색 섹션 LG Uplus 한국 사례 다음에 추가
