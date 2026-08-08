@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-08-08 일일 누적 추가 출처 (3건, 루프 #53)
+
+- [카카오 기술 블로그 — 더 작고 강해진 Kanana SLM 개발](https://tech.kakao.com/posts/826) — 2026-07-28 · [korea][architecture][embedding] · 카카오 Kanana LLM 조직. Kanana-2 SLM (1.3B/3B) 4종 Apache-2.0 오픈소스 공개. RAG-Gen Grounding 32.63→57.38, 한국어 토크나이저 30% 효율 개선, coding/math/FC 1.5× 향상. 온디바이스 한국어·영어 경량 SLM의 RAG 그라운딩 개선 레퍼런스 사례. (snippet-verified: 6개 이상 독립 출처)
+- [arXiv:2608.04366 — SecureCollaRAG: Combating Knowledge Corruption in Agent Systems: A Byzantine-Tolerant Secure Collaborative RAG Framework](https://arxiv.org/abs/2608.04366) — 2026-08-05 · [architecture][agentic][security][multi-agent][graph] · ACM Web Conference 2026 (DOI: 10.1145/3774904.3792200). 멀티에이전트 RAG 지식 부패 공격 방어. Distributed Knowledge Graph Construction + GNN-based Credibility Scoring(그래프 위상 기반 Byzantine 에이전트 탐지) + Verification-based Aggregation(신뢰도 가중 집계). (snippet-verified: arXiv abs + arXiv html + ACM DL DOI 3개 독립 출처)
+- [arXiv:2608.00033 — SIRIN: A Unified Toolkit for Detecting Contextual Hallucinations in Retrieval-Augmented and Memory-Grounded LLM Systems](https://arxiv.org/abs/2608.00033) — 2026-08 · [architecture][hallucination-detection][evaluation][toolkit] · Julia Belikova, Rauf Parchiev, Mikhail Filimonov, Konstantin Polev, Andrey Savchenko, Maksim Makarenko. 3가지 탐지 패러다임 통합(representation probing · uncertainty estimation · judge-style verification) + 웹 UI + pre-generation query answerability 모듈 + span-level 검사. white-box/black-box 모두 지원. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+
 ## 2026-08-07 일일 누적 추가 출처 (3건, 루프 #52)
 
 - [arXiv:2608.06292 — NeSy-RAG: Neuro-Symbolic Retrieval-Augmented Generation](https://arxiv.org/abs/2608.06292) — 2026-08-06 · [architecture] [explainability] [symbolic-reasoning] [qa] · Jonas Gann, Michael Gertz (Heidelberg University, Data and Web Science Group). Prolog 모듈 기반 신경-기호 통합 RAG. 검색 패시지에서 1차 논리 사실 추출 → Prolog 적재 → 규칙 기반 추론. 대화형 QA ShARC: 61.1% vs. 표준 RAG 42.8%. 감사 추적·설명 책임이 필요한 금융·의료·법률 도메인 적용 가능. (snippet-verified: arXiv abs + arXiv html + Heidelberg DS Group + ResearchGate 4개 독립 출처)
