@@ -1,5 +1,22 @@
 # 업데이트 로그
 
+## 2026-08-08 (일일 루프 #53)
+- **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
+  1. **카카오 Kanana SLM 개발기 (tech.kakao.com/posts/826, 2026-07-28)** [한국 사례]: 카카오 Kanana LLM 조직. 온디바이스용 한국어·영어 경량 SLM Kanana-2 1.3B/3B 4종 Apache-2.0 오픈소스 공개. RAG-Gen Grounding 32.63 → 57.38, 한국어 토크나이저 처리 효율 30% 향상. snippet-verified (6개 이상 독립 출처). → `02-프로덕션-아키텍처.md` 한국 환경 특이점 > 한국 기업·솔루션 섹션에 추가
+  2. **SecureCollaRAG (arXiv:2608.04366, ACM WWW 2026, 2026-08-05)**: "Combating Knowledge Corruption in Agent Systems: A Byzantine-Tolerant Secure Collaborative RAG Framework". 멀티에이전트 RAG에서 지식 부패 공격을 GNN 기반 신뢰도 스코어링 + Byzantine-tolerant 집계로 방어. 3 컴포넌트: Distributed Knowledge Graph Construction · GNN Credibility Scoring · Verification-based Aggregation. snippet-verified (arXiv abs + arXiv html + ACM DL DOI 3개). → `03-에이전트-툴유즈-MCP.md` DenialRAG 다음에 추가
+  3. **SIRIN (arXiv:2608.00033, 2026-08)**: "SIRIN: A Unified Toolkit for Detecting Contextual Hallucinations in Retrieval-Augmented and Memory-Grounded LLM Systems". Julia Belikova 외. 3가지 탐지 패러다임(representation probing · uncertainty estimation · judge-style verification) 통합 툴킷 + 웹 UI. pre-generation query answerability 모듈·span-level 검사·white-box/black-box 지원. snippet-verified (arXiv abs + arXiv html 2개). → `02-프로덕션-아키텍처.md` GASP 다음에 추가
+
+| 사례 | 도메인 | 검증 방법 | 출처 수 | 한국 여부 |
+|------|--------|-----------|---------|----------|
+| 카카오 Kanana SLM (tech.kakao.com/posts/826) | 02-프로덕션 한국 기업·솔루션 | snippet-verified | 6개 이상 | ✅ 한국 (카카오) |
+| SecureCollaRAG (arXiv:2608.04366) | 03-에이전트 보안/공격 | snippet-verified | 3개 | 글로벌 (ACM WWW 2026) |
+| SIRIN (arXiv:2608.00033) | 02-프로덕션 환각 탐지 | snippet-verified | 2개 | 글로벌 |
+
+- `sources.md`에 3개 출처 추가 (## 2026-08-08 일일 누적 추가 출처 섹션 신설)
+- `02-프로덕션-아키텍처.md` SIRIN(환각 탐지 섹션 GASP 다음) + Kanana SLM(한국 기업·솔루션 섹션) 추가
+- `03-에이전트-툴유즈-MCP.md` SecureCollaRAG(DenialRAG 다음) 추가
+- `00-요약-트렌드.md` 업데이트(2026-08-08, 사례 202+건, 출처 308+)
+
 ## 2026-08-07 (일일 루프 #52)
 - **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
   1. **NeSy-RAG: Neuro-Symbolic Retrieval-Augmented Generation (arXiv:2608.06292, 2026-08-06)**: Heidelberg University Data and Web Science Group (Jonas Gann, Michael Gertz). Prolog 모듈 기반 신경-기호 통합 RAG. 검색 패시지에서 1차 논리 사실 추출 → Prolog 적재 → 규칙 기반 추론으로 완전한 추론 추적(trace) 제공. 대화형 QA 벤치마크 ShARC: 61.1% vs. 표준 RAG 42.8%(+18pp). arXiv abs + arXiv html + Heidelberg DS Group + ResearchGate 4개 독립 출처 snippet-verified. → `02-프로덕션-아키텍처.md` 2026년 주목할 신규 연구 섹션에 추가

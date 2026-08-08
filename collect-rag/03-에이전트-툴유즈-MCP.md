@@ -559,6 +559,19 @@ RAG 시스템에 대한 기존 단일 문서 포이즈닝 공격은 독성 정�
 - **저자**: Abay Zhurekbay, Tao Liu, Fan Li
 - **출처**: [arXiv:2608.02678 — DenialRAG: Single-Document RAG Poisoning via Embedded Parametric Denial](https://arxiv.org/abs/2608.02678) (2026-08-02, ACSAC 2026 제출, snippet-verified: arXiv abs + arXiv html + redteams.ai 3개 독립 출처)
 
+### SecureCollaRAG — 멀티에이전트 RAG 지식 부패 방어: Byzantine-Tolerant 보안 협업 프레임워크 (arXiv:2608.04366, ACM WWW 2026)
+
+멀티에이전트 RAG 시스템에서 일부 에이전트가 오염된 지식을 제공하는 **지식 부패(knowledge corruption)** 공격은 기존 단일 에이전트 방어 기법으로 대응하기 어렵다. SecureCollaRAG는 Byzantine-tolerant 방식으로 에이전트 협업 중 지식 부패를 방어하는 통합 프레임워크다.
+
+핵심 기여:
+- **Distributed Knowledge Graph Construction**: 다수 에이전트가 검색한 지식을 분산 방식으로 지식 그래프에 구조화하여 전역 지식 표현 구축.
+- **GNN-based Credibility Scoring**: 그래프 위상 정보를 활용하는 GNN(Graph Neural Network)으로 각 에이전트·문서의 신뢰도 점수 산출. 그래프 구조적 패턴에서 Byzantine 에이전트를 탐지.
+- **Verification-based Aggregation**: 신뢰도 기반 가중 집계로 오염 문서를 필터링하고 최종 응답 생성에 신뢰 가능한 지식만 반영.
+
+- **논문**: "Combating Knowledge Corruption in Agent Systems: A Byzantine-Tolerant Secure Collaborative RAG Framework"
+- **저자**: (ACM WWW 2026 DOI: 10.1145/3774904.3792200)
+- **출처**: [arXiv:2608.04366 — SecureCollaRAG: Combating Knowledge Corruption in Agent Systems](https://arxiv.org/abs/2608.04366) (2026-08-05, ACM Web Conference 2026 발표, snippet-verified: arXiv abs + arXiv html + ACM DL DOI 3개 독립 출처)
+
 ---
 
 ## 이 도메인의 공통 패턴
