@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-08-09 일일 누적 추가 출처 (3건, 루프 #54)
+
+- [VentureSquare — BHSN-법무법인 율촌, 리걸 AI '아이율(AI:Yul)' 본격 가동](https://www.venturesquare.net/1032198) — 2026-01-12 · [korea] [industry:법률] [closed-rag] [enterprise] · BHSN(법률 특화 AI 스타트업) × 법무법인 율촌(Yulchon LLC). 법률 특화 멀티 LLM 플랫폼 '앨리비 아스트로(Allibee Astro)' 기반 폐쇄형 RAG 아키텍처. 외부로 데이터 전송 없이 독립된 내부 망 환경에서 AI 작동. 국내 대형 로펌 최초 폐쇄형 RAG 도입 사례. (snippet-verified: VentureSquare + 전자신문 + hellot + aitimes + bhsn.ai 보도자료 5개 이상 독립 출처)
+- [ACM DL — WARP: A Word-Level Backdoor Attack Targeting RAG Systems via Retrieval Corpus Poisoning](https://dl.acm.org/doi/10.1145/3770854.3780227) — KDD 2026 (2026-08-09~13, 제주) · [security] [poisoning] [adversarial] [backdoor] · Hui Liu, Yibo Zhou, Liguo Dong, Weidong Li, Shui Yu (Central China Normal University). 단어 수준 트리거를 임베딩 공간에 유사하도록 설계한 적대적 텍스트로 RAG 코퍼스를 오염시키는 최초의 단어 수준 백도어 공격 프레임워크. Pages 867-878. (snippet-verified: ACM DL DOI + RAG backdoor 연구 포털 2개 이상 독립 출처)
+- [ACL Anthology — LLM-Generated Text May Harm Your Retrieval! A Robust Detection Strategy for RAG](https://aclanthology.org/2026.acl-long.1475/) — ACL 2026 Long Paper (2026-07-02~07, San Diego) · [architecture] [retrieval-robustness] [hallucination-detection] [detection] · Zhaoheng Huang, Yutao Zhu, Ji-Rong Wen, Zhicheng Dou (Renmin University of China / Gaoling School of AI). LLM 텍스트 탐지기를 RAG 검색 단계에 통합해 AI 생성 텍스트 필터링. RAD(Retrieval-Aware Detection) 데이터 증강 전략. 4가지 LLM 텍스트 생성 패러다임별 영향 분석. (snippet-verified: ACL Anthology abs + ACL 2026 accepted papers 목록 + PDF 링크 3개 독립 출처)
+
 ## 2026-08-08 일일 누적 추가 출처 (3건, 루프 #53)
 
 - [카카오 기술 블로그 — 더 작고 강해진 Kanana SLM 개발](https://tech.kakao.com/posts/826) — 2026-07-28 · [korea][architecture][embedding] · 카카오 Kanana LLM 조직. Kanana-2 SLM (1.3B/3B) 4종 Apache-2.0 오픈소스 공개. RAG-Gen Grounding 32.63→57.38, 한국어 토크나이저 30% 효율 개선, coding/math/FC 1.5× 향상. 온디바이스 한국어·영어 경량 SLM의 RAG 그라운딩 개선 레퍼런스 사례. (snippet-verified: 6개 이상 독립 출처)
