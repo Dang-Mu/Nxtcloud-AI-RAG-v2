@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-08-09 (일일 루프 #54)
+- **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
+  1. **법무법인 율촌 × BHSN — 폐쇄형 RAG 리걸 AI '아이율(AI:Yul)' 전사 가동 (2026-01-12)** [한국 사례]: BHSN(법률 특화 AI 스타트업) × 법무법인 율촌(Yulchon LLC, 국내 4대 로펌). BHSN의 법률 특화 멀티 LLM 플랫폼 '앨리비 아스트로(Allibee Astro)' 기반 폐쇄형 RAG 아키텍처. 외부로 데이터 전송 없이 독립된 내부 망 환경에서 AI 작동, 대화 내용 AI 학습 미사용. 기존 사내 KM 시스템과 직접 연동. **국내 대형 로펌 최초 폐쇄형 RAG 도입 사례**. snippet-verified (VentureSquare + 전자신문 + hellot + aitimes + bhsn.ai 보도자료 5개 이상 독립 출처). → `04-산업별-사례.md` 법률 > 한국 섹션 미디어젠 다음에 추가
+  2. **WARP: A Word-Level Backdoor Attack Targeting RAG Systems via Retrieval Corpus Poisoning (KDD 2026, ACM DL: 10.1145/3770854.3780227)**: Hui Liu, Yibo Zhou, Liguo Dong, Weidong Li, Shui Yu (Central China Normal University). 단어 수준 트리거를 임베딩 공간에 유사하도록 설계한 적대적 텍스트로 RAG 코퍼스를 오염시키는 최초의 단어 수준 백도어 공격 프레임워크. 기존 문서 단위 오염 대비 탐지 어려움. KDD 2026(2026-08-09~13, 제주, Pages 867-878). snippet-verified (ACM DL DOI + RAG backdoor 연구 포털 2개 이상 독립 출처). → `03-에이전트-툴유즈-MCP.md` SecureCollaRAG 다음에 추가
+  3. **"LLM-Generated Text May Harm Your Retrieval! A Robust Detection Strategy for RAG" (ACL 2026 Long, aclanthology:2026.acl-long.1475)**: Zhaoheng Huang, Yutao Zhu, Ji-Rong Wen, Zhicheng Dou (Renmin University of China / Gaoling School of AI). LLM 텍스트 탐지기를 RAG 파이프라인 검색 단계에 통합해 AI 생성 텍스트 필터링하는 강건화 전략. RAD(Retrieval-Aware Detection) 데이터 증강 전략. 4가지 LLM 텍스트 생성 패러다임(완전 생성·부분 생성·패러프레이즈·후편집)별 영향 분석. snippet-verified (ACL Anthology abs + ACL 2026 accepted papers 목록 + PDF 링크 3개 독립 출처). → `02-프로덕션-아키텍처.md` SIRIN 다음에 추가
+
+| 사례 | 도메인 | 검증 방법 | 출처 수 | 한국 여부 |
+|------|--------|-----------|---------|----------|
+| 법무법인 율촌 × BHSN 아이율 (2026-01-12) | 04-산업별 법률·한국 | snippet-verified | 5개 이상 | ✅ 한국 (BHSN×율촌) |
+| WARP (KDD 2026, ACM DL: 10.1145/3770854.3780227) | 03-에이전트 보안/공격 | snippet-verified | 2개 이상 | 글로벌 (Central China Normal Univ.) |
+| LLM-Generated Text Harms Retrieval (ACL 2026, aclanthology:1475) | 02-프로덕션 검색 강건성 | snippet-verified | 3개 | 글로벌 (Renmin Univ. of China) |
+
+- `sources.md`에 3개 출처 추가 (## 2026-08-09 일일 누적 추가 출처 섹션 신설)
+- `04-산업별-사례.md` 법률 > 한국 섹션에 아이율 추가
+- `03-에이전트-툴유즈-MCP.md` SecureCollaRAG 다음에 WARP 추가
+- `02-프로덕션-아키텍처.md` SIRIN 다음에 LLM-Generated Text Harms Retrieval 추가
+- `00-요약-트렌드.md` 업데이트(2026-08-09, 사례 205+건, 출처 311+)
+
 ## 2026-08-08 (일일 루프 #53)
 - **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
   1. **카카오 Kanana SLM 개발기 (tech.kakao.com/posts/826, 2026-07-28)** [한국 사례]: 카카오 Kanana LLM 조직. 온디바이스용 한국어·영어 경량 SLM Kanana-2 1.3B/3B 4종 Apache-2.0 오픈소스 공개. RAG-Gen Grounding 32.63 → 57.38, 한국어 토크나이저 처리 효율 30% 향상. snippet-verified (6개 이상 독립 출처). → `02-프로덕션-아키텍처.md` 한국 환경 특이점 > 한국 기업·솔루션 섹션에 추가

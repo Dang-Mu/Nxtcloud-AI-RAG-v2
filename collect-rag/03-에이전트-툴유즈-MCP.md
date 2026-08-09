@@ -572,6 +572,16 @@ RAG 시스템에 대한 기존 단일 문서 포이즈닝 공격은 독성 정�
 - **저자**: (ACM WWW 2026 DOI: 10.1145/3774904.3792200)
 - **출처**: [arXiv:2608.04366 — SecureCollaRAG: Combating Knowledge Corruption in Agent Systems](https://arxiv.org/abs/2608.04366) (2026-08-05, ACM Web Conference 2026 발표, snippet-verified: arXiv abs + arXiv html + ACM DL DOI 3개 독립 출처)
 
+### WARP — 검색 코퍼스 오염 기반 단어 수준 백도어 공격 (KDD 2026, ACM DL: 10.1145/3770854.3780227)
+
+RAG 시스템에 대한 기존 코퍼스 오염 공격은 독성 문서 단위(문서 전체)를 삽입하는 방식에 한정되었다. WARP는 **단어 수준(word-level)**에서 트리거를 임베딩 공간에 유사하도록 설계한 적대적 텍스트를 생성해 RAG의 검색 코퍼스를 오염시키는 **최초의 단어 수준 백도어 공격** 프레임워크다.
+
+- **공격 메커니즘**: 트리거 단어와 임베딩 공간에서 유사한 단어들을 식별한 뒤, 공격자 제어 오답을 포함하는 적대적 텍스트를 검색 코퍼스에 삽입. 사용자가 트리거 포함 쿼리를 입력하면 해당 적대적 문서가 최상위 검색 결과로 올라가 LLM이 오답을 생성.
+- **기여**: 단어 수준 텍스트 편집만으로 검색기를 조작할 수 있음을 최초 실증. 기존 문서 단위 오염 대비 삽입 흔적이 적어 탐지가 어려움. 검색 코퍼스 접근 제어가 없는 오픈 도메인 RAG의 구조적 취약점 규명.
+- **논문**: "WARP: A Word-Level Backdoor Attack Targeting RAG Systems via Retrieval Corpus Poisoning" — KDD 2026 (32nd ACM SIGKDD, 제주, Aug 9-13), Pages 867-878
+- **저자**: Hui Liu, Yibo Zhou, Liguo Dong, Weidong Li, Shui Yu (Central China Normal University)
+- **출처**: [ACM DL — WARP: A Word-Level Backdoor Attack Targeting RAG Systems](https://dl.acm.org/doi/10.1145/3770854.3780227) (KDD 2026, 2026-08-09~13 발표, snippet-verified: ACM DL DOI + RAG backdoor 연구 포털 2개 이상 독립 출처)
+
 ---
 
 ## 이 도메인의 공통 패턴
