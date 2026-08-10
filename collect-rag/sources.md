@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-08-10 일일 누적 추가 출처 (3건, 루프 #55)
+
+- [arXiv:2608.02011 — Before Reasoning Fails: Pre-Evidence Procedural Failures in Agentic RAG](https://arxiv.org/abs/2608.02011) — 2026-08-03 · [korea] [agentic] [evaluation] [failure-mode] · Daeyoung Roh (Independent Researcher), Donghee Han (KAIST, 한국). 에이전틱 RAG 실패를 "사전-증거 규율 실패"와 "사후-골드-읽기 실패"로 분해. 12,000 paired trajectory 분석. Read-Gate 경량 런타임 정책으로 LLM-Acc +14.9~19.9 포인트. (snippet-verified: arXiv abs + arXiv html + AI 분석 블로그 3개 이상 독립 출처)
+- [arXiv:2608.02009 — HALT: Verification-Aware Stopping for Retrieval-Augmented Search Agents](https://arxiv.org/abs/2608.02009) — 2026-08-03 · [korea] [agentic] [efficiency] [stopping-criterion] · Daeyoung Roh (Independent Researcher), Donghee Han (KAIST, 한국). RAG 검색 중단 기준을 생성기 신뢰도에서 증거 커버리지로 전환. 3개 멀티홉 QA 벤치마크에서 중복 검색 감소 + EM 보존. Before Reasoning Fails(2608.02011)의 동반 논문. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+- [arXiv:2608.06672 — TA-RAG: Tone Awareness as a Design Imperative for Retrieval-Augmented Generation](https://arxiv.org/abs/2608.06672) — 2026-08-07 · [architecture] [design] [tone] [user-experience] · Yong-Bin Kang, Anthony McCosker (Swinburne University of Technology, 호주). 검색 문서의 커뮤니케이션 스타일이 RAG 출력 어조를 지배해 사용자 톤 지시를 무력화하는 "컨텍스트 분리(contextual decoupling)" 현상 규명. 톤-인식 검색 레이어 설계 원칙 제안. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
 ## 2026-08-09 일일 누적 추가 출처 (3건, 루프 #54)
 
 - [VentureSquare — BHSN-법무법인 율촌, 리걸 AI '아이율(AI:Yul)' 본격 가동](https://www.venturesquare.net/1032198) — 2026-01-12 · [korea] [industry:법률] [closed-rag] [enterprise] · BHSN(법률 특화 AI 스타트업) × 법무법인 율촌(Yulchon LLC). 법률 특화 멀티 LLM 플랫폼 '앨리비 아스트로(Allibee Astro)' 기반 폐쇄형 RAG 아키텍처. 외부로 데이터 전송 없이 독립된 내부 망 환경에서 AI 작동. 국내 대형 로펌 최초 폐쇄형 RAG 도입 사례. (snippet-verified: VentureSquare + 전자신문 + hellot + aitimes + bhsn.ai 보도자료 5개 이상 독립 출처)

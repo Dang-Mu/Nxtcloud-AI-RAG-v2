@@ -582,6 +582,31 @@ RAG 시스템에 대한 기존 코퍼스 오염 공격은 독성 문서 단위(�
 - **저자**: Hui Liu, Yibo Zhou, Liguo Dong, Weidong Li, Shui Yu (Central China Normal University)
 - **출처**: [ACM DL — WARP: A Word-Level Backdoor Attack Targeting RAG Systems](https://dl.acm.org/doi/10.1145/3770854.3780227) (KDD 2026, 2026-08-09~13 발표, snippet-verified: ACM DL DOI + RAG backdoor 연구 포털 2개 이상 독립 출처)
 
+### Before Reasoning Fails — 에이전틱 RAG의 사전-증거 절차적 실패 진단 (arXiv:2608.02011, 2026-08-03) [한국 사례]
+
+에이전틱 RAG 평가 연구의 대부분은 최종 답변의 정확도에 집중하지만, 정답 추론이 시작되기 이전 단계에서 에이전트 궤적 자체가 절차적으로 실패하는 경우를 체계적으로 분석한 연구가 없었다. Daeyoung Roh(Independent Researcher)와 Donghee Han(KAIST)은 이 "사전-증거(pre-evidence) 절차적 실패"를 독립적 실패 유형으로 규명하고 진단 방법론을 제시했다.
+
+- **핵심 발견**:
+  1. 에이전틱 RAG 실패를 두 유형으로 분해 — **사전-증거 규율 실패(pre-evidence discipline failure)**: 검색 후 증거를 읽지 않고 최종화; **사후-골드-읽기 실패(post-gold-read failure)**: 올바른 증거를 읽었으나 추론 실패.
+  2. HotpotQA·2WikiMultiHopQA·MuSiQue 3개 벤치마크 12,000개 paired trajectory 분석 결과, 두 실패 유형은 대체로 비중복(non-redundant) — 동시 발생(both-trigger) 비율 11.2~13.1%(regex·spaCy entity extractor 기준).
+  3. **Read-Gate**: 최소 런타임 불변 제약 — "search 후, 최종화(finalization) 전에 반드시 read"를 강제하는 경량 정책. Read-Gate 강제 시 읽기를 건너뛰었을 궤적에서 LLM-Acc **+14.9~19.9 포인트**, 전체 최소 추론 셀에서 **+3.2~9.4 포인트** 향상.
+- **의의**: 에이전틱 RAG 실패 진단을 "답변 오류"가 아닌 "궤적의 절차 준수 여부"로 재정의. Read-Gate는 기존 에이전트를 수정하지 않고 외부 정책으로 적용 가능. 동반 논문 HALT(arXiv:2608.02009)는 동일 저자가 검색 중단 기준을 최적화하는 해결책으로 제안.
+- **저자**: Daeyoung Roh (Independent Researcher), Donghee Han (KAIST — Korea Advanced Institute of Science and Technology, 한국)
+- **출처**: [arXiv:2608.02011 — Before Reasoning Fails: Pre-Evidence Procedural Failures in Agentic RAG](https://arxiv.org/abs/2608.02011) (2026-08-03, snippet-verified: arXiv abs + arXiv html + AI 분석 블로그 3개 이상 독립 출처)
+
+### HALT — 에이전틱 검색의 증거-커버리지 기반 중단 정책 (arXiv:2608.02009, 2026-08-03) [한국 사례]
+
+멀티홉 QA를 수행하는 RAG 검색 에이전트는 필요한 증거가 이미 누적된 이후에도 검색을 계속 반복해 비용과 지연을 높이고 노이즈를 추가하는 "과잉 검색(over-retrieval)" 문제가 있다. 기존 중단 기준은 생성기의 신뢰도(generator confidence)에 의존했으나, HALT는 이를 **증거 커버리지(evidence coverage)** 기반으로 전환한다.
+
+- **핵심 설계**: 질문에서 필요한 홉 클레임(hop claims)을 생성한 뒤, 누적 증거가 각 클레임을 지지할 수 있을 때 검색을 중단하는 경량 검증-인식(verification-aware) 정책. 검색 에이전트 내부를 수정하지 않아 플러그인 방식으로 적용 가능.
+- **두 가지 평가 설정**:
+  1. **배포 가능 설정**: 질문에서 직접 홉 클레임 생성 — 실용적이나 작은 절감.
+  2. **진단 상한선**: 골드(gold) 지지 사실 주석 활용 — 중복 검색 제거 최대치 확인.
+- **결과**: HotpotQA·2WikiMultiHopQA·MuSiQue 3개 멀티홉 QA 벤치마크에서 중복 검색 감소 + Exact Match(EM) 성능 보존. 동반 논문 Before Reasoning Fails(arXiv:2608.02011, 같은 저자)의 진단에 대응하는 해결책.
+- **의의**: RAG 에이전트 신뢰성을 "정답률" 외에 "검색 효율성"이라는 운영 메트릭으로 확장. 과잉 검색이 비용·지연·노이즈 모두에 영향을 미치는 프로덕션 환경에서 즉각 적용 가능.
+- **저자**: Daeyoung Roh (Independent Researcher), Donghee Han (KAIST, 한국)
+- **출처**: [arXiv:2608.02009 — HALT: Verification-Aware Stopping for Retrieval-Augmented Search Agents](https://arxiv.org/abs/2608.02009) (2026-08-03, snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
 ---
 
 ## 이 도메인의 공통 패턴
