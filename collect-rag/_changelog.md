@@ -1,5 +1,22 @@
 # 업데이트 로그
 
+## 2026-08-10 (일일 루프 #55)
+- **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 2건 포함)
+  1. **Before Reasoning Fails: Pre-Evidence Procedural Failures in Agentic RAG (arXiv:2608.02011, 2026-08-03)** [한국 사례]: Daeyoung Roh(Independent Researcher) × Donghee Han(KAIST). 에이전틱 RAG 실패를 "사전-증거 규율 실패(pre-evidence discipline failure)"와 "사후-골드-읽기 실패(post-gold-read failure)"로 분해. 12,000 paired trajectory(HotpotQA·2WikiMultiHopQA·MuSiQue) 분석. 두 실패 유형은 대체로 비중복(both-trigger 비율 11.2~13.1%). Read-Gate 경량 런타임 정책으로 읽기 건너뛴 궤적에서 LLM-Acc +14.9~19.9 포인트. snippet-verified (arXiv abs + arXiv html + AI 분석 블로그 3개 이상 독립 출처). → `03-에이전트-툴유즈-MCP.md` WARP 다음에 추가
+  2. **HALT: Verification-Aware Stopping for Retrieval-Augmented Search Agents (arXiv:2608.02009, 2026-08-03)** [한국 사례]: 동일 저자(KAIST Donghee Han). RAG 검색 에이전트 중단 기준을 생성기 신뢰도에서 **증거 커버리지(evidence coverage)**로 전환하는 HALT 경량 검증-인식 정책. 홉 클레임을 질문에서 생성→누적 증거가 모든 클레임 지지 시 검색 중단. 3개 멀티홉 QA 벤치마크에서 중복 검색 감소 + EM 보존. Before Reasoning Fails(2608.02011)의 동반 논문. snippet-verified (arXiv abs + arXiv html 2개 이상 독립 출처). → `03-에이전트-툴유즈-MCP.md` Before Reasoning Fails 다음에 추가
+  3. **TA-RAG: Tone Awareness as a Design Imperative for Retrieval-Augmented Generation (arXiv:2608.06672, 2026-08-07)**: Yong-Bin Kang, Anthony McCosker (Swinburne University of Technology, 호주). 검색된 문서의 커뮤니케이션 스타일이 RAG 출력 어조를 지배해 사용자 톤 지시를 무력화하는 **"컨텍스트 분리(contextual decoupling)"** 현상 규명. 단순 프롬프트로는 해결 불가한 구조적 결함, 톤-인식 검색 레이어 통합 필요. 콜센터·의료·법률 등 수신자 맞춤 어조가 핵심인 도메인에서 설계 원칙으로 확산 가능. snippet-verified (arXiv abs + arXiv html 2개 이상 독립 출처). → `02-프로덕션-아키텍처.md` LLM-Generated Text Harms Retrieval 다음에 추가
+
+| 사례 | 도메인 | 검증 방법 | 출처 수 | 한국 여부 |
+|------|--------|-----------|---------|----------|
+| Before Reasoning Fails (arXiv:2608.02011, 2026-08-03) | 03-에이전트 실패 모드 | snippet-verified | 3개 이상 | ✅ 한국 (KAIST Donghee Han) |
+| HALT (arXiv:2608.02009, 2026-08-03) | 03-에이전트 효율화 | snippet-verified | 2개 이상 | ✅ 한국 (KAIST Donghee Han) |
+| TA-RAG (arXiv:2608.06672, 2026-08-07) | 02-프로덕션 설계 원칙 | snippet-verified | 2개 이상 | 글로벌 (Swinburne, 호주) |
+
+- `sources.md`에 3개 출처 추가 (## 2026-08-10 일일 누적 추가 출처 섹션 신설)
+- `03-에이전트-툴유즈-MCP.md` WARP 다음에 Before Reasoning Fails + HALT 추가
+- `02-프로덕션-아키텍처.md` LLM-Generated Text 다음에 TA-RAG 추가, 헤더 날짜 2026-08-10 업데이트
+- `00-요약-트렌드.md` 업데이트(2026-08-10, 사례 208+건, 출처 314+)
+
 ## 2026-08-09 (일일 루프 #54)
 - **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
   1. **법무법인 율촌 × BHSN — 폐쇄형 RAG 리걸 AI '아이율(AI:Yul)' 전사 가동 (2026-01-12)** [한국 사례]: BHSN(법률 특화 AI 스타트업) × 법무법인 율촌(Yulchon LLC, 국내 4대 로펌). BHSN의 법률 특화 멀티 LLM 플랫폼 '앨리비 아스트로(Allibee Astro)' 기반 폐쇄형 RAG 아키텍처. 외부로 데이터 전송 없이 독립된 내부 망 환경에서 AI 작동, 대화 내용 AI 학습 미사용. 기존 사내 KM 시스템과 직접 연동. **국내 대형 로펌 최초 폐쇄형 RAG 도입 사례**. snippet-verified (VentureSquare + 전자신문 + hellot + aitimes + bhsn.ai 보도자료 5개 이상 독립 출처). → `04-산업별-사례.md` 법률 > 한국 섹션 미디어젠 다음에 추가
