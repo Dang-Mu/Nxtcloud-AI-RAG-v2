@@ -1,5 +1,20 @@
 # 업데이트 로그
 
+## 2026-08-11 (일일 루프 #56)
+- **신규 사례 2건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 0건 — 발굴 시도 후 폐기)
+  1. **EvoTrustRAG: Evolution-Aware Conflict Attribution and Evidence Handling for Reliable Retrieval-Augmented Generation (arXiv:2608.07933, 2026-08-08)**: Xi Nie, Hongwei Li, Shenghao Wu, Wenshu Fan, Qiyang Song, Wenbo Jiang. RAG 충돌 해소 연구에서 최초로 "충돌 기원 귀인(Conflict Origin Attribution)"을 독립 서브태스크로 정의 — "어느 사실이 맞는가" 대신 "왜 충돌이 발생했는가"를 식별. 충돌 증거 그래프(스팬 노드 + 시간·보조 관계 엣지) 구성 → 진화·조작 가설 점수화 → 전역 일관성 투영. 훈련 불필요. 귀인 매크로-F1 72.2%→79.1%, 조율 공격 오류율 31.2%→16% 감소. snippet-verified (arXiv abs + arXiv html 2개 이상 독립 출처). → `02-프로덕션-아키텍처.md` DCCD 다음에 추가
+  2. **SAGE: SLO-Aware Adaptive Retrieval for Production RAG Systems (arXiv:2608.08237, IEEE CoDIT 2026, 2026-08-08)**: Muhammad Faizan Raza, Shuo (Luna) Yang, Satish Mahadevan Srinivasan. 프로덕션 RAG의 고정 k 검색이 꼬리 지연 SLO와 비용 SLO를 동시에 충족할 수 없는 문제를 오프라인 모방 학습 기반 경량 정책으로 해결. 쿼리별 점수 분포·랭크 간격·어휘 신호만 사용해 추가 LLM 호출 없이 동적 k 결정. P95 5초 SLO 준수율 95%(최강 정적 기준선 30%), P95 지연 36% 감소, 검색 비용 51% 절감. snippet-verified (arXiv abs + arXiv html + Scribd 3개 이상 독립 출처). → `02-프로덕션-아키텍처.md` CA-RAG 다음에 추가
+
+| 사례 | 도메인 | 검증 방법 | 출처 수 | 한국 여부 |
+|------|--------|-----------|---------|----------|
+| EvoTrustRAG (arXiv:2608.07933, 2026-08-08) | 02-프로덕션 충돌 해소 | snippet-verified | 2개 | 글로벌 |
+| SAGE (arXiv:2608.08237, IEEE CoDIT 2026, 2026-08-08) | 02-프로덕션 비용·지연 | snippet-verified | 3개 이상 | 글로벌 |
+
+- **한국 사례 탐색 결과**: 데이터메티카(enetnews.co.kr 2026-08-11 보도, 선박·항만 RAG LLM) 발굴 → 독립 출처 1개(enetnews.co.kr 단독 보도)로 snippet-verified 기준(최소 2개 독립 출처) 미달 → 폐기
+- `sources.md`에 2개 출처 추가 (## 2026-08-11 일일 누적 추가 출처 섹션 신설)
+- `02-프로덕션-아키텍처.md` 헤더 날짜 2026-08-11 업데이트 + EvoTrustRAG(DCCD 다음) + SAGE(CA-RAG 다음) 추가
+- `00-요약-트렌드.md` 업데이트(2026-08-11, 사례 210+건, 출처 316+)
+
 ## 2026-08-10 (일일 루프 #55)
 - **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 2건 포함)
   1. **Before Reasoning Fails: Pre-Evidence Procedural Failures in Agentic RAG (arXiv:2608.02011, 2026-08-03)** [한국 사례]: Daeyoung Roh(Independent Researcher) × Donghee Han(KAIST). 에이전틱 RAG 실패를 "사전-증거 규율 실패(pre-evidence discipline failure)"와 "사후-골드-읽기 실패(post-gold-read failure)"로 분해. 12,000 paired trajectory(HotpotQA·2WikiMultiHopQA·MuSiQue) 분석. 두 실패 유형은 대체로 비중복(both-trigger 비율 11.2~13.1%). Read-Gate 경량 런타임 정책으로 읽기 건너뛴 궤적에서 LLM-Acc +14.9~19.9 포인트. snippet-verified (arXiv abs + arXiv html + AI 분석 블로그 3개 이상 독립 출처). → `03-에이전트-툴유즈-MCP.md` WARP 다음에 추가

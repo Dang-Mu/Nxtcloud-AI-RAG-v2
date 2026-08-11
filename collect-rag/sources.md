@@ -1,5 +1,10 @@
 # 출처 목록
 
+## 2026-08-11 일일 누적 추가 출처 (2건, 루프 #56)
+
+- [arXiv:2608.07933 — EvoTrustRAG: Evolution-Aware Conflict Attribution and Evidence Handling for Reliable Retrieval-Augmented Generation](https://arxiv.org/abs/2608.07933) — 2026-08-08 · [architecture] [conflict-resolution] [reliability] [trust] · Xi Nie, Hongwei Li, Shenghao Wu, Wenshu Fan, Qiyang Song, Wenbo Jiang. RAG 충돌을 진화·조작·불확실성으로 기원 분류하는 새 서브태스크 정의. 충돌 증거 그래프 + 가설 점수화로 훈련 불필요. 귀인 매크로-F1 72.2%→79.1%, 조율 공격 오류 31.2%→16%. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+- [arXiv:2608.08237 — SAGE: SLO-Aware Adaptive Retrieval for Production RAG Systems](https://arxiv.org/abs/2608.08237) — 2026-08-08 · [production] [latency] [slo] [adaptive-retrieval] [cost] · Muhammad Faizan Raza, Shuo (Luna) Yang, Satish Mahadevan Srinivasan (IEEE CoDIT 2026, 바리, 이탈리아, pp. 169-175). 고정 k 대신 쿼리별 SLO 인식 동적 k 선택. 모방 학습 기반 경량 정책. P95 5초 SLO 준수율 95%(vs. 정적 30%), P95 지연 -36%, 검색 비용 -51%. (snippet-verified: arXiv abs + arXiv html + Scribd 3개 이상 독립 출처)
+
 ## 2026-08-10 일일 누적 추가 출처 (3건, 루프 #55)
 
 - [arXiv:2608.02011 — Before Reasoning Fails: Pre-Evidence Procedural Failures in Agentic RAG](https://arxiv.org/abs/2608.02011) — 2026-08-03 · [korea] [agentic] [evaluation] [failure-mode] · Daeyoung Roh (Independent Researcher), Donghee Han (KAIST, 한국). 에이전틱 RAG 실패를 "사전-증거 규율 실패"와 "사후-골드-읽기 실패"로 분해. 12,000 paired trajectory 분석. Read-Gate 경량 런타임 정책으로 LLM-Acc +14.9~19.9 포인트. (snippet-verified: arXiv abs + arXiv html + AI 분석 블로그 3개 이상 독립 출처)
