@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-08-12 일일 누적 추가 출처 (3건, 루프 #57)
+
+- [arXiv:2608.07458 — CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG](https://arxiv.org/abs/2608.07458) — 2026-08-07 · [korea] [architecture] [inference-efficiency] [kv-cache] [long-context] · Gyuwan Kim (UC Santa Barbara), Cheoneum Park (한밭대학교 Hanbat National University, 한국), Tao Yang (UC Santa Barbara). 청크 수준 KV 캐시 재사용의 정보 중복·노이즈 한계를 너겟(information nugget) 수준 캐시 분해·재조합으로 해소. 낮은 프리필 레이턴시 제약 하 정확도-효율 파레토 프런티어 최적화. (snippet-verified: arXiv abs + arXiv html + Eye on AI 3개 이상 독립 출처)
+- [arXiv:2602.09319 — Benchmarking Knowledge-Extraction Attack and Defense on Retrieval-Augmented Generation](https://arxiv.org/abs/2602.09319) — KDD 2026 (2026-08-09~13, 제주) · [security] [attack] [benchmark] [privacy] [knowledge-extraction] · Zhisheng Qi, Utkarsh Sahu, Li Ma, Haoyu Han, Ryan Rossi, Franck Dernoncourt 외. RAG 지식 추출 공격·방어 최초 체계적 벤치마크. 다양한 공격·방어 전략, 검색 임베딩 모델, 오픈/클로즈드 소스 생성기를 표준화된 프로토콜로 다국어·복수 데이터셋 평가. IP 도용·프라이버시 유출 위험 정량화. (snippet-verified: arXiv abs + arXiv html v3 + Huggingface Papers + liner.com 4개 이상 독립 출처)
+- [arXiv:2608.02195 — MEGRAG: Multi-Granular Evidence Graphs for Answer-Aware Multi-Hop RAG](https://arxiv.org/abs/2608.02195) — 2026-08-03 · [architecture] [multi-hop] [evidence-graph] [retrieval] · Weidong Bao, Yingying Sun, Jun Yang, Yilin Wang, Zili Wei, Yubin Bao, Fangling Leng, Minghe Yu, Tiancheng Zhang, Ge Yu. 멀티홉 QA RAG에서 단일 세분도 증거 문제와 오류 누적을 교차 세분도 인덱스(패시지→문장→트리플)와 답변 인식 동적 증거 선택으로 해소. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+
 ## 2026-08-11 일일 누적 추가 출처 (2건, 루프 #56)
 
 - [arXiv:2608.07933 — EvoTrustRAG: Evolution-Aware Conflict Attribution and Evidence Handling for Reliable Retrieval-Augmented Generation](https://arxiv.org/abs/2608.07933) — 2026-08-08 · [architecture] [conflict-resolution] [reliability] [trust] · Xi Nie, Hongwei Li, Shenghao Wu, Wenshu Fan, Qiyang Song, Wenbo Jiang. RAG 충돌을 진화·조작·불확실성으로 기원 분류하는 새 서브태스크 정의. 충돌 증거 그래프 + 가설 점수화로 훈련 불필요. 귀인 매크로-F1 72.2%→79.1%, 조율 공격 오류 31.2%→16%. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)

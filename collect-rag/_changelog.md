@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-08-12 (일일 루프 #57)
+- **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 연구자 포함 사례 1건)
+  1. **CoinRAG (arXiv:2608.07458, 2026-08-07)** [한국 연구자 — Cheoneum Park, 한밭대학교]: Gyuwan Kim(UC Santa Barbara), Cheoneum Park(한밭대학교), Tao Yang(UC Santa Barbara). 장문 RAG에서 기존 청크 수준 KV 캐시 재사용의 정보 중복·노이즈 문제를 너겟(information nugget) 수준 캐시 분해·재사용으로 해소. 오프라인 계산된 너겟 KV 캐시를 온라인에서 컨텍스트화·재조합(compositional reuse). 낮은 프리필 레이턴시 제약 하 정확도-효율 파레토 프런티어 최적화. snippet-verified (arXiv abs + arXiv html + Eye on AI 3개 이상 독립 출처). → `02-프로덕션-아키텍처.md` SAGE 다음에 추가
+  2. **RAG 지식 추출 공격·방어 체계적 벤치마크 (arXiv:2602.09319, KDD 2026, 제주 2026-08-09~13 발표)**: Zhisheng Qi, Utkarsh Sahu 외 10인. RAG 지식 추출 공격(knowledge-extraction attack)·방어에 대한 최초 체계적 벤치마크. 다양한 공격·방어 전략, 검색 임베딩 모델, 오픈/클로즈드 소스 생성기를 표준화된 프로토콜로 다국어·복수 데이터셋에 걸쳐 평가. 제로샷 추출도 비무시 성공률. 쿼리 필터링·프롬프트 인젝션 저항성 방어가 위험 완화. IP 도용·프라이버시 유출 우려 있는 RAG 코퍼스 보호 실용 지침 제공. snippet-verified (arXiv abs + arXiv html v3 + Huggingface Papers + liner.com 4개 이상 독립 출처). → `03-에이전트-툴유즈-MCP.md` WARP 다음에 추가
+  3. **MEGRAG (arXiv:2608.02195, 2026-08-03)**: Weidong Bao, Yingying Sun, Jun Yang 외 7인. 멀티홉 QA RAG에서 단일 세분도 증거의 노이즈 문제와 중간 홉 오류 누적을 동시에 해소하는 답변-인식 다중 세분도 증거 그래프 프레임워크. 오프라인 교차 세분도 인덱스(패시지→문장→트리플) 구축 후 온라인에서 compact triple부터 순차적으로 컨텍스트 추가. snippet-verified (arXiv abs + arXiv html 2개 독립 출처). → `02-프로덕션-아키텍처.md` 신규 연구 섹션 NeSy-RAG 다음에 추가
+
+| 사례 | 도메인 | 검증 방법 | 출처 수 | 한국 여부 |
+|------|--------|-----------|---------|----------|
+| CoinRAG (arXiv:2608.07458, 2026-08-07) | 02-프로덕션 KV 캐시 효율화 | snippet-verified | 3개 이상 | ✅ 한국 연구자 (Cheoneum Park, 한밭대학교) |
+| RAG 지식 추출 벤치마크 (arXiv:2602.09319, KDD 2026) | 03-에이전트 보안/공격 | snippet-verified | 4개 이상 | 글로벌 (KDD 2026 제주 발표) |
+| MEGRAG (arXiv:2608.02195, 2026-08-03) | 02-프로덕션 멀티홉 RAG | snippet-verified | 2개 | 글로벌 |
+
+- `sources.md`에 3개 출처 추가 (## 2026-08-12 일일 누적 추가 출처 섹션 신설)
+- `02-프로덕션-아키텍처.md` 헤더 날짜 2026-08-12 업데이트 + CoinRAG(SAGE 다음) + MEGRAG(신규연구 섹션) 추가
+- `03-에이전트-툴유즈-MCP.md` WARP 다음에 지식 추출 벤치마크 추가
+- `00-요약-트렌드.md` 업데이트(2026-08-12, 사례 213+건, 출처 319+)
+- **검증 결과**: URL 200 OK: 0/3건(arXiv 전면 차단) · snippet-verified: 3/3건 · 단언 톤다운: 0건 · 중복 폐기: 0건 · 발굴 시도 → 최종 채택: 약 10건 시도 → 3건 채택
+
 ## 2026-08-11 (일일 루프 #56)
 - **신규 사례 2건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 사례 0건 — 발굴 시도 후 폐기)
   1. **EvoTrustRAG: Evolution-Aware Conflict Attribution and Evidence Handling for Reliable Retrieval-Augmented Generation (arXiv:2608.07933, 2026-08-08)**: Xi Nie, Hongwei Li, Shenghao Wu, Wenshu Fan, Qiyang Song, Wenbo Jiang. RAG 충돌 해소 연구에서 최초로 "충돌 기원 귀인(Conflict Origin Attribution)"을 독립 서브태스크로 정의 — "어느 사실이 맞는가" 대신 "왜 충돌이 발생했는가"를 식별. 충돌 증거 그래프(스팬 노드 + 시간·보조 관계 엣지) 구성 → 진화·조작 가설 점수화 → 전역 일관성 투영. 훈련 불필요. 귀인 매크로-F1 72.2%→79.1%, 조율 공격 오류율 31.2%→16% 감소. snippet-verified (arXiv abs + arXiv html 2개 이상 독립 출처). → `02-프로덕션-아키텍처.md` DCCD 다음에 추가

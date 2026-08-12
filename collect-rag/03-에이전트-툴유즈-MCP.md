@@ -582,6 +582,16 @@ RAG 시스템에 대한 기존 코퍼스 오염 공격은 독성 문서 단위(�
 - **저자**: Hui Liu, Yibo Zhou, Liguo Dong, Weidong Li, Shui Yu (Central China Normal University)
 - **출처**: [ACM DL — WARP: A Word-Level Backdoor Attack Targeting RAG Systems](https://dl.acm.org/doi/10.1145/3770854.3780227) (KDD 2026, 2026-08-09~13 발표, snippet-verified: ACM DL DOI + RAG backdoor 연구 포털 2개 이상 독립 출처)
 
+### RAG 지식 추출 공격·방어 체계적 벤치마크 (arXiv:2602.09319, KDD 2026, 2026-08-09~13 발표)
+
+RAG는 엔터프라이즈 챗봇·의료 어시스턴트·에이전틱 메모리 등 지식 집약적 시스템의 핵심 인프라로 자리잡았다. 그러나 악의적으로 조작된 쿼리를 통해 RAG 지식 베이스의 민감한 콘텐츠를 추출하는 **지식 추출 공격(knowledge-extraction attack)**이 가능하다 — IP 도용·프라이버시 유출의 구조적 위험. 기존 연구들은 이기종 검색 임베딩·다양한 생성 모델·비표준 평가 지표와 비일관 데이터셋으로 분절되어 체계적 비교가 불가능했다.
+
+- **기여**: RAG 지식 추출 공격·방어에 대한 **첫 체계적 벤치마크**. 폭넓은 공격·방어 전략 조합, 대표적 검색 임베딩 모델, 오픈/클로즈드 소스 생성기를 통일된 실험 프레임워크와 표준화된 프로토콜 하에서 다국어·복수 데이터셋에 걸쳐 평가. 단순 비교에서 실행 가능한 인사이트와 프라이버시 보존 RAG 개발을 위한 실용적 토대 제공.
+- **핵심 발견**: 제로샷(기준) 추출도 무시할 수 없는 성공률을 보임. 쿼리 필터링·프롬프트 인젝션 저항성 기반 방어가 위험을 완화하지만 완전 차단은 어려움. 검색 임베딩 모델 선택과 생성기 종류 모두 추출 취약성에 영향.
+- **논문**: "Benchmarking Knowledge-Extraction Attack and Defense on Retrieval-Augmented Generation (RAG)" — KDD 2026 (32nd ACM SIGKDD, 제주, Aug 9-13), v3 카메라 레디 2026-06-08
+- **저자**: Zhisheng Qi, Utkarsh Sahu, Li Ma, Haoyu Han, Ryan Rossi, Franck Dernoncourt, Mahantesh Halappanavar, Nesreen Ahmed, Yushun Dong, Yue Zhao, Yu Zhang, Yu Wang
+- **출처**: [arXiv:2602.09319 — Benchmarking Knowledge-Extraction Attack and Defense on Retrieval-Augmented Generation](https://arxiv.org/abs/2602.09319) (KDD 2026 발표 2026-08-09~13, snippet-verified: arXiv abs + arXiv html v3 + Huggingface Papers + liner.com 4개 이상 독립 출처)
+
 ### Before Reasoning Fails — 에이전틱 RAG의 사전-증거 절차적 실패 진단 (arXiv:2608.02011, 2026-08-03) [한국 사례]
 
 에이전틱 RAG 평가 연구의 대부분은 최종 답변의 정확도에 집중하지만, 정답 추론이 시작되기 이전 단계에서 에이전트 궤적 자체가 절차적으로 실패하는 경우를 체계적으로 분석한 연구가 없었다. Daeyoung Roh(Independent Researcher)와 Donghee Han(KAIST)은 이 "사전-증거(pre-evidence) 절차적 실패"를 독립적 실패 유형으로 규명하고 진단 방법론을 제시했다.
