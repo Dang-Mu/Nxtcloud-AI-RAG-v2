@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-08-13 일일 누적 추가 출처 (3건, 루프 #58)
+
+- [ZDNet Korea — LG CNS, 동아쏘시오그룹 AI 신약개발 플랫폼 구축](https://zdnet.co.kr/view/?no=20260812091506) — 2026-08-12 · [korea] [industry:제약바이오] [graphrag] [enterprise] [agentic] · LG CNS × 동아쏘시오그룹 DAI. AgenticWorks for BIO 기반 신약 연구 데이터(화합물·유전체·논문·특허) 통합 Knowledge Lake + GraphRAG. 질병 분석·후보물질 생성형 AI 설계·가상 검증 전 주기 지원. 약 6개월 구축. (snippet-verified: ZDNet Korea + 한국경제 + 파이낸셜뉴스 + 뉴스와이어 + 뉴스웨이 + 이지경제 + 시사저널e + CBC뉴스 9개 이상 독립 출처)
+- [arXiv:2608.00054 — RAG-Tester: Automated End-to-End Testing of Retrieval-Augmented Large Language Models](https://arxiv.org/abs/2608.00054) — 2026-08 · [architecture] [evaluation] [testing] [production] · Ange Maiztegi, Jon Ayerdi, Miren Illarramendi, Aitor Arrieta (Mondragon University, 스페인). RAG 파이프라인의 LLM·임베딩·검색 조합별 실패 행태를 4단계 자동화 테스팅으로 대응. 테스트 케이스 자동 생성 → 다양한 조합 실행 → LLM-as-judge 평가. CI/CD 통합 가능 회귀 탐지 프레임워크. cs.AI + cs.SE. (snippet-verified: arXiv abs + arXiv html + Mondragon University 3개 이상 독립 출처)
+- [arXiv:2608.08994 — Guardian Crawler: Retrieval-First Knowledge Discovery with Bounded LLM Augmentation for Noisy Web Intelligence](https://arxiv.org/abs/2608.08994) — 2026-08 · [architecture] [retrieval] [reranking] [security] [noisy-web] · Joshua Castillo, Santosh Nukavarapu, Ravi Mukkamala. KDIR 2026 Short Paper. 노이즈 웹 데이터 대상 BM25 1차 검색 + 리스크-인식·임베딩-증강·하이브리드 4단 리랭킹 스택 + 명시적 인용 기반 제한적 RAG 생성. 검색 우선(retrieval-first) 설계 원칙 통제 실험 실증. (snippet-verified: arXiv abs + arXiv html + cs/pastweek listing 3개 독립 출처)
+
 ## 2026-08-12 일일 누적 추가 출처 (3건, 루프 #57)
 
 - [arXiv:2608.07458 — CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG](https://arxiv.org/abs/2608.07458) — 2026-08-07 · [korea] [architecture] [inference-efficiency] [kv-cache] [long-context] · Gyuwan Kim (UC Santa Barbara), Cheoneum Park (한밭대학교 Hanbat National University, 한국), Tao Yang (UC Santa Barbara). 청크 수준 KV 캐시 재사용의 정보 중복·노이즈 한계를 너겟(information nugget) 수준 캐시 분해·재조합으로 해소. 낮은 프리필 레이턴시 제약 하 정확도-효율 파레토 프런티어 최적화. (snippet-verified: arXiv abs + arXiv html + Eye on AI 3개 이상 독립 출처)

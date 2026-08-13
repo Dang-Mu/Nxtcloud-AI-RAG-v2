@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-08-13 (일일 루프 #58)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
+  1. **LG CNS × 동아쏘시오그룹 AI 신약개발 플랫폼 (2026-08-12)** [한국 사례]: LG CNS의 제약·바이오 특화 에이전틱 AI 플랫폼 '에이전틱웍스(AgenticWorks) for BIO' 기반으로 동아쏘시오그룹 IT 계열사 DAI와 약 6개월 구축. Knowledge Lake(GraphRAG + 벡터 임베딩 + 지식 그래프 자동 매핑 + RAGAS 평가)로 화합물·유전체 정보·실험 결과·논문·특허를 통합. 단계별 AI 지원: 질병 분석→치료 표적 발굴→후보물질 생성형 AI 설계→가상 검증. snippet-verified (ZDNet Korea + 한국경제 + 파이낸셜뉴스 + 뉴스와이어 + 뉴스웨이 + 이지경제 + 시사저널e + CBC뉴스 9개 이상 독립 출처). → `04-산업별-사례.md` JMIR 연구 다음에 추가
+  2. **RAG-TESTER (arXiv:2608.00054, 2026-08)**: Ange Maiztegi, Jon Ayerdi, Miren Illarramendi, Aitor Arrieta (Mondragon University, 스페인). RAG 파이프라인의 다양한 LLM·임베딩·검색 메커니즘·프롬프트 조합별 실패 행태 차이를 4단계 자동화 엔드투엔드 테스팅으로 대응. 테스트 케이스 자동 생성 → 실행 → LLM-as-judge 평가. CI/CD 통합 가능한 회귀 탐지 프레임워크. snippet-verified (arXiv abs + arXiv html + Mondragon University 3개 이상 독립 출처). → `02-프로덕션-아키텍처.md` MEGRAG 다음 신규 연구 섹션에 추가
+  3. **Guardian Crawler (arXiv:2608.08994, KDIR 2026)**: Joshua Castillo, Santosh Nukavarapu, Ravi Mukkamala. 노이즈 웹 데이터에서 BM25 + 4단 리랭킹 스택 + 명시적 인용 기반 제한적 RAG 생성을 결합한 검색 우선(retrieval-first) 지식 발굴 테스트베드. 사이버보안·허위정보·리스크 모니터링 도메인 타겟. KDIR 2026 단편 논문 채택. snippet-verified (arXiv abs + arXiv html + cs/pastweek listing 3개 독립 출처). → `02-프로덕션-아키텍처.md` RAG-TESTER 다음에 추가
+
+| 사례 | 도메인 | 검증 방법 | 출처 수 | 한국 여부 |
+|------|--------|-----------|---------|----------|
+| LG CNS × 동아쏘시오그룹 AI 신약개발 플랫폼 (2026-08-12) | 04-산업별 의약/바이오 | snippet-verified | 9개 이상 | ✅ 한국 |
+| RAG-TESTER (arXiv:2608.00054, 2026-08) | 02-프로덕션 자동화 테스팅 | snippet-verified | 3개 이상 | 글로벌 (스페인) |
+| Guardian Crawler (arXiv:2608.08994, KDIR 2026) | 02-프로덕션 검색 우선 설계 | snippet-verified | 3개 이상 | 글로벌 |
+
+- `sources.md`에 3개 출처 추가 (## 2026-08-13 일일 누적 추가 출처 섹션 신설)
+- `04-산업별-사례.md` 헤더 날짜 2026-08-13 업데이트 + LG CNS × 동아쏘시오그룹 사례 JMIR 다음에 추가
+- `02-프로덕션-아키텍처.md` 헤더 날짜 2026-08-13 업데이트 + RAG-TESTER + Guardian Crawler MEGRAG 다음에 추가
+- `00-요약-트렌드.md` 업데이트(2026-08-13, 사례 216+건, 출처 322+)
+- **검증 결과**: URL 200 OK: 0/3건(전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 0건 · 중복 폐기: 0건 · 발굴 시도 → 최종 채택: 약 12건 시도 → 3건 채택
+
 ## 2026-08-12 (일일 루프 #57)
 - **신규 사례 3건** (WebFetch 403 차단 환경, snippet-verified 전건; 한국 연구자 포함 사례 1건)
   1. **CoinRAG (arXiv:2608.07458, 2026-08-07)** [한국 연구자 — Cheoneum Park, 한밭대학교]: Gyuwan Kim(UC Santa Barbara), Cheoneum Park(한밭대학교), Tao Yang(UC Santa Barbara). 장문 RAG에서 기존 청크 수준 KV 캐시 재사용의 정보 중복·노이즈 문제를 너겟(information nugget) 수준 캐시 분해·재사용으로 해소. 오프라인 계산된 너겟 KV 캐시를 온라인에서 컨텍스트화·재조합(compositional reuse). 낮은 프리필 레이턴시 제약 하 정확도-효율 파레토 프런티어 최적화. snippet-verified (arXiv abs + arXiv html + Eye on AI 3개 이상 독립 출처). → `02-프로덕션-아키텍처.md` SAGE 다음에 추가
