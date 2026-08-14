@@ -1,5 +1,11 @@
 # 출처 목록
 
+## 2026-08-14 일일 누적 추가 출처 (3건, 루프 #59)
+
+- [아이티데일리 — '에이전틱 AI 프로덕션 전환 해법 모색'…MCP 데브 서밋](https://www.itdaily.kr/news/articleView.html?idxno=241017) — 2026-08-14 · [korea] [conference] [mcp] [agentic] [enterprise] · Linux Foundation + AAIF 공동 주최 MCP Dev Summit Seoul 2026 (오픈소스 서밋 코리아 2026 연계, 2026-08-13~14). 삼성전자·SK텔레콤·LG전자·현대자동차·현대오토에버·SK하이닉스·KT클라우드·네이버클라우드·카카오뱅크·라인플러스·ETRI + 글로벌 기업. MCP 프로토콜 개발·멀티에이전트 설계·엔터프라이즈 시스템 연결·보안·성능 SLO 관리 세션. MCPA 실무 인증 발표. (snippet-verified: itdaily.kr + LF Events + byline.network + venturesquare.net 4개 이상 독립 출처)
+- [arXiv:2608.07994 — VDGR-RAG: Vectors, Directories, Graphs, and Reflection Are All You Need for Unified Reasoning over Hierarchical Enterprise Knowledge](https://arxiv.org/abs/2608.07994) — 2026-08-08 · [architecture] [enterprise] [knowledge-graph] [multi-route-retrieval] [reflection] · Wenqi Chen, Haofei Yang, Rui Yang, Fangming Li (Huawei Technologies, 상하이). 엔터프라이즈 계층적 제품 문서 QA 특화 프레임워크. H²KG(Hierarchical Heterogeneous Knowledge Graph) 구축 + 벡터·TOC 에이전틱·엔티티 강화 그래프 3경로 멀티-루트 검색 + 디렉토리 백트래킹 + 리플렉션 도구. 통신 도메인 4개 데이터셋에서 벡터 RAG·GraphRAG 베이스라인 대비 우위. (snippet-verified: arXiv abs + arXiv html + arXiv pdf 3개 독립 출처)
+- [arXiv:2608.06223 — TS-RAG: Retrieval Augmented Generation for Time Series Forecasting](https://arxiv.org/abs/2608.06223) — 2026-08-06 · [architecture] [time-series] [forecasting] [retrieval] · Yixiong Xiao, Congxi Xiao, Shuangli Li, Jingbo Zhou (Baidu, Inc.). 시계열 예측에 RAG 참조 검색 적용 — 유사 패턴 검색으로 LLM 시계열 예측 품질 향상. 시간적 분해 표현 + 계층적 이종 코퍼스 인덱스 + 컨텍스트 보강 생성. TS-RAG(arXiv:2503.07649, NeurIPS 2025, UConn DSIS)와 별개의 동명 논문. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+
 ## 2026-08-13 일일 누적 추가 출처 (3건, 루프 #58)
 
 - [ZDNet Korea — LG CNS, 동아쏘시오그룹 AI 신약개발 플랫폼 구축](https://zdnet.co.kr/view/?no=20260812091506) — 2026-08-12 · [korea] [industry:제약바이오] [graphrag] [enterprise] [agentic] · LG CNS × 동아쏘시오그룹 DAI. AgenticWorks for BIO 기반 신약 연구 데이터(화합물·유전체·논문·특허) 통합 Knowledge Lake + GraphRAG. 질병 분석·후보물질 생성형 AI 설계·가상 검증 전 주기 지원. 약 6개월 구축. (snippet-verified: ZDNet Korea + 한국경제 + 파이낸셜뉴스 + 뉴스와이어 + 뉴스웨이 + 이지경제 + 시사저널e + CBC뉴스 9개 이상 독립 출처)

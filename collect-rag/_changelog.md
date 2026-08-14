@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-08-14 (일일 루프 #59)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
+  1. **MCP Dev Summit Seoul 2026 / 오픈소스 서밋 코리아 2026 (2026-08-13~14, 서울)** [한국 사례]: Linux Foundation + AAIF 공동 주최. 삼성전자·SK텔레콤·LG전자·현대자동차·현대오토에버·SK하이닉스·KT클라우드·네이버클라우드·카카오뱅크·라인플러스·ETRI 등 국내 핵심 IT 기업 + 글로벌 기업 전문가들이 에이전틱 AI·MCP 스택 실무 구현 사례 공유. MCP 프로토콜 개발·멀티에이전트 설계·엔터프라이즈 시스템 연결·보안·성능 SLO 관리가 핵심 세션. MCPA(MCP Architect) 실무 인증 발표. snippet-verified (itdaily.kr + LF Events + byline.network + venturesquare.net 4개 이상 독립 출처). → `03-에이전트-툴유즈-MCP.md` HALT 다음 `---` 구분선 뒤에 추가
+  2. **VDGR-RAG (arXiv:2608.07994, 2026-08-08)**: Wenqi Chen, Haofei Yang, Rui Yang, Fangming Li (Huawei Technologies, 상하이). 엔터프라이즈 계층적 제품 문서 QA를 위해 H²KG(Hierarchical Heterogeneous Knowledge Graph) 구축 + 벡터·TOC 기반 에이전틱·엔티티 강화 그래프 등 3경로 멀티-루트 검색 + 디렉토리 백트래킹 + 리플렉션 도구 결합. 통신 도메인 4개 데이터셋에서 벡터 RAG·GraphRAG 베이스라인 대비 우위. snippet-verified (arXiv abs + arXiv html + arXiv pdf 3개 독립 출처). → `02-프로덕션-아키텍처.md` Guardian Crawler 다음에 추가
+  3. **TS-RAG Baidu (arXiv:2608.06223, 2026-08-06)**: Yixiong Xiao, Congxi Xiao, Shuangli Li, Jingbo Zhou (Baidu, Inc.). 시계열 예측에 RAG 참조 검색을 적용 — 유사 시계열 패턴을 코퍼스에서 검색해 LLM 시계열 예측 품질 향상. 시간적 분해 표현 + 계층적 이종 코퍼스 인덱스 + 컨텍스트 보강 생성. NF-인터프리터·잡음 LSTF·단변량 예측 등 다양한 시계열 벤치마크에서 일관된 향상. snippet-verified (arXiv abs + arXiv html 2개 독립 출처). → `02-프로덕션-아키텍처.md` VDGR-RAG 다음에 추가
+
+| 사례 | 도메인 | 검증 방법 | 출처 수 | 한국 여부 |
+|------|--------|-----------|---------|----------|
+| MCP Dev Summit Seoul 2026 (2026-08-13~14) | 03-에이전트 MCP 컨퍼런스/실무 | snippet-verified | 4개 이상 | ✅ 한국 |
+| VDGR-RAG (arXiv:2608.07994, 2026-08-08) | 02-프로덕션 엔터프라이즈 지식 QA | snippet-verified | 3개 이상 | 글로벌 (화웨이 상하이) |
+| TS-RAG Baidu (arXiv:2608.06223, 2026-08-06) | 02-프로덕션 시계열 예측 RAG | snippet-verified | 2개 | 글로벌 (바이두) |
+
+- `sources.md`에 3개 출처 추가 (## 2026-08-14 일일 누적 추가 출처 섹션 신설)
+- `02-프로덕션-아키텍처.md` 헤더 날짜 2026-08-14 업데이트 + VDGR-RAG + TS-RAG(Baidu) Guardian Crawler 다음에 추가
+- `03-에이전트-툴유즈-MCP.md` MCP Dev Summit Seoul 2026 HALT 다음 `---` 뒤에 추가
+- `00-요약-트렌드.md` 업데이트(2026-08-14, 사례 219+건, 출처 325+)
+- **검증 결과**: URL 200 OK: 0/3건(전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 0건 · 중복 폐기: 0건 · 발굴 시도 → 최종 채택: 약 8건 시도 → 3건 채택
+
 ## 2026-08-13 (일일 루프 #58)
 - **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
   1. **LG CNS × 동아쏘시오그룹 AI 신약개발 플랫폼 (2026-08-12)** [한국 사례]: LG CNS의 제약·바이오 특화 에이전틱 AI 플랫폼 '에이전틱웍스(AgenticWorks) for BIO' 기반으로 동아쏘시오그룹 IT 계열사 DAI와 약 6개월 구축. Knowledge Lake(GraphRAG + 벡터 임베딩 + 지식 그래프 자동 매핑 + RAGAS 평가)로 화합물·유전체 정보·실험 결과·논문·특허를 통합. 단계별 AI 지원: 질병 분석→치료 표적 발굴→후보물질 생성형 AI 설계→가상 검증. snippet-verified (ZDNet Korea + 한국경제 + 파이낸셜뉴스 + 뉴스와이어 + 뉴스웨이 + 이지경제 + 시사저널e + CBC뉴스 9개 이상 독립 출처). → `04-산업별-사례.md` JMIR 연구 다음에 추가
