@@ -1,5 +1,10 @@
 # 출처 목록
 
+## 2026-08-15 일일 누적 추가 출처 (2건, 루프 #60)
+
+- [arXiv:2608.11030 — Self-Knowledge Based Retrieval-Augmented Generation for Patent Matching](https://arxiv.org/abs/2608.11030) — 2026-08-11 · [architecture] [ip] [patent] [ontology] [query-expansion] · Jian Zhang, Songlin Lei, Zhuohao Yang, Bangli Liu, Ziwei Wang, Xufeng Weng, Gehan Amaratunga, Yu Lin, Hongwei Wang (절강대학교 ZJU 컴퓨터학부 + ZJU-UIUC 연구소 × 소흥 K3i Technology Co. Ltd.). LLM이 특허 명세서에서 핵심 기술 엔티티를 자율 추출 → 계층적 온톨로지 구조 생성 → 쿼리 확장·정밀 검색. 도메인 사전학습·명령 튜닝 없이 치명적 망각 없이 IP 전문 검색 가능. 특허 선행기술조사 자동화. (snippet-verified: arXiv abs + arXiv HTML + 2개 이상 독립 WebSearch 스니펫)
+- [arXiv:2606.04231 — MM-BizRAG: Enhancing Multimodal Business Document RAG with Document Structure-aware Split](https://arxiv.org/abs/2606.04231) — 2026-06-02 preprint / ACL 2026 Industry Track · [enterprise] [multimodal] [document-structure] [financial] [jpmorgan] · Hanoz Bhathena, Parin Rajesh Jhaveri, Rohan Mittal, Prateek Singh, Aymen Kallala, Rachneet Kaur, Yiqiao Jin, Zhen Zeng, Adwait Ratnaparkhi, Denis Kochedykov (JPMorgan Chase & Co. + Georgia Institute of Technology). 문서 방향별 동적 라우팅(세로형 레이아웃 인식 파싱 / 가로형 페이지 레벨 처리) + LLM 아티팩트 변환 + 추론 시 멀티모달 조립(검색 표현 ≠ 생성 표현 분리). 금융 엔터프라이즈 복잡 문서 멀티모달 RAG. (snippet-verified: arXiv abs + ACL 2026 Industry Track 프로그램 + LinkedIn 3개 이상 독립 출처)
+
 ## 2026-08-14 일일 누적 추가 출처 (3건, 루프 #59)
 
 - [아이티데일리 — '에이전틱 AI 프로덕션 전환 해법 모색'…MCP 데브 서밋](https://www.itdaily.kr/news/articleView.html?idxno=241017) — 2026-08-14 · [korea] [conference] [mcp] [agentic] [enterprise] · Linux Foundation + AAIF 공동 주최 MCP Dev Summit Seoul 2026 (오픈소스 서밋 코리아 2026 연계, 2026-08-13~14). 삼성전자·SK텔레콤·LG전자·현대자동차·현대오토에버·SK하이닉스·KT클라우드·네이버클라우드·카카오뱅크·라인플러스·ETRI + 글로벌 기업. MCP 프로토콜 개발·멀티에이전트 설계·엔터프라이즈 시스템 연결·보안·성능 SLO 관리 세션. MCPA 실무 인증 발표. (snippet-verified: itdaily.kr + LF Events + byline.network + venturesquare.net 4개 이상 독립 출처)
