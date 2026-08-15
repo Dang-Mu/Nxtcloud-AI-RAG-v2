@@ -1,5 +1,22 @@
 # 업데이트 로그
 
+## 2026-08-15 (일일 루프 #60)
+- **신규 사례 2건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 발굴 시도 후 해당 기간 내 신규 미확인)
+  1. **Self-Knowledge RAG for Patent Matching (arXiv:2608.11030, 2026-08-11)**: Jian Zhang, Songlin Lei, Zhuohao Yang, Bangli Liu, Ziwei Wang, Xufeng Weng, Gehan Amaratunga, Yu Lin, Hongwei Wang (절강대학교 ZJU + ZJU-UIUC 연구소 × 소흥 K3i Technology). LLM이 특허 명세서에서 핵심 기술 엔티티를 자율 추출 → 계층적 온톨로지 구조 생성 → 쿼리 확장·정밀 검색. 도메인 파인튜닝 없이 치명적 망각 없이 IP 도메인 지식 활용. snippet-verified (arXiv abs + arXiv HTML + 2개 이상 독립 WebSearch 스니펫). → `04-산업별-사례.md` 법률/글로벌 Robin AI 다음에 추가
+  2. **MM-BizRAG (arXiv:2606.04231, ACL 2026 Industry Track)**: Hanoz Bhathena, Parin Rajesh Jhaveri, Rohan Mittal, Prateek Singh, Aymen Kallala, Rachneet Kaur, Yiqiao Jin, Zhen Zeng, Adwait Ratnaparkhi, Denis Kochedykov (JPMorgan Chase & Co. + Georgia Institute of Technology). 문서 방향별 동적 라우팅(세로형 레이아웃 인식 파싱 / 가로형 페이지 레벨 처리) + LLM 아티팩트 변환 + 추론 시 멀티모달 조립(검색 표현 ≠ 생성 표현 분리). 복잡한 금융 엔터프라이즈 문서 멀티모달 RAG. snippet-verified (arXiv abs + ACL 2026 Industry Track 프로그램 + LinkedIn 3개 이상 독립 출처). → `01-엔터프라이즈-사내지식.md` JPMorgan EVEE 다음에 추가
+
+| 사례 | 도메인 | 검증 방법 | 출처 수 | 한국 여부 |
+|------|--------|-----------|---------|----------|
+| Self-Knowledge RAG Patent (arXiv:2608.11030, 2026-08-11) | 04-산업별 IP/특허 | snippet-verified | 4개 이상 | 글로벌 (절강대·K3i) |
+| MM-BizRAG (arXiv:2606.04231, ACL 2026) | 01-엔터프라이즈 멀티모달 | snippet-verified | 3개 이상 | 글로벌 (JPMorgan+GT) |
+
+- `sources.md`에 2개 출처 추가 (## 2026-08-15 일일 누적 추가 출처 섹션 신설)
+- `04-산업별-사례.md` 헤더 날짜 2026-08-15 업데이트 + Self-Knowledge RAG Patent 법률/글로벌 Robin AI 다음에 추가
+- `01-엔터프라이즈-사내지식.md` 헤더 날짜 2026-08-15 업데이트 + MM-BizRAG JPMorgan EVEE 다음에 추가 (글로벌 14건, 총 50건)
+- `00-요약-트렌드.md` 업데이트(2026-08-15, 사례 221+건, 출처 327+)
+- **한국 사례**: KT RAG(이미 수록), SK하이닉스 AWS(이미 수록), 우아한형제들 RAG 블로그(2026-03, 이미 수록) 등 후보 검토 결과 2026-08-08~15 기간 내 미발굴. 15+ 쿼리 시도.
+- **검증 결과**: URL 200 OK: 0/2건(전면 WebFetch 차단) · snippet-verified: 2/2건 · 중복 폐기: 4건(KT RAG, SK하이닉스 AWS, MemGraphRAG, SAG) · 발굴 시도 → 최종 채택: 약 15건 시도 → 2건 채택
+
 ## 2026-08-14 (일일 루프 #59)
 - **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례 1건 포함)
   1. **MCP Dev Summit Seoul 2026 / 오픈소스 서밋 코리아 2026 (2026-08-13~14, 서울)** [한국 사례]: Linux Foundation + AAIF 공동 주최. 삼성전자·SK텔레콤·LG전자·현대자동차·현대오토에버·SK하이닉스·KT클라우드·네이버클라우드·카카오뱅크·라인플러스·ETRI 등 국내 핵심 IT 기업 + 글로벌 기업 전문가들이 에이전틱 AI·MCP 스택 실무 구현 사례 공유. MCP 프로토콜 개발·멀티에이전트 설계·엔터프라이즈 시스템 연결·보안·성능 SLO 관리가 핵심 세션. MCPA(MCP Architect) 실무 인증 발표. snippet-verified (itdaily.kr + LF Events + byline.network + venturesquare.net 4개 이상 독립 출처). → `03-에이전트-툴유즈-MCP.md` HALT 다음 `---` 구분선 뒤에 추가
