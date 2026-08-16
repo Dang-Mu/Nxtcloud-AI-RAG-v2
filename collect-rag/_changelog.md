@@ -1,5 +1,24 @@
 # 업데이트 로그
 
+## 2026-08-16 (일일 루프 #61)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 2026-08-09~16 기간 내 미발굴)
+  1. **VITA: LMIC 특화 임상 코퍼스 RAG, HealthBench에서 GPT-5.4 초과 (arXiv:2608.12138, 2026-08-12)** [글로벌]: Praveen Reddy, Charuta Mandke, Suvrankar Datta, Sarah Khan, Siddharth Reddy Anthireddy, Shitij Arora, Vishal Singh (인도/LMIC 임상 AI 팀). 인도·LMIC 특화 코퍼스(질환별 가이드라인 + 인도 AMR 데이터 + 국가 처방집 제약 + 자원 제한 프로토콜) 기반 전용 RAG 시스템(VITA). HealthBench 4,023개 영어 질문에서 VITA 51.9% — GPT-5.4(46.1%), o4-mini(44.3%) 초과. 목적 지향 코퍼스 설계·큐레이션이 모델 크기보다 임상 성능을 결정함을 HealthBench로 정량화. snippet-verified (arXiv abs v1 + arXiv abs 2개 이상 독립 출처 + 독립 WebSearch 스니펫). → `04-산업별-사례.md` LG CNS × 동아쏘시오 다음에 추가
+  2. **LinkedIn Self-evolving 에이전틱 고객지원 시스템 (arXiv:2608.10224, 2026-08-10)** [글로벌]: Chih Hui Wang, Mengdie Tu, Qianyun Zhang, Wei Wu, Lili Zhou, Mingqi Shen, Changshuai Wei (LinkedIn). RAG + 진화적 자동 프롬프팅 + 모듈형 평가 폐루프. 2주 프로덕션 A/B 테스트: QA 셀프서브 +9.0pp, 구독 취소 셀프서브 +4.8pp, 라우팅 정확도 +30.6pp. 정적 배포 모델에서 지속 자기개선 패러다임으로의 전환점. snippet-verified (arXiv abs + arXiv html + Academus 3개 독립 출처). → `01-엔터프라이즈-사내지식.md` LinkedIn KG 사례 다음에 추가
+  3. **HC-RAG: 금융 연간 보고서 이기종 증거 중심 RAG (arXiv:2608.12335, 2026-08)** [글로벌]: Siyuan Chen, Huaye Tan, You Li, Jiajun Liang (cs.CL · cs.MM). 금융 연간 보고서 특화 계층적 교차-모달 RAG. 유형화 금융 증거 그래프(문서·섹션·텍스트·표 단위·메타데이터 노드) + 문서-섹션-단위 경로 계층적 증거 검색 + 공유 검색 공간 텍스트-표 동적 정렬. 플랫-청크 대비 증거 수집 정밀도 향상. snippet-verified (arXiv abs + arXiv html 2개 독립 출처). → `04-산업별-사례.md` 금융보안원 × 한양대 다음에 추가
+
+| 사례 | 도메인 | 검증 방법 | 출처 수 | 한국 여부 |
+|------|--------|-----------|---------|----------|
+| VITA Clinical RAG (arXiv:2608.12138, 2026-08-12) | 04-산업별 의료/LMIC | snippet-verified | 3개 이상 | 글로벌 (인도/LMIC) |
+| LinkedIn Self-evolving Agentic Support (arXiv:2608.10224, 2026-08-10) | 01-엔터프라이즈 고객지원 | snippet-verified | 3개 이상 | 글로벌 (LinkedIn) |
+| HC-RAG Financial (arXiv:2608.12335, 2026-08) | 04-산업별 금융 | snippet-verified | 2개 이상 | 글로벌 |
+
+- `sources.md`에 3개 출처 추가 (## 2026-08-16 일일 누적 추가 출처 섹션 신설)
+- `04-산업별-사례.md` 헤더 날짜 2026-08-16 업데이트 + VITA 의료 LG CNS 다음에 추가 + HC-RAG 금융 금융보안원×한양대 다음에 추가
+- `01-엔터프라이즈-사내지식.md` 헤더 날짜 2026-08-16 업데이트 + LinkedIn Self-evolving KG 사례 다음에 추가 (글로벌 15건, 총 51건)
+- `00-요약-트렌드.md` 업데이트(2026-08-16, 사례 224+건, 출처 330+)
+- **한국 사례**: 네이버·카카오·토스·LY Corp·SK Devocean·우아한형제들 등 2026-08-09~16 기간 내 신규 RAG 블로그·발표 미발굴. 10+ 쿼리 시도. 전회차(2026-08-15)까지 KT RAG 스터디(6월)·SK Devocean(이미 참조됨)·LY Corp ODW(5월)·LG CNS 신약(8월, 이미 수록) 등 최근 한국 주요 사례 커버 완료. 컨퍼런스(DEVIEW·if(kakao))는 아직 미개최.
+- **검증 결과**: URL 200 OK: 0/3건(전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 0건 · 중복 폐기: 3건(ACE-GraphRAG·RAGOCR·LinkedIn KG 기존 수록) · 발굴 시도 → 최종 채택: 약 12건 시도 → 3건 채택
+
 ## 2026-08-15 (일일 루프 #60)
 - **신규 사례 2건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 발굴 시도 후 해당 기간 내 신규 미확인)
   1. **Self-Knowledge RAG for Patent Matching (arXiv:2608.11030, 2026-08-11)**: Jian Zhang, Songlin Lei, Zhuohao Yang, Bangli Liu, Ziwei Wang, Xufeng Weng, Gehan Amaratunga, Yu Lin, Hongwei Wang (절강대학교 ZJU + ZJU-UIUC 연구소 × 소흥 K3i Technology). LLM이 특허 명세서에서 핵심 기술 엔티티를 자율 추출 → 계층적 온톨로지 구조 생성 → 쿼리 확장·정밀 검색. 도메인 파인튜닝 없이 치명적 망각 없이 IP 도메인 지식 활용. snippet-verified (arXiv abs + arXiv HTML + 2개 이상 독립 WebSearch 스니펫). → `04-산업별-사례.md` 법률/글로벌 Robin AI 다음에 추가
