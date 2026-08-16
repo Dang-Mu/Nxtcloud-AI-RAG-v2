@@ -672,3 +672,14 @@
 - [arXiv:2607.04391 — MOSS: Memory-Orchestrated Semantic System](https://arxiv.org/abs/2607.04391) — 2026-07-05 · [architecture] · 관계형 DB 기반 감사 가능한 에이전트 메모리 아키텍처. 임베딩 RAG 불투명성 비판. 1년 실프로덕션 운영(44M 토큰, 11만 세그먼트, 16만 문서).
 - [arXiv:2607.05055 — Toward Trustworthy Large Language Model Agents in Healthcare: A CareConnect Case Study](https://arxiv.org/abs/2607.05055) — 2026-07-06 · [industry:의료] · 의료 물류 안전 우선 대화 에이전트. RAG + LLM 함수 호출 + 계층적 결정론적 안전 가드레일 3중 구조.
 
+
+## 2026-08-16 일일 누적 추가 출처 (3건, 루프 #61)
+
+### 글로벌 — 의료
+- [arXiv:2608.12138 — A corpus-specific clinical RAG system matches or outperforms newer frontier LLMs on HealthBench](https://arxiv.org/abs/2608.12138) — 2026-08-12 · [industry:의료] [production] [benchmark] [lmic] · Praveen Reddy, Charuta Mandke, Suvrankar Datta, Sarah Khan, Siddharth Reddy Anthireddy, Shitij Arora, Vishal Singh. VITA: 인도·LMIC 특화 코퍼스 RAG 시스템. 질환별 임상 가이드라인 + 인도 AMR 데이터 + 국가 처방집 + 자원 제한 프로토콜 코퍼스. HealthBench 4,023 영어 질문에서 VITA 51.9% vs GPT-5.4 46.1%, o4-mini 44.3% — 코퍼스 특화 RAG가 프론티어 LLM 초과. (snippet-verified: arXiv abs v1 + arXiv abs + 독립 WebSearch 스니펫)
+
+### 글로벌 — 엔터프라이즈 (LinkedIn)
+- [arXiv:2608.10224 — Self-evolving Agentic Customer Support System at LinkedIn](https://arxiv.org/abs/2608.10224) — 2026-08-10 · [enterprise] [agentic] [production] [auto-prompting] · Chih Hui Wang, Mengdie Tu, Qianyun Zhang, Wei Wu, Lili Zhou, Mingqi Shen, Changshuai Wei (LinkedIn). RAG + 진화적 자동 프롬프팅 + 모듈형 평가 폐루프. 2주 A/B 테스트: QA 셀프서브 +9.0pp, 취소 셀프서브 +4.8pp, 라우팅 정확도 +30.6pp. (snippet-verified: arXiv abs + arXiv html + Academus 3개 독립 출처)
+
+### 글로벌 — 금융
+- [arXiv:2608.12335 — HC-RAG: Evidence-Centric Retrieval-Augmented Generation over Heterogeneous Financial Filings](https://arxiv.org/abs/2608.12335) — 2026-08 · [industry:금융] [architecture] [graph] [heterogeneous] [evidence-centric] · Siyuan Chen, Huaye Tan, You Li, Jiajun Liang (cs.CL · cs.MM). 금융 연간 보고서 특화 계층적 교차-모달 RAG. 유형화 금융 증거 그래프(문서·섹션·텍스트·표 단위·메타데이터 노드) + 문서-섹션-단위 경로 증거 검색 + 공유 검색 공간 텍스트-표 정렬. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
