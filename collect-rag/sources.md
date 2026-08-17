@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-08-17 일일 누적 추가 출처 (3건, 루프 #62)
+
+- [AWS 기술블로그 — LINE Games의 AI Agent를 통한 게임 퍼블리싱 가속화 여정](https://aws.amazon.com/ko/blogs/tech/linegames-ai-agent-for-accelerating-game-publishing/) — 2026-03-02 · [korea][agentic][enterprise][gametech] · LINE Games(한국, LY Corporation 계열). Amazon Bedrock Knowledge Base + Bedrock Agents 기반 "Nexus AI" 게임 퍼블리싱 지원 플랫폼. Confluence 자동 수집 + 품질 필터링 + 2단계 청킹 + 메타데이터 기반 검색. (snippet-verified)
+
+- [arXiv:2608.13010 — RAGSieve: Self-Referenced Local Contrast for Knowledge-Poison Detection in Retrieval-Augmented Generation](https://arxiv.org/abs/2608.13010) — 2026-08-13 · [architecture][security][poison-detection] · Xinlong Xu, Yoshua Y. Li. RAG 지식 오염(knowledge poisoning) 탐지용 자가 참조 로컬 대비 프레임워크. RSQ(쿼리-로컬 대비) + RSG(코퍼스-로컬 대비). 3 QA 데이터셋 × 6 오염 구성에서 RSQ AUROC 95.2%. (snippet-verified)
+
+- [arXiv:2608.00585 — Verification Without Sufficiency: Per-Chunk Filtering Fails on Multi-Hop RAG, and Decomposition Repairs It](https://arxiv.org/abs/2608.00585) — 2026-08 · [architecture][multi-hop][verification] · Randhir Kumar. 멀티홉 RAG에서 청크별 검증이 실패하는 이유: 청크 하나로 충분한 근거가 될 수 없는 구조. 서브쿼리 분해 기반 검증으로 수리. MuSiQue: 수반성 0.546 → 0.840. (snippet-verified)
+
 ## 2026-08-15 일일 누적 추가 출처 (2건, 루프 #60)
 
 - [arXiv:2608.11030 — Self-Knowledge Based Retrieval-Augmented Generation for Patent Matching](https://arxiv.org/abs/2608.11030) — 2026-08-11 · [architecture] [ip] [patent] [ontology] [query-expansion] · Jian Zhang, Songlin Lei, Zhuohao Yang, Bangli Liu, Ziwei Wang, Xufeng Weng, Gehan Amaratunga, Yu Lin, Hongwei Wang (절강대학교 ZJU 컴퓨터학부 + ZJU-UIUC 연구소 × 소흥 K3i Technology Co. Ltd.). LLM이 특허 명세서에서 핵심 기술 엔티티를 자율 추출 → 계층적 온톨로지 구조 생성 → 쿼리 확장·정밀 검색. 도메인 사전학습·명령 튜닝 없이 치명적 망각 없이 IP 전문 검색 가능. 특허 선행기술조사 자동화. (snippet-verified: arXiv abs + arXiv HTML + 2개 이상 독립 WebSearch 스니펫)

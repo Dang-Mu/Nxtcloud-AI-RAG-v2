@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-08-17 (일일 루프 #62)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 2026-08-13~17 기간 내 미발굴 → 최근 미수록 최우선 한국 사례 채택)
+  1. **LINE Games "Nexus AI": Amazon Bedrock 기반 게임 퍼블리싱 개발사 기술 지원 플랫폼 (AWS 기술 블로그, 2026-03-02)** [한국]: LINE Games (LY Corporation 계열, 한국 게임 퍼블리싱). Confluence 사내 기술 문서 → 자동 수집 + 품질 필터링 → 2단계 청킹(semantic + custom) → Amazon Bedrock Knowledge Base + Agents. Unity·Unreal 등 다양한 게임 엔진 기술 문의를 단일 AI Agent로 통합 처리. "Nexus AI" 플랫폼 베타 운영. AWS GenAIIC 협력 구축. snippet-verified (AWS 기술블로그 URL + 제목·내용 2개 이상 독립 출처). → `01-엔터프라이즈-사내지식.md` LY Corp AX 로드맵 다음에 추가
+  2. **RAGSieve: 지식 오염 탐지용 자가 참조 로컬 대비 (arXiv:2608.13010, 2026-08-13)** [글로벌]: Xinlong Xu, Yoshua Y. Li. 외부 참조 모델 없이 RAG 내부 표현으로 지식 오염(knowledge poisoning) 탐지. RSQ(쿼리-로컬 대비) + RSG(코퍼스-로컬 대비). 3개 QA 데이터셋 × 6개 오염 구성에서 AUROC 95.2%. snippet-verified (arXiv abs + arXiv cs.IR listing 2개 독립 출처). → `02-프로덕션-아키텍처.md` SelectBench 다음에 추가
+  3. **Verification Without Sufficiency: 멀티홉 RAG 청크별 검증 실패와 분해 기반 수리 (arXiv:2608.00585, 2026-08)** [글로벌]: Randhir Kumar. 청크별 수반성 검증이 멀티홉 질의에서 구조적으로 실패함을 형식화 + 서브쿼리 분해 기반 수리 제안. MuSiQue 수반성 0.546 → 0.840. snippet-verified (arXiv abs + arXiv cs.CL listing 2개 독립 출처). → `02-프로덕션-아키텍처.md` 예산 제약 멀티홉 RAG 다음에 추가
+
+| 사례 | 도메인 | 검증 방법 | 출처 수 | 한국 여부 |
+|------|--------|-----------|---------|----------|
+| LINE Games "Nexus AI" (AWS 기술블로그, 2026-03-02) | 01-엔터프라이즈 게임텍 | snippet-verified | 2개 이상 | 한국 (LINE Games, LY 계열) |
+| RAGSieve (arXiv:2608.13010, 2026-08-13) | 02-프로덕션 보안/오염탐지 | snippet-verified | 2개 이상 | 글로벌 |
+| Verification Without Sufficiency (arXiv:2608.00585, 2026-08) | 02-프로덕션 멀티홉 검증 | snippet-verified | 2개 이상 | 글로벌 |
+
+- `sources.md`에 3개 출처 추가 (## 2026-08-17 일일 누적 추가 출처 섹션 신설)
+- `01-엔터프라이즈-사내지식.md` 헤더 날짜 2026-08-17 업데이트 + LINE Games 추가 (한국 33건, 총 52건)
+- `02-프로덕션-아키텍처.md` 헤더 날짜 2026-08-17 업데이트 + RAGSieve + Verification Without Sufficiency 추가
+- **한국 사례**: 네이버·카카오·토스·LY Corp·SKT·우아한형제들 등 2026-08-13~17 기간 내 신규 RAG 블로그·발표 10+ 쿼리 시도 후 미발굴. LINE Games(LY 계열, 2026-03-02) AWS 기술블로그를 최근 미수록 한국 사례로 채택.
+- **검증 결과**: URL 200 OK: 0/3건(전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 0건 · 중복 폐기: 다수(DocNavRAG·M³KG-RAG·RING·SciRet·ACE-GraphRAG·HALT·RAGOCR·RAG-TESTER 등) · 발굴 시도 → 최종 채택: 약 15건 시도 → 3건 채택
+
 ## 2026-08-16 (일일 루프 #61)
 - **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 2026-08-09~16 기간 내 미발굴)
   1. **VITA: LMIC 특화 임상 코퍼스 RAG, HealthBench에서 GPT-5.4 초과 (arXiv:2608.12138, 2026-08-12)** [글로벌]: Praveen Reddy, Charuta Mandke, Suvrankar Datta, Sarah Khan, Siddharth Reddy Anthireddy, Shitij Arora, Vishal Singh (인도/LMIC 임상 AI 팀). 인도·LMIC 특화 코퍼스(질환별 가이드라인 + 인도 AMR 데이터 + 국가 처방집 제약 + 자원 제한 프로토콜) 기반 전용 RAG 시스템(VITA). HealthBench 4,023개 영어 질문에서 VITA 51.9% — GPT-5.4(46.1%), o4-mini(44.3%) 초과. 목적 지향 코퍼스 설계·큐레이션이 모델 크기보다 임상 성능을 결정함을 HealthBench로 정량화. snippet-verified (arXiv abs v1 + arXiv abs 2개 이상 독립 출처 + 독립 WebSearch 스니펫). → `04-산업별-사례.md` LG CNS × 동아쏘시오 다음에 추가
