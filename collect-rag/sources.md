@@ -1,5 +1,14 @@
 # 출처 목록
 
+## 2026-08-18 일일 누적 추가 출처 (3건, 루프 #63)
+
+### 한국 — 공공·행정
+- [디지털데일리 — 네이버클라우드, 행정망 내 AI 기능 확대…'NAVER WORKS AI' 3종 발표](https://www.ddaily.co.kr/page/view/2026081317502210787) — 2026-08-13 · [korea][public][agentic][hybrid-rag][admin-network] · 네이버클라우드 NAVER WORKS AI. Naver AI Tab API 행정망 연동(외부 검색+내부 문서 이중 소스 RAG) + Page(지식관리) + EASY(에이전틱 빌더) + CLOVA Studio for Gov 발표. (snippet-verified: 디지털데일리 + betanews + 이데일리 + 네이트뉴스 4개 이상 독립 출처)
+- [ZDNet Korea — NIA, 66억 규모 '범정부 AI 공통기반 고도화' 사업 발주…에이전트·RAG 통합](https://zdnet.co.kr/view/?no=20260810101425) — 2026-08-10 · [korea][public][agentic][mcp][common-rag-platform] · NIA 발주, 예산 66억원, 기간 180일. 챗봇→에이전트, 기관별 분산 RAG→공통 RAG 표준화+MCP 연동, 규정 기반 검토 에이전트, AI 게이트웨이 신설. (snippet-verified: ZDNet Korea)
+
+### 글로벌 — 아키텍처
+- [arXiv:2604.11407 — GRIP: Grounding Retrieval Integration with Planning](https://arxiv.org/abs/2604.11407) — ACL 2026 Main (2026.acl-long.196) · [architecture][self-triggering][adaptive-retrieval][control-tokens][acl2026] · Bo Li, Mingda Wang, Gexiang Fang, Shikun Zhang, Wei Ye (WisdomShell). 제어 토큰([RETRIEVE]·[INTERMEDIARY]·[ANSWER]·[SOLVED])으로 검색 트리거를 모델 디코딩에 내재화. 외부 검색 컨트롤러 없는 자기 트리거 정보 계획. 5개 QA 벤치마크에서 Self-RAG·FLARE·IRCoT 초과. GitHub: WisdomShell/GRIP. (snippet-verified: arXiv abs + ACL Anthology 2026.acl-long.196 + GitHub 3개 이상 독립 출처)
+
 ## 2026-08-17 일일 누적 추가 출처 (3건, 루프 #62)
 
 - [AWS 기술블로그 — LINE Games의 AI Agent를 통한 게임 퍼블리싱 가속화 여정](https://aws.amazon.com/ko/blogs/tech/linegames-ai-agent-for-accelerating-game-publishing/) — 2026-03-02 · [korea][agentic][enterprise][gametech] · LINE Games(한국, LY Corporation 계열). Amazon Bedrock Knowledge Base + Bedrock Agents 기반 "Nexus AI" 게임 퍼블리싱 지원 플랫폼. Confluence 자동 수집 + 품질 필터링 + 2단계 청킹 + 메타데이터 기반 검색. (snippet-verified)
