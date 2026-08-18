@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-08-18 (일일 루프 #63)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 2건 달성)
+  1. **네이버클라우드 NAVER WORKS AI — 행정망 내 외부 검색 연동 RAG·에이전틱 AI 발표 (2026-08-13)** [한국]: 네이버클라우드 NAVER WORKS 사업부. 공공 AX 전략 세미나에서 행정망 단말에서 외부 검색(인터넷)·내부 문서 RAG를 단일 화면으로 통합하는 Naver AI Tab API 행정망 연동, 문서 협업·지식관리 Page 모듈, 노코드 에이전틱 빌더 EASY, CLOVA Studio for Gov 4종 발표. 행정망(폐쇄망) + 인터넷망 이중 소스 검색 브릿지. snippet-verified (디지털데일리 + betanews + 이데일리 + 네이트뉴스 4개 이상 독립 출처). → `04-산업별-사례.md` 공공·행정 > 한국 섹션 특허청 IP-AX 다음에 추가
+  2. **범정부 AI 공통기반 2단계 — 챗봇에서 에이전트로, RAG 통합·MCP 연동 사업 공고 (ZDNet Korea, 2026-08-10)** [한국]: NIA 발주, 예산 66억원, 기간 180일. 1단계 챗봇 → AI 에이전트 중심 고도화. 기관별 분산 RAG → 공통 RAG 표준화 + MCP 연동. 규정 기반 검토 에이전트 + AI 게이트웨이(민간 모델 유연 선택) 신설. 공공 부문 최초 MCP 기반 에이전트 인프라 공식 사업 공고. snippet-verified (ZDNet Korea 2026-08-10). → `04-산업별-사례.md` 공공·행정 > 한국 섹션 NAVER WORKS 다음에 추가
+  3. **GRIP: 검색을 생성으로 — 자기 트리거 정보 계획 통합 프레임워크 (arXiv:2604.11407, ACL 2026 Main)** [글로벌]: Bo Li, Mingda Wang, Gexiang Fang, Shikun Zhang, Wei Ye (WisdomShell). 외부 검색 컨트롤러 없이 제어 토큰([RETRIEVE]·[INTERMEDIARY]·[ANSWER]·[SOLVED])으로 검색 트리거를 모델 디코딩에 내재화. 5개 QA 벤치마크에서 Self-RAG·FLARE·IRCoT 등 강력한 베이스라인 초과, 훨씬 적은 파라미터로 GPT-4o와 경쟁. snippet-verified (arXiv abs + ACL Anthology 2026.acl-long.196 + GitHub WisdomShell/GRIP 3개 이상 독립 출처). → `02-프로덕션-아키텍처.md` RAGSieve 다음에 추가
+
+| 사례 | 도메인 | 검증 방법 | 출처 수 | 한국 여부 |
+|------|--------|-----------|---------|----------|
+| 네이버클라우드 NAVER WORKS AI 행정망 (2026-08-13) | 04-산업별 공공·행정 | snippet-verified | 4개 이상 | 한국 |
+| 범정부 AI 공통기반 2단계 (ZDNet Korea, 2026-08-10) | 04-산업별 공공·행정 | snippet-verified | 1개 | 한국 |
+| GRIP (arXiv:2604.11407, ACL 2026 Main) | 02-프로덕션 아키텍처 | snippet-verified | 3개 이상 | 글로벌 (WisdomShell) |
+
+- `sources.md`에 3개 출처 추가 (## 2026-08-18 일일 누적 추가 출처 섹션 신설)
+- `04-산업별-사례.md` 헤더 날짜 2026-08-18 업데이트 + 공공·행정 한국 섹션에 2건 추가
+- `02-프로덕션-아키텍처.md` 헤더 날짜 2026-08-18 업데이트 + GRIP 추가
+- **한국 사례**: 네이버클라우드 NAVER WORKS AI 행정망(2026-08-13) + 범정부 AI 공통기반 2단계(2026-08-10) 2건 달성
+- **검증 결과**: URL 200 OK: 0/3건(전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 0건 · 중복 폐기: 다수(20+ 시도 → 3건 채택) · 발굴 시도: NeSy-RAG, VDGR-RAG, RAG-Tester, MKG-RAG-Bench 등 이미 수록 확인 후 폐기
+
 ## 2026-08-17 (일일 루프 #62)
 - **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 2026-08-13~17 기간 내 미발굴 → 최근 미수록 최우선 한국 사례 채택)
   1. **LINE Games "Nexus AI": Amazon Bedrock 기반 게임 퍼블리싱 개발사 기술 지원 플랫폼 (AWS 기술 블로그, 2026-03-02)** [한국]: LINE Games (LY Corporation 계열, 한국 게임 퍼블리싱). Confluence 사내 기술 문서 → 자동 수집 + 품질 필터링 → 2단계 청킹(semantic + custom) → Amazon Bedrock Knowledge Base + Agents. Unity·Unreal 등 다양한 게임 엔진 기술 문의를 단일 AI Agent로 통합 처리. "Nexus AI" 플랫폼 베타 운영. AWS GenAIIC 협력 구축. snippet-verified (AWS 기술블로그 URL + 제목·내용 2개 이상 독립 출처). → `01-엔터프라이즈-사내지식.md` LY Corp AX 로드맵 다음에 추가
