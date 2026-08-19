@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-08-19 일일 누적 추가 출처 (3건, 루프 #64)
+
+### 한국 — 엔터프라이즈 사내지식
+- [rebellions.ai — vLLM Korea Meetup 2026 Wrap-Up](https://rebellions.ai/vllm-korea-meetup-2026-wrap-up/) — 2026-04 · [korea][enterprise][air-gapped][private-llm][access-control][vllm] · 삼성전자 Sungsu Kim 발표: 에어갭 환경 4,000명+ 임직원 대상 사내 LLM + 업무 분리 RAG 에이전트. (snippet-verified: rebellions.ai + vllm.ai/blog + blog.squeezebits.com 3개 이상 독립 출처)
+
+### 글로벌 — 아키텍처 (멀티모달·표)
+- [arXiv:2504.09554 — Mixture-of-RAG: Integrating Text and Tables with Large Language Models](https://arxiv.org/abs/2504.09554) — KDD 2026 (2026-08-09~13, 제주) · [architecture][multimodal][table][heterogeneous][kdd2026] · Chi Zhang, Qiyang Chen, Mengqi Zhang. DocRAGLib(2,000개 문서 벤치마크) + MixRAG(top-1 +46%). 이기종 문서 RAG. (snippet-verified: arXiv abs + pdf + html v3 3개 독립 출처)
+
+### 글로벌 — 산업별 (법률)
+- [arXiv:2608.14210 — Evaluating Hallucinations in Legal RAG Systems](https://arxiv.org/abs/2608.14210) — 2026-08-14 · [legal][hallucination][evaluation][safety] · 법률 RAG 전용 환각 평가 방법론 4축. 일반 지표로는 법률 환각 ~60% 미검출. (snippet-verified: arXiv abs + arXiv html + WebSearch 스니펫)
+
 ## 2026-08-18 일일 누적 추가 출처 (3건, 루프 #63)
 
 ### 한국 — 공공·행정

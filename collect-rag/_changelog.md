@@ -1,5 +1,24 @@
 # 업데이트 로그
 
+## 2026-08-19 (일일 루프 #64)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 1건 달성)
+  1. **삼성전자 — vLLM Korea Meetup 2026: 에어갭 사내 LLM + 업무 분리 RAG 에이전트 (2026-04-02)** [한국]: 발표자 Sungsu Kim(삼성전자). 외부 SaaS LLM 사용이 불가한 에어갭(air-gapped) 환경에서 4,000여 명의 임직원에게 사내 LLM 기반 생성형 AI 서비스 제공. 내부 GPU 인프라 + vLLM 기반 프라이빗 LLM API + 업무 분리(task-separated) RAG 에이전트 + OpenWebUI·Dify·OpenAI 호환 API 오픈소스 툴링. 부서·권한별 접근 제어 기반 RAG 검색 결과 분리. snippet-verified (rebellions.ai + vllm.ai/blog + blog.squeezebits.com 3개 이상 독립 출처). → `01-엔터프라이즈-사내지식.md` 삼성SDS KDD 2026 다음에 추가
+  2. **Mixture-of-RAG — 텍스트·표 이기종 문서 통합 RAG (arXiv:2504.09554, KDD 2026)** [글로벌]: Chi Zhang, Qiyang Chen, Mengqi Zhang. DocRAGLib(2,000개 문서, 텍스트-표 정렬 벤치마크 코퍼스) + MixRAG(top-1 검색 정확도 +46% 향상). 재무 보고서·계약서·매뉴얼 등 이기종 혼합 엔터프라이즈 문서 환경에서 단일 모달 RAG 한계를 KDD 2026(제주)에서 실증. snippet-verified (arXiv abs + pdf + html v3 3개 독립 출처). → `02-프로덕션-아키텍처.md` 멀티모달/표·PDF·이미지 섹션 VLD-RAG 다음에 추가
+  3. **법률 RAG 환각 평가 방법론 (arXiv:2608.14210, 2026-08-14)** [글로벌]: 법률 RAG 전용 환각 평가 프레임워크 — 판례 참조 정확성·법령 인용 일관성·주장 지지 충실도·법적 추론 논리 무결성 4개 축. 일반 RAG 평가 지표는 법률 환각의 약 60%를 검출 못 한다고 보고. snippet-verified (arXiv abs + arXiv html + WebSearch 스니펫 2개 이상 독립 출처). → `04-산업별-사례.md` 법률 섹션 특허 매칭 다음에 추가
+
+| 사례 | 도메인 | 검증 방법 | 출처 수 | 한국 여부 |
+|------|--------|-----------|---------|----------|
+| 삼성전자 vLLM Korea Meetup 2026 (2026-04-02) | 01-엔터프라이즈 사내지식 | snippet-verified | 3개 이상 | 한국 |
+| Mixture-of-RAG (arXiv:2504.09554, KDD 2026) | 02-프로덕션 멀티모달·표 | snippet-verified | 3개 이상 | 글로벌 |
+| 법률 RAG 환각 평가 (arXiv:2608.14210, 2026-08-14) | 04-산업별 법률 | snippet-verified | 2개 이상 | 글로벌 |
+
+- `sources.md`에 3개 출처 추가 (## 2026-08-19 일일 누적 추가 출처 섹션 신설)
+- `01-엔터프라이즈-사내지식.md` 헤더 날짜 2026-08-19 업데이트 + 한국 사례 수 34건·총 53건으로 갱신 + 삼성전자 vLLM Korea Meetup 추가
+- `02-프로덕션-아키텍처.md` 헤더 날짜 2026-08-19 업데이트 + Mixture-of-RAG 추가
+- `04-산업별-사례.md` 헤더 날짜 2026-08-19 업데이트 + 법률 RAG 환각 평가 추가
+- **한국 사례**: 삼성전자 vLLM Korea Meetup 2026 1건 달성
+- **검증 결과**: URL 200 OK: 0/3건(전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 0건 · 중복 폐기: 다수(MKG-RAG-Bench, RAG-TESTER, RH-RAG, 춘시리 등 이미 수록 확인 후 폐기) · 발굴 시도: arXiv 2608.xx대 20+ 논문 + 한국 블로그 다수
+
 ## 2026-08-18 (일일 루프 #63)
 - **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 2건 달성)
   1. **네이버클라우드 NAVER WORKS AI — 행정망 내 외부 검색 연동 RAG·에이전틱 AI 발표 (2026-08-13)** [한국]: 네이버클라우드 NAVER WORKS 사업부. 공공 AX 전략 세미나에서 행정망 단말에서 외부 검색(인터넷)·내부 문서 RAG를 단일 화면으로 통합하는 Naver AI Tab API 행정망 연동, 문서 협업·지식관리 Page 모듈, 노코드 에이전틱 빌더 EASY, CLOVA Studio for Gov 4종 발표. 행정망(폐쇄망) + 인터넷망 이중 소스 검색 브릿지. snippet-verified (디지털데일리 + betanews + 이데일리 + 네이트뉴스 4개 이상 독립 출처). → `04-산업별-사례.md` 공공·행정 > 한국 섹션 특허청 IP-AX 다음에 추가
