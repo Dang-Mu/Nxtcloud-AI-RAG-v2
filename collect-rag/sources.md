@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-08-20 일일 누적 추가 출처 (3건, 루프 #65)
+
+### 한국 — 금융
+- [ZDNet Korea — 신한투자증권, 구글 클라우드와 AI 에이전트 플랫폼 개발](https://zdnet.co.kr/view/?no=20260818151045) — 2026-08-18 · [korea][finance][agent-platform][gemini][rag][hybrid-orchestrator] · 신한투자증권 × 구글클라우드. Gemini Enterprise Agent Platform + 하이브리드 오케스트레이터 + BigQuery 데이터 플라이휠(내부 RAG). 500개+ 에이전트, 1년→3개월 단축. (snippet-verified: ZDNet Korea + 전자신문 + 서울경제 + VentureSquare + SentV 5개 이상 독립 출처)
+
+### 글로벌 — 산업별 (항공·제조)
+- [arXiv:2608.18465 — Reducing Technician Search Burden: A Multimodal RAG for Cessna 172 Maintenance Manual](https://arxiv.org/abs/2608.18465) — 2026-08 · [aviation][manufacturing][multimodal][mmr][maintenance-manual] · Seongjun Ha, Md Rashedul Islam, Gaurav Nanda, Damon Lercel (Purdue). MMR 93.37% recall@5, MRAG 87.20% 의미 유사도. 텍스트+도면 통합 검색. (snippet-verified: arXiv abs + HCI listing + 독립 검색 스니펫 3개 이상 출처)
+
+### 글로벌 — 아키텍처 (적응적 검색)
+- [arXiv:2608.13237 — When Should Multi-Round RAG Stop? Structured Stopping Judgments and Retrieval Reduction in Search-R1](https://arxiv.org/abs/2608.13237) — 2026-08-13 · [architecture][adaptive-retrieval][stopping][search-r1][multi-round] · Weimeng Luo. S2G-RAG 충분성-갭 판단을 frozen Search-R1에 적용, Qwen3.5-2B judge 학습(HotpotQA 3,009 상태). 불필요한 검색 라운드 감소. (snippet-verified: arXiv cs.CL/IR listing + 독립 검색 스니펫 2개 이상 출처)
+
 ## 2026-08-19 일일 누적 추가 출처 (3건, 루프 #64)
 
 ### 한국 — 엔터프라이즈 사내지식

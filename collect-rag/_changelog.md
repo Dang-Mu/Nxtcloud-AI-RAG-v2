@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-08-20 (일일 루프 #65)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 1건 달성)
+  1. **신한투자증권 × 구글클라우드 — Gemini 기반 차세대 AI 에이전트 플랫폼 (2026-08-18)** [한국]: Gemini Enterprise Agent Platform + 자체 설계 하이브리드 오케스트레이터(규칙 기반 실행 + LLM 추론) + BigQuery 데이터 플라이휠(내부 지식 기반 RAG 소스). 500개+ 에이전트 생성, 1년 소요 업무 3개월로 단축. snippet-verified (ZDNet Korea + 전자신문 + 서울경제 + VentureSquare + SentV 5개 이상 독립 출처). → `04-산업별-사례.md` 금융 > 한국 섹션 HC-RAG 다음에 추가
+  2. **Cessna 172 정비 매뉴얼 멀티모달 RAG — 항공 기술자 검색 부담 경감 (arXiv:2608.18465, 2026-08)** [글로벌]: Seongjun Ha, Md Rashedul Islam, Gaurav Nanda, Damon Lercel (Purdue University). MMR(Multimodal Manual Retriever) 93.37% recall@5, MRAG 파이프라인 87.20% 의미 유사도. 텍스트+도면 페이지 통합 검색으로 항공 기술자 수동 탐색 부담 경감. snippet-verified (arXiv abs + HCI listing + 독립 검색 스니펫 3개 이상 출처). → `04-산업별-사례.md` 제조·자동차 > 글로벌 섹션 TechRAG 다음에 추가
+  3. **멀티라운드 RAG 조기 종료 — Search-R1 구조적 충분성 판단 (arXiv:2608.13237, 2026-08-13)** [글로벌]: Weimeng Luo. S2G-RAG 구조적 충분성-갭 판단을 frozen Search-R1에 적용; Qwen3.5-2B 판단자를 HotpotQA 900문항 3,009 상태로 학습; 불필요한 검색 라운드 감소. snippet-verified (arXiv cs.CL/IR listing + 독립 검색 스니펫 2개 이상 출처). → `02-프로덕션-아키텍처.md` Budget-Aware Evaluation 다음에 추가
+
+| 사례 | 도메인 | 검증 방법 | 출처 수 | 한국 여부 |
+|------|--------|-----------|---------|----------|
+| 신한투자증권 × 구글클라우드 AI 에이전트 플랫폼 (2026-08-18) | 04-산업별 금융 한국 | snippet-verified | 5개 이상 | 한국 |
+| Cessna 172 Multimodal RAG (arXiv:2608.18465, 2026-08) | 04-산업별 제조·항공 | snippet-verified | 3개 이상 | 글로벌 |
+| 멀티라운드 RAG 조기 종료 Search-R1 (arXiv:2608.13237, 2026-08-13) | 02-프로덕션 적응적 검색 | snippet-verified | 2개 이상 | 글로벌 |
+
+- `sources.md`에 3개 출처 추가 (## 2026-08-20 일일 누적 추가 출처 섹션 신설)
+- `04-산업별-사례.md` 헤더 날짜 2026-08-20 업데이트 + 금융 한국 섹션에 신한투자증권 추가 + 제조·자동차 글로벌 섹션에 Cessna 172 추가
+- `02-프로덕션-아키텍처.md` 헤더 날짜 2026-08-20 업데이트 + 멀티라운드 RAG 조기 종료 추가
+- **한국 사례**: 신한투자증권 × 구글클라우드 AI 에이전트 플랫폼 1건 달성
+- **검증 결과**: URL 200 OK: 0/3건(전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 0건 · 중복 폐기: SAG(2608.12129, 이전 루프 폐기 확인) · 발굴 시도: Naver·Kakao·Toss·SKT RAG 신규 사례 다수 탐색 → 미발굴; arXiv 2608.xx대 10+ 논문 검토 → 3건 채택
+
 ## 2026-08-19 (일일 루프 #64)
 - **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 1건 달성)
   1. **삼성전자 — vLLM Korea Meetup 2026: 에어갭 사내 LLM + 업무 분리 RAG 에이전트 (2026-04-02)** [한국]: 발표자 Sungsu Kim(삼성전자). 외부 SaaS LLM 사용이 불가한 에어갭(air-gapped) 환경에서 4,000여 명의 임직원에게 사내 LLM 기반 생성형 AI 서비스 제공. 내부 GPU 인프라 + vLLM 기반 프라이빗 LLM API + 업무 분리(task-separated) RAG 에이전트 + OpenWebUI·Dify·OpenAI 호환 API 오픈소스 툴링. 부서·권한별 접근 제어 기반 RAG 검색 결과 분리. snippet-verified (rebellions.ai + vllm.ai/blog + blog.squeezebits.com 3개 이상 독립 출처). → `01-엔터프라이즈-사내지식.md` 삼성SDS KDD 2026 다음에 추가
