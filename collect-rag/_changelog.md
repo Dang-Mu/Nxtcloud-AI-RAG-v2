@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-08-21 (일일 루프 #66)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 1건 달성)
+  1. **그리드원(GridOne) × 한국수자원공사 — K-water GPT: 공공기관 최초 RAG 기반 업무 시스템 (2025-02-21)** [한국]: 그리드원 GO RAG + RPA + AI-OCR 3요소 통합 플랫폼. 외부 전송 없는 온프레미스 프라이빗 LLM. 사규·업무기준서·내부 지침 문서 전체를 직원 검색 대상화. 업무 검색 정확도 98%, 2개월 누적 72,340분 절감(하루 약 1,507분, 약 40명 기여 추산). 공공기관 최초 RAG 업무 시스템 정식 오픈. snippet-verified (디지털데일리 + 뉴시스 + 데이터넷 + 전기신문 + 전자신문 + 인공지능신문 + 더데일리포스트 7개 이상 독립 출처). → `04-산업별-사례.md` 공공·행정 한국 섹션 범정부 AI 공통기반 다음에 추가
+  2. **Adaptive Compression for Edge-based RAG — 텔레메트리 기반 실시간 적응형 압축 (arXiv:2608.19535, 2026-08-20)** [글로벌]: Zlatan Feric, Amir Taherin, Yanzhi Wang, David Kaeli (Northeastern University). ACM AI Leadership Summit 2026. NVIDIA Jetson AGX Thor에서 Llama·Qwen 7B-8B 모델 실험 결과 생성 단계가 전체 RAG 지연 ~90%, 에너지 ~91% 차지. 쿼리별·디바이스 상태별 압축 예산을 런타임에 결정하는 텔레메트리-인식 적응형 압축 비전 제시. snippet-verified (arXiv abs + arXiv html 2개 독립 출처). → `02-프로덕션-아키텍처.md` RH-RAG 다음에 추가
+  3. **AgriRAG — 무학습 시각 우선 작물 병해 진단 RAG (CVPR 2026 Workshop V4A)** [글로벌]: Luiz Carlos Marques Junior, João Renato Ribeiro Manesco, João Paulo Papa (Unesp IBILCE, 브라질). AgMMU + MIRAGE 통합 74,611개 임베딩. SigLIP 이미지 임베딩 검색 → Qwen3-VL-8B VLM. 4비트 양자화, 소비자용 GPU(RTX 4070 Ti 12GB) 완전 실행. +40.2pp(zero-shot→RAG), 엔티티 식별 GPT-4.1 대비 46% 향상. snippet-verified (CVPR Open Access HTML + PDF + 연관 연구 스니펫 3개 이상 독립 출처). → `04-산업별-사례.md` 과학·연구 글로벌 섹션 IteraSim RAG 다음에 추가
+
+| 사례 | 도메인 | 검증 방법 | 출처 수 | 한국 여부 |
+|------|--------|-----------|---------|----------|
+| 그리드원 × 한국수자원공사 K-water GPT (2025-02-21) | 04-산업별 공공·행정 한국 | snippet-verified | 7개 이상 | 한국 |
+| Adaptive Compression for Edge RAG (arXiv:2608.19535, 2026-08-20) | 02-프로덕션 엣지·압축 | snippet-verified | 2개 이상 | 글로벌 |
+| AgriRAG CVPR 2026 Workshop V4A | 04-산업별 과학·연구 글로벌 | snippet-verified | 3개 이상 | 글로벌 |
+
+- `sources.md`에 3개 출처 추가 (## 2026-08-21 일일 누적 추가 출처 섹션 신설)
+- `04-산업별-사례.md` 헤더 날짜 2026-08-21 업데이트 + 공공·행정 한국 섹션에 K-water GPT 추가 + 과학·연구 글로벌 섹션에 AgriRAG 추가
+- `02-프로덕션-아키텍처.md` 헤더 날짜 2026-08-21 업데이트 + 엣지 적응형 압축 RAG 추가
+- **한국 사례**: 그리드원 × 한국수자원공사 K-water GPT 1건 달성
+- **검증 결과**: URL 200 OK: 0/3건(전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 0건 · 중복 폐기: RAGOCR(2608.00765) — 이미 02-프로덕션에 수록 확인 후 폐기, SK하이닉스 AWS RAG — 이미 수록 확인 후 폐기 · 발굴 시도: 한국 RAG 신규 사례 10+ 탐색 → K-water GPT 미수록 최우선 채택, arXiv 2608.xx대 다수 검토 → 2건 채택
+
 ## 2026-08-20 (일일 루프 #65)
 - **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 1건 달성)
   1. **신한투자증권 × 구글클라우드 — Gemini 기반 차세대 AI 에이전트 플랫폼 (2026-08-18)** [한국]: Gemini Enterprise Agent Platform + 자체 설계 하이브리드 오케스트레이터(규칙 기반 실행 + LLM 추론) + BigQuery 데이터 플라이휠(내부 지식 기반 RAG 소스). 500개+ 에이전트 생성, 1년 소요 업무 3개월로 단축. snippet-verified (ZDNet Korea + 전자신문 + 서울경제 + VentureSquare + SentV 5개 이상 독립 출처). → `04-산업별-사례.md` 금융 > 한국 섹션 HC-RAG 다음에 추가
