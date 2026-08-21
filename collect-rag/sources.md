@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-08-21 일일 누적 추가 출처 (3건, 루프 #66)
+
+### 한국 — 공공·행정
+- [디지털데일리 — 그리드원, 한국수자원공사에 RAG 기반 'K-워터 GPT' 구축](https://www.ddaily.co.kr/page/view/2025022109135163804) — 2025-02-21 · [korea][public][rag-only][on-prem][rpa][ai-ocr][go-rag] · 그리드원 GO RAG + RPA + AI-OCR 3요소 통합. 공공기관 최초 RAG 업무 시스템 정식 오픈. 업무 검색 정확도 98%, 2개월 누적 72,340분 절감. (snippet-verified: 디지털데일리 + 뉴시스 + 데이터넷 + 전기신문 + 전자신문 + 인공지능신문 + 더데일리포스트 7개 이상 독립 출처)
+
+### 글로벌 — 아키텍처 (엣지·압축)
+- [arXiv:2608.19535 — From Retrieved Context to Runtime Control: Adaptive Compression for Edge-based RAG](https://arxiv.org/abs/2608.19535) — 2026-08-20 · [architecture][edge][compression][telemetry][latency][energy] · Zlatan Feric, Amir Taherin, Yanzhi Wang, David Kaeli (Northeastern University). ACM AI Leadership Summit 2026. 생성 단계가 전체 RAG 지연 ~90%, 에너지 ~91% 차지. 텔레메트리-인식 적응형 압축 비전. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+
+### 글로벌 — 산업별 (농업·과학)
+- [CVPR Open Access — AgriRAG: Training-Free Retrieval-Augmented Generation for Agricultural Disease Diagnosis with Vision-Language Models](https://openaccess.thecvf.com/content/CVPR2026W/V4A/html/Marques_AgriRAG_Training-Free_Retrieval-Augmented_Generation_for_Agricultural_Disease_Diagnosis_with_Vision-Language_CVPRW_2026_paper.html) — CVPR 2026 Workshop V4A · [agriculture][multimodal][visual-first][training-free][qwen3][siglip] · Luiz Carlos Marques Junior et al. (Unesp, 브라질). 74,611 임베딩, +40.2pp zero-shot→RAG, GPT-4.1 대비 46% 향상. 소비자용 GPU(RTX 4070 Ti 12GB) 완전 실행. (snippet-verified: CVPR Open Access HTML + PDF + 연관 연구 스니펫 3개 이상 독립 출처)
+
 ## 2026-08-20 일일 누적 추가 출처 (3건, 루프 #65)
 
 ### 한국 — 금융
