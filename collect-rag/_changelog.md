@@ -1,5 +1,24 @@
 # 업데이트 로그
 
+## 2026-08-22 (일일 루프 #67)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 1건 달성)
+  1. **컬리(Kurly) — 배달 도메인 지식 LLM Wiki + RAG 혼합기 (2026-05-21)** [한국]: 딜리버리프로덕트팀 김태훈 작성. 배달 도메인 고유 어휘("샛별"="새벽배송", "용차" 비용 관련 문서 노이즈)로 인한 RAG 검색 공백·노이즈를 한 달간 세 가지 접근법 시도·두 번의 개편 끝에 LLM Wiki + RAG 혼합으로 해소. LLM이 직접 작성·유지보수하는 위키로 도메인 동의어 매핑, RAG로 구체적 문서 검색 보완하는 이중 레이어. 커머스 운영 도메인에서 LLM Wiki + RAG 혼합이 범용 임베딩 단독보다 유효함을 실증. snippet-verified (helloworld.kurly.com 공식 기술블로그 + youngju.dev 큐레이션 2026-08-12 직접 확인 2개 이상 독립 출처). → `01-엔터프라이즈-사내지식.md` 삼성전자 vLLM Korea Meetup 다음에 추가
+  2. **Noesis — Bidirectional Graph-RAG with Adaptive Parallelism and Cross-Knowledge-Base Semantic Discovery (arXiv:2608.15919, CIKM 2026)** [글로벌]: Nicola Cogotti. CIKM 2026 채택. Patent pending. 단방향 Graph-RAG를 양방향 탐색·적응형 병렬성·교차 지식 베이스 시맨틱 탐색으로 확장. 복수 이종 지식 베이스에 걸친 시맨틱 관계 발견 가능. snippet-verified (arXiv Information Retrieval Aug 2026 listing + CIKM 2026 acceptance + DEEP-PolyU/Awesome-GraphRAG GitHub 3개 이상 독립 출처). → `02-프로덕션-아키텍처.md` Adaptive Compression for Edge-based RAG 다음에 추가
+  3. **LLM within MCP Matters — MCP embedded data와 LLM 행동 선호 실증 (arXiv:2608.08467, SIGIR 2026 AgentSearch Workshop)** [글로벌]: 24개 LLM(Claude 9·Gemini 6·GPT 9) × 54,000 trial on production legal-information MCP server. 검색 도구 없을 때 23/24 모델 embedded data hit ratio ≥98%; 검색 도구 존재 시 9개 모델 15% 이하로 급락. 실패는 능력 부재가 아닌 행동 선호. MCP 서버 설계에 직접적 함의. snippet-verified (arXiv abs + arXiv html 2개 독립 출처). → `03-에이전트-툴유즈-MCP.md` MCP Dev Summit Seoul 다음에 추가
+
+| 사례 | 도메인 | 검증 방법 | 출처 수 | 한국 여부 |
+|------|--------|-----------|---------|----------|
+| 컬리 배달 도메인 LLM Wiki + RAG 혼합기 (2026-05-21) | 01-엔터프라이즈 사내지식 한국 | snippet-verified | 2개 이상 | 한국 |
+| Noesis Bidirectional Graph-RAG (arXiv:2608.15919, CIKM 2026) | 02-프로덕션 Graph-RAG | snippet-verified | 3개 이상 | 글로벌 |
+| LLM within MCP Matters (arXiv:2608.08467, SIGIR 2026) | 03-에이전트-MCP 서버 설계 | snippet-verified | 2개 이상 | 글로벌 |
+
+- `sources.md`에 3개 출처 추가 (## 2026-08-22 일일 누적 추가 출처 섹션 신설)
+- `01-엔터프라이즈-사내지식.md` 헤더 날짜 2026-08-22 업데이트 + 한국 사례 수 35건·총 54건으로 갱신 + 컬리 LLM Wiki + RAG 혼합기 추가
+- `02-프로덕션-아키텍처.md` 헤더 날짜 2026-08-22 업데이트 + Noesis 추가
+- `03-에이전트-툴유즈-MCP.md` MCP Dev Summit Seoul 다음에 LLM within MCP Matters 추가
+- **한국 사례**: 컬리 배달 도메인 LLM Wiki + RAG 혼합기 1건 달성
+- **검증 결과**: URL 200 OK: 0/3건(전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 0건 · 중복 폐기: 다수(K-water GPT 이미 수록, KoVRE 이미 수록, Noesis 미수록 확인) · 발굴 시도 → 최종 채택: 약 12건 시도 → 3건 채택
+
 ## 2026-08-21 (일일 루프 #66)
 - **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 1건 달성)
   1. **그리드원(GridOne) × 한국수자원공사 — K-water GPT: 공공기관 최초 RAG 기반 업무 시스템 (2025-02-21)** [한국]: 그리드원 GO RAG + RPA + AI-OCR 3요소 통합 플랫폼. 외부 전송 없는 온프레미스 프라이빗 LLM. 사규·업무기준서·내부 지침 문서 전체를 직원 검색 대상화. 업무 검색 정확도 98%, 2개월 누적 72,340분 절감(하루 약 1,507분, 약 40명 기여 추산). 공공기관 최초 RAG 업무 시스템 정식 오픈. snippet-verified (디지털데일리 + 뉴시스 + 데이터넷 + 전기신문 + 전자신문 + 인공지능신문 + 더데일리포스트 7개 이상 독립 출처). → `04-산업별-사례.md` 공공·행정 한국 섹션 범정부 AI 공통기반 다음에 추가
