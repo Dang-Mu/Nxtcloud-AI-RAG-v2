@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-08-22 일일 누적 추가 출처 (3건, 루프 #67)
+
+### 한국 — 엔터프라이즈 사내지식 (커머스)
+- [컬리 기술 블로그 — AI에게 도메인을 가르치다 두 번 갈아엎은 이야기 — LLM Wiki + RAG 혼합기](https://helloworld.kurly.com/blog/2026-delivery-domain-rag/) — 2026-05-21 · [korea][enterprise][rag][llm-wiki][commerce][delivery-domain] · 딜리버리프로덕트팀 김태훈. 배달 도메인 고유 어휘("샛별"="새벽배송") 검색 공백 문제를 LLM Wiki + RAG 혼합으로 해소. 세 가지 시도·두 번 개편 실전 레시피. (snippet-verified: helloworld.kurly.com + youngju.dev 큐레이션 2개 이상 독립 출처)
+
+### 글로벌 — 아키텍처 (Graph-RAG)
+- [arXiv:2608.15919 — Noesis: Bidirectional Graph-RAG with Adaptive Parallelism and Cross-Knowledge-Base Semantic Discovery](https://arxiv.org/abs/2608.15919) — CIKM 2026 · [architecture][graph-rag][bidirectional][adaptive-parallelism][multi-kb] · Nicola Cogotti. 단방향 Graph-RAG를 양방향 탐색·적응형 병렬성·교차 지식 베이스 시맨틱 탐색으로 확장. Patent pending. (snippet-verified: arXiv IR Aug 2026 listing + CIKM 2026 + DEEP-PolyU/Awesome-GraphRAG GitHub 3개 이상 독립 출처)
+
+### 글로벌 — 에이전트·MCP (서버 설계)
+- [arXiv:2608.08467 — LLM within MCP Matters: Measuring Inefficient Resource Utilization Driven by LLMs](https://arxiv.org/abs/2608.08467) — SIGIR 2026 AgentSearch Workshop · [agentic][mcp][tool-use][behavioral-preference][legal] · 24개 LLM × 54,000 trial. 검색 도구 존재 시 embedded data 활용률 급락(≥98%→≤15%). 행동 선호 문제. MCP 서버 설계에 직접적 함의. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+
 ## 2026-08-21 일일 누적 추가 출처 (3건, 루프 #66)
 
 ### 한국 — 공공·행정

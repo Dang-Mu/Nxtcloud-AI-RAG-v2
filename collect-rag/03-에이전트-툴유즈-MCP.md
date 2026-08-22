@@ -628,6 +628,20 @@ RAG는 엔터프라이즈 챗봇·의료 어시스턴트·에이전틱 메모리
 - **의의**: 국내 대형 IT·금융·제조·통신 기업이 에이전틱 AI를 실험 단계에서 프로덕션 전환 단계로 이행하는 시점을 집약적으로 보여주는 국내 최대 규모 MCP 특화 개발자 행사. MCPA(MCP Architect) 실무 인증 도입도 병행 발표됨.
 - **출처**: [아이티데일리 — '에이전틱 AI 프로덕션 전환 해법 모색'…MCP 데브 서밋](https://www.itdaily.kr/news/articleView.html?idxno=241017) (2026-08-14, snippet-verified: itdaily.kr + LF Events + byline.network + venturesquare.net 4개 이상 독립 출처)
 
+---
+
+### LLM within MCP Matters — MCP 서버 embedded data를 검색 도구 존재 시 LLM이 무시하는 행동 패턴 실증 (arXiv:2608.08467, SIGIR 2026 AgentSearch Workshop)
+
+MCP 서버는 자주 사용하는 참조 데이터(예: 법률 식별자 조회 테이블)를 시스템 프롬프트 instructions에 직접 embed해 LLM이 검색 도구 호출 없이 즉시 활용할 수 있도록 설계하는 것이 일반적이다. 이 논문은 LLM이 실제로 이 embedded data를 사용하는지를 54,000 trial에 걸쳐 체계적으로 측정한다.
+
+- **실험 설계**: production legal-information MCP 서버. 24개 LLM (Claude 9종·Gemini 6종·GPT 9종). embedded instruction data를 읽어야 올바른 답을 내는 쿼리에 대한 hit ratio를 두 조건에서 비교: (A) 검색 도구 없음 vs. (B) 검색 도구 존재.
+- **핵심 발견**:
+  - 조건 A(검색 도구 없음): **23/24 모델이 embedded data 정상 사용 (hit ratio ≥98%)** — 모델들은 embedded data를 읽고 활용하는 능력을 보유.
+  - 조건 B(검색 도구 존재): **9개 모델이 hit ratio 15% 이하로 급락** — 검색 도구가 존재하면 embedded data를 건너뛰고 도구를 호출하는 "행동 선호(behavioral preference)" 우세.
+  - 두 조건 비교로 확인: 실패는 능력 부재가 아닌 행동 선호 문제.
+- **의의**: MCP 서버를 설계할 때 instruction-embedded data만으로는 LLM의 신뢰할 수 있는 소비를 보장하기 어렵다는 실증 근거. 법률·금융·의료처럼 정형화된 식별자 참조가 핵심인 도메인에서 embedded lookup table 대신 검색 가능한 툴 형식으로 데이터를 노출해야 함을 시사. Agentic RAG + MCP 서버 설계 원칙에 직접적인 함의를 제공하는 실험적 연구.
+- **출처**: [arXiv:2608.08467 — LLM within MCP Matters: Measuring Inefficient Resource Utilization Driven by LLMs](https://arxiv.org/abs/2608.08467) (SIGIR 2026 AgentSearch Workshop, snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.
