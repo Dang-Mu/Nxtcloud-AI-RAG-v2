@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-08-23 일일 누적 추가 출처 (3건, 루프 #68)
+
+### 한국 — 엔터프라이즈 사내지식 (소버린 AI 어플라이언스)
+- [Korea Times — KT puts Korean AI chips, language model into one enterprise server](https://www.koreatimes.co.kr/business/companies/20260819/kt-puts-korean-ai-chips-language-model-into-one-enterprise-server) — 2026-08-19 · [korea][enterprise][sovereign-ai][npu][llm][rag][on-premise][air-gap] · KT × Rebellions. ATOM-MAX 국산 NPU + Mi:deum K 2.5 Pro LLM(32B) + 내장 RAG 엔진 통합 어플라이언스. 에어갭 환경 Day-1 RAG 운영. (snippet-verified: Korea Times + 이데일리 + RCR Wireless + Telecompaper + 뉴스핌 + 아이티데일리 8개 이상 독립 출처)
+
+### 글로벌 — 아키텍처 (멀티모달 RAG)
+- [arXiv:2608.14032 — HAM-RAG: Hierarchy-Aware Multimodal RAG for Structure-Faithful Interleaved Generation](https://arxiv.org/abs/2608.14032) — 2026-08-14 · [architecture][multimodal][hierarchy-aware][interleaved-generation][visual-document] · Yin Li, Ziyang Hu, Zhiyu Guo, Xiangyu Liu, Wenbin Li, Boo-Ho Yang, Rav Lawana, Ziyue Li, Wei Zeng, Fugee Tsung. 시각 문서의 계층 구조를 보존하며 텍스트+이미지 인터리브 출력 생성. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
+### 글로벌 — 보안 아키텍처 (RAG 안전성)
+- [arXiv:2608.17153 — Towards Safer RAG: Only Agents Capable of System 2 Thinking may Access Untrusted Documents](https://arxiv.org/abs/2608.17153) — 2026-08-17 · [architecture][security][system-2][access-control][prompt-injection][untrusted-docs] · Mehrdad Ghassabi. 신뢰 불가 외부 문서 접근을 System 2 추론 능력 실증으로 게이팅하는 RAG 안전 정책 프레임워크. (snippet-verified: arXiv cs.CL listing + 독립 WebSearch 스니펫 2개 이상 독립 출처)
+
 ## 2026-08-22 일일 누적 추가 출처 (3건, 루프 #67)
 
 ### 한국 — 엔터프라이즈 사내지식 (커머스)
