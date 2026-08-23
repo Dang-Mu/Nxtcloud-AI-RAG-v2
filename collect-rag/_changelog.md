@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-08-23 (일일 루프 #68)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 1건 달성)
+  1. **KT — NPU LLM Station: 국산 NPU + 자체 LLM + 내장 RAG 소버린 AI 어플라이언스 (2026-08-19)** [한국]: KT × Rebellions 협력. Rebellions ATOM-MAX 국산 NPU + KT Mi:deum K 2.5 Pro LLM(32B) + 내장 RAG 엔진을 단일 온프레미스 어플라이언스로 통합. 공공기관·금융·국방 등 에어갭·망분리 환경에서 외부 클라우드 없이 Day-1 RAG 운영 가능. 경남도청·울산광역시 납품, 30B+ VLM 기반 CCTV·교통 분석 운영 중. 데이터 주권과 AI 인프라 주권을 동시에 확보하는 국산 소버린 AI 어플라이언스 최초 사례. snippet-verified (Korea Times + 이데일리 + RCR Wireless + Telecompaper + 뉴스핌 + 아이티데일리 8개 이상 독립 출처). → `01-엔터프라이즈-사내지식.md` 컬리 LLM Wiki 다음에 추가
+  2. **HAM-RAG — 계층 인식 멀티모달 RAG (arXiv:2608.14032, 2026-08-14)** [글로벌]: Yin Li 외. 시각 문서의 계층 구조(섹션→단락→이미지)를 명시적으로 모델링해 텍스트+이미지를 동일 계층 맥락 내에서 함께 검색하고, 원본 문서 배치 순서를 보존하는 인터리브(interleaved) 텍스트+이미지 출력을 생성. snippet-verified (arXiv abs + arXiv html 2개 이상 독립 출처). → `02-프로덕션-아키텍처.md` Noesis 다음에 추가
+  3. **Safer RAG — System 2 추론 기반 신뢰 불가 문서 접근 게이팅 (arXiv:2608.17153, 2026-08-17)** [글로벌]: Mehrdad Ghassabi. RAG 에이전트가 신뢰 불가(untrusted) 외부 문서에 접근하기 전에 Kahneman의 System 2(심사숙고적 추론) 능력을 실증하도록 요구하는 안전 정책. 프롬프트 인젝션·컨텍스트 오염 리스크를 추론 능력 기반 접근 제어로 예방하는 아키텍처 원칙. snippet-verified (arXiv cs.CL listing + 독립 WebSearch 스니펫 2개 이상 독립 출처). → `02-프로덕션-아키텍처.md` HAM-RAG 다음에 추가
+
+| 사례 | 도메인 | 검증 방법 | 출처 수 | 한국 여부 |
+|------|--------|-----------|---------|----------|
+| KT NPU LLM Station (2026-08-19) | 01-엔터프라이즈 사내지식 한국 | snippet-verified | 8개 이상 | 한국 |
+| HAM-RAG (arXiv:2608.14032, 2026-08-14) | 02-프로덕션 멀티모달 RAG | snippet-verified | 2개 이상 | 글로벌 |
+| Safer RAG (arXiv:2608.17153, 2026-08-17) | 02-프로덕션 보안 아키텍처 | snippet-verified | 2개 이상 | 글로벌 |
+
+- `sources.md`에 3개 출처 추가 (## 2026-08-23 일일 누적 추가 출처 섹션 신설)
+- `01-엔터프라이즈-사내지식.md` 헤더 날짜 2026-08-23 업데이트 + 한국 사례 수 36건·총 55건으로 갱신 + KT NPU LLM Station 추가
+- `02-프로덕션-아키텍처.md` Noesis 이후에 HAM-RAG + Safer RAG 추가
+- **한국 사례**: KT NPU LLM Station 1건 달성
+- **검증 결과**: URL 200 OK: 0/3건(전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 0건 · 중복 폐기: 다수 탐색 후 최종 3건 채택 · 발굴 시도 → 최종 채택: 약 8건 시도 → 3건 채택
+
 ## 2026-08-22 (일일 루프 #67)
 - **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 1건 달성)
   1. **컬리(Kurly) — 배달 도메인 지식 LLM Wiki + RAG 혼합기 (2026-05-21)** [한국]: 딜리버리프로덕트팀 김태훈 작성. 배달 도메인 고유 어휘("샛별"="새벽배송", "용차" 비용 관련 문서 노이즈)로 인한 RAG 검색 공백·노이즈를 한 달간 세 가지 접근법 시도·두 번의 개편 끝에 LLM Wiki + RAG 혼합으로 해소. LLM이 직접 작성·유지보수하는 위키로 도메인 동의어 매핑, RAG로 구체적 문서 검색 보완하는 이중 레이어. 커머스 운영 도메인에서 LLM Wiki + RAG 혼합이 범용 임베딩 단독보다 유효함을 실증. snippet-verified (helloworld.kurly.com 공식 기술블로그 + youngju.dev 큐레이션 2026-08-12 직접 확인 2개 이상 독립 출처). → `01-엔터프라이즈-사내지식.md` 삼성전자 vLLM Korea Meetup 다음에 추가
