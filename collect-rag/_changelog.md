@@ -1,5 +1,22 @@
 # 업데이트 로그
 
+## 2026-08-24 (일일 루프 #69)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 1건 달성)
+  1. **Q-CARE — KAIST + 전 NAVER AI Lab: 쿼리 무관 RAG 평가 (arXiv:2608.11238, 2026-08)** [한국]: Hwanjun Song(KAIST ISyE/GSDS, 전 NAVER AI Lab) 랩 Jeonghwan Choi 외. 쿼리를 서브쿼리로, 답변을 원자적 클레임으로 분해해 C-Prec@k·C-nDCG@k(검색기) + Completeness·Conciseness·Verifiableness(생성기) 5종 메트릭으로 레퍼런스-프리 평가. 8개 데이터셋에서 RAGEval·RAGChecker 등 기존 4개 지표 대비 인간 판단 상관관계 우위. snippet-verified (arXiv abs + arXiv html 2개 이상 독립 출처). → `02-프로덕션-아키텍처.md` Safer RAG 다음에 추가
+  2. **Reasoning Graphs — 근거 중심 피드백 자기 개선 결정론적 RAG (arXiv:2604.07595, 2026-04)** [글로벌]: Matthew Penaroza. 골든 패시지·추론 경로를 Reasoning Graph에 누적 저장해 유사 쿼리 재등장 시 재검색 없이 재활용, Retrieval Graph로 후보 풀 효율 최적화. 기반 모델 동결, 컨텍스트 엔지니어링만으로 MuSiQue +10.6pp(50%+ 커버리지), 47% 에러 감소. snippet-verified (arXiv abs HTML + arXiv PDF + 독립 WebSearch 스니펫 2개 이상 독립 출처). → `02-프로덕션-아키텍처.md` Q-CARE 다음에 추가
+  3. **RAG Deserves an Index — 색인 시점 컴파일 포지션 페이퍼 (arXiv:2608.20845, 2026-08)** [글로벌]: Kyle Wild, Yusuke Takahashi, Asako Uraki. cs.AI·cs.DB·cs.IR, 6페이지. 프로덕션 RAG의 "숨겨진 인터프리터(매 쿼리마다 동일 문서 재해석)" 구조적 비효율을 DB 인덱스 원칙으로 재프레이밍. 색인 시점 컴파일이 쿼리 시점 해석보다 정확도·속도 우위라는 포지션. snippet-verified (arXiv cs.AI/DB/IR 분류 + 독립 WebSearch 스니펫 2개 이상 출처). → `02-프로덕션-아키텍처.md` Reasoning Graphs 다음에 추가
+
+| 사례 | 도메인 | 검증 방법 | 출처 수 | 한국 여부 |
+|------|--------|-----------|---------|----------|
+| Q-CARE (arXiv:2608.11238, 2026-08) | 02-프로덕션 RAG 평가 방법론 | snippet-verified | 2개 이상 | 한국 (KAIST + 전 NAVER AI Lab) |
+| Reasoning Graphs (arXiv:2604.07595, 2026-04) | 02-프로덕션 자기 개선 RAG | snippet-verified | 2개 이상 | 글로벌 |
+| RAG Deserves an Index (arXiv:2608.20845, 2026-08) | 02-프로덕션 색인 시점 아키텍처 | snippet-verified | 2개 이상 | 글로벌 |
+
+- `sources.md`에 3개 출처 추가 (## 2026-08-24 일일 누적 추가 출처 섹션 신설)
+- `02-프로덕션-아키텍처.md` 헤더 날짜 2026-08-24 업데이트 + Safer RAG 다음에 Q-CARE + Reasoning Graphs + RAG Deserves an Index 추가
+- **한국 사례**: Q-CARE (KAIST + 전 NAVER AI Lab) 1건 달성
+- **검증 결과**: URL 200 OK: 0/3건(전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 0건 · 중복 폐기: VDGR-RAG(2608.07994) 이미 수록 확인 후 폐기, VITA(2608.12138) 이미 수록 확인 후 폐기 · 발굴 시도 → 최종 채택: 약 10건 시도 → 3건 채택
+
 ## 2026-08-23 (일일 루프 #68)
 - **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 1건 달성)
   1. **KT — NPU LLM Station: 국산 NPU + 자체 LLM + 내장 RAG 소버린 AI 어플라이언스 (2026-08-19)** [한국]: KT × Rebellions 협력. Rebellions ATOM-MAX 국산 NPU + KT Mi:deum K 2.5 Pro LLM(32B) + 내장 RAG 엔진을 단일 온프레미스 어플라이언스로 통합. 공공기관·금융·국방 등 에어갭·망분리 환경에서 외부 클라우드 없이 Day-1 RAG 운영 가능. 경남도청·울산광역시 납품, 30B+ VLM 기반 CCTV·교통 분석 운영 중. 데이터 주권과 AI 인프라 주권을 동시에 확보하는 국산 소버린 AI 어플라이언스 최초 사례. snippet-verified (Korea Times + 이데일리 + RCR Wireless + Telecompaper + 뉴스핌 + 아이티데일리 8개 이상 독립 출처). → `01-엔터프라이즈-사내지식.md` 컬리 LLM Wiki 다음에 추가
