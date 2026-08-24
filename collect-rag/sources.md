@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-08-24 일일 누적 추가 출처 (3건, 루프 #69)
+
+### 한국 — 프로덕션 아키텍처 (RAG 평가 방법론)
+- [arXiv:2608.11238 — Towards Query-Agnostic RAG Evaluation via Query Coverage and Claim Verifiability](https://arxiv.org/abs/2608.11238) — 2026-08 · [korea][evaluation][query-agnostic][reference-free][retriever][generator][kaist][naver] · Jeonghwan Choi, Taewon Yun, Minjeong Ban, Gyeonghun Sun, Jae-Gil Lee, Hwanjun Song (KAIST ISyE/GSDS, 전 NAVER AI Lab). 쿼리 유형 무관 레퍼런스-프리 RAG 평가 — C-Prec@k·C-nDCG@k(검색기) + Completeness·Conciseness·Verifiableness(생성기). 8개 데이터셋에서 RAGEval·RAGChecker 초과. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (자기 개선 RAG)
+- [arXiv:2604.07595 — Reasoning Graphs: Self-Improving, Deterministic RAG through Evidence-Centric Feedback](https://arxiv.org/abs/2604.07595) — 2026-04 · [architecture][self-improving][evidence-centric][multihop][reasoning-graph][deterministic] · Matthew Penaroza. 근거 중심 피드백 루프: Reasoning Graph(골든 패시지 재활용) + Retrieval Graph(후보 풀 효율). 기반 모델 동결, 컨텍스트 엔지니어링만으로 MuSiQue +10.6pp(50%+ 커버리지), 47% 에러 감소. (snippet-verified: arXiv abs HTML + arXiv PDF + 독립 WebSearch 스니펫 2개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (색인 시점 컴파일)
+- [arXiv:2608.20845 — RAG Deserves an Index: Why Ingest-Time Compilation Beats Query-Time Interpretation](https://arxiv.org/abs/2608.20845) — 2026-08 · [architecture][ingest-time][index][position-paper][system-design][db-principles] · Kyle Wild, Yusuke Takahashi, Asako Uraki. cs.AI·cs.DB·cs.IR, 6페이지 포지션 페이퍼. 프로덕션 RAG의 "숨겨진 인터프리터" 문제를 인덱스 원칙으로 해결해야 한다는 포지션. (snippet-verified: arXiv cs.AI/DB/IR 분류 + 독립 WebSearch 스니펫 2개 이상 출처)
+
 ## 2026-08-23 일일 누적 추가 출처 (3건, 루프 #68)
 
 ### 한국 — 엔터프라이즈 사내지식 (소버린 AI 어플라이언스)
