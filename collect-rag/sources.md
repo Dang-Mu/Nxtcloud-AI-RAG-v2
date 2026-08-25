@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-08-25 일일 누적 추가 출처 (3건, 루프 #70)
+
+### 글로벌 — 프로덕션 아키텍처 (이기종 KB 엔터프라이즈 RAG)
+- [arXiv:2608.22081 — W-RAG: Source-Aware Retrieval for Enterprise Document Generation from Heterogeneous Knowledge Bases](https://arxiv.org/abs/2608.22081) — 2026-08-22 · [architecture][enterprise][heterogeneous-kb][ontology][local-ranking][source-weighting][multi-kb] · Hridya Dhulipala, Rajesh Ombase, Michael Wang, Tien N. Nguyen (UT Dallas, DMI, MIT). 이기종 다중 KB 엔터프라이즈 RAG를 위한 온톨로지 기반 라우팅 + KB별 로컬 랭킹 + 소스 레벨 가중치 3단계 파이프라인. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (인과 관계 기반 검색 정밀도)
+- [arXiv:2608.21702 — From Association to Causation: Improving Retrieval Precision of RAG via Causal Relations and an Attention Mechanism](https://arxiv.org/abs/2608.21702) — 2026-08-22 · [architecture][causal-ai][retrieval-precision][causal-graph][reichenbach][attention][reranking] · Jing Liu, Yongxing Qi, Muchen Jiang, Chengnan Hu, Qingqing Peng, Haoming Wang, Yuqing Wang, Yang Yu, Xu Zhang, Ting Wu (Hangzhou Innovation Institute, Beihang University). 인과 그래프 기반 최종 검색 재랭킹으로 연상적 거짓 양성 문서 필터링. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
+### 글로벌 — 에이전트/툴유즈/MCP (RL 기반 멀티턴 RAG 추론)
+- [arXiv:2608.22479 — GTA-RAG: Graph-Trajectory-Augmented Reinforcement Learning for Multi-Turn Retrieval-Augmented Reasoning](https://arxiv.org/abs/2608.22479) — 2026-08-23 · [agent][multi-turn][reinforcement-learning][knowledge-graph][trajectory][multi-hop][dense-reward] · Jun Chen, Yongchao Liu, Pengyu Qiu, Jiajun Zheng, Juelu Zhang, Yujie Zeng, Qin Zhang, Ziyue Qiao, Xiao Luo. 엔터티-문서 그래프에서 궤적 합성·검증 후 궤적 수준 RL로 에이전틱 멀티홉 RAG 지도. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
 ## 2026-08-24 일일 누적 추가 출처 (3건, 루프 #69)
 
 ### 한국 — 프로덕션 아키텍처 (RAG 평가 방법론)

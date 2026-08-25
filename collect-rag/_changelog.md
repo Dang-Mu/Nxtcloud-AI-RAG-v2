@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-08-25 (일일 루프 #70)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 검색 범위 내 신규 한국 사례 미발굴)
+  1. **W-RAG — 이기종 지식 베이스 엔터프라이즈 문서 생성을 위한 소스 인식 검색 (arXiv:2608.22081, 2026-08-22)** [글로벌]: Hridya Dhulipala (UT Dallas), Rajesh Ombase (DMI), Michael Wang (MIT), Tien N. Nguyen (UT Dallas). 온톨로지 기반 쿼리 라우팅 + KB별 로컬 랭킹 + 소스 레벨 가중치로 이기종 다중 KB에서 균형 잡힌 엔터프라이즈 문서 컨텍스트를 구성하는 3단계 파이프라인. snippet-verified (arXiv abs + arXiv html 2개 이상 독립 출처). → `02-프로덕션-아키텍처.md` RAG Deserves an Index 다음에 추가
+  2. **Causal RAG — 연상에서 인과로 검색 정밀도 향상 (arXiv:2608.21702, 2026-08-22)** [글로벌]: Jing Liu 외 10인 (Hangzhou Innovation Institute, Beihang University). Reichenbach 공통 원인 원칙 기반 인과 그래프를 최종 검색 단계에 적용해 키워드 유사 문서의 거짓 양성을 인과 추론으로 필터링하고 어텐션 메커니즘으로 최종 컨텍스트 선별. snippet-verified (arXiv abs + arXiv html 2개 이상 독립 출처). → `02-프로덕션-아키텍처.md` W-RAG 다음에 추가
+  3. **GTA-RAG — 그래프 궤적 증강 강화학습 기반 멀티턴 RAG 추론 (arXiv:2608.22479, 2026-08-23)** [글로벌]: Jun Chen 외 9인. 엔터티-문서 그래프에서 연결 경로를 샘플링해 멀티홉 QA 궤적을 합성·검증하고, 궤적 수준 RL 보상으로 에이전틱 RAG의 중간 검색 단계를 지도해 최종 답변 중심 희소 보상의 한계를 극복. snippet-verified (arXiv abs + arXiv html 2개 이상 독립 출처). → `03-에이전트-툴유즈-MCP.md` LLM within MCP Matters 다음에 추가
+
+| 사례 | 도메인 | 검증 방법 | 출처 수 | 한국 여부 |
+|------|--------|-----------|---------|----------|
+| W-RAG (arXiv:2608.22081, 2026-08-22) | 02-프로덕션 멀티-KB 아키텍처 | snippet-verified | 2개 이상 | 글로벌 |
+| Causal RAG (arXiv:2608.21702, 2026-08-22) | 02-프로덕션 검색 정밀도 | snippet-verified | 2개 이상 | 글로벌 |
+| GTA-RAG (arXiv:2608.22479, 2026-08-23) | 03-에이전트 멀티턴 RAG 추론 | snippet-verified | 2개 이상 | 글로벌 |
+
+- `sources.md`에 3개 출처 추가 (## 2026-08-25 일일 누적 추가 출처 섹션 신설)
+- `02-프로덕션-아키텍처.md` 헤더 날짜 2026-08-25 업데이트 + RAG Deserves an Index 다음에 W-RAG + Causal RAG 추가
+- `03-에이전트-툴유즈-MCP.md` LLM within MCP Matters 다음에 GTA-RAG 추가
+- **한국 사례**: 0건 (SK하이닉스·카카오·LG CNS·우아한형제들·SKT A.X 검색, 모두 기수록 또는 비RAG 또는 미발굴)
+- **검증 결과**: URL 200 OK: 0/3건(전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 0건 · 중복 폐기: 0건 · 발굴 시도 → 최종 채택: 약 8건 시도 → 3건 채택
+
 ## 2026-08-24 (일일 루프 #69)
 - **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 1건 달성)
   1. **Q-CARE — KAIST + 전 NAVER AI Lab: 쿼리 무관 RAG 평가 (arXiv:2608.11238, 2026-08)** [한국]: Hwanjun Song(KAIST ISyE/GSDS, 전 NAVER AI Lab) 랩 Jeonghwan Choi 외. 쿼리를 서브쿼리로, 답변을 원자적 클레임으로 분해해 C-Prec@k·C-nDCG@k(검색기) + Completeness·Conciseness·Verifiableness(생성기) 5종 메트릭으로 레퍼런스-프리 평가. 8개 데이터셋에서 RAGEval·RAGChecker 등 기존 4개 지표 대비 인간 판단 상관관계 우위. snippet-verified (arXiv abs + arXiv html 2개 이상 독립 출처). → `02-프로덕션-아키텍처.md` Safer RAG 다음에 추가
