@@ -642,6 +642,18 @@ MCP 서버는 자주 사용하는 참조 데이터(예: 법률 식별자 조회 
 - **의의**: MCP 서버를 설계할 때 instruction-embedded data만으로는 LLM의 신뢰할 수 있는 소비를 보장하기 어렵다는 실증 근거. 법률·금융·의료처럼 정형화된 식별자 참조가 핵심인 도메인에서 embedded lookup table 대신 검색 가능한 툴 형식으로 데이터를 노출해야 함을 시사. Agentic RAG + MCP 서버 설계 원칙에 직접적인 함의를 제공하는 실험적 연구.
 - **출처**: [arXiv:2608.08467 — LLM within MCP Matters: Measuring Inefficient Resource Utilization Driven by LLMs](https://arxiv.org/abs/2608.08467) (SIGIR 2026 AgentSearch Workshop, snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
 
+---
+
+### GTA-RAG — 그래프 궤적 증강 강화학습 기반 멀티턴 RAG 추론 (arXiv:2608.22479, 2026-08-23)
+
+> Jun Chen, Yongchao Liu, Pengyu Qiu, Jiajun Zheng, Juelu Zhang, Yujie Zeng, Qin Zhang, Ziyue Qiao, Xiao Luo. cs.AI · cs.IR. 2026-08-23 제출.
+
+- **문제**: 에이전틱 RAG에서 강화학습(RL) 기반 접근법은 **최종 답변 보상(final-answer reward)만을 희소 감독 신호로 사용**한다. 이 방식은 에이전트가 실제로 올바른 증거 체인을 검색·활용했는지 여부를 무시하며, 결과적으로 멀티홉 추론에서 중간 검색 단계가 지도되지 않아 학습이 비효율적이고 해석 불가능하다.
+- **해결책 (GTA-RAG)**: ① 엔터티-문서 그래프에서 연결된 문서 경로(connected document paths)를 샘플링해 멀티홉 QA 궤적(trajectories)을 합성, ② 배포된 리트리버로 궤적을 검증해 실제 검색 가능한 증거 체인만 선별, ③ **궤적 수준 보상(trajectory-level rewards)**으로 RL을 수행해 최종 답변뿐만 아니라 검색 경로 자체를 감독. 이를 통해 멀티턴 추론에서 근거 있는 검색 행동을 학습한다.
+- **의의**: 에이전틱 멀티홉 RAG에서 RL 감독의 희소성 문제를 "그래프 기반 궤적 합성"으로 해결하는 접근법. 기존의 최종 답변 중심 보상이 야기하는 블랙박스 검색 행동을 궤적 수준 보상으로 투명화한다. 엔터티 그래프를 검색 궤적 생성 인프라로 활용하는 패턴은 Knowledge Graph RAG와 Agentic RAG의 교차점에서 실용적 가치가 크며, 멀티홉 QA·법률·의료 등 다단계 증거 추적이 필요한 도메인에 적용 가능하다.
+- **저자**: Jun Chen, Yongchao Liu, Pengyu Qiu, Jiajun Zheng, Juelu Zhang, Yujie Zeng, Qin Zhang, Ziyue Qiao, Xiao Luo
+- **출처**: [arXiv:2608.22479 — GTA-RAG: Graph-Trajectory-Augmented Reinforcement Learning for Multi-Turn Retrieval-Augmented Reasoning](https://arxiv.org/abs/2608.22479) (2026-08-23, snippet-verified: arXiv abs 스니펫 + arXiv html 스니펫 2개 이상 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.
