@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-08-26 (일일 루프 #71)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 검색 범위 내 신규 한국 사례 미발굴, 기수록된 사례(네이버 플레이스·KT·채널톡·LG CNS 동아쏘시오·신한투자증권 등) 외 2026-08-19~26 기간 신규 한국 1차 출처 확인 불가)
+  1. **The RAT — 베이즈 통합 RAG 평가 모델 (arXiv:2608.24753, 2026-08-25)** [글로벌]: Pius von Däniken, Felix Matthias Saaro, Mark Cieliebak, Jan Milan Deriu (ZHAW School of Engineering, 스위스). 파이프라인 정보 흐름에 따라 검색 성공·기권·답변 정확도를 베이즈 인수분해(factorization)로 결합해 집계 지표로는 구분 불가한 시스템 간 실질적 행동 차이를 드러내는 통합 평가 모델. 27개 RAG 설정 × 3개 데이터셋 × 3개 검색기 × 3개 생성기 실험. snippet-verified (arXiv abs + arXiv html 2개 독립 출처). → `02-프로덕션-아키텍처.md` Q-CARE 다음에 추가
+  2. **Graph-R1 — 에이전틱 GraphRAG 종단 간 강화학습 (arXiv:2507.21892, ICML 2026)** [글로벌]: Haoran Luo, Haihong E, Guanting Chen 외 8인 (LHRLAB). 경량 지식 하이퍼그래프를 환경으로 에이전트가 "생각-쿼리-검색-재생각" RL 사이클로 멀티홉 추론 최적화. 최초 에이전틱 GraphRAG 종단 간 RL 프레임워크. snippet-verified (arXiv abs + ICML 2026 poster page + GitHub 3개 이상 독립 출처). → `03-에이전트-툴유즈-MCP.md` GTA-RAG 다음에 추가
+  3. **GraphRAG-R1 — 과정 제약 강화학습 기반 적응형 GraphRAG (arXiv:2507.23581, WWW 2026)** [글로벌]: Beihang University 외. PRA(Progressive Retrieval Attenuation) + CAF(Cost-Aware F1) 이중 보상 설계로 멀티홉 추론 정확도와 검색 비용 효율을 동시에 최적화. WWW 2026(ACM Web Conference 2026) 채택. snippet-verified (arXiv abs + ACM DL DOI + Beihang Univ. + GitHub 4개 이상 독립 출처). → `03-에이전트-툴유즈-MCP.md` Graph-R1 다음에 추가
+
+| 사례 | 도메인 | 검증 방법 | 출처 수 | 한국 여부 |
+|------|--------|-----------|---------|----------|
+| The RAT (arXiv:2608.24753, 2026-08-25) | 02-프로덕션 RAG 평가 방법론 | snippet-verified | 2개 이상 | 글로벌 |
+| Graph-R1 (arXiv:2507.21892, ICML 2026) | 03-에이전트 GraphRAG RL | snippet-verified | 3개 이상 | 글로벌 |
+| GraphRAG-R1 (arXiv:2507.23581, WWW 2026) | 03-에이전트 적응형 GraphRAG RL | snippet-verified | 4개 이상 | 글로벌 |
+
+- `sources.md`에 3개 출처 추가 (## 2026-08-26 일일 누적 추가 출처 섹션 신설)
+- `02-프로덕션-아키텍처.md` Q-CARE 다음에 The RAT 추가
+- `03-에이전트-툴유즈-MCP.md` GTA-RAG 다음에 Graph-R1 + GraphRAG-R1 추가
+- **한국 사례**: 0건 (2026-08-19~26 기간 기수록 목록 외 신규 1차 출처 미발굴)
+- **검증 결과**: URL 200 OK: 0/3건(전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 0건 · 중복 폐기: 0건 · 발굴 시도 → 최종 채택: 약 10건 시도 → 3건 채택
+
 ## 2026-08-25 (일일 루프 #70)
 - **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 검색 범위 내 신규 한국 사례 미발굴)
   1. **W-RAG — 이기종 지식 베이스 엔터프라이즈 문서 생성을 위한 소스 인식 검색 (arXiv:2608.22081, 2026-08-22)** [글로벌]: Hridya Dhulipala (UT Dallas), Rajesh Ombase (DMI), Michael Wang (MIT), Tien N. Nguyen (UT Dallas). 온톨로지 기반 쿼리 라우팅 + KB별 로컬 랭킹 + 소스 레벨 가중치로 이기종 다중 KB에서 균형 잡힌 엔터프라이즈 문서 컨텍스트를 구성하는 3단계 파이프라인. snippet-verified (arXiv abs + arXiv html 2개 이상 독립 출처). → `02-프로덕션-아키텍처.md` RAG Deserves an Index 다음에 추가
