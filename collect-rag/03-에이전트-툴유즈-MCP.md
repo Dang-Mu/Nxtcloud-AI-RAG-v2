@@ -654,6 +654,34 @@ MCP 서버는 자주 사용하는 참조 데이터(예: 법률 식별자 조회 
 - **저자**: Jun Chen, Yongchao Liu, Pengyu Qiu, Jiajun Zheng, Juelu Zhang, Yujie Zeng, Qin Zhang, Ziyue Qiao, Xiao Luo
 - **출처**: [arXiv:2608.22479 — GTA-RAG: Graph-Trajectory-Augmented Reinforcement Learning for Multi-Turn Retrieval-Augmented Reasoning](https://arxiv.org/abs/2608.22479) (2026-08-23, snippet-verified: arXiv abs 스니펫 + arXiv html 스니펫 2개 이상 독립 출처)
 
+### Graph-R1 — 에이전틱 GraphRAG를 위한 최초 종단 간 강화학습 프레임워크 (arXiv:2507.21892, ICML 2026)
+
+> Haoran Luo, Haihong E, Guanting Chen, Qika Lin, Yikai Guo, Fangzhi Xu, Zemin Kuang, Meina Song, Xiaobao Wu, Yifan Zhu, Luu Anh Tuan (LHRLAB). ICML 2026 채택. GitHub: LHRLAB/Graph-R1.
+
+- **문제**: 기존 GraphRAG 방법론은 멀티홉 추론이 필요한 복잡한 질문에서 사전 정의된 휴리스틱 쿼리·검색 단계에 의존해 LLM의 추론 잠재력을 충분히 활용하지 못한다. 또한 검색 과정 전체가 하나의 통합된 보상 신호로 최적화된 사례가 없었다.
+- **Graph-R1 접근법**: **최초의 에이전틱 GraphRAG 종단 간 강화학습 프레임워크** — 세 가지 핵심 구성 요소.
+  - **경량 지식 하이퍼그래프(Lightweight Knowledge Hypergraph)**: 에이전트가 탐색할 그래프 환경을 사전 구축. 대규모 KG 전체를 메모리에 올리지 않고도 멀티홉 추론 경로를 지원.
+  - **"생각-쿼리-검색-재생각(think-generate query-retrieve subgraph-rethink)" RL 사이클**: 에이전트가 그래프와 다중 턴으로 상호작용하면서 하위 그래프를 검색·통합해 추론을 고도화.
+  - **명시적 보상 메커니즘(Explicit Reward Mechanism)**: 중간 검색 행동을 포함한 전체 추론 과정을 종단 간으로 최적화.
+- **결과**: 표준 RAG 데이터셋에서 기존 GraphRAG 및 RL 기반 RAG 방법론 대비 추론 정확도·검색 효율·생성 품질 전 항목에서 우위. ICML 2026 채택.
+- **의의**: GTA-RAG(arXiv:2608.22479)가 궤적 합성 + RL로 멀티홉 검색 경로를 학습한다면, Graph-R1은 에이전트가 **지식 그래프를 환경으로 직접 탐색**하면서 RL로 최적화되는 통합 아키텍처다. "검색을 결정으로 학습"이라는 패러다임의 대표 ICML 2026 논문.
+- **저자**: Haoran Luo, Haihong E, Guanting Chen 외 8인
+- **출처**: [arXiv:2507.21892 — Graph-R1: Towards Agentic GraphRAG Framework via End-to-end Reinforcement Learning](https://arxiv.org/abs/2507.21892) (ICML 2026, snippet-verified: arXiv abs + ICML 2026 poster page + GitHub LHRLAB/Graph-R1 3개 이상 독립 출처)
+
+### GraphRAG-R1 — 과정 제약 강화학습 기반 적응형 그래프 검색 증강 생성 (arXiv:2507.23581, WWW 2026)
+
+> Beihang University 외 연구팀. ACM Web Conference 2026 (WWW 2026) 채택 (DOI: 10.1145/3774904.3792589). GitHub: ycygit/GraphRAG-R1.
+
+- **문제**: 기존 GraphRAG 방법론은 쿼리·검색 단계가 사전 정의 휴리스틱에 의존해 복잡한 멀티홉 추론이 필요한 질문 처리 시 병목이 발생한다. 검색 비용과 정확도를 동시에 최적화하는 메커니즘이 부재하다.
+- **GraphRAG-R1 접근법**: **과정 제약 결과 기반 강화학습(Process-Constrained Outcome-based RL)**으로 LLM을 학습시켜 적응형 그래프 검색을 가능하게 한다.
+  - **PRA(Progressive Retrieval Attenuation) 보상**: 필수적인 검색만 장려하고 불필요한 검색 반복을 억제해 검색 효율 향상.
+  - **CAF(Cost-Aware F1) 보상**: 모델 성능과 계산 비용을 균형있게 최적화해 답변 품질과 레이턴시 트레이드오프 조정.
+  - 과정 제약(process constraint)을 통해 검색 절차의 각 중간 단계를 정책 수준에서 제어.
+- **결과**: 멀티홉 추론 벤치마크에서 기존 GraphRAG 및 기타 RAG 방법론 대비 추론 정확도·검색 효율·생성 품질 향상. WWW 2026(ACM Web Conference 2026) 채택.
+- **의의**: Graph-R1(ICML 2026)이 에이전트 탐색 사이클 전체를 RL로 최적화한다면, GraphRAG-R1은 **검색 비용 인식 보상 설계**를 도입해 프로덕션 환경의 비용-성능 트레이드오프를 명시적으로 다룬다. 에이전틱 GraphRAG RL 분야의 두 갈래(탐색 최적화 vs 비용 인식 제어)가 ICML/WWW 2026에서 동시에 제안된 점이 주목된다.
+- **저자**: Beihang University 외
+- **출처**: [arXiv:2507.23581 — GraphRAG-R1: Graph Retrieval-Augmented Generation with Process-Constrained Reinforcement Learning](https://arxiv.org/abs/2507.23581) (WWW 2026, snippet-verified: arXiv abs + ACM DL DOI 10.1145/3774904.3792589 + Beihang Univ. research page + GitHub 4개 이상 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.

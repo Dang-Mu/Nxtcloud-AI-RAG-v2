@@ -1,5 +1,14 @@
 # 출처 목록
 
+## 2026-08-26 일일 누적 추가 출처 (3건, 루프 #71)
+
+### 글로벌 — 평가 방법론
+- [arXiv:2608.24753 — The RAT: A Unified Bayesian Model for RAG Evaluation](https://arxiv.org/abs/2608.24753) — 2026-08-25 · [evaluation][bayesian][pipeline-factorization] · Pius von Däniken, Felix Matthias Saaro, Mark Cieliebak, Jan Milan Deriu (ZHAW School of Engineering). 파이프라인 정보 흐름에 따른 검색 성공·기권·답변 정확도 베이즈 인수분해 평가. 27개 RAG 설정 × 3데이터셋 × 3검색기 × 3생성기. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+
+### 글로벌 — 에이전틱 GraphRAG RL (ICML·WWW 2026)
+- [arXiv:2507.21892 — Graph-R1: Towards Agentic GraphRAG Framework via End-to-end Reinforcement Learning](https://arxiv.org/abs/2507.21892) — ICML 2026 · [agentic][graph][reinforcement-learning][icml2026] · Haoran Luo, Haihong E, Guanting Chen 외 8인 (LHRLAB). 에이전트가 지식 하이퍼그래프를 환경으로 탐색하는 "생각-쿼리-검색-재생각" RL 사이클. 최초 에이전틱 GraphRAG 종단 간 RL 프레임워크. (snippet-verified: arXiv abs + ICML 2026 poster + GitHub 3개 이상 독립 출처)
+- [arXiv:2507.23581 — GraphRAG-R1: Graph Retrieval-Augmented Generation with Process-Constrained Reinforcement Learning](https://arxiv.org/abs/2507.23581) — WWW 2026 (DOI: 10.1145/3774904.3792589) · [agentic][graph][reinforcement-learning][www2026][cost-aware] · Beihang University 외. 과정 제약 결과 기반 RL 기반 적응형 GraphRAG. PRA(Progressive Retrieval Attenuation) + CAF(Cost-Aware F1) 이중 보상으로 검색 효율과 비용-성능 균형 동시 최적화. (snippet-verified: arXiv abs + ACM DL DOI + Beihang Univ. + GitHub 4개 이상 독립 출처)
+
 ## 2026-08-25 일일 누적 추가 출처 (3건, 루프 #70)
 
 ### 글로벌 — 프로덕션 아키텍처 (이기종 KB 엔터프라이즈 RAG)
