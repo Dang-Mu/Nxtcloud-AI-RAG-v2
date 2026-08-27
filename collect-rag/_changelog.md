@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-08-27 (일일 루프 #72)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 2026-08-20~27 기간 기수록 목록(네이버 플레이스·KT·채널톡·컬리·삼성·LY Corp·카카오Kanana SLM 등) 외 신규 한국 1차 출처 미발굴)
+  1. **ReliableRAG — 신뢰도 기반 추론 체인으로 멀티홉 QA 허위 정보 방어 (arXiv:2608.25487, 2026-08-26)** [글로벌]: 멀티홉 QA에서 허위 정보가 다단계 추론을 오염시키는 문제를 트리플 단위 신뢰도 정량화로 해결. 검색된 문서를 세밀한 구조적 트리플로 변환 후, 쿼리-트리플 의미 관련성과 트리플 신뢰도를 종합해 신뢰도 높은 상위 K개 트리플만 컨텍스트로 구성. snippet-verified (arXiv abs + arXiv html 2개 이상 독립 출처). → `02-프로덕션-아키텍처.md` Causal RAG 다음에 추가
+  2. **Retrieved But Not Reliable — RAG 공격·방어 종합 서베이 (arXiv:2608.24977, 2026-08-25)** [글로벌]: EMNLP 2026 Findings. 코퍼스 포이즈닝·백도어·프라이버시 유출·공정성 위반을 포함한 RAG 파이프라인 전체 위협 모델 형식화 및 검색·재랭킹·생성·역추적 4단계 방어 전략 정리. Minh Tran 외 11인. 24페이지. snippet-verified (arXiv abs + arXiv html 2개 이상 독립 출처). → `02-프로덕션-아키텍처.md` ReliableRAG 다음에 추가
+  3. **PlanSightRAG — 토목 표준 도면 QA·준수 검사 자동화 (arXiv:2608.26091, 2026-08-26)** [글로벌]: University of Wyoming. 5개 주 DOT 표준 도면(1,898페이지) 대상 시각 우선 멀티모달 RAG. ColNomic-3B 멀티벡터 이미지 직접 인덱싱 + Planner-Retriever-Auditor-Synthesizer 에이전틱 파이프라인으로 준수 판정 100% 달성, Recall@5 91.47%. Automation in Construction 저널 제출. snippet-verified (arXiv abs + arXiv html 2개 이상 독립 출처). → `04-산업별-사례.md` 과학·연구 > 글로벌 AgriRAG 다음에 추가
+
+| 사례 | 도메인 | 검증 방법 | 출처 수 | 한국 여부 |
+|------|--------|-----------|---------|----------|
+| ReliableRAG (arXiv:2608.25487, 2026-08-26) | 02-프로덕션 RAG 신뢰도·허위정보 방어 | snippet-verified | 2개 이상 | 글로벌 |
+| Retrieved But Not Reliable (arXiv:2608.24977, 2026-08-25) | 02-프로덕션 RAG 보안 서베이 | snippet-verified | 2개 이상 | 글로벌 |
+| PlanSightRAG (arXiv:2608.26091, 2026-08-26) | 04-산업별 토목·인프라 멀티모달 RAG | snippet-verified | 2개 이상 | 글로벌 |
+
+- `sources.md`에 3개 출처 추가 (## 2026-08-27 일일 누적 추가 출처 섹션 신설, 파일 최상단)
+- `02-프로덕션-아키텍처.md` Causal RAG 다음에 ReliableRAG + Retrieved But Not Reliable 추가
+- `04-산업별-사례.md` 과학·연구 > 글로벌 AgriRAG 다음에 PlanSightRAG 추가
+- **한국 사례**: 0건 (2026-08-20~27 기간 기수록 목록 외 신규 1차 출처 미발굴)
+- **검증 결과**: URL 200 OK: 0/3건(전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 1건(ReliableRAG "최초" 주장 → 논문 자체 주장임 명기) · 중복 폐기: 0건 · 발굴 시도 → 최종 채택: 약 10건 시도 → 3건 채택
+
 ## 2026-08-26 (일일 루프 #71)
 - **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 검색 범위 내 신규 한국 사례 미발굴, 기수록된 사례(네이버 플레이스·KT·채널톡·LG CNS 동아쏘시오·신한투자증권 등) 외 2026-08-19~26 기간 신규 한국 1차 출처 확인 불가)
   1. **The RAT — 베이즈 통합 RAG 평가 모델 (arXiv:2608.24753, 2026-08-25)** [글로벌]: Pius von Däniken, Felix Matthias Saaro, Mark Cieliebak, Jan Milan Deriu (ZHAW School of Engineering, 스위스). 파이프라인 정보 흐름에 따라 검색 성공·기권·답변 정확도를 베이즈 인수분해(factorization)로 결합해 집계 지표로는 구분 불가한 시스템 간 실질적 행동 차이를 드러내는 통합 평가 모델. 27개 RAG 설정 × 3개 데이터셋 × 3개 검색기 × 3개 생성기 실험. snippet-verified (arXiv abs + arXiv html 2개 독립 출처). → `02-프로덕션-아키텍처.md` Q-CARE 다음에 추가

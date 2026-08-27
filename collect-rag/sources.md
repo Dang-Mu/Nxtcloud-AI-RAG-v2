@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-08-27 일일 누적 추가 출처 (3건, 루프 #72)
+
+### 글로벌 — 아키텍처·신뢰성 (RAG 허위 정보 방어)
+- [arXiv:2608.25487 — ReliableRAG: Combating Misinformation in Retrieval-Augmented Generation via Reliability-Guided Reasoning Chains](https://arxiv.org/abs/2608.25487) — 2026-08-26 · [architecture][reliability][misinformation][triple-extraction][multi-hop][credibility] · 멀티홉 QA에서 허위 정보에 의한 추론 오염을 세밀한 트리플 단위 신뢰도 정량화(쿼리-트리플 의미 관련성 + 트리플 신뢰도)로 방어. 신뢰도 높은 상위 K 트리플만 컨텍스트로 구성. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
+### 글로벌 — 보안·강건성 서베이 (EMNLP 2026)
+- [arXiv:2608.24977 — Retrieved But Not Reliable: A Survey on Attacks, and Defenses in Retrieval-Augmented Generation](https://arxiv.org/abs/2608.24977) — 2026-08-25 · [security][survey][robustness][corpus-poisoning][backdoor][privacy][fairness][emnlp2026] · Minh Tran 외 11인. EMNLP 2026 Findings. RAG 파이프라인 전체 위협 모델(코퍼스·검색기·생성기) 형식화. 정확도·프라이버시·공정성 공격 분류 + 검색·재랭킹·생성·역추적 방어 정리. 24페이지. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
+### 글로벌 — 토목·인프라 (멀티모달 RAG)
+- [arXiv:2608.26091 — PlanSightRAG: A Visual-First Multimodal RAG for Automating Question Answering and Compliance Checking for Civil Standard Plans](https://arxiv.org/abs/2608.26091) — 2026-08-26 · [industry:건설][multimodal][visual-first][compliance][dot][colnomic][agentic] · Nabaraj Subedi, Shuvo Dip Datta, Ahmed Abdelaty, Shivanand Venkanna Sheshappanavar (Univ. of Wyoming). 5개 주 DOT 표준 도면(1,898페이지) 대상. ColNomic-3B 멀티벡터 이미지 직접 인덱싱 + Planner-Retriever-Auditor-Synthesizer 에이전틱 파이프라인. Recall@5 91.47%, 준수 판정 100%. Automation in Construction 제출. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
 ## 2026-08-26 일일 누적 추가 출처 (3건, 루프 #71)
 
 ### 글로벌 — 평가 방법론
