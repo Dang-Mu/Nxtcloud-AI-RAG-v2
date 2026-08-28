@@ -682,6 +682,19 @@ MCP 서버는 자주 사용하는 참조 데이터(예: 법률 식별자 조회 
 - **저자**: Beihang University 외
 - **출처**: [arXiv:2507.23581 — GraphRAG-R1: Graph Retrieval-Augmented Generation with Process-Constrained Reinforcement Learning](https://arxiv.org/abs/2507.23581) (WWW 2026, snippet-verified: arXiv abs + ACM DL DOI 10.1145/3774904.3792589 + Beihang Univ. research page + GitHub 4개 이상 독립 출처)
 
+### MCite-RL — 인용 강화 에이전틱 RL로 신뢰 가능한 멀티모달 RAG (arXiv:2608.21808, 2026-08-22)
+
+> Suifeng Zhao, Zida Liu, Xinyu Lei, Lei Sun, Jun Gao, Sujian Li. cs.CL. 2026-08-22 제출.
+
+- **문제**: 멀티모달 RAG(MLLM)에서 시각 인용(visual citation) — 답변의 어느 부분이 어느 이미지의 어느 영역에서 왔는지를 정확히 명시하는 것 — 은 추적 가능성(traceability)과 검증 가능성(verifiability)을 위해 필수적이다. 그러나 기존 RAG+SFT 방법은 교차 모달 추론(cross-modal reasoning)이 취약해 ① 시각 인용이 부정확하거나 ② 생성된 답변과 인용이 서로 분리(decoupling)되는 문제가 발생한다.
+- **해결책 (MCite-RL)**: 두 가지 핵심 구성 요소를 결합한 에이전틱 RL 프레임워크.
+  - **Agentic Refinement 모듈**: 반복 검색 → 추론 → 재귀적 크롭(recursive cropping)의 루프로 인용 후보 공간을 점진적으로 축소. 인용을 "정적 단계(static step)"가 아닌 "증거 기반 동적 추론 과정(evidence-driven reasoning process)"으로 전환.
+  - **Citation-enhanced Reward**: 과정 수준(process-level) 피드백과 결과 수준(outcome-level) 피드백을 동시에 RL 보상으로 통합. 답변 정확도(answer accuracy)와 출처 추적 가능성(source traceability)을 공동으로 최적화.
+- **결과**: 멀티모달 RAG 벤치마크에서 답변 정확도·시각 인용 정밀도 동시 향상. 교차 모달 추론의 일관성 개선.
+- **의의**: GraphRAG-R1(WWW 2026)·Graph-R1(ICML 2026)이 멀티홉 텍스트 추론에서 RL을 활용한다면, MCite-RL은 **멀티모달 인용 추론**에 RL을 적용해 MLLM 기반 RAG의 신뢰성 기준을 높인다. PDF 보고서·의료 영상·기술 매뉴얼 등 이미지-텍스트 혼합 문서에서 근거 추적이 중요한 엔터프라이즈 RAG에 직접 적용 가능한 방향을 제시한다.
+- **저자**: Suifeng Zhao, Zida Liu, Xinyu Lei, Lei Sun, Jun Gao, Sujian Li
+- **출처**: [arXiv:2608.21808 — MCite-RL: Towards Reliable Multimodal RAG via Citation-enhanced Agentic Reinforcement Learning](https://arxiv.org/abs/2608.21808) (2026-08-22, snippet-verified: arXiv abs + arXiv html + arXiv cs.CL 주간 목록 3개 이상 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.

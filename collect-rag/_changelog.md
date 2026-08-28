@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-08-28 (일일 루프 #73)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 2026-08-21~28 기간 네이버·카카오·토스·우아한형제들·LY Corp·SKT·채널톡 검색 결과 신규 한국 1차 RAG 출처 미발굴, 기수록 목록 외 새로운 엔지니어링 블로그 포스트 부재)
+  1. **PonsRAG — 생물학적 뇌교 착안 장문 서사 추론 RAG (arXiv:2608.25486, EMNLP 2026 Main, 2026-08-26)** [글로벌]: Rongchen Zhao 외 6인. 소설·전기·역사 등 장문 서사에서 발생하는 ①인지 섬(cognitive islanding)과 ②교차 계층 증거 단절 두 문제를 해결하는 뇌교 착안 조율 RAG 프레임워크. Triple-Layer Indexing(문서→섹션→문장 3계층 연결)과 Coordinated Reasoning(계층 간 교차 증거 통합)으로 장문 서사 다지선다 과제 최강 베이스라인 대비 11.56% 상대 향상. EMNLP 2026 Main Conference 채택. snippet-verified (arXiv abs + arXiv html 2개 이상 독립 출처). → `02-프로덕션-아키텍처.md` Retrieved But Not Reliable 다음에 추가
+  2. **MG-MMKG-RAG — 다중 세분화 컨텍스트 강화 멀티모달 지식 그래프 RAG (arXiv:2608.25986, 2026-08-26)** [글로벌]: Zongyu Wu 외 7인. 기존 MMKG-RAG의 이미지-텍스트 독립 처리에서 발생하는 의미 간극(semantic gap)을 이미지 추출 단계부터 다중 세분화 텍스트 컨텍스트를 공동 활용해 처음부터 시각-텍스트 의미 공간을 통합하는 방식으로 해소. 멀티모달 QA 정확도·교차 모달 검색 정밀도 향상. snippet-verified (arXiv abs + arXiv html 2개 이상 독립 출처). → `02-프로덕션-아키텍처.md` PonsRAG 다음에 추가
+  3. **MCite-RL — 인용 강화 에이전틱 RL 기반 신뢰 가능 멀티모달 RAG (arXiv:2608.21808, 2026-08-22)** [글로벌]: Suifeng Zhao 외 5인. 멀티모달 RAG에서 답변-시각 인용 분리 문제를 Agentic Refinement(반복 검색·추론·재귀 크롭으로 인용 공간 축소)와 Citation-enhanced Reward(과정+결과 이중 RL 보상으로 답변 정확도·출처 추적 동시 최적화)로 해결. snippet-verified (arXiv abs + arXiv html + arXiv cs.CL 주간 목록 3개 이상 독립 출처). → `03-에이전트-툴유즈-MCP.md` GraphRAG-R1 다음에 추가
+
+| 사례 | 도메인 | 검증 방법 | 출처 수 | 한국 여부 |
+|------|--------|-----------|---------|----------|
+| PonsRAG (arXiv:2608.25486, 2026-08-26) | 02-프로덕션 장문 서사 RAG 아키텍처 | snippet-verified | 2개 이상 | 글로벌 |
+| MG-MMKG-RAG (arXiv:2608.25986, 2026-08-26) | 02-프로덕션 멀티모달 KG RAG | snippet-verified | 2개 이상 | 글로벌 |
+| MCite-RL (arXiv:2608.21808, 2026-08-22) | 03-에이전트 멀티모달 인용 RL | snippet-verified | 3개 이상 | 글로벌 |
+
+- `sources.md`에 3개 출처 추가 (## 2026-08-28 일일 누적 추가 출처 섹션 신설, 파일 최상단)
+- `02-프로덕션-아키텍처.md` Retrieved But Not Reliable 다음에 PonsRAG + MG-MMKG-RAG 추가
+- `03-에이전트-툴유즈-MCP.md` GraphRAG-R1 다음에 MCite-RL 추가
+- **한국 사례**: 0건 (2026-08-21~28 기간 기수록 목록 외 신규 한국 1차 출처 미발굴)
+- **검증 결과**: URL 200 OK: 0/3건(전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 0건 · 중복 폐기: 0건 · 발굴 시도 → 최종 채택: 약 8건 시도 → 3건 채택
+
 ## 2026-08-27 (일일 루프 #72)
 - **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 2026-08-20~27 기간 기수록 목록(네이버 플레이스·KT·채널톡·컬리·삼성·LY Corp·카카오Kanana SLM 등) 외 신규 한국 1차 출처 미발굴)
   1. **ReliableRAG — 신뢰도 기반 추론 체인으로 멀티홉 QA 허위 정보 방어 (arXiv:2608.25487, 2026-08-26)** [글로벌]: 멀티홉 QA에서 허위 정보가 다단계 추론을 오염시키는 문제를 트리플 단위 신뢰도 정량화로 해결. 검색된 문서를 세밀한 구조적 트리플로 변환 후, 쿼리-트리플 의미 관련성과 트리플 신뢰도를 종합해 신뢰도 높은 상위 K개 트리플만 컨텍스트로 구성. snippet-verified (arXiv abs + arXiv html 2개 이상 독립 출처). → `02-프로덕션-아키텍처.md` Causal RAG 다음에 추가
