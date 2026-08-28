@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-08-28 일일 누적 추가 출처 (3건, 루프 #73)
+
+### 글로벌 — 프로덕션 아키텍처 (장문 서사 RAG)
+- [arXiv:2608.25486 — PonsRAG: A Pons-Inspired RAG Bridging Cognitive Islands for Coordinated Long Narrative Reasoning](https://arxiv.org/abs/2608.25486) — 2026-08-26 · [architecture][long-narrative][cognitive-islanding][triple-layer-indexing][coordinated-reasoning][emnlp2026] · Rongchen Zhao, Yu Chen, Juyuan Wang, Zhouting Mo, Jianxing Yu, Wenqing Chen, Jingping Liu. EMNLP 2026 Main Conference 채택. 장문 서사의 인지 섬·교차 계층 증거 단절을 Triple-Layer Indexing + Coordinated Reasoning으로 해소. 최강 베이스라인 대비 11.56% 상대 향상. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (멀티모달 지식 그래프 RAG)
+- [arXiv:2608.25986 — Multi-Granularity Context-Enhanced RAG over Multimodal Knowledge Graphs](https://arxiv.org/abs/2608.25986) — 2026-08-26 · [architecture][multimodal][knowledge-graph][mmkg][multi-granularity][semantic-gap][cross-modal] · Zongyu Wu, Yilong Wang, Xiaochen Wang, Minhua Lin, Zhichao Xu, Fenglong Ma, Xiang Zhang, Suhang Wang. MMKG 기반 RAG에서 이미지-텍스트 독립 처리로 발생하는 의미 간극을 다중 세분화 공동 인코딩으로 해소. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
+### 글로벌 — 에이전트·툴유즈 (멀티모달 RAG 인용 강화 RL)
+- [arXiv:2608.21808 — MCite-RL: Towards Reliable Multimodal RAG via Citation-enhanced Agentic Reinforcement Learning](https://arxiv.org/abs/2608.21808) — 2026-08-22 · [agent][multimodal][citation][reinforcement-learning][agentic-refinement][cross-modal][traceability] · Suifeng Zhao, Zida Liu, Xinyu Lei, Lei Sun, Jun Gao, Sujian Li. 멀티모달 RAG에서 답변-시각 인용 분리 문제를 Agentic Refinement + Citation-enhanced RL로 해소. 답변 정확도·출처 추적 가능성 동시 최적화. (snippet-verified: arXiv abs + arXiv html + arXiv cs.CL 주간 목록 3개 이상 독립 출처)
+
 ## 2026-08-27 일일 누적 추가 출처 (3건, 루프 #72)
 
 ### 글로벌 — 아키텍처·신뢰성 (RAG 허위 정보 방어)
