@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-08-29 일일 누적 추가 출처 (3건, 루프 #74)
+
+### 한국 — 금융 산업 사례 (GraphRAG)
+- [toss.tech — 테크 토크 #3: 토스증권 AI 데이터 플랫폼팀의 GraphRAG](https://toss.tech/article/tech_talk_talk_3) — 2026-08-26 · [financial][graphrag][knowledge-graph][elasticsearch][fintech][korea] · 토스증권 AI 데이터 플랫폼팀. 미리 정의된 금융 온톨로지 위에 GraphRAG 적용. Elasticsearch 엔티티 후보 검색 → 그래프 노드 탐색 → 서브그래프 반환. 회사·종목·제품·이벤트·테마 5종 노드 연결. (snippet-verified: toss.tech + toss.im 2개 이상 독립 출처)
+
+### 글로벌 — 금융 산업 사례 (자가 개선 에이전틱 RAG)
+- [arXiv:2608.26706 — Towards Expert Financial QA via Self-Improving RAG](https://arxiv.org/abs/2608.26706) — 2026-08-27 · [financial][agentic][self-improving][judge-agent][financebench][sec-filings][multi-agent] · Junjie Xiong, Shawheen Ghezavat, Aum Hirpara. 3 에이전트(Retrieval+Reasoning+Judge) + 오케스트레이터. Judge 동적 임계값 미달 시 에스컬레이션 재시도. FinanceBench 86% 달성. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (엔티티 구조 인덱스 RAG)
+- [arXiv:2608.21252 — EnSI-RAG: Entity-Structure-Indexed Retrieval-Augmented Generation for Long-Document QA](https://arxiv.org/abs/2608.21252v1) — 2026-08-21 · [architecture][entity-index][long-document][multi-hop][knowledge-graph][offline-indexing] · Xuanyu Meng, Jiashuo Sun, Jash Rajesh Parekh, Jiawei Han. cs.CL·cs.AI·cs.DB·cs.IR. 쿼리-독립 (e,t,k,v) 튜플 인덱스로 청크 경계 분리 문제 해소. 오프라인 구축, 원본 패시지 링크 유지. (snippet-verified: arXiv abs + arXiv html + cs.CL listing 3개 이상 독립 출처)
+
 ## 2026-08-28 일일 누적 추가 출처 (3건, 루프 #73)
 
 ### 글로벌 — 프로덕션 아키텍처 (장문 서사 RAG)
