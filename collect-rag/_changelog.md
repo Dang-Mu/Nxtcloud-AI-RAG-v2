@@ -1,5 +1,19 @@
 # 업데이트 로그
 
+## 2026-08-29 (일일 루프 #74)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 1건)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| KR-2026-08-29-01 | 토스증권 AI 데이터 플랫폼팀 — GraphRAG 기반 금융 지식 검색 | 금융 > 한국 | 04-산업별-사례.md |
+| GL-2026-08-29-01 | arXiv:2608.26706 — Self-Improving Financial RAG (Judge 에이전트 자가 개선 루프) | 금융 > 글로벌 | 04-산업별-사례.md |
+| GL-2026-08-29-02 | arXiv:2608.21252 — EnSI-RAG (엔티티 구조 인덱스 기반 장문 문서 QA) | 프로덕션 아키텍처 | 02-프로덕션-아키텍처.md |
+
+- **검증 결과**: 3건 전원 5점 자가검증 통과 (URL 생존·요약-출처 일치·미검증 주장 없음·ID/날짜 형식·중복 없음); snippet-verified (2개 이상 독립 출처)
+  1. **토스증권 GraphRAG (toss.tech, 2026-08-26)** [한국]: 미리 정의된 금융 온톨로지 위에 GraphRAG 적용. Elasticsearch 엔티티 후보 검색 → 그래프 노드 탐색 → 서브그래프 반환. 회사·종목·제품·이벤트·테마 5종 노드 연결. 한국 핀테크 GraphRAG 프로덕션 초기 공개 사례. → `04-산업별-사례.md` 금융 > 한국, 신한투자증권×구글클라우드 다음에 추가
+  2. **arXiv:2608.26706 Self-Improving Financial RAG (2026-08-27)** [글로벌]: Retrieval + Reasoning + Judge 3 에이전트 + 오케스트레이터 구조. Judge가 동적 임계값 미달 답변을 에스컬레이션 → 전략 교체 재시도. FinanceBench 86% 달성. → `04-산업별-사례.md` 금융 > 글로벌, FinSAgent 다음(### 한국 전)에 추가
+  3. **arXiv:2608.21252 EnSI-RAG (2026-08-21)** [글로벌]: 쿼리-독립 엔티티 중심 인덱스 (e,t,k,v) 튜플로 청크 경계 분리 문제 해소. 오프라인 인덱스 구축, 원본 패시지 링크 유지. → `02-프로덕션-아키텍처.md` MG-MMKG-RAG 다음(한국 환경 특이점 전)에 추가
+
 ## 2026-08-28 (일일 루프 #73)
 - **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 2026-08-21~28 기간 네이버·카카오·토스·우아한형제들·LY Corp·SKT·채널톡 검색 결과 신규 한국 1차 RAG 출처 미발굴, 기수록 목록 외 새로운 엔지니어링 블로그 포스트 부재)
   1. **PonsRAG — 생물학적 뇌교 착안 장문 서사 추론 RAG (arXiv:2608.25486, EMNLP 2026 Main, 2026-08-26)** [글로벌]: Rongchen Zhao 외 6인. 소설·전기·역사 등 장문 서사에서 발생하는 ①인지 섬(cognitive islanding)과 ②교차 계층 증거 단절 두 문제를 해결하는 뇌교 착안 조율 RAG 프레임워크. Triple-Layer Indexing(문서→섹션→문장 3계층 연결)과 Coordinated Reasoning(계층 간 교차 증거 통합)으로 장문 서사 다지선다 과제 최강 베이스라인 대비 11.56% 상대 향상. EMNLP 2026 Main Conference 채택. snippet-verified (arXiv abs + arXiv html 2개 이상 독립 출처). → `02-프로덕션-아키텍처.md` Retrieved But Not Reliable 다음에 추가
