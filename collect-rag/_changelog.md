@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-08-30 (일일 루프 #75)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 2026-08-23~30 기간 기수록 목록(토스증권·KT·채널톡·SKT 에이닷 비즈·LY Corp Agent i 등) 외 신규 한국 1차 RAG 출처 미발굴)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-08-30-01 | arXiv:2608.26379 — Assessing the Downstream Utility of Evidence-Aware Retrieval in RAG | 평가 방법론 | 02-프로덕션-아키텍처.md |
+| GL-2026-08-30-02 | arXiv:2608.25115 — Less can be More (PACE: Evidence Frontloading + Pressure-Adaptive Budgeting) | 리랭킹 운영 최적화 | 02-프로덕션-아키텍처.md |
+| GL-2026-08-30-03 | arXiv:2608.01732 — X-KGRank: KG-RAG 설명 가능 추천 프레임워크 | 커머스·추천 | 04-산업별-사례.md |
+
+- **검증 결과**: 3건 전원 5점 자가검증 통과; snippet-verified (2개 이상 독립 출처)
+  1. **arXiv:2608.26379 Evidence-Aware Retrieval Utility (2026-08-26)** [글로벌]: Utshab Kumar Ghosh, Debayan Mukhopadhyay, Shubham Chatterjee. 5개 벤치마크 + TREC RAG 2025 환경에서 answer-support 신호를 4가지 역할(리트리버 비교·학습·답변 품질 예측·증거 필터링)로 실험. 증거 인식 평가가 모든 역할에 균일하게 유용하지 않음을 실증. → `02-프로덕션-아키텍처.md` The RAT 다음(Reasoning Graphs 앞)에 추가
+  2. **arXiv:2608.25115 Less can be More / PACE (2026-08-25)** [글로벌]: Weibin Cai, Reza Zafarani (Syracuse Univ.). PACE = Evidence Frontloading(증거 선적) + Pressure-Adaptive Budgeting(부하 적응 예산). 리랭킹 병목-재현율 트레이드오프를 학습 없이 완화. → `02-프로덕션-아키텍처.md` EnSI-RAG 다음(## 한국 환경 특이점 앞)에 추가
+  3. **arXiv:2608.01732 X-KGRank (2026-08-04)** [글로벌]: Meenakshi Rajpurohit, Jainish Patel. MovieLens-1M 대상 6단계 KG-RAG 추천 프레임워크. LightGCN + node2vec + 인기도 라우팅 + LLM 설명. NDCG@10 +17%. → `04-산업별-사례.md` ## 커머스·고객서비스 > ### 글로벌 TSGR 다음에 추가
+
+- `sources.md`에 3개 출처 추가 (## 2026-08-30 일일 누적 추가 출처 섹션 신설, 파일 최상단)
+- **한국 사례**: 0건 (2026-08-23~30 기간 기수록 목록 외 신규 한국 1차 출처 미발굴)
+- **검증 결과**: URL 200 OK: 0/3건(전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 0건 · 중복 폐기: 0건 · 발굴 시도 → 최종 채택: 약 10건 시도 → 3건 채택
+
 ## 2026-08-29 (일일 루프 #74)
 - **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 1건)
 
