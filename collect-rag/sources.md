@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-08-30 일일 누적 추가 출처 (3건, 루프 #75)
+
+### 글로벌 — 프로덕션 아키텍처 (RAG 검색 평가 방법론)
+- [arXiv:2608.26379 — Assessing the Downstream Utility of Evidence-Aware Retrieval in RAG](https://arxiv.org/abs/2608.26379) — 2026-08-26 · [evaluation][evidence-aware][retrieval][trec-rag][downstream-utility][methodology] · Utshab Kumar Ghosh, Debayan Mukhopadhyay, Shubham Chatterjee. 5개 검색 벤치마크 + TREC RAG 2025 설정에서 answer-support 신호의 다운스트림 가치를 4가지 역할(비교·학습·예측·필터링)로 실증. 증거 인식 평가가 모든 역할에 균일하게 유용하지 않음을 확인. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (RAG 리랭킹 운영 최적화)
+- [arXiv:2608.25115 — Less can be More: Relieving RAG Bottlenecks via Evidence Frontloading and Pressure-Adaptive Budgeting](https://arxiv.org/abs/2608.25115) — 2026-08-25 · [architecture][reranking][evidence-frontloading][pressure-adaptive][training-free][bottleneck][PACE] · Weibin Cai, Reza Zafarani (Syracuse University). PACE: Evidence Frontloading(증거 선적) + Pressure-Adaptive Budgeting(부하 적응 예산)으로 리랭킹 병목-재현율 트레이드오프 완화. 학습 불필요. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
+### 글로벌 — 커머스·추천 산업 (지식 그래프 RAG 추천)
+- [arXiv:2608.01732 — X-KGRank: A Knowledge Graph RAG Framework for Explainable Recommendations via Pattern Mining and LLM Re-Ranking](https://arxiv.org/abs/2608.01732v1) — 2026-08-04 · [industry:커머스][knowledge-graph][explainable-ai][recommendation][lightgcn][neo4j][node2vec][popularity-routing] · Meenakshi Rajpurohit, Jainish Patel. MovieLens-1M 대상 6단계 KG-RAG 추천 프레임워크. 인기도 선택적 라우팅 + LLM 설명 생성. NDCG@10 +17% 향상. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
 ## 2026-08-29 일일 누적 추가 출처 (3건, 루프 #74)
 
 ### 한국 — 금융 산업 사례 (GraphRAG)
