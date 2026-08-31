@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-08-31 일일 누적 추가 출처 (2건, 루프 #76)
+
+### 글로벌 — 프로덕션 아키텍처 (파라메트릭 RAG, LoRA 주입)
+- [arXiv:2608.21750 — FCPRAG: Fusion-Controller Parametric Retrieval-Augmented Generation for Stable Multi-Passage LoRA Injection](https://arxiv.org/abs/2608.21750) — 2026-08-22 · [architecture][parametric-rag][lora][fusion-controller][multi-passage][multi-hop][emnlp2026] · Jinchang Zhu et al. 패시지별 LoRA 어댑터 + 경량 퓨전 컨트롤러(퓨전 스코어+믹싱 게이트+적응형 온도)로 멀티패시지 RAG 안정화. 인-컨텍스트 프롬프트 없이 파라미터 공간에서 검색 지식 통합. 2WikiMultiHopQA F1 +4.65%p, CWQ F1 +7.55%p. EMNLP 2026 채택. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (RAG 평가 방법론, 패널티 인식)
+- [arXiv:2608.26385 — Why RAGs Hallucinate: Penalty-Aware Evaluation of Retrieval-Augmented Generation Systems with Knowledge-Gap Canaries](https://arxiv.org/abs/2608.26385) — 2026-08-26 · [evaluation][hallucination][penalty-aware][knowledge-gap][canary][abstention][failure-attribution][simpleqa] · Alden Do Rosario, Hussein Younes, Felipe Pires. 패널티 인식 평가(정답+1/오답−4/기권0) + 지식-갭 카나리 + 실패 귀인 파이프라인. 상업용 RAG 3개 × 1,000 SimpleQA-Verified × 3회 반복. 기권율 시스템 간 50배 이상 차이. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
 ## 2026-08-30 일일 누적 추가 출처 (3건, 루프 #75)
 
 ### 글로벌 — 프로덕션 아키텍처 (RAG 검색 평가 방법론)
