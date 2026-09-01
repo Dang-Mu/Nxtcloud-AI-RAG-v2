@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-09-01 일일 누적 추가 출처 (2건, 루프 #77)
+
+### 글로벌 — 에이전트·툴유즈·MCP (에이전틱 RL 멀티스텝 RAG, 메모리 스택)
+- [arXiv:2608.29622 — AgenticRag-R1: Agentic Reinforcement Learning with Stack Memory for Multi-Step Reasoning, Retrieval and Memorizing](https://arxiv.org/abs/2608.29622) — 2026-08-30 · [agent][agentic][reinforcement-learning][memory-stack][multi-step][long-horizon][hierarchical-reward][trajectory-rejection] · Xinke Jiang, Yue Fang, Zhibang Yang, Jiaran Gao, Zhixin Zhang, Tao Feng, Rihong Qiu, Wentao Zhang, Hongxin Ding, Ruizhe Zhang, Yongxin Xu, Yuheng Huang, Xu Chu, Junfeng Zhao, Yasha Wang. cs.MA·cs.AI. 메모리 스택 + 세분화 행동 공간 + 계층 행동 인식 보상 + 정보 인식 궤적 거부로 장기 지평선 멀티스텝 RAG RL 학습 안정화. (snippet-verified: arXiv abs + emergentmind.com 2개 이상 독립 출처)
+
+### 글로벌 — 금융·투자 산업 (RAG 기반 시장 국면 인식 포트폴리오 관리)
+- [arXiv:2608.28252 — Regime-Aware Portfolio Management via Retrieval-Augmented LLM-Guided Expert Switching](https://arxiv.org/abs/2608.28252) — 2026-08-28 · [financial][portfolio][rag][llm][expert-switching][dual-stream-vae][market-regime][emnlp2026][monotonicity] · Ahmad Asadi, Reza Safabakhsh (Amirkabir University of Technology, Tehran, Iran). EMNLP 2026 Findings. 이중 스트림 VAE + RAG 지식 베이스(과거 상황-성과 쌍) + LLM 전문가 전환으로 비정상 금융 시장의 국면 전환 대응. 암호화폐·주식·외환 3개 도메인에서 최고 누적 수익률 달성. 단조성 속성 이론 증명. (snippet-verified: arXiv abs + arXiv html + SSRN 3개 이상 독립 출처)
+
 ## 2026-08-31 일일 누적 추가 출처 (2건, 루프 #76)
 
 ### 글로벌 — 프로덕션 아키텍처 (파라메트릭 RAG, LoRA 주입)
