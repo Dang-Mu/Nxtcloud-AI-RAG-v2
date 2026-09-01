@@ -695,6 +695,21 @@ MCP 서버는 자주 사용하는 참조 데이터(예: 법률 식별자 조회 
 - **저자**: Suifeng Zhao, Zida Liu, Xinyu Lei, Lei Sun, Jun Gao, Sujian Li
 - **출처**: [arXiv:2608.21808 — MCite-RL: Towards Reliable Multimodal RAG via Citation-enhanced Agentic Reinforcement Learning](https://arxiv.org/abs/2608.21808) (2026-08-22, snippet-verified: arXiv abs + arXiv html + arXiv cs.CL 주간 목록 3개 이상 독립 출처)
 
+### AgenticRag-R1 — 메모리 스택과 계층 보상 기반 에이전틱 멀티스텝 RAG 강화학습 프레임워크 (arXiv:2608.29622, 2026-08-30)
+
+> Xinke Jiang, Yue Fang, Zhibang Yang, Jiaran Gao, Zhixin Zhang, Tao Feng, Rihong Qiu, Wentao Zhang, Hongxin Ding, Ruizhe Zhang, Yongxin Xu, Yuheng Huang, Xu Chu, Junfeng Zhao, Yasha Wang. cs.MA·cs.AI. 2026-08-30 제출.
+
+- **문제**: 복잡한 멀티스텝 질의에서 RAG는 ① 중간 결과의 지속적 기억(메모리 부재) ② 단순 행동 공간으로 인한 적응적 검색 실패 ③ 장기 지평선(long-horizon) RL 학습의 희소 보상 문제 등 세 가지 구조적 한계가 있다.
+- **해결책 (AgenticRag-R1)**: RL로 멀티스텝 추론·검색·기억화를 심층 통합한 에이전틱 프레임워크.
+  - **메모리 스택 (Memory Stack)**: 중간 검색 결과와 추론 상태를 계층 구조로 누적 관리. 에이전트가 장기 의존 문맥을 유지하면서 단계별로 자원을 참조하거나 무효화.
+  - **세분화된 행동 공간 (Fine-Grained Action Space)**: retrieve / reason / store / discard / answer 등 원자 행동을 정의해 에이전트가 복잡한 검색 전략을 표현 가능하게 함.
+  - **계층 행동 인식 보상 (Hierarchical Action-Aware Rewards)**: 중간 행동 품질과 최종 답변 정확도를 함께 보상하는 이중 계층 RL 보상 설계. 희소 최종 보상 단독 학습 대비 정책 수렴 안정화.
+  - **정보 인식 궤적 거부 전략 (Information-Aware Trajectory Rejection)**: 저품질 전이(low-information transitions)를 학습 배치에서 능동적으로 제거해 장기 지평선 학습의 노이즈를 감소시킴.
+- **결과**: 멀티스텝 추론 벤치마크에서 기존 아키텍처 대비 검색·추론·기억 통합 과제 정확도 향상.
+- **의의**: MCite-RL(arXiv:2608.21808)이 멀티모달 인용 정확도에 RL을 적용한다면, AgenticRag-R1은 **에이전트가 장기 지평선에서 스스로 기억 관리를 학습**하는 방향을 제시한다. 복수 턴 검색이 필요한 복잡한 엔터프라이즈 RAG 워크플로우에서 메모리 계층 설계가 핵심 요소임을 실증.
+- **저자**: Xinke Jiang, Yue Fang, Zhibang Yang, Jiaran Gao, Zhixin Zhang, Tao Feng, Rihong Qiu, Wentao Zhang, Hongxin Ding, Ruizhe Zhang, Yongxin Xu, Yuheng Huang, Xu Chu, Junfeng Zhao, Yasha Wang
+- **출처**: [arXiv:2608.29622 — AgenticRag-R1: Agentic Reinforcement Learning with Stack Memory for Multi-Step Reasoning, Retrieval and Memorizing](https://arxiv.org/abs/2608.29622) (2026-08-30, snippet-verified: arXiv abs + emergentmind.com 2개 이상 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.
