@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-09-02 일일 누적 추가 출처 (3건, 루프 #78)
+
+### 글로벌 — 프로덕션 아키텍처 (엔터프라이즈 시각 문서 레이트-인터랙션 RAG)
+- [arXiv:2608.28572 — PULSAR: Pooled Unified Late-Interaction Search and Retrieval for Enterprise Visual Document RAG](https://arxiv.org/abs/2608.28572) — 2026-08-28 · [architecture][visual-document][late-interaction][pooling][multimodal][enterprise][emnlp2026-industry] · Benjamin Constable, Anup Roy, Vishal Sharma, Rishabh Upadhyay, Robin Mills, Aidan Millar. cs.IR. EMNLP 2026 Industry Track. 페이지 단위 멀티벡터를 풀링 압축해 레이트-인터랙션 정확도 유지하면서 엔터프라이즈 규모 시각 문서 검색 실용화. OCR 없이 PDF/슬라이드/표/차트 직접 임베딩. (snippet-verified: arXiv abs + EMNLP 2026 Industry Track 목록 2개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (경량 할루시네이션 분류, 논리 기하)
+- [ACL Anthology — 2026.acl-long.73: Logic Matters in Lightweight Hallucination Classification for RAG System](https://aclanthology.org/2026.acl-long.73/) — 2026-08 · [evaluation][hallucination][lightweight][logical-geometry][vector-space][hotpotqa][acl2026] · Ningyuan Yang, Kaizhu Huang. ACL 2026 Long Papers Vol. 1, pages 1605-1617, San Diego. 검색된 문서 임베딩 벡터 간 논리적 관계(함의·모순·중립)를 기하학적 패턴으로 분석, 경량 분류기로 LLM 수준 할루시네이션 탐지. HotPotQA 파생 할루시네이션 데이터셋 공개. arxiv 프리프린트 없음. (snippet-verified: ACL Anthology + ACL 2026 accepted papers 목록 2개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (담화 인식 RAG, 수사 구조)
+- [arXiv:2601.04377 — Disco-RAG: Discourse-Aware Retrieval-Augmented Generation](https://arxiv.org/abs/2601.04377) · [ACL Anthology — 2026.acl-long.189](https://aclanthology.org/2026.acl-long.189/) — 2026-01-08 · [architecture][discourse][rst][rhetorical-graph][intra-chunk][inter-chunk][planning-blueprint][asqa][loong][acl2026] · Dongqi Liu, Hang Ding, Qiming Feng, Xurong Xie, Zhucun Xue, Chengjie Wang, Jian Li, Jiangning Zhang, Yabiao Wang (Tencent Youtu Lab 등). ACL 2026 Long Papers, pages 4106-4136, San Diego. 청크 내 RST 담화 트리 + 청크 간 수사 그래프 → 생성 계획 청사진. ASQA ROUGE-L 42.4 (SOTA), Loong LLM Score +12.79 vs 표준 RAG. (snippet-verified: arXiv abs + ACL Anthology + alphaxiv + OpenReview 4개 이상 독립 출처)
+
 ## 2026-09-01 일일 누적 추가 출처 (2건, 루프 #77)
 
 ### 글로벌 — 에이전트·툴유즈·MCP (에이전틱 RL 멀티스텝 RAG, 메모리 스택)
