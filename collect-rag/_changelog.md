@@ -1,5 +1,24 @@
 # 업데이트 로그
 
+## 2026-09-02 (일일 루프 #78)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 2026-08-27~09-02 기간 네이버·카카오·토스·SKT·KT·우아한형제들·카카오뱅크·LY Corp 등 10+ 쿼리 시도, 기수록 목록 외 신규 한국 1차 RAG 출처 미발굴)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-09-02-01 | arXiv:2608.28572 — PULSAR: 엔터프라이즈 시각 문서 RAG 풀링 통합 레이트-인터랙션 검색 (EMNLP 2026 Industry) | 프로덕션 아키텍처 | 02-프로덕션-아키텍처.md |
+| GL-2026-09-02-02 | ACL 2026 acl-long.73 — Logic Matters: 벡터 공간 논리 기하 기반 경량 할루시네이션 분류 | 프로덕션 아키텍처 (RAG 평가·신뢰성) | 02-프로덕션-아키텍처.md |
+| GL-2026-09-02-03 | arXiv:2601.04377 / ACL 2026 acl-long.189 — Disco-RAG: 담화 인식 검색 증강 생성 | 프로덕션 아키텍처 | 02-프로덕션-아키텍처.md |
+
+- **검증 결과**: 3건 전원 5점 자가검증 통과; snippet-verified (2개 이상 독립 출처)
+  1. **arXiv:2608.28572 PULSAR (2026-08-28, EMNLP 2026 Industry Track)** [글로벌]: Benjamin Constable, Anup Roy, Vishal Sharma, Rishabh Upadhyay, Robin Mills, Aidan Millar. 풀링 통합 레이트-인터랙션으로 엔터프라이즈 시각 문서 RAG 실용화 — 멀티벡터 풀링으로 레이트-인터랙션 정확도 유지하면서 인덱스 크기·지연 절감. → `02-프로덕션-아키텍처.md` Why RAGs Hallucinate 다음(## 한국 환경 특이점 앞)에 추가
+  2. **ACL 2026 acl-long.73 Logic Matters (2026, San Diego, pages 1605-1617)** [글로벌]: Ningyuan Yang, Kaizhu Huang. 검색된 문서 임베딩 벡터 간 논리적 관계를 기하학적 패턴으로 분류 → 경량 분류기로 LLM 수준 할루시네이션 탐지. HotPotQA 파생 데이터셋 공개. arxiv 프리프린트 없음(ACL Anthology 직접). → `02-프로덕션-아키텍처.md` PULSAR 다음에 추가
+  3. **arXiv:2601.04377 / ACL 2026 acl-long.189 Disco-RAG (2026-01-08, ACL 2026 Main, pages 4106-4136)** [글로벌]: Dongqi Liu 외 8인 (Tencent Youtu Lab 포함). 청크 내 RST 담화 트리 + 청크 간 수사 그래프 → 생성 계획 청사진. ASQA ROUGE-L 42.4 (SOTA), Loong LLM Score +12.79. → `02-프로덕션-아키텍처.md` Logic Matters 다음에 추가
+
+- `sources.md`에 3개 출처 추가 (## 2026-09-02 일일 누적 추가 출처 섹션 신설, 파일 최상단)
+- **한국 사례**: 0건 (2026-08-27~09-02 기간 기수록 목록 외 신규 한국 1차 출처 미발굴)
+- **중복 폐기**: VDGR-RAG·GRIP·FastV-RAG·SK하이닉스 AWS RAG 등 10+ 건 중복 확인 후 폐기
+- **검증 결과**: URL 200 OK: 0/3건(전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 0건 · 중복 폐기: 10+건 · 발굴 시도 → 최종 채택: 약 15건 시도 → 3건 채택
+
 ## 2026-09-01 (일일 루프 #77)
 - **신규 사례 2건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 2026-08-25~09-01 기간 네이버·카카오·토스·SKT·KT·우아한형제들·LY Corp·채널톡·뱅크샐러드·삼성SDS 등 검색 결과 기수록 목록 외 신규 한국 1차 RAG 출처 미발굴)
 
