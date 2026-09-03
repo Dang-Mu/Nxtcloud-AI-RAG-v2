@@ -710,6 +710,22 @@ MCP 서버는 자주 사용하는 참조 데이터(예: 법률 식별자 조회 
 - **저자**: Xinke Jiang, Yue Fang, Zhibang Yang, Jiaran Gao, Zhixin Zhang, Tao Feng, Rihong Qiu, Wentao Zhang, Hongxin Ding, Ruizhe Zhang, Yongxin Xu, Yuheng Huang, Xu Chu, Junfeng Zhao, Yasha Wang
 - **출처**: [arXiv:2608.29622 — AgenticRag-R1: Agentic Reinforcement Learning with Stack Memory for Multi-Step Reasoning, Retrieval and Memorizing](https://arxiv.org/abs/2608.29622) (2026-08-30, snippet-verified: arXiv abs + emergentmind.com 2개 이상 독립 출처)
 
+### ACToR — 생성 중 임계 토큰 감지 기반 온디맨드 RAG (arXiv:2609.01601, 2026-09-01)
+
+> **ACToR: Adaptive Critical Token-Aware Retrieval for Repository-Level Code Generation** (arXiv:2609.01601, 2026-09-01, IEEE Transactions on Software Engineering 심사 중)
+
+- **문제**: 실세계 코드 저장소는 LLM 입력 길이 한계를 초과하는 경우가 많아 기존 RAG로 저장소 전체 컨텍스트를 제공하기 어렵다. 기존 방법은 **태스크 레벨의 정적 컨텍스트**를 제공하는 방식이라, 생성 중 실제로 외부 참조가 필요한 세부 토큰 위치를 식별하지 못한다.
+- **해결책 (ACToR — Adaptive Critical Token-aware Retrieval)**:
+  - 코드 생성 중 모델이 **저장소 컨텍스트가 필요한 임계 토큰(critical token)**을 자동으로 감지하고, 해당 위치에서만 온디맨드로 검색을 트리거.
+  - **위치 인식 가중치(position-aware weighting)**: 밀집 검색기(dense retriever)에서 생성 위치와 관련성 높은 컨텍스트를 우선 순위화.
+  - 정적 사전 검색이 아닌 **생성 과정 중 동적·세분화 검색** — 필요한 순간에만 저장소를 참조하므로 컨텍스트 낭비 없이 정밀한 지원 가능.
+- **결과**:
+  - RepoExec 벤치마크: 최신 방법 대비 상대적 향상 **+8.4%**
+  - CoderEval 벤치마크: 상대적 향상 **+15.4%**
+- **의의**: AgenticRag-R1이 멀티스텝 QA에서 에이전트가 언제 검색할지를 RL로 학습한다면, ACToR는 **코드 생성의 토큰 단위로 검색 트리거를 정밀화**하는 방식으로 아이디어를 보완. 저장소 수준 코드 생성의 RAG를 "태스크 단위 일괄 검색"에서 "토큰 단위 온디맨드 검색"으로 전환하는 방향을 실증.
+- **저자**: Kefeng Duan, Dewu Zheng, Yanlin Wang, Terry Yue Zhuo, Mingwei Liu, Jianxing Yu, Jiachi Chen, Ensheng Shi, Xilin Liu, Yuchi Ma, Zibin Zheng
+- **출처**: [arXiv:2609.01601 — Adaptive Critical Token-Aware Retrieval for Repository-Level Code Generation](https://arxiv.org/abs/2609.01601) (2026-09-01, cs.SE·cs.AI·cs.CL, IEEE TSE 심사 중, snippet-verified: arXiv abs + arXiv html + arXiv PDF 3개 이상 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.

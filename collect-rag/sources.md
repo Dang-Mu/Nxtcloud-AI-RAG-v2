@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-09-03 일일 누적 추가 출처 (3건, 루프 #79)
+
+### 글로벌 — 프로덕션 아키텍처 (시각 문서 RAG 적응형 검색, 지연 절감)
+- [arXiv:2609.02486 — ViSAR: Training-Free Adaptive-k Retrieval for Visual Document Question Answering](https://arxiv.org/abs/2609.02486) — 2026-09-02 · [architecture][visual-document][late-interaction][adaptive-k][training-free][docvqa][latency-reduction] · Adrien Mialland, Marc Plantevit, Julien Gallois, Céline Robardet. cs.CV. 레이트-인터랙션 시각 문서 RAG에서 쿼리 조건부 유사도 행렬로 검색 페이지 수 k를 동적 결정 → RAG 지연 최대 58.7% 절감, 정확도 동등·향상. 학습 불필요 드롭인 방식. (snippet-verified: arXiv abs + arXiv html + cs.CV 최근 목록 3개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (RAG 평가 방법론, 검색 모델 선택)
+- [arXiv:2609.02745 — Incremental Pooled LLM Evaluation for Cost-Effective Retrieval Model Selection](https://arxiv.org/abs/2609.02745) — 2026-09-02 · [evaluation][retrieval-model-selection][pooled-llm][incremental][cost-effective][jpmorgan][financial-news-qa] · Max Nelson, Hanoz Bhathena, Aviral Joshi, Saket Sharma (JPMorganChase). 후보 시스템 union pool을 LLM이 일괄 판단 + 신규 시스템 추가 시 증분 판단만 재사용 → 62개 검색 구성 비교, 97% 쌍별 순위 보존. 금융 뉴스 QA 프로덕션 배포 검증. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
+### 글로벌 — 에이전트·툴유즈 (코드 생성 온디맨드 RAG, 임계 토큰 감지)
+- [arXiv:2609.01601 — Adaptive Critical Token-Aware Retrieval for Repository-Level Code Generation](https://arxiv.org/abs/2609.01601) — 2026-09-01 · [agent][code-generation][adaptive-retrieval][critical-token][on-demand][repository-level][repoexec][codereval][ieee-tse] · Kefeng Duan, Dewu Zheng, Yanlin Wang, Terry Yue Zhuo, Mingwei Liu, Jianxing Yu, Jiachi Chen, Ensheng Shi, Xilin Liu, Yuchi Ma, Zibin Zheng. cs.SE·cs.AI·cs.CL. IEEE TSE 심사 중. 생성 중 임계 토큰 감지 → 온디맨드 검색 트리거 → RepoExec +8.4%, CoderEval +15.4%. (snippet-verified: arXiv abs + arXiv html + arXiv PDF 3개 이상 독립 출처)
+
 ## 2026-09-02 일일 누적 추가 출처 (3건, 루프 #78)
 
 ### 글로벌 — 프로덕션 아키텍처 (엔터프라이즈 시각 문서 레이트-인터랙션 RAG)
