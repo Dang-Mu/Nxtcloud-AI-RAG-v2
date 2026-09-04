@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-09-04 일일 누적 추가 출처 (3건, 루프 #80)
+
+### 글로벌 — 프로덕션 아키텍처 (그래프 RAG 위상 노이즈 제어, 등방 경계 기반)
+- [arXiv:2609.00513 — ISO-RAG: Isoperimetric Noise Control for Retrieval-Augmented Generation](https://arxiv.org/abs/2609.00513) — 2026-09-01 · [architecture][graph-rag][topology][cheeger-ratio][isoperimetric][multi-hop][training-free][hyperbolic-space][noise-control] · Siyuan Zhang, Hanchen Wang, Dong Wen, Ying Zhang, Wenjie Zhang. 지역 Cheeger 비율(위상적 팽창률)로 노드별 등방 프로파일 산출 → 의사 지름길 엣지 사전 정리 → 국소화 문맥 안전 서브그래프로 검색 제한. 쌍곡 공간(Poincaré ball) 스케일-프리 위계 임베딩. 학습 불필요 드롭인. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (하이브리드 RAG 동적 라우팅, 바닐라+그래프 RAG 선택)
+- [arXiv:2609.02894 — R²Adapter: A Routing and Rewriting Adapter for Efficient Hybrid RAG](https://arxiv.org/abs/2609.02894) — 2026-09 · [architecture][hybrid-rag][routing][rewriting][graph-rag][multi-hop][lightweight-adapter][chinese-academy][meituan] · 중국과학원 AI 안전 국가중점실험실 + ICT(CAS) + UCAS + 메이퇀. 경량 플러그인 Routing+Rewriting Adapter로 쿼리를 바닐라 RAG와 그래프 RAG 사이 동적 배분. 3개 멀티홉 QA 벤치마크 대상 그래프 RAG 호출 최대 59% 절감, 정확도 동등 유지. 코드 공개. (snippet-verified: arXiv abs + arXiv html + arxiv.org/list/cs/recent 3개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (파라메트릭 RAG 보완, 지식-지시 분리 학습)
+- [arXiv:2609.02685 — DKL: Decoupled Knowledge Learning for Instruction-Tuned Language Models](https://arxiv.org/abs/2609.02685) — 2026-09-02 · [architecture][parametric-rag][knowledge-learning][instruction-tuning][decoupled][raft][epa][hallucination][corpus-injection] · (arXiv:2609.02685 저자). 지식 학습과 지시 정렬 분리 훈련 패러다임. 전체 코퍼스 합성 QA 없이 원문 코퍼스에서 지식 흡수 + 지시 따르기 능력 보존. RAG 검색 실패 의존 줄이는 파라메트릭 지식 내재화 경로 제시. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
 ## 2026-09-03 일일 누적 추가 출처 (3건, 루프 #79)
 
 ### 글로벌 — 프로덕션 아키텍처 (시각 문서 RAG 적응형 검색, 지연 절감)
