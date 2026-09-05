@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-09-05 일일 누적 추가 출처 (3건, 루프 #81)
+
+### 한국 — 의료·헬스케어 (정신건강 단일 턴 QA 선택적 RAG, 숙명여대·KENTECH)
+- [arXiv:2609.03454 — When Retrieval Helps: Selective Retrieval for Single-Turn Mental-Health QA](https://arxiv.org/abs/2609.03454) — 2026-09-03 · [medical][mental-health][selective-retrieval][draft-conditioned][safety-trigger][korea][sookmyung][kentech] · Hyunseo Oh, Yoonhyuk Choi (숙명여자대학교), Chong-Kwon Kim (KENTECH). 정신건강 단일 턴 QA에서 드래프트 조건부 3차원 유틸리티(심리교육·대처·응답 구체성) + 룰 기반 안전 트리거로 선택적 검색 정책 구성. 무차별 RAG 적용이 정신건강 도메인에서 오히려 응답 품질 저하를 초래할 수 있음을 실증. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (하이브리드 RAG, KG 확장 + RRF 융합, 통신망 엔터프라이즈)
+- [arXiv:2609.01617 — Hybrid Retrieval-Augmented Generation with Knowledge Graph Expansion, RRF Fusion, and Per-Chunk Grounded Evaluation for Enterprise Document Search](https://arxiv.org/abs/2609.01617) — 2026-09 · [architecture][hybrid-rag][knowledge-graph][rrf-fusion][bm25][qdrant][bge-large][telecom][enterprise][per-chunk-evaluation][grounding] · Harish Saragadam, Sudhanshu Sharma, Meghana Pujari. 통신망 엔터프라이즈 문서 DocuSearch 시스템. Qdrant+BGE-Large 시맨틱 + SQLite FTS5 BM25 키워드 + KG 이웃 확장 → RRF(가중치 0.50/0.35/0.15) 통합. P@10 0.69, R@10 0.79, 그라운딩률 89.6%. 밀집 검색 단독 대비 +18.4%p 그라운딩. (snippet-verified: arXiv abs + arXiv html + cs past week listing 3개 이상 독립 출처)
+
+### 글로벌 — 엔터프라이즈 사내지식 (목차 기반 구조 인식 문서 검색, IBM DSI)
+- [arXiv:2609.03874 — STAIR (STructure Aware Information Retriever): A novel dataset and LLM based retriever for document structure augmentation](https://arxiv.org/abs/2609.03874) — 2026-09-03 · [enterprise][document-structure][toc][dsi][differentiable-search-index][low-resource][hallucination][ibm][generative-ir] · Vineet Kumar, Meghanadh Pulivarthi, Vishwajeet Kumar, Jaydeep Sen, Riyaz Ahmad Bhat, Sachindra Joshi (IBM Research). 목차(ToC) 전역 구조를 DSI 파인튜닝 신호로 통합해 길이 기반 청킹의 구조 손실 문제 해소. 환각률 0.05% 미만, 저자원 시나리오 일반화 가능. (snippet-verified: arXiv abs + arXiv html + OpenReview 3개 이상 독립 출처)
+
 ## 2026-09-04 일일 누적 추가 출처 (3건, 루프 #80)
 
 ### 글로벌 — 프로덕션 아키텍처 (그래프 RAG 위상 노이즈 제어, 등방 경계 기반)
