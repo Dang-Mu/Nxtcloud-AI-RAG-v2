@@ -726,6 +726,33 @@ MCP 서버는 자주 사용하는 참조 데이터(예: 법률 식별자 조회 
 - **저자**: Kefeng Duan, Dewu Zheng, Yanlin Wang, Terry Yue Zhuo, Mingwei Liu, Jianxing Yu, Jiachi Chen, Ensheng Shi, Xilin Liu, Yuchi Ma, Zibin Zheng
 - **출처**: [arXiv:2609.01601 — Adaptive Critical Token-Aware Retrieval for Repository-Level Code Generation](https://arxiv.org/abs/2609.01601) (2026-09-01, cs.SE·cs.AI·cs.CL, IEEE TSE 심사 중, snippet-verified: arXiv abs + arXiv html + arXiv PDF 3개 이상 독립 출처)
 
+### Agent-Enhanced Heterogeneous Graph RAG — 이종 학술 그래프 에이전틱 RAG (arXiv:2609.00761, WWW 2026)
+
+> **Agent-Enhanced Heterogeneous Graph RAG for Academic Question Answering** (arXiv:2609.00761, 2026-09-01, ACM Web Conference 2026 / WWW '26, Dubai)
+
+- **문제**: 이종 학술 그래프(저자·논문·베뉴 등 이질적 노드 혼재)에서의 Academic QA는 단순 속성 조회부터 멀티홉 추론까지 쿼리 복잡도가 다양함. 기존 RAG의 세 가지 구조적 한계: ① 고정 검색 전략(쿼리 복잡도 무관), ② 증거 충분성 평가 부재(불완전·비정렬 증거 초래), ③ 그래프 팩트 기반 구조적 검증 부재.
+- **해결책 (3-에이전트 파이프라인)**:
+  - **쿼리 인식 검색 에이전트**: 쿼리 유형을 분석해 적절한 그래프 탐색 전략(깊이 우선/폭 우선/최단경로 등)을 동적으로 선택.
+  - **충분성 인식 재랭킹 에이전트**: 회수된 증거의 완전성을 평가하고, 부족하면 서브그래프를 적응적으로 확장해 추가 검색.
+  - **그래프 기반 검증 에이전트**: 생성된 답변이 엔티티·관계·속성 팩트와 일치하는지 그래프 기반으로 최종 확인.
+- **데이터**: OpenAlex + DBLP 기반 이종 학술 그래프
+- **결과**: LLM 단독·그래프 증강 RAG 베이스라인·에이전트 기반 베이스라인 대비 일관적 성능 향상
+- **의의**: 에이전틱 RAG의 "검색-충분성 판단-검증"을 세 에이전트로 명시적으로 분리한 구조. ACToR의 토큰 단위 온디맨드 검색과 달리, **서브그래프 탐색 단계를 에이전트 의사결정으로 세분화**하는 보완적 접근.
+- **출처**: [arXiv:2609.00761 — Agent-Enhanced Heterogeneous Graph RAG for Academic Question Answering](https://arxiv.org/abs/2609.00761) (2026-09-01, ACM WWW 2026, snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
+### CodePoisonRAG — 코드 생성 RAG 지식 기반 오염 공격 프레임워크 (arXiv:2609.02774, 2026-09-02)
+
+> **CodePoisonRAG: Knowledge Poisoning Attacks on Retrieval-Augmented Code Generation** (arXiv:2609.02774, 2026-09-02, University of Duisburg-Essen)
+
+- **문제**: 코드 생성 RAG(RACG)는 외부 코드 아티팩트·문서·패치를 검색해 생성 컨텍스트에 통합하는 방식으로 동작. 이 외부 지식에 대한 의존이 **신뢰 경계(trust boundary) 취약점**을 생성 — 오염된 아티팩트가 LLM 자체를 수정하지 않고도 생성 코드에 영향을 미칠 수 있다.
+- **공격 방법 (CodePoisonRAG)**:
+  - **CWE 특화 취약점 주입(Vulnerability Injection)**: CWE(Common Weakness Enumeration) 분류 체계에 맞는 취약점 코드 패턴을 정상 아티팩트에 삽입.
+  - **의미론적 오기재(Semantic Mislabeling)**: 태스크에 정상적으로 매칭되는 것처럼 보이는 메타데이터·설명을 거짓으로 부여해 RAG 검색 필터를 우회.
+  - 두 기법의 조합으로 기존 방어 전략에도 **공격 성공률 0.80~0.93** 달성.
+- **의의**: RACG 시스템의 외부 지식 신뢰 경계가 실질적 보안 위협임을 정량적으로 실증. 코드 생성 RAG를 프로덕션에 배포하는 조직은 코드 아티팩트 저장소의 무결성 검증·서명·격리 정책이 필수임을 시사. DenialRAG·KidnapRAG가 QA 에이전틱 RAG 보안을 다룬다면, CodePoisonRAG는 **코드 생성 특화 RAG 보안**의 첫 체계적 프레임워크.
+- **저자**: Varun Gadey, Ziad Marey, Alexandra Dmitrienko (University of Duisburg-Essen, 독일)
+- **출처**: [arXiv:2609.02774 — CodePoisonRAG: Knowledge Poisoning Attacks on Retrieval-Augmented Code Generation](https://arxiv.org/abs/2609.02774) (2026-09-02, snippet-verified: arXiv abs + arXiv html + arXiv cs pastweek 목록 3개 이상 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.

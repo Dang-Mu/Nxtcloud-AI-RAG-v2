@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-09-06 일일 누적 추가 출처 (3건, 루프 #82)
+
+### 한국 — 법률 산업 (아시아 다법역 다국어 법률 RAG, 로앤컴퍼니)
+- [이데일리 — 로앤컴퍼니, 아시아 법률 AI 시장 진출…'렉스팬드 AI' 출시](https://www.edaily.co.kr/News/Read?newsId=03099606645576512) — 2026-09-03 · [legal][rag][multi-jurisdiction][multilingual][asia][factchecker][zero-retention][korea][lawandcompany] · 로앤컴퍼니. 슈퍼로이어 기반 아시아 9개 법역(한국·대만·말레이시아·베트남·싱가포르·인도네시아·일본·태국·홍콩)·8개 언어 지원 법률 AI 플랫폼. RAG + 팩트체커(인용 원문 하이퍼링크) + 제로 데이터 리텐션. (snippet-verified: 이데일리 + 이투데이 + 법률신문 + 한국경제 + 아시아경제 + 뉴스톱 + 서울경제 7개 이상 독립 출처)
+
+### 글로벌 — 에이전트·툴유즈 (이종 학술 그래프 에이전틱 RAG, WWW 2026)
+- [arXiv:2609.00761 — Agent-Enhanced Heterogeneous Graph RAG for Academic Question Answering](https://arxiv.org/abs/2609.00761) — 2026-09-01 · [agent][heterogeneous-graph][academic-qa][multi-hop][query-aware][sufficiency-aware][graph-verification][www2026][openalex][dblp] · ACM Web Conference 2026 (WWW '26). 이종 학술 그래프(OpenAlex+DBLP)에서 쿼리 인식 검색·충분성 재랭킹·그래프 팩트 검증 3-에이전트 파이프라인으로 멀티홉 Academic QA 수행. LLM·그래프 증강 RAG·에이전트 베이스라인 대비 일관 향상. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
+### 글로벌 — 에이전트·보안 (코드 생성 RAG 지식 오염 공격, University of Duisburg-Essen)
+- [arXiv:2609.02774 — CodePoisonRAG: Knowledge Poisoning Attacks on Retrieval-Augmented Code Generation](https://arxiv.org/abs/2609.02774) — 2026-09-02 · [agent][code-generation][racg][security][knowledge-poisoning][cwe][vulnerability-injection][semantic-mislabeling][trust-boundary] · Varun Gadey, Ziad Marey, Alexandra Dmitrienko (University of Duisburg-Essen, 독일). RACG 지식 기반의 CWE 특화 취약점 주입 + 의미론적 오기재 조합 공격. 방어 전략 적용에도 공격 성공률 0.80~0.93. (snippet-verified: arXiv abs + arXiv html + arXiv cs pastweek 목록 3개 이상 독립 출처)
+
 ## 2026-09-05 일일 누적 추가 출처 (3건, 루프 #81)
 
 ### 한국 — 의료·헬스케어 (정신건강 단일 턴 QA 선택적 RAG, 숙명여대·KENTECH)
