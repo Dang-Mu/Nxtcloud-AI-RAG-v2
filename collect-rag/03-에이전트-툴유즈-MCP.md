@@ -753,6 +753,19 @@ MCP 서버는 자주 사용하는 참조 데이터(예: 법률 식별자 조회 
 - **저자**: Varun Gadey, Ziad Marey, Alexandra Dmitrienko (University of Duisburg-Essen, 독일)
 - **출처**: [arXiv:2609.02774 — CodePoisonRAG: Knowledge Poisoning Attacks on Retrieval-Augmented Code Generation](https://arxiv.org/abs/2609.02774) (2026-09-02, snippet-verified: arXiv abs + arXiv html + arXiv cs pastweek 목록 3개 이상 독립 출처)
 
+### APT-RAG — 적응적 계획과 위상 인식 증거 수집 기반 트리형 RAG (arXiv:2609.04981, 2026-09-04) [🇰🇷 한국 기관]
+
+> **A Tree-based RAG Framework for Evidence-Intensive QA via Adaptive Planning and Topology-Aware Evidence Gathering** (arXiv:2609.04981, 2026-09-04, 고려대학교 · 한양대학교 · 현대자동차)
+
+- **문제**: 증거 집약적 QA(evidence-intensive QA)는 질문 하나를 답하기 위해 수십~수백 개의 분산된 문서를 종합해야 한다. 기존 트리·그래프 구조 기반 RAG의 두 가지 한계: ① **구조 경직성(structural rigidity)** — 추론 트리가 고정된 형태로 확장되어 질문 의존성·증거 요구에 따른 적응적 분기가 불가능하다. ② **위상 무지 증거 수집(topology-ignorant evidence gathering)** — 서로 다른 추론 노드 간 증거 통합 없이 각 노드가 독립적으로 검색해 증거 누락이 발생한다.
+- **해결책 (APT-RAG — Adaptive Planning and Topology-aware evidence gathering)**:
+  - **적응적 계획(Adaptive Planning)**: 질문 의존성과 증거 요구량을 분석해 추론 트리를 동적으로 확장. 고정된 깊이·분기 수 대신 질문의 복잡도에 맞춰 트리 구조를 적응적으로 결정.
+  - **위상 인식 증거 수집(Topology-Aware Evidence Gathering)**: ① 형제 노드(sibling) 간 증거 재사용, ② 직접 검색(direct retrieval), ③ 자식 노드에서 부모 노드로의 증거 집계(evidence aggregation from child nodes) — 세 가지 메커니즘으로 트리 내 증거 커버리지를 극대화.
+- **결과**: 기존 구조화 RAG 방법 대비 증거 집약적 QA 벤치마크에서 일관적 성능 향상
+- **의의**: Agent-Enhanced Heterogeneous Graph RAG(arXiv:2609.00761)가 이종 그래프에서 3-에이전트로 검색 충분성을 판단한다면, APT-RAG는 **트리 구조 자체를 질문 복잡도에 맞춰 동적으로 성장**시키는 방향으로 적응적 계획 개념을 구체화한다. 고려대·한양대·현대자동차 산학협력 — 복잡한 기술 문서·규격서 기반 다중 증거 합성 QA 수요가 연구 동기로 작용했을 가능성이 있다.
+- **저자**: Songeun Lee, Kyungjin Min, Injae Na, Suyeong Lee, Chiyoung Kim, Woohwan Jung (고려대학교 Korea University · 한양대학교 Hanyang University · 현대자동차 Hyundai Motor Company)
+- **출처**: [arXiv:2609.04981 — A Tree-based RAG Framework for Evidence-Intensive QA via Adaptive Planning and Topology-Aware Evidence Gathering](https://arxiv.org/abs/2609.04981) (2026-09-04, snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.
