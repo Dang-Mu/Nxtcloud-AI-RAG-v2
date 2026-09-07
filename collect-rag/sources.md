@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-09-07 일일 누적 추가 출처 (2건, 루프 #83)
+
+### 한국 — 에이전트·RAG (고려대·한양대·현대자동차 산학협력, APT-RAG 트리형 증거 수집)
+- [arXiv:2609.04981 — A Tree-based RAG Framework for Evidence-Intensive QA via Adaptive Planning and Topology-Aware Evidence Gathering](https://arxiv.org/abs/2609.04981) — 2026-09-04 · [korea][agent][tree-rag][adaptive-planning][topology-aware][evidence-gathering][evidence-intensive-qa][korea-university][hanyang][hyundai-motor] · Songeun Lee, Kyungjin Min, Injae Na, Suyeong Lee, Chiyoung Kim, Woohwan Jung (고려대학교 Korea University · 한양대학교 Hanyang University · 현대자동차 Hyundai Motor Company). 고정 트리 구조의 경직성·위상 무지 증거 수집 한계를 극복하는 APT-RAG: 적응적 계획으로 추론 트리를 동적 확장 + 형제 노드 증거 재사용·직접 검색·자식→부모 집계 3메커니즘으로 증거 커버리지 극대화. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (소프트 컨텍스트 압축 2단계 훈련, DEX-Comp)
+- [arXiv:2609.05152 — Compression Beyond the Uncompressed: A Two-Stage Training Recipe for Soft Context Compression in RAG](https://arxiv.org/abs/2609.05152) — 2026-09-04 · [architecture][soft-compression][context-compression][inference-efficiency][reinforcement-learning][two-stage-training][shandong-university][bloomberg][leiden-university] · Shuyu Guo (Shandong University), Shuo Zhang (Bloomberg), Zhaochun Ren (Leiden University). 소프트 컨텍스트 압축의 2단계 훈련 레시피(Pure Distillation + Hard Exploration RL)로 16× 압축·4×~24× 추론 속도 향상. 미압축 RAG가 실패하는 쿼리에서도 압축 RAG가 정답을 생성하는 역전 실증. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
 ## 2026-09-06 일일 누적 추가 출처 (3건, 루프 #82)
 
 ### 한국 — 법률 산업 (아시아 다법역 다국어 법률 RAG, 로앤컴퍼니)
