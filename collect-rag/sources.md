@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-09-08 일일 누적 추가 출처 (2건, 루프 #84)
+
+### 글로벌 — 프로덕션 아키텍처 (청크 간 일관성 그래프 인코딩 RAG 리랭킹, CAGE)
+- [arXiv:2609.04647 — CAGE: Coherence-Aware Graph Encoding for Retrieval-Augmented Generation](https://arxiv.org/abs/2609.04647) — 2026-09-04 · [architecture][reranking][coherence][graph-encoding][rgcn][multi-hop][between-chunk][capital-one][general-intelligence] · Capital One · General Intelligence Company. 청크 간 일관성을 4차원(Intra-Domain Relevance·Noise Resistance·Informational Bonding·Factual Consistency)으로 모델링하는 이종 엔티티 그래프 기반 RAG 리랭킹 프레임워크. 4개 멀티홉 벤치마크에서 monoT5 대비 Recall@5·Exact Match 동등 이상. (snippet-verified: arXiv abs + arXiv html + cs.IR 최근 목록 3개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (제3자 RAG 감사 임베딩 워터마크, Rent-a-RAG)
+- [arXiv:2609.03749 — Rent-a-RAG: Embedding-Space Watermarks for Auditing Third-Party RAG](https://arxiv.org/abs/2609.03749) — 2026-09 · [architecture][security][watermark][auditing][third-party][emnlp2026][dirbucket][embedding-space][data-provider][license] · EMNLP 2026 Main Conference. DirBucket: 데이터 제공자 측 의미 보존 워터마크 + 블랙박스 RAG 감사 프레임워크. 23개 답변으로 탐지 임계값 도달, 재표현·세탁·다중 제공자 혼합 4종 회피 시나리오에서 탐지력 유지. (snippet-verified: arXiv abs + arXiv html + arXiv PDF + cs.CR 최근 목록 4개 이상 독립 출처)
+
 ## 2026-09-07 일일 누적 추가 출처 (2건, 루프 #83)
 
 ### 한국 — 에이전트·RAG (고려대·한양대·현대자동차 산학협력, APT-RAG 트리형 증거 수집)

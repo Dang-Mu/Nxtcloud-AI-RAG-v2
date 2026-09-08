@@ -1,5 +1,21 @@
 # 업데이트 로그
 
+## 2026-09-08 (일일 루프 #84)
+- **신규 사례 2건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 2026-09-01~08 기간 네이버·카카오·토스·SKT·KT·우아한형제들·LY Corp·KB금융·삼성전자·LG CNS·의료기관·교육기관 등 10+ 쿼리 시도 후 기수록 목록 외 신규 한국 1차 RAG 출처 미발굴)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-09-08-01 | arXiv:2609.04647 — CAGE: 청크 간 일관성 그래프 인코딩 RAG 리랭킹 (Capital One·General Intelligence) | 프로덕션 아키텍처 (리랭킹) | 02-프로덕션-아키텍처.md |
+| GL-2026-09-08-02 | arXiv:2609.03749 — Rent-a-RAG: 제3자 RAG 감사 임베딩 공간 워터마크 DirBucket (EMNLP 2026) | 프로덕션 아키텍처 (보안·감사) | 02-프로덕션-아키텍처.md |
+
+- **검증 결과**: 2건 전원 5점 자가검증 통과; snippet-verified (2개 이상 독립 출처)
+  1. **arXiv:2609.04647 (2026-09-04)** [글로벌]: Capital One + General Intelligence Company. CAGE: 이종 엔티티 그래프 변환 + R-GCN 인코딩으로 청크 간 일관성 4차원(Intra-Domain Relevance·Noise Resistance·Informational Bonding·Factual Consistency)을 리랭킹 신호로 활용. 패시지 독립 점수화의 집합적 비일관성 문제 해소. 4개 멀티홉 벤치마크에서 monoT5 대비 Recall@5·Exact Match 동등 이상. → `02-프로덕션-아키텍처.md` DEX-Comp 다음(## 한국 환경 특이점 앞)에 추가
+  2. **arXiv:2609.03749 (2026-09)** [글로벌]: EMNLP 2026 Main Conference. Rent-a-RAG/DirBucket: 제3자 RAG 마켓플레이스 데이터 재사용 감사 프레임워크. 의미 보존 패러프레이즈 임베딩을 비밀 버킷 방향으로 편향시켜 제공자 워터마크 내재화 → 블랙박스 23개 답변으로 탐지 임계값 도달. → `02-프로덕션-아키텍처.md` CAGE 다음에 추가
+
+- `sources.md`에 2개 출처 추가 (## 2026-09-08 섹션 신설, 파일 최상단)
+- **한국 사례**: 0건 (다수 쿼리 시도 후 기수록 목록 외 신규 1차 출처 미발굴)
+- **검증 결과**: URL 200 OK: 0/2건(전면 WebFetch 차단) · snippet-verified: 2/2건 · 단언 톤다운: 0건 · 중복 폐기: 0건 · 발굴 시도 → 최종 채택: 약 10건 시도 → 2건 채택
+
 ## 2026-09-07 (일일 루프 #83)
 - **신규 사례 2건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 1건 — 고려대·한양대·현대자동차 APT-RAG 트리형 증거 수집 RAG)
 
