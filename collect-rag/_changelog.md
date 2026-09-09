@@ -1,5 +1,21 @@
 # 업데이트 로그
 
+## 2026-09-09 (일일 루프 #85)
+- **신규 사례 2건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 2026-09-02~09 기간 네이버·카카오·토스·SKT·KT·우아한형제들·LY Corp·KB금융·삼성전자·LG CNS·의료기관·교육기관 등 10+ 쿼리 시도 후 기수록 목록 외 신규 한국 1차 RAG 출처 미발굴; LINE Part Time Jobs reranking(techverse2026-62)은 RAG 직접 관련성 부족으로 폐기)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-09-09-01 | arXiv:2609.08188 — Generator-in-the-Loop 정렬: 멀티모달 RAG 의미-유틸리티 간극 해소 (Purdue University) | 프로덕션 아키텍처 (멀티모달 RAG 정렬) | 02-프로덕션-아키텍처.md |
+| GL-2026-09-09-02 | arXiv:2609.06391 — 신뢰할 수 있는 그래프-에이전틱 RAG: 사회적 선 적용 아키텍처와 실패 전파 분석 | 에이전트·툴유즈·MCP (신뢰성·실패 분석) | 03-에이전트-툴유즈-MCP.md |
+
+- **검증 결과**: 2건 전원 5점 자가검증 통과; snippet-verified (2개 이상 독립 출처)
+  1. **arXiv:2609.08188 (2026-09-08)** [글로벌]: Zhan-Lun Chang, Dong-Jun Han, Seyyedali Hosseinalipour, Mung Chiang, Christopher G. Brinton (Purdue University). Bridging the Semantic-Utility Gap in Multimodal RAG via Generator-in-the-Loop Alignment. 표준 검색기·리랭커의 의미 유사도 최적화 → 생성기 유틸리티 간극 발생 문제. Stage 1: VLM 가상 텍스트 패시지 생성 → 밀집 검색 쿼리화(이미지→텍스트 모달리티 간극 해소). Stage 2: 동결 VLM 답변 정오 기반 선호 쌍 자동 채굴 + 크로스-인코더 LoRA 파인튜닝(인간 주석 불필요, VLM-agnostic). → `02-프로덕션-아키텍처.md` Rent-a-RAG 다음(## 한국 환경 특이점 앞)에 추가
+  2. **arXiv:2609.06391 (2026-09-06)** [글로벌]: Vijay Bommireddy, Raviteja Bommireddy. Building Trustworthy Graph-Agentic RAG for Social Good: Architectures, Failure Propagation, and Assurance by Construction. 사회적 선 적용 환경에서의 그래프-에이전틱 RAG 실패 연쇄 경로(그래프 구성 결함→검색 증거 오염→제어 결정 변형→고위험 결과) 체계적 분석. Assurance by Construction 방법론: 신선도·인가·추적가능성·감독·이의제기를 시스템 설계 단계에서 내재화. → `03-에이전트-툴유즈-MCP.md` APT-RAG 다음(## 이 도메인의 공통 패턴 앞)에 추가
+
+- `sources.md`에 2개 출처 추가 (## 2026-09-09 섹션 신설, 파일 최상단)
+- **한국 사례**: 0건 (다수 쿼리 시도 후 기수록 목록 외 신규 한국 1차 RAG 출처 미발굴)
+- **검증 결과**: URL 200 OK: 0/2건(전면 WebFetch 차단) · snippet-verified: 2/2건 · 단언 톤다운: 0건 · 중복 폐기: 0건 · 발굴 시도 → 최종 채택: 약 8건 시도 → 2건 채택
+
 ## 2026-09-08 (일일 루프 #84)
 - **신규 사례 2건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 2026-09-01~08 기간 네이버·카카오·토스·SKT·KT·우아한형제들·LY Corp·KB금융·삼성전자·LG CNS·의료기관·교육기관 등 10+ 쿼리 시도 후 기수록 목록 외 신규 한국 1차 RAG 출처 미발굴)
 
