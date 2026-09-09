@@ -766,6 +766,22 @@ MCP 서버는 자주 사용하는 참조 데이터(예: 법률 식별자 조회 
 - **저자**: Songeun Lee, Kyungjin Min, Injae Na, Suyeong Lee, Chiyoung Kim, Woohwan Jung (고려대학교 Korea University · 한양대학교 Hanyang University · 현대자동차 Hyundai Motor Company)
 - **출처**: [arXiv:2609.04981 — A Tree-based RAG Framework for Evidence-Intensive QA via Adaptive Planning and Topology-Aware Evidence Gathering](https://arxiv.org/abs/2609.04981) (2026-09-04, snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
 
+### 신뢰할 수 있는 그래프-에이전틱 RAG — 사회적 선(社會的 善) 적용을 위한 아키텍처와 실패 전파 분석 (arXiv:2609.06391, 2026-09-06)
+
+> **Building Trustworthy Graph-Agentic RAG for Social Good: Architectures, Failure Propagation, and Assurance by Construction** (arXiv:2609.06391, 2026-09-06, Vijay Bommireddy · Raviteja Bommireddy)
+
+그래프-에이전틱 RAG는 구조화된 증거와 적응형 컨트롤러(계획·관계 순회·중간 클레임 검증·서브태스크 위임·툴 사용)를 결합하는 강력한 아키텍처다. 그러나 이러한 커플링은 **실패 전파(failure propagation)** 의 위험을 내포한다 — 그래프 구성 단계의 결함이 검색 증거로 흘러들어 이후 제어 결정을 변형하고 최종적으로 고위험 결과로 이어질 수 있다. 이 논문은 신선도·인가·추적가능성·감독·이의제기(recourse)가 답변 품질만큼 중요한 **사회적 선 적용 환경**(의료·법률·공공서비스·위기대응 등)에서 신뢰할 수 있는 그래프-에이전틱 RAG를 설계·평가하기 위한 체계적 프레임워크를 제시한다.
+
+**핵심 기여:**
+- **아키텍처 분류**: 그래프-에이전틱 RAG의 구조적 변형체들을 분류하고 각 설계 선택이 신뢰성에 미치는 영향을 체계화.
+- **실패 전파 분석**: 그래프 구성 결함 → 검색 증거 오염 → 제어 결정 변형 → 최종 결과 오류로 이어지는 **연쇄 실패 경로(coupled failure paths)** 식별. 그래프 구조 오류가 단순 검색 오류보다 심각한 이유를 정량적으로 분석.
+- **Assurance by Construction**: 신선도 보장(freshness assurance)·인가 통제(authorization control)·추적가능성(traceability)·인간 감독(oversight)·이의제기 메커니즘(recourse mechanism)을 시스템 설계 단계에서 내재화하는 방법론 제시.
+
+**의의:** CodePoisonRAG(arXiv:2609.02774)가 공격자의 능동적 오염을 다룬다면, 이 논문은 **시스템 설계 자체의 구조적 취약성**이 고위험 도메인(의료·법률·공공)에서 어떻게 실패 연쇄를 일으키는지를 정면으로 다룬다. 그래프-에이전틱 RAG가 점점 더 고위험 결정 보조 시스템으로 채용되는 추세에서, 신뢰성 보장이 성능 지표와 동등하게 설계 목표로 다뤄져야 함을 주장하는 참조 문헌.
+
+- **저자**: Vijay Bommireddy, Raviteja Bommireddy
+- **출처**: [arXiv:2609.06391 — Building Trustworthy Graph-Agentic RAG for Social Good: Architectures, Failure Propagation, and Assurance by Construction](https://arxiv.org/abs/2609.06391) (2026-09-06, snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.

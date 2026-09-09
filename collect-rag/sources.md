@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-09-09 일일 누적 추가 출처 (2건, 루프 #85)
+
+### 글로벌 — 프로덕션 아키텍처 (멀티모달 RAG 생성기-인-루프 정렬, Purdue University)
+- [arXiv:2609.08188 — Bridging the Semantic-Utility Gap in Multimodal RAG via Generator-in-the-Loop Alignment](https://arxiv.org/abs/2609.08188) — 2026-09-08 · [architecture][multimodal][generator-in-the-loop][alignment][LoRA][reranker][vlm][semantic-utility-gap][preference-learning][purdue] · Zhan-Lun Chang, Dong-Jun Han, Seyyedali Hosseinalipour, Mung Chiang, Christopher G. Brinton (Purdue University). 표준 검색기·리랭커의 의미 유사도 최적화로 인한 생성기 유틸리티 간극 해소. Stage 1: VLM 가상 텍스트 패시지 생성 → 밀집 검색 쿼리화; Stage 2: 동결 VLM 답변 정오 기반 선호 쌍 자동 채굴 + 크로스-인코더 LoRA 파인튜닝. 인간 주석 불필요, VLM-agnostic. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
+### 글로벌 — 에이전트·툴유즈 (신뢰할 수 있는 그래프-에이전틱 RAG, 실패 전파 분석)
+- [arXiv:2609.06391 — Building Trustworthy Graph-Agentic RAG for Social Good: Architectures, Failure Propagation, and Assurance by Construction](https://arxiv.org/abs/2609.06391) — 2026-09-06 · [agent][graph-agentic-rag][trustworthy][failure-propagation][assurance][social-good][freshness][authorization][traceability][oversight][recourse] · Vijay Bommireddy, Raviteja Bommireddy. 사회적 선(의료·법률·공공서비스·위기대응) 적용 그래프-에이전틱 RAG의 실패 연쇄 경로(그래프 구성 결함→검색 오염→제어 변형→고위험 결과) 분석 및 Assurance by Construction 설계 방법론 제시. 신선도·인가·추적가능성·감독·이의제기를 시스템 설계 단계에서 내재화. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
 ## 2026-09-08 일일 누적 추가 출처 (2건, 루프 #84)
 
 ### 글로벌 — 프로덕션 아키텍처 (청크 간 일관성 그래프 인코딩 RAG 리랭킹, CAGE)
