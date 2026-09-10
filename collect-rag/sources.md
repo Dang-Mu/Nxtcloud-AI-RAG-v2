@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-09-10 일일 누적 추가 출처 (3건, 루프 #86)
+
+### 한국 — 에이전트·RAG (SNU·DGIST·Samsung Electronics, 언어적 리랭커 에이전틱 RAG, ACL 2026)
+- [arXiv:2605.01399 — Verbal-R3: Verbal Reranker as the Missing Bridge between Retrieval and Reasoning](https://arxiv.org/abs/2605.01399) / [ACL Anthology 2026.acl-long.1712](https://aclanthology.org/2026.acl-long.1712/) — 2026-05-02 · [korea][agent][agentic-rag][reranker][verbal-annotation][test-time-scaling][snu][dgist][samsung][iitp][nrf][bk21][acl2026] · Sangkwon Park, Donghun Kang (Seoul National University), Jisoo Mok (DGIST), Sungroh Yoon (Seoul National University). 에이전틱 RAG에서 검색-추론 단절을 해소하는 Verbal Reranker 프레임워크. Verbal Annotations(논리적 연결 서술 분석 내러티브)로 리랭킹 이유를 언어로 전달해 Generator의 추론 지원. 관련도 가이드 테스트 타임 스케일링 도입. 복잡한 QA 벤치마크 SOTA. Samsung Electronics + 한국 정부(IITP·NRF·BK21 FOUR SNU) 지원. (snippet-verified: arXiv abs + arXiv pdf + ACL Anthology 3개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (쿼리 재작성 상호보완성, ServiceNow, EMNLP 2026 Industry)
+- [arXiv:2609.05637 — Better Together: Complementary Query Rewriting Under a Strong RAG Baseline](https://arxiv.org/abs/2609.05637) — 2026-09 · [architecture][query-rewriting][enterprise][hybrid-rewriting][ensemble][hyde][query2doc][enterpriserag-bench][servicenow][emnlp2026-industry] · Sara Shanian, Xiaoqin Yi, Pavlo Ruban, Kurt MacDonald (ServiceNow). 4종 쿼리 재작성 전략의 단독 한계 및 조합 시너지 정량화. HotpotQA·AmbigNQ·512K EnterpriseRAG-Bench. 4방법 union HIT@10 +12.5p(39.22→51.70), 5방법 union 52.98(+13.8p). EMNLP 2026 Industry Track 채택. (snippet-verified: arXiv abs + arXiv html + cs.IR 최근 목록 3개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (문서 포이즈닝 하의 RAG 신뢰성 정량 측정, University of Milan)
+- [arXiv:2609.09243 — In RAG We Trust? Measuring Robustness of Retrieval-Augmented Generation Under Document Poisoning](https://arxiv.org/abs/2609.09243) — 2026-09-08 · [evaluation][security][document-poisoning][robustness][entity-swap][number-swap][negation][fever][llama][factchecking][university-of-milan] · Iliano Fasolino (University of Milan). Llama 3.1 8B + FEVER 팩트체킹 + 3종 오염 전략(엔티티 교체·수치 교체·부정) × 588회 팩토리얼 실험. 클린 77.9%→전부 오염 43.5%(34.4%p 하락). 엔티티 교체가 기존 정답 전환 비율 최고. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
 ## 2026-09-09 일일 누적 추가 출처 (2건, 루프 #85)
 
 ### 글로벌 — 프로덕션 아키텍처 (멀티모달 RAG 생성기-인-루프 정렬, Purdue University)

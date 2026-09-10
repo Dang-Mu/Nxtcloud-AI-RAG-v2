@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-09-10 (일일 루프 #86)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 1건 — SNU·DGIST·Samsung Electronics Verbal-R3 ACL 2026)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| KR-2026-09-10-01 | arXiv:2605.01399 — Verbal-R3: 언어적 리랭커 기반 에이전틱 RAG (SNU·DGIST·Samsung Electronics, ACL 2026) | 에이전트·툴유즈·MCP (한국 연구, 리랭커-추론 통합) | 03-에이전트-툴유즈-MCP.md |
+| GL-2026-09-10-01 | arXiv:2609.05637 — Better Together: 쿼리 재작성 상호보완성 (ServiceNow, EMNLP 2026 Industry) | 프로덕션 아키텍처 (쿼리 최적화, 엔터프라이즈 RAG) | 02-프로덕션-아키텍처.md |
+| GL-2026-09-10-02 | arXiv:2609.09243 — In RAG We Trust? 문서 포이즈닝 하의 RAG 신뢰성 정량 (University of Milan) | 프로덕션 아키텍처 (평가·보안, 팩트체킹 로버스트니스) | 02-프로덕션-아키텍처.md |
+
+- **검증 결과**: 3건 전원 5점 자가검증 통과; snippet-verified (2개 이상 독립 출처)
+  1. **arXiv:2605.01399 (2026-05-02)** [한국]: Sangkwon Park, Donghun Kang (SNU), Jisoo Mok (DGIST), Sungroh Yoon (SNU). Verbal-R3: 에이전틱 RAG 프레임워크에서 Verbal Reranker를 도입해 언어적 설명(Verbal Annotations)으로 검색-추론 단절을 해소. Generator가 Verbal Reranker의 분석 내러티브를 가이드로 반복 검색·추론 수행. 관련도 가이드 테스트 타임 스케일링으로 궤적 확장 효율화. 복잡한 QA 벤치마크 SOTA. ACL 2026 Long Papers. Samsung Electronics + 한국 정부(IITP·NRF·BK21 FOUR) 지원. → `03-에이전트-툴유즈-MCP.md` 신뢰할 수 있는 그래프-에이전틱 RAG 다음(## 이 도메인의 공통 패턴 앞)에 추가
+  2. **arXiv:2609.05637 (2026-09)** [글로벌]: Sara Shanian, Xiaoqin Yi, Pavlo Ruban, Kurt MacDonald (ServiceNow). Better Together: HyDE·Query2Doc 등 강력한 LLM 베이스라인 대비 4종 쿼리 재작성의 단독 한계와 조합 시너지 정량화. HotpotQA·AmbigNQ·EnterpriseRAG-Bench(512K 문서) 평가. 4방법 union HIT@10 +12.5p(39.22→51.70), 5방법 union 52.98(+13.8p). EMNLP 2026 Industry Track. → `02-프로덕션-아키텍처.md` Generator-in-the-Loop Alignment 다음(## 한국 환경 특이점 앞)에 추가
+  3. **arXiv:2609.09243 (2026-09-08)** [글로벌]: Iliano Fasolino (University of Milan). In RAG We Trust?: Llama 3.1 8B, FEVER 팩트체킹, 3종 오염 전략(엔티티 교체·수치 교체·부정), 588회 실행. 클린 77.9%→전부 오염 43.5%(34.4%p 하락). 엔티티 교체가 가장 치명적. → `02-프로덕션-아키텍처.md` Better Together 다음에 추가
+
+- `sources.md`에 3개 출처 추가 (## 2026-09-10 섹션 신설, 파일 최상단)
+- **한국 사례**: 1건 (arXiv:2605.01399 — SNU·DGIST·Samsung Electronics Verbal-R3, ACL 2026)
+- **검증 결과**: URL 200 OK: 0/3건(전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 0건 · 중복 폐기: 1건(KidnapRAG 기수록 확인 후 제외) · 발굴 시도 → 최종 채택: 약 10건 시도 → 3건 채택
+
 ## 2026-09-09 (일일 루프 #85)
 - **신규 사례 2건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 2026-09-02~09 기간 네이버·카카오·토스·SKT·KT·우아한형제들·LY Corp·KB금융·삼성전자·LG CNS·의료기관·교육기관 등 10+ 쿼리 시도 후 기수록 목록 외 신규 한국 1차 RAG 출처 미발굴; LINE Part Time Jobs reranking(techverse2026-62)은 RAG 직접 관련성 부족으로 폐기)
 

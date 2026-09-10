@@ -782,6 +782,24 @@ MCP 서버는 자주 사용하는 참조 데이터(예: 법률 식별자 조회 
 - **저자**: Vijay Bommireddy, Raviteja Bommireddy
 - **출처**: [arXiv:2609.06391 — Building Trustworthy Graph-Agentic RAG for Social Good: Architectures, Failure Propagation, and Assurance by Construction](https://arxiv.org/abs/2609.06391) (2026-09-06, snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
 
+### Verbal-R3 — 언어적 리랭커: 검색과 추론을 잇는 에이전틱 RAG 프레임워크 (arXiv:2605.01399, ACL 2026) [🇰🇷 한국 기관]
+
+> **Verbal-R3: Verbal Reranker as the Missing Bridge between Retrieval and Reasoning** (arXiv:2605.01399, ACL 2026 Long Papers, 서울대학교 · DGIST · Samsung Electronics)
+
+복잡한 멀티홉 QA에서 기존 에이전틱 RAG의 핵심 한계는 검색기가 반환한 패시지의 **리랭킹이 LLM 추론과 단절**되어 있다는 점이다. 점수 기반 리랭커는 관련도를 수치로 반환하지만, LLM이 왜 이 패시지를 어떻게 활용해야 하는지에 대한 설명 없이 전달되어 생성기가 추론 과정에서 검색 컨텍스트를 효과적으로 통합하지 못하는 문제가 발생한다.
+
+**핵심 기여 — Verbal-R3 프레임워크:**
+- **Generator(생성기)**: 반복적 검색(iterative retrieval)과 추론(reasoning)을 수행하며, Verbal Reranker에서 받은 관련도 점수와 Verbal Annotation을 가이드로 활용.
+- **Verbal Reranker(언어적 리랭커)**: 단순 점수가 아닌 **Verbal Annotations**—쿼리와 검색된 컨텍스트 사이의 논리적 연결을 명시적으로 서술한 분석 내러티브—를 생성해 Generator에 반환. 리랭킹의 이유가 언어로 전달됨으로써 추론 지원 효과를 극대화.
+- **관련도 가이드 테스트 타임 스케일링(Relevance-Guided Test-Time Scaling)**: 관련도 신호를 기반으로 테스트 타임 컴퓨트를 효율적으로 배분해 효과적인 추론 궤적 확장(trajectory expansion)을 가능하게 함.
+
+**결과**: 복잡한 QA 벤치마크에서 최고 수준의 성능(state-of-the-art) 달성.
+
+**의의**: KidnapRAG·CodePoisonRAG·APT-RAG가 에이전틱 RAG의 취약점과 구조적 한계를 다룬다면, Verbal-R3는 **리랭커-생성기 인터페이스를 언어 계층으로 승격**시켜 에이전틱 RAG의 검색-추론 통합 품질 자체를 높이는 방향을 제시한다. 서울대학교 전기·정보공학부 Sungroh Yoon 교수 연구팀(BK21 FOUR 프로그램) + DGIST + Samsung Electronics 공동 연구, 한국 정부(IITP·NRF) 지원.
+
+- **저자**: Sangkwon Park, Donghun Kang (Seoul National University), Jisoo Mok (DGIST), Sungroh Yoon (Seoul National University)
+- **출처**: [arXiv:2605.01399 — Verbal-R3: Verbal Reranker as the Missing Bridge between Retrieval and Reasoning](https://arxiv.org/abs/2605.01399) / [ACL Anthology 2026.acl-long.1712](https://aclanthology.org/2026.acl-long.1712/) (ACL 2026 Long Papers, snippet-verified: arXiv abs + arXiv pdf + ACL Anthology 3개 이상 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.
