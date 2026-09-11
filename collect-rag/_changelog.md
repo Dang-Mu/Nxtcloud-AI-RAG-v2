@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-09-11 (일일 루프 #87)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 1건 — UNIST Dual Entity Recovery RAG EMNLP 2026)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| KR-2026-09-11-01 | arXiv:2609.06065 — Dual Entity Recovery RAG: 멀티홉 QA 검색-생성 엔티티 손실 이중 복구 (UNIST, EMNLP 2026 Findings) | 프로덕션 아키텍처 (한국, 멀티홉 RAG 엔티티 복구) | 02-프로덕션-아키텍처.md |
+| GL-2026-09-11-01 | arXiv:2609.00543 — TrustPropRAG: 문서 관계 그래프 기반 신뢰 전파 RAG (Penn State, EMNLP 2026 Findings) | 프로덕션 아키텍처 (신뢰성·코퍼스 품질) | 02-프로덕션-아키텍처.md |
+| GL-2026-09-11-02 | arXiv:2609.11758 — RAG-Safety-Bench: RAG가 LLM 안전성에 미치는 영향 격리 벤치마크 (Ottawa, EMNLP 2026 Main) | 프로덕션 아키텍처 (평가·안전) | 02-프로덕션-아키텍처.md |
+
+- **검증 결과**: 3건 전원 5점 자가검증 통과; snippet-verified (2개 이상 독립 출처)
+  1. **arXiv:2609.06065** [한국]: Heechang Lee, Dong-Young Lim (UNIST, 울산과학기술원). Don't Lose Entities from Retrieval to Generation. 멀티홉 RAG의 서브 쿼리 분해(검색 단계 엔티티 손실)·문장 분해(생성 단계 공지시 문맥 손실) 두 실패 지점 동시 해소. Dual Entity Recovery RAG: 이전 홉 엔티티 주입 + 문장 수준 coreference 복원. EMNLP 2026 Findings. → `02-프로덕션-아키텍처.md` In RAG We Trust? 다음(## 한국 환경 특이점 앞)에 추가
+  2. **arXiv:2609.00543 (2026-09-01)** [글로벌]: Zhuoheng Li, Ying Chen (Penn State). TrustPropRAG: 문서 관계 그래프(유사성·인용·모순 엣지) + 소수 인간 피드백 앵커링 → 그래프 전파로 전체 코퍼스 신뢰 점수 산출. within-cluster 일관성 + 피드백 반영 동시 최적화. EMNLP 2026 Findings. → `02-프로덕션-아키텍처.md` Dual Entity Recovery RAG 다음에 추가
+  3. **arXiv:2609.11758 (2026-09-10)** [글로벌]: Adithiyan Rajan, Indira Saravanan, Kathleen C. Fraser (University of Ottawa). RAG-Safety-Bench: 검색 품질 혼재 효과 제거, RAG 구조 안전성 영향 격리 측정. 4가지 조건(비-RAG·오라클 RAG·관련 RAG·무관 RAG). EMNLP 2026 Main. → `02-프로덕션-아키텍처.md` TrustPropRAG 다음에 추가
+
+- `sources.md`에 3개 출처 추가 (## 2026-09-11 섹션 신설, 파일 최상단)
+- **한국 사례**: 1건 (arXiv:2609.06065 — UNIST Dual Entity Recovery RAG, EMNLP 2026)
+- **검증 결과**: URL 200 OK: 0/3건(전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 0건 · 중복 폐기: 0건 · 발굴 시도 → 최종 채택: 약 12건 시도 → 3건 채택
+
 ## 2026-09-10 (일일 루프 #86)
 - **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 1건 — SNU·DGIST·Samsung Electronics Verbal-R3 ACL 2026)
 
