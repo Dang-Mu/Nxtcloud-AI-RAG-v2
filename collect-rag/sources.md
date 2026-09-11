@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-09-11 일일 누적 추가 출처 (3건, 루프 #87)
+
+### 한국 — 프로덕션 아키텍처 (멀티홉 RAG 엔티티 복구, UNIST, EMNLP 2026 Findings)
+- [arXiv:2609.06065 — Don't Lose Entities from Retrieval to Generation: Dual Entity Recovery RAG for multi-hop QA](https://arxiv.org/abs/2609.06065) — 2026-09 · [korea][architecture][multi-hop][entity-recovery][coreference][sub-question][dual-recovery][emnlp2026-findings][unist] · Heechang Lee, Dong-Young Lim (울산과학기술원 / UNIST). 멀티홉 RAG의 서브 쿼리 분해 단계(검색기 엔티티 손실)와 문장 단위 패시지 분해 단계(생성기 공지시 문맥 손실)의 이중 취약점을 Dual Entity Recovery 프레임워크로 동시에 해소. EMNLP 2026 Findings 채택. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (문서 신뢰 전파 RAG, Penn State, EMNLP 2026 Findings)
+- [arXiv:2609.00543 — Feedback-Assisted Trust Propagation over Document Relation Graphs for Retrieval-Augmented Generation](https://arxiv.org/abs/2609.00543) — 2026-09-01 · [architecture][trust][document-graph][graph-propagation][human-feedback][corpus-quality][reliability][emnlp2026-findings][penn-state] · Zhuoheng Li, Ying Chen (Penn State, College of Information Sciences and Technology). 문서 간 관계 그래프 + 소수 인간 피드백 앵커링 → within-cluster 일관성 최적화로 전체 코퍼스 신뢰 점수 전파. EMNLP 2026 Findings 채택. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (RAG-LLM 안전성 격리 평가 벤치마크, Ottawa, EMNLP 2026 Main)
+- [arXiv:2609.11758 — RAG-Safety-Bench: Reliable Evaluation of Retrieval-Augmented LLM Safety](https://arxiv.org/abs/2609.11758) — 2026-09-10 · [evaluation][safety][benchmark][rag-safety][oracle-rag][related-rag][harmful-request][guardrail][emnlp2026-main][university-of-ottawa] · Adithiyan Rajan, Indira Saravanan, Kathleen C. Fraser (University of Ottawa). 검색 품질 혼재 효과 제거, 4가지 격리 조건(비-RAG·오라클 RAG·관련 RAG·무관 RAG)으로 RAG 구조가 LLM 안전성에 미치는 영향만 신뢰 가능하게 정량화. EMNLP 2026 Main Conference 채택. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
 ## 2026-09-10 일일 누적 추가 출처 (3건, 루프 #86)
 
 ### 한국 — 에이전트·RAG (SNU·DGIST·Samsung Electronics, 언어적 리랭커 에이전틱 RAG, ACL 2026)
