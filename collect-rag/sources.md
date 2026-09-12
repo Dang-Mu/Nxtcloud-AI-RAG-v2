@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-09-12 일일 누적 추가 출처 (2건, 루프 #88)
+
+### 글로벌 — 프로덕션 아키텍처 (주목 이력 기반 RAG 서빙 최적화, ICDM 2026)
+- [arXiv:2609.11209 — REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving](https://arxiv.org/abs/2609.11209) — 2026-09-10 · [architecture][serving][context-compression][attention-trace][kv-cache][latency][icdm2026][reusable-evidence][budget-agnostic] · Tuan Nguyen, Qiran Hu, Banruo Liu, Khoa D. Doan, Kok-Seng Wong, Fan Lai. 쿼리 독립적으로 생성기의 과거 주목 트레이스를 문서 키 기반 점수 스토어에 집계 → 온라인 추가 레이턴시 40ms 미만으로 압축 오버헤드 5.3~15.6배 절감, 품질 +1.0~5.8포인트. ICDM 2026 채택. (snippet-verified: arXiv abs + arXiv html + pith.science + awesomepapers 4개 이상 독립 출처)
+
+### 글로벌 — 에이전트·툴유즈 (Perplexity 에이전틱 RAG 대규모 검색 벤치마크, 1억 9천만 문서)
+- [arXiv:2609.08887 — Q2D-Web: A Large-Scale Benchmark for Retrieval in Agentic RAG Systems](https://arxiv.org/abs/2609.08887) / [Perplexity 블로그](https://www.perplexity.ai/hub/blog/q2d-web) — 2026-09-08 · [agent][benchmark][agentic-rag][retrieval][web-search][multilingual][perplexity][production][first-stage-retriever][agent-reformulated-query] · Maximilian Schall 외 6인 (Perplexity). 190M 웹 문서 + 69,721 에이전트 재작성 쿼리(10개 언어, 9개 도메인). 인간 쿼리 vs 에이전트 쿼리 분포 괴리 최초 대규모 정량화. 13개 검색기 비교. (snippet-verified: arXiv abs + alphaxiv + awesomepapers + Perplexity community forum + AlphaSignal 5개 이상 독립 출처)
+
 ## 2026-09-11 일일 누적 추가 출처 (3건, 루프 #87)
 
 ### 한국 — 프로덕션 아키텍처 (멀티홉 RAG 엔티티 복구, UNIST, EMNLP 2026 Findings)
