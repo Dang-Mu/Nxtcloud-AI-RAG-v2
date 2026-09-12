@@ -800,6 +800,31 @@ MCP 서버는 자주 사용하는 참조 데이터(예: 법률 식별자 조회 
 - **저자**: Sangkwon Park, Donghun Kang (Seoul National University), Jisoo Mok (DGIST), Sungroh Yoon (Seoul National University)
 - **출처**: [arXiv:2605.01399 — Verbal-R3: Verbal Reranker as the Missing Bridge between Retrieval and Reasoning](https://arxiv.org/abs/2605.01399) / [ACL Anthology 2026.acl-long.1712](https://aclanthology.org/2026.acl-long.1712/) (ACL 2026 Long Papers, snippet-verified: arXiv abs + arXiv pdf + ACL Anthology 3개 이상 독립 출처)
 
+### Q2D-Web — Perplexity의 에이전틱 RAG 대규모 검색 벤치마크 (arXiv:2609.08887, 2026-09-08)
+
+> **Q2D-Web: A Large-Scale Benchmark for Retrieval in Agentic RAG Systems** (arXiv:2609.08887, 2026-09-08, Perplexity)
+
+에이전틱 RAG 파이프라인에서 1단계 검색기(first-stage retriever)를 대규모 프로덕션 환경에서 평가하는 공개 벤치마크가 존재하지 않는다는 공백을 해소하기 위해 Perplexity가 개발한 대규모 검색 벤치마크. 기존 벤치마크는 인간이 작성한 쿼리를 사용하는 반면, 에이전틱 RAG 파이프라인은 **에이전트(LLM)가 재작성한 쿼리(machine-written reformulations)**를 검색기에 전달하기 때문에 쿼리 분포가 근본적으로 다르다.
+
+**Q2D-Web 구성:**
+- **코퍼스**: 1억 9천만(190M) 개 웹 문서
+- **쿼리**: 69,721개의 에이전트 재작성 쿼리 — 9개월간의 PII-프리 프로덕션 검색 트래픽에서 샘플링
+- **10개 언어**: 영어 65.8% 포함, 한국어·일본어·독일어·프랑스어 등 다국어
+- **9개 도메인**: 프로그래밍, 법률, 헬스, 금융, 여행 등
+- **3종 관련성 판단셋**: 에이전트 인용 출처, 프로덕션 웹 랭킹, LLM 추가 판단 — 단일 레이블링에 의존하지 않는 다중 관련성 판단으로 신뢰도 보강. 쿼리당 평균 99.6개의 긍정 판단.
+
+**13개 검색기 벤치마크 결과:**
+- 검색기의 상대적 순위는 판단셋 종류에 관계없이 대체로 일관됨
+- 그러나 **도메인·쿼리 언어·쿼리 유형별로 순위가 크게 달라짐** — 도메인 특화 평가의 필요성을 실증
+- `pplx-embed-v1-4b`: Web Ranking 및 Combined 판단셋에서 선두
+- `Nemotron-3-Embed-8B`: Citation 관련성 판단셋에서 선두
+- 공개 리더보드로 지속 업데이트 예정
+
+**의의**: "에이전트가 재작성한 쿼리"라는 프로덕션 에이전틱 RAG의 실제 입력 분포를 반영한 최초의 대규모 공개 벤치마크. 인간 쿼리 중심 평가(BEIR·MTEB 등)와 에이전틱 RAG 프로덕션 성능 간의 괴리를 정량화하고, 다국어·도메인별 검색기 평가를 위한 참조점을 제공한다. 한국어 포함 10개 언어 지원이라는 점에서 한국어 에이전틱 RAG 검색기 선택에도 직접적인 시사점을 준다.
+
+- **저자**: Maximilian Schall, Sedigheh Eslami, Markus Krimmel, Antoine Chaffin, Louis Milliken, Bo Wang, Denis Bykov (Perplexity)
+- **출처**: [arXiv:2609.08887 — Q2D-Web: A Large-Scale Benchmark for Retrieval in Agentic RAG Systems](https://arxiv.org/abs/2609.08887) / [Perplexity 블로그 — Q2D-Web: Evaluating First-Stage Retrievers at Scale](https://www.perplexity.ai/hub/blog/q2d-web) (2026-09-09, snippet-verified: arXiv abs + alphaxiv + awesomepapers + Perplexity community forum + AlphaSignal 5개 이상 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.
