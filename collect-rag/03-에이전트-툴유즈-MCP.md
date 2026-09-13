@@ -825,6 +825,44 @@ MCP 서버는 자주 사용하는 참조 데이터(예: 법률 식별자 조회 
 - **저자**: Maximilian Schall, Sedigheh Eslami, Markus Krimmel, Antoine Chaffin, Louis Milliken, Bo Wang, Denis Bykov (Perplexity)
 - **출처**: [arXiv:2609.08887 — Q2D-Web: A Large-Scale Benchmark for Retrieval in Agentic RAG Systems](https://arxiv.org/abs/2609.08887) / [Perplexity 블로그 — Q2D-Web: Evaluating First-Stage Retrievers at Scale](https://www.perplexity.ai/hub/blog/q2d-web) (2026-09-09, snippet-verified: arXiv abs + alphaxiv + awesomepapers + Perplexity community forum + AlphaSignal 5개 이상 독립 출처)
 
+### MOSAIC — 쿼리 인식 GraphRAG 탐색 정책 적응 (arXiv:2609.11065, 2026-09-10) [🇰🇷 한국 기관]
+
+> **MOSAIC: Query-Aware Exploration Policy Adaptation for GraphRAG** (arXiv:2609.11065, 2026-09-10, KT Corporation)
+
+GraphRAG의 구조적 불일치 문제를 해소하기 위한 훈련 불필요(training-free) 프레임워크. 기존 GraphRAG 시스템은 단일 전역(global) 탐색 정책을 모든 쿼리에 동일하게 적용한다. 그러나 직접 사실 조회 쿼리는 컴팩트한 로컬 이웃이 필요하고, 비교 쿼리는 여러 대상의 균형 잡힌 커버리지가 필요하며, 매개 추론 쿼리는 약하게 연결된 커넥터를 통한 더 깊은 경로를 필요로 한다는 점에서 단일 고정 정책은 쿼리 유형별 최적화에 실패한다.
+
+**핵심 기여 — MOSAIC (Query-Aware Exploration Policy Adaptation):**
+- **쿼리별 제어 문제로의 공식화**: GraphRAG 검색을 "쿼리마다 독립된 탐색 제어 문제"로 재정의. 코퍼스 그래프·인덱스·스코어링 함수·그라운딩 절차·답변 생성기는 고정 공유하고, 탐색 정책만 쿼리에 맞게 동적으로 생성.
+- **LLM 분석기**: 쿼리 특화 증거 요건을 분석해, 시드 선택(seed selection)·그래프 순회(graph traversal)·중단(stopping)·증거 선택(evidence selection) 4가지 차원에 걸친 제한 정책(bounded policy)을 자동 생성.
+- **훈련 불필요 드롭인(plug-in)**: 기존 GraphRAG 파이프라인을 재훈련 없이 교체 가능.
+
+**성능 결과 (GraphRAG-Bench):**
+- Medical 도메인: 쿼리 가중 Answer Correctness **76.97** (기존 최강 고정 정책 대비 **+5.13포인트**)
+- Novel 도메인: **64.33** (+4.43포인트)
+- 전체: 가장 강력한 정규 고정 정책 대비 **+9.96포인트** 향상
+- Fixed Wide 정책 대비 평가 경로 **81.9% 절감**, 채택 증거 항목 **47.2% 절감**
+
+**의의**: KT Corporation 주도의 한국 RAG 연구에서 GraphRAG 탐색 정책을 단일 전역 설정에서 쿼리 인식 동적 생성으로 전환하는 접근을 실증한 사례. "에이전트가 검색 전략을 스스로 설계"한다는 메타 에이전틱 RAG 패러다임의 한 구현으로 볼 수 있으며, 재훈련 없이 기존 GraphRAG 스택에 삽입 가능한 실용성이 강점이다.
+
+- **저자**: EunKyeong Lee, Kyeong-Jin Oh, Jinwon Kim, Hye Woo Lee, Minsang Song, Hyeongjun Jang, Junyoung Youn (일부 저자 KT Corporation 소속)
+- **출처**: [arXiv:2609.11065 — MOSAIC: Query-Aware Exploration Policy Adaptation for GraphRAG](https://arxiv.org/abs/2609.11065) (2026-09-10, snippet-verified: arXiv abs + arXiv html + awesomepapers.io + pith.science 4개 이상 독립 출처)
+
+### SearchAtlas — 에이전틱 검색 전략 분석을 위한 증거 쿼리 그래프 프레임워크 (arXiv:2609.10901, EMNLP 2026 Findings)
+
+> **SearchAtlas: Analyzing Agentic Search Strategies via Evidential Query Graphs** (arXiv:2609.10901, 2026-09-09, Duke University · University of Pennsylvania, EMNLP 2026 Findings)
+
+LLM 검색 에이전트는 최종 답변 정확도로만 평가되는 경우가 많아, 검색 전략 자체(어떻게 증거를 수집하고 전파하는지)가 블랙박스로 남는다. SearchAtlas는 검색 궤적(search trajectory)을 **증거 쿼리 그래프(Evidential Query Graph)**로 구조화해 에이전틱 검색의 과정을 투명하게 분석하는 프레임워크.
+
+**핵심 기여 — SearchAtlas:**
+- **증거 전파 그래프 구축**: 검색 궤적의 각 단계(쿼리 → 검색 → 추론 → 최종 답변)를 노드로, 증거가 어떻게 전파되는지를 엣지로 모델링. 자동 파싱 파이프라인이 평균 엣지 F1 **86.0%**를 달성(인간 주석 대비).
+- **5개 검색 에이전트 × 3개 벤치마크 비교**: 검색 규모(scale)와 증거 집계 방식에서 에이전트 간 체계적 차이를 발견.
+- **세 가지 실패 패턴 노출**: (1) 단편적 답변 지원(fragmented answer support), (2) 쿼리 제약 조건이 최종 답변에 도달하지 못하는 경우, (3) 검색 없이 파라메트릭 지식이 응답에 진입하는 경우.
+
+**의의**: 에이전틱 RAG 시스템의 "검색 과정" 자체를 그래프 구조로 시각화·분석하는 프레임워크를 제공함으로써, 블랙박스 평가를 넘어 검색 전략의 구체적 병목과 실패 모드를 진단할 수 있게 한다. EMNLP 2026 Findings 채택. RAG 파이프라인 디버깅·개선을 위한 새로운 분석 도구로서 실무 적용 가능성이 높다.
+
+- **저자**: Jiacheng Sang, Mengyuan Li, Sanxing Chen, Yukun Huang (Duke University), Yu Feng (University of Pennsylvania), Bhuwan Dhingra (Duke University)
+- **출처**: [arXiv:2609.10901 — SearchAtlas: Analyzing Agentic Search Strategies via Evidential Query Graphs](https://arxiv.org/abs/2609.10901) (2026-09-09, snippet-verified: arXiv abs + arXiv html + awesomepapers.io + pith.science 4개 이상 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.
