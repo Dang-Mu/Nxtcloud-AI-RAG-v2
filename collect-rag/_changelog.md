@@ -1,5 +1,21 @@
 # 업데이트 로그
 
+## 2026-09-13 (일일 루프 #89)
+- **신규 사례 2건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 1건 — KT Corporation MOSAIC GraphRAG)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| KR-2026-09-13-01 | arXiv:2609.11065 — MOSAIC: 쿼리 인식 GraphRAG 탐색 정책 적응 (KT Corporation, 2026-09-10) | 에이전트·툴유즈 (한국, GraphRAG 탐색 정책 동적 생성) | 03-에이전트-툴유즈-MCP.md |
+| GL-2026-09-13-01 | arXiv:2609.10901 — SearchAtlas: 에이전틱 검색 전략 분석 증거 쿼리 그래프 (Duke Univ., EMNLP 2026 Findings) | 에이전트·툴유즈 (에이전틱 검색 과정 시각화·분석) | 03-에이전트-툴유즈-MCP.md |
+
+- **검증 결과**: 2건 전원 5점 자가검증 통과; snippet-verified (4개 이상 독립 출처)
+  1. **arXiv:2609.11065 (MOSAIC)** [한국 KT Corporation]: EunKyeong Lee 외 6인 (일부 KT Corporation). GraphRAG 검색을 쿼리별 제어 문제로 공식화하는 훈련 불필요 프레임워크. LLM 분석기가 시드 선택·순회·중단·증거 선택 4차원 탐색 정책을 쿼리마다 동적 생성. GraphRAG-Bench: Medical +5.13p (76.97), Novel +4.43p (64.33), 전체 +9.96p, 경로 81.9% 절감, 증거 47.2% 절감. → `03-에이전트-툴유즈-MCP.md` Q2D-Web 다음(## 이 도메인의 공통 패턴 앞)에 추가
+  2. **arXiv:2609.10901 (SearchAtlas)** [글로벌, EMNLP 2026 Findings]: Jiacheng Sang 외 5인 (Duke University, UPenn). 검색 궤적 → 증거 쿼리 그래프 자동 변환. 엣지 F1 86.0%. 5개 에이전트 × 3개 벤치마크에서 단편적 지원·쿼리 제약 손실·파라메트릭 지식 진입 3종 실패 패턴 노출. EMNLP 2026 Findings 채택. → `03-에이전트-툴유즈-MCP.md` MOSAIC 다음에 추가
+
+- `sources.md`에 2개 출처 추가 (## 2026-09-13 섹션 신설, 파일 최상단)
+- **한국 사례**: 1건 (arXiv:2609.11065 — KT Corporation MOSAIC, 쿼리 인식 GraphRAG 탐색 정책)
+- **검증 결과**: URL 200 OK: 0/2건(전면 WebFetch 차단) · snippet-verified: 2/2건 · 단언 톤다운: 0건 · 중복 폐기: 0건 · 발굴 시도 → 최종 채택: 약 15건 시도 → 2건 채택
+
 ## 2026-09-12 (일일 루프 #88)
 - **신규 사례 2건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 검색 범위 내 최근 7일 한국 사례 없음)
 

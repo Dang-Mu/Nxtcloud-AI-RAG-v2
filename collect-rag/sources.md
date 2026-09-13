@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-09-13 일일 누적 추가 출처 (2건, 루프 #89)
+
+### 한국 — 에이전트·GraphRAG (KT Corporation 쿼리 인식 GraphRAG 탐색 정책, 2026-09-10)
+- [arXiv:2609.11065 — MOSAIC: Query-Aware Exploration Policy Adaptation for GraphRAG](https://arxiv.org/abs/2609.11065) — 2026-09-10 · [korea][agent][graphrag][query-aware][exploration-policy][training-free][kt-corporation][graph-traversal][seed-selection][llm-analyzer][graphrag-bench] · EunKyeong Lee, Kyeong-Jin Oh, Jinwon Kim, Hye Woo Lee, Minsang Song, Hyeongjun Jang, Junyoung Youn (일부 KT Corporation 소속). GraphRAG 검색을 쿼리별 제어 문제로 공식화하는 훈련 불필요 프레임워크. LLM 분석기가 쿼리 특화 탐색 정책(시드선택·순회·중단·증거선택)을 동적 생성. GraphRAG-Bench Medical +5.13p, Novel +4.43p, 전체 +9.96p, 경로 81.9% 절감. (snippet-verified: arXiv abs + arXiv html + awesomepapers.io + pith.science 4개 이상 독립 출처)
+
+### 글로벌 — 에이전트·툴유즈 (에이전틱 검색 전략 분석 증거 쿼리 그래프, EMNLP 2026 Findings)
+- [arXiv:2609.10901 — SearchAtlas: Analyzing Agentic Search Strategies via Evidential Query Graphs](https://arxiv.org/abs/2609.10901) — 2026-09-09 · [agent][agentic-search][evidential-query-graph][search-trajectory][emnlp2026-findings][duke][upenn][debugging][failure-analysis] · Jiacheng Sang, Mengyuan Li, Sanxing Chen, Yukun Huang (Duke University), Yu Feng (University of Pennsylvania), Bhuwan Dhingra (Duke University). 검색 궤적을 증거 쿼리 그래프로 변환해 에이전틱 검색의 증거 전파 경로를 시각화·분석. 자동 파싱 엣지 F1 86.0%. 5개 에이전트 × 3개 벤치마크에서 단편적 답변 지원·쿼리 제약 손실·파라메트릭 지식 진입 3가지 실패 패턴 노출. EMNLP 2026 Findings 채택. (snippet-verified: arXiv abs + arXiv html + awesomepapers.io + pith.science 4개 이상 독립 출처)
+
 ## 2026-09-12 일일 누적 추가 출처 (2건, 루프 #88)
 
 ### 글로벌 — 프로덕션 아키텍처 (주목 이력 기반 RAG 서빙 최적화, ICDM 2026)
