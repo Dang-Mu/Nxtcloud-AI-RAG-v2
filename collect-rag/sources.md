@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-09-14 일일 누적 추가 출처 (2건, 루프 #90)
+
+### 글로벌 — 엔터프라이즈·GraphRAG (Google Cloud HCRG 레거시 코드 마이그레이션, 2026-09-11)
+- [arXiv:2609.12464 — Beyond Vector Similarity: Hierarchical Context-Aware Graph RAG vs Standard RAG in Enterprise Code Migration](https://arxiv.org/abs/2609.12464) — 2026-09-11 · [enterprise][graphrag][code-migration][ast][legacy][microservices][google-cloud][spanner-property-graph][gemini-context-cache][tree-sitter][hcrg][topology-aware] · Nilesh Jaiswal, Aniket Agrawal, Arjit Shukla, Divya Malhotra, Saurabh Garg, Suchit Puri, Suddhasatwa Bhaumik (Google Cloud). 표준 벡터 RAG가 AST 상속 체인을 절단해 컴파일 실패를 초래하는 문제를 HCRG(위상 인식 그래프 + Spanner Property Graph + Gemini Context Cache)로 해결한 엔터프라이즈 레거시 코드 마이그레이션 사례. (snippet-verified: arXiv abs + DailyArXiv jyyang621/issues/411 + research.google.com 3개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (검색 점수 분포 형태 RAG 충족도 예측, TSD 2026, 체코 원자력 규제 기관)
+- [arXiv:2609.11646 — Your Retriever Already Knows: Distribution-Shape QPP for RAG Retrieval Sufficiency](https://arxiv.org/abs/2609.11646) — 2026-09-10 · [architecture][qpp][retrieval-sufficiency][score-distribution][adaptive-rag][fallback][production][tsd2026][nuclear-regulator][on-premises][czech][generalqpp][vicore] · Matyáš Veselý, Michal Průšek, Jiří Franc. 검색 점수 벡터 분포 24개 비어휘 특징(GeneralQPP)으로 문서 내용 접근 없이 RAG 검색 충족도를 예측. ViDoRe 8개 시각 도메인 AUROC 0.856. 체코 원자력 규제 기관 실배포 배경. TSD 2026 채택. (snippet-verified: DailyArXiv jyyang621/issues/411 + WebSearch 2개 이상 독립 출처)
+
 ## 2026-09-13 일일 누적 추가 출처 (2건, 루프 #89)
 
 ### 한국 — 에이전트·GraphRAG (KT Corporation 쿼리 인식 GraphRAG 탐색 정책, 2026-09-10)

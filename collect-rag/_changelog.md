@@ -1,5 +1,21 @@
 # 업데이트 로그
 
+## 2026-09-14 (일일 루프 #90)
+- **신규 사례 2건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 사례 미발견)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-09-14-01 | arXiv:2609.12464 — HCRG: 계층적 컨텍스트 인식 GraphRAG 기반 엔터프라이즈 코드 마이그레이션 (Google Cloud, 2026-09-11) | 엔터프라이즈·사내지식 (GraphRAG + AST + 레거시 코드 마이그레이션) | 01-엔터프라이즈-사내지식.md |
+| GL-2026-09-14-02 | arXiv:2609.11646 — GeneralQPP: 검색 점수 분포 형태 기반 RAG 검색 충족도 예측 (TSD 2026, 체코 원자력 규제 기관 실배포) | 프로덕션 아키텍처 (RAG 품질 신호·적응형 검색 트리거) | 02-프로덕션-아키텍처.md |
+
+- **검증 결과**: 2건 전원 5점 자가검증 통과; snippet-verified (2개 이상 독립 출처)
+  1. **arXiv:2609.12464 (HCRG)** [Google Cloud]: Nilesh Jaiswal 외 6인 (Google Cloud). 표준 벡터 RAG 대신 AST(tree-sitter) + Google Cloud Spanner Property Graph + Gemini Context Cache로 위상 인식 GraphRAG 구축. 레거시→마이크로서비스 코드 마이그레이션에서 상속 체인 보존 + 컴파일 실패율 감소. → `01-엔터프라이즈-사내지식.md` STAIR 다음(## 이 도메인의 공통 패턴 앞)에 추가
+  2. **arXiv:2609.11646 (GeneralQPP)** [TSD 2026, 체코 원자력 규제 기관]: Matyáš Veselý, Michal Průšek, Jiří Franc. 검색 점수 벡터 분포 형태 24개 비어휘 특징으로 문서 내용 접근 없이 검색 충족도 예측. ViDoRe 8개 시각 도메인 AUROC 0.856. → `02-프로덕션-아키텍처.md` REVA 다음(## 한국 환경 특이점 앞)에 추가
+
+- `sources.md`에 2개 출처 추가 (## 2026-09-14 섹션 신설, 파일 최상단)
+- **한국 사례**: 0건 (검색 범위 내 최근 7일 한국 기관/기업 신규 RAG 사례 미발견)
+- **검증 결과**: URL 200 OK: 0/2건(전면 WebFetch 차단) · snippet-verified: 2/2건 · 단언 톤다운: 0건 · 중복 폐기: 0건 · 발굴 시도 → 최종 채택: 약 20건 시도 → 2건 채택
+
 ## 2026-09-13 (일일 루프 #89)
 - **신규 사례 2건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 1건 — KT Corporation MOSAIC GraphRAG)
 
