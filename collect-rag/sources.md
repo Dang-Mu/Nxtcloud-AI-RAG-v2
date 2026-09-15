@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-09-15 일일 누적 추가 출처 (3건, 루프 #91)
+
+### 글로벌 — 프로덕션 아키텍처 (디렉터리 인식 구조화 문서 RAG 토큰 효율, ByteDance Volcengine, 2026-09-10)
+- [arXiv:2609.11390 — VikingRAG: Accurate and Token-efficient Retrieval-augmented Generation over Structured Documents](https://arxiv.org/abs/2609.11390) — 2026-09-10 · [architecture][serving][token-efficiency][structured-document][directory-aware][experience-edge][adaptive-escalation][bytedance][volcengine][viking] · Peiyuan Gao, Gaoyuan Zhang, Haojie Qin, Yahui Sun, Qianyi Zhang, Yunhao Zhang, Zeyu Wang, Wei Lu (ByteDance Volcengine). 목차·디렉터리 계층이 있는 구조화 문서에서 에이전틱 멀티라운드 RAG 검색 트레이스를 경험 엣지로 재활용하고 적응형 에스컬레이션으로 SOTA 대비 5.1~51.9% 토큰만 소비하면서 정확도 동등 유지. (snippet-verified: arXiv abs + arXiv html + arXiv pdf + pith.science 4개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (RAG 압축·귀속 트레이드오프, 귀속 세탁 개념, 2026-09-13)
+- [arXiv:2609.14245 — The Attribution-Compression Frontier in Retrieval-Augmented Generation](https://arxiv.org/abs/2609.14245) — 2026-09-13 · [architecture][compression][attribution][citation][reattributability][attribution-laundering][asqa][qasper][recomp][evaluation] · Deepanshu Mody. RAG 컨텍스트 압축이 답변 품질(F1·EM)과 인용 귀속 품질 간에 극단적 트레이드오프를 만드는 "귀속 세탁" 현상을 정량화. ASQA 0.25 예산에서 압축기 요약 대비 precision 0.86 vs 원문 스팬 대비 precision 0.12. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (멀티모달 RAG 적응형 라우팅, 부정적 결과, 2026-09-11)
+- [arXiv:2609.12437 — Beyond the Query: Do Retrieval Signals Improve Adaptive Multimodal RAG Routing?](https://arxiv.org/abs/2609.12437) — 2026-09-11 · [architecture][adaptive-rag][routing][retrieval-signals][multimodal][document][audio][video][negative-result][query-only] · Qiaomu Li, Qiuyuan Zhang, Nong Ming. 문서·오디오·비디오 3개 모달리티 RAG에서 검색 시점 신호가 쿼리 전용 라우터 대비 신뢰할 만한 라우팅 개선을 일관되게 만들지 못함을 실증한 부정적 결과. (snippet-verified: arXiv abs + arXiv html + pith.science 3개 이상 독립 출처)
+
 ## 2026-09-14 일일 누적 추가 출처 (2건, 루프 #90)
 
 ### 글로벌 — 엔터프라이즈·GraphRAG (Google Cloud HCRG 레거시 코드 마이그레이션, 2026-09-11)
