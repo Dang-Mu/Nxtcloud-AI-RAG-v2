@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-09-16 일일 누적 추가 출처 (3건, 루프 #92)
+
+### 글로벌 — 에이전트·툴유즈 (에이전틱 비주얼 RAG, 텍스트 원장 + 바운딩박스 줌인 + 멀티턴 RL, Soochow Univ. · Baidu, 2026-09-14)
+- [arXiv:2609.15800 — Navigating Sparse Evidence: Agentic Visual RAG via Explicit Context Selection and Consolidation](https://arxiv.org/abs/2609.15800) — 2026-09-14 · [agent][visual-rag][agentic][multimodal][textual-ledger][bounding-box][coarse-fine-retrieval][multi-turn-rl][vlm][sparse-evidence][score-framework][soochow][baidu] · Yucheng Shen, Lingyong Yan, Jiulong Wu, Shuaiqiang Wang, Jianmin Wu, Dawei Yin, Min Cao (Soochow University · Baidu Inc.). 희소 비주얼 증거 탐색을 위한 에이전틱 비주얼 RAG 프레임워크 SCORE. 텍스트 원장으로 탐색 맥락 축적, 조대 이미지 검색 + 바운딩박스 줌인으로 시각 근거 정밀 추출, 멀티턴 RL VLM 훈련으로 탐색 전략 학습. (snippet-verified)
+
+### 글로벌 — 산업별·법률 (인용 검증 중심 법률 QA, 하이브리드 검색 + 문장 근거 검증, Western Michigan Univ., 2026-09-14)
+- [arXiv:2609.15830 — CiteGuard-RAG: A Validation-Centered AI System for Evidence-Grounded Question Answering](https://arxiv.org/abs/2609.15830) — 2026-09-14 · [legal][citation][grounding][validation][hybrid-retrieval][sentence-level][regeneration][housing-law][privacyqa][cuad][western-michigan][hallucination-free][citeguard] · Sumit Barua, Guan Hong, Halil Dursunoglu, Charles Rodgers, Alvis Fong (Western Michigan University). 하이브리드 의미·어휘 검색 + 인용 제약 생성 + 문장 단위 근거 검증 + 단일 패스 재생성. housing-law·PrivacyQA·CUAD 400 질의에서 검색 99.1%·근거 답변 98.3%·인용 유효성 98.3%·환각 0건. (snippet-verified)
+
+### 글로벌 — 프로덕션 아키텍처 (PII 프라이버시 방어, 프롬프트 분포 엔트로피+마진 스캐닝, 경량 쿼리-단계 탐지, 2026-09-14)
+- [arXiv:2609.16095 — RAG-CT: Mitigating Privacy Risks on Retrieval-Augmented Generation Systems via Scanning Prompt Distribution](https://arxiv.org/abs/2609.16095) — 2026-09-14 · [security][privacy][pii][prompt-distribution][entropy][margin][scanning][lightweight][rag-ct][attack-defense][query-layer] · Xingyu Lyu, Jiayimei Wang, Jianfeng He, Ning Wang, Yidan Hu, Yimin Chen (기관 미확인). 프롬프트의 엔트로피·마진 분포 특성으로 PII 추출 악의적 쿼리를 탐지하는 경량 방어층. LLM·리트리버 수정 없이 쿼리 단계에 삽입. 4공격 × 4방어 기준선 × 2데이터셋 실험. (snippet-verified)
+
 ## 2026-09-15 일일 누적 추가 출처 (3건, 루프 #91)
 
 ### 글로벌 — 프로덕션 아키텍처 (디렉터리 인식 구조화 문서 RAG 토큰 효율, ByteDance Volcengine, 2026-09-10)
