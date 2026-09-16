@@ -863,6 +863,25 @@ LLM 검색 에이전트는 최종 답변 정확도로만 평가되는 경우가 
 - **저자**: Jiacheng Sang, Mengyuan Li, Sanxing Chen, Yukun Huang (Duke University), Yu Feng (University of Pennsylvania), Bhuwan Dhingra (Duke University)
 - **출처**: [arXiv:2609.10901 — SearchAtlas: Analyzing Agentic Search Strategies via Evidential Query Graphs](https://arxiv.org/abs/2609.10901) (2026-09-09, snippet-verified: arXiv abs + arXiv html + awesomepapers.io + pith.science 4개 이상 독립 출처)
 
+### SCORE — 희소 증거 탐색을 위한 에이전틱 비주얼 RAG (arXiv:2609.15800, 2026-09-14)
+
+> **Navigating Sparse Evidence: Agentic Visual RAG via Explicit Context Selection and Consolidation** (arXiv:2609.15800, 2026-09-14, Soochow University · Baidu Inc.)
+
+시각적으로 풍부한 문서(PDF 슬라이드·인포그래픽·보고서)에서 멀티턴 에이전틱 탐색이 필요한 비주얼 QA 시나리오를 타깃으로, 기존 비주얼 RAG의 두 가지 구조적 결함을 해결하는 프레임워크.
+
+**핵심 문제의식**: 멀티이미지 비주얼 RAG에서 증거는 흔히 희소하게 분산되어 있고(sparse evidence), 관련 이미지를 찾더라도 구체적인 시각 영역(bounding box)을 정밀하게 추출하지 못해 VLM이 길을 잃는다. 기존 멀티이미지 RAG는 "검색한 이미지 전체를 컨텍스트에 전달"하는 방식이라 노이즈가 크고 처리 비용이 높다.
+
+**SCORE 프레임워크의 3단 구조**:
+1. **텍스트 원장(Textual Ledger)**: 탐색 중 쿼리와 관련된 관측(observation)을 텍스트로 기록하는 메모리 레이어. 멀티턴 탐색에서 이전 단계의 맥락을 축적·보존.
+2. **조대 이미지 검색 + 세밀 바운딩박스 줌인**: 먼저 쿼리와 관련된 이미지를 coarse하게 검색한 뒤, fine-grained bounding-box zoom-in으로 필요한 시각 영역만 정밀 추출. 불필요한 이미지 영역이 컨텍스트를 오염시키는 문제를 해결.
+3. **멀티턴 RL 훈련**: VLM을 멀티턴 에이전틱 탐색 환경에서 강화학습으로 훈련. 탐색 전략 자체를 모델이 학습.
+
+**의의**: 기존 비주얼 RAG 연구의 대부분이 텍스트 RAG 패러다임을 이미지에 단순 적용한 반면, SCORE는 에이전틱 탐색·텍스트 원장 메모리·바운딩박스 기반 정밀 검색을 통합한 비주얼 RAG 전용 설계. 시각 정보가 핵심인 기업 문서(재무 슬라이드·기술 인포그래픽·의료 영상 보고서) QA 파이프라인에서 멀티턴 에이전틱 탐색의 실현 가능성을 실증.
+
+- **저자**: Yucheng Shen, Lingyong Yan, Jiulong Wu, Shuaiqiang Wang, Jianmin Wu, Dawei Yin, Min Cao
+- **기관**: Soochow University · Baidu Inc.
+- **출처**: [arXiv:2609.15800 — Navigating Sparse Evidence: Agentic Visual RAG via Explicit Context Selection and Consolidation](https://arxiv.org/abs/2609.15800) (2026-09-14, snippet-verified)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.
