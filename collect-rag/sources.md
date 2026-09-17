@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-09-17 일일 누적 추가 출처 (3건, 루프 #93)
+
+### 글로벌 — 프로덕션 아키텍처 (RAG 시스템 다중 GPU 벤치마킹, 에너지 66% 절감, 교차 단계 연쇄, 2026-09-04)
+- [arXiv:2609.05760 — RAGMark: A Comprehensive Framework for Benchmarking Retrieval-Augmented Generation Systems](https://arxiv.org/abs/2609.05760) — 2026-09-04 · [architecture][benchmarking][multi-gpu][latency][throughput][ttft][energy][reranking][compression][cross-stage][ragmark] · Zlatan Feric, Amir Taherin, Bin Ren, Yanzhi Wang, Jennifer Dy, David Kaeli. 소규모 다중 GPU 환경에서 RAG 단계별(리트리버·벡터DB·프롬프트처리·생성기) 지연·GPU사용률·메모리·전력·TTFT·처리량·품질 측정 모듈형 프레임워크. 리랭킹+압축 동시 적용 시 에너지 최대 66% 절감, 업스트림 컨텍스트 감소가 다운스트림으로 연쇄. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (RAG-FT 위험 경계 이론화, 잡음 있는 검색의 학습 영향 수학적 규명, NeurIPS 2026 NewInML, 2026-09-13)
+- [arXiv:2609.14485 — Retrieval-Guided Fine-Tuning as Noisy Estimation: Risk bounds and Architectural Analysis](https://arxiv.org/abs/2609.14485) — 2026-09-13 · [architecture][fine-tuning][rag-ft][risk-bounds][noisy-estimation][linear-regression][ols][dpn][neurips2026][newInML][training-theory] · Bhargav Lad, Yifan Hao. 다중 과제 선형 회귀 프레임워크에서 RAG-FT의 유한 표본 위험 경계 도출. 동질 잡음 하에서 검색 실패가 지수적으로 감소, 거리 비례 잡음(DPN) 모델로 현실적 검색 조건 모델링. (snippet-verified: arXiv abs + arXiv html + NeurIPS OpenReview 2개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (쿼리 의존적 소스 위험도 트리아지, 4차원 페이지 점수, Google+Sony, 2026-09-15)
+- [arXiv:2609.16564 — Query-Aware Source-Risk Triage for Retrieval-Augmented Generation](https://arxiv.org/abs/2609.16564) — 2026-09-15 · [architecture][security][source-risk][triage][pre-generation][query-aware][page-scoring][family-aggregation][routing][google][sony] · Kainan Zhou, Gangzhen Qian (Google LLC), Chuhong Xu (Sony Corporate of America), Lu Yi (Google LLC). 검색된 페이지를 생성 전에 4차원 점수+랭크 할인 패밀리 집계로 쿼리-의존적 위험도 평가 후 pass/contextualize/exclude/review 4경로 라우팅. 200 URL 파일럿 + 20,000행 합성 시나리오 검증. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
 ## 2026-09-16 일일 누적 추가 출처 (3건, 루프 #92)
 
 ### 글로벌 — 에이전트·툴유즈 (에이전틱 비주얼 RAG, 텍스트 원장 + 바운딩박스 줌인 + 멀티턴 RL, Soochow Univ. · Baidu, 2026-09-14)

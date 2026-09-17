@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-09-17 (일일 루프 #93)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 사례 미발견)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-09-17-01 | arXiv:2609.05760 — RAGMark: 다중 GPU RAG 시스템 벤치마킹 프레임워크, 리랭킹+압축으로 에너지 66% 절감 (2026-09-04) | 프로덕션 아키텍처 (벤치마킹·시스템 효율·교차 단계 연쇄) | 02-프로덕션-아키텍처.md |
+| GL-2026-09-17-02 | arXiv:2609.14485 — Retrieval-Guided Fine-Tuning as Noisy Estimation: RAG-FT 위험 경계 이론화 (NeurIPS 2026 NewInML, 2026-09-13) | 프로덕션 아키텍처 (RAG 파인튜닝 이론·잡음 검색 영향·훈련 설계) | 02-프로덕션-아키텍처.md |
+| GL-2026-09-17-03 | arXiv:2609.16564 — Query-Aware Source-Risk Triage: 쿼리 의존적 소스 위험도 사전 트리아지 (Google+Sony, 2026-09-15) | 프로덕션 아키텍처 (보안·소스 위험 필터링·사전 생성 라우팅) | 02-프로덕션-아키텍처.md |
+
+- **검증 결과**: 3건 전원 5점 자가검증 통과; snippet-verified (2개 이상 독립 출처)
+  1. **arXiv:2609.05760 (RAGMark)** [Northeastern Univ., BU 등]: Zlatan Feric 외 5인. 소규모 다중 GPU RAG 벤치마킹. 리랭킹+압축 동시 적용 시 에너지 최대 66% 절감, 교차 단계 연쇄 효과 확인. → `02-프로덕션-아키텍처.md` "검색 신호는 멀티모달 RAG 라우팅" 다음(## 한국 환경 특이점 앞)에 추가
+  2. **arXiv:2609.14485 (RAG-FT Noisy Estimation)** [Bhargav Lad, Yifan Hao]: RAG-FT를 다중 과제 선형 회귀로 모델링, 유한 표본 위험 경계 도출. DPN 모델 도입. NeurIPS 2026 NewInML 워크숍. → `02-프로덕션-아키텍처.md` RAGMark 다음에 추가
+  3. **arXiv:2609.16564 (Query-Aware Source-Risk Triage)** [Google LLC, Sony Corp]: Kainan Zhou 외 3인. 4차원 페이지 점수+랭크 할인 패밀리 집계+의도 보존 쿼리 변형+패밀리 보류 라우터. pass/contextualize/exclude/review 4경로. → `02-프로덕션-아키텍처.md` RAG-FT 다음에 추가
+
+- `sources.md`에 3개 출처 추가 (## 2026-09-17 섹션 신설, 파일 최상단)
+- **한국 사례**: 0건 (검색 범위 내 최근 7일 한국 기관/기업 신규 RAG 사례 미발견)
+- **검증 결과**: URL 200 OK: 0/3건(전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 0건 · 중복 폐기: 0건 · 발굴 시도 → 최종 채택: 약 15건 시도 → 3건 채택
+
 ## 2026-09-16 (일일 루프 #92)
 - **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 사례 미발견)
 
