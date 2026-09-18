@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-09-18 (일일 루프 #94)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 사례 미발견)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-09-18-01 | arXiv:2609.13489 — Pre-retrieval Query Clustering: 적응형 Top-k로 F₁ +36%·토큰 -14% 프로덕션 검증 (EvenUp, CIKM 2026, 2026-09-11) | 프로덕션 아키텍처 (적응형 검색·클러스터링·Top-k 최적화) | 02-프로덕션-아키텍처.md |
+| GL-2026-09-18-02 | arXiv:2609.16764 — RECTIFY: 평가 후 RAG 실패 진단·수리 오픈소스 Streamlit 워크벤치 (Univ. of Luxembourg, ASE 2026, 2026-09-15) | 프로덕션 아키텍처 (RAG 평가·툴링·진단·수리) | 02-프로덕션-아키텍처.md |
+| GL-2026-09-18-03 | arXiv:2609.17709 — DRAG: 쿼리 적응형 검색기·생성기 동적 선택 (Adobe+IACS+Glasgow, 2026-09-16) | 프로덕션 아키텍처 (적응형 RAG·QPP 라우팅·추론 지연 절감) | 02-프로덕션-아키텍처.md |
+
+- **검증 결과**: 3건 전원 5점 자가검증 통과; snippet-verified (2개 이상 독립 출처)
+  1. **arXiv:2609.13489 (Pre-retrieval Query Clustering)** [Portland State Univ., EvenUp]: Ye Xia, Emre Yamangil, Haixun Wang. 쿼리 임베딩 클러스터별 포화점 k* 사전 할당, EvenUp 전체 트래픽 배포에서 F₁ +36%·저복잡도 클러스터 토큰 -14%. CIKM 2026 채택. → `02-프로덕션-아키텍처.md` Query-Aware Source-Risk Triage 다음(## 한국 환경 특이점 앞)에 추가
+  2. **arXiv:2609.16764 (RECTIFY)** [University of Luxembourg]: Keerthana Murugaraj, Salima Lamsiyah, Martin Theobald. RAGVue 평가 결과→실패 4개 패밀리 분류→수리 카드→샌드박스 검증의 감사 가능한 워크플로우 Streamlit 워크벤치. ASE 컨퍼런스 투고. → `02-프로덕션-아키텍처.md` Query Clustering 다음에 추가
+  3. **arXiv:2609.17709 (DRAG)** [Adobe+IACS+Univ. of Glasgow]: Neeraj Anand 외 4인. QPP+퍼플렉서티 기반 검색기·생성기 동시 적응 선택. DRAG_QPP(학습불필요) 지연 절감+동등성능, DRAG_SFT 일관된 초과성능. → `02-프로덕션-아키텍처.md` RECTIFY 다음에 추가
+
+- `sources.md`에 3개 출처 추가 (## 2026-09-18 섹션 신설, 파일 최상단)
+- **한국 사례**: 0건 (검색 범위 내 최근 7일 한국 기관/기업 신규 RAG 사례 미발견)
+- **검증 결과**: URL 200 OK: 0/3건(전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 1건(DRAG "최초" 표현 → "중 하나"로) · 중복 폐기: 0건 · 발굴 시도 → 최종 채택: 약 10건 시도 → 3건 채택
+
 ## 2026-09-17 (일일 루프 #93)
 - **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 사례 미발견)
 
