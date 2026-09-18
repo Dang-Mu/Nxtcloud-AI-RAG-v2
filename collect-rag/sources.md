@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-09-18 일일 누적 추가 출처 (3건, 루프 #94)
+
+### 글로벌 — 프로덕션 아키텍처 (적응형 Top-k 클러스터링, F₁ +36%·토큰 -14% 프로덕션 검증, CIKM 2026)
+- [arXiv:2609.13489 — Pre-retrieval Query Clustering for Adaptive Top-k Document Retrieval in RAG Systems](https://arxiv.org/abs/2609.13489) — 2026-09-11 · [architecture][adaptive-retrieval][top-k][clustering][cikm2026][production] · Ye Xia (Portland State Univ.), Emre Yamangil, Haixun Wang (EvenUp). 쿼리 임베딩 클러스터별 포화점 k* 사전 할당으로 온라인 오버헤드 없이 적응형 Top-k 실현. EvenUp 전체 트래픽 배포: F₁ +36%, 저복잡도 클러스터 토큰 -14%. (snippet-verified: arXiv abs + arXiv html + GitHub release tag 3개 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (RAG 실패 진단·수리 오픈소스 워크벤치, ASE 2026)
+- [arXiv:2609.16764 — RECTIFY: An Interactive Workbench for Post-Evaluation RAG Diagnosis, Repair, and Verification](https://arxiv.org/abs/2609.16764) — 2026-09-15 · [architecture][tooling][evaluation][diagnosis][repair][streamlit][ase2026] · Keerthana Murugaraj, Salima Lamsiyah, Martin Theobald (University of Luxembourg). RAGVue 평가 결과를 4개 실패 패밀리(retrieval·grounding·generation·abstention)로 분류 → 수리 카드 생성 → 샌드박스 검증 흐름의 감사 가능한 RAG 개선 워크벤치. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (쿼리 적응형 검색기·생성기 동적 선택 DRAG, QPP+퍼플렉서티 기반 라우팅)
+- [arXiv:2609.17709 — One Size Does Not Fit All! Dynamic Retriever and Generator Selection for RAG](https://arxiv.org/abs/2609.17709) — 2026-09-16 · [architecture][adaptive-rag][routing][qpp][perplexity][drag][adobe][iacs][glasgow] · Neeraj Anand, Sumit Bhatia (Adobe), Payel Santra, Partha Basuchowdhuri (IACS Kolkata), Debasis Ganguly (Univ. of Glasgow). QPP 신호+퍼플렉서티로 쿼리별 최적 검색기·생성기 조합 선택. DRAG_QPP(학습 불필요)는 정적 강기준선 동등 성능+지연 절감, DRAG_SFT는 일관된 성능 초과. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+
 ## 2026-09-17 일일 누적 추가 출처 (3건, 루프 #93)
 
 ### 글로벌 — 프로덕션 아키텍처 (RAG 시스템 다중 GPU 벤치마킹, 에너지 66% 절감, 교차 단계 연쇄, 2026-09-04)
