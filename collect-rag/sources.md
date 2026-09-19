@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-09-19 일일 누적 추가 출처 (3건, 루프 #95)
+
+### 글로벌 — 프로덕션 아키텍처 (에이전트 RAG 메모리 의미 그림자화 공식화, GC-Mem 일관성 프로토콜, 2026-09-13)
+- [arXiv:2609.16073 — The Immutable Past: Formalizing State Mutability and Conflict Resolution in Mutable RAG](https://arxiv.org/abs/2609.16073) — 2026-09-13 · [architecture][agent-memory][semantic-shadowing][asymptotic-recall-decay][majority-vote-trap][gc-mem][long-horizon][consistency-protocol][inference-time][mutable-rag] · Hamed HaddadPajouh, Amir AmiriTabat. append-only RAG 메모리의 Semantic Shadowing·Asymptotic Recall Decay·Majority Vote Trap 3종 실패를 형식화. GC-Mem(시간적 지배 연산자+모순 감지) 프로토콜로 갈등 해소 정확도 >90% 달성. 드롭인 추론 시간 삽입 가능. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (합성 vs 실제 쿼리 분포 괴리 실증, RAG 평가 방법론, CIKM 2026, 2026-09-13)
+- [arXiv:2609.14579 — Beyond Benchmark Scores: How Synthetic and Authentic Query Distributions Diverge in RAG Evaluation](https://arxiv.org/abs/2609.14579) — 2026-09-13 · [evaluation][synthetic-queries][authentic-queries][distribution-shift][cikm2026][benchmark][deployment-readiness][query-length][source-concentration][warsaw][gemini-notebook] · Filip J. Kucia, Barbara M. Gawlik (Warsaw University of Technology). 1,851 합성 질문(Gemini Notebook, 평균 15.7단어, 165소스) vs 322 실제 사용자 질문(평균 6.8단어, 53소스) 대학 학부 정보 시스템 케이스 스터디. 합성 벤치마크 단독 평가의 분포 이탈 과대평가 문제 실증. CIKM 2026. (snippet-verified: arXiv abs + arXiv html + arxiv daily tracker 3개 독립 출처)
+
+### 글로벌 — 에이전트·툴유즈 (RAG 증거 컨텍스트 비주얼 애널리틱스, 인간-AI 공동 증거 큐레이션, 2026-09-17)
+- [arXiv:2609.19601 — FootprintRAG: Visual Analytics for Evidence Context Refinement in RAG-based Scientific Literature Exploration](https://arxiv.org/abs/2609.19601) — 2026-09-17 · [agent][visual-analytics][evidence-context][evidence-revision][rag-iteration-matrix][human-in-the-loop][cs.GR][cs.HC][cs.IR][collaborative-curation][scientific-literature][chinese-academy-of-sciences][uts][western-sydney] · Xingyu Liu, Yu Dong, Qizhen Yu, Shiyu Cheng, Zhe Wang, Guan Li, Guihua Shan, Dong Tian, Christy Jie Liang, Quang Vinh Nguyen (Chinese Academy of Sciences · UCAS · UTS · Western Sydney University). RAG 증거 컨텍스트를 생성 전 명시적·검사 가능·수정 가능한 분석 객체로 처리. RAG-Iteration Matrix View·Evidence Space Revision View·Context Summarization View 3단 인터페이스. (snippet-verified: arXiv abs + arXiv html + arxiv daily tracker 3개 독립 출처)
+
 ## 2026-09-18 일일 누적 추가 출처 (3건, 루프 #94)
 
 ### 글로벌 — 프로덕션 아키텍처 (적응형 Top-k 클러스터링, F₁ +36%·토큰 -14% 프로덕션 검증, CIKM 2026)

@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-09-19 (일일 루프 #95)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 사례 미발견)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-09-19-01 | arXiv:2609.16073 — GC-Mem: 에이전트 RAG 메모리 의미 그림자화·점근적 재현율 붕괴 공식화 + 가비지 컬렉션 프로토콜 (2026-09-13) | 프로덕션 아키텍처 (에이전트 메모리 관리, 장기 RAG 일관성) | 02-프로덕션-아키텍처.md |
+| GL-2026-09-19-02 | arXiv:2609.14579 — Beyond Benchmark Scores: 합성 vs 실제 쿼리 분포 괴리 — RAG 평가 배포 준비 상태 과대평가 실증 (Warsaw Univ., CIKM 2026) | 프로덕션 아키텍처 (RAG 평가 방법론, 분포 이탈) | 02-프로덕션-아키텍처.md |
+| GL-2026-09-19-03 | arXiv:2609.19601 — FootprintRAG: RAG 증거 컨텍스트를 검사·수정 가능한 객체로 처리하는 비주얼 애널리틱스 시스템 (Chinese Academy of Sciences 외, 2026-09-17) | 에이전트·툴유즈 (증거 컨텍스트 비주얼 애널리틱스, 인간-AI 공동 큐레이션) | 03-에이전트-툴유즈-MCP.md |
+
+- **검증 결과**: 3건 전원 5점 자가검증 통과; snippet-verified (2개 이상 독립 출처)
+  1. **arXiv:2609.16073 (GC-Mem)** [Hamed HaddadPajouh, Amir AmiriTabat]: append-only RAG 메모리의 Semantic Shadowing, Asymptotic Recall Decay, Majority Vote Trap 세 실패를 형식화. GC-Mem 프로토콜로 갈등 해소 정확도 >90% 달성. → `02-프로덕션-아키텍처.md` DRAG 다음(## 한국 환경 특이점 앞)에 추가
+  2. **arXiv:2609.14579 (Beyond Benchmark Scores)** [Filip J. Kucia, Barbara M. Gawlik, Warsaw Univ. of Technology]: 1,851 합성(평균 15.7단어, 165소스) vs 322 실제 쿼리(평균 6.8단어, 53소스) 비교. 합성 벤치마크 단독 평가의 분포 이탈 문제 실증. CIKM 2026. → `02-프로덕션-아키텍처.md` GC-Mem 다음에 추가
+  3. **arXiv:2609.19601 (FootprintRAG)** [Xingyu Liu 외 9인, Chinese Academy of Sciences 외]: RAG 증거 컨텍스트를 블랙박스에서 꺼내 검사·수정 가능 객체로 노출. RAG-Iteration Matrix View + Evidence Space Revision View + Context Summarization View. cs.GR·cs.HC·cs.IR 교차. → `03-에이전트-툴유즈-MCP.md` SCORE 다음(## 이 도메인의 공통 패턴 앞)에 추가
+
+- `sources.md`에 3개 출처 추가 (## 2026-09-19 섹션 신설, 파일 최상단)
+- **한국 사례**: 0건 (검색 범위 내 최근 7일 한국 기관/기업 신규 RAG 사례 미발견; 네이버·카카오·토스·SKT·KT·우아한형제들·LY Corp·삼성SDS·LG CNS·금융기관·의료기관 등 다수 쿼리 시도)
+- **검증 결과**: URL 200 OK: 0/3건(전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 0건 · 중복 폐기: 0건 · 발굴 시도 → 최종 채택: 약 12건 시도 → 3건 채택
+
 ## 2026-09-18 (일일 루프 #94)
 - **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 사례 미발견)
 

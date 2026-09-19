@@ -882,6 +882,23 @@ LLM 검색 에이전트는 최종 답변 정확도로만 평가되는 경우가 
 - **기관**: Soochow University · Baidu Inc.
 - **출처**: [arXiv:2609.15800 — Navigating Sparse Evidence: Agentic Visual RAG via Explicit Context Selection and Consolidation](https://arxiv.org/abs/2609.15800) (2026-09-14, snippet-verified)
 
+### FootprintRAG — RAG 증거 컨텍스트를 검사·수정 가능한 분석 객체로 노출하는 비주얼 애널리틱스 시스템 (arXiv:2609.19601, 2026-09-17)
+
+> **FootprintRAG: Visual Analytics for Evidence Context Refinement in RAG-based Scientific Literature Exploration** (arXiv:2609.19601, 2026-09-17, Chinese Academy of Sciences · University of Technology Sydney 등)
+
+RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단계가 블랙박스로 남아 사용자가 증거 컨텍스트 구성 과정을 파악할 수 없는 문제를 해결하는 **LLM 에이전트 기반 비주얼 애널리틱스 시스템**. 핵심 아이디어는 RAG 증거 컨텍스트를 생성 전에 **명시적(explicit)·검사 가능(inspectable)·수정 가능(revisable)한 분석 객체**로 취급하는 것.
+
+**FootprintRAG의 3단 인터페이스 구조:**
+- **RAG-Iteration Matrix View**: 멀티라운드 검색 전략을 매트릭스 형태로 비교 — 라운드별 검색 방향·쿼리 변형·반환 증거 단위를 한눈에 시각화.
+- **Evidence Space Revision View**: 증거 상태 수정 지원. 재랭크된 증거 단위(reranked units), 로컬 후보 풀 단위, ERS(Evidence Relevance Score) 기반 보충 후보를 함께 제시해 사용자가 잠재적으로 제외된 증거를 복구.
+- **Context Summarization View**: 확정된 증거 컨텍스트에서 증거 기반(evidence-grounded) 요약을 생성하고 원본 증거 단위로 역추적(trace-back) 가능.
+
+**의의**: 기존 RAG 시스템에서 사용자는 "블랙박스 검색 → 요약 수신" 흐름에서 검색 과정을 통제할 수 없었다. FootprintRAG는 에이전트 제안 + 사용자 상호작용의 결합으로 과학적 문헌 탐색(재현 확인, 연구 공백 식별 등)에서 **인간-AI 공동 증거 큐레이션(collaborative evidence curation)** 패러다임을 제시. cs.GR·cs.HC·cs.IR 교차 도메인 연구.
+
+- **저자**: Xingyu Liu, Yu Dong, Qizhen Yu, Shiyu Cheng, Zhe Wang, Guan Li, Guihua Shan, Dong Tian, Christy Jie Liang, Quang Vinh Nguyen
+- **기관**: Computer Network Information Center, Chinese Academy of Sciences · University of Chinese Academy of Sciences · Hangzhou Institute for Advanced Study, UCAS · University of Technology Sydney · Western Sydney University
+- **출처**: [arXiv:2609.19601 — FootprintRAG: Visual Analytics for Evidence Context Refinement in RAG-based Scientific Literature Exploration](https://arxiv.org/abs/2609.19601) (2026-09-17, snippet-verified: arXiv abs + arXiv html + arxiv daily tracker 3개 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.
