@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-09-20 (일일 루프 #96)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 사례 미발견)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-09-20-01 | arXiv:2609.19622 — G³RAG: LLM 토큰 없이 기하 이득 그래프로 멀티홉 RAG (South China University of Technology + Foshan University, 2026-09-17) | 프로덕션 아키텍처 (멀티홉 RAG, 그래프 기반 검색, 기하 이득 점수) | 02-프로덕션-아키텍처.md |
+| GL-2026-09-20-02 | arXiv:2609.19417 — TrioRAG: 그래프 없는 멀티모달 RAG, 3중 신호 후기 융합 (Tithi Rakshit 외, 2026-09-16) | 프로덕션 아키텍처 (멀티모달 RAG, 그래프-free, 비용 최적화) | 02-프로덕션-아키텍처.md |
+| GL-2026-09-20-03 | arXiv:2609.13718 — PEARL: 병렬 프로그래밍 학습 게임용 듀얼 컴포넌트 RAG 지원 에이전트 (IEEE CoG 2026, 2026-09-12) | 산업별·교육/게임 (게임 기반 학습, 맥락 인식 스캐폴딩) | 04-산업별-사례.md |
+
+- **검증 결과**: 3건 전원 5점 자가검증 통과; snippet-verified (2개 이상 독립 출처)
+  1. **arXiv:2609.19622 (G³RAG)** [Zeliang Li, Xiaofen Xing, Kailing Guo, Xiangmin Xu, South China University of Technology + Foshan University]: cos θ · sin θ 기하 이득 점수로 관련성+신규성 동시 포착, LLM 호출 없이 오프라인 그래프 구축. 밀도 인식 허브 억제 + 단일 스텝 제어 확산. MusiQue +5.76 F1, 평균 +4.26 F1 (그래프 기반 기준선 최고). → `02-프로덕션-아키텍처.md` Beyond Benchmark Scores 다음(## 한국 환경 특이점 앞)에 추가
+  2. **arXiv:2609.19417 (TrioRAG)** [Tithi Rakshit, Hongkuan Zhou, Lavdim Halilaj, Yuqicheng Zhu]: 질문·앵커이미지·VLM강화쿼리 3신호 독립 검색 + 후기 융합으로 Graph RAG 대체. 그래프 기반 동등 이상 품질에 추론 1.6~2.3배 빠름. AutoQA 신규 벤치마크(자동차 매뉴얼, 노이즈 웹이미지). → `02-프로덕션-아키텍처.md` G³RAG 다음에 추가
+  3. **arXiv:2609.13718 (PEARL)** [Jiahong Li 외 8인]: 병렬 프로그래밍 학습 게임 Parallel용 듀얼 컴포넌트 RAG. 의미 지식 검색 + 보드 상태 매칭. 플레이어 선호 조사: 즉각 개입보다 숙고 후 도움, 자율성 유지 필요. IEEE CoG 2026. (제출 2026-09-12, DailyArXiv #414에서 2026-09-18 부각) → `04-산업별-사례.md` EBS·교육부 항목 다음에 추가
+
+- `sources.md`에 3개 출처 추가 (## 2026-09-20 섹션 신설, 파일 최상단)
+- **한국 사례**: 0건 (검색 범위 내 최근 7일 한국 기관/기업 신규 RAG 사례 미발견; 네이버·카카오·토스·SKT·KT·우아한형제들·LY Corp·삼성SDS·LG CNS·금융기관·의료기관 등 다수 쿼리 시도; KT K-RAG/KT Knowledge Hub bloter.net 기사는 2026-06-17 발행으로 대상 기간 외)
+- **검증 결과**: URL 200 OK: 0/3건(전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 0건 · 중복 폐기: 0건 · 발굴 시도 → 최종 채택: 약 10건 시도 → 3건 채택
+
 ## 2026-09-19 (일일 루프 #95)
 - **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 사례 미발견)
 
