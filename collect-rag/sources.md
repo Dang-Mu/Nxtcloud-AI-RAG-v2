@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-09-20 일일 누적 추가 출처 (3건, 루프 #96)
+
+### 글로벌 — 프로덕션 아키텍처 (LLM 토큰 없는 기하 이득 그래프 멀티홉 RAG, G³RAG, 2026-09-17)
+- [arXiv:2609.19622 — Beyond Similarity through Zero-Token Geometric Graphs for Multi-Hop RAG](https://arxiv.org/abs/2609.19622) — 2026-09-17 · [architecture][multi-hop][graph-rag][geometric-gain][zero-token][dense-retrieval][hub-suppression][controlled-diffusion][musique][2wikimultihopqa][hotpotqa][south-china-university][foshan][nv-embed-v2][qwen3] · Zeliang Li, Xiaofen Xing, Kailing Guo, Xiangmin Xu (South China University of Technology · Foshan University). cos θ · sin θ 기하 이득 점수로 관련성+정보신규성을 동시 포착, LLM 토큰 없이 오프라인 그래프 구축. 밀도 인식 허브 억제 + 단일 스텝 제어 확산으로 멀티홉 보완 증거 포착. MusiQue +5.76 F1, 평균 +4.26 F1 (그래프 기반 기준선 최고). (snippet-verified: arXiv abs + arXiv html + pith.science 3개 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (그래프 없는 멀티모달 RAG, 3중 신호 후기 융합, TrioRAG, 2026-09-16)
+- [arXiv:2609.19417 — Less Is More: Graph-free Multimodal RAG via Multi-signal Late Fusion](https://arxiv.org/abs/2609.19417) — 2026-09-16 · [architecture][multimodal][graph-free][late-fusion][vlm][multi-signal][autoqa][automotive][page-image][page-text][multi-vector-index][trio-rag] · Tithi Rakshit, Hongkuan Zhou, Lavdim Halilaj, Yuqicheng Zhu. 질문·앵커이미지·VLM강화쿼리 3신호 독립 검색 후 후기 융합. 그래프 기반 대비 동등 이상 품질, 추론 1.6~2.3배 빠름. AutoQA(자동차 매뉴얼 기반, 노이즈 웹이미지 포함) 신규 벤치마크 제안. (snippet-verified: arXiv abs + arXiv html + awesomepapers.io 3개 독립 출처)
+
+### 글로벌 — 산업별·교육/게임 (병렬 프로그래밍 학습 게임 듀얼 컴포넌트 RAG 지원 에이전트 PEARL, IEEE CoG 2026, 2026-09-12)
+- [arXiv:2609.13718 — Oops, Not Now: PEARL, a RAG-Based Support Agent for Gameplay and What Players Want from AI Help](https://arxiv.org/abs/2609.13718) — 2026-09-12 · [education][game-based-learning][rag-agent][dual-component][semantic-retrieval][board-state-matching][scaffolding][ieee-cog2026][parallel-game][player-preference][timing][autonomy] · Jiahong Li, Sai Siddartha Maram, Atieh Kashani, Ulia Zaman, Zhiyu Lin, Cameron Marano, Roger Azevedo, Jichen Zhu, Magy Seif El-Nasr. 병렬프로그래밍 학습 게임 Parallel의 인게임 RAG 에이전트 PEARL. 의미 지식 검색 + 보드 상태 매칭 듀얼 스트림. 플레이어는 즉각 개입보다 숙고 후 도움 선호, 자율성 유지 필요. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+
 ## 2026-09-19 일일 누적 추가 출처 (3건, 루프 #95)
 
 ### 글로벌 — 프로덕션 아키텍처 (에이전트 RAG 메모리 의미 그림자화 공식화, GC-Mem 일관성 프로토콜, 2026-09-13)
