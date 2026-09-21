@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-09-21 일일 누적 추가 출처 (3건, 루프 #97)
+
+### 글로벌 — 엔터프라이즈·사내지식 (상태형 RAG 트러블슈팅 에이전트, EMNLP 2026 Industry Track, ~2026-09-19)
+- [arXiv:2609.20754 — RAFT: A Stateful Retrieval-Augmented Framework for Troubleshooting Agents](https://arxiv.org/abs/2609.20754) — 2026-09-19경 · [enterprise][rag][stateful][troubleshooting][customer-support][timeline-entry][directed-graph][case-graph][emnlp2026-industry][microsoft-learn][apache-jira] · Mingxuan Zhang, Xiaowen Wang, Anupma Sharan, Zhengyi Chen, Chenyu Diana Zhang, Shanshan Yang, Chittibabu Pacharu. 엔터프라이즈 IT 지원 케이스를 타임라인 엔트리 방향 그래프로 추상화, 케이스 단위가 아닌 엔트리 단위 임베딩·검색으로 활성 케이스 현 상태와 일치하는 과거 케이스 표면화. 선택적 케이스 레벨 그래프로 커버리지 확장. Microsoft Learn + Apache Jira 평가. EMNLP 2026 Industry Track 채택. (snippet-verified: arXiv abs + pith.science + DEEP-PolyU/Awesome-GraphRAG + jyyang621/DailyArXiv #415 + storm0710/aimstletter #28 5개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처·보안 (RAG 분산 오염 공격, 약한 신호 누적 메커니즘, ESORICS 2026 Workshop, 2026-09-18)
+- [arXiv:2609.21573 — Micro-Collaborative Poisoning: A Distributed Attack on RAG Systems](https://arxiv.org/abs/2609.21573) — 2026-09-18 · [security][poisoning][distributed-attack][rag][weak-signal][accumulation][top-k][multi-db][retriever][esorics2026][gecad][isep][porto] · Pedro Pereira, Eva Maia, Isabel Praça (GECAD, ISEP, Polytechnic of Porto). 허위 목표 주장을 여러 국소적으로 그럴듯한 문서에 분산해 단일 패시지 탐지를 회피하는 RAG 분산 오염 공격. 108개 구성(데이터셋·검색기·top-k·DB 구성·오염 DB 수·생성기 모델) 실험. 단일 지배 패시지가 아닌 약한 신호의 축적이 공격 구동 메커니즘. ESORICS 2026 Workshop. (snippet-verified: arXiv abs + arXiv html + GenAI-Security-Project/crosswalk #129 + pith.science 4개 이상 독립 출처)
+
+### 글로벌 — 산업별·교육 (고등교육 도움 요청 격차 해소, 강좌 특화 RAG, Bath Spa University, 2026-09-18)
+- [arXiv:2609.21600 — Reducing Barriers to Academic Support: Evaluating a Course-Specific RAG System for Addressing Help-Seeking Disparities in Higher Education](https://arxiv.org/abs/2609.21600) — 2026-09-18 · [education][higher-education][rag][help-seeking][disparity][access][course-specific][beacon][bath-spa-university][computing-education][privacy][immediate-support][module-aligned] · Andy Gray, Jake Hobbs (Bath Spa University). 강좌 승인 자료(교과서·슬라이드·과제 명세서) 한정 RAG로 즉각적·비공개·모듈 정렬 학업 지원 제공, 판단 노출 없이 도움 요청 심리 장벽 제거. 컴퓨팅 교육에서의 help-seeking disparity 완화 실증. (snippet-verified: arXiv abs + arXiv html 2개 독립 출처)
+
 ## 2026-09-20 일일 누적 추가 출처 (3건, 루프 #96)
 
 ### 글로벌 — 프로덕션 아키텍처 (LLM 토큰 없는 기하 이득 그래프 멀티홉 RAG, G³RAG, 2026-09-17)
