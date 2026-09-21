@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-09-21 (일일 루프 #97)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 사례 미발견)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-09-21-01 | arXiv:2609.20754 — RAFT: 상태형 RAG 기반 엔터프라이즈 트러블슈팅 에이전트 (EMNLP 2026 Industry Track, ~2026-09-19) | 엔터프라이즈·사내지식 (상태형 RAG, 고객 지원 트러블슈팅, 케이스 타임라인 추상화) | 01-엔터프라이즈-사내지식.md |
+| GL-2026-09-21-02 | arXiv:2609.21573 — Micro-Collaborative Poisoning: RAG 시스템 분산 오염 공격, 약한 신호 축적 메커니즘 (ESORICS 2026 Workshop, 2026-09-18) | 프로덕션 아키텍처 (RAG 보안·오염 공격·분산 적대적 신호) | 02-프로덕션-아키텍처.md |
+| GL-2026-09-21-03 | arXiv:2609.21600 — Beacon: 고등교육 도움 요청 격차 해소를 위한 강좌 특화 RAG (Bath Spa University, 2026-09-18) | 산업별·교육 (도움 요청 격차, 접근성 인프라, 강좌 한정 지식 기반) | 04-산업별-사례.md |
+
+- **검증 결과**: 3건 전원 5점 자가검증 통과; snippet-verified (2~5개 이상 독립 출처)
+  1. **arXiv:2609.20754 (RAFT)** [Mingxuan Zhang, Xiaowen Wang, Anupma Sharan, Zhengyi Chen, Chenyu Diana Zhang, Shanshan Yang, Chittibabu Pacharu]: 폐쇄 케이스를 방향 그래프(타임라인 엔트리 체인)로 추상화 후 엔트리 단위 임베딩·검색, 현 단계와 중간 상태가 일치하는 과거 케이스 표면화. 선택적 케이스 레벨 그래프로 커버리지 확장. Microsoft Learn + Apache Jira 실데이터 평가. EMNLP 2026 Industry Track 채택. → `01-엔터프라이즈-사내지식.md` HCRG 다음(## 이 도메인의 공통 패턴 앞)에 추가
+  2. **arXiv:2609.21573 (Micro-Collaborative Poisoning)** [Pedro Pereira, Eva Maia, Isabel Praça, GECAD, ISEP, Polytechnic of Porto]: 허위 주장을 여러 국소적으로 그럴듯한 문서에 분산 → 단일 패시지 탐지 회피. 108 RAG 구성(6차원) 실험. 약한 신호 누적이 공격의 실제 구동 메커니즘. ESORICS 2026 Workshop. → `02-프로덕션-아키텍처.md` TrioRAG 다음(## 한국 환경 특이점 앞)에 추가
+  3. **arXiv:2609.21600 (Beacon)** [Andy Gray, Jake Hobbs, Bath Spa University]: 강좌 승인 자료 한정 RAG로 심리적 도움 요청 장벽 제거. 프라이빗·즉각적·모듈 정렬 지원. 컴퓨팅 교육에서의 도움 요청 격차(help-seeking disparity) 완화. → `04-산업별-사례.md` PEARL 다음(### 특이 패턴 앞)에 추가
+
+- `sources.md`에 3개 출처 추가 (## 2026-09-21 섹션 신설, 파일 최상단)
+- **한국 사례**: 0건 (검색 범위 내 최근 7일 한국 기관/기업 신규 RAG 사례 미발견; 네이버·카카오·토스·SKT·KT·우아한형제들·LY Corp·삼성SDS·LG CNS·금융기관·의료기관·로앤컴퍼니 등 다수 쿼리 시도)
+- **검증 결과**: URL 200 OK: 0/3건(전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 0건 · 중복 폐기: 0건 · 발굴 시도 → 최종 채택: 약 12건 시도 → 3건 채택
+
 ## 2026-09-20 (일일 루프 #96)
 - **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 사례 미발견)
 
