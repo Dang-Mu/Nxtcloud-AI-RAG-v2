@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-09-22 일일 누적 추가 출처 (3건, 루프 #98)
+
+### 한국 — 공공·행정 (포티투마루 RAG42 정부 AI 확인제 인증, 2026-09-16)
+- [네이트뉴스 — 포티투마루, 정부 '인공지능 제품·서비스 확인제' 인증 획득](https://m.news.nate.com/view/20260916n33472) — 2026-09-16 · [korea][public-sector][rag][procurement][certification][rag42][llm42][42maru][ai-basic-law][mas][onpremise] · 포티투마루(42MARU). RAG42 v.1.3(PDF·워드·HWP·스캔 이미지 처리 RAG 솔루션)과 LLM42 v.1.1(온프레미스 도메인 특화 경량 LLM)이 인공지능 기본법 시행령 기반 정부 AI 제품·서비스 확인제를 동시 취득. 공공조달 MAS 완화·신인도 가점·납품실적 면제 혜택 부여. (snippet-verified: 네이트뉴스 20260916n33472 + 네이트뉴스 20260916n20034 + MSN news/AA2ckM4B + MSN news/AA2ck93K + venturesquare.net/1114112 + promppy.com/item/1711827 6개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처·보안 (분산 잠복 패시지 체인 RAG 포이즈닝 공격, ACM CCS 2026, 2026-09-15)
+- [arXiv:2609.16818 — InceptionRAG: Stealthy Poisoning Attack Against Retrieval-Augmented Generation](https://arxiv.org/abs/2609.16818) — 2026-09-15 · [security][poisoning][stealthy][dormant-passages][chain][context-window][single-document-bypass][acm-ccs2026][distributed-attack] · Jiachang Zhang, Min Chen, Xiao Ren, Zhenyong Zhang, Yuanchao Shu, Yunjun Gao, Zhikun Zhang. 악성 페이로드를 단독 검사 시 무해한 잠복 패시지(dormant passages)의 체인으로 분산해 패시지 단위 탐지 방어를 우회. 컨텍스트 윈도우에 체인 패시지가 함께 등장할 때 결합 추론으로 공격 완성. ACM CCS '26. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
+### 글로벌 — 에이전트·툴유즈 (과학 코드 이해 완전 로컬 RAG 에이전트, 오프라인 집약·온라인 경량 분리, 2026-09-10)
+- [arXiv:2609.12190 — Retrieval-Augmented Generation for Scientific Code Understanding](https://arxiv.org/abs/2609.12190) — 2026-09-10 · [agent][code][scientific][local][offline-ingestion][online-answering][ast-parsing][structural-graph][llm-explanation][ippl][cpp][small-model][privacy][onpremise] · Aaron Nobile, Andreas Adelmann, Mohsen Sadr. 오프라인 집약(AST 파싱·구조 그래프·LLM 엔티티 설명·임베딩)과 온라인 경량 답변(검색+소형 모델)을 완전 분리. IPPL C++ 코드베이스 100문항·11카테고리 벤치마크. 클라우드 API 없이 온프레미스 과학 코드 이해 에이전트 실용성 실증. (snippet-verified: arXiv abs + arXiv html + awesomepapers.io 3개 이상 독립 출처)
+
 ## 2026-09-21 일일 누적 추가 출처 (3건, 루프 #97)
 
 ### 글로벌 — 엔터프라이즈·사내지식 (상태형 RAG 트러블슈팅 에이전트, EMNLP 2026 Industry Track, ~2026-09-19)
