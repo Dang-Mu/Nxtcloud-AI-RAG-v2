@@ -899,6 +899,28 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **기관**: Computer Network Information Center, Chinese Academy of Sciences · University of Chinese Academy of Sciences · Hangzhou Institute for Advanced Study, UCAS · University of Technology Sydney · Western Sydney University
 - **출처**: [arXiv:2609.19601 — FootprintRAG: Visual Analytics for Evidence Context Refinement in RAG-based Scientific Literature Exploration](https://arxiv.org/abs/2609.19601) (2026-09-17, snippet-verified: arXiv abs + arXiv html + arxiv daily tracker 3개 독립 출처)
 
+### 과학 코드 이해를 위한 완전 로컬 RAG 에이전트 — 오프라인 집약·온라인 경량 아키텍처 분리 (arXiv:2609.12190, 2026-09-10)
+
+> **Retrieval-Augmented Generation for Scientific Code Understanding** (arXiv:2609.12190, 2026-09-10)
+
+연구 환경에서의 C++ 과학 코드베이스(IPPL)를 대상으로, **완전 로컬 소형 오픈소스 모델**만으로 유용한 코딩 에이전트를 구축할 수 있는지 탐구한 실용 연구. 핵심 전략은 비용·프라이버시 문제가 있는 LLM API 의존을 피하면서 추론 시점(온라인) 부담을 최소화하는 것.
+
+**아키텍처 핵심: 오프라인 집약 / 온라인 경량 분리**
+- **오프라인 집약 단계(비용 집중)**: AST 파싱 + 구조적 그래프 구축 + LLM 기반 엔티티 설명 생성 + 임베딩 인덱싱. 코드베이스가 안정적일 때 사전 처리.
+- **온라인 경량 단계(저비용)**: 질문 임베딩 → 인덱스 검색 → 소형 모델로 답변 생성. 추론 시점 LLM 호출 최소화.
+- 이 분리 덕분에 동일 코드베이스에 반복 질의하는 시나리오에서 비용·프라이버시 모두 개선.
+
+**평가**:
+- 100개 질문 × 11개 카테고리 벤치마크 (IPPL C++ 코드베이스 기반)
+- 독립 프론티어 모델이 정답 채점(judge 방식)
+- 도메인 특화 소형 모델도 RAG 인프라가 충분할 때 실용 수준 달성 가능성 실증
+
+**의의**: "비용·데이터 프라이버시 제약 환경에서 소형 로컬 모델 + 오프라인 RAG 파이프라인"이 과학 컴퓨팅 코드 이해에 실용적임을 실증. 클라우드 API 없이 온프레미스로 운영해야 하는 과학·연구 기관의 코드 지식 관리 RAG 에이전트 레퍼런스.
+
+- **저자**: Aaron Nobile, Andreas Adelmann, Mohsen Sadr
+- **제출일**: 2026-09-10
+- **출처**: [arXiv:2609.12190 — Retrieval-Augmented Generation for Scientific Code Understanding](https://arxiv.org/abs/2609.12190) (2026-09-10, snippet-verified: arXiv abs + arXiv html + awesomepapers.io/federated-learning/papers/2609.12190 3개 이상 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.
