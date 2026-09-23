@@ -921,6 +921,28 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **제출일**: 2026-09-10
 - **출처**: [arXiv:2609.12190 — Retrieval-Augmented Generation for Scientific Code Understanding](https://arxiv.org/abs/2609.12190) (2026-09-10, snippet-verified: arXiv abs + arXiv html + awesomepapers.io/federated-learning/papers/2609.12190 3개 이상 독립 출처)
 
+### 정적 vs 에이전틱 RAG 제어 비교 — 대만 역사 문서 QA에서 질문 레벨 선택기로 오라클 헤드룸 60.34% 회수 (arXiv:2609.23056, 2026-09-19)
+
+> **Bridging Static and Agentic RAG for Taiwanese Historical Question Answering** (arXiv:2609.23056, 2026-09-19)
+
+"에이전틱 RAG가 정적 RAG보다 일관되게 더 나은가?"라는 질문에 대해, **동일한 생성기와 하이브리드 검색 백엔드를 공유**하면서 정적(Static) 파이프라인과 에이전틱(Agentic) 파이프라인만을 교체 비교한 제어 실험을 보고한다. 대만 역사 문헌 자료 기반 역사적 사실 QA 도메인 적용.
+
+**핵심 발견:**
+- 전체 집계 성능은 두 파이프라인이 유사하지만, **70.83%의 질문에서 두 방법이 서로 다른 답을 냄** (일치율 29.17%에 불과).
+- 강점과 약점이 서로 다른 질문 집합에서 나타나 **평균 집계 점수가 실제 차이를 숨기는 효과** 발생.
+- 오라클(질문별 최선 응답 선택)은 어느 단일 파이프라인보다 합성 점수 **0.2417 향상** — 질문 레벨 선택에 상당한 잠재력 존재.
+
+**실용 기여 — 사후 선택기(Post-hoc Selector):**
+- 두 파이프라인의 응답과 인용 증거를 비교하는 경량 **사후 선택기** 도입.
+- 단일 파이프라인 대비 유의미하게 높은 성능 달성.
+- 오라클 헤드룸의 **60.34% 회수** — 에이전틱 전환 없이 기존 두 파이프라인을 앙상블로 활용하는 저비용 개선 경로 제시.
+
+**의의**: "에이전틱 RAG vs 정적 RAG"를 단순 집계 점수로 비교하면 두 방법의 실질적 차이를 놓친다. 질문 레벨에서 파이프라인을 전환하는 사후 선택 전략이 비용 대비 효율적인 성능 향상 경로임을 실증. 역사 문서·법령·고문서 등 도메인 특화 RAG에서 에이전틱/정적 파이프라인 혼합 운영의 이론적 근거를 제공.
+
+- **저자**: Kai-Hsin Chen, Wei-Yu Chen, Xuanjun Chen, Jyh-Shing Roger Jang
+- **제출일**: 2026-09-19
+- **출처**: [arXiv:2609.23056 — Bridging Static and Agentic RAG for Taiwanese Historical Question Answering](https://arxiv.org/abs/2609.23056) (2026-09-19, snippet-verified: arXiv abs + arXiv html + DailyArXiv #417 3개 이상 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.

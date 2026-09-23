@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-09-23 (일일 루프 #99)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 사례 미발견)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-09-23-01 | arXiv:2609.24122 — Re:CAP: 프로덕션 RAG 파이프라인 검색 커버리지 감사 루프 (JPMorgan Chase ML CoE, EMNLP 2026 Findings, 2026-09-21) | 프로덕션 아키텍처 (검색 커버리지 감사, 레이블-프리, BM25 대비 9~48% 누락 문서 회수) | 02-프로덕션-아키텍처.md |
+| GL-2026-09-23-02 | arXiv:2609.23056 — Bridging Static and Agentic RAG: 대만 역사 문서 QA에서 사후 선택기로 오라클 헤드룸 60.34% 회수 (2026-09-19) | 에이전트·툴유즈 (정적 vs 에이전틱 RAG 제어 비교, 질문 레벨 선택, 사후 선택기) | 03-에이전트-툴유즈-MCP.md |
+| GL-2026-09-23-03 | arXiv:2609.23769 — PRISM-RAG: 담배 제품 감시·관할권별 법규 준수를 위한 멀티모달 하이퍼그래프 RAG (NicoPRISM, 2026-09-20) | 산업별·공공행정 (공중보건, 법규 준수, 멀티모달+법령 결합 RAG) | 04-산업별-사례.md |
+
+- **검증 결과**: 3건 전원 5점 자가검증 통과; snippet-verified (3~5개 이상 독립 출처)
+  1. **arXiv:2609.24122 (Re:CAP)** [Aviral Joshi, Hanoz Bhathena, Max Nelson, Saket Sharma; JPMorgan Chase ML CoE; EMNLP 2026 Findings]: 프로덕션 RAG 파이프라인의 검색 커버리지를 레이블 없이 감사하는 반복 탐침 루프. BM25 top-500 미도달 금 레이블 9~29% 추가 회수(TREC-COVID 48%). → `02-프로덕션-아키텍처.md` InceptionRAG 다음(## 한국 환경 특이점 앞)에 추가
+  2. **arXiv:2609.23056 (Static vs Agentic RAG)** [Kai-Hsin Chen, Wei-Yu Chen, Xuanjun Chen, Jyh-Shing Roger Jang]: 동일 생성기·하이브리드 검색 백엔드를 공유하는 정적/에이전틱 파이프라인의 제어 비교. 70.83% 불일치 발견. 사후 선택기로 오라클 헤드룸 60.34% 회수. → `03-에이전트-툴유즈-MCP.md` Scientific Code RAG 다음(## 이 도메인의 공통 패턴 앞)에 추가
+  3. **arXiv:2609.23769 (PRISM-RAG)** [Manuel Serna-Aguilera, Raegan Anderes, Page Dobbs, Khoa Luu]: NicoPRISM(161,563 이미지 + 13개 관할권 법령 + 1,495 QA) 공개. 이미지→개념 하이퍼에지→관할권 법령 연결 하이퍼그래프 RAG. 인덱스 시점 LLM 호출 없음. → `04-산업별-사례.md` RAGAL 다음(## 4개 산업 공통 패턴 앞)에 추가
+
+- `sources.md`에 3개 출처 추가 (## 2026-09-23 섹션 신설, 파일 최상단)
+- **한국 사례**: 0건 (검색 범위 내 최근 7일 한국 기관/기업 신규 RAG 사례 미발견; 네이버·카카오·토스·SKT·KT·우아한형제들·LY Corp·삼성SDS·LG CNS·금융권·의료기관·로앤컴퍼니 등 다수 쿼리 시도; if(kakao)26 컨퍼런스는 10월 13-14일 예정으로 아직 미개최)
+- **검증 결과**: URL 200 OK: 0/3건(전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 0건 · 중복 폐기: 0건 · 발굴 시도 → 최종 채택: 약 10건 시도 → 3건 채택
+
 ## 2026-09-22 (일일 루프 #98)
 - **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 1건 — 포티투마루 RAG42 정부 확인제 인증)
 
