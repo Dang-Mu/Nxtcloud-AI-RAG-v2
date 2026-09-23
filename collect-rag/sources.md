@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-09-23 일일 누적 추가 출처 (3건, 루프 #99)
+
+### 글로벌 — 프로덕션 아키텍처 (프로덕션 RAG 검색 커버리지 감사, JPMorgan Chase, EMNLP 2026 Findings, 2026-09-21)
+- [arXiv:2609.24122 — Re:CAP: Auditing Retrieval Coverage in Production RAG Pipelines](https://arxiv.org/abs/2609.24122) — 2026-09-21 · [architecture][production][retrieval-coverage][audit][reference-free][iterative-probing][llm-as-judge][bm25][emnlp2026-findings][jpmorgan][ml-coe] · Aviral Joshi, Hanoz Bhathena, Max Nelson, Saket Sharma (Machine Learning Center of Excellence, JPMorgan Chase). 배포된 RAG 파이프라인의 검색 커버리지를 레이블 없이 사후 감사하는 반복 탐침 루프(Re:CAP). BM25 top-500 미도달 금 레이블 9~29% 추가 회수, TREC-COVID 최대 48%. (snippet-verified: arXiv abs + arXiv html + DailyArXiv #417 + EMNLP 2026 Findings 채택 확인 4개 이상 독립 출처)
+
+### 글로벌 — 에이전트·툴유즈 (정적 vs 에이전틱 RAG 제어 비교, 대만 역사 QA, 사후 선택기, 2026-09-19)
+- [arXiv:2609.23056 — Bridging Static and Agentic RAG for Taiwanese Historical Question Answering](https://arxiv.org/abs/2609.23056) — 2026-09-19 · [agent][agentic-rag][static-rag][controlled-comparison][post-hoc-selector][oracle-headroom][historical-qa][taiwanese][hybrid-retrieval][question-level-selection] · Kai-Hsin Chen, Wei-Yu Chen, Xuanjun Chen, Jyh-Shing Roger Jang. 동일 생성기·하이브리드 검색 공유 조건에서 정적/에이전틱 파이프라인 제어 비교. 70.83% 질문에서 두 방법 불일치. 사후 선택기로 오라클 헤드룸 60.34% 회수. (snippet-verified: arXiv abs + arXiv html + DailyArXiv #417 3개 이상 독립 출처)
+
+### 글로벌 — 산업별·공공행정 (담배 제품 감시·관할권별 법규 준수, 멀티모달 하이퍼그래프 RAG, NicoPRISM, 2026-09-20)
+- [arXiv:2609.23769 — PRISM-RAG: Multimodal Hypergraph Retrieval-Augmented Generation for Tobacco Product and Legislative Policy Reasoning](https://arxiv.org/abs/2609.23769) — 2026-09-20 · [public-health][legal][multimodal][hypergraph][rag][tobacco][nicotine][policy-compliance][jurisdiction-aware][NicoPRISM][image-conditioned][index-time-no-llm][open-source] · Manuel Serna-Aguilera, Raegan Anderes, Page Dobbs, Khoa Luu. NicoPRISM 데이터셋(161,563 이미지 + 13개 관할권 법령 + 1,495 전문가 QA). 이미지→개념 하이퍼에지→관할권 법령 연결 멀티모달 하이퍼그래프 RAG. 인덱스 시점 LLM 호출 없음. (snippet-verified: arXiv abs + arXiv html + DailyArXiv #417 + #566 + #376 5개 이상 독립 출처)
+
 ## 2026-09-22 일일 누적 추가 출처 (3건, 루프 #98)
 
 ### 한국 — 공공·행정 (포티투마루 RAG42 정부 AI 확인제 인증, 2026-09-16)
