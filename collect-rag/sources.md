@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-09-24 일일 누적 추가 출처 (3건, 루프 #100)
+
+### 글로벌 — 엔터프라이즈·사내지식 (이종 엔터프라이즈 RAG 인용 이탈·비지원 콘텐츠 제거, EMNLP 2026 Industry Track, 2026-09-18)
+- [arXiv:2609.22537 — EvidenT: Building Trustworthy Enterprise Assistants through Evidence Groundedness and Traceability](https://arxiv.org/abs/2609.22537) — 2026-09-18 · [enterprise][rag][evidence-groundedness][traceability][citation-drift][unsupported-content][source-span][deterministic-lexical-alignment][drop-in][no-retraining][emnlp2026-industry] · (저자 미확인). 이종 엔터프라이즈 문서 RAG에서 인용 이탈·비지원 콘텐츠·약한 출처 추적성을 재학습 없이 제거하는 경량 파이프라인. 구조화 패시지 추출 + 결정론적 어휘 정렬으로 생성 전 증거 검증. 약 500개 실사용 쿼리에서 gold-source hit rate +29%, 비검색 URL 인용 0건. EMNLP 2026 Industry Track 채택. (snippet-verified: arXiv abs + arXiv html + cs.AI pastweek listing 3개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처·보안 (검색 인식 블랙박스 RAG 출처-특정 반박 오염 공격, Southern Illinois University, 2026-09-21)
+- [arXiv:2609.25469 — RAG-NAROK: Retrieval-Aware Knowledge Corpus Poisoning in RAG with Source-specific Refutation](https://arxiv.org/abs/2609.25469) — 2026-09-21 · [security][poisoning][retrieval-aware][black-box][source-specific-refutation][anchor-specific][shadow-rag][reconnaissance][authority-bias][recency-bias][titans-lab][southern-illinois] · Abdullahil Kafi, Alvi Ataur Khalil (TITANS Lab, Southern Illinois University). 피해자 RAG 파이프라인 투명성을 역이용해 검색 동역학을 먼저 파악(정찰+Shadow RAG 루프)한 뒤, 합법적 출처를 명시적으로 평가절하하는 Anchor-Specific Refutation 문서를 동적으로 생성하는 검색 인식 블랙박스 공격. 법률(CFR-21)·기술(Cybersec-IT)·금융(Feds-2026) 3개 도메인 평가. 정적 탐지 방어만으로 불충분함을 실증. (snippet-verified: arXiv abs + arXiv html + jyyang621/DailyArXiv issue #418 3개 이상 독립 출처)
+
+### 글로벌 — 산업별·과학·연구 (입자가속기 제어 시스템 이질적 운영 데이터 RAG, HZDR, 2026-09)
+- [arXiv:2609.27579 — Integration of Retrieval-Augmented Generation for Knowledge Access in the ELBE Accelerator Control System](https://arxiv.org/abs/2609.27579) — 2026-09 · [science][accelerator][control-system][operational-rag][logbook][time-series][domain-adapted-embedding][operator-oriented][hzdr][helmholtz][elbe][traceable-references] · N. Mirian (Helmholtz-Zentrum Dresden-Rossendorf, HZDR, 독일). 전자 선형 가속기 ELBE 제어 시스템에서 전자 로그북·기계 아카이브 시계열 데이터·서브시스템 매뉴얼을 단일 RAG 프레임워크로 통합 인덱싱. 도메인 적응 임베딩 + 오퍼레이터 지향 구조화 응답 + 추적 가능한 출처 참조. 대규모 실험 물리 시설의 이질적 운영 데이터 자연어 통합 접근 사례. (snippet-verified: arXiv abs + arXiv html + HZDR 공식 홈페이지 3개 이상 독립 출처)
+
 ## 2026-09-23 일일 누적 추가 출처 (3건, 루프 #99)
 
 ### 글로벌 — 프로덕션 아키텍처 (프로덕션 RAG 검색 커버리지 감사, JPMorgan Chase, EMNLP 2026 Findings, 2026-09-21)
