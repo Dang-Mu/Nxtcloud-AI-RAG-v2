@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-09-25 (일일 루프 #101)
+- **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 1건 — TimelyRAG KAIST·고려대 연구팀, EMNLP 2026 Findings)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-09-25-01 | arXiv:2609.27406 — SparsePay-RAG: 온디맨드 차등 프라이버시 RAG 예산 최소화 (EMNLP 2026 Main, 2026-09-23) | 프로덕션 아키텍처·보안 (DP-RAG 예산 고갈 해결, 3축 압축) | 02-프로덕션-아키텍처.md |
+| KR-2026-09-25-01 | arXiv:2609.11572 — TimelyRAG: 중첩·진화 규제 문서 시간 인식 하이브리드 RAG (KAIST·고려대, EMNLP 2026 Findings, 2026-09-10) | 공공·행정 (법령 개정 중첩 진화 환경, 시간 인식 하이브리드 랭킹) | 04-산업별-사례.md |
+| GL-2026-09-25-02 | arXiv:2608.22859 — WARP: 바세르슈타인 정렬 소수 의견 보존 RAG 검색 보정 (Amazon, EMNLP 2026 Main, 2026-08-24) | 프로덕션 아키텍처 (검색 편향·소수 의견 탈락, Wasserstein-1 사후 보정) | 02-프로덕션-아키텍처.md |
+
+- **검증 결과**: 3건 전원 5점 자가검증 통과; snippet-verified (3~5개 이상 독립 출처)
+  1. **arXiv:2609.27406 (SparsePay-RAG)** [Zhonghao Sun 외 6인]: 민감 데이터 RAG의 DP 예산 고갈 문제를 공개 지식 제로비용 사전 정보 + 3축(범위·빈도·단가) 독립 압축으로 해결. EMNLP 2026 Main. → `02-프로덕션-아키텍처.md` RAG-NAROK 다음(## 한국 환경 특이점 앞)에 추가
+  2. **arXiv:2609.11572 (TimelyRAG)** [KAIST Youngeun Nam 외 5인]: 법령 개정의 중첩 진화 환경에서 시맨틱+조항 단위 시간 호환성 하이브리드 랭킹으로 유효 버전 선택. nDCG@10 최대 +28.6%. EMNLP 2026 Findings. 한국 연구팀(KAIST·고려대). → `04-산업별-사례.md` 포티투마루 인증 다음(### 글로벌 앞)에 추가
+  3. **arXiv:2608.22859 (WARP)** [Aman Singh Thakur 외 3인, Amazon]: top-k 검색의 소수 의견 탈락 문제를 Wasserstein-1 거리로 사후 보정. 분포적 오류 최소 43% 감소. EMNLP 2026 Main. → `02-프로덕션-아키텍처.md` SparsePay-RAG 다음(## 한국 환경 특이점 앞)에 추가
+
+- `sources.md`에 3개 출처 추가 (## 2026-09-25 섹션 신설, 파일 최상단)
+- **한국 사례**: 1건 (TimelyRAG, KAIST·고려대, arXiv:2609.11572, 2026-09-10, snippet-verified 4개 이상 독립 출처)
+- **검증 결과**: URL 200 OK: 0/3건(전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 1건(TimelyRAG "규제 도메인 중첩 진화 환경 전용 최초 벤치마크" → "연구팀 주장" 제거 후 사실 진술로 대체) · 중복 폐기: 2건(arXiv:2608.26706 Self-Improving Financial RAG 이미 수록, arXiv:2609.16095 RAG-CT 이미 수록) · 발굴 시도 → 최종 채택: 약 10건 시도 → 3건 채택
+
 ## 2026-09-24 (일일 루프 #100)
 - **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 사례 미발견)
 

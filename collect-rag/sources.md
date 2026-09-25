@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-09-25 일일 누적 추가 출처 (3건, 루프 #101)
+
+### 글로벌 — 프로덕션 아키텍처·보안·프라이버시 (온디맨드 차등 프라이버시 RAG, EMNLP 2026 Main, 2026-09-23)
+- [arXiv:2609.27406 — Only Pay What You Must Spend: On-Demand Privacy Budget Payment for Differentially Private RAG](https://arxiv.org/abs/2609.27406) — 2026-09-23 · [security][privacy][differential-privacy][dp-rag][sparsepay][on-demand][budget][isotonic-regression][contrastive-decoding][emnlp2026-main][medical][finance][legal][regulated-industry] · Zhonghao Sun, Zhiliang Tian, Xinyue Fang, Shuo Song, Juhua Zhang, Yiping Song, Dongsheng Li. 공개 정보를 제로 비용 사전 정보로 삼아 사설 증분에만 DP 예산 과금. 3축(범위·빈도·단가) 독립 압축으로 강한 DP 제약 하에서도 기준선 대비 성능 우위. (snippet-verified: arXiv abs + arXiv abs v1 + arXiv html 3개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (바세르슈타인 정렬 소수 의견 보존 RAG 검색 보정, Amazon, EMNLP 2026 Main, 2026-08-24)
+- [arXiv:2608.22859 — WARP: Wasserstein-Aligned RAG for Population Opinions](https://arxiv.org/abs/2608.22859) — 2026-08-24 · [architecture][retrieval-calibration][wasserstein][opinion-diversity][minority-opinion][post-retrieval][distribution][emnlp2026-main][amazon][review-summarization][opinion-mining][sentiment] · Aman Singh Thakur, Aditya Agrawal, Alwarappan Nakkiran, Alex Karlsson (Amazon). top-k 검색의 소수 의견 탈락 문제를 Wasserstein-1 거리로 사후 보정. 분포적 오류 최소 43% 감소. 검색기·생성기 수정 없는 드롭인. (snippet-verified: arXiv abs + arXiv html + arXiv pdf + pith.science + jyyang621/DailyArXiv #419 5개 이상 독립 출처)
+
+### 한국 — 공공·행정 (중첩·진화 규제 문서 시간 인식 하이브리드 RAG, KAIST·고려대, EMNLP 2026 Findings, 2026-09-10)
+- [arXiv:2609.11572 — TimelyRAG: Semantic-Temporal Hybrid Retrieval for Time-Critical Question Answering in Overlapping-Evolving Documents](https://arxiv.org/abs/2609.11572) — 2026-09-10 · [korea][kaist][korea-university][regulation][legal][overlapping-evolving][temporal-rag][hybrid-retrieval][clause-level][timely-qabench][emnlp2026-findings][law-amendment] · Youngeun Nam, Joeun Kim, Hwanjun Song, Jae-Gil Lee (KAIST), Susik Yoon (고려대), Byung Suk Lee (Univ. of Vermont). 법령 개정 중첩 진화 환경에서 시맨틱+조항 단위 시간 호환성 하이브리드 랭킹으로 유효 버전 선택. nDCG@10 최대 +28.6%. (snippet-verified: arXiv abs + arXiv html + pith.science + tangwen-qian/DailyArXiv #606 4개 이상 독립 출처)
+
 ## 2026-09-24 일일 누적 추가 출처 (3건, 루프 #100)
 
 ### 글로벌 — 엔터프라이즈·사내지식 (이종 엔터프라이즈 RAG 인용 이탈·비지원 콘텐츠 제거, EMNLP 2026 Industry Track, 2026-09-18)
