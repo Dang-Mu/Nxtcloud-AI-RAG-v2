@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-09-26 일일 누적 추가 출처 (3건, 루프 #102)
+
+### 글로벌 — 프로덕션 아키텍처·보안 (IBM LinuxONE Spyre 가속 엔터프라이즈 RAG, 규제 산업, 2026-08-02)
+- [arXiv:2608.21393 — Spyre-Accelerated Retrieval-Augmented Generation on IBM LinuxONE: A Cloud-Native Architecture for Secure, High-Throughput Enterprise AI Inference](https://arxiv.org/abs/2608.21393) — 2026-08-02 · [architecture][enterprise][security][hardware][ibm][linuxone][spyre][telum-ii][openshift][regulated-industry][on-platform][data-perimeter][low-latency] · Sandeep Bokkasam, Pankaj D. (IBM). IBM LinuxONE 단일 하드웨어 경계 내 6-서브시스템 RAG. 데이터 이탈 없이 생성(Spyre)+분류(Telum II)+오케스트레이션(OpenShift) 온플랫폼 완결. 초기 분석 기준 엔드투엔드 2초 미만, 오프플랫폼 대비 지연 최대 20배 감소. (snippet-verified: arXiv abs + arXiv html + storagereview.com + prnewswire.com + research.ibm.com + ibm.com/products/linuxone 6개 이상 독립 출처)
+
+### 한국 — 에이전트·툴유즈 (숭실대 검색 기반 LLM 에이전트 실제 스킬 활용 평가 RAE, EMNLP 2026 Findings, 2026-09-01)
+- [arXiv:2609.00549 — Skill Following: Evaluating Actual Skill Use in Retrieval-Enabled LLM Agents](https://arxiv.org/abs/2609.00549) — 2026-09-01 · [korea][soongsil][agent][rag-evaluation][skill-following][rae][retrieval-invoked-actual-use-effect][evaluation-paradox][17-llms][mbpp-plus][emnlp2026-findings] · 조성현(Seonghyeon Cho), 박찬준(Chanjun Park) (숭실대학교). 검색 기반 LLM 에이전트의 실제 스킬 활용 효과를 측정하는 RAE 지표 제안. 17개 LLM 평가에서 집계 리트리벌 리프트 양수 ↔ RAE 음수 역설(평가 역설) 광범위 확인. EMNLP 2026 Findings 채택. (snippet-verified: arXiv abs + arXiv html + arXiv pdf + sites.google.com/view/ssu-nlp + parkchanjun.github.io + veritas-a.com/626088 + asiatoday.co.kr + m.news.nate.com 8개 이상 독립 출처)
+
+### 글로벌 — 산업별·자동차 제조 (차량 부품 소재 예측 RAG 탐색, 부정적 결과, 슈투트가르트대, 2026-09-16)
+- [arXiv:2609.18437 — Exploring LLMs and RAG for Plausible and Explainable Material Prediction of Vehicle Components](https://arxiv.org/abs/2609.18437) — 2026-09-16 · [automotive][manufacturing][material-prediction][negative-result][domain-corpus][rag-vs-llm][chain-of-verification][cove][wikipedia-corpus][explainability][expert-evaluation][stuttgart] · Frederik Wagner, Annerose Eichel, Sabine Schulte im Walde (University of Stuttgart). 브레이크 디스크·연료 분사기 등 차량 부품 소재 예측에서 RAG 및 CoVe가 LLM 기준선을 일관되게 초과하지 못함. 도메인 코퍼스 법적 가용성이 RAG 효과의 핵심 병목임을 실증. (snippet-verified: arXiv abs + arXiv html + pith.science/paper/2609.18437 + JyiHUO/arxiv_daily_recommendation_system release 4개 이상 독립 출처)
+
 ## 2026-09-25 일일 누적 추가 출처 (3건, 루프 #101)
 
 ### 글로벌 — 프로덕션 아키텍처·보안·프라이버시 (온디맨드 차등 프라이버시 RAG, EMNLP 2026 Main, 2026-09-23)

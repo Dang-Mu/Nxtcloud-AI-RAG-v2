@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-09-26 (일일 루프 #102)
+- **신규 사례 3건** (WebFetch arxiv.org 차단 환경, snippet-verified 전건; 한국 사례: 1건 — 숭실대 조성현·박찬준, EMNLP 2026 Findings)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-09-26-01 | arXiv:2608.21393 — Spyre-Accelerated RAG on IBM LinuxONE: 규제 산업 대상 보안 하드웨어 일체형 엔터프라이즈 RAG (IBM, 2026-08-02) | 프로덕션 아키텍처 (LinuxONE 단일 경계 RAG, Spyre 가속기, 2초 미만 지연) | 02-프로덕션-아키텍처.md |
+| KR-2026-09-26-01 | arXiv:2609.00549 — Skill Following: 검색 기반 LLM 에이전트 실제 스킬 활용 평가 지표 RAE 제안 (숭실대, EMNLP 2026 Findings, 2026-09-01) | 에이전트·툴유즈 (RAE 측정, 집계 리트리벌 리프트 ≠ 실제 스킬 활용 효과) | 03-에이전트-툴유즈-MCP.md |
+| GL-2026-09-26-02 | arXiv:2609.18437 — LLMs and RAG for Vehicle Component Material Prediction: RAG 혜택 제한적, 도메인 코퍼스 가용성이 병목 (슈투트가르트대, 2026-09-16) | 산업별·자동차 제조 (소재 예측 부정적 결과, 도메인 코퍼스 부재가 핵심 병목) | 04-산업별-사례.md |
+
+- **검증 결과**: 3건 전원 5점 자가검증 통과; snippet-verified (4~8개 이상 독립 출처)
+  1. **arXiv:2608.21393 (Spyre-Accelerated RAG on IBM LinuxONE)** [Sandeep Bokkasam, Pankaj D., IBM]: IBM LinuxONE 단일 하드웨어 경계 내 6-서브시스템 RAG. Spyre AI 가속기(생성)+Telum II(분류)+OpenShift(오케스트레이션). 초기 분석 기준 엔드투엔드 2초 미만, 오프플랫폼 대비 지연 최대 20배 감소. 규제 산업용 데이터 이탈 없는 온플랫폼 RAG 참조 아키텍처. → `02-프로덕션-아키텍처.md` WARP 다음(## 한국 환경 특이점 앞)에 추가
+  2. **arXiv:2609.00549 (Skill Following)** [조성현·박찬준, 숭실대학교 NLP 연구실]: RAE(검색 발생 태스크 단위 실제 스킬 활용 효과) 지표 제안. 17개 LLM 평가에서 집계 리트리벌 리프트 양수 ↔ RAE 음수 역설 광범위 확인. EMNLP 2026 Findings 채택. 한국(숭실대) 학부생 제1저자 연구. → `03-에이전트-툴유즈-MCP.md` Bridging Static and Agentic RAG 다음(## 이 도메인의 공통 패턴 앞)에 추가
+  3. **arXiv:2609.18437 (Vehicle Component Material Prediction)** [Frederik Wagner 외 2인, 슈투트가르트대]: 차량 부품 소재 예측에서 RAG/CoVe가 LLM 기준선 초과 못함. 법적 접근 가능 도메인 코퍼스 부재가 핵심 병목. 제조·소재 도메인 RAG 설계 시 코퍼스 전략 우선 원칙. → `04-산업별-사례.md` SciRet 다음(## 실패·논란 사례 앞)에 추가
+
+- `sources.md`에 3개 출처 추가 (## 2026-09-26 섹션 신설, 파일 최상단)
+- **한국 사례**: 1건 (Skill Following, 숭실대, arXiv:2609.00549, 2026-09-01, EMNLP 2026 Findings, snippet-verified 8개 이상 독립 출처)
+- **검증 결과**: URL 200 OK: 0/3건(arxiv.org 전면 WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 1건(IBM Spyre "20배 감소" → "초기 분석 기준" 명시) · 중복 폐기: 다수(W-RAG·LabourCrew·VDGR-RAG 등 이미 수록 확인) · 발굴 시도 → 최종 채택: 약 12건 시도 → 3건 채택
+
 ## 2026-09-25 (일일 루프 #101)
 - **신규 사례 3건** (WebFetch 전면 차단 환경, snippet-verified 전건; 한국 사례: 1건 — TimelyRAG KAIST·고려대 연구팀, EMNLP 2026 Findings)
 
