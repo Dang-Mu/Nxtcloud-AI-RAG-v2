@@ -943,6 +943,31 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **제출일**: 2026-09-19
 - **출처**: [arXiv:2609.23056 — Bridging Static and Agentic RAG for Taiwanese Historical Question Answering](https://arxiv.org/abs/2609.23056) (2026-09-19, snippet-verified: arXiv abs + arXiv html + DailyArXiv #417 3개 이상 독립 출처)
 
+### Skill Following — 검색 기반 LLM 에이전트의 실제 스킬 활용 평가 지표 RAE 제안 (arXiv:2609.00549, EMNLP 2026 Findings, 숭실대) [한국 사례]
+
+> **Skill Following: Evaluating Actual Skill Use in Retrieval-Enabled LLM Agents** (arXiv:2609.00549, EMNLP 2026 Findings)
+
+숭실대학교 NLP 연구실 조성현·박찬준이 제1저자로 참여해 EMNLP 2026 Findings에 채택된 논문. 검색 기반 LLM 에이전트(Retrieval-Enabled LLM Agent)가 외부 스킬(도구·API·플러그인)을 **실제로 활용하는지** 측정하는 새로운 평가 지표 **Skill Following(SF)** 및 **Retrieval-Invoked Actual-Use Effect(RAE)**를 제안한다.
+
+**핵심 문제 — 평가 역설(Evaluation Paradox):**
+기존 집계 지표로는 "에이전트가 스킬을 검색했을 때 그 스킬이 실제로 도움이 됐는지"를 알 수 없다. 에이전트가 스킬을 성공적으로 검색해 사용했지만 오히려 성능이 떨어지는 역설적 상황이 집계 점수에 묻혀버린다.
+
+**RAE (Retrieval-Invoked Actual-Use Effect) 측정 방법:**
+- 에이전트가 스킬을 실제로 검색한 태스크만 선별.
+- 동일 태스크에서 **스킬 활성화 실행 vs. 스킬 비활성화 실행**의 결과 차이를 직접 비교.
+- 집계 리트리벌 리프트가 아닌, 검색 발생 태스크 단위의 인과 효과를 정량화.
+
+**17개 LLM 평가 결과 (코딩·수학 도메인):**
+- MBPP+ 등 다중 벤치마크에서 **집계 점수로는 리트리벌이 도움되는 것처럼 보이는 모델들이 RAE는 음수**인 경우 다수 확인.
+- 즉, 에이전트가 스킬을 검색해 활용한 바로 그 태스크에서 오히려 성능이 하락하는 역설이 광범위하게 존재.
+- **리트리벌 리프트 ≠ 실제 스킬 활용 효과**를 실증.
+
+**의의**: 에이전틱 RAG 평가에서 단순 집계 점수로 "RAG가 도움됐다"고 판단하는 관행에 근본적 문제를 제기. SF/RAE 지표는 RAG 에이전트의 스킬 활용 효과를 인과적으로 분리해 측정함으로써, 실제 도움이 되는 스킬 검색인지 평가할 수 있는 체계를 제공. 한국 학부생 연구의 국제 주요 학술대회 채택 사례.
+
+- **저자**: 조성현(Seonghyeon Cho), 박찬준(Chanjun Park) (숭실대학교 소프트웨어학부 NLP 연구실)
+- **제출일**: 2026-09-01
+- **출처**: [arXiv:2609.00549 — Skill Following: Evaluating Actual Skill Use in Retrieval-Enabled LLM Agents](https://arxiv.org/abs/2609.00549) (2026-09-01, EMNLP 2026 Findings, snippet-verified: arXiv abs + arXiv html + arXiv pdf + sites.google.com/view/ssu-nlp + parkchanjun.github.io + veritas-a.com/626088 + asiatoday.co.kr + m.news.nate.com 8개 이상 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.
