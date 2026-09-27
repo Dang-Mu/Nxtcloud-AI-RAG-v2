@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-09-27 (일일 루프 #103)
+- **신규 사례 3건** (WebFetch arxiv.org 차단 환경, snippet-verified 전건; 한국 사례: 1건 — 포티투마루 'LLM 기반 데이터 표현 생성' 원천특허)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| KR-2026-09-27-01 | 포티투마루(42MARU) — 'LLM 기반 데이터 표현 생성' 원천특허 국내 등록·미국 출원 (2026-09-21) [한국 사례] | 산업별·AI 스타트업 (비정형 문서→정형 표·차트 생성, 실데이터 교차검증 환각 억제, 원천특허 IP) | 04-산업별-사례.md |
+| GL-2026-09-27-01 | arXiv:2609.29282 — ADR(Asymmetric Dynamic Routing): 하이퍼그래프 RAG 쿼리 복잡도 적응 비대칭 동적 라우팅 (2026-09-24) | 프로덕션 아키텍처 (하이퍼그래프 RAG, 정적 검색 오류 해결, 토큰 48.7%·지연 45.3% 절감) | 02-프로덕션-아키텍처.md |
+| GL-2026-09-27-02 | arXiv:2609.23053 — Attributable Post-Rationalization: RAG 인용 사후합리화 만연성·RLVR 무효과 실증 (2026-09-19) | 엔터프라이즈·사내지식 (인용 불충실 ≈14%, RLVR 훈련 무효과) | 01-엔터프라이즈-사내지식.md |
+
+- **검증 결과**: 3건 전원 5점 자가검증 통과; snippet-verified (6~8개 이상 독립 출처)
+  1. **포티투마루 특허 (ZDNet Korea 2026-09-21)** [포티투마루(42MARU)]: LLM이 비정형 기업 문서 검색·파싱(RAG) 후 표·차트로 구조화 출력. 생성 답변 수치를 실제 원본 기업 데이터와 교차 검증하여 환각 억제. 특허명: '대형 언어 모델 기반의 데이터 표현 생성 방법 및 시스템'. 국내 등록 결정 완료, 미국 출원 마무리. 누적 특허 122건. → `04-산업별-사례.md` 포티투마루 인증 항목 다음(TimelyRAG 앞)에 추가
+  2. **arXiv:2609.29282 (ADR)** [Qi Sun, Yijia Zhang 외 4인]: 하이퍼그래프 RAG에서 "정적 검색 오류(static retrieval fallacy)" 해결을 위한 비대칭 동적 라우팅. 3 비대칭 위상 탐색 연산자(localized fact anchoring / bottom-up adjacency diffusion / top-down insight grounding). 단일 분류기 호출로 쿼리별 탐색 깊이·방향 조정. 토큰 소비 최대 48.7% 절감, 지연 최대 45.3% 단축. → `02-프로덕션-아키텍처.md` Spyre-Accelerated RAG 다음(## 한국 환경 특이점 앞)에 추가
+  3. **arXiv:2609.23053 (Post-Rationalization)** [Mehedi Khan, Md. Shariful Islam Bhuyan, BUET]: 위키피디아 기반 QA에서 약 7건 중 1건(≈14%)의 인용이 불충실(사후합리화). RLVR 훈련이 이 문제를 해결하지 못함을 실증. → `01-엔터프라이즈-사내지식.md` EvidenT 다음(## 이 도메인의 공통 패턴 앞 구분선 전)에 추가
+
+- `sources.md`에 3개 출처 추가 (## 2026-09-27 섹션 신설, 파일 최상단)
+- **한국 사례**: 1건 (포티투마루 원천특허, ZDNet Korea 2026-09-21, snippet-verified 8개 이상 독립 출처)
+- **검증 결과**: URL 200 OK: 1/3건(ZDNet Korea 포티투마루) · snippet-verified: 3/3건 · 단언 톤다운: 해당 없음 · 중복 폐기: 다수(UR²·로앤컴퍼니 렉스팬드 AI·JMIR Korean Medical·KT RAG·신한은행·FootprintRAG·Safer RAG·ISO-RAG·TrustPropRAG 등 이미 수록 확인) · 발굴 시도 → 최종 채택: 약 18건 시도 → 3건 채택
+
 ## 2026-09-26 (일일 루프 #102)
 - **신규 사례 3건** (WebFetch arxiv.org 차단 환경, snippet-verified 전건; 한국 사례: 1건 — 숭실대 조성현·박찬준, EMNLP 2026 Findings)
 
