@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-09-27 일일 누적 추가 출처 (3건, 루프 #103)
+
+### 한국 — 산업별·AI 스타트업 (포티투마루 LLM 기반 데이터 표현 생성 원천특허, 2026-09-21)
+- [ZDNet Korea — 포티투마루, 에이전틱 AI 특허망 확대한다](https://zdnet.co.kr/view/?no=20260921134240) — 2026-09-21 · [korea][42maru][patent][llm][rag][structured-output][table-chart-generation][hallucination-suppression][data-grounding][enterprise][slm][ip][agentic-ai][fortytwo-maru] · 포티투마루(42MARU). LLM이 기업 내 비정형 문서를 읽고 표·차트 형태로 구조화 생성하는 RAG 기반 데이터 시각화 기술의 원천특허 국내 등록·미국 출원. 생성 수치를 실제 원본 기업 데이터와 교차 검증하여 환각 억제. 누적 특허 122건(국내 63·미국 39·유럽 18·PCT 2). (snippet-verified: ZDNet Korea + 네이트뉴스 20260921n07011 + 네이트뉴스 20260922n02889 + 헬로티 hellot.net/news/article.html?no=115043 + 서울경제 sedaily.com/article/20093559 + 디지털타임스 dt.co.kr/article/12085097 + 디지털투데이 + 더에이아이 8개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처 (하이퍼그래프 RAG 비대칭 동적 라우팅 ADR, 2026-09-24)
+- [arXiv:2609.29282 — Asymmetric Dynamic Routing for Hypergraph-based RAG](https://arxiv.org/abs/2609.29282) — 2026-09-24 · [architecture][hypergraph-rag][dynamic-routing][adr][static-retrieval-fallacy][asymmetric][localized-fact-anchoring][bottom-up-adjacency-diffusion][top-down-insight-grounding][token-efficiency][latency][domain-corpus] · Qi Sun, Yijia Zhang, Xingliang Hou, Caibo Li, Qiang Li, Yu Guo. 하이퍼그래프 RAG의 정적 검색 오류 해결을 위한 비대칭 동적 라우팅. 단일 분류기 호출로 쿼리별 탐색 깊이·방향 조정. 토큰 소비 최대 48.7% 절감, 지연 최대 45.3% 단축, 5개 도메인 특화 코퍼스 평가. (snippet-verified: jyyang621/DailyArXiv #420 + jyyang621/DailyArXiv #417 + #419 + pith.science/paper/2609.29282 4개 이상 독립 출처)
+
+### 글로벌 — 엔터프라이즈·사내지식 (RAG 인용 사후합리화·RLVR 무효과, BUET, 2026-09-19)
+- [arXiv:2609.23053 — Attributable Post-Rationalization in RAG: A Study on Prevalence and RLVR-based Mitigation](https://arxiv.org/abs/2609.23053) — 2026-09-19 · [enterprise][rag][citation][post-rationalization][attribution][rlvr][reinforcement-learning][hallucination][unfaithful-citation][wikipedia][qa][buet][bangladesh] · Mehedi Khan, Md. Shariful Islam Bhuyan (방글라데시 공과대학교 BUET). 위키피디아 기반 QA에서 약 7건 중 1건(≈14%)의 인용이 불충실한 사후합리화. RLVR 훈련이 이 문제를 해결하지 못함을 실증. (snippet-verified: jyyang621/DailyArXiv #418 + #420 + pith.science/paper/2609.23053 + arxiv-sanity listing 5개 이상 독립 출처)
+
 ## 2026-09-26 일일 누적 추가 출처 (3건, 루프 #102)
 
 ### 글로벌 — 프로덕션 아키텍처·보안 (IBM LinuxONE Spyre 가속 엔터프라이즈 RAG, 규제 산업, 2026-08-02)
