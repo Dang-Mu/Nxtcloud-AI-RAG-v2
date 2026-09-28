@@ -968,6 +968,26 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **제출일**: 2026-09-01
 - **출처**: [arXiv:2609.00549 — Skill Following: Evaluating Actual Skill Use in Retrieval-Enabled LLM Agents](https://arxiv.org/abs/2609.00549) (2026-09-01, EMNLP 2026 Findings, snippet-verified: arXiv abs + arXiv html + arXiv pdf + sites.google.com/view/ssu-nlp + parkchanjun.github.io + veritas-a.com/626088 + asiatoday.co.kr + m.news.nate.com 8개 이상 독립 출처)
 
+### LabourCrew — 노동법 법정 추론을 위한 증거 게이팅 멀티에이전트 RAG 프레임워크 (arXiv:2609.27814, 2026-09)
+
+> **LabourCrew: A Multi-Agent RAG Framework for Trustworthy Adversarial Deliberation and Statutory Reasoning over Labour Law** (arXiv:2609.27814, 2026-09)
+
+노동법 법정 추론에서 **모든 주장이 검색된 증거에 추적 가능해야 한다**는 요구 — 미검색 텍스트 인용 불가 — 를 시스템 레벨에서 강제하는 증거 게이팅 멀티에이전트 RAG 프레임워크. 방글라데시 노동법(Bangladesh Labour Act 2006) 위에서 평가.
+
+**3대 핵심 그라운딩 메커니즘:**
+1. **StatuteGraph**: 법령 전체(챕터·섹션·단서·상호참조)를 구조 보존 파서로 그래프 인덱싱. Issue Spotter → Retrieval Planner → Link Hopper → Statute Retriever 4단 검색 체인으로 관련 조문 추출.
+2. **Evidence Exchange Protocol**: Worker Counsel(노동자 입장)과 Employer Counsel(사용자 입장)의 두 에이전트가 Legal Interpreter(심판) 앞에서 **증거 레저(evidence ledger)에 기록된 검색 증거만** 인용하여 논쟁. 미검색 텍스트 인용 물리적 불가 설계.
+3. **Calibrated Trust Gate**: 단순 수용/거부 이분법 대신 신뢰 점수(trust score)로 에이전트 출력의 불확실성을 정량화.
+
+**평가 — LabourActQA 벤치마크:**
+- 방글라데시 노동법 2006 기반 500개 QA 항목, 7개 추론 범주, 3단계 난이도.
+
+**의의**: 단일 패스 RAG가 증거 불충분 여부를 감지하지 못하고, 기존 멀티에이전트 법률 토론 시스템이 그라운딩을 "프롬프팅 관습"으로만 처리하는 두 한계를 동시에 해결. **"법적 주장은 검색된 증거 없이 존재할 수 없다"는 아키텍처 불변식을 구현**한 RAG 설계 원칙으로, 규제 준수·노동권 보호 등 검증 책임이 높은 법률 도메인 멀티에이전트 RAG에 직접 적용 가능.
+
+- **저자**: Fatema Tuj Johora Faria, Mukaffi Bin Moin, Jubayer Al Mahmud
+- **제출일**: 2026-09 (arXiv)
+- **출처**: [arXiv:2609.27814 — LabourCrew: A Multi-Agent RAG Framework for Trustworthy Adversarial Deliberation and Statutory Reasoning over Labour Law](https://arxiv.org/abs/2609.27814) (2026-09, snippet-verified: arXiv abs + arXiv html v1 2개 이상 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.

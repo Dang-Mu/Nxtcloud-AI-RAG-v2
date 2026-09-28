@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-09-28 일일 누적 추가 출처 (3건, 루프 #104)
+
+### 글로벌 — 산업별·의료 (의료 청구 거부 관리 5에이전트 정책 제약 RAG, AGVF, Sliced Health, 2026-09)
+- [arXiv:2609.27844 — Agentic Governance and Adversarial Verification for Policy-Constrained LLM Healthcare Appeal Generation](https://arxiv.org/abs/2609.27844) — 2026-09 · [healthcare][medical][insurance][claim-denial][appeal][multi-agent][cmdp][policy-constraint][evidence-retrieval][adversarial-critique][agvf][sliced-health][acm-tist][under-review] · Harshil Lodhiya, Alex McManus, Reese Walker (Sliced Health). 의료 보험 청구 거부 관리를 위한 5에이전트(정책 형식화·증거 검색·격차 분석·적대적 비판·게이팅 합성) CMDP 기반 멀티에이전트 RAG 프레임워크. 정책 제약 그래프 위 반복 정제로 증거 결핍 잠재력 단조 감소를 수학적으로 증명. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
+### 글로벌 — 산업별·법률·IP (계층적 논리 트리 기반 장문 특허 초안 작성 RAG, LogicTree-RAG, 2026-09-25)
+- [arXiv:2609.30943 — LogicTree-RAG: Logic Tree-guided Retrieval-Augmented Generation for Long-form Patent Drafting](https://arxiv.org/abs/2609.30943) — 2026-09-25 · [legal][patent][ip][long-form-generation][hierarchical-logic-tree][semantic-chunking][hybrid-traversal][patent-drafting][logic-centric-generation][section-balanced] · Jiaqi Zhu 외 6인. 입력 연구 논문에서 계층적 논리 트리를 자동 유도해 전역 조직 골격으로 삼고, 시맨틱 청킹+하이브리드 순회로 특허 섹션을 섹션 균형 있게 생성. 강력한 LLM 기준선 대비 콘텐츠 품질·언어 준수도 일관 향상. (snippet-verified: arXiv abs + arXiv html 2개 이상 독립 출처)
+
+### 글로벌 — 에이전트·툴유즈 (노동법 법정 추론 증거 게이팅 멀티에이전트 RAG, LabourCrew, 2026-09)
+- [arXiv:2609.27814 — LabourCrew: A Multi-Agent RAG Framework for Trustworthy Adversarial Deliberation and Statutory Reasoning over Labour Law](https://arxiv.org/abs/2609.27814) — 2026-09 · [agent][multi-agent][legal][labour-law][statutory-reasoning][statute-graph][evidence-exchange-protocol][calibrated-trust-gate][adversarial-deliberation][labouractqa][bangladesh-labour-act][grounding] · Fatema Tuj Johora Faria, Mukaffi Bin Moin, Jubayer Al Mahmud. StatuteGraph(법령 구조 그래프)+Evidence Exchange Protocol(증거 레저 강제)+Calibrated Trust Gate(신뢰 점수)로 노동법 법정 추론에서 미검색 텍스트 인용을 아키텍처 레벨에서 불가 설계. 500-item LabourActQA 벤치마크 평가. (snippet-verified: arXiv abs + arXiv html v1 2개 이상 독립 출처)
+
 ## 2026-09-27 일일 누적 추가 출처 (3건, 루프 #103)
 
 ### 한국 — 산업별·AI 스타트업 (포티투마루 LLM 기반 데이터 표현 생성 원천특허, 2026-09-21)

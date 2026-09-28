@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-09-28 (일일 루프 #104)
+- **신규 사례 3건** (WebFetch arxiv.org 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 사례 미발견)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-09-28-01 | arXiv:2609.27844 — AGVF: 의료 보험 청구 거부 관리 5에이전트 정책 제약 멀티에이전트 RAG (Sliced Health, 2026-09) | 산업별·의료 (5에이전트 CMDP, 정책 제약, 증거 게이팅, 청구 거부 관리) | 04-산업별-사례.md |
+| GL-2026-09-28-02 | arXiv:2609.30943 — LogicTree-RAG: 계층적 논리 트리 기반 장문 특허 초안 작성 RAG (2026-09-25) | 산업별·법률·IP (논리 트리 자동 유도, 시맨틱 청킹, 하이브리드 순회, 섹션 균형 생성) | 04-산업별-사례.md |
+| GL-2026-09-28-03 | arXiv:2609.27814 — LabourCrew: 노동법 법정 추론 증거 게이팅 멀티에이전트 RAG (2026-09) | 에이전트·툴유즈 (StatuteGraph, Evidence Exchange Protocol, Calibrated Trust Gate, LabourActQA) | 03-에이전트-툴유즈-MCP.md |
+
+- **검증 결과**: 3건 전원 5점 자가검증 통과; snippet-verified (2개 이상 독립 출처)
+  1. **arXiv:2609.27844 (AGVF)** [Harshil Lodhiya, Alex McManus, Reese Walker, Sliced Health]: CMDP 기반 5에이전트 RAG로 의료 보험 청구 거부 이의신청서 자동 생성. 정책 제약 그래프 위 반복 정제로 증거 결핍 잠재력 단조 감소 수학적 증명. ACM TIST 심사 중. → `04-산업별-사례.md` 정신건강 RAG 다음(특이 패턴 앞)에 추가
+  2. **arXiv:2609.30943 (LogicTree-RAG)** [Jiaqi Zhu 외 6인]: 입력 연구 논문에서 계층적 논리 트리 자동 유도 → 전역 조직 골격 구성 → 시맨틱 청킹+하이브리드 순회로 특허 섹션 균형 있게 생성. 강력한 LLM 기준선 대비 콘텐츠 품질·언어 준수도 일관 향상. → `04-산업별-사례.md` CiteGuard-RAG 다음(한국 앞)에 추가
+  3. **arXiv:2609.27814 (LabourCrew)** [Fatema Tuj Johora Faria, Mukaffi Bin Moin, Jubayer Al Mahmud]: StatuteGraph+Evidence Exchange Protocol+Calibrated Trust Gate로 노동법 법정 추론에서 미검색 텍스트 인용 아키텍처 레벨 불가 설계. 500-item LabourActQA 벤치마크. 이전 루프(#102)에서 "이미 수록"으로 오검출된 건 재확인하여 실제 미수록 확인 후 추가. → `03-에이전트-툴유즈-MCP.md` Skill Following 다음(이 도메인의 공통 패턴 앞)에 추가
+
+- `sources.md`에 3개 출처 추가 (## 2026-09-28 섹션 신설, 파일 최상단)
+- **한국 사례**: 0건 (최근 7일 이내 한국 기관/기업 신규 RAG 발표 미발견)
+- **검증 결과**: URL 200 OK: 0/3건(arxiv.org WebFetch 차단) · snippet-verified: 3/3건 · 단언 톤다운: 1건(AGVF "$260B" → "논문 추정치" 명시) · 중복 폐기: 이전 오검출 1건(LabourCrew) 재확인 포함 다수 검토 · 발굴 시도 → 최종 채택: 약 15건 시도 → 3건 채택
+
 ## 2026-09-27 (일일 루프 #103)
 - **신규 사례 3건** (WebFetch arxiv.org 차단 환경, snippet-verified 전건; 한국 사례: 1건 — 포티투마루 'LLM 기반 데이터 표현 생성' 원천특허)
 
