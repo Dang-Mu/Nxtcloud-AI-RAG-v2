@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-09-29 일일 누적 추가 출처 (3건, 루프 #105)
+
+### 글로벌 — 프로덕션 아키텍처·거버넌스 (RAG 정책 승격 증거 보존 거버넌스, RAGWarrant, 2026-09-28)
+- [arXiv:2609.34179 — RAGWarrant: Evidence-Preserving Governance for RAG Policy Promotion Under Quality, Cost, Latency, and Risk Constraints](https://arxiv.org/abs/2609.34179) — 2026-09-28 · [architecture][production][governance][policy-promotion][quality-gate][risk-gate][cost-gate][latency-gate][evidence-preserving][promote][block][reject][inconclusive][auditable][open-core][t2-ragbench][multihop-rag][crag][hotpotqa] · (저자 미확인, preprint v0.1.1-rc1). RAG 파이프라인 변경사항 배포 여부를 품질·비용·지연·위험 제약 게이트와 증거 클래스 상한으로 판정하는 오픈코어 거버넌스 컨트롤러. PROMOTE/BLOCK/REJECT/INCONCLUSIVE 네 가지 감사 가능한 결정을 출력하며 부정적 결과도 보존. (snippet-verified: arXiv abs + arXiv html + GitHub RAGWarrant/ragwarrant-governance + GitHub PR #31 + jyyang621/DailyArXiv #422 + Ep11phany/DailyArXiv #379 6개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처·효율 (멀티문서 RAG KV 캐시 퓨전 교차-청크 컨텍스트 복구, CacheRepair, 2026-09-28)
+- [arXiv:2609.35139 — CacheRepair: Learning to Repair Cross-Chunk Context in RAG for KV Cache Fusion](https://arxiv.org/abs/2609.35139) — 2026-09-28 · [architecture][production][kv-cache][cache-fusion][cross-chunk][context-repair][lightweight-network][pareto-frontier][latency][multi-document][precomputed-cache][drop-in] · (저자 미확인). 청크별 독립 사전계산 KV 캐시 연결 시 발생하는 교차-청크 어텐션 정보 손실("정체 KV 캐시")을 복구하는 경량 신경망. 단일 LLM에 대해 범용 검색 코퍼스로 1회 학습 후 재사용. 3개 LLM·4개 데이터셋에서 12개 조합 중 11개에서 답변품질-지연 파레토 프론티어 위치(저자 주장). (snippet-verified: arXiv abs + arXiv html + jyyang621/DailyArXiv #422 3개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처·멀티홉 (주제 하이퍼그래프 시공간 영향 추적 멀티홉 RAG, STITCH-RAG, 2026-09-28)
+- [arXiv:2609.34127 — STITCH-RAG: Spatio-Temporal Influence Tracing over Topic Hypergraphs for Multi-Hop Retrieval-Augmented Generation](https://arxiv.org/abs/2609.34127) — 2026-09-28 · [architecture][multi-hop][hypergraph][topic-hypergraph][semi-merged][stibp][spatio-temporal][canonical-name-equivalence][frequency-adaptive-decay][cross-chunk][evidence-chain][co-participation] · (저자 미확인). 반병합 주제 하이퍼그래프+STIBP 전파+정준명 동등성의 3-컴포넌트로 멀티홉 RAG에서 청크 간 증거 체인 단절과 토픽 공동 참여 정보 손실을 동시 해결. 시공간 영향 추적으로 동적 코퍼스 멀티홉 추론에 강점. (snippet-verified: arXiv abs + arXiv html + jyyang621/DailyArXiv #422 + tangwen-qian/DailyArXiv #616 + JyiHUO/arxiv_daily_recommendation_system 5개 이상 독립 출처)
+
 ## 2026-09-28 일일 누적 추가 출처 (3건, 루프 #104)
 
 ### 글로벌 — 산업별·의료 (의료 청구 거부 관리 5에이전트 정책 제약 RAG, AGVF, Sliced Health, 2026-09)
