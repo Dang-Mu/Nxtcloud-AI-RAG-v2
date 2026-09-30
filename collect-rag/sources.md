@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-09-30 일일 누적 추가 출처 (3건, 루프 #106)
+
+### 글로벌 — 프로덕션 아키텍처·멀티턴 평가 (멀티턴 RAG 성능 저하 두 실패 유형 진단, "Lost in Conversation or Lost in Translation?", 2026-09-29)
+- [arXiv:2609.36700 — Lost in Conversation or Lost in Translation? Diagnosing Multi-Turn Degradation in RAG](https://arxiv.org/abs/2609.36700) — 2026-09-29 · [architecture][production][multi-turn][evaluation][failure-modes][degradation][lost-in-translation][lost-in-conversation][hotpotqa][graphrag][simulation][10-llms][8-retrieval-systems][1.5m-conversations][performance-drop][unreliability] · Pranav Handa, Ariful Azad. 멀티홉 QA 벤치마크 질문을 불완전 명세 대화로 변환, 10개 LLM × 8개 RAG 검색 시스템 × 1.5M 시뮬레이션 대화 평가로 멀티턴 상호작용이 단턴 대비 최대 21% 성능 저하·47% 비신뢰도 증가를 유발함을 실증. Lost in Translation(쿼리 왜곡)·Lost in Conversation(멀티턴 증거 합성 실패) 두 실패 유형 분리. (snippet-verified: arXiv abs + arXiv html + arxiv.org/list/cs.CL/pastweek + export.arxiv.org/list + jyyang621/DailyArXiv #423 5개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처·보안 (비잔틴 견고 연합 RAG, 정렬 보정·고정 멤버십 등각 예측, 2026-09-27)
+- [arXiv:2609.33037 — Byzantine-Robust Federated RAG via Aligned Calibration and Fixed-Membership Conformal Prediction](https://arxiv.org/abs/2609.33037) — 2026-09-27 · [architecture][security][federated-rag][byzantine-robust][conformal-prediction][aligned-calibration][fixed-membership][privacy][medical][distributed][hub-and-spoke][finite-sample-guarantee] · Prasanjit Dubey, Xiaoming Huo. 의료·금융 등 프라이버시 규정으로 문서 집중 불가 분산 RAG 환경에서, 보정·쿼리 단계의 정직 노드 집합 일치를 활용한 정렬 보정 + 고정 멤버십 등각 예측으로 비잔틴 노드 공격 대비 유한 샘플 커버리지 수학적 보장. (snippet-verified: arXiv abs + arXiv html + jyyang621/DailyArXiv #422 + jyyang621/DailyArXiv #423 + par.nsf.gov 5개 이상 독립 출처)
+
+### 글로벌 — 에이전트·툴유즈 (멀티스텝 시각적 RAG 경로 인식 증거 조정, TAEC, 2026-09-29)
+- [arXiv:2609.37349 — TAEC: Trajectory-Aware Evidence Coordination for Multi-Step Visual RAG](https://arxiv.org/abs/2609.37349) — 2026-09-29 · [agent][visual-rag][multi-step][trajectory-aware][evidence-coordination][training-free][evidence-admission][adaptive-memory-exposure][visual-detail-allocation][vidoseek][slidevqa][mmlongbench-doc] · (저자 미확인). 멀티스텝 시각적 RAG에서 경로 레벨 증거 활용 저하를 학습 불필요 3-컴포넌트(Evidence Admission·Adaptive Memory Exposure·Visual Detail Allocation)로 해소. ViDoSeek·SlideVQA·MMLongBench-Doc 기준선 최고 정확도(저자 주장). (snippet-verified: arXiv abs + arXiv html + jyyang621/DailyArXiv #423 + tangwen-qian/DailyArXiv #617 + Ep11phany/DailyArXiv #380 5개 이상 독립 출처)
+
 ## 2026-09-29 일일 누적 추가 출처 (3건, 루프 #105)
 
 ### 글로벌 — 프로덕션 아키텍처·거버넌스 (RAG 정책 승격 증거 보존 거버넌스, RAGWarrant, 2026-09-28)

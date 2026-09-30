@@ -988,6 +988,20 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **제출일**: 2026-09 (arXiv)
 - **출처**: [arXiv:2609.27814 — LabourCrew: A Multi-Agent RAG Framework for Trustworthy Adversarial Deliberation and Statutory Reasoning over Labour Law](https://arxiv.org/abs/2609.27814) (2026-09, snippet-verified: arXiv abs + arXiv html v1 2개 이상 독립 출처)
 
+### TAEC — 멀티스텝 시각적 RAG를 위한 경로 인식 증거 조정 학습 불필요 프레임워크 (arXiv:2609.37349, 2026-09-29)
+
+> **TAEC: Trajectory-Aware Evidence Coordination for Multi-Step Visual RAG** (arXiv:2609.37349, 2026-09-29)
+
+- **목적**: 시각적 멀티스텝 RAG에서 관련 증거를 검색해도 추론 경로 전반에 걸쳐 효과적으로 활용되지 못하는 **경로 레벨 증거 활용 저하(trajectory-level evidence utilization degradation)** 문제 해결. 추론이 진행될수록 해결된 요구사항에 묶인 관측이 컨텍스트에 계속 잔류하고, 중복 소스가 필요한 증거를 위한 컨텍스트 공간을 점유하며, 시각 소스가 부족한 세부 수준으로 재방문되는 세 가지 세부 실패를 동시에 처리.
+- **데이터 소스**: ViDoSeek(영상 문서 질의응답), SlideVQA(슬라이드 멀티홉 QA), MMLongBench-Doc(장문 멀티모달 문서 이해) 세 벤치마크.
+- **스택**: 학습 불필요(training-free) 프레임워크. 기존 시각적 RAG 파이프라인 위에 경로 상태(trajectory state) 추적 레이어를 추가하는 방식.
+- **아키텍처 특이점 — 3대 컴포넌트**:
+  1. **Evidence Admission(증거 승인)**: 새로 검색된 증거를 미해결 답변 요구사항 대비 증분 기여도로 선택적 수용. 중복 소스의 컨텍스트 점유 차단.
+  2. **Adaptive Memory Exposure(적응형 메모리 노출)**: 해결된 요구사항에 연결된 누적 메모리가 컨텍스트에 노출되는 시간을 동적으로 조정. 불필요한 과거 관측 정리.
+  3. **Visual Detail Allocation(시각 세부 배분)**: 미해결 요구 수준에 따라 시각 소스의 처리 세부 예산을 분배. 필요한 부분에 시각 처리 집중.
+- **결과·교훈**: ViDoSeek·SlideVQA·MMLongBench-Doc 세 벤치마크에서 학습 불필요 시각적 RAG 기준선 대비 전체 평균 최고 정확도 달성(저자 주장). **학습 없이 기존 파이프라인에 경로 상태 추적만 추가해 멀티스텝 시각 에이전트의 증거 활용 효율을 개선하는 실용적 접근법**. PDF·슬라이드·영상 문서 에이전트에서 시각 검색 품질 향상이 필요한 엔터프라이즈 워크로드에 직접 적용 가능.
+- **출처**: [arXiv:2609.37349 — TAEC: Trajectory-Aware Evidence Coordination for Multi-Step Visual RAG](https://arxiv.org/abs/2609.37349) (2026-09-29, snippet-verified: arXiv abs + arXiv html + jyyang621/DailyArXiv #423 + tangwen-qian/DailyArXiv #617 + Ep11phany/DailyArXiv #380 5개 이상 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.

@@ -1,5 +1,24 @@
 # 업데이트 로그
 
+## 2026-09-30 (일일 루프 #106)
+- **신규 사례 3건** (WebFetch arxiv.org 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 사례 미발견; 제7회 한국 인공지능 학술대회 9/29-10/2 개최 중이나 RAG 특정 사례 확인 불가)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-09-30-01 | arXiv:2609.36700 — "Lost in Conversation or Lost in Translation?": 멀티턴 RAG 성능 저하 두 실패 유형 진단 (2026-09-29) | 프로덕션 아키텍처·멀티턴 평가 (단턴 벤치 ≠ 멀티턴 현실, 최대 21% 성능 저하, 47% 비신뢰도 증가, Lost in Translation / Lost in Conversation 분류) | 02-프로덕션-아키텍처.md |
+| GL-2026-09-30-02 | arXiv:2609.33037 — Byzantine-Robust Federated RAG: 정렬 보정·고정 멤버십 등각 예측 기반 프라이버시 보존 연합 RAG (2026-09-27) | 프로덕션 아키텍처·보안 (비잔틴 노드 견고성, 등각 예측, 의료·금융·법률 분산 문서 RAG, 수학적 커버리지 보장) | 02-프로덕션-아키텍처.md |
+| GL-2026-09-30-03 | arXiv:2609.37349 — TAEC: 멀티스텝 시각적 RAG를 위한 경로 인식 증거 조정 학습 불필요 프레임워크 (2026-09-29) | 에이전트·툴유즈 (경로 레벨 증거 활용 저하, Evidence Admission·Adaptive Memory Exposure·Visual Detail Allocation, ViDoSeek·SlideVQA·MMLongBench-Doc 최고 정확도) | 03-에이전트-툴유즈-MCP.md |
+
+- **검증 결과**: 3건 전원 5점 자가검증 통과; snippet-verified (5개 이상 독립 출처 전건)
+  1. **arXiv:2609.36700 ("Lost in Conversation")** [Pranav Handa, Ariful Azad]: 멀티홉 QA 벤치 변환 1.5M 시뮬레이션 대화, 10개 LLM × 8개 검색 시스템. 단턴 대비 최대 21% 성능 저하·47% 비신뢰도 증가. 두 실패 유형 분리: Lost in Translation(쿼리 왜곡), Lost in Conversation(합성 실패). 2026-09-29 제출. → `02-프로덕션-아키텍처.md` STITCH-RAG 다음(## 한국 환경 특이점 앞)에 추가
+  2. **arXiv:2609.33037 (Byzantine-Robust Federated RAG)** [Prasanjit Dubey, Xiaoming Huo]: 보정·쿼리 단계에서 정직 노드 집합 일치를 활용한 정렬 보정 + 고정 멤버십 등각 예측으로 비잔틴 견고성 수학적 보장. 의료 시험 QA 포함 실제 QA 데이터셋 평가. 2026-09-27 제출. → `02-프로덕션-아키텍처.md` "Lost in Conversation" 다음(## 한국 환경 특이점 앞)에 추가
+  3. **arXiv:2609.37349 (TAEC)**: 경로 인식 3-컴포넌트(Evidence Admission·Adaptive Memory Exposure·Visual Detail Allocation)로 멀티스텝 시각적 RAG의 증거 활용 저하 해소. 학습 불필요 드롭인. ViDoSeek·SlideVQA·MMLongBench-Doc 학습불필요 기준선 최고 정확도(저자 주장). 2026-09-29 제출. → `03-에이전트-툴유즈-MCP.md` LabourCrew 다음(## 이 도메인의 공통 패턴 앞)에 추가
+
+- `sources.md`에 3개 출처 추가 (## 2026-09-30 섹션 신설, 파일 최상단)
+- `00-요약-트렌드.md` 멀티턴 평가 공백 관련 트렌드 섹션 단문 갱신
+- **한국 사례**: 0건 (최근 7일 이내 한국 기관/기업 신규 RAG 발표 미발견)
+- **검증 결과**: URL 200 OK: 0/3건(arxiv.org WebFetch 차단) · snippet-verified: 3/3건(5개 이상 독립 출처) · 단언 톤다운: 1건(TAEC "최고 정확도" → "저자 주장" 명시) · 중복 폐기: 다수(CacheRepair·STITCH-RAG·RAGWarrant·AdaTutoRank·AquiLLM 등 검토, 전자 3건은 이미 수록, 후자 2건은 신규 가능하나 시간 내 충분한 독립 출처 미확보) · 발굴 시도 → 최종 채택: 약 10건 시도 → 3건 채택
+
 ## 2026-09-29 (일일 루프 #105)
 - **신규 사례 3건** (WebFetch arxiv.org 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 사례 미발견; LY Corp 광고 에이전트·삼성 DeepDive 등 검토했으나 RAG 직접 사용 미확인 또는 발행일 7일 초과)
 
