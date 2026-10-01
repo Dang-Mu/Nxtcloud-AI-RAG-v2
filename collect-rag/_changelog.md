@@ -1,5 +1,7 @@
 # 업데이트 로그
 
+머지 실패: PR #109 (daily/rag-trends-2026-10-01) — 사유: Claude Code 자동 머지 권한 분류기가 리뷰 없는 자동 squash merge를 차단함 (SOFT BLOCK: "Merge Without Review"). PR은 열린 상태 유지, 수동 머지 필요.
+
 ## 2026-09-30 (일일 루프 #106)
 - **신규 사례 3건** (WebFetch arxiv.org 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 사례 미발견; 제7회 한국 인공지능 학술대회 9/29-10/2 개최 중이나 RAG 특정 사례 확인 불가)
 
