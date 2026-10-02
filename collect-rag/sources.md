@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-10-02 일일 누적 추가 출처 (2건, 루프 #107)
+
+### 글로벌 — 프로덕션 아키텍처·KG-RAG (지식 그래프 RAG 재학습 불필요 범용 레시피, UltRAG, ICLR 2026, v2 2026-09-29)
+- [arXiv:2603.28773 — UltRAG: a Universal Simple Scalable Recipe for Knowledge Graph RAG](https://arxiv.org/abs/2603.28773) — v2 2026-09-29 · [architecture][knowledge-graph][kg-rag][wikidata][no-retraining][neural-query-execution][multi-hop][kgqa][sota][iclr2026][116m-entities][1.6b-relations][graph-native][drop-in] · Dobrik Georgiev, Kheeran Naidu, Alberto Cattaneo, Federico Monti, Carlo Luschi, Daniel Justus. Wikidata 규모(116M 엔티티·16억 관계) 지식 그래프에서 LLM·실행기 재학습 없이 신경 쿼리 실행 모듈을 드롭인 결합해 KGQA SOTA 달성(저자 주장). ICLR 2026 발표. (snippet-verified: arXiv abs/2603.28773v1 + arXiv pdf + arXiv html + iclr.cc/virtual/2026/10021223 + emergentmind.com/topics/ultrag 5개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처·보안 (웹-RAG 추천 PAIR 기반 랭킹 조작 공격, SIREN, v3 2026-09-29)
+- [arXiv:2607.21951 — SIREN (Luring LLMs onto the Rocks): PAIR-Driven Preference Manipulation in Web-RAG Recommenders](https://arxiv.org/abs/2607.21951) — v3 2026-09-29 · [security][adversarial][web-rag][recommender][pair][rank-manipulation][content-poisoning][jailbreak-loop][23-techniques][rank-1][62-of-124][reproducibility-0.805][anthropic-web-tool] · Evan Caville, Siamak Layeghy, Billy Sung, Sara Dolnicar, Marius Portmann. PAIR 탈옥 루프를 웹-RAG 추천 랭킹 조작에 적용, 23종 콘텐츠 조작 기법 분류체계, 124회 시도 중 62회 rank 1 달성·재현 성공률 0.805(저자 보고). (snippet-verified: arXiv pdf/2607.21951 + alphaxiv.org/abs/2607.21951v1 + alphaxiv.org/abs/2607.21951.md + haebom.dev DailyArXiv 4개 이상 독립 출처)
+
 ## 2026-09-30 일일 누적 추가 출처 (3건, 루프 #106)
 
 ### 글로벌 — 프로덕션 아키텍처·멀티턴 평가 (멀티턴 RAG 성능 저하 두 실패 유형 진단, "Lost in Conversation or Lost in Translation?", 2026-09-29)
