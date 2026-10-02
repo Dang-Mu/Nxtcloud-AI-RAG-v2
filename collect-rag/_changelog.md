@@ -2,6 +2,20 @@
 
 머지 실패: PR #109 (daily/rag-trends-2026-10-01) — 사유: Claude Code 자동 머지 권한 분류기가 리뷰 없는 자동 squash merge를 차단함 (SOFT BLOCK: "Merge Without Review"). PR은 열린 상태 유지, 수동 머지 필요.
 
+## 2026-10-02 (일일 루프 #107)
+- **신규 사례 2건** (WebFetch arxiv.org 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 사례 미발견)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-10-02-01 | arXiv:2603.28773 — UltRAG: 지식 그래프 RAG를 위한 재학습 불필요 범용 단순 확장 레시피 (ICLR 2026, v2 2026-09-29) | 프로덕션 아키텍처·KG-RAG (Wikidata 규모 116M 엔티티·16억 관계, 재학습 없이 다중 홉 KGQA, 신경 쿼리 실행 모듈 플러그인, KGQA SOTA) | 02-프로덕션-아키텍처.md |
+| GL-2026-10-02-02 | arXiv:2607.21951 — SIREN: 웹-RAG 추천시스템 대상 PAIR 루프 기반 자동화 랭킹 조작 공격 (v3 2026-09-29) | 프로덕션 아키텍처·보안 (PAIR 탈옥 루프 응용, 23종 콘텐츠 조작 기법, rank 1 달성 62/124회, 재현율 0.805) | 02-프로덕션-아키텍처.md |
+
+- **검증 결과**: 2건 전원 5점 자가검증 통과; snippet-verified (4개 이상 독립 출처 전건)
+  1. **arXiv:2603.28773 (UltRAG)** [Dobrik Georgiev, Kheeran Naidu, Alberto Cattaneo, Federico Monti, Carlo Luschi, Daniel Justus]: 신경 쿼리 실행 모듈을 LLM에 드롭인 결합, Wikidata 전체(116M 엔티티·16억 관계)에서 재학습 없이 KGQA SOTA 달성(저자 주장). ICLR 2026 발표, v2 2026-09-29. → `02-프로덕션-아키텍처.md` Byzantine-Robust Federated RAG 다음(## 한국 환경 특이점 앞)에 추가
+  2. **arXiv:2607.21951 (SIREN)** [Evan Caville, Siamak Layeghy, Billy Sung, Sara Dolnicar, Marius Portmann]: PAIR 탈옥 루프를 웹-RAG 추천 랭킹 조작에 적용, 23종 콘텐츠 조작 기법 분류, 124회 시도 중 62회 rank 1 달성·재현율 0.805(저자 보고). v3 2026-09-29. → `02-프로덕션-아키텍처.md` UltRAG 다음(## 한국 환경 특이점 앞)에 추가
+
+- `sources.md`에 2개 출처 추가 (## 2026-10-02 섹션 신설, 파일 최상단)
+
 ## 2026-09-30 (일일 루프 #106)
 - **신규 사례 3건** (WebFetch arxiv.org 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 사례 미발견; 제7회 한국 인공지능 학술대회 9/29-10/2 개최 중이나 RAG 특정 사례 확인 불가)
 
