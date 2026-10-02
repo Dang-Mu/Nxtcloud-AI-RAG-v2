@@ -1002,6 +1002,21 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **결과·교훈**: ViDoSeek·SlideVQA·MMLongBench-Doc 세 벤치마크에서 학습 불필요 시각적 RAG 기준선 대비 전체 평균 최고 정확도 달성(저자 주장). **학습 없이 기존 파이프라인에 경로 상태 추적만 추가해 멀티스텝 시각 에이전트의 증거 활용 효율을 개선하는 실용적 접근법**. PDF·슬라이드·영상 문서 에이전트에서 시각 검색 품질 향상이 필요한 엔터프라이즈 워크로드에 직접 적용 가능.
 - **출처**: [arXiv:2609.37349 — TAEC: Trajectory-Aware Evidence Coordination for Multi-Step Visual RAG](https://arxiv.org/abs/2609.37349) (2026-09-29, snippet-verified: arXiv abs + arXiv html + jyyang621/DailyArXiv #423 + tangwen-qian/DailyArXiv #617 + Ep11phany/DailyArXiv #380 5개 이상 독립 출처)
 
+### BELIEFRAG — 진화하는 증거 하에서 에이전트 RAG를 상태 인식으로 만드는 폐루프 컨트롤러 (arXiv:2609.39139, 2026-09-30)
+
+> **BELIEFRAG: Making Adaptive RAG State-Aware under Evolving Evidence** (arXiv:2609.39139, 2026-09-30)
+
+- **목적**: 멀티스텝 에이전트 RAG에서 기존 어댑티브 RAG 방식이 신뢰도·관련성·지원 여부·검색 품질 등의 신호를 **별개 트리거로만** 사용해 궤적 전반에 걸친 일관된 증거 상태를 유지하지 못하는 **증거-상태 단편화(evidence-state fragmentation)** 문제 해결. 에이전트가 "지금 증거가 충분한가", "아직 무엇이 빠졌는가", "다음 행동은 무엇인가"를 지속적이고 명시적으로 추적할 수 없어 불필요한 반복 검색 또는 조기 답변이 발생한다.
+- **데이터 소스**: 6개 QA 벤치마크. 생성 모델: gpt-oss-120b.
+- **스택**: 학습 기반 어댑티브 RAG 아키텍처 + 명시적 믿음 상태(belief state) 추적 레이어.
+- **아키텍처 특이점 — 폐루프 믿음 컨트롤러**:
+  - **6차원 상태 벡터**: 충분성(sufficiency)·신뢰도(reliability)·충돌(conflict)·불확실성(uncertainty)·증거 공백(evidence gaps)·획득 비용(acquisition cost)을 매 검색 후 명시적으로 갱신.
+  - **6가지 행동 공간**: 검색(retrieve)·쿼리 재작성(rewrite)·검증(verify)·답변(answer)·중단(stop)·기권(abstain) 중 현재 상태 기반 최적 행동 선택.
+  - 기존 방법처럼 단일 신호(신뢰도 낮으면 재검색)로 결정하는 것이 아니라, **증거 전체의 누적 상태에서 다음 행동을 파생**시킨다.
+- **결과·교훈**: 6개 QA 벤치마크 평균 토큰 F1 0.572(질문당 3.89k 토큰), 고정 반복 검색(0.555 F1) 대비 성능 우위이면서 토큰 39% 절감(저자 주장). **검색 루프를 반복 횟수가 아닌 명시적 증거 상태로 제어하면 토큰 효율과 답변 품질을 동시에 개선할 수 있다는 실증**. 멀티홉 QA·법령 검토·멀티문서 분석 등 증거 공백이 누적되는 에이전트 워크로드에 직접 참조 가능한 설계 원칙.
+- **저자**: Hongji Pu
+- **출처**: [arXiv:2609.39139 — BELIEFRAG: Making Adaptive RAG State-Aware under Evolving Evidence](https://arxiv.org/abs/2609.39139) (2026-09-30, snippet-verified: arXiv abs + arXiv html + jyyang621/DailyArXiv #424 3개 이상 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.

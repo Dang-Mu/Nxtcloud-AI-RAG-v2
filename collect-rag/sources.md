@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-10-01 일일 누적 추가 출처 (3건, 루프 #107)
+
+### 글로벌 — 에이전트·툴유즈 (진화하는 증거 하에서 에이전트 RAG 상태 인식 폐루프 컨트롤러, BELIEFRAG, 2026-09-30)
+- [arXiv:2609.39139 — BELIEFRAG: Making Adaptive RAG State-Aware under Evolving Evidence](https://arxiv.org/abs/2609.39139) — 2026-09-30 · [agent][adaptive-rag][belief-state][evidence-state-fragmentation][multi-step][closed-loop][sufficiency][reliability][conflict][uncertainty][evidence-gaps][acquisition-cost][6-action-space][retrieval][rewriting][verification][answering][stopping][abstention][token-efficiency][qa-benchmark][gpt-oss-120b] · Hongji Pu. 멀티스텝 에이전트 RAG의 증거-상태 단편화 문제를 6차원 믿음 상태(충분성·신뢰도·충돌·불확실성·증거 공백·획득 비용) 폐루프 컨트롤러로 해소. 6 QA 벤치마크 평균 토큰 F1 0.572, 고정 반복 검색 대비 성능 우위·토큰 39% 절감(저자 주장). (snippet-verified: arXiv abs + arXiv html + jyyang621/DailyArXiv #424 3개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처·평가 (누출 제어·비용 인식 RAG 환각 트리아지 증거 게이팅 평가 프로토콜, RAGScope, 2026-09-30, ICTAI 2026)
+- [arXiv:2609.39075 — RAGScope: A Leakage-Controlled, Cost-Aware Evidence-Gating Protocol for RAG Hallucination Triage](https://arxiv.org/abs/2609.39075) — 2026-09-30 · [architecture][production][evaluation][hallucination-triage][evidence-gating][leakage-controlled][cost-aware][context-grouped-splits][fold-scoped-preprocessing][group-bootstrap][deployment-operating-points][end-to-end-runtime][source-shift-stress-test][ragtruth][auroc][cpu-inference][ictai2026] · Zeming Liu, Qibai Chen, Jingtao Zhang, Hang Lyu. 로컬 증거 게이트 평가 시 컨텍스트 누출·비용 비인식 문제를 해소하는 6구성 평가 프로토콜. RAGTruth 풀링 그룹 교차검증 AUROC 0.798·AP 0.660, CPU 6.22 ms/예시(DeBERTa-NLI 145.75 ms·HHEM 223.07 ms 대비). ICTAI 2026 채택. (snippet-verified: arXiv abs + arXiv html + jyyang621/DailyArXiv #424 + Ep11phany/DailyArXiv #381 + hosonzuo8848/sync-med #786 5개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처·검색 전략 (과학 Q&A RAG 6개 검색 전략 통제 비교, Re-ranking & Late Interaction, 2026-09-29)
+- [arXiv:2609.38473 — Re-ranking and Late Interaction Drive Retrieval Quality: A Controlled Comparison of RAG Strategies for Scientific Question Answering](https://arxiv.org/abs/2609.38473) — 2026-09-29 · [architecture][retrieval-strategy][reranking][late-interaction][colbertv2][specter2][rrf][multi-query][agentic-tool-call][controlled-comparison][scientific-qa][arxiv-corpus][llama-3.1][chroma][elsevier-dim] · (저자 미확인, Elsevier DIM 투고). 단일 생성기(Meta-Llama/Llama-3.1-8B-Instruct)·임베딩(SPECTER2)·벡터 저장소(Chroma)·코퍼스(arXiv 463,971건) 고정 하에 6개 RAG 검색 전략(Top-k·LLM 재작성·재작성+리랭킹·RRF·에이전틱·ColBERTv2) 통제 비교. 리랭킹 및 레이트 인터랙션이 검색 품질을 주도한다고 저자 보고. (snippet-verified: arXiv abs + arXiv html + Bhanubathini2002/arxiv-radar #41 3개 이상 독립 출처)
+
 ## 2026-09-30 일일 누적 추가 출처 (3건, 루프 #106)
 
 ### 글로벌 — 프로덕션 아키텍처·멀티턴 평가 (멀티턴 RAG 성능 저하 두 실패 유형 진단, "Lost in Conversation or Lost in Translation?", 2026-09-29)
