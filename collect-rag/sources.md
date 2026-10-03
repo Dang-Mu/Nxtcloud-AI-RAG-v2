@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-10-03 일일 누적 추가 출처 (2건, 루프 #108)
+
+### 글로벌 — 프로덕션 아키텍처·멀티홉·인덱싱 효율 (마트료시카 계층적 RAG 멀티홉 QA, MatRAG, 2026-10-01)
+- [arXiv:2610.01767 — A Matryoshka Hierarchical RAG for Efficient Multi-Hop Question Answering](https://arxiv.org/abs/2610.01767) — 2026-10-01 · [architecture][multi-hop][hierarchical-index][matryoshka][mrl][dag][entity-aware][dimension-aware-similarity][indexing-cost][open-source] · Gianluca Bonifazi, Christopher Buratti, Michele Marchetti, Federica Parlapiano, Giulia Quaglieri, Davide Traini, Domenico Ursino, Luca Virgili. MRL 임베딩 + DAG 계층 인덱스 + 엔티티 인식 반복으로 KG 구성·LLM 요약 없이 멀티홉 RAG 인덱싱 비용 절감. 최강 기준선 대비 검색 품질 우위(저자 주장). 오픈소스(GitHub DavideTraini/Matryoshka-Hierarchical-Retrieval). (snippet-verified: arXiv abs/2610.01767 + arXiv html/2610.01767 + GitHub DavideTraini/Matryoshka-Hierarchical-Retrieval + arXiv cs.CL/recent 4개 이상 독립 출처)
+
+### 글로벌 — 산업별·과학·학술 (고에너지·천체입자 물리학 RAG 파이프라인, HEP RAG, 2026-10-01)
+- [arXiv:2610.00891 — Towards Retrieval Augmented Generation in High-Energy and Astroparticle Physics](https://arxiv.org/abs/2610.00891) — 2026-10-01 · [science][physics][hep-ph][astro-ph][astrophysics][hybrid-retrieval][cross-encoder][reranker][gemma-4-e4b][open-source][modular][230k-papers][citation-grounded][summary-report] · Jacky Kumar, Sajan Kumar. hep-ph+astro-ph.HE 23만 논문 임베딩, 하이브리드 검색(키워드+시맨틱) + 크로스 인코더 리랭커 + Gemma-4-E4B 오픈소스 LLM으로 인용 포함 요약 보고서 자동 생성. 완전 오픈소스·모듈형 공개. (snippet-verified: arXiv abs/2610.00891 + arXiv html/2610.00891v1 2개 독립 출처)
+
 ## 2026-10-02 일일 누적 추가 출처 (2건, 루프 #107)
 
 ### 글로벌 — 프로덕션 아키텍처·KG-RAG (지식 그래프 RAG 재학습 불필요 범용 레시피, UltRAG, ICLR 2026, v2 2026-09-29)

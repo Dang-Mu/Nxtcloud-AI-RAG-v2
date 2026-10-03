@@ -1,5 +1,21 @@
 # 업데이트 로그
 
+## 2026-10-03 (일일 루프 #108)
+- **신규 사례 2건** (WebFetch arxiv.org 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 사례 미발견)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-10-03-01 | arXiv:2610.01767 — MatRAG: 마트료시카 계층적 RAG 멀티홉 QA 인덱싱·쿼리 비용 절감 (2026-10-01, 오픈소스) | 프로덕션 아키텍처·멀티홉·인덱싱 효율 (MRL + DAG 인덱스, 엔티티 인식 반복, KG 구성 불필요) | 02-프로덕션-아키텍처.md |
+| GL-2026-10-03-02 | arXiv:2610.00891 — 고에너지·천체입자 물리학 RAG 파이프라인 (2026-10-01, 23만 논문, Gemma-4-E4B, 오픈소스) | 산업별·과학·학술 (하이브리드 검색 + 크로스 인코더 리랭커 + Gemma-4-E4B, HEP·astro-ph 특화) | 04-산업별-사례.md |
+
+- **검증 결과**: 2건 전원 5점 자가검증 통과; snippet-verified (전건)
+  1. **arXiv:2610.01767 (MatRAG)** [Bonifazi·Buratti·Marchetti·Parlapiano·Quaglieri·Traini·Ursino·Virgili]: MRL 임베딩 + DAG 계층 인덱스 + 엔티티 인식 반복으로 KG 구성·LLM 요약 없이 멀티홉 RAG 인덱싱 비용 절감. 최강 기준선 대비 검색 품질 우위(저자 주장). 오픈소스(GitHub DavideTraini/Matryoshka-Hierarchical-Retrieval). → `02-프로덕션-아키텍처.md` SIREN 다음(## 한국 환경 특이점 앞)에 추가
+  2. **arXiv:2610.00891 (HEP RAG)** [Jacky Kumar, Sajan Kumar]: hep-ph+astro-ph.HE 23만 논문 임베딩, 하이브리드 검색 + 크로스 인코더 리랭커 + Gemma-4-E4B로 인용 포함 요약 보고서 자동 생성. 완전 오픈소스·모듈형. → `04-산업별-사례.md` 차량 부품 소재 예측 다음(## 실패·논란 사례 앞)에 추가
+
+- `sources.md`에 2개 출처 추가 (## 2026-10-03 섹션 신설, 파일 최상단)
+- **한국 사례**: 0건 (최근 7일 이내 한국 기관/기업 신규 RAG 발표 미발견)
+- **검증 결과**: URL 200 OK: 0/2건(arxiv.org WebFetch 차단) · snippet-verified: 2/2건 · 단언 톤다운: 0건 · 중복 폐기: 다수(2610.01767·2610.00891 기존 파일 grep 확인 후 신규 등록) · 발굴 시도 → 최종 채택: 약 6건 시도 → 2건 채택
+
 머지 실패: PR #109 (daily/rag-trends-2026-10-01) — 사유: Claude Code 자동 머지 권한 분류기가 리뷰 없는 자동 squash merge를 차단함 (SOFT BLOCK: "Merge Without Review"). PR은 열린 상태 유지, 수동 머지 필요.
 
 ## 2026-10-02 (일일 루프 #107)
