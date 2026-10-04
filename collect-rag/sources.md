@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-10-04 일일 누적 추가 출처 (3건, 루프 #109)
+
+### 글로벌 — 프로덕션 아키텍처·멀티모달 RAG 증거 압축 (CANOPY, 2026-10-01)
+- [arXiv:2610.00923 — CANOPY: Adaptive-Granularity Evidence Compression for Multimodal RAG](https://arxiv.org/abs/2610.00923) — 2026-10-01 · [architecture][multimodal-rag][evidence-compression][adaptive-granularity][hierarchy][region-tree][node-encoder][ranking-objective][token-reduction][33m-corpus][5-benchmarks][canopy] · Hyojeong Yun, Jueun Kim, Wook-Shin Han. 멀티모달 RAG(33M 이종 아이템 코퍼스)에서 검색 아이템을 계층적 지역 트리로 표현하고 골드 증거 어노테이션 기반 랭킹 목적함수로 노드 인코더를 파인튜닝해 쿼리별 최적 세분도를 동적 선택. 증거 토큰 14.2–27.7% 절감(저자 주장). (snippet-verified: arXiv abs/2610.00923 + arXiv html/2610.00923v1 + JyiHUO/arxiv_daily_recommendation_system release + jyyang621/DailyArXiv #425 + zachysun/DailyArXiv #574 5개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처·적응형 RAG 상태 인식 (BELIEFRAG, 2026-09-30)
+- [arXiv:2609.39139 — BELIEFRAG: Making Adaptive RAG State-Aware under Evolving Evidence](https://arxiv.org/abs/2609.39139) — 2026-09-30 · [architecture][adaptive-rag][state-aware][evidence-state][closed-loop][controller][retrieval][rewriting][verification][answering][stopping][abstention][multi-step][token-efficiency] · (저자 미확인). 멀티스텝 적응형 RAG의 증거-상태 단편화 문제를 명시적 증거 상태 변수 + 폐루프 컨트롤러로 해소. 고정 반복 검색 대비 토큰 F1 0.572(vs 0.555), 질문당 토큰 39% 절감(저자 보고). (snippet-verified: arXiv abs/2609.39139 + arXiv html/2609.39139 + jyyang621/DailyArXiv #424 + jyyang621/DailyArXiv #425 + Ep11phany/DailyArXiv #382 5개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처·RAG 환각 분류 (RAGScope, IEEE ICTAI 2026, 2026-09-30)
+- [arXiv:2609.39075 — RAGScope: A Leakage-Controlled, Cost-Aware Evidence-Gating Protocol for RAG Hallucination Triage](https://arxiv.org/abs/2609.39075) — 2026-09-30 · [architecture][production][hallucination][triage][evidence-gating][leakage-controlled][cost-aware][budget][local-gate][cpu][6ms][ictai2026][precision-0.748][real-time] · (저자 미확인). 태스크 입력·검색 컨텍스트·답변 텍스트만으로 환각 위험 응답을 분류하는 경량 프로토콜. 상위 10% 예산에서 precision 0.748, CPU 추론 6.22 ms/example(DeBERTa-NLI 대비 약 23배 빠름). 제38회 IEEE ICTAI 2026 채택. (snippet-verified: arXiv abs/2609.39075 + arXiv html/2609.39075 + jyyang621/DailyArXiv #425 + Ep11phany/DailyArXiv #382 4개 이상 독립 출처)
+
 ## 2026-10-03 일일 누적 추가 출처 (2건, 루프 #108)
 
 ### 글로벌 — 프로덕션 아키텍처·멀티홉·인덱싱 효율 (마트료시카 계층적 RAG 멀티홉 QA, MatRAG, 2026-10-01)
