@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-10-05 (일일 루프 #110)
+- **신규 사례 3건** (WebFetch arxiv.org 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 발표 미발견)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-10-05-01 | arXiv:2610.03421 — CLIMB: 멀티모달 RAG 신뢰도 기반 보완 증거 풀링 학습 불필요 프레임워크 (Hang Gao 외 5인, 2026-10-02, EMNLP 2026 Findings) | 프로덕션 아키텍처·멀티모달 RAG (MMR 보완 증거 풀, R/E/C 비평가, 신뢰도 기반 답변 교체 게이팅, training-free, Encyclopedic-VQA·InfoSeek) | 02-프로덕션-아키텍처.md |
+| GL-2026-10-05-02 | arXiv:2610.02472 — APDMem: 에이전트 제어 점진적 공개 기반 쿼리 적응형 장기 메모리 (Chin-Lun Fu 외 3인, 2026-10-01, EMNLP 2026 Industry Track) | 에이전트·툴유즈 (4계층 계층적 메모리, 점진적 공개 컨트롤러, 전체 8% 접근으로 LongMemEval 강력 성능) | 03-에이전트-툴유즈-MCP.md |
+| GL-2026-10-05-03 | arXiv:2610.02510 — CourseChat: 교육용 온프레미스 멀티 코스 RAG 튜터 하드웨어-소프트웨어 트레이드오프 (Sidney Shapiro·Joshua Lindemann, 2026-10-01, cs.IR) | 산업별·교육 (온프레미스 6코스, Ollama+로컬 벡터DB+FastAPI, Moodle 통합, 12B 속도 게이트 통과) | 04-산업별-사례.md |
+
+- **검증 결과**: 3건 전원 5점 자가검증 통과; snippet-verified (전건)
+  1. **arXiv:2610.03421 (CLIMB)** [Hang Gao, Wujiang Xu, Zhixing Zhang, Kai Mei, Jingyi Yang, Dimitris N. Metaxas]: 멀티모달 RAG에서 MMR 스타일 보완 증거 풀 구성 + R/E/C 비평가 기반 신뢰도 제어 정제로 Top-K 중복 패시지 문제와 답변 드리프트를 동시 해결. Encyclopedic-VQA·InfoSeek에서 멀티모달 기준선 대비 향상. Training-free. EMNLP 2026 Findings. → `02-프로덕션-아키텍처.md` RAGScope 다음(## 한국 환경 특이점 앞)에 추가
+  2. **arXiv:2610.02472 (APDMem)** [Chin-Lun Fu, Anagha Kulkarni, Hong Ni, Behrouz Madahian]: 대화 에이전트 장기 메모리를 4계층(주제요약·핵심사실·턴증거·원문)으로 구성하고 에이전트 컨트롤러가 쿼리 복잡도에 따라 점진적 하강. LongMemEval에서 전체 대화의 8%만 접근해 강력 성능. EMNLP 2026 Industry Track. → `03-에이전트-툴유즈-MCP.md` TAEC 다음(## 이 도메인의 공통 패턴 앞)에 추가
+  3. **arXiv:2610.02510 (CourseChat)** [Sidney Shapiro, Joshua Lindemann]: 경영대학 6과목 온프레미스 RAG 튜터. Ollama+로컬 벡터DB+FastAPI+Moodle 통합. 12B 모델이 클래스룸 속도 게이트 통과, 8B 프로덕션 운영. 클라우드 제약 교육기관용 하드웨어-소프트웨어 트레이드오프 실증. → `04-산업별-사례.md` 고에너지 물리학 RAG 다음(## 실패·논란 사례 앞)에 추가
+
+- `sources.md`에 3개 출처 추가 (## 2026-10-05 섹션 신설, 파일 최상단)
+- **한국 사례**: 0건 (최근 7일 이내 한국 기관/기업 신규 RAG 발표 미발견)
+- **검증 결과**: URL 200 OK: 0/3건(arxiv.org WebFetch 차단) · snippet-verified: 3/3건(4개 이상 독립 출처) · 단언 톤다운: 0건 · 중복 폐기: 다수(기존 파일 grep 확인, 미수록 확인 후 신규 등록) · 발굴 시도 → 최종 채택: 약 8건 시도 → 3건 채택
+
 ## 2026-10-04 (일일 루프 #109)
 - **신규 사례 3건** (WebFetch arxiv.org·alphaxiv.org·haebom.dev 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 발표 미발견)
 

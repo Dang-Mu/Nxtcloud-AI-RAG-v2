@@ -1002,6 +1002,23 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **결과·교훈**: ViDoSeek·SlideVQA·MMLongBench-Doc 세 벤치마크에서 학습 불필요 시각적 RAG 기준선 대비 전체 평균 최고 정확도 달성(저자 주장). **학습 없이 기존 파이프라인에 경로 상태 추적만 추가해 멀티스텝 시각 에이전트의 증거 활용 효율을 개선하는 실용적 접근법**. PDF·슬라이드·영상 문서 에이전트에서 시각 검색 품질 향상이 필요한 엔터프라이즈 워크로드에 직접 적용 가능.
 - **출처**: [arXiv:2609.37349 — TAEC: Trajectory-Aware Evidence Coordination for Multi-Step Visual RAG](https://arxiv.org/abs/2609.37349) (2026-09-29, snippet-verified: arXiv abs + arXiv html + jyyang621/DailyArXiv #423 + tangwen-qian/DailyArXiv #617 + Ep11phany/DailyArXiv #380 5개 이상 독립 출처)
 
+### APDMem — 에이전트 제어 점진적 공개 기반 쿼리 적응형 장기 메모리 (arXiv:2610.02472, EMNLP 2026 Industry Track, 2026-10-01)
+
+> **APDMem: Agent-Controlled Progressive Disclosure for Query-Adaptive Long-Term Memory** (arXiv:2610.02472, 2026-10-01)
+
+- **목적**: 대화 에이전트의 장기 메모리 검색에서 발생하는 비용–충실도 트레이드오프 문제 해결. 단순 쿼리는 고수준 요약만으로 충분하지만 복잡한 멀티홉·시간 추론·정밀 증거 쿼리는 원문 수준의 세부 정보까지 접근해야 한다. 기존 단일 레벨 메모리 스토어는 이 양극 요구를 동시에 만족하지 못함.
+- **데이터 소스·벤치마크**: LongMemEval — 장기 기억 추론을 위한 대화 에이전트 평가 벤치마크.
+- **스택**: 4계층 계층적 메모리 아키텍처 + 에이전트 제어 점진적 공개 컨트롤러. 기존 RAG 파이프라인과 독립적으로 메모리 레이어로 통합 가능.
+- **아키텍처 특이점 — 4계층 메모리 구조**:
+  1. **주제 요약(Thematic Summaries)**: 대화 전체의 고수준 주제 응축.
+  2. **개인화 핵심 사실(Personalized Key Facts)**: 사용자 특화 중요 정보 추출 레이어.
+  3. **턴 레벨 증거 노트(Turn-Level Evidence Notes)**: 대화 턴별 증거 단편 요약.
+  4. **원문 메시지(Raw Messages)**: 원본 대화 문장 — 정밀 증거 요구 시 최후 접근 레이어.
+  - **에이전트 컨트롤러**: 먼저 최상위 요약만 읽고, 단순 쿼리는 즉시 종료. 복잡한 쿼리는 필요한 레이어까지만 점진적으로 하강(progressive disclosure)해 불필요한 전수 탐색 차단.
+- **결과·교훈**: LongMemEval에서 전체 대화의 **8%만 접근**해 강력한 장기 메모리 추론 성능 달성(저자 보고). 단순 쿼리부터 복잡한 멀티홉·시간 추론까지 적응적 비용–충실도 트레이드오프를 명시적으로 제어하는 메모리 아키텍처. **EMNLP 2026 Industry Track** 채택 — 산업 현장 장기 대화 에이전트(CS봇·코파일럿·개인 비서)의 메모리 레이어 설계 기준점.
+- **저자**: Chin-Lun Fu, Anagha Kulkarni, Hong Ni, Behrouz Madahian
+- **출처**: [arXiv:2610.02472 — APDMem: Agent-Controlled Progressive Disclosure for Query-Adaptive Long-Term Memory](https://arxiv.org/abs/2610.02472) (2026-10-01, EMNLP 2026 Industry Track, snippet-verified: arXiv abs/2610.02472 + arXiv html/2610.02472 + Bhanubathini2002/arxiv-radar #43 + loveunk/deep-learning-llm-agent-notes #121 4개 이상 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.

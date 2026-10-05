@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-10-05 일일 누적 추가 출처 (3건, 루프 #110)
+
+### 글로벌 — 프로덕션 아키텍처·멀티모달 RAG 보완 증거 풀링 (CLIMB, EMNLP 2026 Findings, 2026-10-02)
+- [arXiv:2610.03421 — CLIMB: Confidence-Guided Complementary Evidence for Multimodal Retrieval-Augmented Generation](https://arxiv.org/abs/2610.03421) — 2026-10-02 · [architecture][multimodal-rag][confidence-guided][complementary-evidence][mmr][r-e-c-critic][cross-modal-alignment][evidence-specificity][training-free][confidence-estimator][answer-gating][encyclopedic-vqa][infoseek][emnlp2026-findings] · Hang Gao, Wujiang Xu, Zhixing Zhang, Kai Mei, Jingyi Yang, Dimitris N. Metaxas. 멀티모달 RAG에서 MMR 스타일 보완 증거 풀 구성 + R/E/C 비평가(관련성·증거구체성·교차모달정렬) + 신뢰도 기반 답변 교체 게이팅으로 Top-K 중복·답변 드리프트 동시 해결. Encyclopedic-VQA·InfoSeek에서 기준선 대비 향상. Training-free. EMNLP 2026 Findings. (snippet-verified: arXiv abs/2610.03421 + arXiv html/2610.03421 + Bhanubathini2002/arxiv-radar #43 + loveunk/deep-learning-llm-agent-notes #121 4개 이상 독립 출처)
+
+### 글로벌 — 에이전트·툴유즈 (APDMem: 점진적 공개 장기 메모리, EMNLP 2026 Industry Track, 2026-10-01)
+- [arXiv:2610.02472 — APDMem: Agent-Controlled Progressive Disclosure for Query-Adaptive Long-Term Memory](https://arxiv.org/abs/2610.02472) — 2026-10-01 · [agent][memory][long-term-memory][progressive-disclosure][hierarchical][4-layer][thematic-summary][key-facts][evidence-notes][raw-messages][controller][adaptive][longmemeval][8-percent-access][cost-fidelity][emnlp2026-industry][conversational-agent] · Chin-Lun Fu, Anagha Kulkarni, Hong Ni, Behrouz Madahian. 대화 에이전트 장기 메모리를 4계층(주제요약·핵심사실·턴증거·원문)으로 구조화, 에이전트 컨트롤러가 쿼리 복잡도에 따라 점진적 하강해 전체 대화의 8%만 접근하여 LongMemEval 강력 성능 달성. EMNLP 2026 Industry Track. (snippet-verified: arXiv abs/2610.02472 + arXiv html/2610.02472 + Bhanubathini2002/arxiv-radar #43 + loveunk/deep-learning-llm-agent-notes #121 4개 이상 독립 출처)
+
+### 글로벌 — 산업별·교육 (CourseChat: 경영대학 온프레미스 멀티 코스 RAG 튜터, 2026-10-01)
+- [arXiv:2610.02510 — On-Premises Multi-Course RAG Tutoring for Business Education: Hardware-Software Trade-offs in a Campus AI Tutor](https://arxiv.org/abs/2610.02510) — 2026-10-01 · [education][on-premises][campus][coursechat][moodle][ollama][local-llm][local-vector-db][fastapi][6-courses][twin-edge-hosts][speed-gate][12b][8b-production][hardware-software-tradeoff][cs.ir] · Sidney Shapiro, Joshua Lindemann. 경영대학 학부 6개 과목 온프레미스 RAG 튜터. Ollama 로컬 LLM + 로컬 벡터DB + FastAPI + Moodle 통합. 클래스룸 속도 게이트에서 12B·7B 통과, 대형 모델 실패. 8B 프로덕션 운영. 저작권·학생 데이터 보호 클라우드 제약 교육기관용 아키텍처 트레이드오프 실증. (snippet-verified: arXiv abs/2610.02510 + arXiv html/2610.02510v1 + Bhanubathini2002/arxiv-radar #43 + JyiHUO/arxiv_daily_recommendation_system release 4개 이상 독립 출처)
+
 ## 2026-10-04 일일 누적 추가 출처 (3건, 루프 #109)
 
 ### 글로벌 — 프로덕션 아키텍처·멀티모달 RAG 증거 압축 (CANOPY, 2026-10-01)
