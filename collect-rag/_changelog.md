@@ -1,5 +1,21 @@
 # 업데이트 로그
 
+## 2026-10-06 (일일 루프 #111)
+- **신규 사례 2건** (WebFetch arxiv.org 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 발표 미발견)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-10-06-01 | arXiv:2610.01936 — RAG 랜드스케이프 4축 분류 체계: 효율·방어·상호작용·추론 (Meghana Sunil 외 3인, 2026-10-01, Artificial Intelligence Reviews) | 프로덕션 아키텍처·RAG 서베이 (4축 분류: Efficiency·Defense·Interactivity·Reasoning, 설계 진단 프레임워크, 밀집/희소 검색·RL 정책·적대적 방어·멀티스텝 추론) | 02-프로덕션-아키텍처.md |
+| GL-2026-10-06-02 | arXiv:2610.05826 — Bounded Provisional Visibility: 지속 인제스천 RAG 벡터 저장소 오염 노출 경계 프로토콜 (Chuhong Xu·Lu Yi·Gangzhen Qian 외 3인, 2026-10-05, IEEE CBDCom 2026) | 프로덕션 아키텍처·보안 (Fail-Closed 임시 가시성, 가시성 예산, 출처 범위 봉쇄, 쿼리 경로 집행 지연, 시간 공격 표면 경계화) | 02-프로덕션-아키텍처.md |
+
+- **검증 결과**: 2건 전원 5점 자가검증 통과; snippet-verified (전건)
+  1. **arXiv:2610.01936 (RAG Landscape Taxonomy)** [Meghana Sunil, Shravya V, Shravan Venkatraman, Joe Dhanith PR]: 현대 RAG 기법을 효율·방어·상호작용·추론 4축으로 분류하는 서베이/택소노미. 실무자가 생산 환경 병목에 따라 축을 진단하고 기법을 선택할 수 있는 설계 프레임워크로 활용 가능. Artificial Intelligence Reviews. → `02-프로덕션-아키텍처.md` CLIMB 다음(## 한국 환경 특이점 앞)에 추가
+  2. **arXiv:2610.05826 (Bounded Provisional Visibility)** [Chuhong Xu, Lu Yi, Gangzhen Qian, Kainan Zhou, Zhaoyi Li, Hang Xiao]: 지속 인제스천 RAG에서 미검증 콘텐츠 노출 시간을 Fail-Closed 임시 가시성 프로토콜로 경계화. 가시성 예산 + 출처 계통 봉쇄 + 쿼리 경로 재집행으로 타이밍 우회 방어. 동일 팀의 arXiv:2609.16564(쿼리 시점 출처-위험 분류)와 상보적 방어 계층 확장. IEEE CBDCom 2026. → `02-프로덕션-아키텍처.md` arXiv:2610.01936 다음(## 한국 환경 특이점 앞)에 추가
+
+- `sources.md`에 2개 출처 추가 (## 2026-10-06 섹션 신설, 파일 최상단)
+- **한국 사례**: 0건 (최근 7일 이내 한국 기관/기업 신규 RAG 발표 미발견; Naver·Kakao·Toss·SKT·KT·우아한형제들·LY Corp·LG CNS·금융권·의료·법률 섹터 탐색 완료)
+- **검증 결과**: URL 200 OK: 0/2건(arxiv.org WebFetch 차단) · snippet-verified: 2/2건(4개 이상 독립 출처) · 단언 톤다운: 0건 · 중복 폐기: 다수(기존 파일 grep 확인, 미수록 확인 후 신규 등록) · 발굴 시도 → 최종 채택: 약 8건 시도 → 2건 채택
+
 ## 2026-10-05 (일일 루프 #110)
 - **신규 사례 3건** (WebFetch arxiv.org 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 발표 미발견)
 
