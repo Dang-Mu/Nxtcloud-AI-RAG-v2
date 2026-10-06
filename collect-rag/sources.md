@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-10-06 일일 누적 추가 출처 (2건, 루프 #111)
+
+### 글로벌 — 프로덕션 아키텍처·RAG 서베이 (RAG Landscape 4축 분류 체계, Artificial Intelligence Reviews, 2026-10-01)
+- [arXiv:2610.01936 — Mapping the RAG Landscape: A Four Axis Taxonomy of Efficiency, Defense, Interactivity, and Reasoning](https://arxiv.org/abs/2610.01936) — 2026-10-01 · [architecture][survey][taxonomy][4-axis][efficiency][defense][interactivity][reasoning][dense-retrieval][sparse-retrieval][fusion][embedding-optimization][rl-retrieval][adversarial-robustness][user-driven][multi-step-reasoning][chain-of-thought][ai-reviews] · Meghana Sunil, Shravya V, Shravan Venkatraman, Joe Dhanith PR. 현대 RAG 기법을 효율·방어·상호작용·추론 4축으로 분류하는 서베이/택소노미. 실무자가 생산 환경 병목 축을 진단해 기법을 선택하는 설계 프레임워크로 활용 가능. Artificial Intelligence Reviews. (snippet-verified: arXiv abs/2610.01936 + arXiv html/2610.01936v1 + jyyang621/DailyArXiv #425 + Ep11phany/DailyArXiv #384 4개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처·보안 (Bounded Provisional Visibility: 지속 인제스천 RAG 오염 노출 경계, IEEE CBDCom 2026, 2026-10-05)
+- [arXiv:2610.05826 — Bounded Provisional Visibility: Controlling Poisoning Exposure in Continuously Ingested RAG Vector Stores](https://arxiv.org/abs/2610.05826) — 2026-10-05 · [architecture][security][poisoning][continuous-ingestion][vector-store][temporal-attack-surface][fail-closed][provisional-visibility][visibility-budget][lineage-scoped-containment][query-path-enforcement][verification][ingestion-control][cbdcom2026] · Chuhong Xu, Lu Yi, Gangzhen Qian, Kainan Zhou, Zhaoyi Li, Hang Xiao. 지속 인제스천 RAG에서 미검증 콘텐츠 노출을 Fail-Closed 임시 가시성 프로토콜(가시성 예산 + 출처 계통 봉쇄 + 쿼리 경로 재집행)로 경계화. 동일 팀 arXiv:2609.16564(쿼리 시점 출처-위험 분류)와 상보적 방어 계층 확장. IEEE CBDCom 2026. (snippet-verified: arXiv abs/2610.05826 + arXiv html/2610.05826v1 + jyyang621/DailyArXiv #427 + Ep11phany/DailyArXiv #384 4개 이상 독립 출처)
+
 ## 2026-10-05 일일 누적 추가 출처 (3건, 루프 #110)
 
 ### 글로벌 — 프로덕션 아키텍처·멀티모달 RAG 보완 증거 풀링 (CLIMB, EMNLP 2026 Findings, 2026-10-02)
