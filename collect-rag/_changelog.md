@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-10-07 (일일 루프 #112)
+- **신규 사례 3건** (WebFetch arxiv.org·alphaxiv.org·huggingface.co 차단 환경, snippet-verified 전건; 한국 사례: 0건 — if(kakao)26 컨퍼런스 2026-10-13~14 예정으로 미개최, 최근 7일 이내 한국 기관/기업 신규 RAG 발표 미발견)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-10-07-01 | arXiv:2609.35774 — Post-Generation Verification Dominates Retrieval Optimization: 2^4 팩토리얼 절제 실험 (Ng S. T. Chong, 2026-09-29, cs.IR) | 프로덕션 아키텍처·RAG 파이프라인 설계 (CC d=+0.48 지배, ToC d=+0.22 무비용, Agentic Search 불안정, SE 중립) | 02-프로덕션-아키텍처.md |
+| GL-2026-10-07-02 | arXiv:2610.08674 — EC-RAG: Event Chain RAG for Long Video Understanding (Yuhao Qin 외 3인, 2026-10-06, cs.CV) | 프로덕션 아키텍처·비디오 RAG (의미 단위 이벤트 체인, 학습 불필요, 멀티모달 증거 수집, 장기 인과 추론) | 02-프로덕션-아키텍처.md |
+| GL-2026-10-07-03 | arXiv:2610.08452 — Agentic AutoRAG: RAG Pipeline Optimization through Reasoning-Driven Agents (Strand 외 3인, 2026-10-06, REALM@EMNLP 2026 + ML for Systems@NeurIPS 2026) | 에이전트·툴유즈 (Diagnoser–Proposer 루프, 정확도·비용 파레토 최적화, 오픈소스, AutoML) | 03-에이전트-툴유즈-MCP.md |
+
+- **검증 결과**: 3건 전원 5점 자가검증 통과; snippet-verified (전건)
+  1. **arXiv:2609.35774 (Post-Generation Verification)** [Ng S. T. Chong]: 4개 RAG 파이프라인 피처(SE·AS·CC·ToC)의 2^4=16 구성 완전 교차 실험. CC(Completeness Check, 생성 후 검증)가 d=+0.48로 지배적 피처 — CC 단독(4.31/5)이 SE+AS+ToC 합산(4.11)을 초과. ToC는 LLM 비용 없이 d=+0.22 제공. AS는 불안정, SE는 중립. 검색 최적화보다 생성 후 검증이 RAG 품질 향상에 더 효과적임을 실험 입증. → `02-프로덕션-아키텍처.md` Bounded Provisional Visibility 다음(## 한국 환경 특이점 앞)에 추가
+  2. **arXiv:2610.08674 (EC-RAG)** [Yuhao Qin, Junbo Wang, Yuke Li, Yining Zhu]: 장편 비디오를 의미 단위 이벤트로 분할해 시간 순서 이벤트 체인으로 조직. 쿼리 기반 체인 탐색 + 멀티모달 증거 수집으로 인과·멀티이벤트 추론 강화. 학습 불필요. 강력한 클립 기반 RAG 및 장문 컨텍스트 비디오 모델 대비 일관된 우위(저자 주장). → `02-프로덕션-아키텍처.md` Post-Generation Verification 다음(## 한국 환경 특이점 앞)에 추가
+  3. **arXiv:2610.08452 (Agentic AutoRAG)** [Lasse B. Strand, Robert Jakob, Kevin O'Sullivan, Markus Kreft]: Diagnoser 에이전트가 시도마다 질문별 실패 증거를 해석하고 Proposer가 다음 구성 선택. 정확도·비용 파레토 프론티어 출력. REALM@EMNLP 2026 + ML for Systems@NeurIPS 2026 채택. 의료 코퍼스 실험 77%@$0.000741/쿼리. 오픈소스(Agentic-Systems-Lab). → `03-에이전트-툴유즈-MCP.md` APDMem 다음(## 이 도메인의 공통 패턴 앞)에 추가
+
+- `sources.md`에 3개 출처 추가 (## 2026-10-07 섹션 신설, 파일 최상단)
+- **한국 사례**: 0건 (if(kakao)26 컨퍼런스 2026-10-13~14 개최 예정으로 미개최 상태; DEVIEW 2026 미발견; Naver·Kakao·Toss·SKT·KT·우아한형제들·LY Corp·금융권·의료·법률 섹터 탐색 완료)
+- **검증 결과**: URL 200 OK: 0/3건(arxiv.org WebFetch 차단) · snippet-verified: 3/3건(3~7개 이상 독립 출처) · 단언 톤다운: 0건 · 중복 폐기: 다수(기존 파일 grep 확인, 미수록 확인 후 신규 등록) · 발굴 시도 → 최종 채택: 약 10건 시도 → 3건 채택
+
 ## 2026-10-06 (일일 루프 #111)
 - **신규 사례 2건** (WebFetch arxiv.org 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 발표 미발견)
 

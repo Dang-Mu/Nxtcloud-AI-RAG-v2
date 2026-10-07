@@ -1,5 +1,16 @@
 # 출처 목록
 
+## 2026-10-07 일일 누적 추가 출처 (3건, 루프 #112)
+
+### 글로벌 — 프로덕션 아키텍처·RAG 파이프라인 설계 (Post-Generation Verification Dominates Retrieval Optimization, 2026-09-29)
+- [arXiv:2609.35774 — Post-Generation Verification Dominates Retrieval Optimization: A 2^4 Factorial Ablation of RAG Pipeline Features](https://arxiv.org/abs/2609.35774) — 2026-09-29 · [architecture][production][factorial-ablation][completeness-check][post-generation-verification][retrieval-optimization][toc-guided][agentic-search][section-expansion][d-plus-0.48][d-plus-0.22][768-conditions][5-documents][24-queries][cs.ir] · Ng S. T. Chong. 4개 RAG 파이프라인 피처(SE·AS·CC·ToC)의 2^4=16 구성 완전 교차 실험. 생성 후 검증(CC, d=+0.48)이 검색 최적화보다 RAG 품질 향상에 더 효과적임을 실험적으로 입증. CC 단독(4.31/5) > SE+AS+ToC 합산(4.11). ToC는 LLM 비용 없이 d=+0.22 제공. (snippet-verified: arXiv abs/2609.35774 + arXiv html/2609.35774 + jyyang621/DailyArXiv #427 + jyyang621/DailyArXiv #428 + Ep11phany/DailyArXiv #385 + awesomepapers.io/2609.35774 + tt-ranger/intelleo-website #16 7개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처·비디오 RAG (EC-RAG: Event Chain RAG for Long Video Understanding, 2026-10-06)
+- [arXiv:2610.08674 — EC-RAG: Event Chain Retrieval-Augmented Generation for Long Video Understanding](https://arxiv.org/abs/2610.08674) — 2026-10-06 · [architecture][video-rag][long-video][event-chain][multimodal][training-free][temporal-reasoning][causal-inference][multi-event-integration][semantically-coherent][segment][cs.cv] · Yuhao Qin, Junbo Wang, Yuke Li, Yining Zhu. 장편 비디오를 의미 응집 세그먼트로 분할해 이벤트 체인으로 조직하고 쿼리 기반 체인 탐색으로 멀티모달 증거를 수집. 프레임·클립 단위 독립 처리 대비 인과 추론·멀티이벤트 통합에서 일관된 우위(저자 주장). 학습 불필요. (snippet-verified: arXiv abs/2610.08674 web search snippet + jyyang621/DailyArXiv #428 + Ep11phany/DailyArXiv #385 3개 이상 독립 출처)
+
+### 글로벌 — 에이전트·툴유즈 (Agentic AutoRAG: 추론 기반 에이전트 자동 RAG 파이프라인 최적화, REALM@EMNLP 2026 + ML for Systems@NeurIPS 2026, 2026-10-06)
+- [arXiv:2610.08452 — Agentic AutoRAG: RAG Pipeline Optimization through Reasoning-Driven Agents](https://arxiv.org/abs/2610.08452) — 2026-10-06 · [agent][automl][pipeline-optimization][diagnoser][proposer][pareto-frontier][accuracy][cost-per-query][hotpotqa][musique][multihop-rag][healthcare][open-source][agentic-systems-lab][realm-emnlp2026][ml-for-systems-neurips2026] · Lasse B. Strand, Robert Jakob, Kevin O'Sullivan, Markus Kreft. Diagnoser 에이전트가 시도마다 질문별 실패 증거를 해석하고 Proposer가 다음 RAG 구성 선택. 정확도·비용 파레토 프론티어 자동 출력. REALM@EMNLP 2026 + ML for Systems@NeurIPS 2026 채택. 오픈소스(Agentic-Systems-Lab). (snippet-verified: arXiv abs/2610.08452 web search snippet + arXiv html/2610.08452v1 + JyiHUO/arxiv_daily_recommendation_system + jyyang621/DailyArXiv #428 + loveunk/deep-learning-llm-agent-notes #123 + Ep11phany/DailyArXiv #385 6개 이상 독립 출처)
+
 ## 2026-10-06 일일 누적 추가 출처 (2건, 루프 #111)
 
 ### 글로벌 — 프로덕션 아키텍처·RAG 서베이 (RAG Landscape 4축 분류 체계, Artificial Intelligence Reviews, 2026-10-01)
