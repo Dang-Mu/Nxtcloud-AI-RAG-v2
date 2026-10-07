@@ -1019,6 +1019,22 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **저자**: Chin-Lun Fu, Anagha Kulkarni, Hong Ni, Behrouz Madahian
 - **출처**: [arXiv:2610.02472 — APDMem: Agent-Controlled Progressive Disclosure for Query-Adaptive Long-Term Memory](https://arxiv.org/abs/2610.02472) (2026-10-01, EMNLP 2026 Industry Track, snippet-verified: arXiv abs/2610.02472 + arXiv html/2610.02472 + Bhanubathini2002/arxiv-radar #43 + loveunk/deep-learning-llm-agent-notes #121 4개 이상 독립 출처)
 
+### Agentic AutoRAG — 추론 기반 에이전트 자동 RAG 파이프라인 최적화 (arXiv:2610.08452, REALM@EMNLP 2026 + ML for Systems@NeurIPS 2026, 2026-10-06)
+
+> **Agentic AutoRAG: RAG Pipeline Optimization through Reasoning-Driven Agents** (arXiv:2610.08452, 2026-10-06)
+
+- **목적**: RAG 파이프라인 설정(청킹·임베딩 모델·리랭킹·생성까지 상호 의존하는 선택지)의 자동 최적화. 사람이 수행하던 반복 실험을 추론 기반 에이전트가 대신.
+- **데이터 소스·벤치마크**: HotpotQA, MuSiQue, MultiHop-RAG, 의료 도메인 생성 코퍼스.
+- **스택**: Diagnoser 에이전트 + Proposer 에이전트 + 고정 QA 평가 시험셋 기반 반복 최적화 루프. 오픈소스(GitHub Agentic-Systems-Lab). REALM@EMNLP 2026 + ML for Systems@NeurIPS 2026 워크샵 채택.
+- **아키텍처 특이점 — Diagnoser–Proposer 루프**:
+  1. **후보 구성 실험**: 매 시도마다 한 가지 RAG 파이프라인 구성을 고정 QA 시험셋에서 실행.
+  2. **Diagnoser**: 각 질문별 실패 증거(오답·검색 누락·컨텍스트 문제)를 해석해 현재 구성의 약점을 진단.
+  3. **Proposer**: 진단 결과 + 점수 이력 + 과거 구성을 참조해 다음 시도할 구성 선택.
+  4. **파레토 프론티어**: 정확도와 쿼리당 비용 두 축을 동시에 최적화해 비지배(non-dominated) 구성 집합으로 결과 출력.
+- **결과·교훈**: 의료 코퍼스 실험에서 정확도 77%@$0.000741/쿼리의 파레토 포인트 달성(해당 실험 한정). 랜덤 서치 기준선 대비 효율적인 파이프라인 탐색 확인. **RAG 파이프라인 튜닝을 에이전트가 자동으로 진단·제안하는 MLOps 패러다임 참조 구현.** 파이프라인 구성 실험 비용과 시간을 줄이는 AutoML 방향 사례.
+- **저자**: Lasse B. Strand, Robert Jakob, Kevin O'Sullivan, Markus Kreft
+- **출처**: [arXiv:2610.08452 — Agentic AutoRAG: RAG Pipeline Optimization through Reasoning-Driven Agents](https://arxiv.org/abs/2610.08452) (2026-10-06, REALM@EMNLP 2026 + ML for Systems@NeurIPS 2026, snippet-verified: arXiv abs/2610.08452 web search snippet + arXiv html/2610.08452v1 + JyiHUO/arxiv_daily_recommendation_system + jyyang621/DailyArXiv #428 + loveunk/deep-learning-llm-agent-notes #123 + Ep11phany/DailyArXiv #385 6개 이상 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.
