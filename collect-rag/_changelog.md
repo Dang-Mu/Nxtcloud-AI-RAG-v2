@@ -1,5 +1,21 @@
 # 업데이트 로그
 
+## 2026-10-08 (일일 루프 #113)
+- **신규 사례 2건** (WebFetch arxiv.org 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 발표 미발견; if(kakao)26 컨퍼런스 2026-10-13~14 예정으로 미개최)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-10-08-01 | arXiv:2610.08571 — RAG-PIBench: 누출 방지 간접 프롬프트 인젝션 탐지 벤치마크 (Niveen O. Jaffal 외 2인, 2026-10-06, cs.CR) | 프로덕션 아키텍처·RAG 보안 (간접 인젝션 표적, 4,876개 보호 테스트 분할, DistilBERT F1 0.896 PR-AUC 0.968, TF-IDF 경쟁력 있음) | 02-프로덕션-아키텍처.md |
+| GL-2026-10-08-02 | arXiv:2610.08205 — 툴 콜링 vs 벡터 RAG 소규모 그리스어-영어 지식 베이스 비교 (2026-10-06) | 프로덕션 아키텍처·다국어 RAG (비라틴 문자 입력 변형 내성, Greeklish, 소규모 이중언어 실증) | 02-프로덕션-아키텍처.md |
+
+- **검증 결과**: 2건 전원 5점 자가검증 통과; snippet-verified (전건)
+  1. **arXiv:2610.08571 (RAG-PIBench)** [Niveen O. Jaffal, Ahmet Yuksel, David Mohaisen]: RAG 파이프라인 내 간접 프롬프트 인젝션 탐지 평가 인프라 표준화. 4,876개 컨텍스트 예제로 구성, 훈련·검증·보호 테스트 분할로 누출 방지 설계. DistilBERT F1 0.896, PR-AUC 0.968 최고 성능; TF-IDF SVM 기반 베이스라인도 경쟁력 있어 경량 배포에 고려 가능. → `02-프로덕션-아키텍처.md` EC-RAG 다음(## 한국 환경 특이점 앞)에 추가
+  2. **arXiv:2610.08205 (Tool-calling vs Vector RAG)** [저자 unverified]: 소규모 그리스어-영어 이중언어 지식 베이스에서 툴 콜링 vs 벡터 RAG 정확도·내성 실증 비교. 그리스 문자·Greeklish·강세 유무 등 입력 변형 내성 실험. 비라틴 문자 다국어 RAG 아키텍처 선택 시 입력 변형 내성이 실질적 고려 요소임을 소규모 케이스로 실증. → `02-프로덕션-아키텍처.md` RAG-PIBench 다음(## 한국 환경 특이점 앞)에 추가
+
+- `sources.md`에 2개 출처 추가 (## 2026-10-08 섹션 신설, 파일 최상단)
+- **한국 사례**: 0건 (if(kakao)26 컨퍼런스 2026-10-13~14 개최 예정으로 미개최 상태; Naver D2·Kakao Tech Blog·Toss Tech·LY Corp·SKT·KT·금융·의료·법률 섹터 탐색 완료; Kakao Tech Blog RAG 관련 게시물 WebFetch 차단으로 내용 미확인)
+- **검증 결과**: URL 200 OK: 0/2건(arxiv.org WebFetch 차단) · snippet-verified: 2/2건(2~5개 이상 독립 출처) · 단언 톤다운: 1건(2610.08205 구체적 수치 unverified 표기) · 중복 폐기: 다수(기존 파일 grep 확인, 미수록 확인 후 신규 등록) · 발굴 시도 → 최종 채택: 약 12건 시도 → 2건 채택
+
 ## 2026-10-07 (일일 루프 #112)
 - **신규 사례 3건** (WebFetch arxiv.org·alphaxiv.org·huggingface.co 차단 환경, snippet-verified 전건; 한국 사례: 0건 — if(kakao)26 컨퍼런스 2026-10-13~14 예정으로 미개최, 최근 7일 이내 한국 기관/기업 신규 RAG 발표 미발견)
 
