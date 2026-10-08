@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-10-08 일일 누적 추가 출처 (2건, 루프 #113)
+
+### 글로벌 — 프로덕션 아키텍처·RAG 보안 (RAG-PIBench, 2026-10-06)
+- [arXiv:2610.08571 — RAG-PIBench: A Leakage-Aware Benchmark for Prompt-Injection Detection in Trustworthy RAG Systems](https://arxiv.org/abs/2610.08571) — 2026-10-06 · [security][prompt-injection][benchmark][leakage-aware][detection][DistilBERT][TF-IDF][4876-examples][indirect-injection][trustworthy-rag][cs.cr] · Niveen O. Jaffal, Ahmet Yuksel, David Mohaisen. RAG 파이프라인 내 간접 프롬프트 인젝션 탐지 벤치마크. 4,876개 컨텍스트 예제, 보호 테스트 분할. DistilBERT F1 0.896, PR-AUC 0.968. (snippet-verified: arXiv abs/2610.08571 + arXiv html/2610.08571 + github.com/micmerritt/ai-security-radar/issues/313 + jyyang621/DailyArXiv #428 + Ep11phany/DailyArXiv #386 5개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처·다국어 RAG (Tool-calling vs Vector RAG Greek-English, 2026-10-06)
+- [arXiv:2610.08205 — Tool-calling retrieval versus vector RAG for a small Greek-English knowledge base: accuracy and robustness to how users type Greek](https://arxiv.org/abs/2610.08205) — 2026-10-06 · [multilingual][tool-calling][vector-rag][robustness][greek][greeklish][bilingual][small-kb][input-variation] · (저자 unverified). 소규모 이중언어 지식 베이스에서 툴 콜링 vs 벡터 RAG 비교. 그리스어 입력 변형(그리스 문자·Greeklish·강세 유무) 내성 실험. (snippet-verified: jyyang621/DailyArXiv #428 + Ep11phany/DailyArXiv #386 2개 독립 출처)
+
 ## 2026-10-07 일일 누적 추가 출처 (3건, 루프 #112)
 
 ### 글로벌 — 프로덕션 아키텍처·RAG 파이프라인 설계 (Post-Generation Verification Dominates Retrieval Optimization, 2026-09-29)
