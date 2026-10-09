@@ -1,5 +1,21 @@
 # 업데이트 로그
 
+## 2026-10-09 (일일 루프 #114)
+- **신규 사례 2건** (WebFetch arxiv.org 차단 환경, snippet-verified 전건; 한국 사례: 0건 — if(kakao)26 컨퍼런스 2026-10-13~14 예정으로 미개최, 최근 7일 이내 한국 기관/기업 신규 RAG 발표 미발견)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-10-09-01 | arXiv:2610.11893 — RAG 시스템 보안 메타모델: 공격·위험·완화 카탈로그 (Steve Nouyep, Sébastien Salva, Maxime Puys, 2026-10-08, cs.CR) | 프로덕션 아키텍처·RAG 보안 (3 RAG 유형, 8 공격 표면, 38 공격, 12 취약점, 41 위험, 72 완화책, 43편 분석, OWASP LLM Top 10, 인터랙티브 시각화) | 02-프로덕션-아키텍처.md |
+| GL-2026-10-09-02 | arXiv:2610.08463 — UNREAL: LLM 내부 표현으로 검색·장문 컨텍스트 통합 (Edan Kinderman 외 6인, NVIDIA, 2026-10-06, cs.CL/cs.IR/cs.LG) | 프로덕션 아키텍처·RAG+Long-Context 통합 (동결 LLM 단일 모델, 500K 미만 파라미터, HotpotQA recall +24.1pp, NoLiMa@128K 1.0%→24.83%) | 02-프로덕션-아키텍처.md |
+
+- **검증 결과**: 2건 전원 5점 자가검증 통과; snippet-verified (전건)
+  1. **arXiv:2610.11893 (RAG Security Meta-Model)** [Steve Nouyep, Sébastien Salva, Maxime Puys]: RAG 파이프라인 보안 위협을 체계화한 메타모델. 43편 논문 반복 분석으로 3 RAG 유형·8 공격 표면·38 공격·12 취약점·41 위험·72 완화책 카탈로그 구축. CIA 영향 연계 및 OWASP LLM Top 10 커버리지 검증. 인제스천 단계 위협 집중·방어 연구 불균형 지적. 인터랙티브 웹 시각화 도구 공개. → `02-프로덕션-아키텍처.md` RAG-PIBench 다음(## 한국 환경 특이점 앞)에 추가
+  2. **arXiv:2610.08463 (UNREAL)** [Edan Kinderman 외 6인, NVIDIA]: 동결 LLM의 내부 표현으로 코퍼스 검색과 장문 컨텍스트 증거 선택을 단일 모델로 통합. 500K 미만 추가 파라미터로 백본 유지. 21M 청크 위키피디아 인덱스에서 HotpotQA recall 49.1%→73.2%, 2WikiMultiHopQA 31.7%→60.1%, MuSiQue 8.8%→14.4%. 장문 컨텍스트: NoLiMa@128K 1.0%→24.83%, LV-Eval@256K F1 49.97%→54.66%. → `02-프로덕션-아키텍처.md` 그리스어 비교 다음(## 한국 환경 특이점 앞)에 추가
+
+- `sources.md`에 2개 출처 추가 (## 2026-10-09 섹션 신설, 파일 최상단)
+- **한국 사례**: 0건 (if(kakao)26 컨퍼런스 2026-10-13~14 개최 예정으로 미개최 상태; Naver D2·Kakao Tech Blog·Toss Tech·LY Corp·SKT·KT·네이버 클라우드 탐색 완료; DEVIEW 2026 미발견)
+- **검증 결과**: URL 200 OK: 0/2건(arxiv.org WebFetch 차단) · snippet-verified: 2/2건 · 단언 톤다운: 0건 · 중복 폐기: 다수(기존 파일 grep 확인, 미수록 확인 후 신규 등록) · 발굴 시도 → 최종 채택: 약 10건 시도 → 2건 채택
+
 ## 2026-10-08 (일일 루프 #113)
 - **신규 사례 2건** (WebFetch arxiv.org 차단 환경, snippet-verified 전건; 한국 사례: 0건 — 최근 7일 이내 한국 기관/기업 신규 RAG 발표 미발견; if(kakao)26 컨퍼런스 2026-10-13~14 예정으로 미개최)
 

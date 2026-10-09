@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-10-09 일일 누적 추가 출처 (2건, 루프 #114)
+
+### 글로벌 — 프로덕션 아키텍처·RAG 보안 메타모델 (A Security Meta-Model for RAG Systems, 2026-10-08)
+- [arXiv:2610.11893 — A Security Meta-Model for Retrieval-Augmented Generation Systems](https://arxiv.org/abs/2610.11893) — 2026-10-08 · [security][meta-model][attack-surface][threat-catalog][cia-impact][owasp-llm-top10][ingestion][weaknesses][mitigations][interactive-visualizer][43-papers][cs.cr] · Steve Nouyep, Sébastien Salva, Maxime Puys. RAG 파이프라인 보안 위협을 체계화한 메타모델. 43편 논문 분석으로 3 RAG 유형·8 공격 표면·38 공격·12 취약점·41 위험·72 완화책 카탈로그. OWASP LLM Top 10 커버리지 검증. 인터랙티브 시각화 도구 공개. (snippet-verified: arXiv abs/2610.11893 + arXiv html/2610.11893 2개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처·RAG+Long-Context 통합 (UNREAL, NVIDIA, 2026-10-06)
+- [arXiv:2610.08463 — UNREAL: Unifying Retrieval and Long-Context with a Single Model](https://arxiv.org/abs/2610.08463) — 2026-10-06 · [architecture][retrieval][long-context][frozen-llm][internal-representation][single-model][nvidia][hotpotqa][2wikimultihopqa][musique][nolima][lv-eval][evidence-selection][efficiency][ttft][cs.cl][cs.ir][cs.lg] · Edan Kinderman 외 6인 (NVIDIA). 동결 LLM 내부 표현으로 코퍼스 검색과 장문 컨텍스트 증거 선택 통합. 500K 미만 추가 파라미터, 백본 유지. HotpotQA recall 49.1%→73.2%, NoLiMa@128K 1.0%→24.83%, LV-Eval@256K F1 49.97%→54.66%. (snippet-verified: arXiv abs/2610.08463 + arXiv html/2610.08463v1 + huggingface.co/papers/2610.08463 + paperswithcode.co/paper/2610.08463 4개 이상 독립 출처)
+
 ## 2026-10-08 일일 누적 추가 출처 (2건, 루프 #113)
 
 ### 글로벌 — 프로덕션 아키텍처·RAG 보안 (RAG-PIBench, 2026-10-06)
