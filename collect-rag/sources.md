@@ -1,5 +1,10 @@
 # 출처 목록
 
+## 2026-10-10 일일 누적 추가 출처 (1건, 루프 #115)
+
+### 글로벌 — 프로덕션 아키텍처·문서 코퍼스 트리 탐색 RAG (RIT-RAG, 2026-10-08)
+- [arXiv:2610.11370 — RIT-RAG: Navigating Document Corpora with Retrieval-Induced Trees](https://arxiv.org/abs/2610.11370) — 2026-10-08 · [architecture][document-corpus][tree-navigation][retrieval-induced-trees][toc][sitemap][subtree][llm-agent][entqabench][2.84m-pages][financial][scientific][customer-support][structure-aware][agentic][cs.ai][cs.ir] · Meghanadh Pulivarthi 외 5인. TOC/사이트맵 기반 오프라인 트리 + 쿼리 시점 서브트리 구성 + LLM 에이전트 탐색으로 코퍼스 규모 구조 인식 RAG 실현. EntQABench(284만 기술 문서 페이지)에서 최강 기준선 대비 6.8~11.4 포인트 정확도 향상(저자 보고). 금융·과학·고객지원 벤치마크에서도 일관된 우위. (snippet-verified: arXiv abs/2610.11370 + arXiv html/2610.11370 + github.com/JyiHUO/arxiv_daily_recommendation_system/releases/tag/2610.11370 + arxiv.org/list/cs.AI/pastweek + arxiv.org/list/cs.IR/recent 5개 이상 독립 출처)
+
 ## 2026-10-09 일일 누적 추가 출처 (2건, 루프 #114)
 
 ### 글로벌 — 프로덕션 아키텍처·RAG 보안 메타모델 (A Security Meta-Model for RAG Systems, 2026-10-08)
