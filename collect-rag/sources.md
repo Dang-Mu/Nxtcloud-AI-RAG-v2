@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-10-11 일일 누적 추가 출처 (2건, 루프 #116)
+
+### 글로벌 — 프로덕션 아키텍처·RAG 증거 신뢰도 한계 (RAG-Stress, 2026-10-08)
+- [arXiv:2610.11183 — RAG-Stress: Probing the Limits of Evidence Reliance in Retrieval-Augmented Generation](https://arxiv.org/abs/2610.11183) — 2026-10-08 · [robustness][evidence-reliance][misleading-evidence][harmful-override][document-priority][prior-knowledge][answer-span-position][15-systems][triviaqa-rc][hotpotqa][searchqa][medqa][english][chinese][rl-search-agent][cs.cl][cs.ai] · Shunyuan Zhou, Hao Chen, Tianyu Wang, Goose Lin, Zaiyuan Wang, Haiying Zhao. RAG 시스템이 오해 유도 증거를 읽은 뒤 정답→오답으로 전환(유해 오버라이드)하는 현상을 통제 실험 프로토콜로 측정. 15개 시스템 평가; 문서 우선 지시문이 오해 유도율 10.9~13.5pp 더 높음; 답변 범위 위치 효과 End > Beginning > Middle. (snippet-verified: arXiv abs/2610.11183 + arXiv html/2610.11183 + arxiv.org/list/cs/pastweek?skip=652 + arxiv.org/list/cs.AI/pastweek?skip=215 4개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처·RAG 강건성 벤치마크 (RAGStress, 2026-10-03)
+- [arXiv:2610.04691 — RAGStress: A controlled benchmark for evaluating retrieval-augmented generation under knowledge-base degradation](https://arxiv.org/abs/2610.04691) — 2026-10-03 · [benchmark][robustness][knowledge-base-degradation][corruption][4-types][3-severity][mmlu][182546-docs][52500-evaluations][semantic-fidelity][signal-utility][open-source][cs.ai] · Shiqi Yang, Jiekai Ma, Gaoyuan Du. RAG 지식베이스 오염 통제 스트레스 테스트 벤치마크. 4가지 부패 유형(사실 오류·의미 충실도·관련성·일관성) × 3단계 심각도. 57 MMLU 주제·182,546 문서·52,500건 평가. 의미 충실도 부패가 가장 큰 손상 유발. 깨끗한 KB는 시스템 간 강건성 차이를 숨김. 오픈소스 아티팩트 공개(GitHub: Farhan-2006/RAGStress). (snippet-verified: arXiv abs/2610.04691 + arXiv html/2610.04691 + arxiv.org/list/cs.AI/pastweek?skip=138 + github.com/Farhan-2006/RAGStress 4개 이상 독립 출처)
+
 ## 2026-10-10 일일 누적 추가 출처 (1건, 루프 #115)
 
 ### 글로벌 — 프로덕션 아키텍처·문서 코퍼스 트리 탐색 RAG (RIT-RAG, 2026-10-08)
