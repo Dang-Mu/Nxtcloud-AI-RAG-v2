@@ -1,5 +1,21 @@
 # 업데이트 로그
 
+## 2026-10-12 (일일 루프 #117)
+- **신규 사례 2건** (WebFetch arxiv.org 차단 환경, snippet-verified 전건; 한국 사례: 0건 — if(kakao)26 컨퍼런스 2026-10-13~14 예정으로 미개최, 최근 7일 이내 한국 기관/기업 신규 RAG 발표 미발견)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-10-12-01 | arXiv:2601.21803 — RAG-E: 검색기-생성기 정렬 정량화 및 실패 모드 분석 (Korbinian Randl 외 5인, 2026-01-29 제출, v3 2026-10-07, cs.IR/cs.AI) | 프로덕션 아키텍처·검색기-생성기 정렬 불일치 분석 (Top-1 문서 생성기 무시 패턴, WARG 메트릭, Integrated Gradients + Monte Carlo-Shapley) | 02-프로덕션-아키텍처.md |
+| GL-2026-10-12-02 | arXiv:2610.05034 — Agentic RAG Evaluation: Budget Allocation Across Questions, Trajectories, and Reads (Jingjie Ning, Xueqi Li, Yibo Kong, 2026-10-04, cs.IR) | 에이전트·툴유즈·Agentic RAG 평가 예산 배분 (질문 수 우선 전략, 온도 0, HotpotQA/MuSiQue) | 03-에이전트-툴유즈-MCP.md |
+
+- **검증 결과**: 2건 전원 5점 자가검증 통과; snippet-verified (전건)
+  1. **arXiv:2601.21803 (RAG-E)** [Korbinian Randl, Guido Rocchietti, Aron Henriksson, Ziawasch Abedjan, Tony Lindgren, John Pavlopoulos]: RAG 검색기가 높은 순위로 반환한 문서를 생성기가 실제로 얼마나 활용하는지를 Integrated Gradients + Monte Carlo 안정화 Shapley 근사로 정량화하는 RAG-E 프레임워크. WARG 메트릭 도입. 핵심 발견: 검색기 Top-1 문서를 생성기가 자주 무시하고 하위 순위 문서에 의존. 검색 품질 최적화가 생성 품질 개선과 비례하지 않는 이유를 실증적으로 설명. → `02-프로덕션-아키텍처.md` RAGStress 다음(## 한국 환경 특이점 앞)에 추가
+  2. **arXiv:2610.05034 (Agentic RAG Evaluation)** [Jingjie Ning, Xueqi Li, Yibo Kong]: Agentic RAG 평가에서 고정 예산 배분 최적화 연구. HotpotQA·MuSiQue에서 실험. 더 많은 질문 추가가 더 많은 읽기(+5회) 대비 표준오차 33%, 궤적(+3회) 대비 12.6% 더 효과적으로 감소. 온도 0 설정으로 답변 불일치 14.3%→3.4% 감소(비교 정밀도 유지). → `03-에이전트-툴유즈-MCP.md` Agentic AutoRAG 다음(## 이 도메인의 공통 패턴 앞)에 추가
+
+- `sources.md`에 2개 출처 추가 (## 2026-10-12 섹션 신설, 파일 최상단)
+- **한국 사례**: 0건 (if(kakao)26 컨퍼런스 2026-10-13~14 개최 예정으로 미개최 상태; Naver D2·Kakao Tech Blog·KakaoPay Tech·Toss Tech·LY Corp·SKT·KT·우아한형제들·LG CNS·금융권·의료·법률 섹터 탐색 완료; 내일(10-13) if(kakao)26 개최 — 다음 루프에서 발표 자료 수집 예정)
+- **검증 결과**: URL 200 OK: 0/2건(arxiv.org WebFetch 차단) · snippet-verified: 2/2건(5개 이상 독립 출처) · 단언 톤다운: 0건 · 중복 폐기: 다수(기존 파일 grep 확인, 미수록 확인 후 신규 등록) · 발굴 시도 → 최종 채택: 약 15건 시도 → 2건 채택
+
 ## 2026-10-11 (일일 루프 #116)
 - **신규 사례 2건** (WebFetch arxiv.org 차단 환경, snippet-verified 전건; 한국 사례: 0건 — if(kakao)26 컨퍼런스 2026-10-13~14 예정으로 미개최, 최근 7일 이내 한국 기관/기업 신규 RAG 발표 미발견)
 
