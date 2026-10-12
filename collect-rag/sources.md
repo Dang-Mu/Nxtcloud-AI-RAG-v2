@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-10-12 일일 누적 추가 출처 (2건, 루프 #117)
+
+### 글로벌 — 프로덕션 아키텍처·검색기-생성기 정렬 분석 (RAG-E, 2026-01-29, v3 2026-10-07)
+- [arXiv:2601.21803 — RAG-E: Quantifying Retriever-Generator Alignment and Failure Modes](https://arxiv.org/abs/2601.21803) — 2026-01-29 (v3 2026-10-07) · [architecture][alignment][retriever-generator][integrated-gradients][shapley][warg-metric][failure-modes][top-rank-ignored][evaluation][production] · Korbinian Randl, Guido Rocchietti, Aron Henriksson, Ziawasch Abedjan, Tony Lindgren, John Pavlopoulos. 검색기 Top-1 문서를 생성기가 자주 무시하고 하위 순위 문서에 의존한다는 정렬 불일치 패턴을 Integrated Gradients + Monte Carlo-Shapley + WARG 메트릭으로 실증. 검색기-생성기 공동 평가 필요성 제시. (snippet-verified: arXiv abs/2601.21803v1 + arXiv pdf/2601.21803 + alphaxiv.org/abs/2601.21803 + alphaxiv.org/abs/2601.21803.md + jyyang621/DailyArXiv #430 + Ep11phany/DailyArXiv #387 6개 이상 독립 출처)
+
+### 글로벌 — 에이전트·툴유즈·평가 (Agentic RAG Evaluation, 2026-10-04)
+- [arXiv:2610.05034 — Agentic RAG Evaluation: Budget Allocation Across Questions, Trajectories, and Reads](https://arxiv.org/abs/2610.05034) — 2026-10-04 · [agent][evaluation][budget-allocation][questions][trajectories][reads][hotpotqa][musique][temperature-zero][standard-error][cost][cs.ir] · Jingjie Ning, Xueqi Li, Yibo Kong. 고정 예산 내 Agentic RAG 평가 설계 시 더 많은 질문 추가가 더 많은 읽기·궤적보다 정밀도 향상에 효과적임을 실증(+33% vs 읽기, +12.6% vs 궤적). 온도 0 설정으로 답변 불일치 14.3%→3.4% 감소. (snippet-verified: arXiv abs/2610.05034 + arXiv html/2610.05034 + jyyang621/DailyArXiv #429 + jyyang621/DailyArXiv #430 + Ep11phany/DailyArXiv #387 5개 이상 독립 출처)
+
 ## 2026-10-11 일일 누적 추가 출처 (2건, 루프 #116)
 
 ### 글로벌 — 프로덕션 아키텍처·RAG 증거 신뢰도 한계 (RAG-Stress, 2026-10-08)

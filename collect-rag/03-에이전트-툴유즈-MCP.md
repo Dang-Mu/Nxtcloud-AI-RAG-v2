@@ -1035,6 +1035,22 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **저자**: Lasse B. Strand, Robert Jakob, Kevin O'Sullivan, Markus Kreft
 - **출처**: [arXiv:2610.08452 — Agentic AutoRAG: RAG Pipeline Optimization through Reasoning-Driven Agents](https://arxiv.org/abs/2610.08452) (2026-10-06, REALM@EMNLP 2026 + ML for Systems@NeurIPS 2026, snippet-verified: arXiv abs/2610.08452 web search snippet + arXiv html/2610.08452v1 + JyiHUO/arxiv_daily_recommendation_system + jyyang621/DailyArXiv #428 + loveunk/deep-learning-llm-agent-notes #123 + Ep11phany/DailyArXiv #385 6개 이상 독립 출처)
 
+### Agentic RAG 평가 예산 배분 — 질문·궤적·읽기 횟수 간 최적 배분 연구 (arXiv:2610.05034, cs.IR, 2026-10-04)
+
+> **Agentic RAG Evaluation: Budget Allocation Across Questions, Trajectories, and Reads** (arXiv:2610.05034, 2026-10-04)
+
+- **목적**: Agentic RAG 시스템을 평가할 때 고정된 컴퓨팅 예산을 **"더 많은 질문 vs 더 많은 궤적(trajectory) vs 더 많은 읽기 횟수(read)"** 중 어디에 할당해야 정밀도가 가장 높아지는지 실증 연구. 평가 설계 단계에서 자원을 어떻게 배분할지 근거를 제공.
+- **데이터 소스·벤치마크**: HotpotQA, MuSiQue — 멀티홉 QA 표준 벤치마크.
+- **스택**: 검색-피드백 비교 실험 프레임워크. 배분 정밀도·읽기 효율성·비용 한계를 정량화하는 메트릭 구성.
+- **아키텍처 특이점 — 주요 발견**:
+  1. **질문 수 우선**: 약 3,400만 모델 토큰 예산 조건에서 더 많은 질문 추가가 더 많은 읽기(+5회) 대비 표준오차를 33%, 더 많은 궤적(+3회) 대비 12.6% 더 효과적으로 감소.
+  2. **온도 0 권장**: 생성 온도를 0으로 설정하면 답변 불일치율이 14.3%→3.4%로 감소하면서 비교 정밀도는 유지됨. 결정론적 설정이 평가 신뢰도에 직접 기여.
+  3. **비용 우위 조건**: 검색 가격 $0~$1/1,000 요청 범위에서 "더 많은 질문" 전략이 "더 많은 궤적" 전략 대비 비용 효율 우위. 질문 수 vs 읽기 횟수의 순위는 추가 연구 필요(unresolved).
+  4. **예측 정확도**: 아카이브 예측 모델이 실제 배분을 약 4% 오차 내에서 예측 — 심층 서브셋 예측은 2-궤적 감사 대비 명확한 우위 없음.
+- **결과·교훈 (저자 보고)**: 온도 0 + 질문 수 확대 우선 전략이 Agentic RAG 평가 설계의 기본 원칙으로 제시됨. **"더 많이 돌린다"가 곧 "더 정확한 평가"가 아님을 실증 — 예산 배분 방식이 평가 결과 신뢰도를 결정.** RAG 파이프라인 A/B 테스트·오프라인 평가 설계에 직접 적용 가능.
+- **저자**: Jingjie Ning, Xueqi Li, Yibo Kong
+- **출처**: [arXiv:2610.05034 — Agentic RAG Evaluation: Budget Allocation Across Questions, Trajectories, and Reads](https://arxiv.org/abs/2610.05034) (2026-10-04, cs.IR, snippet-verified: arXiv abs/2610.05034 + arXiv html/2610.05034 + jyyang621/DailyArXiv #429 + jyyang621/DailyArXiv #430 + Ep11phany/DailyArXiv #387 5개 이상 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.
