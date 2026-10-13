@@ -1,5 +1,21 @@
 # 업데이트 로그
 
+## 2026-10-13 (일일 루프 #118)
+- **신규 사례 2건** (WebFetch arxiv.org 차단 환경, snippet-verified 전건; 한국 사례: 0건 — if(kakao)26 컨퍼런스 2026-10-13~14 개최 당일이나 RAG 전용 세션 미확인, 최근 7일 이내 네이버·카카오·토스·LY Corp·SKT·KT 등 한국 기관/기업 신규 RAG 발표 미발견)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-10-13-01 | arXiv:2610.12666 — iRAG: 인간 감독 의사결정 지원을 위한 점진적 RAG 시스템 (Federico Mazzoni, Andrea Failla, 2026-10-08, cs.HC+cs.AI) | 에이전트·툴유즈·Human-in-the-Loop RAG (비어있는 KB → 인간 판단 누적 선례 → 3단계 자율성 이행, 안정성-가소성 트레이드오프) | 03-에이전트-툴유즈-MCP.md |
+| GL-2026-10-13-02 | arXiv:2610.07622 — DBRAG: 복잡한 데이터베이스 쿼리를 위한 다중 테이블 RAG (Ampofo, Kubo, Difallah, AACL-IJCNLP 2026) | 프로덕션 아키텍처·다중 테이블 RAG (학습 불필요, 2단계 검색, LLM 재순위화, 프로그램 지원 추론, AACL 2026) | 02-프로덕션-아키텍처.md |
+
+- **검증 결과**: 2건 전원 5점 자가검증 통과; snippet-verified (전건)
+  1. **arXiv:2610.12666 (iRAG)** [Federico Mazzoni, Andrea Failla]: 비어있는 KB에서 출발해 인간 의사결정을 선례로 누적, 3단계(수동→이의제기→자율) 자율성 이행 구조. 드리프트 40% 이하 조건에서 기준선 대비 오류 감소. 안정성-가소성 트레이드오프(retrieval decay의 이중 효과) 실증. cs.HC+cs.AI. → `03-에이전트-툴유즈-MCP.md` Agentic RAG Evaluation 다음(## 이 도메인의 공통 패턴 앞)에 추가
+  2. **arXiv:2610.07622 (DBRAG)** [Ampofo, Ryoji Kubo, Djellel Difallah (NYU)]: 다중 테이블에 걸친 복잡한 DB 질의를 위한 학습 불필요 RAG. 2단계 테이블 검색 + 쿼리 관련 행 선택 + LLM 재순위화 + 프로그램 지원 추론. AACL-IJCNLP 2026 Main Track 채택. 엔터프라이즈 DB·ERP 자연어 질의 처리 경로 제시. arXiv ID 미독립확인(cs.IR listing + LinkedIn 2출처). → `02-프로덕션-아키텍처.md` RAG-E 다음(## 한국 환경 특이점 앞)에 추가
+
+- `sources.md`에 2개 출처 추가 (## 2026-10-13 섹션 신설, 파일 최상단)
+- **한국 사례**: 0건 (if(kakao)26 컨퍼런스 2026-10-13~14 개최 첫날. RAG 전용 세션명 미확인; 카나나·칸바스·에이전틱 AI 위주 발표 보도 확인되나 구체적 RAG 아키텍처 발표 정보 없음. 네이버 D2·Kakao Tech Blog·Toss Tech·LY Corp·SKT·KT·우아한형제들 10월 신규 블로그 미발견)
+- **검증 결과**: URL 200 OK: 0/2건(arxiv.org WebFetch 차단) · snippet-verified: 2/2건 · 단언 톤다운: 1건(DBRAG 구체 수치 unverified 표기) · 중복 폐기: 다수(기존 파일 grep 확인, 미수록 확인 후 신규 등록) · 발굴 시도 → 최종 채택: 약 20건 시도 → 2건 채택
+
 ## 2026-10-12 (일일 루프 #117)
 - **신규 사례 2건** (WebFetch arxiv.org 차단 환경, snippet-verified 전건; 한국 사례: 0건 — if(kakao)26 컨퍼런스 2026-10-13~14 예정으로 미개최, 최근 7일 이내 한국 기관/기업 신규 RAG 발표 미발견)
 
