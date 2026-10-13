@@ -1051,6 +1051,27 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **저자**: Jingjie Ning, Xueqi Li, Yibo Kong
 - **출처**: [arXiv:2610.05034 — Agentic RAG Evaluation: Budget Allocation Across Questions, Trajectories, and Reads](https://arxiv.org/abs/2610.05034) (2026-10-04, cs.IR, snippet-verified: arXiv abs/2610.05034 + arXiv html/2610.05034 + jyyang621/DailyArXiv #429 + jyyang621/DailyArXiv #430 + Ep11phany/DailyArXiv #387 5개 이상 독립 출처)
 
+---
+
+### iRAG — 인간 감독 의사결정 지원을 위한 점진적 RAG 시스템 (arXiv:2610.12666, cs.HC+cs.AI, 2026-10-08)
+
+> **Incremental Retrieval-Augmented Generation for Human-in-the-Loop Decision Support** (arXiv:2610.12666, 2026-10-08)
+
+- **목적**: 지식 베이스(KB)가 비어 있는 상태에서 시작해 인간의 의사결정이 누적되면서 점진적으로 KB를 구축하는 RAG 기반 의사결정 지원 시스템. 전통적 RAG는 사전에 구축된 KB를 전제하지만, iRAG는 인간의 판단 자체가 미래 RAG의 검색 선례(precedent)가 된다.
+- **데이터 소스·벤치마크**: 합성 의사결정 환경에서의 통제 실험. 드리프트(drift) 비율(10%, 40%)에 따른 성능 변화 측정.
+- **스택**: RAG + 하이브리드 의사결정 프레임워크. 점진적 KB 구축, 검색 기반 유사 선례 조회, 인간 감독 체크포인트 포함. 범주: cs.HC(HCI) + cs.AI.
+- **아키텍처 특이점 — 3단계 자율성 이행**:
+  1. **수동 관찰 단계**: 인간이 모든 결정을 내리며 시스템이 선례를 수집.
+  2. **증거 기반 이의 제기 단계**: 시스템이 검색된 선례로 인간의 판단에 근거 있는 반론을 제기.
+  3. **자율 처리 + 기권 단계**: 시스템이 자체적으로 결정하되, 불확실한 경우 기권(abstention).
+- **결과·교훈 (저자 보고)**:
+  - 드리프트 10% 이하: iRAG가 최종 결정 오류에서 독립 기준선과 동등.
+  - 드리프트 40% 이하: iRAG가 기준선 대비 오류 감소.
+  - **안정성-가소성 트레이드오프(Stability-Plasticity Trade-off)**: 검색 감쇠(retrieval decay)는 변화된 지식 환경에서 유리하지만 안정적 지식 환경에서는 오류를 증가시킴. KB 갱신 정책 설계 시 핵심 고려 사항.
+  - 미평가 한계: 실제 사용자 대상 사용성 평가는 수행되지 않음.
+- **저자**: Federico Mazzoni, Andrea Failla
+- **출처**: [arXiv:2610.12666 — Incremental Retrieval-Augmented Generation for Human-in-the-Loop Decision Support](https://arxiv.org/abs/2610.12666) (2026-10-08, cs.HC+cs.AI, snippet-verified: arXiv abs/2610.12666 + arXiv html/2610.12666v1 2개 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.

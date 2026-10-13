@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-10-13 일일 누적 추가 출처 (2건, 루프 #118)
+
+### 글로벌 — 에이전트·Human-in-the-Loop RAG (iRAG, 2026-10-08)
+- [arXiv:2610.12666 — Incremental Retrieval-Augmented Generation for Human-in-the-Loop Decision Support](https://arxiv.org/abs/2610.12666) — 2026-10-08 · [agent][human-in-the-loop][incremental][decision-support][empty-kb][precedent][3-stage-autonomy][stability-plasticity][retrieval-decay][cs.hc][cs.ai] · Federico Mazzoni, Andrea Failla. 비어있는 KB에서 출발해 인간 의사결정을 선례로 누적하며 점진적으로 RAG KB를 구축. 수동 관찰→이의제기→자율+기권의 3단계 자율성 이행. 드리프트 40% 이하 조건에서 기준선 대비 오류 감소. 안정성-가소성 트레이드오프 실증. (snippet-verified: arXiv abs/2610.12666 + arXiv html/2610.12666v1 2개 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처·다중 테이블 RAG (DBRAG, AACL-IJCNLP 2026)
+- [arXiv:2610.07622 — DBRAG: Multi-Table Retrieval-Augmented Generation for Complex Database Queries](https://arxiv.org/abs/2610.07622) — AACL-IJCNLP 2026 · [architecture][multi-table][database][training-free][two-stage-retrieval][row-selection][llm-reranking][program-aided-reasoning][enterprise-db][erp][cs.ir] · Ampofo, Ryoji Kubo, Djellel Difallah (NYU). 다중 테이블에 걸친 복잡한 DB 질의를 위한 학습 불필요 RAG. 2단계 테이블 검색 + 쿼리 관련 행 선택 + LLM 재순위화 + 프로그램 지원 추론. AACL-IJCNLP 2026 Main Track. 엔터프라이즈 DB·ERP 자연어 질의 처리 경로 제시. (snippet-verified: cs.IR October 2026 listing + LinkedIn post by Djellel Difallah 2개 독립 출처, arXiv ID 미독립확인)
+
 ## 2026-10-12 일일 누적 추가 출처 (2건, 루프 #117)
 
 ### 글로벌 — 프로덕션 아키텍처·검색기-생성기 정렬 분석 (RAG-E, 2026-01-29, v3 2026-10-07)
