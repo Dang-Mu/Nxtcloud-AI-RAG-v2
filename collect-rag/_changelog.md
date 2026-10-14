@@ -1,5 +1,21 @@
 # 업데이트 로그
 
+## 2026-10-14 (일일 루프 #119)
+- **신규 사례 2건** (arxiv.org WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — if(kakao)26 컨퍼런스 2026-10-13~14 이틀째이나 RAG 전용 세션 발표자료 미공개, 네이버·카카오·토스·LY Corp·SKT·KT 등 한국 기관/기업 10월 신규 RAG 발표 미발견)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-10-14-01 | arXiv:2610.14428 — Frustratingly Easy Agentic RAG via Portable Skills: A Case Study in Customer Support (Airbnb, EMNLP 2026 Industry Track, 2026-10-10) | 에이전트·툴유즈·Portable Skill 아키텍처 (BM25+Dense 하이브리드, LLM 생성 탐색 레이어, 99.2% 절차적 동등성, 지연-품질 트레이드오프 실증) | 03-에이전트-툴유즈-MCP.md |
+| GL-2026-10-14-02 | arXiv:2610.18567 — Configuring RAG Systems: What Breaks, Where Originates, and How to Fix (Liangyu Chen 외, 2026-10-13) | 프로덕션 아키텍처·RAG 설정 오류 분석 (설정 버그 vs 잘못된 설정 2분류, 증상-근본원인 단계 불일치 1/3 실증, 디버깅 레이어 전략 제시) | 02-프로덕션-아키텍처.md |
+
+- **검증 결과**: 2건 전원 5점 자가검증 통과; snippet-verified (전건)
+  1. **arXiv:2610.14428 (Frustratingly Easy Agentic RAG)** [Istok Bako, Bonan Min, Tiffany Shao, Claire Cheng, Yashar Mehdad (Airbnb)]: ~2,700페이지 Markdown 운영 위키 + LLM 생성 탐색 레이어로 구성된 Portable Skill 기반 고객지원 에이전트 실전 배포. BM25+Dense 하이브리드, 파인튜닝·리랭커 없음. 절차적 동등성 99.2%, 근거 충분성 83.3%. 지연 ~90초 vs 프로덕션 8~9초 — 성숙 코퍼스·지연 허용·사람 검토 전제. EMNLP 2026 Industry Track 채택. → `03-에이전트-툴유즈-MCP.md` iRAG 다음(## 이 도메인의 공통 패턴 앞)에 추가
+  2. **arXiv:2610.18567 (Configuring RAG Systems)** [Liangyu Chen, Youpeng Ma, Yulong Ye, Zezhen Xiang, Tao Chen]: RAG 시스템 설정 오류를 설정 버그(외부 라이브러리 호출 실패 최다)와 잘못된 설정(리소스 요구사항 미충족 최다) 2종으로 분류. 28페이지 7그림 실증 연구. 핵심 발견: 증상은 초기화·인덱싱·생성에서 나타나지만 근본 원인은 앞선 단계에 위치; 약 1/3 사례에서 증상-원인 단계 불일치. 실무 디버깅 전략: 증상 레이어가 아닌 상위 인제스천·설정 레이어 우선 점검. → `02-프로덕션-아키텍처.md` DBRAG 다음(## 한국 환경 특이점 앞)에 추가
+
+- `sources.md`에 2개 출처 추가 (## 2026-10-14 섹션 신설, 파일 최상단)
+- **한국 사례**: 0건 (if(kakao)26 컨퍼런스 2026-10-14 이틀째, 발표자료·세션 녹화본 미공개 상태; 네이버 D2·Kakao Tech Blog·Toss Tech·LY Corp·SKT·KT·우아한형제들 10월 신규 블로그 미발견)
+- **검증 결과**: URL 200 OK: 0/2건(arxiv.org WebFetch 직접 접근 불가) · snippet-verified: 2/2건(arXiv abs + arXiv html 각 2개 독립 출처) · 단언 톤다운: 0건 · 중복 폐기: 다수(기존 파일 grep 확인, 2610.12415/14789 등 단일 출처만 확인된 후보 폐기) · 발굴 시도 → 최종 채택: 약 15건 시도 → 2건 채택
+
 ## 2026-10-13 (일일 루프 #118)
 - **신규 사례 2건** (WebFetch arxiv.org 차단 환경, snippet-verified 전건; 한국 사례: 0건 — if(kakao)26 컨퍼런스 2026-10-13~14 개최 당일이나 RAG 전용 세션 미확인, 최근 7일 이내 네이버·카카오·토스·LY Corp·SKT·KT 등 한국 기관/기업 신규 RAG 발표 미발견)
 
