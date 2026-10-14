@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-10-14 일일 누적 추가 출처 (2건, 루프 #119)
+
+### 글로벌 — 에이전트·툴유즈·Portable Skill Agentic RAG (Airbnb, EMNLP 2026 Industry Track, 2026-10-10)
+- [arXiv:2610.14428 — Frustratingly Easy Agentic RAG via Portable Skills: A Case Study in Customer Support](https://arxiv.org/abs/2610.14428) — 2026-10-10 · [agent][portable-skill][customer-support][airbnb][emnlp2026-industry][bm25][dense][hybrid][navigation-layer][training-free][procedural-equivalence][evidence-sufficiency][latency-tradeoff][cs.ai][cs.ir] · Istok Bako, Bonan Min, Tiffany Shao, Claire Cheng, Yashar Mehdad (Airbnb). 약 2,700 Markdown 운영 위키 + LLM 생성 탐색 레이어 기반 Portable Skill(NL 지시문 + BM25+Dense 검색 + 형식 검증)로 고객지원 에이전트 실전 배포. 절차적 동등성 99.2%, 근거 충분성 83.3%. 지연 ~90초(프로덕션 8~9초 대비) — 성숙 코퍼스·지연 허용·사람 검토 전제 조건. EMNLP 2026 Industry Track. (snippet-verified: arXiv abs/2610.14428 + arXiv html/2610.14428 2개 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처·RAG 설정 오류 분석 (Configuring RAG Systems, 2026-10-13)
+- [arXiv:2610.18567 — Configuring RAG Systems: What Breaks, Where Originates, and How to Fix](https://arxiv.org/abs/2610.18567) — 2026-10-13 · [architecture][configuration][debugging][configuration-bugs][misconfiguration][external-library][resource-requirements][symptom-root-cause-mismatch][initialization][indexing][generation][28-pages][7-figures] · Liangyu Chen, Youpeng Ma, Yulong Ye, Zezhen Xiang, Tao Chen. RAG 설정 오류를 설정 버그(외부 라이브러리 호출 실패 최다)·잘못된 설정(리소스 요구사항 미충족 최다) 2종 분류. 증상-원인 단계 불일치 약 1/3 실증. 실무 디버깅 시 증상 레이어 말고 상위 인제스천·설정 레이어 우선 점검 필요. (snippet-verified: arXiv abs/2610.18567 + arXiv html/2610.18567 2개 독립 출처)
+
 ## 2026-10-13 일일 누적 추가 출처 (2건, 루프 #118)
 
 ### 글로벌 — 에이전트·Human-in-the-Loop RAG (iRAG, 2026-10-08)

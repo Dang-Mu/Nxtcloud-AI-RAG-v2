@@ -1072,6 +1072,24 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **저자**: Federico Mazzoni, Andrea Failla
 - **출처**: [arXiv:2610.12666 — Incremental Retrieval-Augmented Generation for Human-in-the-Loop Decision Support](https://arxiv.org/abs/2610.12666) (2026-10-08, cs.HC+cs.AI, snippet-verified: arXiv abs/2610.12666 + arXiv html/2610.12666v1 2개 독립 출처)
 
+---
+
+### Frustratingly Easy Agentic RAG — Airbnb 고객지원 실전 배포 사례 (arXiv:2610.14428, EMNLP 2026 Industry Track, 2026-10-10)
+
+> **Frustratingly Easy Agentic RAG via Portable Skills: A Case Study in Customer Support** (arXiv:2610.14428, EMNLP 2026 Industry Track)
+
+- **회사·팀**: Airbnb (Istok Bako, Bonan Min, Tiffany Shao, Claire Cheng, Yashar Mehdad)
+- **목적**: 복잡한 파이프라인 없이 잘 정제된 코퍼스와 단순 도구 조합만으로 고객지원 에이전트에서 충분한 품질을 달성할 수 있는가를 실증. EMNLP 2026 Industry Track 채택.
+- **데이터 소스**: 약 2,700페이지 분량의 Markdown 형식 운영 위키(Operational Wiki). LLM이 생성한 "Wikipedia식" 탐색 레이어(Navigation Layer)로 보강.
+- **스택**: **Portable Skill** 단위 설계 — ① 자연어 지시문, ② 경량 도구(BM25+Dense 하이브리드 검색 API + 형식 검증 스크립트), ③ LLM 생성 탐색 색인. 학습·파인튜닝·리랭커 없음. Claude Code 등 여러 에이전트 하니스에서 이식 가능(portable).
+- **아키텍처 특이점**:
+  1. **Portable Skill 추상화**: RAG 파이프라인을 하나의 이식 가능한 "스킬" 단위로 캡슐화. 에이전트 하니스가 바뀌어도 스킬 자체는 재사용 가능.
+  2. **탐색 레이어**: LLM이 코퍼스 전체에 대해 오프라인으로 Wikipedia식 목차·색인을 생성해 에이전트 탐색 효율 향상.
+  3. **무훈련(Training-Free)**: 검색·추론 전 과정에서 파인튜닝 없음. 잘 정제된 코퍼스에서만 성립하는 조건.
+- **결과·교훈 (저자 보고)**: 절차적 동등성(procedural equivalence) 99.2%, 근거 충분성(evidence sufficiency) 83.3% 달성. 단, **지연시간 약 90초 vs. 프로덕션 시스템 8~9초** — 성숙하고 잘 정제된 코퍼스와 지연 허용 워크플로우에서만 적용 가능. 모든 케이스는 사람 검토를 전제. **"단순 설계가 복잡한 파이프라인을 이긴다"는 조건과 한계를 동시에 실증한 드문 사례.**
+- **저자**: Istok Bako, Bonan Min, Tiffany Shao, Claire Cheng, Yashar Mehdad (Airbnb)
+- **출처**: [arXiv:2610.14428 — Frustratingly Easy Agentic RAG via Portable Skills: A Case Study in Customer Support](https://arxiv.org/abs/2610.14428) (2026-10-10, EMNLP 2026 Industry Track, snippet-verified: arXiv abs/2610.14428 + arXiv html/2610.14428 2개 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.
