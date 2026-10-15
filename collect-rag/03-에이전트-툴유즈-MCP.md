@@ -1090,6 +1090,20 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **저자**: Istok Bako, Bonan Min, Tiffany Shao, Claire Cheng, Yashar Mehdad (Airbnb)
 - **출처**: [arXiv:2610.14428 — Frustratingly Easy Agentic RAG via Portable Skills: A Case Study in Customer Support](https://arxiv.org/abs/2610.14428) (2026-10-10, EMNLP 2026 Industry Track, snippet-verified: arXiv abs/2610.14428 + arXiv html/2610.14428 2개 독립 출처)
 
+### ExpRAG — 경험 검색으로 에이전트를 학습시키는 RAG (arXiv:2603.18272, EMNLP 2026) [한국 사례 — Naver Labs Europe]
+
+> **Retrieval-Augmented LLM Agents: Learning to Learn from Experience** (arXiv:2603.18272, 2026-03-18 preprint; EMNLP 2026 Budapest, Oct 24-29 채택 발표: 2026-10-15)
+
+- **회사/팀**: **NAVER LABS Europe** (Naver Corporation 자회사, 프랑스 그르노블) — Thomas Palmeira Ferraz, Romain Deffayet, Vassilina Nikoulina, Hervé Déjean, Stéphane Clinchant
+- **목적**: LLM 에이전트가 반복적인 태스크에서 과거 에이전트 실행 경험(agent rollouts)을 검색·활용해 새 태스크에서 바로 성능 향상. "에이전트를 위한 에이전틱 RAG" 패러다임.
+- **핵심 아이디어 (ExpRAG)**:
+  1. **오프라인 경험 뱅크(Experience Bank)**: 에이전트가 이전에 수행한 rollout(궤적)을 구조화된 경험 데이터베이스로 저장. 단순 로그가 아니라 **태스크-궤적 키(trajectory-keyed)** 형태로 색인.
+  2. **추론 시점 경험 검색**: 새 태스크 실행 시 유사한 과거 경험을 검색해 컨텍스트로 제공 — 어떤 도구를 어떤 순서로 호출했는지, 어떤 에러를 만났고 어떻게 복구했는지를 참조.
+  3. **ExpRAG-LoRA SFT 레시피**: 경험 뱅크 기반 데이터로 LoRA 파인튜닝 — 아웃오브도메인(OOD) 태스크에서 현행 SOTA 에이전트 학습법을 초과.
+- **결과**: OOD 태스크에서 ExpRAG-LoRA가 SOTA 에이전트 훈련법 대비 유의미한 성능 향상. 경험 검색이 없는 베이스라인 대비 복잡한 멀티스텝 태스크에서 일관된 개선.
+- **의의**: 에이전틱 RAG의 메모리를 "과거 에이전트 실행 경험의 검색 가능한 라이브러리"로 개념화한 접근. 반복적 워크플로우(고객 지원, 코드 에이전트, 연구 에이전트)가 많은 엔터프라이즈 환경에서 에이전트 성능이 운영 시간에 비례해 향상되는 **자기 개선(self-improving) 에이전트** 패턴의 구체적 구현. Naver의 EMNLP 2026 채택 24편 중 하나로, 2026-10-15 발표.
+- **출처**: [arXiv:2603.18272 — Retrieval-Augmented LLM Agents: Learning to Learn from Experience](https://arxiv.org/abs/2603.18272) (2026-03-18 preprint; EMNLP 2026 Budapest 채택, snippet-verified: arXiv html/2603.18272v1 + alphaxiv.org + europe.naverlabs.com + paperswithcode.co + awesomepapers.io + Naver EMNLP 2026 발표 뉴스 5개 이상 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.

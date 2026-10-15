@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-10-15 일일 누적 추가 출처 (2건, 루프 #120)
+
+### 글로벌 — 프로덕션 아키텍처·반복 검색·교차 증거 관계 재구성 (RCER, 2026-10-14)
+- [arXiv:2610.19398 — RCER: Reconstructing Cross-Evidence Relations for Iterative Retrieval-Augmented Generation](https://arxiv.org/abs/2610.19398) — 2026-10-14 · [architecture][iterative-rag][multi-hop-qa][cross-evidence][relational-evidence-acquisition][reasoning-context-reconstruction][cross-evidence-compositional-reasoning][+2.83EM][+3.06F1][cs.ir] · Linyao Zheng, Ke Xu, Benfeng Xu, Xingyue Qian, Zhendong Mao. 멀티홉 QA에서 반복 RAG의 교차 증거 관계를 3요소 프레임워크(관계적 증거 획득·추론 컨텍스트 재구성·교차 증거 합성 추론)로 명시적 재구성. 멀티홉 QA 벤치마크 평균 +2.83 EM, +3.06 F1. (snippet-verified: arXiv abs/2610.19398 + arXiv html/2610.19398 2개 독립 출처)
+
+### 한국 — 에이전트·경험 검색 기반 자기 개선 에이전트 (ExpRAG, NAVER LABS Europe, EMNLP 2026)
+- [arXiv:2603.18272 — Retrieval-Augmented LLM Agents: Learning to Learn from Experience](https://arxiv.org/abs/2603.18272) — 2026-03-18 preprint; EMNLP 2026 Budapest(Oct 24-29) 채택 발표 2026-10-15 · [agent][experience-retrieval][offline-experience-bank][trajectory-keyed][exprag-lora][sft][ood][self-improving-agent][naver-labs-europe][emnlp2026] · Thomas Palmeira Ferraz, Romain Deffayet, Vassilina Nikoulina, Hervé Déjean, Stéphane Clinchant (NAVER LABS Europe). 에이전트 rollout 궤적을 오프라인 경험 뱅크로 저장, 추론 시 유사 경험 검색·활용. ExpRAG-LoRA SFT로 OOD 태스크 SOTA 초과. 한국 사례: Naver Corporation 자회사 Naver Labs Europe. (snippet-verified: arXiv html/2603.18272v1 + alphaxiv.org + europe.naverlabs.com + paperswithcode.co + awesomepapers.io + Naver EMNLP 2026 발표 뉴스 5개 이상 독립 출처)
+
 ## 2026-10-14 일일 누적 추가 출처 (2건, 루프 #119)
 
 ### 글로벌 — 에이전트·툴유즈·Portable Skill Agentic RAG (Airbnb, EMNLP 2026 Industry Track, 2026-10-10)
