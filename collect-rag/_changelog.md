@@ -1,5 +1,21 @@
 # 업데이트 로그
 
+## 2026-10-15 (일일 루프 #120)
+- **신규 사례 2건** (arxiv.org WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 1건 — Naver Labs Europe EMNLP 2026 채택 발표)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-10-15-01 | arXiv:2610.19398 — RCER: Reconstructing Cross-Evidence Relations for Iterative RAG (Linyao Zheng 외, 2026-10-14, cs.IR) | 프로덕션 아키텍처·반복 검색·멀티홉 QA (교차 증거 관계 재구성, +2.83 EM / +3.06 F1) | 02-프로덕션-아키텍처.md |
+| KR-2026-10-15-01 | arXiv:2603.18272 — ExpRAG: Retrieval-Augmented LLM Agents: Learning to Learn from Experience (NAVER LABS Europe, EMNLP 2026 Budapest) | 에이전트·툴유즈·경험 검색 기반 자기 개선 에이전트 (오프라인 경험 뱅크, 궤적 키 검색, ExpRAG-LoRA SFT, OOD SOTA 초과) | 03-에이전트-툴유즈-MCP.md |
+
+- **검증 결과**: 2건 전원 5점 자가검증 통과; snippet-verified (전건)
+  1. **arXiv:2610.19398 (RCER)** [Linyao Zheng, Ke Xu, Benfeng Xu, Xingyue Qian, Zhendong Mao]: 멀티홉 QA에서 반복 RAG의 교차 증거 관계(cross-evidence relations)를 명시적으로 재구성하는 3요소 프레임워크(관계적 증거 획득·추론 컨텍스트 재구성·교차 증거 합성 추론). 멀티홉 QA 벤치마크 평균 +2.83 EM, +3.06 F1. → `02-프로덕션-아키텍처.md` Configuring RAG Systems(2610.18567) 다음(## 한국 환경 특이점 앞)에 추가
+  2. **arXiv:2603.18272 (ExpRAG)** [Thomas Palmeira Ferraz, Romain Deffayet, Vassilina Nikoulina, Hervé Déjean, Stéphane Clinchant (NAVER LABS Europe)]: 에이전트 rollout 경험을 오프라인 경험 뱅크로 저장·검색해 신규 태스크에 활용하는 ExpRAG. ExpRAG-LoRA SFT 레시피로 OOD 태스크에서 SOTA 에이전트 학습법 초과. EMNLP 2026 Budapest(Oct 24-29) 채택; 2026-10-15 발표. 한국 사례: Naver Corporation 자회사 Naver Labs Europe. → `03-에이전트-툴유즈-MCP.md` Airbnb Portable Skill 다음(## 이 도메인의 공통 패턴 앞)에 추가
+
+- `sources.md`에 2개 출처 추가 (## 2026-10-15 섹션 신설, 파일 최상단)
+- **한국 사례**: 1건 (Naver Labs Europe, arXiv:2603.18272, EMNLP 2026 Budapest 채택 발표 2026-10-15)
+- **검증 결과**: URL 200 OK: 0/2건(arxiv.org WebFetch 직접 접근 불가) · snippet-verified: 2/2건(각 2개 이상 독립 출처) · 중복 폐기: 없음(grep 확인) · 발굴 시도 → 최종 채택: 약 10건 시도 → 2건 채택
+
 ## 2026-10-14 (일일 루프 #119)
 - **신규 사례 2건** (arxiv.org WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — if(kakao)26 컨퍼런스 2026-10-13~14 이틀째이나 RAG 전용 세션 발표자료 미공개, 네이버·카카오·토스·LY Corp·SKT·KT 등 한국 기관/기업 10월 신규 RAG 발표 미발견)
 
