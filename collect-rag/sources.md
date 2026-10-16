@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-10-16 일일 누적 추가 출처 (2건, 루프 #121)
+
+### 글로벌 — 프로덕션 아키텍처·KG-RAG 자기진화·피드백 역전파 (EvoRAG, v2 2026-10-12)
+- [arXiv:2604.15676 — EvoRAG: Making Knowledge Graph-based RAG Automatically Evolve through Feedback-driven Backpropagation](https://arxiv.org/abs/2604.15676) — v2 2026-10-12 · [architecture][kg-rag][self-evolving][feedback-backpropagation][triple-confidence][query-clustering][local-kg-evolution][multi-user][rgb][multihop-rag][hotpotqa][cs.ai][cs.ir] · Enze Yi et al. 응답 수준 피드백을 트리플 수준으로 역전파해 KG-RAG를 자동 진화시키는 프레임워크. 피드백 역전파·쿼리 클러스터링 기반 로컬 KG 진화·트리플 선택적 갱신 3요소. RGB, MultiHop-RAG, HotpotQA 평가. (snippet-verified: arxiv.org/pdf/2604.15676 + arxivlens.com + chatpaper.com + DailyArXiv #433 4개 독립 출처)
+
+### 한국 — 의료·환자 인식 컨텍스트 임상 약물 추천 RAG (PACE-RAG, KAIST, 2026-03-18)
+- [arXiv:2603.17356 — PACE-RAG: Patient-Aware Contextual and Evidence-Constrained RAG for Clinical Drug Recommendation](https://arxiv.org/abs/2603.17356) — 2026-03-18 · [medical][clinical][drug-recommendation][ehr][patient-aware][similar-patient-evidence][evidence-constrained][explainable][kaist][parkinsons][mimic-iv][llama-3.1-8b][qwen3-8b][f1-80.84][f1-47.22][cs.ai][q-bio.qm] · Chaeyoung Huh, Hyunmin Hwang, Jung Hwan Shin, Jinse Park, Jong Chul Ye (KAIST 인공지능대학원). 환자 고유 EHR 컨텍스트와 유사 환자 처방 패턴을 결합하는 이중 컨텍스트 임상 약물 추천 RAG. 파킨슨 코호트 F1 80.84%(Llama-3.1-8B), MIMIC-IV F1 47.22%(Qwen3-8B). 코드: github.com/ChaeYoungHuh/PACE-RAG. (snippet-verified: arxiv.org/pdf + arxiv.org/abs + sotaverified.org + opentrain.ai 4개 독립 출처)
+
 ## 2026-10-15 일일 누적 추가 출처 (2건, 루프 #120)
 
 ### 글로벌 — 프로덕션 아키텍처·반복 검색·교차 증거 관계 재구성 (RCER, 2026-10-14)
