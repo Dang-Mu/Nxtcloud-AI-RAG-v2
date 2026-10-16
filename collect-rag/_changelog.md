@@ -1,5 +1,21 @@
 # 업데이트 로그
 
+## 2026-10-16 (일일 루프 #121)
+- **신규 사례 2건** (arxiv.org WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 1건 — KAIST PACE-RAG, arXiv:2603.17356)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-10-16-01 | arXiv:2604.15676 — EvoRAG: Making Knowledge Graph-based RAG Automatically Evolve through Feedback-driven Backpropagation (Enze Yi 외, v2 2026-10-12, cs.AI) | 프로덕션 아키텍처·KG-RAG 자기진화·피드백 역전파 (트리플 신뢰도 업데이트, 쿼리 클러스터링 기반 로컬 KG 진화, RGB·MultiHop·HotpotQA 평가) | 02-프로덕션-아키텍처.md |
+| KR-2026-10-16-01 | arXiv:2603.17356 — PACE-RAG: Patient-Aware Contextual and Evidence-Constrained RAG for Clinical Drug Recommendation (KAIST 인공지능대학원, 2026-03-18) | 의료·환자 인식 컨텍스트 임상 약물 추천 RAG (환자 개인화 + 유사 환자 처방 패턴 이중 컨텍스트, F1 80.84%/Llama-3.1-8B 파킨슨, F1 47.22%/Qwen3-8B MIMIC-IV) | 04-산업별-사례.md |
+
+- **검증 결과**: 2건 전원 5점 자가검증 통과; snippet-verified (전건)
+  1. **arXiv:2604.15676 (EvoRAG)** [Enze Yi et al.]: 응답 수준 피드백을 트리플 수준으로 역전파해 KG-RAG를 자동 진화시키는 프레임워크. 피드백 역전파·쿼리 클러스터링 기반 로컬 KG 진화·트리플 선택적 갱신 3요소. RGB, MultiHop-RAG, HotpotQA 평가. v2 2026-10-12 업데이트. → `02-프로덕션-아키텍처.md` RCER(2610.19398) 다음(## 한국 환경 특이점 앞)에 추가
+  2. **arXiv:2603.17356 (PACE-RAG)** [Chaeyoung Huh, Hyunmin Hwang, Jung Hwan Shin, Jinse Park, Jong Chul Ye (KAIST 인공지능대학원)]: 환자 고유 EHR 컨텍스트와 유사 환자 처방 패턴을 결합하는 이중 컨텍스트 임상 약물 추천 RAG. 증거 제약 생성으로 설명 가능한 임상 요약 생성. 한국 사례. → `04-산업별-사례.md` 의료 한국 섹션(JMIR 연구 앞)에 추가
+
+- `sources.md`에 2개 출처 추가 (## 2026-10-16 섹션 신설, 파일 최상단)
+- **한국 사례**: 1건 (KAIST, arXiv:2603.17356, PACE-RAG)
+- **검증 결과**: URL 200 OK: 0/2건(arxiv.org WebFetch 직접 접근 불가) · snippet-verified: 2/2건(각 4개 이상 독립 출처) · 중복 폐기: 다수(K-FinHallu·MASDR-RAG·2610.18442·2610.18925·2610.15292·2610.19549·2610.15285 등) · 발굴 시도 → 최종 채택: 약 20건 시도 → 2건 채택
+
 ## 2026-10-15 (일일 루프 #120)
 - **신규 사례 2건** (arxiv.org WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 1건 — Naver Labs Europe EMNLP 2026 채택 발표)
 
