@@ -1,5 +1,10 @@
 # 출처 목록
 
+## 2026-10-17 일일 누적 추가 출처 (1건, 루프 #122)
+
+### 글로벌 — 에이전트·RAG 클레임 검증·신뢰 기반 판정 캐스케이드 (JEV-as-a-Judge, CMU, 2026-09-22)
+- [arXiv:2609.26550 — JEV-as-a-Judge: Accept When Confident, Escalate When Unsure](https://arxiv.org/abs/2609.26550) — 2026-09-22 · [agent][evaluation][rag-claim-verification][judge][non-generative][decision-only][label-probability][confidence-gating][cascade-escalation][frontier-llm][cost-efficiency][cmu][preference-pairs][31.5pct-escalation][cs.cl][cs.ai] · Yubo Li, Yidi Miao, Ramayya Krishnan, Rema Padman (Carnegie Mellon University). 텍스트 생성 없이 레이블 확률만 반환하는 비생성 결정 전용 판정 모델(JEV). 신뢰도 임계치 초과 케이스는 즉시 결론, 미달 케이스만 프론티어 LLM(GPT-6)으로 에스컬레이션(31.5%). JEV 단독 GPT-6 비용의 0.36%, 캐스케이드는 +0.9pts 정확도·GPT-6의 41% 비용 달성. RAG 클레임 검증이 주요 사용 사례. (snippet-verified: alphaxiv.org/abs/2609.26550 + lilys.ai + developersdigest.tech + emergentmind.com + flowtivity.ai + opentrain.ai + Towards AI blog 7개 이상 독립 출처)
+
 ## 2026-10-16 일일 누적 추가 출처 (2건, 루프 #121)
 
 ### 글로벌 — 프로덕션 아키텍처·KG-RAG 자기진화·피드백 역전파 (EvoRAG, v2 2026-10-12)
