@@ -1,5 +1,19 @@
 # 업데이트 로그
 
+## 2026-10-17 (일일 루프 #122)
+- **신규 사례 1건** (arxiv.org WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — KAIST·POSTECH·NAVER·ETRI·카카오·토스·SKT·KT·우아한형제들 등 10월 신규 RAG 발표 미발견; if(kakao)26 컨퍼런스 발표자료 미공개, DEVIEW 2026 미개최, 10월 arXiv 한국 기관 RAG 신규 논문 발견 불가)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-10-17-01 | arXiv:2609.26550 — JEV-as-a-Judge: Accept When Confident, Escalate When Unsure (Yubo Li 외, CMU, 2026-09-22, alphaxiv 하이라이트 2026-10-09) | 에이전트·평가·RAG 클레임 검증 (비생성 결정 전용 판정 모델, 신뢰도 게이팅 캐스케이드 에스컬레이션, JEV GPT-6 비용 0.36%, 캐스케이드 +0.9pts·41% 비용) | 03-에이전트-툴유즈-MCP.md |
+
+- **검증 결과**: 1건 5점 자가검증 통과; snippet-verified
+  1. **arXiv:2609.26550 (JEV-as-a-Judge)** [Yubo Li, Yidi Miao, Ramayya Krishnan, Rema Padman (CMU)]: 텍스트 생성 없이 레이블 확률만 반환하는 비생성 판정 모델. 신뢰 임계치 초과 케이스는 즉시 결론, 미달(31.5%) 케이스만 GPT-6 에스컬레이션. JEV 단독 GPT-6 비용 0.36%, 캐스케이드 방식은 +0.9pts 정확도·GPT-6 41% 비용. RAG 클레임 검증이 명시적 사용 사례. → `03-에이전트-툴유즈-MCP.md` ExpRAG 다음(## 이 도메인의 공통 패턴 앞)에 추가
+
+- `sources.md`에 1개 출처 추가 (## 2026-10-17 섹션 신설, 파일 최상단)
+- **한국 사례**: 0건
+- **검증 결과**: URL 200 OK: 0/1건(arxiv.org WebFetch 직접 접근 불가) · snippet-verified: 1/1건(7개 이상 독립 출처) · 중복 폐기: DailyArXiv #432·#433 수록 논문 대부분 기수집 확인(2610.11370·2610.11183·2610.18567·2610.14428·2604.15676·2609.35774·2610.15292·2610.15285 등) · 발굴 시도 → 최종 채택: 약 25건 시도 → 1건 채택
+
 ## 2026-10-16 (일일 루프 #121)
 - **신규 사례 2건** (arxiv.org WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 1건 — KAIST PACE-RAG, arXiv:2603.17356)
 

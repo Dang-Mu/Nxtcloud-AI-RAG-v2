@@ -1104,6 +1104,22 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **의의**: 에이전틱 RAG의 메모리를 "과거 에이전트 실행 경험의 검색 가능한 라이브러리"로 개념화한 접근. 반복적 워크플로우(고객 지원, 코드 에이전트, 연구 에이전트)가 많은 엔터프라이즈 환경에서 에이전트 성능이 운영 시간에 비례해 향상되는 **자기 개선(self-improving) 에이전트** 패턴의 구체적 구현. Naver의 EMNLP 2026 채택 24편 중 하나로, 2026-10-15 발표.
 - **출처**: [arXiv:2603.18272 — Retrieval-Augmented LLM Agents: Learning to Learn from Experience](https://arxiv.org/abs/2603.18272) (2026-03-18 preprint; EMNLP 2026 Budapest 채택, snippet-verified: arXiv html/2603.18272v1 + alphaxiv.org + europe.naverlabs.com + paperswithcode.co + awesomepapers.io + Naver EMNLP 2026 발표 뉴스 5개 이상 독립 출처)
 
+### JEV-as-a-Judge — 신뢰 기반 경량 판정·불확실 케이스 프론티어 LLM 에스컬레이션 캐스케이드 (arXiv:2609.26550, 2026-09-22)
+
+> **JEV-as-a-Judge: Accept When Confident, Escalate When Unsure** (arXiv:2609.26550, 2026-09-22, Carnegie Mellon University)
+
+- **목적**: LLM 출력 또는 RAG 클레임을 자동 판정할 때 발생하는 비용–정확도 트레이드오프 해결. 프론티어 LLM judge는 정확도가 높지만 호출 비용이 크고, 소형 판정 모델은 저렴하지만 정확도가 부족하다.
+- **핵심 아이디어 — JEV(Judge with Evidence-based Verification)**:
+  1. **비생성 결정 전용 판정 모델(non-generative decision-only judge)**: 텍스트를 생성하지 않고 레이블 확률만 반환하는 경량 판정 모델. 비생성 설계로 추론 지연·비용 대폭 절감.
+  2. **신뢰도 게이팅 캐스케이드 에스컬레이션**: JEV가 높은 신뢰도로 판정 가능한 케이스는 즉시 결론; 신뢰 임계치 미달 케이스만 프론티어 LLM(GPT-6)으로 에스컬레이션. 보고된 에스컬레이션 비율 31.5%.
+- **결과** (저자 보고):
+  - JEV 단독 비용: GPT-6의 **0.36%** 수준.
+  - 캐스케이드(JEV + 선택적 GPT-6 에스컬레이션): GPT-6 단독 대비 정확도 **+0.9pts** 향상, 비용 GPT-6의 **41% 수준** — *각 수치는 단독 구성 vs. 캐스케이드 구성의 상이한 조건이며 출처마다 수치가 다소 다를 수 있음.*
+- **RAG 적용**: RAG 클레임 검증(검색 증거가 생성 답변을 실제로 지지하는지 자동 판정)이 주요 사용 사례로 명시됨.
+- **의의**: 에이전틱 RAG 품질 게이팅 파이프라인에서 **신뢰 기반 판정 캐스케이드** 설계를 구체화. 매 생성 출력을 대형 LLM으로 검증하는 방식 대신, 높은 확신 케이스는 경량 비생성 모델로 처리하고 불확실 케이스만 선별 에스컬레이션하는 패턴은 프로덕션 RAG 검증 비용을 획기적으로 줄이는 참조 설계.
+- **저자**: Yubo Li, Yidi Miao, Ramayya Krishnan, Rema Padman (Carnegie Mellon University)
+- **출처**: [arXiv:2609.26550 — JEV-as-a-Judge: Accept When Confident, Escalate When Unsure](https://arxiv.org/abs/2609.26550) (2026-09-22 제출, alphaxiv 2026-10-09 하이라이트, snippet-verified: alphaxiv.org/abs/2609.26550 + lilys.ai + developersdigest.tech + emergentmind.com + flowtivity.ai + opentrain.ai + Towards AI blog 7개 이상 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.
