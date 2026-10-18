@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-10-18 일일 누적 추가 출처 (2건, 루프 #123)
+
+### 글로벌 — 에이전트·멀티홉 RAG·Search Drift 실패 모드·ExecutionRAG 학습불필요 요건 레지스터 (DAI 2026 Oral, 2026-10-15)
+- [arXiv:2610.21184 — Beyond Retrieval Failure: Understanding Why LLMs Miss Evidence in Multi-Hop RAG](https://arxiv.org/abs/2610.21184) — 2026-10-15 · [agent][multi-hop-rag][search-drift][failure-mode][requirement-register][training-free][executionrag][musique][all-minilm-l6-v2][qwen3-embedding-0.6b][dai2026][oral][subquery-tracking][evidence-sufficiency][cs.cl][cs.ir] · Jiaqi Wei, Wenxuan Huang, Chengdong Xu, Xiang Zhang, Wanli Ouyang. 멀티홉 QA 실패가 검색 실패가 아닌 LLM의 서브쿼리 추적 중단(search drift)임을 실증. 학습 불필요 요건 레지스터(requirement register)로 미해결 서브쿼리 명시적 추적. all-MiniLM-L6-v2 기준 MuSiQue 1K문항 오답 382→234건. DAI 2026 Oral: The Eighth International Conference on Distributed Artificial Intelligence, Nov 29–Dec 2, 2026, Hong Kong. (snippet-verified: arxiv.org/abs/2610.21184 + arxiv.org/html/2610.21184 + Ep11phany/DailyArXiv #391 3개 이상 독립 출처)
+
+### 한국 — 학술·RAG 쿼리 변형 강건성 벤치마크·강건성 갭 실증 (SNU·MPI, 2026-04-12)
+- [arXiv:2604.10745 — How You Ask Matters! Adaptive RAG Robustness to Query Variations](https://arxiv.org/abs/2604.10745) — 2026-04-12 · [korean][snu][mpi][robustness][query-variation][robustness-gap][adaptive-rag][benchmark][27k-qa-pairs][6-datasets][scale-limitation][emnlp2026-unverified][cs.cl][cs.ir] · Yunah Jang, Megha Sundriyal, Kyomin Jung (서울대학교), Meeyoung Cha (Max Planck Institute for Intelligent Systems). 27K+ QA쌍·6개 데이터셋으로 쿼리 변형에 따른 RAG 강건성 갭 실증. 대형 모델 스케일업이 강건성을 비례 향상시키지 않음. EMNLP 2026 게재 (unverified). (snippet-verified: arxiv.org/abs/2604.10745 + arxiv.org/html/2604.10745 + arxiv.org/pdf/2604.10745 + pith.science/paper/2604.10745 + bytez.com 5개 이상 독립 출처)
+
 ## 2026-10-17 일일 누적 추가 출처 (1건, 루프 #122)
 
 ### 글로벌 — 에이전트·RAG 클레임 검증·신뢰 기반 판정 캐스케이드 (JEV-as-a-Judge, CMU, 2026-09-22)

@@ -1,5 +1,21 @@
 # 업데이트 로그
 
+## 2026-10-18 (일일 루프 #123)
+- **신규 사례 2건** (arxiv.org WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 1건 — SNU Yunah Jang 외, arXiv:2604.10745)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-10-18-01 | arXiv:2610.21184 — Beyond Retrieval Failure: Understanding Why LLMs Miss Evidence in Multi-Hop RAG (Jiaqi Wei 외, DAI 2026 Oral, 2026-10-15) | 에이전트·멀티홉 RAG·Search Drift 실패 모드 규명·ExecutionRAG 학습불필요 요건 레지스터 (MuSiQue 오답 382→234, DAI 2026 Oral) | 03-에이전트-툴유즈-MCP.md |
+| KR-2026-10-18-01 | arXiv:2604.10745 — How You Ask Matters! Adaptive RAG Robustness to Query Variations (Yunah Jang 외, SNU·MPI, 2026-04-12) | 학술·RAG 쿼리 변형 강건성 벤치마크·강건성 갭 실증·대형 모델 스케일업 한계 (27K+ QA쌍, 6개 데이터셋) | 04-산업별-사례.md |
+
+- **검증 결과**: 2건 전원 5점 자가검증 통과; snippet-verified (전건)
+  1. **arXiv:2610.21184 (ExecutionRAG / Beyond Retrieval Failure)** [Jiaqi Wei, Wenxuan Huang, Chengdong Xu, Xiang Zhang, Wanli Ouyang]: 멀티홉 QA 실패가 검색 실패가 아닌 LLM의 서브쿼리 추적 중단(search drift)임을 실증. 학습 불필요 요건 레지스터(requirement register)로 미해결 서브쿼리 추적. all-MiniLM-L6-v2 기준 MuSiQue 1K문항에서 오답 382→234건. DAI 2026 Oral 채택. → `03-에이전트-툴유즈-MCP.md` JEV-as-a-Judge 다음(## 이 도메인의 공통 패턴 앞)에 추가
+  2. **arXiv:2604.10745 (How You Ask Matters!)** [Yunah Jang, Megha Sundriyal, Kyomin Jung (SNU), Meeyoung Cha (MPI)]: 27K+ QA쌍·6개 데이터셋으로 RAG 쿼리 변형 강건성 갭 실증. 대형 모델이 반드시 더 강건하지 않음을 규명. EMNLP 2026 게재 여부 (unverified). → `04-산업별-사례.md` 과학·학술 ### 한국 섹션(신설)에 추가
+
+- `sources.md`에 2개 출처 추가 (## 2026-10-18 섹션 신설, 파일 최상단)
+- **한국 사례**: 1건 (SNU·MPI, arXiv:2604.10745, How You Ask Matters!)
+- **검증 결과**: URL 200 OK: 0/2건(arxiv.org WebFetch 직접 접근 불가) · snippet-verified: 2/2건(GL: 3개 이상 독립 출처 / KR: 5개 이상 독립 출처) · 중복 폐기: TimelyRAG·PACE-RAG·ExpRAG·Q-CARE 등 기수집 확인 · 발굴 시도 → 최종 채택: 약 20건 시도 → 2건 채택
+
 ## 2026-10-17 (일일 루프 #122)
 - **신규 사례 1건** (arxiv.org WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — KAIST·POSTECH·NAVER·ETRI·카카오·토스·SKT·KT·우아한형제들 등 10월 신규 RAG 발표 미발견; if(kakao)26 컨퍼런스 발표자료 미공개, DEVIEW 2026 미개최, 10월 arXiv 한국 기관 RAG 신규 논문 발견 불가)
 

@@ -1120,6 +1120,22 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **저자**: Yubo Li, Yidi Miao, Ramayya Krishnan, Rema Padman (Carnegie Mellon University)
 - **출처**: [arXiv:2609.26550 — JEV-as-a-Judge: Accept When Confident, Escalate When Unsure](https://arxiv.org/abs/2609.26550) (2026-09-22 제출, alphaxiv 2026-10-09 하이라이트, snippet-verified: alphaxiv.org/abs/2609.26550 + lilys.ai + developersdigest.tech + emergentmind.com + flowtivity.ai + opentrain.ai + Towards AI blog 7개 이상 독립 출처)
 
+### ExecutionRAG — 서브 쿼리 추적 요건 레지스터로 멀티홉 RAG 'Search Drift' 해결 (arXiv:2610.21184, DAI 2026 Oral, 2026-10-15)
+
+> **Beyond Retrieval Failure: Understanding Why LLMs Miss Evidence in Multi-Hop RAG** (arXiv:2610.21184, DAI 2026 Oral)
+
+- **목적**: 멀티홉 RAG에서 검색 실패처럼 보이는 오류의 실제 원인을 규명하고, 학습 없이 수정 가능한 해결책 제시.
+- **핵심 발견 — Search Drift**: 멀티홉 QA 실패의 상당 부분은 검색기가 관련 문서를 가져오지 못한 것이 아니라, LLM이 아직 답을 찾지 못한 서브쿼리를 추적하지 않고 탐색을 중단(search drift)하기 때문임. 즉, 검색이 성공해도 LLM이 근거를 놓치는 별도의 실패 모드 존재.
+- **해결책 (ExecutionRAG)**: 검색기·코퍼스·생성기를 변경하지 않는 **학습 불필요(training-free) 요건 레지스터(requirement register)**. 미해결 서브쿼리와 뒷받침 근거를 명시적으로 추적하며 탐색을 유지.
+- **결과** (저자 보고):
+  - all-MiniLM-L6-v2: 미검색 근거로 인한 오답 382건 → 234건 (MuSiQue 1,000문항)
+  - Qwen3-Embedding-0.6B: 383건 → 274건
+  - 단, 미해결 증거 실패 감소 시 조기 해결(premature resolution)·기권(abstention)이 증가하는 부작용도 실증됨. 다음 병목: 검색된 근거의 충분성 검증.
+- **아키텍처 특이점**: 검색 인프라·파인튜닝 없이 요건 추적 레지스터만 추가. 기존 RAG 파이프라인에 최소 개입으로 멀티홉 성능 개선 가능.
+- **의의**: 멀티홉 RAG 실패를 "검색 품질 문제"가 아닌 "LLM의 서브쿼리 추적 실패"로 재정의. 근거가 검색돼 있는데도 LLM이 이를 활용하지 못하는 케이스를 실증하고 경량 해결책 제시. DAI 2026 구두 발표(Oral) 채택.
+- **저자**: Jiaqi Wei, Wenxuan Huang, Chengdong Xu, Xiang Zhang, Wanli Ouyang
+- **출처**: [arXiv:2610.21184 — Beyond Retrieval Failure: Understanding Why LLMs Miss Evidence in Multi-Hop RAG](https://arxiv.org/abs/2610.21184) (2026-10-15, DAI 2026 Oral: The Eighth International Conference on Distributed Artificial Intelligence, Nov 29–Dec 2, 2026, Hong Kong, snippet-verified: arxiv.org/abs/2610.21184 + arxiv.org/html/2610.21184 + Ep11phany/DailyArXiv #391 3개 이상 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.
