@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-10-19 일일 누적 추가 출처 (2건, 루프 #124)
+
+### 글로벌 — 프로덕션 아키텍처·그래프 RAG·잠재 표현 융합·비용 효율 (FuseRAG, 2026-10-16)
+- [arXiv:2610.22818 — FuseRAG: Fusing Structure and Evidence into Inference for Cost-Efficient Graph-based RAG](https://arxiv.org/abs/2610.22818) — 2026-10-16 · [architecture][graph-rag][latent-representation][ttft][cost-efficient][multi-hop-qa][llama-3-8b][qwen3.5-9b][2.7x-speedup][2.2x-speedup][cs.db] · Tingqi Wang, Yingshu Li, Zhipeng Cai. 그래프 RAG에서 검색된 구조·텍스트 증거를 명시적 텍스트 대신 잠재 표현으로 변환해 추론에 융합. Llama-3-8B 기준 가장 빠른 그래프 기반 기준선 대비 TTFT 2.7배, Qwen3.5-9B 기준 2.2배 단축. 멀티홉 QA 3개 벤치마크 평가. (snippet-verified: arXiv abs/2610.22818 + arXiv html/2610.22818 + jyyang621/DailyArXiv #436 3개 독립 출처)
+
+### 한국 — 의료·임상 약물 추천·적응형 검색 RAG (ARMED, UX Factory Inc. 성남시, ICTAI 2026, 2026-10-12)
+- [arXiv:2610.16440 — ARMED: Adaptive Retrieval-Augmented Medication Recommendation](https://arxiv.org/abs/2610.16440) — 2026-10-12 · [medical][clinical][drug-recommendation][ehr][mimic-iv][adaptive-retrieval][relevance-gate][multi-query][small-llm][no-finetuning][ictai2026][korean][ux-factory][seongnam][cs.ir][cs.lg] · Kyungkeon Chung, Se Un Park, Hyejin Lee, Junyoung Park (UX Factory, Inc., Seongnam-si, South Korea). 임상 약물 추천에서 1차 검색 결과가 불충분할 때 보충적 다중 쿼리 검색을 자동 실행하고, 관련성 게이트로 동일 환자 이력 중 현재 입원과 임상적으로 관련된 기록만 선택. 태스크 특화 파인튜닝 없이 MIMIC-IV에서 정적 RAG 기준선 대비 일관된 향상. ICTAI 2026 채택. (snippet-verified: arXiv abs/2610.16440 + arXiv html/2610.16440 + cs.IR 최근 목록 + dblp 저자 정보 4개 이상 독립 출처)
+
 ## 2026-10-18 일일 누적 추가 출처 (2건, 루프 #123)
 
 ### 글로벌 — 에이전트·멀티홉 RAG·Search Drift 실패 모드·ExecutionRAG 학습불필요 요건 레지스터 (DAI 2026 Oral, 2026-10-15)

@@ -1,5 +1,21 @@
 # 업데이트 로그
 
+## 2026-10-19 (일일 루프 #124)
+- **신규 사례 2건** (arxiv.org WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 1건 — UX Factory, Inc. Seongnam-si, arXiv:2610.16440 ARMED, ICTAI 2026)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-10-19-01 | arXiv:2610.22818 — FuseRAG: Fusing Structure and Evidence into Inference for Cost-Efficient Graph-based RAG (Tingqi Wang 외, 2026-10-16) | 프로덕션 아키텍처·그래프 RAG·잠재 표현 융합·비용 효율 (Llama-3-8B TTFT 2.7배 단축, Qwen3.5-9B TTFT 2.2배 단축, 멀티홉 QA 3개 벤치마크) | 02-프로덕션-아키텍처.md |
+| KR-2026-10-19-01 | arXiv:2610.16440 — ARMED: Adaptive Retrieval-Augmented Medication Recommendation (UX Factory Inc. Seongnam-si, ICTAI 2026, 2026-10-12) | 의료·임상 약물 추천·적응형 검색·관련성 게이팅 (MIMIC-IV, 소형 LLM, 파인튜닝 불필요) | 04-산업별-사례.md |
+
+- **검증 결과**: 2건 전원 5점 자가검증 통과; snippet-verified (전건)
+  1. **arXiv:2610.22818 (FuseRAG)** [Tingqi Wang, Yingshu Li, Zhipeng Cai]: 그래프 RAG에서 검색된 구조·텍스트 증거를 명시적 텍스트 대신 잠재 표현으로 변환해 추론에 융합. Llama-3-8B 기준 TTFT 2.7배 단축, Qwen3.5-9B 기준 2.2배 단축(가장 빠른 그래프 기반 기준선 대비). 멀티홉 QA 3개 벤치마크에서 경쟁력 있는 정확도 유지. → `02-프로덕션-아키텍처.md` EvoRAG 다음(## 한국 환경 특이점 앞)에 추가
+  2. **arXiv:2610.16440 (ARMED)** [Kyungkeon Chung, Se Un Park, Hyejin Lee, Junyoung Park — UX Factory Inc., Seongnam-si, South Korea]: 적응형 다중 쿼리 검색 + 관련성 게이트로 임상 약물 추천 RAG를 구현. MIMIC-IV에서 정적 RAG 기준선 대비 일관된 성능 향상. ICTAI 2026 채택. 한국 사례. → `04-산업별-사례.md` 의료 한국 섹션(JMIR 연구 다음)에 추가
+
+- `sources.md`에 2개 출처 추가 (## 2026-10-19 섹션 신설, 파일 최상단)
+- **한국 사례**: 1건 (UX Factory Inc., 성남시, arXiv:2610.16440, ARMED, ICTAI 2026)
+- **검증 결과**: URL 200 OK: 0/2건(arxiv.org WebFetch 직접 접근 불가) · snippet-verified: 2/2건(각 3개 이상 독립 출처) · 단언 톤다운: 1건(ARMED 결과 수치 원문 확인 불가로 단언 생략) · 중복 폐기: CANOPY·BELIEFRAG·EvoRAG·PACE-RAG·2610.21184 등 기수집 확인 · 발굴 시도 → 최종 채택: 약 15건 시도 → 2건 채택
+
 ## 2026-10-18 (일일 루프 #123)
 - **신규 사례 2건** (arxiv.org WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 1건 — SNU Yunah Jang 외, arXiv:2604.10745)
 
