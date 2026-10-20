@@ -1136,6 +1136,25 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **저자**: Jiaqi Wei, Wenxuan Huang, Chengdong Xu, Xiang Zhang, Wanli Ouyang
 - **출처**: [arXiv:2610.21184 — Beyond Retrieval Failure: Understanding Why LLMs Miss Evidence in Multi-Hop RAG](https://arxiv.org/abs/2610.21184) (2026-10-15, DAI 2026 Oral: The Eighth International Conference on Distributed Artificial Intelligence, Nov 29–Dec 2, 2026, Hong Kong, snippet-verified: arxiv.org/abs/2610.21184 + arxiv.org/html/2610.21184 + Ep11phany/DailyArXiv #391 3개 이상 독립 출처)
 
+### KR-2026-10-20-01 | RetailRAG / RetailBridge — 이종 데이터 소스를 넘나드는 엔터프라이즈 리테일 에이전틱 RAG (arXiv:2610.25096, KAIST DISLab, 2026-10-18) [한국 사례 — KAIST DISLab, Hwanjun Song]
+
+> **Toward Agentic Retrieval-Augmented Generation for Enterprise Retail Workflows over Heterogeneous Data Sources** (arXiv:2610.25096, 2026-10-18, cs.AI)
+
+- **회사/팀**: **KAIST** Graduate School of Data Science & Department of Industrial and Systems Engineering — **Data Intelligence System Lab (DISLab)** (Jeonghwan Choi, Jibin Hwang, Hayoon Park, Hyeonjae Cheon, **Hwanjun Song** 교수). 코드·데이터: github.com/DISL-Lab/RetailBridge
+- **목적**: 실제 리테일 엔터프라이즈 워크플로우에서 에이전트가 이종 데이터 소스(구조화·비구조화 혼재)를 넘나들며 멀티소스·멀티홉 질의에 답해야 하는 상황을 표준화된 벤치마크로 정의하고, 이를 위한 리테일 인식 에이전틱 RAG 프레임워크를 제시.
+- **RetailBridge 벤치마크**:
+  - 680개 멀티소스·멀티홉 쿼리, 3단계 난이도(추론 깊이 × 소스 전환 횟수로 체계적 통제).
+  - 기존 에이전틱 RAG 벤치마크는 단일 코퍼스 또는 일반 도메인 소스에 집중하는 반면, 실제 리테일 질의는 단일 저장소에 존재하지 않는 경우가 대부분이라는 문제의식에서 출발.
+  - 엔티티와 중간 답변을 이종 소스 간에 연결하는 방식으로 질의 구성 → 에이전트가 관련 소스 식별, 소스 간 증거 이동, 근거 기반 응답 생성까지 모두 수행해야 함.
+- **RetailRAG 프레임워크** ("최초의 리테일 인식 에이전틱 RAG"):
+  1. **오토스키마 브리핑(Auto-Schema Briefing)**: 에이전트가 각 소스의 스키마를 동적으로 파악하고 계획에 반영.
+  2. **소스 라우팅 플랜 체이닝(Source-Routed Plan Chaining)**: 복수 소스에 걸친 증거 수집을 명시적 계획 체인으로 오케스트레이션.
+  3. **진단적 계획 수정(Diagnostic Plan Revision)**: 실행 중 오류·빈 결과 발생 시 계획을 자가 수정해 소스 전환 실패를 최소화.
+- **핵심 발견**: 10개 LLM 백본 전반에 걸쳐 **멀티소스 체이닝이 지배적 병목**임을 실증 → 단순 모델 스케일업이 아닌 명시적 크로스소스 오케스트레이션이 신뢰할 수 있는 리테일 에이전트의 요건.
+- **결과**: RetailRAG가 기존 에이전틱 RAG 기준선 대비 전 평가 축에서 일관되게 우수한 성능 보고 (저자 보고).
+- **의의**: 리테일·유통처럼 ERP·CRM·정책 문서·상품 카탈로그가 이종으로 분산된 엔터프라이즈 환경에서 에이전틱 RAG를 설계할 때 "소스 라우팅 오케스트레이션"이 핵심 구성 요소임을 벤치마크로 실증. KAIST DISLab의 에이전틱 RAG 연구 라인(BRIDGE-Benchmark, TimelyRAG 등)의 연장선.
+- **출처**: [arXiv:2610.25096 — Toward Agentic RAG for Enterprise Retail Workflows over Heterogeneous Data Sources](https://arxiv.org/abs/2610.25096) (2026-10-18, snippet-verified: arxiv.org/abs/2610.25096 + arxiv.org/html/2610.25096 + disl-lab.github.io + github.com/DISL-Lab/RetailBridge 4개 이상 독립 출처)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.
