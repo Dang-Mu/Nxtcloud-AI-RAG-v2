@@ -1,5 +1,21 @@
 # 업데이트 로그
 
+## 2026-10-20 (일일 루프 #125)
+- **신규 사례 2건** (arxiv.org WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 1건 — KAIST DISLab, arXiv:2610.25096 RetailRAG/RetailBridge, Hwanjun Song)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| KR-2026-10-20-01 | arXiv:2610.25096 — Toward Agentic RAG for Enterprise Retail Workflows over Heterogeneous Data Sources (KAIST DISLab, 2026-10-18) | 에이전트·엔터프라이즈 리테일·이종 데이터소스·멀티소스 체이닝·RetailBridge 벤치마크·RetailRAG 프레임워크 (680 쿼리, 10개 LLM 백본) | 03-에이전트-툴유즈-MCP.md |
+| GL-2026-10-20-01 | arXiv:2610.26313 — StrucChunk: Structure-Aware Retrieval for Legal Document RAG (Surya Deep Singh 외, 2026-10-19) | 프로덕션 아키텍처·법률 RAG·구조 인식 청킹·DAG 모델링·교차 참조 사전 해결·BM25+BGE-M3 RRF 하이브리드 (CrPC 경계 정밀도 100%, LegalBench-RAG Char-Recall@8 +104%) | 02-프로덕션-아키텍처.md |
+
+- **검증 결과**: 2건 전원 5점 자가검증 통과; snippet-verified (전건)
+  1. **arXiv:2610.25096 (RetailRAG/RetailBridge)** [Jeonghwan Choi, Jibin Hwang, Hayoon Park, Hyeonjae Cheon, Hwanjun Song — KAIST DISLab]: 엔터프라이즈 리테일 워크플로우에서 이종 데이터소스(구조화·비구조화 혼재)를 넘나드는 멀티소스·멀티홉 에이전틱 RAG. RetailBridge(680 쿼리, 3단계 난이도) 벤치마크 + RetailRAG 프레임워크(오토스키마 브리핑·소스 라우팅 플랜 체이닝·진단적 계획 수정). 10개 LLM 백본에서 멀티소스 체이닝이 지배적 병목임을 실증. 기존 기준선 전 평가 축에서 우수. → `03-에이전트-툴유즈-MCP.md` ExecutionRAG 다음(## 이 도메인의 공통 패턴 앞)에 추가. **한국 사례: KAIST DISLab, Hwanjun Song 교수**
+  2. **arXiv:2610.26313 (StrucChunk)** [Surya Deep Singh (IBM), Ashutosh Tripathi, Gaurav Deep Singh]: 법령 조문 경계를 DAG로 보존하고 교차 참조를 임베딩 전에 해결하는 구조 인식 청킹. BM25+BGE-M3 RRF 하이브리드 검색 결합. CrPC 경계 정밀도 100% vs. 재귀 7.7%, 교차 참조 보존 97.6% vs. 0%, LegalBench-RAG Char-Recall@8 48.18% vs. 23.59% (+104%). → `02-프로덕션-아키텍처.md` FuseRAG 다음(## 한국 환경 특이점 앞)에 추가.
+
+- `sources.md`에 2개 출처 추가 (## 2026-10-20 섹션 신설, 파일 최상단)
+- **한국 사례**: 1건 (KAIST DISLab, arXiv:2610.25096, RetailRAG/RetailBridge, Hwanjun Song 교수)
+- **검증 결과**: URL 200 OK: 0/2건(arxiv.org WebFetch 직접 접근 불가) · snippet-verified: 2/2건(RetailRAG: 4개 이상 독립 출처 / StrucChunk: 4개 이상 독립 출처) · 단언 톤다운: 0건 · 중복 폐기: 2610.22818·2610.22652·2610.26339·2605.25641 등 신규 확인 후 기수집/범위 외 판단 · 발굴 시도 → 최종 채택: 약 15건 시도 → 2건 채택
+
 ## 2026-10-19 (일일 루프 #124)
 - **신규 사례 2건** (arxiv.org WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 1건 — UX Factory, Inc. Seongnam-si, arXiv:2610.16440 ARMED, ICTAI 2026)
 

@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-10-20 일일 누적 추가 출처 (2건, 루프 #125)
+
+### 한국 — 에이전트·엔터프라이즈 리테일·이종 데이터소스 에이전틱 RAG (RetailRAG/RetailBridge, KAIST DISLab, 2026-10-18)
+- [arXiv:2610.25096 — Toward Agentic Retrieval-Augmented Generation for Enterprise Retail Workflows over Heterogeneous Data Sources](https://arxiv.org/abs/2610.25096) — 2026-10-18 · [korean][kaist][disl-lab][hwanjun-song][agentic-rag][enterprise][retail][heterogeneous-data][multi-source][multi-hop][retailbridge][retailrag][auto-schema][source-routing][plan-chaining][diagnostic-revision][680-queries][10-llm-backbones][cs.ai] · Jeonghwan Choi, Jibin Hwang, Hayoon Park, Hyeonjae Cheon, Hwanjun Song (KAIST Graduate School of Data Science & Department of ISyE, DISLab). 엔터프라이즈 리테일 워크플로우에서 이종 데이터소스(구조화·비구조화 혼재)를 넘나드는 멀티소스·멀티홉 에이전틱 RAG 벤치마크(RetailBridge, 680 쿼리, 3단계 난이도)와 프레임워크(RetailRAG: 오토스키마 브리핑·소스 라우팅 플랜 체이닝·진단적 계획 수정) 제시. 10개 LLM 백본 실험에서 멀티소스 체이닝이 지배적 병목임을 실증. (snippet-verified: arxiv.org/abs/2610.25096 + arxiv.org/html/2610.25096 + disl-lab.github.io + github.com/DISL-Lab/RetailBridge 4개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처·법률 RAG·구조 인식 청킹·DAG 모델링·BM25+BGE-M3 RRF 하이브리드 (StrucChunk, 2026-10-19)
+- [arXiv:2610.26313 — StrucChunk: Structure-Aware Retrieval for Legal Document RAG](https://arxiv.org/abs/2610.26313) — 2026-10-19 · [architecture][legal-rag][structure-aware-chunking][dag][provision][cross-reference][bm25][bge-m3][rrf][hybrid-retrieval][legalbench-rag][crpc][cpc][100pct-boundary-precision][char-recall-48.18][5256-queries][5-legal-corpora][open-source][cs.ai] · Surya Deep Singh (IBM), Ashutosh Tripathi, Gaurav Deep Singh. 법률 문서를 조항 노드 DAG로 모델링해 경계를 보존하고 교차 참조를 임베딩 전에 해결하는 구조 인식 청킹. BM25+BGE-M3 RRF 하이브리드 검색 결합. CrPC 경계 정밀도 100% vs. 재귀 7.7%, 교차 참조 보존 97.6% vs. 0%, Recall@5(CrPC) +44.4%, LegalBench-RAG Char-Recall@8 48.18% vs. 23.59% (+104%). 코드+5,256 평가 쿼리 공개. (snippet-verified: arxiv.org/abs/2610.26313 + arxiv.org/html/2610.26313 + jyyang621/DailyArXiv #437 + x.com/suryadeepsingh4 4개 이상 독립 출처)
+
 ## 2026-10-19 일일 누적 추가 출처 (2건, 루프 #124)
 
 ### 글로벌 — 프로덕션 아키텍처·그래프 RAG·잠재 표현 융합·비용 효율 (FuseRAG, 2026-10-16)
