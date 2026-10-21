@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-10-21 일일 누적 추가 출처 (2건, 루프 #126)
+
+### 한국 — 프로덕션 아키텍처·RAG 강건성·학습불필요 뉴런 편집 (SCoNE, 한양대 HYU-ARK-Lab, EMNLP 2026)
+- [arXiv:2609.00689 — SCoNE: Selective Context-aware Neuron Editing for Robust Retrieval-Augmented Generation](https://arxiv.org/abs/2609.00689) — 2026-09-01 · [korean][hanyang-university][hyu-ark-lab][architecture][robustness][training-free][neuron-editing][ffn][attribution][cross-input-variability][emnlp2026][knowledge-intensive-qa][noise-robustness][llama-3-8b][cs.cl][cs.ai] · Chaewon Kim, Seo Yeon Park (한양대학교 HYU-ARK-Lab). 검색된 노이즈·오해 유도 문서에 대한 RAG 강건성을 학습 불필요 FFN 뉴런 편집으로 향상. 높은 귀속도+높은 교차입력 변동성 기준으로 뉴런 선택 후 선택적 강화; 소량 마이닝 샘플만 필요. Llama-3-8B-Instruct 기준 7개 데이터셋 중 6/7 1위, 표준 RAG 대비 평균 +3.75%, RetRobust 대비 +3.73%, PA-RAG 대비 -0.72% 이내. EMNLP 2026 Main Conference 채택. (snippet-verified: arxiv.org/pdf/2609.00689 + prismix.dev/news/deb7493bdee9 + chatpaper.com/paper/304314 + emergentmind.com/papers 4개 이상 독립 출처)
+
+### 글로벌 — 프로덕션 아키텍처·보안·공급망 백도어·RAG 생성기 공격 (RAGLeak, 2026-10-19)
+- [arXiv:2610.25937 — RAGLeak: Supply-Chain Privacy Backdoors in Retrieval-Augmented Generation](https://arxiv.org/abs/2610.25937) — 2026-10-19 · [architecture][security][supply-chain][backdoor][generator-attack][reversible-obfuscation][asr-100pct][clean-finetuning][qwen][llama][ministral][medical-dialogue][enterprise-email][code-generation][cs.cr] · Yuchen Chen, Wei Cheng 외 8명. RAG 생성기에 공급망 백도어를 삽입해 검색된 비공개 문서를 가역적 난독화로 유출하는 새로운 위협 모델. 트리거 발동 시 생성기가 비공개 문서를 난독화·출력하면 보조 LLM이 복호화. Qwen·Llama·Ministral 3패밀리 × 의료 대화·기업 이메일 QA·코드 생성 3도메인에서 ASR 최대 100%. 탐지 기반 방어에서도 ASR 최대 10%p 감소에 그침; 클린 파인튜닝 후에도 백도어 유지. (snippet-verified: arxiv.org/abs/2610.25937 + arxiv.org/html/2610.25937 + jfisher4002.substack.com/p/ai-leak-watch-the-backdoor-waited + arxiv.org/list/cs/pastweek 4개 이상 독립 출처)
+
 ## 2026-10-20 일일 누적 추가 출처 (2건, 루프 #125)
 
 ### 한국 — 에이전트·엔터프라이즈 리테일·이종 데이터소스 에이전틱 RAG (RetailRAG/RetailBridge, KAIST DISLab, 2026-10-18)

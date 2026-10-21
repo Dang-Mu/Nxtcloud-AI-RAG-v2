@@ -1,5 +1,21 @@
 # 업데이트 로그
 
+## 2026-10-21 (일일 루프 #126)
+- **신규 사례 2건** (arxiv.org WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 1건 — 한양대학교 HYU-ARK-Lab, arXiv:2609.00689 SCoNE, EMNLP 2026)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| KR-2026-10-21-01 | arXiv:2609.00689 — SCoNE: Selective Context-aware Neuron Editing for Robust Retrieval-Augmented Generation (한양대 HYU-ARK-Lab, EMNLP 2026 Main) | 프로덕션 아키텍처·RAG 강건성·학습불필요 뉴런 편집·FFN 귀속도+교차입력 변동성·RetRobust 대비 +3.73%·6/7 데이터셋 1위 (Llama-3-8B) | 02-프로덕션-아키텍처.md |
+| GL-2026-10-21-01 | arXiv:2610.25937 — RAGLeak: Supply-Chain Privacy Backdoors in Retrieval-Augmented Generation (Yuchen Chen 외, 2026-10-19, cs.CR) | 프로덕션 아키텍처·보안·공급망 백도어·생성기 공격·가역적 난독화·ASR 최대 100%·클린 파인튜닝 후에도 유지 (Qwen·Llama·Ministral 3패밀리 × 3도메인) | 02-프로덕션-아키텍처.md |
+
+- **검증 결과**: 2건 전원 5점 자가검증 통과; snippet-verified (전건)
+  1. **arXiv:2609.00689 (SCoNE)** [Chaewon Kim, Seo Yeon Park — 한양대학교 HYU-ARK-Lab]: 학습 불필요 FFN 뉴런 편집으로 RAG 맥락 노이즈 강건성 향상. 높은 귀속도+높은 교차입력 변동성 기준으로 뉴런 선택 후 선택적 강화. Llama-3-8B-Instruct 기준 7개 데이터셋 중 6/7 1위, 표준 RAG 대비 +3.75%, RetRobust 대비 +3.73%. EMNLP 2026 Main Conference 채택. → `02-프로덕션-아키텍처.md` StrucChunk 다음(## 한국 환경 특이점 앞)에 추가. **한국 사례: 한양대학교 HYU-ARK-Lab**
+  2. **arXiv:2610.25937 (RAGLeak)** [Yuchen Chen, Wei Cheng 외 8명]: RAG 생성기에 삽입된 공급망 백도어가 검색된 비공개 문서를 가역적 난독화로 유출하는 새로운 위협 모델. Qwen·Llama·Ministral 3패밀리 × 의료·이메일QA·코드생성 3도메인에서 ASR 최대 100%. 탐지 기반 방어에서도 ASR 최대 10%p 감소에 그침. 클린 파인튜닝 후에도 백도어 유지 실증. → `02-프로덕션-아키텍처.md` SCoNE 다음(## 한국 환경 특이점 앞)에 추가.
+
+- `sources.md`에 2개 출처 추가 (## 2026-10-21 섹션 신설, 파일 최상단)
+- **한국 사례**: 1건 (한양대학교 HYU-ARK-Lab, arXiv:2609.00689, SCoNE, EMNLP 2026 Main)
+- **검증 결과**: URL 200 OK: 0/2건(arxiv.org WebFetch 직접 접근 불가) · snippet-verified: 2/2건 (SCoNE: arxiv.org/pdf + prismix.dev + chatpaper.com + emergentmind.com 4개 이상 / RAGLeak: arxiv.org/abs + arxiv.org/html + jfisher4002.substack.com + arxiv.org/list 4개 이상) · 단언 톤다운: 0건 · 중복 폐기: KoViDoRe 2608.20840·SCoNE 유사 시스템·2610.22297·2610.23226 등 신규 확인 후 기수집/범위 외 판단 · 발굴 시도 → 최종 채택: 약 15건 시도 → 2건 채택
+
 ## 2026-10-20 (일일 루프 #125)
 - **신규 사례 2건** (arxiv.org WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 1건 — KAIST DISLab, arXiv:2610.25096 RetailRAG/RetailBridge, Hwanjun Song)
 
