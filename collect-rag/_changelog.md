@@ -1,5 +1,21 @@
 # 업데이트 로그
 
+## 2026-10-22 (일일 루프 #127)
+- **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 1건 — 투라인클라우드·날리지큐브 MOU)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-10-22-01 | arXiv:2610.29722 — RAG Compositionality: LASAGNA 프레임워크로 450개 구성 실험, 조합 이득 감소·검색-충실도 트레이드오프·코퍼스 스케일 의존성 실증 (IBM·Weizmann, 2026-10-21) | 프로덕션 아키텍처·RAG 파이프라인 평가·컴포넌트 조합 효과 | 02-프로덕션-아키텍처.md |
+| KR-2026-10-22-01 | 투라인클라우드·날리지큐브 MOU — 기업 업무포털·KMS에 RAG 적용 PoC 추진, 금융권 우선 (2026-10-15) | 엔터프라이즈·사내지식·KMS·RAG AX | 01-엔터프라이즈-사내지식.md |
+
+- **검증 결과**: 2건 전원 5점 자가검증 통과; snippet-verified (전건)
+  1. **arXiv:2610.29722 (RAG Compositionality)** [Ido Levy, Segev Shlomov (IBM), Leshem Choshen (IBM·Weizmann)]: RAG 파이프라인 컴포넌트 조합 효과를 LASAGNA 오픈소스 프레임워크로 450개 구성·8개 벤치마크·5K~200K 문서 코퍼스에서 체계적 실험. 핵심 발견: (1) 3가지 검색 기법 합산 예측 +47% vs. 실제 조합 +17%(조합 이득 감소), (2) 검색-충실도 트레이드오프, (3) 코퍼스 스케일 의존성. → `02-프로덕션-아키텍처.md` RAGLeak 다음(## 한국 환경 특이점 앞)에 추가.
+  2. **투라인클라우드·날리지큐브 MOU (한국 사례)**: 날리지큐브 KMS 고객 기반에 투라인클라우드 RAG·AI 에이전트 결합 공동사업 MOU(2026-10-15). 금융권 우선 PoC 착수 예정. → `01-엔터프라이즈-사내지식.md` Attributable Post-Rationalization 다음(## 이 도메인의 공통 패턴 앞)에 추가. **한국 사례: 투라인클라우드 × 날리지큐브**
+
+- `sources.md`에 2개 출처 추가 (## 2026-10-22 섹션 신설, 파일 최상단)
+- **한국 사례**: 1건 (투라인클라우드·날리지큐브 MOU, 2026-10-15, 사내지식 RAG AX)
+- **검증 결과**: URL 200 OK: 0/2건(WebFetch 직접 접근 불가) · snippet-verified: 2/2건(RAG Compositionality: arxiv.org abs+html+paperswithcode+cs.CL listing 4개 이상 / 투라인클라우드 MOU: byline.network+digitaltoday CN+JP+ddaily 4개 이상) · 단언 톤다운: 0건 · 중복 폐기: 2610.29722·투라인클라우드 기수집 여부 grep 확인 후 미수록 확인 · 발굴 시도 → 최종 채택: 약 15건 시도 → 2건 채택
+
 ## 2026-10-21 (일일 루프 #126)
 - **신규 사례 2건** (arxiv.org WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 1건 — 한양대학교 HYU-ARK-Lab, arXiv:2609.00689 SCoNE, EMNLP 2026)
 

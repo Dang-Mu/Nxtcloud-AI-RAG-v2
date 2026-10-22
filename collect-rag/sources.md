@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-10-22 일일 누적 추가 출처 (2건, 루프 #127)
+
+### 글로벌 — 프로덕션 아키텍처·RAG 파이프라인 컴포넌트 조합 효과·LASAGNA 평가 프레임워크 (RAG Compositionality, IBM·Weizmann, 2026-10-21)
+- [arXiv:2610.29722 — Retrieval Augmented Generation Compositionality](https://arxiv.org/abs/2610.29722) — 2026-10-21 · [architecture][pipeline][compositionality][component-evaluation][lasagna][open-source][benchmarking][450-configs][8-benchmarks][corpus-scale][5k-200k-docs][retrieval-faithfulness-tradeoff][combination-diminishing-returns][ibm-research][weizmann][cs.cl] · Ido Levy, Segev Shlomov (IBM Research), Leshem Choshen (IBM Research + Weizmann Institute of Science). RAG 파이프라인의 임베딩·청킹·검색·리랭킹·쿼리 증강·컨텍스트 압축·에이전틱 품질 게이트 등 컴포넌트를 독립 평가하는 현행 관행의 위험성을 LASAGNA 오픈소스 프레임워크로 450개 구성·8개 벤치마크에서 실증. 핵심 발견: 3기법 합산 예측 +47%→실제 조합 +17%(조합 이득 감소), 검색-충실도 트레이드오프, 코퍼스 스케일 의존성. (snippet-verified: arxiv.org/abs/2610.29722 + arxiv.org/html/2610.29722v1 + paperswithcode.co/paper/2610.29722 + arxiv.org/list/cs.CL/pastweek 4개 이상 독립 출처)
+
+### 한국 — 엔터프라이즈·사내지식·KMS RAG AX 공동사업 MOU (투라인클라우드·날리지큐브, 2026-10-15)
+- [투라인클라우드-날리지큐브 업무포털·지식관리 AX 공동사업 MOU 체결](https://byline.network/2026/10/1015-4/) — 2026-10-15 · [korean][enterprise-rag][kms][knowledge-management][work-portal][ax][poc][financial-sector][ai-agent][cloud][daas][information-security-portal][twolinecloud][knowledgecube] · 투라인클라우드(공동 CEO 신현석) × 날리지큐브(CEO 김학훈). 날리지큐브 KMS·업무포털 고객 기반에 투라인클라우드 RAG·AI 에이전트·클라우드 기술 결합 AX 공동사업 MOU 체결(2026-10-15). 단기 과제로 KMS에 RAG 적용 PoC 추진(기업 내부 문서 검색 품질·운영 안정성 검증). 금융권 고객 우선 대상. 정보보호포털+DaaS 연계 방안도 병행 검토. (snippet-verified: byline.network/2026/10/1015-4/ + digitaltoday.co.kr/cn/view/115151/ + digitaltoday.co.kr/jp/view/115153/ + ddaily.co.kr/page/view/2026101514082523943 4개 이상 독립 출처)
+
 ## 2026-10-21 일일 누적 추가 출처 (2건, 루프 #126)
 
 ### 한국 — 프로덕션 아키텍처·RAG 강건성·학습불필요 뉴런 편집 (SCoNE, 한양대 HYU-ARK-Lab, EMNLP 2026)
