@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-10-23 일일 누적 추가 출처 (2건, 루프 #128)
+
+### 글로벌 — 프로덕션 아키텍처·장문 QA·RAG 검색 병목 진단·EBG (The Bottleneck Is Retrieval Not Reading, 2026-10-18)
+- [arXiv:2610.26951 — The Bottleneck Is Retrieval, Not Reading: Diagnosing Evidence-Based Generation with RAG for Long Context Question Answering](https://arxiv.org/abs/2610.26951) — 2026-10-18 · [architecture][long-context-qa][retrieval-bottleneck][evidence-based-generation][ebg][nolima-benchmark][frontier-models][gpt-5][gemini][sonnet][reading-accuracy][retrieval-volume][two-hop-qa][cs.cl][cs.ir] · 저자 정보 snippet-verified 출처에서 미확인. 프론티어 모델(GPT-5, Gemini) 독해 정확도 ≥98%를 NoLiMa 벤치로 실증. 2-hop QA 검색 볼륨 10K 컨텍스트 기준 1.9K → 1M 기준 202K+ chars. EBG 프롬프팅으로 Sonnet·Gemini 계열 +9~+19 pp (300K~900K ctx). 검색이 병목, 독해가 아님을 실증. (snippet-verified: arxiv.org/abs/2610.26951 + arxiv.org/html/2610.26951 + JyiHUO/arxiv_daily_recommendation_system/releases/tag/2610.26951 + jyyang621/DailyArXiv issue #438 + dev.to/sagar_jain4010/rag-in-2026-why-retrieval-not-the-model-is-the-bottleneck-41m5 5개 이상 독립 출처)
+
+### 글로벌 — RAG 보안·프롬프트 인젝션 탐지·경량 SLM (nokast-secureRAG, 2026-10-20)
+- [arXiv:2610.28364 — Context-Aware Prompt Injection Detection via Small Language Models in RAG Pipelines: nokast-secureRAG](https://arxiv.org/abs/2610.28364) — 2026-10-20 · [security][prompt-injection][rag-pipeline][small-language-model][slm][qwen2.5][lora][distillation][teacher-judge-student][classification][safe-suspicious-malicious][recall][fpr][cs.cr][cs.ai] · Abhishek Rai (단독 저자; HuggingFace: abhishek085). Qwen2.5-0.5B + LoRA. 35B 교사→120B 판사(~95% 일치)→student distillation. Q+C 결합 3-class 분류. recall 0.994 @ FPR 0.026 vs 정규식 0.688. 판단전환 75% vs 키워드 17.5%, DeBERTa 54%. 293~404ms 지연(목표 <100ms 미달). 단일 저자·단일 프리프린트, 독립 재현 미확인. (snippet-verified: arxiv.org/abs/2610.28364 + arxiv.org/html/2610.28364 + micmerritt/ai-security-radar issue #337 + interplay-adversarial/agent-boundary-gate issue #101 + bddk520/DailyArXiv issue #419 + jyyang621/DailyArXiv issue #438 + huggingface.co/abhishek085/nokast-secureRAG-0.5B 7개 이상 독립 출처)
+
 ## 2026-10-22 일일 누적 추가 출처 (2건, 루프 #127)
 
 ### 글로벌 — 프로덕션 아키텍처·RAG 파이프라인 컴포넌트 조합 효과·LASAGNA 평가 프레임워크 (RAG Compositionality, IBM·Weizmann, 2026-10-21)
