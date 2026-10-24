@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-10-24 일일 누적 추가 출처 (2건, 루프 #129)
+
+### 글로벌 — 프로덕션 아키텍처·GraphRAG·연합학습·다중기관 프라이버시 보존 (FedGRAG, 2026-10-22)
+- [arXiv:2610.30728 — Federated Graph Retrieval-Augmented Generation](https://arxiv.org/abs/2610.30728) — 2026-10-22 · [architecture][graphrag][federated-learning][multi-organization][privacy-preserving][federated-knowledge-routing][controlled-disclosure][evidence-construction][knowledge-graph][cs.lg] · Xiaobao Wang, Renda Han, Zhiliang Xia, Meng Liu, Renxiang Guan, Di Jin. 다중 기관이 각자의 로컬 지식 그래프를 보유한 상태에서 연합 GraphRAG를 수행하는 FedGRAG 프레임워크. 연합 지식 라우팅(경량 인덱스, 로컬 그래프 구조 비노출)과 통제된 공개 증거 구성(서브그래프→증거 추상 변환 후 서버 재구성)으로 프라이버시 보존 검색·생성 구현. 기준선 대비 성능 향상 주장 (수치 snippet 미확인). 의료·금융·법률 등 데이터 공유 불가 규제 도메인 적용 가능성. (snippet-verified: arxiv.org/abs/2610.30728 + arxiv.org/html/2610.30728 + arxiv.org/list/cs/pastweek + jyyang621/DailyArXiv issue #438 4개 이상 독립 출처)
+
+### 한국 — 프로덕션 아키텍처·그래프RAG·구조화DB·멀티홉QA (TRA-RAG, EMNLP 2026 Main)
+- [ACL Anthology 2026.emnlp-main.118 — Retrieval-Augmented Generation with Retrieval-optimized TRA Structure](https://aclanthology.org/2026.emnlp-main.118/) — EMNLP 2026 Main, Budapest, pp. 2735–2762 · [korean-inferred][architecture][graph-rag][structured-db][tra-structure][title-relations-attributes][triplet-limitation][hierarchical][query-decomposition][multi-hop-qa][emnlp2026] · JungHyoun Kim, Soohyeong Kim, Seok Jun Hwang, Jeonghyeon Park, Yong Suk Choi (저자명 기반 한국 저자 추정; 소속 기관 unverified). 트리플(Triple) 기반 그래프 RAG의 계층 정보 표현 불가·구조적 경직성 한계를 지적하고 TRA(Title-Relations-Attributes) DB 구조를 대안으로 제안. TRA 구조를 팩트로 인덱싱해 검색 정확도 향상, 쿼리 분해와 결합해 멀티홉 추론 개선. EMNLP 2026 Main Conference 채택. (snippet-verified: aclanthology.org/2026.emnlp-main.118/ 독립 검색 결과 2건 이상; 저자 소속 unverified)
+
 ## 2026-10-23 일일 누적 추가 출처 (2건, 루프 #128)
 
 ### 글로벌 — 프로덕션 아키텍처·장문 QA·RAG 검색 병목 진단·EBG (The Bottleneck Is Retrieval Not Reading, 2026-10-18)
