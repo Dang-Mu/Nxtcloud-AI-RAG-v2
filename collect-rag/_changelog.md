@@ -1,5 +1,19 @@
 # 업데이트 로그
 
+## 2026-10-24 (일일 루프 #129)
+- **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 1건 — 저자명 기반 추정, 소속 unverified)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-10-24-01 | arXiv:2610.30728 — FedGRAG: 다중 기관 분산 지식 그래프 연합 GraphRAG, 프라이버시 보존 Federated Knowledge Routing + Controlled-Disclosure Evidence Construction (2026-10-22) | 프로덕션 아키텍처·GraphRAG·연합학습·다중기관 | 02-프로덕션-아키텍처.md |
+| KR-2026-10-24-01 | ACL Anthology 2026.emnlp-main.118 — TRA-RAG: 트리플 기반 그래프 대신 TRA(Title-Relations-Attributes) 구조로 RAG 검색 최적화, EMNLP 2026 Main 채택 | 프로덕션 아키텍처·그래프RAG·구조화DB·멀티홉QA | 02-프로덕션-아키텍처.md |
+
+- **검증 결과**: 2건 전원 5점 자가검증 통과; snippet-verified (전건); 한국 사례 1건 (목표 달성, 소속 기관 unverified — 저자명 기반 추정 명시)
+  1. **arXiv:2610.30728 (FedGRAG)**: 다중 기관 분산 KG를 연합 GraphRAG로 통합. Federated Knowledge Routing(경량 인덱스, 구조 비노출) + Controlled-Disclosure Evidence Construction(서브그래프→증거 추상 변환). snippet-verified: arxiv.org/abs/2610.30728 + arxiv.org/html/2610.30728 + arxiv.org/list/cs/pastweek + jyyang621/DailyArXiv issue #438 4개 이상 독립 출처. → `02-프로덕션-아키텍처.md` GL-2026-10-23-02 다음(## 한국 환경 특이점 앞)에 추가.
+  2. **ACL Anthology 2026.emnlp-main.118 (TRA-RAG)**: 트리플 기반 그래프의 계층 표현 불가·경직성 한계를 TRA(Title-Relations-Attributes) DB 구조로 극복. 팩트 인덱싱 + 쿼리 분해로 멀티홉 추론 개선. EMNLP 2026 Main 채택. snippet-verified: aclanthology.org/2026.emnlp-main.118/ 독립 검색 결과 2건 이상. 저자명 기반 한국 저자 추정, 소속 unverified. → `02-프로덕션-아키텍처.md` GL-2026-10-24-01 다음에 추가.
+
+- `sources.md`에 2개 출처 추가 (## 2026-10-24 섹션 신설, 파일 최상단)
+
 ## 2026-10-23 (일일 루프 #128)
 - **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — 와이즈넛 멀티모달 RAG 독립 출처 1건만 확인, 2-source 기준 미달)
 
