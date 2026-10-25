@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-10-25 일일 누적 추가 출처 (2건, 루프 #130)
+
+### 글로벌 — 프로덕션 아키텍처·에이전틱 RAG·최소 메모리·복잡 에이전트 메모리 도전 ("RAG in a Trenchcoat", NeurIPS 2026)
+- [NeurIPS 2026 — "RAG in a Trenchcoat: Challenging Complex Agentic Memory Systems"](https://neurips.cc/virtual/2026/poster/151457) — NeurIPS 2026 Poster · [architecture][agentic-rag][minimal-memory][agent-memory-systems][neurips2026][complexity-vs-performance] · Jingyu Liu 외, Dawn Song, Ce Zhang (지도교수). 최소 상태(minimal state)만 유지하는 간단한 RAG 기반 시스템이 복잡한 에이전트형 메모리 아키텍처의 워크플로우를 복제할 수 있음을 실험적으로 실증. "복잡한 에이전트 메모리 시스템의 필요성에 의문을 제기". 프로덕션 에이전트 메모리 아키텍처 설계 전 RAG 베이스라인 충분성 재검토를 촉구. (snippet-verified: neurips.cc/virtual/2026/poster/151457 + NeurIPS 2026 프로그램 목록 + 독립 리뷰 출처 3개 이상 독립 출처; 직접 URL 접근 불가)
+
+### 한국 — 프로덕션 아키텍처·RAG 강건성·신뢰도 인식 증거 선택 (KAIST DISLab, EMNLP 2026 Findings)
+- EMNLP 2026 Findings — "Towards Robust Retrieval-Augmented Generation via Reliability-Aware Adaptive Evidence Selection" — EMNLP 2026 Findings, Budapest · [korean][kaist][disl-lab][hwanjun-song][architecture][robustness][reliability-aware][adaptive-evidence-selection][noisy-evidence][conflicting-evidence][emnlp2026] · Minkyu Che, Jihwan Oh, Jeonghwan Choi, Jeesu Jung*, Hwanjun Song* (KAIST Graduate School of Data Science, DISLab; *공동 교신저자). 검색된 증거의 신뢰도를 평가해 적응적으로 증거를 선택·필터링하는 프레임워크로 RAG 강건성 향상 목표. 노이즈·오해 유도 정보·충돌 사실이 혼재하는 조건에서 강건한 RAG 생성 구현. (snippet-verified: KAIST DISLab LinkedIn 공식 발표 + 공저자 LinkedIn 리포스트 3개 이상 독립 출처; arXiv 프리프린트 미발견, ACL Anthology URL 미확인)
+
 ## 2026-10-24 일일 누적 추가 출처 (2건, 루프 #129)
 
 ### 글로벌 — 프로덕션 아키텍처·GraphRAG·연합학습·다중기관 프라이버시 보존 (FedGRAG, 2026-10-22)

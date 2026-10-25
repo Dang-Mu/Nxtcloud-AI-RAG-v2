@@ -1,5 +1,20 @@
 # 업데이트 로그
 
+## 2026-10-25 (일일 루프 #130)
+- **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 1건 — KAIST DISLab, EMNLP 2026 Findings)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-10-25-01 | NeurIPS 2026 — "RAG in a Trenchcoat": 최소 메모리 RAG로 복잡한 에이전트형 메모리 시스템 복제 실증; "복잡도 ≠ 성능" 정량화 | 프로덕션 아키텍처·에이전틱 RAG·메모리 설계 | 02-프로덕션-아키텍처.md |
+| KR-2026-10-25-01 | EMNLP 2026 Findings — "Towards Robust RAG via Reliability-Aware Adaptive Evidence Selection" (KAIST DISLab, Hwanjun Song 교수팀); 신뢰도 인식 적응형 증거 선택으로 RAG 강건성 향상 | 프로덕션 아키텍처·RAG 강건성·증거 신뢰도·KAIST | 02-프로덕션-아키텍처.md |
+
+- **검증 결과**: 2건 전원 5점 자가검증 통과; snippet-verified (전건); 한국 사례 1건 (목표 달성 — KAIST DISLab 공식 발표 + 공저자 LinkedIn 리포스트 3개 이상 독립 출처)
+  1. **"RAG in a Trenchcoat" (NeurIPS 2026, neurips.cc/virtual/2026/poster/151457)**: 최소 상태 RAG 시스템이 복잡한 에이전트형 메모리 아키텍처 워크플로우를 복제 가능함을 실증. Jingyu Liu 외, Dawn Song·Ce Zhang 지도. snippet-verified: neurips.cc/virtual/2026/poster/151457 + NeurIPS 2026 프로그램 + 독립 리뷰 출처 3개 이상. → `02-프로덕션-아키텍처.md` TRA-RAG 다음(## 한국 환경 특이점 앞)에 추가.
+  2. **"Towards Robust RAG via Reliability-Aware Adaptive Evidence Selection" (EMNLP 2026 Findings, KAIST DISLab)**: Minkyu Che, Jihwan Oh, Jeonghwan Choi, Jeesu Jung*, Hwanjun Song*. 검색된 증거의 신뢰도 평가 기반 적응형 선택으로 RAG 강건성 향상. arXiv 프리프린트 미발견, ACL Anthology URL 미확인. snippet-verified: KAIST DISLab LinkedIn 발표 + 공저자 리포스트 3개 이상. → `02-프로덕션-아키텍처.md` GL-2026-10-25-01 다음에 추가.
+
+- `sources.md`에 2개 출처 추가 (## 2026-10-25 섹션 신설, 파일 최상단)
+- **한국 사례**: 1건 (KAIST DISLab, EMNLP 2026 Findings, RAG 강건성·신뢰도 인식 증거 선택)
+
 ## 2026-10-24 (일일 루프 #129)
 - **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 1건 — 저자명 기반 추정, 소속 unverified)
 
