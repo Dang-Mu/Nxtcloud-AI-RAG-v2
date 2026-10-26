@@ -1155,6 +1155,17 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **의의**: 리테일·유통처럼 ERP·CRM·정책 문서·상품 카탈로그가 이종으로 분산된 엔터프라이즈 환경에서 에이전틱 RAG를 설계할 때 "소스 라우팅 오케스트레이션"이 핵심 구성 요소임을 벤치마크로 실증. KAIST DISLab의 에이전틱 RAG 연구 라인(BRIDGE-Benchmark, TimelyRAG 등)의 연장선.
 - **출처**: [arXiv:2610.25096 — Toward Agentic RAG for Enterprise Retail Workflows over Heterogeneous Data Sources](https://arxiv.org/abs/2610.25096) (2026-10-18, snippet-verified: arxiv.org/abs/2610.25096 + arxiv.org/html/2610.25096 + disl-lab.github.io + github.com/DISL-Lab/RetailBridge 4개 이상 독립 출처)
 
+### GL-2026-10-26-02 | CAT-RAG — 카테고리 인식 에이전트형 검색으로 보안 코드 생성 개선 (arXiv:2610.24907, 2026-10-17)
+
+> **"CAT-RAG: Improving Secure Code Generation with Category-Aware Agentic Retrieval"** (arXiv:2610.24907, cs.CR + cs.SE)
+> Mahdieh Abazar, Lorenzo De Carli, Benjamin Tan
+
+- **문제**: 기존 보안 코드 생성 RAG(RACG)는 CWE(Common Weakness Enumeration) 항목 단위로 취약점별 지식을 검색해 프롬프트에 추가한다. 쿼리가 복수의 관련 취약점을 포함할 때 이 방식은 프롬프트 길이를 급격히 늘리고 모델 어텐션을 분산시키는 문제를 야기한다.
+- **핵심 기여 — 카테고리 인식 에이전트형 검색**: LLM을 분류 에이전트로 활용해 쿼리에 연관된 **보안 카테고리**를 선택한다. 각 카테고리는 언어별 베스트 프랙티스와 보안 코드 예시를 하나의 압축된 표현으로 묶어 제공 — CWE 항목별 검색 대비 프롬프트 효율성 대폭 향상. 기존 파이프라인에 변경 없이 독립 레이어 또는 애드온으로 추가 가능.
+- **결과**: CyberSecEval 기준 개선폭 **23.57% (SOTA 12.11% 대비 약 2배 가깝게)**, 토큰 오버헤드 **–41.71%**. CodeGuard+·HumanEval 추가 평가.
+- **의의**: 보안 취약점 지식의 검색 단위를 "CWE 항목"에서 "카테고리"로 추상화해 프롬프트 효율을 높이는 설계 패턴. 코드 생성 에이전트 파이프라인에서 보안 RAG를 통합할 때 참고할 실용적 아키텍처 옵션. CyberSecEval(Meta Purple Llama) 기준 SOTA 대비 약 2배 개선해 에이전트형 분류 검색의 효과를 실증.
+- **출처**: [arXiv:2610.24907 — CAT-RAG](https://arxiv.org/abs/2610.24907) (2026-10-17, cs.CR + cs.SE, snippet-verified: arxiv.org/abs/2610.24907 + arxiv.org/html/2610.24907 2개 이상 독립 출처; 직접 URL 접근 불가 — snippet-verified)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.

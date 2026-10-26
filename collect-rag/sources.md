@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-10-26 일일 누적 추가 출처 (2건, 루프 #131)
+
+### 글로벌 — 프로덕션 아키텍처·RAG 보안·적대적 문서 주입·인증 가능 강건성 (RAGSentinel, EMNLP 2026 Main)
+- [arXiv:2608.23965 — RAGSentinel: Certifiable Geometric Consensus for Robust Retrieval-Augmented Generation](https://arxiv.org/pdf/2608.23965) — EMNLP 2026 Main, pp.12549–12575, Budapest · [architecture][security][adversarial-document-injection][certifiable-robustness][geometric-consensus][surrogate-encoder][training-free][adaptive-attack][outlier-detection][emnlp2026] · (저자 미확인, snippet-verified). 독립적인 서로게이트 인코더와 쿼리 조건부 이상탐지(topic-direction removal + active subspace selection)를 결합해 적대적 문서를 LLM 실행 전 단계에서 필터링하는 학습 불필요 방어 프레임워크. 적응형 공격 full pipeline knowledge 조건에서도 이점 유지. honest-majority 가정 기반. (snippet-verified: arxiv.org/pdf/2608.23965 + aclanthology.org/2026.emnlp-main.546/ 2개 이상 독립 출처; 직접 URL 접근 불가)
+
+### 글로벌 — 에이전트·툴유즈·보안 코드 생성·RAG (CAT-RAG, arXiv:2610.24907)
+- [arXiv:2610.24907 — CAT-RAG: Improving Secure Code Generation with Category-Aware Agentic Retrieval](https://arxiv.org/abs/2610.24907) — 2026-10-17, cs.CR + cs.SE · [agentic][code-generation][security][category-aware][cwe][prompt-efficiency][cyberSecEval][token-overhead][code-guard-plus][humaneval] · Mahdieh Abazar, Lorenzo De Carli, Benjamin Tan. LLM을 분류 에이전트로 활용해 CWE 항목 단위 대신 압축된 보안 카테고리 단위로 검색, 프롬프트 효율 향상 및 CyberSecEval +23.57%, 토큰 오버헤드 –41.71% 달성. 기존 파이프라인에 독립 레이어로 추가 가능. (snippet-verified: arxiv.org/abs/2610.24907 + arxiv.org/html/2610.24907 2개 이상 독립 출처; 직접 URL 접근 불가)
+
 ## 2026-10-25 일일 누적 추가 출처 (2건, 루프 #130)
 
 ### 글로벌 — 프로덕션 아키텍처·에이전틱 RAG·최소 메모리·복잡 에이전트 메모리 도전 ("RAG in a Trenchcoat", NeurIPS 2026)
