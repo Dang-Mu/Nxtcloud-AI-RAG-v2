@@ -1,5 +1,20 @@
 # 업데이트 로그
 
+## 2026-10-26 (일일 루프 #131)
+- **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — 신규 한국 사례 미발견, 목표 1건 미달성)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-10-26-01 | EMNLP 2026 Main — RAGSentinel: 기하학적 합의 기반 인증 가능한 적대적 문서 주입 방어; 서로게이트 인코더로 적응형 공격에도 강건한 학습 불필요 RAG 보안 프레임워크 | 프로덕션 아키텍처·RAG 보안·적대적 문서 주입·인증 가능 강건성 | 02-프로덕션-아키텍처.md |
+| GL-2026-10-26-02 | arXiv:2610.24907 — CAT-RAG: 카테고리 인식 에이전트형 검색으로 보안 코드 생성 개선; CWE 항목 → 카테고리 추상화로 프롬프트 효율 +토큰 –41.71%, CyberSecEval SOTA 대비 약 2배 개선 | 에이전트·툴유즈·보안 코드 생성·RAG | 03-에이전트-툴유즈-MCP.md |
+
+- **검증 결과**: 2건 전원 5점 자가검증 통과; snippet-verified (전건); 한국 사례 0건 (목표 1건 미달성 — 후보 10건 이상 탐색했으나 전건 기수집 또는 범위 외)
+  1. **RAGSentinel (arXiv:2608.23965, EMNLP 2026 Main, pp.12549–12575)**: 독립 서로게이트 인코더 + 쿼리 조건부 이상탐지(topic-direction removal + active subspace selection)로 적대적 문서 주입을 LLM 실행 전 필터링. 적응형 공격 full pipeline knowledge에서도 이점 유지. snippet-verified: arxiv.org/pdf/2608.23965 + aclanthology.org/2026.emnlp-main.546/ 2개 이상 독립 출처. → `02-프로덕션-아키텍처.md` KR-2026-10-25-01 다음(## 한국 환경 특이점 앞)에 추가.
+  2. **CAT-RAG (arXiv:2610.24907, cs.CR+cs.SE, 2026-10-17)**: LLM 분류 에이전트로 보안 카테고리 선택 → 언어별 베스트프랙티스+예시 압축 제공. CyberSecEval +23.57%, 토큰 –41.71%. snippet-verified: arxiv.org/abs/2610.24907 + arxiv.org/html/2610.24907 2개 이상 독립 출처. → `03-에이전트-툴유즈-MCP.md` RetailRAG 다음(## 이 도메인의 공통 패턴 앞)에 추가.
+  3. **중복 폐기 목록**: arXiv:2610.22297 (Private RAG) — 기수집/범위 외 판단(루프 #130 이전); arXiv:2610.23226 (RAG Characterising) — 기수집/범위 외 판단; K-FinHallu·PACE-RAG·TRA-RAG·KAIST DISLab EMNLP Findings 등 한국 후보 다수 — 전건 기수집.
+
+- `sources.md`에 2개 출처 추가 (## 2026-10-26 섹션 신설, 파일 최상단)
+
 ## 2026-10-25 (일일 루프 #130)
 - **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 1건 — KAIST DISLab, EMNLP 2026 Findings)
 
