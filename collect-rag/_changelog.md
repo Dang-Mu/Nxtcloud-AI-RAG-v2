@@ -1,5 +1,20 @@
 # 업데이트 로그
 
+## 2026-10-27 (일일 루프 #132)
+- **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — 신규 한국 사례 미발견, 목표 1건 미달성)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-10-27-01 | arXiv:2610.30755 — Raw-RAG vs 복잡 에이전트 메모리: 단순 밀집 검색+재순위가 4대 벤치마크(LoCoMo·LongMemEval·MEME·MemoryAgentBench) 7가지 설정 중 6/7에서 12개 에이전트형 메모리 시스템 능가, EverMemOS 대비 30.4× 속도 | 프로덕션 아키텍처·에이전틱 RAG·메모리 설계 | 02-프로덕션-아키텍처.md |
+| GL-2026-10-27-02 | arXiv:2607.03929 — Multi-Meta-RAG 메타데이터 필터링 프로브: 단일 선형 헤드 은닉 상태 분류기로 GPT-3.5 프롬프팅 추출기 대체; set-exact 90.9% (vs GPT-3.5 80.9%, substring 88.0%), API 비용 제로, 135M 모델이 1.5B 대비 1.5 pt 차이 이내 | 프로덕션 아키텍처·메타데이터 필터링·다중소스 RAG | 02-프로덕션-아키텍처.md |
+
+- **검증 결과**: 2건 전원 5점 자가검증 통과; snippet-verified (전건); 한국 사례 0건 (목표 1건 미달성 — WOOWACON 2026 내일(10/28) 개최 예정, 최근 7일 신규 한국 기술블로그 부재, EMNLP 2026 한국 논문 전건 기수집)
+  1. **Raw-RAG vs Agentic Memory (arXiv:2610.30755, 2026-10-22)**: "Is Complex Agentic Memory Always Needed? Naive RAG Is Stronger Than We Thought". Zhengye Bao 외. 4대 벤치마크(LoCoMo 1,540Q, LongMemEval 500Q, MEME 1,188Q, MemoryAgentBench 2,071Q), 12개 에이전트형 메모리 시스템 대비 Raw-RAG 6/7 우위(마진 0.13–5.53 pt), 30.4× 속도 향상. snippet-verified: huggingface.co/papers/2610.30755 + alphaxiv.org + aiweekly.co + SJTU-DMTai/Awesome-Data-Agent-Papers 7개 이상 독립 출처. → `02-프로덕션-아키텍처.md` GL-2026-10-26-01(RAGSentinel) 다음(## 한국 환경 특이점 앞)에 추가.
+  2. **Multi-Meta-RAG 은닉 상태 프로브 (arXiv:2607.03929, ~2026-10-20 저널)**: "Probe, Don't Prompt: A Hidden-State Probe for Metadata Filtering in Multi-Meta-RAG". Mykhailo Poliakov, Nadiya Shvai (Kyiv-Mohyla Academy). 단일 선형 헤드로 소스 메타데이터 분류; set-exact 90.9% (vs GPT-3.5 80.9%, substring 88.0%), API 비용 제로. snippet-verified: arxiv.org/abs/2607.03929 + arxiv.org/pdf/2607.03929 + catalyzex.com + chatpaper.com 4개 이상 독립 출처. → `02-프로덕션-아키텍처.md` GL-2026-10-27-01 다음에 추가.
+  3. **중복 폐기 목록**: arXiv:2610.32851, 2610.32752, 2610.30193, 2610.28340, 2610.21245 — 단일 출처(DailyArXiv 다이제스트만) 검증 부족 폐기; DeclineCraft, ActionRAG — 범위 외 또는 단일 출처 폐기; WOOWACON 2026 (techblog.woowahan.com/25900) — 직접 접근 불가, 독립 출처 부족 폐기.
+
+- `sources.md`에 2개 출처 추가 (## 2026-10-27 섹션 신설, 파일 최상단)
+
 ## 2026-10-26 (일일 루프 #131)
 - **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — 신규 한국 사례 미발견, 목표 1건 미달성)
 

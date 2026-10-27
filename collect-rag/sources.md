@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-10-27 일일 누적 추가 출처 (2건, 루프 #132)
+
+### 글로벌 — 프로덕션 아키텍처·에이전틱 RAG·에이전트 메모리 시스템 비교·밀집 검색 (arXiv:2610.30755)
+- [arXiv:2610.30755 — Is Complex Agentic Memory Always Needed? Naive RAG Is Stronger Than We Thought](https://arxiv.org/abs/2610.30755) — 2026-10-22 · [architecture][agentic-rag][agent-memory][dense-retrieval][reranking][benchmark][locomoe][longmemeval][meme][memoryagentbench][raw-rag][evermemos][memmachine] · Zhengye Bao 외. 4대 대화 메모리 벤치마크(LoCoMo 1,540Q, LongMemEval 500Q, MEME 1,188Q, MemoryAgentBench 2,071Q)에서 단순 밀집 검색+재순위(Raw-RAG)가 12개 에이전트형 메모리 시스템 대비 7가지 설정 중 6/7 우위(마진 0.13–5.53 pt); EverMemOS 대비 30.4× 속도 향상; 유일 패배: MEME+DeepSeek-V4-Flash에서 MemMachine 대비 –1.52 pt. (snippet-verified: huggingface.co/papers/2610.30755 + alphaxiv.org + aiweekly.co + SJTU-DMTai/Awesome-Data-Agent-Papers 7개 이상 독립 출처; 직접 URL 접근 일부 불가)
+
+### 글로벌 — 프로덕션 아키텍처·메타데이터 필터링·다중소스 RAG·은닉 상태 분류 (arXiv:2607.03929)
+- [arXiv:2607.03929 — Probe, Don't Prompt: A Hidden-State Probe for Metadata Filtering in Multi-Meta-RAG](https://arxiv.org/abs/2607.03929) — 2026-07-04 (저널 게재 ~2026-10-20) · [architecture][multi-source-rag][metadata-filtering][hidden-state-probe][linear-head][source-classification][no-api-cost][partial-forward-pass][fixed-vocabulary][multi-meta-rag] · Mykhailo Poliakov, Nadiya Shvai (National University of Kyiv-Mohyla Academy, Ukraine). 단일 선형 헤드로 LLM 은닉 상태에서 소스 출처를 분류해 GPT-3.5 프롬프팅 추출기 대체; set-exact 정확도 90.9% (vs substring 88.0%, vs GPT-3.5 80.9%); API 비용 제로; 135M 모델이 1.5B 대비 1.5 pt 차이 이내. 코드: github.com/mxpoliakov/Multi-Meta-RAG. (snippet-verified: arxiv.org/abs/2607.03929 + arxiv.org/pdf/2607.03929 + catalyzex.com + chatpaper.com 4개 이상 독립 출처; 직접 URL 접근 일부 불가)
+
 ## 2026-10-26 일일 누적 추가 출처 (2건, 루프 #131)
 
 ### 글로벌 — 프로덕션 아키텍처·RAG 보안·적대적 문서 주입·인증 가능 강건성 (RAGSentinel, EMNLP 2026 Main)
