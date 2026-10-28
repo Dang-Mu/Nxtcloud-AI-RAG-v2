@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-10-28 일일 누적 추가 출처 (2건, 루프 #133)
+
+### 한국 — 커머스·음식배달·AI 검색·시맨틱 검색·대화형 검색 (배민 WOOWACON 2026)
+- [WOOWACON 2026 — 배민 검색이 AI 검색이 되기까지 (ZDNet Korea)](https://zdnet.co.kr/view/?no=20261028172432) — 2026-10-28 · [korean][commerce][food-delivery][semantic-search][conversational-ai-search][intent-parsing][no-result-reduction][woowacon2026][baemin][woowa-brothers] · 이승효 서버 개발자, 염하늘 ML 엔지니어. 배민 검색 진화(키워드→시맨틱→대화형) 공개. 키워드 실패 케이스 시맨틱 폴백 적용 시 주문 지표 50%+, No Result 비율 80% 감소. AI 의도 파악 + 기존 시스템 검색 실행 역할 분리 설계. (snippet-verified: zdnet.co.kr + techm.kr/156615 + techm.kr/156605 + ddaily.co.kr/2026102814492242909 + newscj.com/3443942 5개 이상 독립 출처; 직접 URL 접근 불가)
+
+### 글로벌 — 프로덕션 아키텍처·에이전틱 RAG·온톨로지·충실성·의료 QA (OA-RAG, arXiv:2610.36335)
+- [arXiv:2610.36335 — OA-RAG: Ontology-based Agentic RAG for Faithful LLM Reasoning](https://arxiv.org/abs/2610.36335) — 2026-10-26 · [architecture][agentic-rag][ontology][sparql][faithfulness][grounding-label][entailed][supported][related][unrelated][react][medical-qa][cs.ai][hui-yang][jiaoyan-chen][yongsheng-gao] · Hui Yang, Jiaoyan Chen, Yongsheng Gao. ReAct 스타일 에이전트로 파라메트릭 추론→SPARQL 온톨로지 쿼리→4단계 그라운딩 레이블 생성. 3대 온톨로지 벤치마크+6개 실세계 의료 QA에서 온톨로지 파인튜닝/주요 RAG 대비 전반적 최고 성능. 추론 집약적 태스크 특히 강세. (snippet-verified: arxiv.org/abs/2610.36335 + arxiv.org/html/2610.36335 2개 이상 독립 출처; 직접 URL 접근 불가)
+
 ## 2026-10-27 일일 누적 추가 출처 (2건, 루프 #132)
 
 ### 글로벌 — 프로덕션 아키텍처·에이전틱 RAG·에이전트 메모리 시스템 비교·밀집 검색 (arXiv:2610.30755)
