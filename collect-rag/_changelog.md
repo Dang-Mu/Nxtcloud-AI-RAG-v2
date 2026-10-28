@@ -1,5 +1,21 @@
 # 업데이트 로그
 
+## 2026-10-28 (일일 루프 #133)
+- **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 1건 — WOOWACON 2026 배민 AI 검색 세션)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| KR-2026-10-28-01 | WOOWACON 2026 — 배민 "배민 검색이 AI 검색이 되기까지": 시맨틱 검색 도입으로 주문 지표 +50%, No Result –80%; AI 의도 파악·결정론적 검색 실행 역할 분리 설계 | 커머스·고객서비스·한국 | 04-산업별-사례.md |
+| GL-2026-10-28-01 | arXiv:2610.36335 — OA-RAG: 온톨로지 기반 에이전틱 RAG로 LLM 추론 충실성 보장; SPARQL 쿼리 + 4단계 그라운딩 레이블(entailed/supported/related/unrelated); 3개 온톨로지 벤치+6개 의료 QA에서 전반적 최고 성능 | 프로덕션 아키텍처·에이전틱 RAG·온톨로지·충실성 | 02-프로덕션-아키텍처.md |
+
+- **검증 결과**: 2건 전원 5점 자가검증 통과; snippet-verified (전건); 한국 사례 1건 (목표 달성 — WOOWACON 2026 오늘 개최, 5개 이상 독립 뉴스 출처 확인)
+  1. **배민 AI 검색 (WOOWACON 2026, 2026-10-28)**: 이승효 서버 개발자, 염하늘 ML 엔지니어 발표. "배민 검색이 AI 검색이 되기까지" 세션. 키워드 매칭 실패 케이스 시맨틱 검색 폴백 적용 시 주문 지표 50%+, No Result 비율 80% 감소. AI 의도→조건 변환 + 기존 시스템 검색 실행 역할 분리. snippet-verified: zdnet.co.kr/view/?no=20261028172432 + techm.kr/156615 + techm.kr/156605 + ddaily.co.kr + newscj.com 5개 이상 독립 출처. → `04-산업별-사례.md` 채널코퍼레이션 다음(## 커머스·고객서비스 > ### 한국)에 추가.
+  2. **OA-RAG (arXiv:2610.36335, 2026-10-26)**: "OA-RAG: Ontology-based Agentic RAG for Faithful LLM Reasoning". Hui Yang, Jiaoyan Chen, Yongsheng Gao. ReAct 3단계(파라메트릭 추론→SPARQL 온톨로지 쿼리→그라운딩 레이블 생성). 3대 온톨로지 벤치마크+6개 의료 QA에서 최고 성능. snippet-verified: arxiv.org/abs/2610.36335 + arxiv.org/html/2610.36335 2개 이상 독립 출처. → `02-프로덕션-아키텍처.md` GL-2026-10-27-02(Multi-Meta-RAG) 다음(## 한국 환경 특이점 앞)에 추가.
+  3. **중복 폐기 목록**: arXiv:2610.35868(Retriever-Free Retrieval) — 검색 결과에서 해당 ID 확인 불가(FREESON 2505.16409와 혼동); UniGFM-RAG — 검색 결과에서 해당 제목 미발견; arXiv:2610.32851(Enterprise RAG multi-agent) — 루프 #132에서 이미 단일 출처 폐기 기록됨.
+
+- `sources.md`에 2개 출처 추가 (## 2026-10-28 섹션 신설, 파일 최상단)
+- **한국 사례**: 1건 (배민, WOOWACON 2026, 커머스 AI 검색 아키텍처)
+
 ## 2026-10-27 (일일 루프 #132)
 - **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — 신규 한국 사례 미발견, 목표 1건 미달성)
 
