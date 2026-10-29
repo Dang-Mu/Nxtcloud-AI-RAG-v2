@@ -1,5 +1,10 @@
 # 출처 목록
 
+## 2026-10-29 일일 누적 추가 출처 (1건, 루프 #134)
+
+### 한국 — 멀티모달 RAG·하이브리드 검색·IITP 지원 산업 실증 (와이즈넛, 과기정통부·IITP 과제)
+- [VentureSquare — 와이즈넛, 멀티모달 RAG 기술 고도화…법률·의료·제조 등 4개 산업 현장 실증](https://www.venturesquare.net/1121623) — 2026-10-21 · [korean][multimodal-rag][hybrid-search][knowledge-graph][keyword-vector-kg][iitp][moe][wisenut][industry-validation][legal][media][healthcare][manufacturing][이찬규][앤쌤][sbsi][전남대병원][jb주식회사][공공행정] · 이찬규 대표. 과기정통부·IITP 지원 4개년 과제(~2027) 3차년도 현장 실증 본격 추진. 텍스트 중심 RAG의 한계를 극복하는 멀티모달(텍스트·이미지·음성) 질의 통합 처리 + 키워드·벡터·지식그래프 결합 3방향 하이브리드 검색. 법률(앤쌤)·미디어광고(SBSi)·의료(전남대학교병원)·제조(JB주식회사) 4개 이질적 산업 도메인에 동일 아키텍처 반복 적용 실증 중. snippet-verified: venturesquare.net/1121623 + finance-scope.com/article/view/scp202610210009 + venturesquare.net/en/1121632 + mydailybyte.com/littlebit/news/5daf170c-1fa3-4915-adc5-05c22be15acb 4개 이상 독립 출처; WebFetch 전면 차단으로 직접 URL 접근 불가
+
 ## 2026-10-28 일일 누적 추가 출처 (2건, 루프 #133)
 
 ### 한국 — 커머스·음식배달·AI 검색·시맨틱 검색·대화형 검색 (배민 WOOWACON 2026)
