@@ -1,5 +1,21 @@
 # 업데이트 로그
 
+## 2026-10-30 (일일 루프 #135)
+- **신규 사례 1건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — 10/23~30 범위 내 신규 공개 한국 사례 미발굴)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-10-30-01 | arXiv:2605.06285 v2 — LatentRAG: LLM 잠재 공간에서 추론·검색 정렬, 단일 forward pass로 자연어 서브쿼리 생성 단계 제거; 7개 벤치마크에서 명시적 에이전틱 RAG 대비 정확도 5%p 이내·추론 지연 ~90% 감소 | 에이전틱 RAG·잠재 공간·추론 효율화 | 03-에이전트-툴유즈-MCP.md |
+
+- **검증 결과**: 1건 5점 자가검증 통과; snippet-verified; 한국 사례 0건 (목표 1건 미달 — WOOWACON 2026 배민 기술블로그 미인덱싱, 기타 한국 기업 10/23~30 신규 발표 미발굴)
+  1. **LatentRAG (arXiv:2605.06285 v2, 2026-10-25)**: Yijia Zheng, Marcel Worring (University of Amsterdam). LLM의 hidden states를 dense retrieval 모델 잠재 공간과 정렬; 단일 forward pass에서 latent tokens로 thoughts·subqueries 직접 생성; 자연어 쿼리 없이 잠재 서브쿼리로 검색 수행; 병렬 latent-decoding으로 투명성 유지. 7개 벤치마크에서 명시적 에이전틱 RAG 대비 정확도 5%p 이내·추론 지연 약 90% 감소. snippet-verified: arxiv.org/html/2605.06285 + catalyzex.com + meaningful96.github.io + tldr.takara.ai + api.emergentmind.com 5개 이상 독립 출처. → `03-에이전트-툴유즈-MCP.md` CAT-RAG 다음(## 이 도메인의 공통 패턴 앞)에 추가.
+  2. **중복 폐기 목록**: ScalableRAG(2607.25135) — Cohesity 계열사 2차 출처만 확인, 독립 출처 2개 미달 폐기; arXiv:2610.36561(Governed Sovereign RAG) — 독립 출처 미발견 폐기; arXiv:2610.34816(System-1 Decision Models) — 독립 출처 미발견 폐기; arXiv:2610.35240(Reading Beyond OCR Noise) — 독립 출처 미발견 폐기; arXiv:2610.35142(CalibraRL) — arxiv.org 차단·독립 출처 미달 폐기; arXiv:2610.34829(Logic Hijacking) — 독립 출처 미발견 폐기; PlatformCon 2026 Adobe — platformcon.com 차단·독립 출처 1개만 확인 폐기
+  3. **한국 사례 부재 사유**: WOOWACON 2026(배민) 기술블로그 미인덱싱(2026-10-28 행사, 아직 검색 미노출); 10/23~30 범위 와이즈넛·NAVER·Kakao·Toss·SKT·KT 신규 발표 미발굴
+
+- `sources.md`에 1개 출처 추가 (## 2026-10-30 섹션 신설, 파일 최상단)
+- **한국 사례**: 0건 (목표 1건 미달)
+- **글로벌 사례**: 1건 (LatentRAG, v2 2026-10-25 갱신, 잠재 공간 에이전틱 RAG 효율화)
+
 ## 2026-10-29 (일일 루프 #134)
 - **신규 사례 1건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 1건 — 와이즈넛 멀티모달 RAG 산업 실증)
 
