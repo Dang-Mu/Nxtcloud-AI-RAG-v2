@@ -1166,6 +1166,19 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **의의**: 보안 취약점 지식의 검색 단위를 "CWE 항목"에서 "카테고리"로 추상화해 프롬프트 효율을 높이는 설계 패턴. 코드 생성 에이전트 파이프라인에서 보안 RAG를 통합할 때 참고할 실용적 아키텍처 옵션. CyberSecEval(Meta Purple Llama) 기준 SOTA 대비 약 2배 개선해 에이전트형 분류 검색의 효과를 실증.
 - **출처**: [arXiv:2610.24907 — CAT-RAG](https://arxiv.org/abs/2610.24907) (2026-10-17, cs.CR + cs.SE, snippet-verified: arxiv.org/abs/2610.24907 + arxiv.org/html/2610.24907 2개 이상 독립 출처; 직접 URL 접근 불가 — snippet-verified)
 
+### GL-2026-10-30-01 | LatentRAG — 잠재 공간 추론·검색으로 에이전틱 RAG 추론 지연 90% 단축 (arXiv:2605.06285 v2, 2026-10-25)
+
+> **"LatentRAG: Latent Reasoning and Retrieval for Efficient Agentic RAG"** (arXiv:2605.06285, cs.AI + cs.IR)
+> Yijia Zheng, Marcel Worring (University of Amsterdam)
+> 최초 제출: 2026-05-07 · v2 갱신: 2026-10-25
+
+- **문제**: 에이전틱 RAG의 핵심 병목은 모델이 자연어 서브쿼리(thought/subquery)를 토큰 단위로 생성해야 추론을 진행하고 검색을 트리거할 수 있다는 점이다. 이 자연어 생성 단계가 추론 지연의 지배적 원인이다.
+- **핵심 아이디어 — 잠재 공간 정렬**: LLM의 숨겨진 상태(hidden states)를 dense retrieval 모델의 잠재 공간과 정렬(align)해, 자연어 서브쿼리를 생성하는 대신 단일 forward pass 안에서 **잠재 토큰(latent tokens)**으로 thoughts·subqueries를 직접 생성한다. 이 잠재 서브쿼리를 dense retriever에 전달해 자연어 쿼리 없이 검색을 수행한다.
+- **투명성 유지**: 잠재 토큰을 사람이 읽을 수 있는 텍스트로 역변환하는 병렬 디코딩(parallel latent-decoding) 단계를 두어, 추론 과정의 검사 가능성을 확보한다.
+- **결과**: 7개 벤치마크 데이터셋에서 명시적 에이전틱 RAG 방식 대비 정확도 5%p 이내를 유지하면서 추론 지연 **약 90% 감소**.
+- **의의**: 에이전틱 RAG의 비용·지연 문제가 "얼마나 많이 검색하느냐"보다 "서브쿼리를 어떻게 생성하느냐"에서 기인한다는 점을 잠재 공간 접근으로 정면 돌파한 연구. 자연어 생성 단계를 제거하면서도 투명성을 희생하지 않는 설계는 프로덕션 에이전틱 RAG의 latency-accuracy 트레이드오프에 새 선택지를 제시한다.
+- **출처**: [arXiv:2605.06285 — LatentRAG: Latent Reasoning and Retrieval for Efficient Agentic RAG](https://arxiv.org/abs/2605.06285) (최초 제출 2026-05-07, v2 2026-10-25, snippet-verified: arxiv.org/html/2605.06285 + catalyzex.com/paper/latentrag-latent-reasoning-and-retrieval-for + meaningful96.github.io/nr/LatentRAG/ + tldr.takara.ai/p/2605.06285 + api.emergentmind.com/papers/2605.06285 5개 이상 독립 출처; 직접 URL 접근 일부 불가)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.

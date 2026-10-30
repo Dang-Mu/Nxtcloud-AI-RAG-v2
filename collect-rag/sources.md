@@ -1,5 +1,10 @@
 # 출처 목록
 
+## 2026-10-30 일일 누적 추가 출처 (1건, 루프 #135)
+
+### 글로벌 — 에이전틱 RAG·잠재 공간 추론·검색 효율화 (LatentRAG, arXiv:2605.06285)
+- [arXiv:2605.06285 — LatentRAG: Latent Reasoning and Retrieval for Efficient Agentic RAG](https://arxiv.org/abs/2605.06285) — 최초 제출 2026-05-07, v2 2026-10-25 · [agentic-rag][latent-space][dense-retrieval][latent-tokens][hidden-states][forward-pass][latency][efficiency][transparency][parallel-decoding][yijia-zheng][marcel-worring][university-of-amsterdam][cs.ai][cs.ir] · Yijia Zheng, Marcel Worring (University of Amsterdam). LLM의 hidden states를 dense retrieval 모델 잠재 공간과 정렬; 단일 forward pass 안에서 자연어 서브쿼리 대신 latent tokens으로 thoughts·subqueries 직접 생성; 잠재 서브쿼리를 dense retriever에 전달해 자연어 쿼리 없이 검색; 병렬 latent-decoding으로 추론 과정 검사 가능성 유지. 7개 벤치마크에서 명시적 에이전틱 RAG 대비 정확도 5%p 이내, 추론 지연 약 90% 감소. (snippet-verified: arxiv.org/html/2605.06285 + catalyzex.com/paper/latentrag-latent-reasoning-and-retrieval-for + meaningful96.github.io/nr/LatentRAG/ + tldr.takara.ai/p/2605.06285 + api.emergentmind.com/papers/2605.06285 5개 이상 독립 출처; 직접 URL 접근 일부 불가)
+
 ## 2026-10-29 일일 누적 추가 출처 (1건, 루프 #134)
 
 ### 한국 — 멀티모달 RAG·하이브리드 검색·IITP 지원 산업 실증 (와이즈넛, 과기정통부·IITP 과제)
