@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-10-31 (일일 루프 #136)
+- **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 1건 — 카카오 카나나-2-임베딩)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| KR-2026-10-31-01 | 카카오 카나나-2-임베딩 오픈소스 공개 — 한국어 RAG 검색 레이어용 3B/1.3B 임베딩 모델, MRL 지원, Kanana 오픈 라이선스 | 프로덕션 아키텍처·한국어 임베딩·RAG 검색 강화 | 02-프로덕션-아키텍처.md |
+| GL-2026-10-31-01 | arXiv:2610.35056 — Hallucination-Aware Multi-Agent RAG: 어텐션 헤드 노름 기반 환각 위험 신호를 태스크 보상에 통합; EMNLP 2026 Findings; Qwen3-8B에서 MMOA-RAG 대비 +2.35 R/A, +0.95 EM, +1.29 F1 | 에이전틱 RAG·멀티에이전트·환각 감소·강화학습 보상 | 03-에이전트-툴유즈-MCP.md |
+
+- **검증 결과**: 2건 5점 자가검증 전원 통과; snippet-verified 전건; 한국 사례 1건 (목표 달성)
+  1. **카카오 카나나-2-임베딩 (2026-10-29)**: 카카오 Kanana LLM 팀. Kanana-2-SLM 기반 정보 검색 특화 임베딩 2종(3B 직접 학습, 1.3B 지식 증류) 허깅페이스 오픈소스 공개. MRL(Matryoshka Representation Learning)로 벡터 차원 탄력 조절. 유사 규모 모델(Llama-Nemotron-Embed-1B v2, Qwen3-Embedding-4B) 대비 한국어 성능 최상위(카카오 자체 평가). RAG·AI 에이전트 활용 명시. Kanana 오픈 라이선스(상업 활용 가능). snippet-verified: aitimes.com + newspim.com + bizwatch.co.kr + ziksir.com + megaeconomy.co.kr + fnnews.com + pointdaily.co.kr + specialtimes.co.kr + m-i.kr 9개 이상 독립 뉴스 출처. → `02-프로덕션-아키텍처.md` OA-RAG 다음(## 한국 환경 특이점 앞), 및 ### 한국어 임베딩 모델 섹션에 추가.
+  2. **Hallucination-Aware Multi-Agent RAG (arXiv:2610.35056, EMNLP 2026 Findings)**: Runsong Jia, Qian Chang, Mengjia Wu, Ciprian Doru Giurcăneanu, Jie Lu, Yi Zhang. 생성기 어텐션 헤드 노름에서 환각 위험 신호 계산 → 태스크 보상에 추가. TruthfulQA 1회 보정 후 재학습 없이 전이. Qwen3-8B·Llama3-8B·Llama2-13B × RAGTruth·HotpotQA·2WikiMultiHopQA에서 멀티에이전트 기준선 대비 성능·환각률 동시 개선. snippet-verified: arxiv.org/abs/2610.35056 + arxiv.org/html/2610.35056 + aclanthology.org/2026.findings-emnlp.1809/ 3개 이상 독립 출처. → `03-에이전트-툴유즈-MCP.md` LatentRAG 다음(## 이 도메인의 공통 패턴 앞)에 추가.
+  3. **중복 폐기 목록**: arXiv:2610.37358(When Is Additional Retrieval Worthwhile) — 루프 #134에서 이미 시도한 논문(당시 독립 출처 부족 폐기), 이번에 arxiv.org+DailyArXiv 2개 독립 출처 확인이나 내용상 루프 #130~135 시기 수집된 비용 인식 RAG 계열(2607.24010 Budget-Aware Active RAG 등)과 주제 중복도 높아 폐기; 카카오 if(kakao)26 RAG 세션 — 구체적 RAG 세션 제목·기술 내용 불확인(검색 결과 RAG 세션 미발견)으로 폐기
+
+- `sources.md`에 2개 출처 추가 (## 2026-10-31 섹션 신설, 파일 최상단)
+- `02-프로덕션-아키텍처.md` 상단의 마지막 업데이트 날짜 갱신 필요
+- **한국 사례**: 1건 (카카오, 한국어 RAG 임베딩 모델 오픈소스)
+- **글로벌 사례**: 1건 (EMNLP 2026 Findings, 멀티에이전트 RAG 환각 감소)
+
 ## 2026-10-30 (일일 루프 #135)
 - **신규 사례 1건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — 10/23~30 범위 내 신규 공개 한국 사례 미발굴)
 

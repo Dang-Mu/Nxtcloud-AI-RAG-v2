@@ -1179,6 +1179,18 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **의의**: 에이전틱 RAG의 비용·지연 문제가 "얼마나 많이 검색하느냐"보다 "서브쿼리를 어떻게 생성하느냐"에서 기인한다는 점을 잠재 공간 접근으로 정면 돌파한 연구. 자연어 생성 단계를 제거하면서도 투명성을 희생하지 않는 설계는 프로덕션 에이전틱 RAG의 latency-accuracy 트레이드오프에 새 선택지를 제시한다.
 - **출처**: [arXiv:2605.06285 — LatentRAG: Latent Reasoning and Retrieval for Efficient Agentic RAG](https://arxiv.org/abs/2605.06285) (최초 제출 2026-05-07, v2 2026-10-25, snippet-verified: arxiv.org/html/2605.06285 + catalyzex.com/paper/latentrag-latent-reasoning-and-retrieval-for + meaningful96.github.io/nr/LatentRAG/ + tldr.takara.ai/p/2605.06285 + api.emergentmind.com/papers/2605.06285 5개 이상 독립 출처; 직접 URL 접근 일부 불가)
 
+### GL-2026-10-31-01 | Hallucination-Aware Multi-Agent RAG — 내부 어텐션 보상 신호로 멀티에이전트 RAG 환각 감소 (arXiv:2610.35056, EMNLP 2026 Findings)
+
+> **"Hallucination-Aware Multi-Agent RAG via Internal Attention Rewards"**
+> arXiv:2610.35056 · Runsong Jia, Qian Chang, Mengjia Wu, Ciprian Doru Giurcăneanu, Jie Lu, Yi Zhang
+> EMNLP 2026 Findings 채택
+
+- **문제**: 기존 멀티에이전트 RAG 시스템은 전 에이전트를 EM·F1 같은 공유 태스크 보상으로만 학습시킨다. 이 보상은 답변의 표면적 일치를 측정할 뿐, 검색 증거에 대한 충실성(faithfulness)을 직접 신호로 삼지 않아 환각이 남아있다.
+- **핵심 기여**: 생성기 에이전트의 어텐션 헤드 노름(attention-head norm)에서 환각 위험 신호를 계산해 태스크 보상에 추가한다. 위험 비평가(risk critic)는 TruthfulQA에서 한 번만 보정(calibration)된 후 재학습 없이 다양한 RAG 태스크로 전이된다. 생성 중 모델 내부 신호만으로 충실성을 추적하는 경량 접근이다.
+- **결과**: Qwen3-8B, Llama3-8B, Llama2-13B × RAGTruth, HotpotQA, 2WikiMultiHopQA에서 강력한 멀티에이전트 기준선 대비 태스크 성능·환각률 모두 개선. Qwen3-8B 기준 MMOA-RAG 대비 +2.35 R/A, +0.95 EM, +1.29 F1 평균 향상 (저자 보고).
+- **의의**: 별도의 환각 탐지 모듈 없이 모델 내부 어텐션 신호를 보상 신호로 재활용해 추가 훈련·추론 비용을 최소화한다. 멀티에이전트 RAG 강화학습 설계에 "충실성 신호"를 통합하는 실용적 패턴을 제시하며, 의료·법률처럼 환각 비용이 높은 도메인의 프로덕션 에이전틱 RAG에 적용 가능하다.
+- **출처**: [arXiv:2610.35056 — Hallucination-Aware Multi-Agent RAG via Internal Attention Rewards](https://arxiv.org/abs/2610.35056) (EMNLP 2026 Findings, snippet-verified: arxiv.org/abs/2610.35056 + arxiv.org/html/2610.35056 + aclanthology.org/2026.findings-emnlp.1809/ 3개 이상 독립 출처; 직접 URL 접근 불가 — snippet-verified)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.

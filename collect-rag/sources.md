@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-10-31 일일 누적 추가 출처 (2건, 루프 #136)
+
+### 한국 — 프로덕션 아키텍처·한국어 임베딩·RAG 검색 강화 (카카오 카나나-2-임베딩)
+- [카카오, 개인화 AI 에이전트 기반 기술 '카나나-2-임베딩' 모델 2종 오픈소스 공개 (AI타임스)](https://www.aitimes.com/news/articleView.html?idxno=216798) — 2026-10-29 · [korean][kakao][embedding][dense-retrieval][kanana-2][mrl][matryoshka][knowledge-distillation][rag][ai-agent][open-source][korean-embedding][3b][1.3b][kanana-open-license][huggingface][production-architecture] · 카카오 Kanana LLM 팀. Kanana-2-SLM을 정보 검색용으로 전환 학습한 한국어 특화 임베딩 2종(3B 직접 학습, 1.3B 지식 증류) 허깅페이스 오픈소스 공개. MRL 벡터 차원 조절 지원. 유사 규모 공개 모델(Llama-Nemotron-Embed-1B v2, Qwen3-Embedding-4B) 대비 한국어 성능 최상위(카카오 자체 평가). RAG·개인화 AI 에이전트 활용 명시. (snippet-verified: aitimes.com/216798 + newspim.com/news/view/20261029000269 + news.bizwatch.co.kr/article/mobile/2026/10/29/0008 + ziksir.com/news/articleView.html?idxno=151244 + megaeconomy.co.kr/news/newsview.php?ncode=1065591925879462 + fnnews.com/news/202610291028083857 + pointdaily.co.kr/news/articleView.html?idxno=324165 + specialtimes.co.kr/news/articleView.html?idxno=479636 + m-i.kr/news/articleView.html?idxno=2012140 9개 이상 독립 뉴스 출처; 직접 URL 일부 접근 불가)
+
+### 글로벌 — 에이전틱 RAG·멀티에이전트·환각 감소·강화학습 보상 통합 (arXiv:2610.35056, EMNLP 2026 Findings)
+- [arXiv:2610.35056 — Hallucination-Aware Multi-Agent RAG via Internal Attention Rewards](https://arxiv.org/abs/2610.35056) — EMNLP 2026 Findings, aclanthology.org/2026.findings-emnlp.1809/ · [agentic-rag][multi-agent][hallucination][attention-head-norm][reward-signal][faithfulness][rl][reinforcement-learning][task-reward][risk-critic][calibration][truthfulqa][emnlp2026][qwen3][llama][ragtruth][hotpotqa][2wikimultihopqa][runsong-jia] · Runsong Jia, Qian Chang, Mengjia Wu, Ciprian Doru Giurcăneanu, Jie Lu, Yi Zhang. 멀티에이전트 RAG 강화학습에 어텐션 헤드 노름 기반 환각 위험 신호를 추가 보상으로 통합; TruthfulQA 1회 보정 후 재학습 없이 전이; Qwen3-8B 기준 MMOA-RAG 대비 +2.35 R/A, +0.95 EM, +1.29 F1 (저자 보고). (snippet-verified: arxiv.org/abs/2610.35056 + arxiv.org/html/2610.35056 + aclanthology.org/2026.findings-emnlp.1809/ 3개 이상 독립 출처; 직접 URL 접근 불가)
+
 ## 2026-10-30 일일 누적 추가 출처 (1건, 루프 #135)
 
 ### 글로벌 — 에이전틱 RAG·잠재 공간 추론·검색 효율화 (LatentRAG, arXiv:2605.06285)
