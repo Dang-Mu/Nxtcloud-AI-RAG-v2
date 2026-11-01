@@ -1,5 +1,10 @@
 # 출처 목록
 
+## 2026-11-01 일일 누적 추가 출처 (1건, 루프 #137)
+
+### 글로벌 — 프로덕션 아키텍처·GraphRAG·엔터프라이즈·메타데이터 보강·지식그래프 (arXiv:2610.37728, CIKM 2026)
+- [arXiv:2610.37728 — Beyond Similarity Search: Knowledge Graph Metadata Enrichment for Enterprise Retrieval-Augmented Generation](https://arxiv.org/abs/2610.37728) — CIKM 2026 (November 7–11, 2026, Rome, Italy), 2026-10-27 제출 · [architecture][graphrag][enterprise-rag][metadata-enrichment][knowledge-graph][vector-rag][text-to-sql][hnsw][cosine-search][two-stage][accession-number][aggregation-query][fakabbir-amin][cikm2026][cs.ir][cs.ai][cs.lg] · Fakabbir Amin. 엔터프라이즈 환경에서 메타데이터·갱신 팩트를 지식그래프로 저장한 2단계 GraphRAG가 밀집 벡터 RAG(HNSW)·text-to-SQL 대비 우세(16/20 vs 3/20 vs 10/20 정답, 20개 질문 세트)함을 실험적으로 검증. 단, 구조적 집계 쿼리에서 GraphRAG 열세. 저자 일반화 한계 명시. (snippet-verified: arxiv.org/abs/2610.37728 + papers.cool/arxiv/cs.IR 2개 이상 독립 출처; 직접 URL 접근 불가)
+
 ## 2026-10-31 일일 누적 추가 출처 (2건, 루프 #136)
 
 ### 한국 — 프로덕션 아키텍처·한국어 임베딩·RAG 검색 강화 (카카오 카나나-2-임베딩)
