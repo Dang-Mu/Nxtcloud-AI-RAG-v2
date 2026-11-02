@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-11-02 일일 누적 추가 출처 (2건, 루프 #138)
+
+### 글로벌 — 프로덕션 아키텍처·장문RAG·커버리지 인식 컨텍스트 선택 (arXiv:2610.40314, CIKM 2026)
+- [arXiv:2610.40314 — Decompose, Estimate, Select: Coverage-Aware Context Construction for Long-Form RAG](https://arxiv.org/abs/2610.40314) — CIKM 2026 (November 7–11, 2026, Rome, Italy), 2026-10-29 제출 · [long-form-rag][context-construction][coverage-aware][query-decomposition][bi-encoder][cross-encoder][coverage-matrix][greedy-selection][maximum-marginal-relevance][bm25][trec-rag-2024][alpha-ndcg][self-feedback][nugget][he-tu][torsten-suel][cikm2026][cs.ir] · He Tu, Aleena Bosco Kurumthottam, Torsten Suel. 장문 RAG에서 질의를 서브질문으로 분해하고, bi/cross-encoder 커버리지 행렬로 문서를 추정·탐욕 선택하는 3단계 파이프라인. TREC RAG 2024 α-nDCG@10 0.625→0.702(상한 0.718 근접; 저자 보고). 자체 피드백 루프 V_strict +0.086. (snippet-verified: arxiv.org/abs/2610.40314 + arxiv.org/html/2610.40314 + JyiHUO/arxiv_daily_recommendation_system GitHub release + jyyang621/DailyArXiv issue #445 4개 이상 독립 출처; 직접 URL 접근 불가)
+
+### 글로벌 — 에이전틱 RAG·멀티홉·질문 분해·QA 캐시 재사용 (arXiv:2610.37826)
+- [arXiv:2610.37826 — DeFT-RAG: Incrementally Decomposing Multi-Hop Questions into Self-Contained Sub-Questions with Reusable Answers](https://arxiv.org/abs/2610.37826) — 2026-10-27 제출 · [multi-hop-rag][question-decomposition][self-contained][sub-question][incremental][qa-cache][reuse][rule-based][bookkeeping][yes-no-model][musique][2wikimultihopqa][hotpotqa][llm-call-reduction][token-efficiency][dingyi-kang][bingzhe-li][ut-dallas] · Dingyi Kang, Bingzhe Li (University of Texas at Dallas). 멀티홉 질문을 1회 1개씩 자립 서브질문으로 점진 분해; 규칙 기반 QA 테이블로 LLM 없이 상태 관리; QA 캐시로 서브질문 23.1% 재사용·LLM 호출 12.9% 절감. MuSiQue·2WikiMultiHopQA·HotpotQA에서 13개 기준선 중 최고 정확도·최소 토큰(저자 보고). (snippet-verified: JyiHUO/arxiv_daily_recommendation_system GitHub release + jyyang621/DailyArXiv issue #445 2개 이상 독립 출처; 직접 URL 접근 불가)
+
 ## 2026-11-01 일일 누적 추가 출처 (1건, 루프 #137)
 
 ### 글로벌 — 프로덕션 아키텍처·GraphRAG·엔터프라이즈·메타데이터 보강·지식그래프 (arXiv:2610.37728, CIKM 2026)

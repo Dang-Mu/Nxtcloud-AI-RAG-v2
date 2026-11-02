@@ -1,5 +1,21 @@
 # 업데이트 로그
 
+## 2026-11-02 (일일 루프 #138)
+- **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — 2026-10-27~11-02 범위 내 신규 공개 한국 사례 미발굴)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-11-02-01 | arXiv:2610.40314 — CIKM 2026: 장문 RAG 커버리지 인식 컨텍스트 구성; 질의 분해→bi/cross-encoder 커버리지 추정→탐욕 선택 3단계 파이프라인; TREC RAG 2024 α-nDCG@10 0.625→0.702; 자체 피드백 루프 V_strict +0.086 | 프로덕션 아키텍처·장문RAG·컨텍스트 선택·커버리지 최적화 | 02-프로덕션-아키텍처.md |
+| GL-2026-11-02-02 | arXiv:2610.37826 — DeFT-RAG: 멀티홉 질문 점진적 자립 분해 + QA 캐시 재사용; 13개 기준선 중 최고 정확도·최소 LLM 토큰 입력; 서브질문 23.1% 캐시 해결·LLM 호출 12.9% 절감 | 에이전틱 RAG·멀티홉·질문 분해·QA 캐시 | 03-에이전트-툴유즈-MCP.md |
+
+- **검증 결과**: 2건 5점 자가검증 전원 통과; snippet-verified 전건; 한국 사례 0건 (목표 1건 미달 — 10-27~11-02 범위 내 네이버·카카오·SKT·KT·토스·우아한형제들·LY Corp 신규 RAG 기술블로그·발표 미발굴)
+  1. **CIKM 2026 Decompose, Estimate, Select (arXiv:2610.40314, 2026-10-29 제출)**: He Tu, Aleena Bosco Kurumthottam, Torsten Suel. 장문 RAG에서 단순 관련성 순위의 커버리지 한계를 극복하는 3단계 파이프라인(질의→서브질문 분해, bi/cross-encoder 커버리지 행렬 추정, 탐욕 선택). TREC RAG 2024 α-nDCG@10 0.625→0.702; 상한 0.718 근접. 자체 피드백 루프(미사용 증거 재검토·재생성) 2회 적용 시 V_strict +0.086. 오라클 검색이 추정 선택 대비 너겟 커버리지를 더 높이지 못함 → 생성 단계도 병목임을 시사. snippet-verified: arxiv.org/abs/2610.40314 + arxiv.org/html/2610.40314 + JyiHUO GitHub release + DailyArXiv #445 4개 이상 독립 출처. → `02-프로덕션-아키텍처.md` GL-2026-11-01-01(CIKM GraphRAG) 다음, `## 한국 환경 특이점` 앞에 추가.
+  2. **DeFT-RAG (arXiv:2610.37826, 2026-10-27 제출)**: Dingyi Kang, Bingzhe Li (UT Dallas). 기존 멀티홉 분해의 토큰 낭비·캐시 불가 문제를 점진적 자립 서브질문 생성 + 규칙 기반 QA 테이블 갱신 + 캐시 재사용으로 해결. MuSiQue·2WikiMultiHopQA·HotpotQA에서 13개 기준선 중 최고 정확도·최소 LLM 토큰. 서브질문 23.1% 캐시 해결, LLM 호출 12.9% 절감. snippet-verified: JyiHUO GitHub release + DailyArXiv #445 2개 이상 독립 출처. → `03-에이전트-툴유즈-MCP.md` GL-2026-10-31-01(환각 인식 멀티에이전트) 다음, `## 이 도메인의 공통 패턴` 앞에 추가.
+  3. **중복·폐기 목록**: arXiv:2610.38366(TCC-RAG) — 독립 출처 1개(DailyArXiv만) 미달 폐기; arXiv:2610.36557(QESChunker) — 독립 출처 1개 미달 폐기; arXiv:2610.34872(Conformal Factuality in Agentic RAG) — 독립 출처 1개 미달 폐기; arXiv:2610.36561(Governed Sovereign RAG) — 루프 #135 폐기 유지; arXiv:2609.19622v2(G3RAG) — 루프 #115에서 이미 수집(중복 스킵).
+  4. **한국 사례 부재 사유**: 2026-10-27~11-02 기간 내 네이버·카카오·SKT·KT·토스·우아한형제들·LY Corp 신규 RAG 발표 미발굴; if(kakao)26 RAG 세션 미확인; DEVIEW 2026 해당 기간 세션 미반환; 카카오엔터프라이즈·포티투마루·Allganize·FasooAI 신규 RAG 발표 미발굴
+
+- `sources.md`에 2개 출처 추가 (## 2026-11-02 섹션 신설, 파일 최상단)
+
 ## 2026-11-01 (일일 루프 #137)
 - **신규 사례 1건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — 2026-10-25~11-01 범위 내 신규 공개 한국 사례 미발굴)
 

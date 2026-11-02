@@ -1191,6 +1191,21 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **의의**: 별도의 환각 탐지 모듈 없이 모델 내부 어텐션 신호를 보상 신호로 재활용해 추가 훈련·추론 비용을 최소화한다. 멀티에이전트 RAG 강화학습 설계에 "충실성 신호"를 통합하는 실용적 패턴을 제시하며, 의료·법률처럼 환각 비용이 높은 도메인의 프로덕션 에이전틱 RAG에 적용 가능하다.
 - **출처**: [arXiv:2610.35056 — Hallucination-Aware Multi-Agent RAG via Internal Attention Rewards](https://arxiv.org/abs/2610.35056) (EMNLP 2026 Findings, snippet-verified: arxiv.org/abs/2610.35056 + arxiv.org/html/2610.35056 + aclanthology.org/2026.findings-emnlp.1809/ 3개 이상 독립 출처; 직접 URL 접근 불가 — snippet-verified)
 
+### GL-2026-11-02-02 | DeFT-RAG — 멀티홉 질문 점진적 자립 분해와 QA 캐시로 13개 기준선 중 최고 정확도·최소 토큰 입력 (arXiv:2610.37826, 2026-10-27)
+
+> **"DeFT-RAG: Incrementally Decomposing Multi-Hop Questions into Self-Contained Sub-Questions with Reusable Answers"** (arXiv:2610.37826)
+> Dingyi Kang, Bingzhe Li (University of Texas at Dallas)
+> 제출: 2026-10-27
+
+- **문제**: 기존 멀티홉 질문 분해 방식은 (1) LLM이 이전 QA 쌍을 맥락에 담아 서브질문을 한꺼번에 생성해 토큰 낭비가 크고, (2) 각 서브질문이 이전 답변에 의존해 재사용·캐싱이 불가능하다.
+- **핵심 기여 — 점진적 자립 분해 + QA 캐시**:
+  - **점진적 분해**: LLM이 원본 질문과 누적 QA 테이블을 입력받아 **자립 서브질문 하나**만 생성. "더 이상 분해 불필요" 판단은 경량 파인튜닝 yes/no 모델이 담당 (LLM 호출 절감).
+  - **규칙 기반 QA 테이블 갱신**: 새 QA 쌍 추가는 규칙 기반으로 처리 — LLM 없이 상태 관리(bookkeeping).
+  - **QA 캐시 재사용**: QA 쌍을 캐시에 저장해 후속 질문에 재활용. MuSiQue 1,000개 공유 캐시 실험에서 서브질문의 **23.1%**를 캐시에서 해결, LLM 호출 **12.9%** 절감.
+- **결과**: MuSiQue·2WikiMultiHopQA·HotpotQA 3개 벤치마크에서 **13개 기준선 중 최고 정확도**. 모든 반복형 방법 중 LLM 입력 토큰 수 **최소** (gpt-4o-mini·Qwen3-8B 백본 기준; 저자 보고).
+- **의의**: 멀티홉 RAG에서 LLM 호출 횟수와 토큰 비용을 줄이면서 정확도를 높이는 실용적 분해 전략. QA 캐시 재사용은 유사 질문이 반복되는 엔터프라이즈 FAQ·고객 지원 워크로드에서 추가적인 운영 비용 절감 가능성을 시사. "서브질문 1개씩 점진 생성 + 규칙 기반 상태 관리"의 조합은 Self-RAG·CRAG에 이어 에이전틱 RAG 설계 패턴에 새 선택지를 추가한다.
+- **출처**: [arXiv:2610.37826 — DeFT-RAG: Incrementally Decomposing Multi-Hop Questions into Self-Contained Sub-Questions with Reusable Answers](https://arxiv.org/abs/2610.37826) (2026-10-27; snippet-verified: JyiHUO/arxiv_daily_recommendation_system GitHub release + jyyang621/DailyArXiv issue #445 2개 이상 독립 출처; 직접 URL 접근 불가 — snippet-verified)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.
