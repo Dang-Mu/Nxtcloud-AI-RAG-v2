@@ -1191,6 +1191,21 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **의의**: 별도의 환각 탐지 모듈 없이 모델 내부 어텐션 신호를 보상 신호로 재활용해 추가 훈련·추론 비용을 최소화한다. 멀티에이전트 RAG 강화학습 설계에 "충실성 신호"를 통합하는 실용적 패턴을 제시하며, 의료·법률처럼 환각 비용이 높은 도메인의 프로덕션 에이전틱 RAG에 적용 가능하다.
 - **출처**: [arXiv:2610.35056 — Hallucination-Aware Multi-Agent RAG via Internal Attention Rewards](https://arxiv.org/abs/2610.35056) (EMNLP 2026 Findings, snippet-verified: arxiv.org/abs/2610.35056 + arxiv.org/html/2610.35056 + aclanthology.org/2026.findings-emnlp.1809/ 3개 이상 독립 출처; 직접 URL 접근 불가 — snippet-verified)
 
+### GL-2026-11-03-01 | EAGR — 증거 유도 적응형 그래프 검색: 전용 그래프DB 없이 VectorDB 메타데이터로 암시적 의미 그래프를 구성하고 LLM이 반복적으로 증거를 평가·탐색 (arXiv:2611.01910, CIKM 2026)
+
+> **"EAGR: Evidence-Guided Adaptive Graph Retrieval"** (arXiv:2611.01910, cs.IR)
+> Sonam Gupta, Vignesh P, Vishwajeet Kumar, Adnan Qidwai, Anand Eswaran, Jaydeep Sen, Sachindra Joshi (IBM Research)
+> 제출: 2026-11-01 · CIKM 2026 채택 (35th ACM CIKM, November 7–11, 2026, Rome, Italy)
+
+- **문제**: 멀티홉 RAG에서 그래프 기반 검색은 전용 그래프 데이터베이스를 별도로 구축·운영해야 하는 고비용 인프라 요구사항이 있다. 기존 GraphRAG 프레임워크들은 사전에 지식 그래프를 명시적으로 인덱싱해야 하며, 이 과정에서 LLM 호출 비용과 저장 오버헤드가 크다.
+- **핵심 기여 — 암시적 의미 그래프 + LLM 주도 적응적 증거 탐색**:
+  - **암시적 의미 그래프**: 패시지 메타데이터(태그, 엔티티, 주제 등)를 표준 VectorDB에 경량 형태로 사전 저장. 명시적 그래프 구조 없이 메타데이터 이웃 관계로 의미 그래프를 암시적으로 구성 — 전용 그래프DB 불필요.
+  - **밀집 검색 시드 패시지에서 출발**: 질의에 대한 초기 밀집 검색 결과(시드 패시지)를 출발점으로 삼는다.
+  - **LLM 반복 증거 평가·탐색**: LLM이 현재까지 수집된 증거를 평가하고, 아직 탐색하지 않은 의미 방향(semantic direction)을 결정한다. 메타데이터 기반 이웃 조회로 검색 프론티어를 확장하며, 충분한 증거가 모일 때까지 반복.
+- **결과**: 멀티홉 QA 벤치마크에서 기준선 대비 성능 향상(구체 수치 snippet 미확인).
+- **의의**: 전용 그래프 인프라 없이 기존 VectorDB만으로 그래프형 멀티홉 추론을 구현하는 실용적 아키텍처 패턴. 이미 VectorDB를 운영하는 엔터프라이즈 RAG 환경에서 추가 인프라 비용 없이 멀티홉 추론 능력을 추가할 수 있다는 점에서 프로덕션 적용성이 높다. IBM Research의 CIKM 2026 채택.
+- **출처**: [arXiv:2611.01910 — EAGR: Evidence-Guided Adaptive Graph Retrieval](https://arxiv.org/abs/2611.01910) (2026-11-01 제출, CIKM '26 채택; snippet-verified: arxiv.org/abs/2611.01910 + arxiv.org/list/cs.IR/recent 2개 독립 출처; 직접 URL 접근 불가 — snippet-verified)
+
 ### GL-2026-11-02-02 | DeFT-RAG — 멀티홉 질문 점진적 자립 분해와 QA 캐시로 13개 기준선 중 최고 정확도·최소 토큰 입력 (arXiv:2610.37826, 2026-10-27)
 
 > **"DeFT-RAG: Incrementally Decomposing Multi-Hop Questions into Self-Contained Sub-Questions with Reusable Answers"** (arXiv:2610.37826)

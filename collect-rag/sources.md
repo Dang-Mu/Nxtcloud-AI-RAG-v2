@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-11-03 일일 누적 추가 출처 (2건, 루프 #139)
+
+### 한국 — 프로덕션 아키텍처·텍스트병목·소프트토큰·분리학습·NeurIPS2026 (ShiftRAG, arXiv:2611.00871)
+- [arXiv:2611.00871 — ShiftRAG: Bypassing the Textual Bottleneck via Decoupled Learning and Continuous Soft Tokens](https://arxiv.org/abs/2611.00871) — 2026-10-31 제출, NeurIPS 2026 Poster #150524 · [architecture][textual-bottleneck][decoupled-learning][soft-tokens][soft-orthogonality][rank-collapse][discriminative-retrieval][autoregressive-generation][single-llm-backbone][high-bandwidth-interface][retrieval-alignment][neurips2026][youmin-ko][jihong-jeong][hyunjoon-kim][hanyang-university][ai-department][seoul][korean] · Youmin Ko, Jihong Jeong, Hyunjoon Kim (한양대학교 인공지능학과). 단일 LLM 백본에서 판별 검색 학습과 자기회귀 생성을 분리하고 소프트 직교성 목적함수로 랭크 붕괴 방지. 검색 정렬을 연속 소프트 토큰으로 프로젝션해 고대역폭 인터페이스 구성. 검색·QA 성능 SOTA 대비 유의미한 향상(저자 보고). (snippet-verified: arxiv.org/abs/2611.00871 + arxiv.org/html/2611.00871(소속 한양대학교 인공지능학과 확인) + meaningful96 GitHub(Jihong Jeong, "NeurIPS 2026 Accepted") + neurips.cc/virtual/2026/poster/150524 4개 이상 독립 출처; 직접 URL 접근 불가)
+
+### 글로벌 — 에이전틱 RAG·멀티홉·암시적 그래프·VectorDB 메타데이터·LLM 주도 증거 탐색 (EAGR, arXiv:2611.01910, CIKM 2026)
+- [arXiv:2611.01910 — EAGR: Evidence-Guided Adaptive Graph Retrieval](https://arxiv.org/abs/2611.01910) — 2026-11-01 제출, CIKM '26 (35th ACM CIKM, November 7–11, 2026, Rome, Italy) · [agentic-rag][multi-hop][graph-retrieval][implicit-graph][vectordb-metadata][llm-guided][evidence-assessment][frontier-expansion][neighborhood-lookup][no-graph-db][seed-passage][dense-retrieval][cikm2026][sonam-gupta][vignesh-p][vishwajeet-kumar][adnan-qidwai][anand-eswaran][jaydeep-sen][sachindra-joshi][ibm-research][cs.ir] · Sonam Gupta, Vignesh P, Vishwajeet Kumar, Adnan Qidwai, Anand Eswaran, Jaydeep Sen, Sachindra Joshi (IBM Research). VectorDB 패시지 메타데이터로 암시적 의미 그래프 구성(전용 그래프DB 불필요). 밀집 검색 시드 패시지 출발점으로 LLM이 반복 증거 평가·방향 결정·이웃 조회로 멀티홉 검색 프론티어 확장. 멀티홉 QA 기준선 대비 성능 향상(구체 수치 snippet 미확인). (snippet-verified: arxiv.org/abs/2611.01910 + arxiv.org/list/cs.IR/recent 2개 독립 출처; 직접 URL 접근 불가)
+
 ## 2026-11-02 일일 누적 추가 출처 (2건, 루프 #138)
 
 ### 글로벌 — 프로덕션 아키텍처·장문RAG·커버리지 인식 컨텍스트 선택 (arXiv:2610.40314, CIKM 2026)
