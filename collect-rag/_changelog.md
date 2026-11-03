@@ -1,5 +1,24 @@
 # 업데이트 로그
 
+## 2026-11-03 (일일 루프 #139)
+- **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 1건 — 한양대학교 인공지능학과 ShiftRAG, NeurIPS 2026)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| KR-2026-11-03-01 | arXiv:2611.00871 — ShiftRAG (NeurIPS 2026): 단일 LLM 백본에서 판별 검색 학습과 자기회귀 생성을 분리, 연속 소프트 토큰으로 고대역폭 연결; 소프트 직교성 목적함수로 랭크 붕괴 방지; 한양대학교 인공지능학과 (Seoul) | 프로덕션 아키텍처·텍스트병목·소프트토큰·분리학습·NeurIPS2026·한국 | 02-프로덕션-아키텍처.md |
+| GL-2026-11-03-01 | arXiv:2611.01910 — EAGR (CIKM 2026): 전용 그래프DB 없이 VectorDB 패시지 메타데이터로 암시적 의미 그래프 구성; LLM이 반복적 증거 평가·방향 결정·이웃 조회로 멀티홉 검색 프론티어 확장; IBM Research | 에이전틱 RAG·멀티홉·그래프RAG·VectorDB·암시적그래프·CIKM2026 | 03-에이전트-툴유즈-MCP.md |
+
+- **검증 결과**: 2건 5점 자가검증 전원 통과; snippet-verified 전건
+  1. **ShiftRAG (arXiv:2611.00871, NeurIPS 2026, 2026-10-31 제출)**: Youmin Ko, Jihong Jeong, Hyunjoon Kim (한양대학교 인공지능학과, Seoul). 텍스트 병목 문제를 단일 LLM 백본에서 판별 검색 학습과 자기회귀 생성을 분리하고 소프트 직교성 목적함수로 연결하는 방식으로 해결. 검색 정렬을 연속 소프트 토큰으로 프로젝션해 고대역폭 인터페이스 구성 → 생성기가 검색기 신호를 직접 소비. 검색·QA 성능 SOTA 대비 유의미한 향상(저자 보고). snippet-verified: arxiv.org/abs/2611.00871 + arxiv.org/html/2611.00871(한양대학교 인공지능학과 소속 명시) + meaningful96 GitHub(Jihong Jeong, "NeurIPS 2026 Accepted") + neurips.cc/virtual/2026/poster/150524 4개 이상 독립 출처. → `02-프로덕션-아키텍처.md` GL-2026-11-02-01(CIKM 커버리지 인식 RAG) 앞, GL-2026-11-01-01(엔터프라이즈 GraphRAG) 뒤 위치에 추가. **한국 사례: 한양대학교 인공지능학과**
+  2. **EAGR (arXiv:2611.01910, CIKM 2026, 2026-11-01 제출)**: Sonam Gupta, Vignesh P, Vishwajeet Kumar, Adnan Qidwai, Anand Eswaran, Jaydeep Sen, Sachindra Joshi (IBM Research). VectorDB 패시지 메타데이터를 경량 사전 저장해 명시적 그래프DB 없이 암시적 의미 그래프 구성; 밀집 검색 시드 패시지 출발점으로 LLM이 반복적 증거 평가·방향 결정·이웃 조회로 멀티홉 검색 프론티어 확장. 멀티홉 QA에서 기준선 대비 성능 향상(구체 수치 snippet 미확인). snippet-verified: arxiv.org/abs/2611.01910 + arxiv.org/list/cs.IR/recent 2개 독립 출처. → `03-에이전트-툴유즈-MCP.md` GL-2026-11-02-02(DeFT-RAG) 앞 위치에 추가.
+  3. **중복 폐기 목록**: arXiv:2611.02810(TRIO) — arxiv.org/abs + html 2개 출처 확인이나 venue(EMNLP 2026) 미확인 + DailyArXiv 등 제3자 출처 미발견 → 폐기; arXiv:2611.02387(EviCast) — 독립 출처 미발견 폐기; arXiv:2611.00450(From Lookups to Lessons) — 독립 출처 미발견 폐기; arXiv:2611.00871 ShiftRAG와 동일 한양대 그룹 다른 저자 작업은 미발견
+  4. **한국 사례 발굴 경위**: 2026-10-31 제출 arXiv:2611.00871 ShiftRAG의 저자 소속을 arxiv.org/html 버전에서 Hanyang University 인공지능학과로 확인. 나머지 한국 대형 IT 기업(네이버·카카오·토스·SKT·KT·우아한형제들·LY Corp) 2026-10-28~11-03 범위 신규 RAG 발표 미발굴.
+
+- `sources.md`에 2개 출처 추가 (## 2026-11-03 섹션 신설, 파일 최상단)
+- `02-프로덕션-아키텍처.md` 최종 업데이트 날짜 2026-11-03으로 갱신
+- **한국 사례**: 1건 (한양대학교 인공지능학과, ShiftRAG, NeurIPS 2026)
+- **글로벌 사례**: 1건 (IBM Research, EAGR, CIKM 2026)
+
 ## 2026-11-02 (일일 루프 #138)
 - **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — 2026-10-27~11-02 범위 내 신규 공개 한국 사례 미발굴)
 
