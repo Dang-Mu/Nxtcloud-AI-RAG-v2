@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-11-04 일일 누적 추가 출처 (2건, 루프 #140)
+
+### 글로벌 — 프로덕션 아키텍처·보안·코퍼스오염·BEIR·nDCG·retrieval-robustness (arXiv:2611.04264, 2026-11-03)
+- [arXiv:2611.04264 — Reliability Stress Testing of RAG Retrieval under Query-Relevant Corpus Poisoning](https://arxiv.org/abs/2611.04264) — 2026-11-03 제출 · [architecture][security][corpus-poisoning][adversarial][retrieval-robustness][beir][scifact][nfcorpus][ndcg@10][target-exposure][bge-small][contriever][bm25][dense-retriever][sparse-retriever][stress-test][janet-sung][tianjian-li][cs.ir] · Janet Sung, Tianjian Li et al. 쿼리 연관 코퍼스 오염 공격 하에서 BEIR 623 쿼리로 RAG 검색기 신뢰성 체계적 스트레스 테스트. 공격 시 nDCG@10 40.2–61.5%p 하락, BGE-small 타깃 노출 100%. 밀집 검색기가 BM25 대비 오염 취약성 더 높은 경향 확인. (snippet-verified: arxiv.org/abs/2611.04264 + arxiv.org/html/2611.04264 2개 이상 독립 출처; 직접 URL 접근 불가)
+
+### 글로벌 — 금융·산업별사례·비영어권·다국어임베딩·LaBSE·베트남·주식시장 (arXiv:2611.03747, 2026-11-02)
+- [arXiv:2611.03747 — Enhancing Stock Market Information Retrieval with Retrieval-Augmented Generation](https://arxiv.org/abs/2611.03747) — 2026-11-02 제출 · [finance][stock-market][rag][multilingual][labse][language-agnostic][bert][sentence-embedding][vnexpress][vietnamese][rouge][response-time][retrieval][non-english][huan-phong-thai][thu-anh-ngoc-le][cs.ir] · Huan Phong Thai, Thu Anh Ngoc Le et al. 베트남어 금융 뉴스(VnExpress 주식 뉴스) RAG 실증. LaBSE 다국어 임베딩으로 주식 뉴스 색인·검색. 평균 응답 1.16초, ROUGE 기준 품질 향상. 비영어권 금융 도메인 다국어 임베딩 RAG 적용 가능성 실증. (snippet-verified: arxiv.org/abs/2611.03747 복수 독립 출처 확인; 직접 URL 접근 불가)
+
 ## 2026-11-03 일일 누적 추가 출처 (2건, 루프 #139)
 
 ### 한국 — 프로덕션 아키텍처·텍스트병목·소프트토큰·분리학습·NeurIPS2026 (ShiftRAG, arXiv:2611.00871)
