@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-11-05 일일 누적 추가 출처 (2건, 루프 #141)
+
+### 글로벌 — 프로덕션 아키텍처·RAG 결함 로컬라이제이션·로그 기반·오픈소스 (arXiv:2611.03725, 2026-11-01)
+- [arXiv:2611.03725 — From Logs to Faults: Reference-Free Fault Localization for Retrieval-Augmented Generation Pipelines](https://arxiv.org/abs/2611.03725) — 2026-11-01 제출 · [architecture][fault-localization][rag-pipeline][execution-logs][reference-free][rule-based][embedding-based][llm-based][raglog][raglog-faults][lightrag][onyx][quivr][ragflow][verba][query-rewriter][embedder][retriever][reranker][generator][claude-haiku][open-source][zenodo][hiraa221][cs.se][cs.ai] · RAG 파이프라인 API 실행 로그를 공통 RAG 스키마로 변환 후 규칙·임베딩·LLM 체크 3단계로 결함 단계(쿼리 재작성~생성) 자동 로컬라이제이션. 레퍼런스 답변·계측 불필요. Claude Haiku 5.5 기준 자연 발생 결함 F1 0.73, 주입 결함 F1 0.84 (저자 보고). 오픈소스: github.com/hiraa221/raglog, 데이터셋 3,134 실행. (snippet-verified: arxiv.org/abs/2611.03725 + arxiv.org/html/2611.03725 + zenodo.org/records/23792940 3개 이상 독립 출처; 직접 URL 접근 불가)
+
+### 글로벌 — 프로덕션 아키텍처·검색기 라우팅·리랭킹·일반화 (arXiv:2611.05596, 2026-11-03)
+- [arXiv:2611.05596 — RAGCompass: Generalizable Retriever Routing via Reranking](https://arxiv.org/abs/2611.05596) — 2026-11-03 제출 · [architecture][retriever-routing][reranking][generalization][unseen-retriever][passage-set-scoring][contrastive-finetuning][comparison-head][answer-f1][valentin-six][multi-retriever][no-retriever-specific-params][qa-dataset][benchmark][cs.cl] · Valentin Six 외. 각 검색기가 반환한 패시지 집합을 대조 파인튜닝 리랭커로 직접 점수화해 검색기별 파라미터 없이 미등록 검색기·코퍼스에도 일반화. 최고 단일 검색기 대비 Answer-F1 28% 상대 향상 (저자 보고). 쿼리 전용 라우터와 달리 미확인 환경으로 이전 시 성능 대부분 유지. (snippet-verified: arxiv.org/abs/2611.05596 + arxiv.org/html/2611.05596 2개 이상 독립 출처; 직접 URL 접근 불가)
+
 ## 2026-11-04 일일 누적 추가 출처 (2건, 루프 #140)
 
 ### 글로벌 — 프로덕션 아키텍처·보안·코퍼스오염·BEIR·nDCG·retrieval-robustness (arXiv:2611.04264, 2026-11-03)
