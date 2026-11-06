@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-11-06 (일일 루프 #142)
+- **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — 2026-11-01~11-06 범위 내 신규 공개 한국 사례 미발굴 [목표 미달])
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-11-06-01 | arXiv:2611.07393 — CacheGraft: 오프라인 C2C KV 캐시 융합으로 소형 모델 RAG 성능 향상; Qwen3-4B→0.6B 개념 증명; CIKM 2026 KEIR Workshop | 프로덕션 아키텍처·KV캐시·소형모델·오프라인강화·계산효율 | 02-프로덕션-아키텍처.md |
+| GL-2026-11-06-02 | arXiv:2611.07928 — ZeroRAG: 중앙 조정자·전역 자료구조 없이 100K 피어 분산 RAG 시맨틱 쿼리 라우팅; 자가복구; 중앙화 리콜에 근접 | 프로덕션 아키텍처·분산RAG·P2P·소버린AI·데이터주권 | 02-프로덕션-아키텍처.md |
+
+- **검증 결과**: 2건 5점 자가검증 전원 통과; snippet-verified 전건
+  1. **CacheGraft (arXiv:2611.07393, 2026-11-05)**: Vihan Lakshman, Peter Baile Chen, Zhuohan Gu, Michael Cafarella. CIKM 2026 KEIR Workshop 5페이지 프리프린트. 오프라인 인덱싱 단계에서 대형 모델(Qwen3-4B-Base)의 KV 캐시를 소형 모델(Qwen3-0.6B)의 KV 공간에 C2C 융합해, 쿼리 경로에서는 소형 모델만 사용하면서 대형 모델 품질을 활용. 계산 제약 RAG 환경(엣지·온디바이스)에 직접 적용 가능성. snippet-verified: arxiv.org/abs/2611.07393 + arxiv.org/html/2611.07393 + github.com/JyiHUO/arxiv_daily_recommendation_system/releases/tag/2611.07393 3개 이상 독립 출처. → `02-프로덕션-아키텍처.md` GL-2026-11-05-02(RAGCompass) 뒤, `## 한국 환경 특이점` 앞에 추가.
+  2. **ZeroRAG (arXiv:2611.07928, 2026-11-05)**: Petru Neague, Quinten Stokkink, Martijn de Vos, Rafael Pires, Anne-Marie Kermarrec, Mathis Randl, Johan Pouwelse. 중앙 조정자·전역 자료구조 없이 각 피어가 로컬 문서를 보유하고 제한된 이웃 광고·쿼리 캐시만으로 시맨틱 P2P 라우팅 수행. 100K 피어 규모 확장·자가복구 실증. 중앙화 리콜·LLM 답변 정확도에 근접(저자 보고). snippet-verified: arxiv.org/abs/2611.07928 + arxiv.org/html/2611.07928 + github.com/JyiHUO/arxiv_daily_recommendation_system/releases/tag/2611.07928 3개 이상 독립 출처. → `02-프로덕션-아키텍처.md` GL-2026-11-06-01(CacheGraft) 뒤에 추가.
+  3. **한국 사례 발굴 경위**: 2026-11-01~11-06 범위 내 네이버·카카오·SKT·KT·토스·우아한형제들·LY Corp 신규 RAG 기술블로그·발표 미발굴. EMNLP 2026 한국 RAG 논문(TimelyRAG, K-FinHallu, KAIST DISLab 등) 기존에 수집 완료된 중복. 10+ 검색 쿼리 시도. 목표(최소 1건) 미달 — 0건 기록.
+
+- `sources.md`에 2개 출처 추가 (## 2026-11-06 섹션 신설, 파일 최상단)
+- `02-프로덕션-아키텍처.md` GL-2026-11-06-01, GL-2026-11-06-02 신규 항목 추가, 마지막 업데이트 2026-11-06 갱신
+- **한국 사례**: 0건 (목표 1건 미달)
+- **글로벌 사례**: 2건
+
 ## 2026-11-05 (일일 루프 #141)
 - **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — 2026-10-30~11-05 범위 내 신규 공개 한국 사례 미발굴 [목표 미달])
 

@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-11-06 일일 누적 추가 출처 (2건, 루프 #142)
+
+### 글로벌 — 프로덕션 아키텍처·KV캐시·소형모델 오프라인 강화·C2C 융합 (arXiv:2611.07393, CIKM 2026 KEIR Workshop)
+- [arXiv:2611.07393 — CacheGraft: Enhancing Retrieval-Augmented Generation via Latent-Space Document Enrichment](https://arxiv.org/abs/2611.07393) — 2026-11-05 제출 · [architecture][kv-cache][cache-to-cache][c2c-fusion][offline-enrichment][small-model][edge-rag][latent-space][qwen3][vihan-lakshman][peter-baile-chen][zhuohan-gu][michael-cafarella][cikm2026][keir-workshop][cs.ir][cs.lg] · Vihan Lakshman, Peter Baile Chen, Zhuohan Gu, Michael Cafarella. 오프라인 인덱싱 단계에서 대형 모델(Qwen3-4B-Base)의 KV 캐시를 소형 모델(Qwen3-0.6B)의 KV 공간에 C2C 융합 → 쿼리 경로에서는 소형 모델만 사용하면서 대형 모델 표현력을 활용. 계산 제약 RAG 환경(엣지·온디바이스)에 적용 가능. CIKM 2026 KEIR Workshop 5페이지 프리프린트. (snippet-verified: arxiv.org/abs/2611.07393 + arxiv.org/html/2611.07393 + github.com/JyiHUO/arxiv_daily_recommendation_system/releases/tag/2611.07393 3개 이상 독립 출처; 직접 URL 접근 불가)
+
+### 글로벌 — 프로덕션 아키텍처·분산RAG·P2P·소버린AI·데이터주권 (arXiv:2611.07928, 2026-11-05)
+- [arXiv:2611.07928 — ZeroRAG: Adaptive Semantic Peer Routing for Decentralized Retrieval-Augmented Generation](https://arxiv.org/abs/2611.07928) — 2026-11-05 제출 · [architecture][decentralized-rag][p2p][peer-routing][semantic-routing][overlay-network][no-global-data-structure][no-central-coordinator][self-healing][scalability][100k-peers][data-sovereignty][gdpr][sovereign-ai][petru-neague][quinten-stokkink][martijn-de-vos][rafael-pires][anne-marie-kermarrec][mathis-randl][johan-pouwelse][cs.dc][cs.ai][cs.ir][cs.ni] · Petru Neague, Quinten Stokkink, Martijn de Vos, Rafael Pires, Anne-Marie Kermarrec, Mathis Randl, Johan Pouwelse. 중앙 조정자·전역 자료구조 없이 각 피어가 로컬 문서를 보유하고 제한된 이웃 광고·쿼리 캐시만으로 시맨틱 P2P 쿼리 라우팅 수행. 100K 피어 규모 확장 및 자가복구 실증. 중앙화 리콜·LLM 답변 정확도에 근접(저자 보고). 데이터 소유권·GDPR·소버린 AI 요구 대응 분산 RAG 경로. (snippet-verified: arxiv.org/abs/2611.07928 + arxiv.org/html/2611.07928 + github.com/JyiHUO/arxiv_daily_recommendation_system/releases/tag/2611.07928 3개 이상 독립 출처; 직접 URL 접근 불가)
+
 ## 2026-11-05 일일 누적 추가 출처 (2건, 루프 #141)
 
 ### 글로벌 — 프로덕션 아키텍처·RAG 결함 로컬라이제이션·로그 기반·오픈소스 (arXiv:2611.03725, 2026-11-01)
