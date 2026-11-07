@@ -1221,6 +1221,41 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **의의**: 멀티홉 RAG에서 LLM 호출 횟수와 토큰 비용을 줄이면서 정확도를 높이는 실용적 분해 전략. QA 캐시 재사용은 유사 질문이 반복되는 엔터프라이즈 FAQ·고객 지원 워크로드에서 추가적인 운영 비용 절감 가능성을 시사. "서브질문 1개씩 점진 생성 + 규칙 기반 상태 관리"의 조합은 Self-RAG·CRAG에 이어 에이전틱 RAG 설계 패턴에 새 선택지를 추가한다.
 - **출처**: [arXiv:2610.37826 — DeFT-RAG: Incrementally Decomposing Multi-Hop Questions into Self-Contained Sub-Questions with Reusable Answers](https://arxiv.org/abs/2610.37826) (2026-10-27; snippet-verified: JyiHUO/arxiv_daily_recommendation_system GitHub release + jyyang621/DailyArXiv issue #445 2개 이상 독립 출처; 직접 URL 접근 불가 — snippet-verified)
 
+### GL-2026-11-07-01 | 에이전틱 RAG 궤적 내 중간 답변 품질·유용성 예측으로 조기 종료 (arXiv:2609.16453, CIKM 2026)
+
+> **"Predicting Partial Answer Quality and Utility in Agentic Retrieval-Augmented Generation"** (arXiv:2609.16453, cs.IR)
+> Fangzheng Tian, Debasis Ganguly, Craig Macdonald (University of Glasgow)
+> 제출: 2026-09-24 · CIKM 2026 채택 (35th ACM CIKM, November 7–11, 2026, Rome, Italy)
+
+- **문제**: 에이전틱 RAG는 한 번의 검색-추론 반복만으로 최종 답변을 도출하는 경우가 드물고, 대부분 복수의 반복(iteration)을 거친다. 그러나 각 반복이 답변 품질 향상에 실질적으로 기여하는지를 평가하는 메커니즘이 없어 불필요한 반복이 비용·지연을 늘린다. 최적 중단 시점을 예측하는 것이 핵심 과제다.
+- **핵심 기여 — 궤적 내 탐침(In-Trajectory Probing) 프레임워크**:
+  - **중간 답변 품질(partial answer quality)** 및 **중간 유용성(partial utility)** 개념 도입: 각 검색 반복 후 중간 답변의 품질과 최종 답변 대비 유용성을 예측하는 경량 탐침 모델.
+  - **품질 예측 성능**: Pearson's r > 0.43 (저자 보고) — 정량적으로 의미 있는 중간 답변 품질 예측 가능성을 실증.
+  - **조기 종료(Early Stopping) 적용**: 예측된 품질·유용성이 임계치에 도달하면 추가 반복 없이 종료. 이를 통해 평균 반복 횟수를 약 11% 단축하면서 최종 답변 품질의 ~98%를 보존.
+- **핵심 분석 발견**: 대부분의 에이전틱 RAG 궤적에서 단 1회의 반복만이 중간 답변 품질을 유의미하게 변화시킨다. 나머지 반복은 품질에 거의 기여하지 않는 "과잉 반복"임을 궤적 분석으로 확인.
+- **의의**: 에이전틱 RAG의 비용-품질 트레이드오프를 "고정 반복 횟수 제한" 대신 **궤적 내 중간 품질 신호 기반 동적 종료**로 처리하는 접근. 11% 반복 절감이 소규모로 보이지만, 대규모 프로덕션에서 연간 LLM 호출 비용의 의미 있는 절감으로 이어진다. 코드: github.com/DanielTian97/agentic_rag_predictions.
+- **저자**: Fangzheng Tian, Debasis Ganguly, Craig Macdonald (University of Glasgow, UK)
+- **출처**: [arXiv:2609.16453 — Predicting Partial Answer Quality and Utility in Agentic Retrieval-Augmented Generation](https://arxiv.org/abs/2609.16453) (2026-09-24 제출, CIKM 2026 채택; snippet-verified: arxiv.org/abs/2609.16453 + arxiv.org/pdf/2609.16453 + papers.cool/arxiv/2609.16453 + eprints.gla.ac.uk/392557 + github.com/DanielTian97/agentic_rag_predictions 5개 이상 독립 출처; 직접 URL 접근 불가 — snippet-verified)
+
+### GL-2026-11-07-02 | TRACE — 디지털 아카이브 출처 발굴을 위한 학습 불필요 에이전틱 검색 프레임워크 (arXiv:2609.19897, CIKM 2026)
+
+> **"TRACE: Accountable Agentic Retrieval for Source Discovery in Digital Archives"** (arXiv:2609.19897, cs.IR)
+> CIKM 2026 채택 (35th ACM CIKM, November 7–11, 2026, Rome, Italy)
+
+- **문제**: 디지털 아카이브(역사 문서·의회 기록·신문 등)에서 정보 소스를 발굴하는 작업은 비구조화된 대규모 코퍼스에서 멀티홉 추론이 필요하며, 연구자가 검색 근거를 추적·검증할 수 있어야 한다. 기존 검색 방식(희소, 밀집, 그래프 기반, 에이전틱 RAG 모두)은 출처 책임성(accountability)이 부족하고 도메인 특화 훈련 없이는 성능이 낮다.
+- **핵심 기여 — TRACE (Training-Free Accountable Agentic Retrieval)**:
+  1. **코퍼스 타겟 쿼리 분해(Corpus-Targeted Query Decomposition)**: 쿼리를 아카이브 코퍼스 특성에 맞게 분해해 검색 적중률 향상.
+  2. **퓨전 웜 스타트(Fused Warm Start)**: 초기 검색을 여러 방법의 결과를 융합해 시작, 후속 에이전틱 탐색의 출발점 품질 개선.
+  3. **명시적 검색 판정 + 지연 재평가(Explicit Retrieval Verdicts with Deferred Re-evaluation)**: 에이전트가 각 문서에 대해 명시적 판정(accept/reject/defer)을 내리고, 지연된 케이스는 추가 증거 수집 후 재평가 — 추적 가능한 근거 체계 구성.
+  4. **에이전트 작성 근거 기반 카운트 그룹 리랭킹(Count-Grouped Reranking over Agent-Authored Rationales)**: 에이전트가 직접 작성한 판단 근거를 활용해 최종 순위를 결정.
+- **평가 — HistoriQA-ThirdRepublic 벤치마크**:
+  - 1,752개 프랑스 역사 질문 (의회 토론 + 프랑스국립도서관 BnF의 1887년 신문 아카이브 기반)
+  - **R@10 = 0.856, MRR = 0.653** — 희소, 밀집, 그래프 기반, 에이전틱 RAG 기준선 전부 초과
+  - 비용: 질문당 약 **$0.02** — 프로덕션 운용 수준의 경제성
+  - 6개 파트너 기관 연구자 24명에게 실제 배포·운영 중
+- **의의**: 훈련 없이(training-free) 디지털 아카이브 도메인에 적응하고, 각 검색 판정의 근거를 에이전트가 명시적으로 기록하는 "출처 책임성" 설계는 역사·법률·공공 기록 도메인 RAG의 감사 가능성(auditability) 요구를 직접 충족한다. 이미 실사용 중인 프로덕션 사례라는 점에서 실증적 가치가 높다.
+- **출처**: [arXiv:2609.19897 — TRACE: Accountable Agentic Retrieval for Source Discovery in Digital Archives](https://arxiv.org/abs/2609.19897) (CIKM 2026 채택; snippet-verified: arxiv.org/pdf/2609.19897 + emergentmind.com/papers/2609.19897 + meetup.com/canberra-deep-learning-meetup "RAG Finds Text. TRACE Keeps Receipts" 3개 이상 독립 출처; 직접 URL 접근 불가 — snippet-verified)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.
