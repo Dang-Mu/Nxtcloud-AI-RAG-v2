@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-11-07 일일 누적 추가 출처 (2건, 루프 #143)
+
+### 글로벌 — 에이전트·툴유즈·MCP·조기종료·궤적분석·비용최적화 (arXiv:2609.16453, CIKM 2026)
+- [arXiv:2609.16453 — Predicting Partial Answer Quality and Utility in Agentic Retrieval-Augmented Generation](https://arxiv.org/abs/2609.16453) — 2026-09-24 제출, CIKM 2026 채택 (November 7–11, 2026, Rome) · [agentic-rag][early-stopping][partial-answer-quality][partial-utility][in-trajectory-probing][trajectory-analysis][pearson-r][cost-optimization][iteration-reduction][cikm2026][fangzheng-tian][debasis-ganguly][craig-macdonald][university-of-glasgow][cs.ir] · Fangzheng Tian, Debasis Ganguly, Craig Macdonald (University of Glasgow). 궤적 내 탐침으로 각 반복 후 중간 답변 품질·유용성을 예측; 조기 종료로 반복 ~11% 감소·최종 품질 ~98% 보존. 대부분 에이전틱 RAG 궤적에서 단 1회 반복만 품질 유의미 변화. 코드: github.com/DanielTian97/agentic_rag_predictions. (snippet-verified: arxiv.org/abs/2609.16453 + arxiv.org/pdf/2609.16453 + papers.cool/arxiv/2609.16453 + eprints.gla.ac.uk/392557 + github.com/DanielTian97/agentic_rag_predictions 5개 이상 독립 출처; 직접 URL 접근 불가)
+
+### 글로벌 — 에이전트·툴유즈·MCP·디지털아카이브·출처책임성·훈련불필요 (arXiv:2609.19897, CIKM 2026)
+- [arXiv:2609.19897 — TRACE: Accountable Agentic Retrieval for Source Discovery in Digital Archives](https://arxiv.org/abs/2609.19897) — CIKM 2026 채택 (November 7–11, 2026, Rome) · [agentic-rag][training-free][accountable-retrieval][source-discovery][digital-archives][corpus-targeted-decomposition][fused-warm-start][retrieval-verdicts][deferred-re-evaluation][count-grouped-reranking][historiqa][bnf][french-history][r@10][mrr][trace][cikm2026][cs.ir] · 학습 불필요 에이전틱 검색 4요소: 코퍼스 타겟 쿼리 분해, 퓨전 웜 스타트, 명시적 검색 판정+지연 재평가, 에이전트 근거 기반 카운트 그룹 리랭킹. HistoriQA-ThirdRepublic 벤치마크(1,752개 프랑스 역사 질문; 프랑스 의회 토론 + BnF 1887년 신문 아카이브) R@10=0.856, MRR=0.653. 희소·밀집·그래프·에이전틱 RAG 기준선 전부 초과. 약 $0.02/질문. 6개 파트너 기관 연구자 24명 실배포. (snippet-verified: arxiv.org/pdf/2609.19897 + emergentmind.com/papers/2609.19897 + meetup.com/canberra-deep-learning-meetup 3개 이상 독립 출처; 직접 URL 접근 불가)
+
 ## 2026-11-06 일일 누적 추가 출처 (2건, 루프 #142)
 
 ### 글로벌 — 프로덕션 아키텍처·KV캐시·소형모델 오프라인 강화·C2C 융합 (arXiv:2611.07393, CIKM 2026 KEIR Workshop)
