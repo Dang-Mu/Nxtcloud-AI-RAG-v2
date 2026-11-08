@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-11-08 일일 누적 추가 출처 (2건, 루프 #144)
+
+### 글로벌 — 프로덕션 아키텍처·RAG 보안·다수 오염 문서·동조 편향·탐지율 (arXiv:2610.41012, 2026-10-29)
+- [arXiv:2610.41012 — Language Models Show Conformity Bias in RAG: When the Majority Endorses a Poisoned Claim](https://arxiv.org/abs/2610.41012) — 2026-10-29 제출 · [architecture][security][corpus-poisoning][conformity-bias][majority-endorsement][poisoned-claim][detection-rate][gemma-3-12b][scifact][mcnemar][multi-document][adversarial][robustness][ghassabi][ebrahimi][zojaji][milani-fard][cs.ir][cs.cl] · Ghassabi, Ebrahimi, Zojaji, Milani Fard. 소수 오염 조건(1/7) vs 다수 상호 동의 오염 조건(6/7) 비교. Gemma-3-12b, SciFact 200 질문 기준 탐지율 25%→10% 급감 (McNemar p=6.04e-7). 다수 협조 오염 공격이 단일 오염 문서 방어를 무력화할 수 있음을 시사하는 초기 증거. (snippet-verified: github.com/jyyang621/DailyArXiv issue #450 + papers.cool/arxiv/2610.41012 2개 이상 독립 출처; 직접 URL 접근 불가)
+
+### 글로벌 — 프로덕션 아키텍처·RAG 보안·오프라인RAG·엣지디바이스·텍스트-벡터 무결성·지식팩 (arXiv:2611.06498, 2026-11-05)
+- [arXiv:2611.06498 — Signed but Steerable: Measuring and Closing the Text-Vector Integrity Gap in Offline Retrieval-Augmented Generation](https://arxiv.org/abs/2611.06498) — 2026-11-05 제출 · [architecture][security][offline-rag][edge-rag][knowledge-pack][digital-signature][text-vector-integrity-gap][embedding-integrity][re-embedding][cosine-tolerance][angular-margin][airgap][adversarial][supply-chain][cs.cr][cs.ir] · (저자 미확인, snippet-verified). 오프라인 RAG 지식팩의 텍스트-벡터 무결성 격차: 디지털 서명은 텍스트 바이트만 보증하므로 임베딩 벡터를 조작해도 서명 검증 통과 가능. 대응책: 재임베딩 후 코사인 거리 비교, 허용 오차를 코퍼스별 각도 여유에 따라 보정. 엣지·에어갭·공급자 제공 RAG 파이프라인 특유의 위협 모델. (snippet-verified: arxiv.org/abs/2611.06498v1 search result 직접 링크 + groundy.com/articles/why-signing-your-rag-documents-doesnt-guarantee-honest-retrieval 2개 이상 독립 출처; 직접 URL 접근 불가)
+
 ## 2026-11-07 일일 누적 추가 출처 (2건, 루프 #143)
 
 ### 글로벌 — 에이전트·툴유즈·MCP·조기종료·궤적분석·비용최적화 (arXiv:2609.16453, CIKM 2026)
