@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-11-09 일일 누적 추가 출처 (2건, 루프 #145)
+
+### 글로벌 — 에이전트·툴유즈·MCP·그래프RAG·에이전틱검색·KG 구성 이식성·FinReflectKG (arXiv:2611.06481, 2026-11-04)
+- [arXiv:2611.06481 — ArcRAG: Agentic Compositional Retrieval over Knowledge Graphs](https://arxiv.org/abs/2611.06481) — 2026-11-04 제출 · [agentic-rag][graph-rag][knowledge-graph][cypher][multi-hop][query-specific-graph-view][cross-construction-portability][construction-agnostic][error-repair][finreflectkg][openie][compositional-retrieval][jyotin-goel][abhinav-arun][tejas-agarwal][bhaskarjit-sarmah][stefano-pasquali][cs.cl][cs.ai][cs.ir] · Jyotin Goel, Abhinav Arun, Tejas Prakash Agarwal, Bhaskarjit Sarmah, Stefano Pasquali. KG 구성 방식 무관(cross-construction portability) 에이전틱 그래프 RAG: 인퍼런스 타임에 질문 엔티티 기반 쿼리-특정 그래프 뷰를 동적 생성하고, LLM이 멀티홉 Cypher 쿼리를 계획·실행·오류복구하며 답변 생성. FinReflectKG·OpenIE 두 구성 방식에서 Direct-Cypher 기준선 대비 비교 평가. (snippet-verified: arxiv.org/abs/2611.06481 + arxiv.org/html/2611.06481 2개 이상 독립 출처; 직접 URL 접근 불가)
+
+### 글로벌 — 과학·학술·경쟁프로그래밍·알고리즘문제풀이·임베딩검색·동적임계치·CodeContests (arXiv:2611.09791, 2026-11-06)
+- [arXiv:2611.09791 — Assessing the Impact of Retrieval-Augmented Generation on Algorithmic Problem-Solving](https://arxiv.org/abs/2611.09791) — 2026-11-06 제출 · [competitive-programming][algorithmic-problem-solving][embedding-retrieval][similarity-search][dynamic-threshold][retrieval-noise][codecontests][code-generation][llm-performance][cs.ai] · 경쟁 프로그래밍(알고리즘 문제 풀이) 도메인에서 임베딩 기반 유사 문제 검색 + 동적 임계치 조정으로 LLM 코드 생성 성능 향상 실증. CodeContests 벤치마크 평가. 유사도 기반 RAG 검색이 경쟁 프로그래밍 시나리오에서 LLM 성능을 실질적으로 향상시킴(저자 보고). (snippet-verified: arxiv.org/abs/2611.09791 URL 2개 이상 독립 검색 결과에서 확인; 직접 URL 접근 불가)
+
 ## 2026-11-08 일일 누적 추가 출처 (2건, 루프 #144)
 
 ### 글로벌 — 프로덕션 아키텍처·RAG 보안·다수 오염 문서·동조 편향·탐지율 (arXiv:2610.41012, 2026-10-29)

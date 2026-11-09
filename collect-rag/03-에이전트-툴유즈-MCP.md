@@ -1256,6 +1256,21 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **의의**: 훈련 없이(training-free) 디지털 아카이브 도메인에 적응하고, 각 검색 판정의 근거를 에이전트가 명시적으로 기록하는 "출처 책임성" 설계는 역사·법률·공공 기록 도메인 RAG의 감사 가능성(auditability) 요구를 직접 충족한다. 이미 실사용 중인 프로덕션 사례라는 점에서 실증적 가치가 높다.
 - **출처**: [arXiv:2609.19897 — TRACE: Accountable Agentic Retrieval for Source Discovery in Digital Archives](https://arxiv.org/abs/2609.19897) (CIKM 2026 채택; snippet-verified: arxiv.org/pdf/2609.19897 + emergentmind.com/papers/2609.19897 + meetup.com/canberra-deep-learning-meetup "RAG Finds Text. TRACE Keeps Receipts" 3개 이상 독립 출처; 직접 URL 접근 불가 — snippet-verified)
 
+### GL-2026-11-09-01 | ArcRAG — 쿼리-특정 그래프 뷰 생성 + 멀티홉 Cypher 쿼리 에이전틱 검색; KG 구성 방식 무관 이식성(cross-construction portability) 실증 (arXiv:2611.06481, 2026-11-04)
+
+> **"ArcRAG: Agentic Compositional Retrieval over Knowledge Graphs"** (arXiv:2611.06481, cs.CL/cs.AI/cs.IR)
+
+- **저자**: Jyotin Goel, Abhinav Arun, Tejas Prakash Agarwal, Bhaskarjit Sarmah, Stefano Pasquali
+- **제출일**: 2026-11-04
+- **핵심 문제**: 기존 GraphRAG 방법은 특정 KG 구성 방식(OpenIE, 큐레이션 등)에 맞춰 최적화되어, 다른 방식으로 구성된 그래프에서는 성능이 크게 저하된다. 이 "구성 간 이식성(cross-construction portability)" 부재를 체계적으로 연구·해결한다.
+- **방법 — ArcRAG (Agentic Compositional Retrieval)**:
+  - **쿼리-특정 그래프 뷰(query-specific graph view)** 생성: 질문에서 엔티티를 추출하고, 인퍼런스 타임에 해당 엔티티를 중심으로 한 로컬 서브그래프를 동적으로 구성
+  - **멀티홉 Cypher 쿼리 계획·실행**: LLM이 멀티홉 탐색 경로를 계획하고 Cypher 쿼리로 실행; 쿼리 실패 시 자동 오류 복구(error repair) 수행
+  - **구성-불가지론(construction-agnostic)**: 그래프 구성 방식(OpenIE vs FinReflectKG 등)에 무관하게 동일 추론 과정 적용
+- **평가**: FinReflectKG(금융 반사 지식그래프) 및 OpenIE 그래프 두 가지 구성 방식에서 Direct-Cypher 기준선 및 타 GraphRAG 시스템 대비 비교 평가
+- **의의**: KG 구성 방식을 미리 고정하지 않고도 에이전틱 그래프 검색을 수행할 수 있어, 엔터프라이즈 환경에서 여러 이종 KG를 단일 RAG 에이전트로 통합하는 데 직접 활용 가능하다. FinReflectKG 적용은 금융 도메인 KG 기반 RAG의 실용 가능성을 시사한다.
+- **출처**: [arXiv:2611.06481 — ArcRAG: Agentic Compositional Retrieval over Knowledge Graphs](https://arxiv.org/abs/2611.06481) (2026-11-04 제출; snippet-verified: arxiv.org/abs/2611.06481 + arxiv.org/html/2611.06481 2개 이상 독립 출처; 직접 URL 접근 불가 — snippet-verified)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.
