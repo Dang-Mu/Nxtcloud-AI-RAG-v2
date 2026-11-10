@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-11-10 (일일 루프 #146)
+- **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — 2026-11-03~11-10 범위 내 신규 공개 한국 사례 미발굴 [목표 미달, 루프 #140~146 연속 7회])
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-11-10-01 | arXiv:2611.10657 — MMGraph-Agent: 캐시 영감 멀티모달 지식 하이퍼그래프 기반 에이전틱 멀티모달 RAG; 23개 멀티모달 QA 데이터셋 기준선 전부 초과; NeurIPS 2026 Main | 에이전트·툴유즈·MCP·멀티모달RAG·캐시영감·하이퍼그래프·메모리·NeurIPS2026 | 03-에이전트-툴유즈-MCP.md |
+| GL-2026-11-10-02 | TRIO (aclanthology:2026.findings-emnlp.937) — 멀티에이전트 RAG의 태스크-적응형 백본 할당과 개별 최적화; Yingtao Ren et al. (UTS·UW-Madison·Peking); 오픈소스; EMNLP 2026 Findings | 에이전트·툴유즈·MCP·멀티에이전트RAG·태스크적응·개별최적화·EMNLP2026 | 03-에이전트-툴유즈-MCP.md |
+
+- **검증 결과**: 2건 5점 자가검증 전원 통과; snippet-verified 전건
+  1. **GL-2026-11-10-01 (arXiv:2611.10657, 2026-11-07)**: (저자 snippet 미확인). 캐시 영감 멀티모달 지식 하이퍼그래프로 에이전틱 반복 추론 중 멀티모달 증거를 동적 저장·재활용; API 오버헤드 없는 경량 구성; NeurIPS 2026 Main Track Poster #156108 채택. 23개 멀티모달 QA 데이터셋에서 생성 전용·RAG 기반·훈련 기반 세 기준선 범주 전부 초과(저자 보고). snippet-verified: arxiv.org/html/2611.10657 + arxiv.org/pdf/2611.10657 + arxiv.org/abs/2611.10657 + neurips.cc/virtual/2026/poster/156108 4개 이상 독립 출처. → `03-에이전트-툴유즈-MCP.md` GL-2026-11-09-01(ArcRAG) 앞, 최신 사례 최상단에 추가.
+  2. **GL-2026-11-10-02 (aclanthology:2026.findings-emnlp.937, EMNLP 2026 Findings)**: Yingtao Ren, Xiao Luo, Yiwei Fu, Jinzhao Zhou, Yu-Cheng Chang, Chin-Teng Lin (UTS, UW-Madison, Peking University). 멀티에이전트 RAG 파이프라인 각 단계에 태스크 적응형 백본 전략 배치(기존 uniform backbone 비판). 하위 태스크별 개별 데이터 생성·최적화. 오픈소스 코드: github.com/yingtaoren/TRIO. snippet-verified: aclanthology.org/2026.findings-emnlp.937/ + aclanthology.org/2026.findings-emnlp.937.pdf + github.com/yingtaoren/TRIO 3개 이상 독립 출처. arXiv ID 미확인 → ACL Anthology URL 사용. → `03-에이전트-툴유즈-MCP.md` GL-2026-11-10-01(MMGraph-Agent) 뒤에 추가.
+  3. **한국 사례 발굴 경위**: 2026-11-03~11-10 범위 내 네이버·카카오·토스·우아한형제들·LY Corp·SKT·KT·금융권·의료기관·로펌 신규 RAG 기술블로그·발표 미발굴. DEVIEW 2026, if(kakao)26 세션 블로그 미발굴. 10+ 검색 쿼리 시도. 목표(최소 1건) 미달 — 0건 기록 (루프 #140~146 연속 7회 미달).
+
+- `sources.md`에 2개 출처 추가 (## 2026-11-10 섹션 신설, 파일 최상단)
+- `03-에이전트-툴유즈-MCP.md` GL-2026-11-10-01, GL-2026-11-10-02 신규 항목 추가
+- **한국 사례**: 0건 (목표 1건 미달)
+- **글로벌 사례**: 2건
+
 ## 2026-11-09 (일일 루프 #145)
 - **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — 2026-11-02~11-09 범위 내 신규 공개 한국 사례 미발굴 [목표 미달, 루프 #140~145 연속 6회])
 
