@@ -1256,6 +1256,41 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **의의**: 훈련 없이(training-free) 디지털 아카이브 도메인에 적응하고, 각 검색 판정의 근거를 에이전트가 명시적으로 기록하는 "출처 책임성" 설계는 역사·법률·공공 기록 도메인 RAG의 감사 가능성(auditability) 요구를 직접 충족한다. 이미 실사용 중인 프로덕션 사례라는 점에서 실증적 가치가 높다.
 - **출처**: [arXiv:2609.19897 — TRACE: Accountable Agentic Retrieval for Source Discovery in Digital Archives](https://arxiv.org/abs/2609.19897) (CIKM 2026 채택; snippet-verified: arxiv.org/pdf/2609.19897 + emergentmind.com/papers/2609.19897 + meetup.com/canberra-deep-learning-meetup "RAG Finds Text. TRACE Keeps Receipts" 3개 이상 독립 출처; 직접 URL 접근 불가 — snippet-verified)
 
+### GL-2026-11-10-01 | MMGraph-Agent — 캐시 영감 멀티모달 지식 하이퍼그래프 기반 에이전틱 멀티모달 RAG; 23개 멀티모달 QA 데이터셋에서 기존 기준선 전부 초과 (arXiv:2611.10657, NeurIPS 2026)
+
+> **"MMGraph-Agent: Agentic Multimodal RAG via Cache-Inspired Multimodal Knowledge HyperGraphs"** (arXiv:2611.10657)
+> (저자 미확인, snippet-verified)
+> 제출: 2026-11-07 · NeurIPS 2026 Main Conference Poster #156108
+
+- **문제**: 기존 멀티모달 RAG는 (1) 텍스트·이미지 등 이종 모달리티 증거를 단일 에이전틱 추론 루프 안에서 일관되게 통합하지 못하고, (2) 반복적 에이전틱 추론 과정에서 중간 멀티모달 증거의 메모리 관리가 부재해 불필요한 재검색과 API 호출이 증가한다.
+- **핵심 기여 — 캐시 영감 멀티모달 지식 하이퍼그래프(Cache-Inspired Multimodal Knowledge HyperGraphs)**:
+  - **통합 멀티모달 RAG 프레임워크**: 텍스트·이미지 등 이종 모달리티 증거를 단일 하이퍼그래프 구조로 통합 표현. 기존 그래프 기반 접근과 달리 하이퍼엣지(hyperedge)로 복수 노드 간 관계를 직접 모델링.
+  - **캐시 영감 메모리 메커니즘**: 에이전틱 추론 반복 과정에서 검색·처리된 멀티모달 증거를 동적으로 하이퍼그래프에 저장·갱신·제공. 이미 처리한 증거를 재활용해 중복 API 호출 없이 경량 하이퍼그래프 구성 실현.
+  - **제로 API 오버헤드(no API overhead)**: 하이퍼그래프 구성 단계에서 추가 외부 API 호출 불필요. 계산 비용을 메모리 조회로 대체.
+- **결과**: **23개 멀티모달 QA 데이터셋**에서 생성 전용(generation-only), RAG 기반(RAG-based), 훈련 기반(training-based) 세 범주의 기준선 전부 초과 (저자 보고).
+- **의의**: 멀티모달 콘텐츠(문서·슬라이드·의료 이미지·인포그래픽 등)를 대상으로 하는 에이전틱 RAG 파이프라인에서, "반복 추론 중 멀티모달 증거를 어떻게 효율적으로 기억하고 재활용할 것인가"라는 실용 문제에 하이퍼그래프 메모리로 직접 대응한다. API 비용 절감과 추론 경량화가 동시에 달성되어 엣지·온디바이스 멀티모달 RAG 적용 가능성을 시사한다. NeurIPS 2026 Main Track 채택은 커뮤니티의 중요도 평가를 반영한다.
+- **출처**: [arXiv:2611.10657 — MMGraph-Agent: Agentic Multimodal RAG via Cache-Inspired Multimodal Knowledge HyperGraphs](https://arxiv.org/abs/2611.10657) (2026-11-07 제출, NeurIPS 2026 Main Poster #156108; snippet-verified: arxiv.org/html/2611.10657 + arxiv.org/pdf/2611.10657 + arxiv.org/abs/2611.10657 + neurips.cc/virtual/2026/poster/156108 4개 이상 독립 출처; 직접 URL 접근 불가 — snippet-verified)
+
+---
+
+### GL-2026-11-10-02 | TRIO — 멀티에이전트 RAG의 태스크-적응형 백본 할당과 개별 최적화로 검색 품질 및 환각 동시 개선 (EMNLP 2026 Findings, aclanthology:2026.findings-emnlp.937)
+
+> **"TRIO: Task Refinement with Individual Optimization for Retrieval-Augmented Generation"** (Findings of EMNLP 2026, pp. 19765–19782)
+> Yingtao Ren, Xiao Luo, Yiwei Fu, Jinzhao Zhou, Yu-Cheng Chang, Chin-Teng Lin (UTS, University of Wisconsin-Madison, Peking University)
+> EMNLP 2026 Findings 채택 · DOI: 10.18653/2026.findings-emnlp.937
+
+- **문제**: 기존 멀티에이전트 RAG 시스템은 파이프라인 전체에 단일 LLM 백본을 사용(uniform backbone)하는 경향이 있어, 검색·재작성·생성 등 각기 다른 특성을 가진 하위 태스크에 최적화되지 않는다. 이로 인해 검색 품질 부족과 환각 발생이 동시에 나타난다.
+- **핵심 기여 — TRIO (Task Refinement with Individual Optimization)**:
+  - **태스크-적응형 백본(task-adaptive backbone) 할당**: 멀티에이전트 RAG 파이프라인의 각 단계(쿼리 재작성, 검색, 재랭킹, 생성 등)에 해당 역할에 특화된 모델을 에이전트로 전략적으로 배치. 단일 백본 의존도를 제거.
+  - **개별 최적화(Individual Optimization)**: 각 에이전트가 담당하는 하위 태스크별로 맞춤 데이터 생성 및 파인튜닝 적용. 제한된 감독 데이터(supervised data)를 RAG 하위 태스크 전반으로 확장하는 데이터 증강 방법 제안.
+  - **긴밀한 검색-생성 결합(tightly-coupled retrieval & generation)**: 검색과 생성 단계를 느슨하게 연결하는 기존 파이프라인과 달리, 에이전트 간 피드백 루프로 양 단계가 상호 개선되도록 설계.
+- **결과**: 기존 멀티에이전트 RAG 접근법(uniform backbone 사용) 대비 검색 품질 및 최종 답변 품질 향상 (구체적 수치 snippet 미확인; 저자 보고 기준).
+- **코드**: [github.com/yingtaoren/TRIO](https://github.com/yingtaoren/TRIO) (공개 오픈소스)
+- **의의**: 멀티에이전트 RAG의 "어떤 에이전트에 어떤 모델을 쓸 것인가"라는 설계 선택이 성능에 직접적으로 영향을 미침을 실증한다. 엔터프라이즈 RAG 구현에서 각 파이프라인 단계에 역할 특화 모델을 배치하는 모듈형 아키텍처 설계의 근거로 활용 가능하다. EMNLP 2026 Findings 게재는 NLP 커뮤니티의 검증을 의미하며, 오픈소스 코드 공개로 재현 가능성을 보장한다.
+- **출처**: [aclanthology.org/2026.findings-emnlp.937 — TRIO: Task Refinement with Individual Optimization for Retrieval-Augmented Generation](https://aclanthology.org/2026.findings-emnlp.937) (EMNLP 2026 Findings, pp. 19765–19782; snippet-verified: aclanthology.org/2026.findings-emnlp.937/ + aclanthology.org/2026.findings-emnlp.937.pdf + github.com/yingtaoren/TRIO 3개 이상 독립 출처; 직접 URL 접근 불가 — snippet-verified)
+
+---
+
 ### GL-2026-11-09-01 | ArcRAG — 쿼리-특정 그래프 뷰 생성 + 멀티홉 Cypher 쿼리 에이전틱 검색; KG 구성 방식 무관 이식성(cross-construction portability) 실증 (arXiv:2611.06481, 2026-11-04)
 
 > **"ArcRAG: Agentic Compositional Retrieval over Knowledge Graphs"** (arXiv:2611.06481, cs.CL/cs.AI/cs.IR)

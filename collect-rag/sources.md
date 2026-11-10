@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-11-10 일일 누적 추가 출처 (2건, 루프 #146)
+
+### 글로벌 — 에이전트·툴유즈·MCP·멀티모달RAG·캐시영감·하이퍼그래프·메모리·NeurIPS2026 (arXiv:2611.10657, 2026-11-07)
+- [arXiv:2611.10657 — MMGraph-Agent: Agentic Multimodal RAG via Cache-Inspired Multimodal Knowledge HyperGraphs](https://arxiv.org/abs/2611.10657) — 2026-11-07 제출, NeurIPS 2026 Main Poster #156108 · [agentic-rag][multimodal-rag][knowledge-hypergraph][cache-inspired][memory-mechanism][no-api-overhead][lightweight][iterative-reasoning][23-multimodal-qa][neurips2026][cs.ai][cs.ir] · (저자 미확인, snippet-verified). 캐시 영감 멀티모달 지식 하이퍼그래프 기반 통합 에이전틱 멀티모달 RAG 프레임워크. 에이전틱 반복 추론 중 멀티모달 증거를 동적으로 하이퍼그래프에 저장·재활용해 중복 API 호출 없이 경량 구성 실현. 23개 멀티모달 QA 데이터셋에서 생성 전용·RAG 기반·훈련 기반 세 범주 기준선 전부 초과(저자 보고). (snippet-verified: arxiv.org/html/2611.10657 + arxiv.org/pdf/2611.10657 + arxiv.org/abs/2611.10657 + neurips.cc/virtual/2026/poster/156108 4개 이상 독립 출처; 직접 URL 접근 불가)
+
+### 글로벌 — 에이전트·툴유즈·MCP·멀티에이전트RAG·태스크적응·개별최적화·EMNLP2026 (TRIO, aclanthology:2026.findings-emnlp.937)
+- [aclanthology.org/2026.findings-emnlp.937 — TRIO: Task Refinement with Individual Optimization for Retrieval-Augmented Generation](https://aclanthology.org/2026.findings-emnlp.937) — EMNLP 2026 Findings, pp. 19765–19782 · [agentic-rag][multi-agent-rag][task-adaptive-backbone][individual-optimization][retrieval-generation-coupling][data-augmentation][rag-pipeline][hallucination-reduction][uniform-backbone-critique][yingtao-ren][xiao-luo][yiwei-fu][jinzhao-zhou][yu-cheng-chang][chin-teng-lin][uts][uw-madison][peking-university][emnlp2026][open-source] · Yingtao Ren, Xiao Luo, Yiwei Fu, Jinzhao Zhou, Yu-Cheng Chang, Chin-Teng Lin (UTS, UW-Madison, Peking University). 멀티에이전트 RAG 파이프라인 각 단계에 태스크-적응형 백본을 전략적으로 할당(기존 단일 uniform backbone 비판). 하위 태스크별 데이터 생성 및 개별 최적화 적용. 코드 공개: github.com/yingtaoren/TRIO. (snippet-verified: aclanthology.org/2026.findings-emnlp.937/ + aclanthology.org/2026.findings-emnlp.937.pdf + github.com/yingtaoren/TRIO 3개 이상 독립 출처; 직접 URL 접근 불가)
+
 ## 2026-11-09 일일 누적 추가 출처 (2건, 루프 #145)
 
 ### 글로벌 — 에이전트·툴유즈·MCP·그래프RAG·에이전틱검색·KG 구성 이식성·FinReflectKG (arXiv:2611.06481, 2026-11-04)
