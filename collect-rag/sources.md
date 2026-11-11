@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-11-11 일일 누적 추가 출처 (2건, 루프 #147)
+
+### 글로벌 — 프로덕션 아키텍처·노이즈강건성·커리큘럼RL·메타학습·IJCAI2026 (arXiv:2611.11771, 2026-11-09)
+- [arXiv:2611.11771 — ARMOR: Adaptive Curriculum Meta-Learning for Noise-Robust RAG Reasoning](https://arxiv.org/abs/2611.11771) — 2026-11-09 제출, IJCAI 2026 Main Track pp. 5955–5963, DOI 10.24963/ijcai.2026/663 · [architecture][noise-robust][curriculum-rl][meta-learning][teacher-student][knowledge-boundary][retrieval-verification][robust-reasoning][inter-group-advantage][grpo][multi-hop][2wikimultihopqa][musique][hotpotqa][yan-wang][ijcai2026] · Yan Wang, Yuxin Zhang, Shenyu Zhang, Yongrui Chen, Sheng Bi, Guilin Qi. RAG 노이즈 강건성을 지식경계지각·검색검증·강건추론 세 하위 역량으로 분해 후 커리큘럼 RL + 적응적 Teacher 스케줄러로 동시 최적화. IJCAI 2026 Main Track 채택. (snippet-verified: 5개 이상 독립 출처; 직접 URL 접근 불가)
+
+### 글로벌 — 에이전트·에이전틱검색·복합웹QA·DAG·점진적근거화 (arXiv:2611.11113, 2026-11-08)
+- [arXiv:2611.11113 — PCG-RAG: Progressive Compositional Grounding for Retrieval-Augmented Generation in Complex Web Question Answering](https://arxiv.org/abs/2611.11113) — 2026-11-08 제출 · [agentic-rag][complex-web-qa][dag][progressive-grounding][candidate-guided-retrieval][evidence-based-answering][browsecomp-plus][webwalkerqa][multi-hop][linyao-zheng][cs.ir] · Linyao Zheng, Xuhang Shi, Zhifang Mao, Chongqi Qu, Xiuquan Hou. DAG 서브질문 분해 + 후보 유도 검색 + 증거 기반 답변 분리. BrowseComp-Plus +5.43p, WebWalkerQA +5.15p (선도 기준선 대비). (snippet-verified: 4개 이상 독립 출처; 직접 URL 접근 불가)
+
 ## 2026-11-10 일일 누적 추가 출처 (2건, 루프 #146)
 
 ### 글로벌 — 에이전트·툴유즈·MCP·멀티모달RAG·캐시영감·하이퍼그래프·메모리·NeurIPS2026 (arXiv:2611.10657, 2026-11-07)

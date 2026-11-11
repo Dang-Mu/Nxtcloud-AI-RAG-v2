@@ -1,5 +1,18 @@
 # 업데이트 로그
 
+## 2026-11-11 (일일 루프 #147)
+- **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — 2026-11-03~11-11 범위 내 신규 공개 한국 사례 미발굴 [목표 미달, 루프 #140~147 연속 8회])
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-11-11-01 | arXiv:2611.11771 — ARMOR: 커리큘럼 메타학습 기반 적응적 훈련으로 RAG 노이즈 강건성 3개 하위 역량 동시 강화; 2WikiMultiHopQA·MuSiQue·HotPotQA 노이즈 주입 평가; IJCAI 2026 | 프로덕션아키텍처·노이즈강건성·커리큘럼RL·메타학습·Teacher-Student·IJCAI2026 | 02-프로덕션-아키텍처.md |
+| GL-2026-11-11-02 | arXiv:2611.11113 — PCG-RAG: 복잡 웹 질문 응답 DAG 서브질문 분해 + 후보 유도 검색으로 BrowseComp-Plus +5.43p / WebWalkerQA +5.15p | 에이전트·에이전틱검색·복합웹QA·DAG·점진적근거화 | 03-에이전트-툴유즈-MCP.md |
+
+- **검증 결과**: 2건 5점 자가검증 전원 통과; snippet-verified 전건
+  1. **GL-2026-11-11-01 (arXiv:2611.11771, 2026-11-09)**: ARMOR — Yan Wang, Yuxin Zhang, Shenyu Zhang, Yongrui Chen, Sheng Bi, Guilin Qi. IJCAI 2026 Main Track 채택(pp. 5955–5963, DOI 10.24963/ijcai.2026/663). 세 하위 역량(지식경계지각·검색검증·강건추론) 분리 + 커리큘럼 RL + Teacher 스케줄러 + 그룹간 이점 추정. 노이즈 주입 2WikiMultiHopQA·MuSiQue·HotPotQA 평가. snippet-verified: arxiv.org/abs/2611.11771 + arxiv.org/html/2611.11771 + arxiv.org/pdf/2611.11771 + ijcai.org/proceedings/2026/663 + jyyang621/DailyArXiv issue #452 5개 이상 독립 출처. → `02-프로덕션-아키텍처.md` GL-2026-11-08-02(Signed but Steerable) 뒤에 추가.
+  2. **GL-2026-11-11-02 (arXiv:2611.11113, 2026-11-08)**: PCG-RAG — Linyao Zheng, Xuhang Shi, Zhifang Mao, Chongqi Qu, Xiuquan Hou. cs.IR. BrowseComp-Plus +5.43p, WebWalkerQA +5.15p (선도 기준선 대비, 저자 보고). DAG 서브질문 분해 + 후보 유도 검색 + 증거 기반 답변 분리. snippet-verified: arxiv.org/abs/2611.11113 + arxiv.org/html/2611.11113 + arxiv.org/pdf/2611.11113 + jyyang621/DailyArXiv issue #452 4개 이상 독립 출처. → `03-에이전트-툴유즈-MCP.md` GL-2026-11-09-01(ArcRAG) 뒤에 추가.
+  3. **한국 사례 발굴 경위**: 2026-11-03~11-11 범위 내 네이버·카카오·토스·우아한형제들·LY Corp·SKT·KT·금융권·의료기관·로펌 신규 RAG 기술블로그·발표 미발굴. 10+ 검색 쿼리 시도. 목표(최소 1건) 미달 — 0건 기록 (루프 #140~147 연속 8회 미달).
+
 ## 2026-11-10 (일일 루프 #146)
 - **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — 2026-11-03~11-10 범위 내 신규 공개 한국 사례 미발굴 [목표 미달, 루프 #140~146 연속 7회])
 
