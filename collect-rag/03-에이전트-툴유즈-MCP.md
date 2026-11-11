@@ -1306,6 +1306,24 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **의의**: KG 구성 방식을 미리 고정하지 않고도 에이전틱 그래프 검색을 수행할 수 있어, 엔터프라이즈 환경에서 여러 이종 KG를 단일 RAG 에이전트로 통합하는 데 직접 활용 가능하다. FinReflectKG 적용은 금융 도메인 KG 기반 RAG의 실용 가능성을 시사한다.
 - **출처**: [arXiv:2611.06481 — ArcRAG: Agentic Compositional Retrieval over Knowledge Graphs](https://arxiv.org/abs/2611.06481) (2026-11-04 제출; snippet-verified: arxiv.org/abs/2611.06481 + arxiv.org/html/2611.06481 2개 이상 독립 출처; 직접 URL 접근 불가 — snippet-verified)
 
+---
+
+### GL-2026-11-11-02 | PCG-RAG — 복잡 웹 질문 응답을 위한 점진적 복합 근거화: DAG 서브질문 분해 + 후보 유도 검색으로 선도 기준선 대비 BrowseComp-Plus +5.43p (arXiv:2611.11113, 2026-11-08)
+
+> **"PCG-RAG: Progressive Compositional Grounding for Retrieval-Augmented Generation in Complex Web Question Answering"**
+> arXiv:2611.11113 · Linyao Zheng, Xuhang Shi, Zhifang Mao, Chongqi Qu, Xiuquan Hou · 2026-11-08 제출 · cs.IR
+
+- **문제**: 복잡한 웹 질문 응답에서 RAG는 (1) 여러 단서에서 엔티티를 찾아야 하고, (2) 긴 웹 페이지에 분산된 증거를 연결해야 한다. 기존 접근은 부분적으로 지지되는 후보 엔티티를 너무 일찍 확정해 검색 방향이 원래 질문에서 벗어나는 "조기 근거화(premature grounding)" 문제를 갖는다.
+- **핵심 기여 — PCG-RAG (Progressive Compositional Grounding)**:
+  - **점진적 복합 근거화**: 증거가 축적됨에 따라 엔티티 식별과 복합 추론을 동시에 진행. 조기 확정 없이 검색과 근거화를 반복적으로 결합.
+  - **DAG 기반 서브질문 분해**: 복잡한 질문을 방향성 비순환 그래프(DAG) 구조의 서브질문으로 분해. 각 노드가 이전 검색 결과를 받아 다음 검색 쿼리를 생성.
+  - **후보 유도 검색(candidate-guided retrieval)**: 현재까지 식별된 후보 엔티티를 기반으로 다음 검색 쿼리를 동적으로 구성. 증거 기반 답변(evidence-based answering)은 충분한 근거 축적 후 별도 단계로 수행.
+- **결과 (저자 보고)**:
+  - **BrowseComp-Plus**: 선도 기준선 대비 **+5.43포인트** 향상
+  - **WebWalkerQA**: 선도 기준선 대비 **+5.15포인트** 향상
+- **의의**: 단일 웹 검색→생성 파이프라인의 조기 근거화 실패를 DAG 기반 점진적 추론으로 해결하는 에이전틱 RAG 아키텍처를 제시한다. 복잡한 멀티홉 웹 QA(연구 조사, 비교 질문, 다단계 추론)에서 에이전틱 검색의 정확도를 체계적으로 향상시키는 패턴이며, BrowseComp-Plus·WebWalkerQA 두 최신 웹 에이전트 벤치마크에서 동시에 선도 기준선을 초과한 점이 주목된다.
+- **출처**: [arXiv:2611.11113 — PCG-RAG: Progressive Compositional Grounding for Retrieval-Augmented Generation in Complex Web Question Answering](https://arxiv.org/abs/2611.11113) (2026-11-08 제출; snippet-verified: arxiv.org/abs/2611.11113 + arxiv.org/html/2611.11113 + arxiv.org/pdf/2611.11113 + jyyang621/DailyArXiv issue #452 4개 이상 독립 출처; 직접 URL 접근 불가 — snippet-verified)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.
