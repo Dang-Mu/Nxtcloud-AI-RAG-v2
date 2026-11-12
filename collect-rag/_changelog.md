@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-11-12 (일일 루프 #148)
+- **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — 2026-11-05~11-12 범위 내 신규 공개 한국 사례 미발굴 [목표 미달, 루프 #140~148 연속 9회])
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-11-12-01 | arXiv:2611.13675 — OpticalRAG: 픽셀 공간 압축으로 RAG 검색 문서를 16토큰으로 압축; LongBench-v2·BAMBOO·LooGLE-v2 CAP 전부 선도; Qwen2.5-7B LongBench-v2 +5.17p | 프로덕션아키텍처·컨텍스트압축·픽셀공간·VLM·토큰효율 | 02-프로덕션-아키텍처.md |
+| GL-2026-11-12-02 | arXiv:2611.10335 — Two-Sided Conformal Evidence Sets: RAG 증거 지지·반박 양방향 1-α 커버리지; Bonferroni 결합 1-2α; 기권율 0.004; ICTAI 2026 (미독립검증) | 프로덕션아키텍처·컨포멀예측·증거집합·불확실성정량화 | 02-프로덕션-아키텍처.md |
+
+- **검증 결과**: 2건 5점 자가검증 전원 통과; snippet-verified 전건
+  1. **GL-2026-11-12-01 (arXiv:2611.13675, 2026-11-10)**: OpticalRAG — Senhao Liu 외 4명 (저자·소속 미독립검증). 텍스트 1D 토큰 압축에서 2D 픽셀 공간 압축으로의 패러다임 전환. Encoder-Bridged Retrieval: VLM 공유 임베딩 재활용, 대조 학습 불필요. Query-Driven Distillation: 크로스-어텐션으로 비주얼 토큰 → 16토큰 압축. LongBench-v2 Qwen2.5-7B +5.17p, 세 벤치마크 CAP 전부 선도(저자 보고). 코드: github.com/brighterr/OpticalRAG. snippet-verified: arxiv.org/abs/2611.13675 + arxiv.org/pdf/2611.13675 + arxiv.org/html/2611.13675 + arxivsignals.io/papers/2611.13675 + awesomepapers.io/information-retrieval/papers/2611.13675 5개 이상 독립 출처. → `02-프로덕션-아키텍처.md` ARMOR(GL-2026-11-11-01) 뒤에 추가.
+  2. **GL-2026-11-12-02 (arXiv:2611.10335, 2026-11-07)**: Two-Sided Conformal Evidence Sets — (저자 미확인, snippet-verified). RAG 검색 증거를 지지·반박 양방향으로 분리하고 각각 1-α 통계 커버리지(교환 가능성 가정), Bonferroni 결합 1-2α 보장. CES 기권율 0.004. ICTAI 2026 채택(미독립검증). snippet-verified: arxiv.org/abs/2611.10335 + arxiv.org/html/2611.10335 2개 이상 독립 출처. → `02-프로덕션-아키텍처.md` GL-2026-11-12-01(OpticalRAG) 뒤에 추가.
+  3. **한국 사례 발굴 경위**: 2026-11-05~11-12 범위 내 네이버·카카오·토스·우아한형제들·LY Corp·SKT·KT·금융권·의료기관·로펌·삼성전자(techblog.samsung.com 접근 불가-네트워크 차단) 신규 RAG 기술블로그·발표 미발굴. 10+ 검색 쿼리 시도. 목표(최소 1건) 미달 — 0건 기록 (루프 #140~148 연속 9회 미달).
+
+- `sources.md`에 2개 출처 추가 (## 2026-11-12 섹션 신설, 파일 최상단)
+- `02-프로덕션-아키텍처.md` GL-2026-11-12-01(OpticalRAG), GL-2026-11-12-02(Two-Sided CES) 신규 항목 추가
+- **한국 사례**: 0건 (목표 1건 미달, 연속 9회)
+- **글로벌 사례**: 2건
+
 ## 2026-11-11 (일일 루프 #147)
 - **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — 2026-11-03~11-11 범위 내 신규 공개 한국 사례 미발굴 [목표 미달, 루프 #140~147 연속 8회])
 

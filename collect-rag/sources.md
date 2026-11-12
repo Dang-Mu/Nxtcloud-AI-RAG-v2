@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-11-12 일일 누적 추가 출처 (2건, 루프 #148)
+
+### 글로벌 — 프로덕션 아키텍처·컨텍스트 압축·픽셀 공간·멀티모달·토큰 효율 (arXiv:2611.13675, 2026-11-10)
+- [arXiv:2611.13675 — OpticalRAG: Pixel-Space Compression for Token-Efficient Retrieval-Augmented Generation](https://arxiv.org/abs/2611.13675) — 2026-11-10 제출 · [architecture][context-compression][pixel-space][visual-rag][encoder-bridged-retrieval][query-driven-distillation][vlm][token-efficiency][16-tokens][longbench-v2][bamboo][loogle-v2][cap][qwen2.5-7b][senhao-liu][cs.cl] · Senhao Liu 외 4명 (UC Berkeley·Tsinghua·UIUC·USTC; 저자·소속 미독립검증). 텍스트 1D 토큰 압축이 아닌 2D 픽셀 공간에서 RAG 검색 문서를 압축하는 OpticalRAG. Encoder-Bridged Retrieval + Query-Driven Distillation으로 단 16토큰만 주입하면서 LongBench-v2·BAMBOO·LooGLE-v2 CAP 전부 선도; Qwen2.5-7B LongBench-v2 +5.17p(저자 보고). 코드: github.com/brighterr/OpticalRAG. (snippet-verified: arxiv.org/abs/2611.13675 + arxiv.org/pdf/2611.13675 + arxiv.org/html/2611.13675 + arxivsignals.io/papers/2611.13675 + awesomepapers.io/information-retrieval/papers/2611.13675 5개 이상 독립 출처; 직접 URL 접근 불가)
+
+### 글로벌 — 프로덕션 아키텍처·컨포멀 예측·증거 집합·양방향 커버리지·ICTAI 2026 (arXiv:2611.10335, 2026-11-07)
+- [arXiv:2611.10335 — Two-Sided Conformal Evidence Sets for Retrieval-Augmented Generation](https://arxiv.org/abs/2611.10335) — 2026-11-07 제출 · [architecture][conformal-prediction][evidence-sets][two-sided][support-set][refutation-set][statistical-coverage][bonferroni-union][exchangeability][abstention-rate][hallucination-detection][uncertainty-quantification][ictai2026][cs.lg] · (저자 미확인, snippet-verified). RAG 증거를 지지·반박 양방향 집합으로 분리하고 각각 1-α 커버리지 통계 보장(결합 1-2α, Bonferroni union). CES 기권율 0.004. ICTAI 2026 채택(미독립검증). (snippet-verified: arxiv.org/abs/2611.10335 + arxiv.org/html/2611.10335 2개 이상 독립 출처; 직접 URL 접근 불가)
+
 ## 2026-11-11 일일 누적 추가 출처 (2건, 루프 #147)
 
 ### 글로벌 — 프로덕션 아키텍처·노이즈강건성·커리큘럼RL·메타학습·IJCAI2026 (arXiv:2611.11771, 2026-11-09)
