@@ -1,5 +1,24 @@
 # 업데이트 로그
 
+## 2026-11-13 (일일 루프 #149)
+- **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — 2026-11-06~11-13 범위 내 신규 공개 한국 사례 미발굴 [목표 미달, 루프 #140~149 연속 10회])
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-11-13-01 | arXiv:2611.03555 — MCP Tool Poisoning in Agentic AI Frameworks: 12개 에이전트 프레임워크·18개 모델·45개 공격 시나리오 9,720셀 측정; 전체 공격 성공률 22.9%; 어떤 프레임워크도 의도적 방어 없음; AISec '26 채택 | 에이전트·툴유즈·MCP·보안·툴중독 | 03-에이전트-툴유즈-MCP.md |
+| GL-2026-11-13-02 | arXiv:2611.09232 — RAG-Enhanced LLMs for Interactive Explainability in Clinical Decision Support: MedRAG+StatPearls+MedCPT 기반 임상 의사결정 지원 RAG 설명 강화기; 출처 참조 포함; Lorenzo Mannocci 외 | 산업·의료·임상의사결정지원·설명가능성 | 04-산업별-사례.md |
+
+- **검증 결과**: 2건 5점 자가검증 전원 통과; snippet-verified 전건
+  1. **GL-2026-11-13-01 (arXiv:2611.03555, 2026-11-02)**: MCP Tool Poisoning — Farooq Shaikh, Biagio Montaruli. AISec '26 채택(ACM CCS 2026, The Hague). 오픈소스 mcpvenom 도구로 12개 프레임워크×18개 모델×45개 공격 시나리오 9,720셀 체계적 측정. 전체 성공률 22.9%; 비밀 유출 12.1%. 프레임워크 레벨 방어 부재 확인. snippet-verified: arxiv.org/abs/2611.03555 + arxiv.org/html/2611.03555 + X/Twitter @FSFG_papers + DEV Community + theemergenceforum.substack.com 2026-11-09 5개 이상 독립 출처. → `03-에이전트-툴유즈-MCP.md` GL-2026-11-11-02(PCG-RAG) 뒤에 추가.
+  2. **GL-2026-11-13-02 (arXiv:2611.09232, 2026-11-06)**: RAG in Clinical CDS — Lorenzo Mannocci, Francesca Naretto, Lucia Passaro, Anna Monreale. MedRAG+StatPearls+MedCPT 스택. 선택기 모듈 게이팅 + 출처 참조 포함 임상 설명 아키텍처. 저자 "추가 검증 필요" 명시 → 단언 없음. snippet-verified: arxiv.org/abs/2611.09232 + arxiv.org/html/2611.09232 2개 이상 독립 출처. → `04-산업별-사례.md` GL-2026-11-09-02(알고리즘 문제 풀이) 뒤에 추가.
+  3. **한국 사례 발굴 경위**: 2026-11-06~11-13 범위 내 네이버·카카오·토스·우아한형제들·LY Corp·SKT·KT·금융권·의료기관·로펌 신규 RAG 기술블로그·발표 미발굴. DEVIEW 2026 세션 미발굴. 카카오페이 "AI Agent 넌 누구냐 2"(2026-11-03) — RAG 미확인. CJ온스타일 AiON — 2025년 9월 발표(범위 외). 카사코리아 AWS 기술블로그 — 발행일 미확인·RAG 직접 활용 미확인(보류). 10+ 검색 쿼리 시도. 목표(최소 1건) 미달 — 0건 기록 (루프 #140~149 연속 10회 미달).
+
+- `sources.md`에 2개 출처 추가 (## 2026-11-13 섹션 신설, 파일 최상단)
+- `03-에이전트-툴유즈-MCP.md` GL-2026-11-13-01(MCP Tool Poisoning) 신규 항목 추가
+- `04-산업별-사례.md` GL-2026-11-13-02(RAG in Clinical CDS) 신규 항목 추가
+- **한국 사례**: 0건 (목표 1건 미달, 연속 10회)
+- **글로벌 사례**: 2건
+
 ## 2026-11-12 (일일 루프 #148)
 - **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — 2026-11-05~11-12 범위 내 신규 공개 한국 사례 미발굴 [목표 미달, 루프 #140~148 연속 9회])
 

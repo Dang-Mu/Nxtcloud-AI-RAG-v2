@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-11-13 일일 누적 추가 출처 (2건, 루프 #149)
+
+### 글로벌 — 에이전트·툴유즈·MCP·보안·툴중독·공격측정·AISec2026 (arXiv:2611.03555, 2026-11-02)
+- [arXiv:2611.03555 — MCP Tool Poisoning in Agentic AI Frameworks: A Cross-Framework Measurement Study](https://arxiv.org/abs/2611.03555) — 2026-11-02 제출 · AISec '26 (ACM CCS 2026, The Hague) · [agentic-rag][mcp][security][tool-poisoning][root-cause-taxonomy][mcpvenom][12-frameworks][18-models][45-attack-scenarios][9720-cells][22.9%-success-rate][data-exfiltration][cs.cr][cs.ai] · Farooq Shaikh, Biagio Montaruli. 12개 에이전트 프레임워크×18개 모델×45개 공격 시나리오 9,720셀 취약성 측정. 전체 성공률 22.9%; 64.9% 공격자 툴 호출, 23.0% 엔드포인트 접촉, 12.1% 비밀 유출. 오픈소스 mcpvenom. (snippet-verified: arxiv.org/abs/2611.03555 + arxiv.org/html/2611.03555 + X/Twitter @FSFG_papers + DEV Community + theemergenceforum.substack.com 5개 이상 독립 출처; 직접 URL 접근 불가)
+
+### 글로벌 — 산업·의료·임상의사결정지원·RAG설명가능성·MedRAG·StatPearls·MedCPT (arXiv:2611.09232, 2026-11-06)
+- [arXiv:2611.09232 — RAG-Enhanced LLMs for Interactive Explainability in Clinical Decision Support Systems](https://arxiv.org/abs/2611.09232) — 2026-11-06 제출 · [industry:의료][clinical-decision-support][explainability][medrag][statpearls][medcpt][selector-module][xai][interactive][source-traceability][hallucination-reduction][healthcare][cs.ai] · Lorenzo Mannocci, Francesca Naretto, Lucia Passaro, Anna Monreale. MedRAG+StatPearls+MedCPT 기반 임상 의사결정 지원 RAG 설명 강화기. 선택기 게이팅 + 출처 참조 포함으로 임상 신뢰성 향상. 추가 검증 필요(저자 명시). (snippet-verified: arxiv.org/abs/2611.09232 + arxiv.org/html/2611.09232 2개 이상 독립 출처; 직접 URL 접근 불가)
+
 ## 2026-11-12 일일 누적 추가 출처 (2건, 루프 #148)
 
 ### 글로벌 — 프로덕션 아키텍처·컨텍스트 압축·픽셀 공간·멀티모달·토큰 효율 (arXiv:2611.13675, 2026-11-10)

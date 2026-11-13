@@ -1324,6 +1324,25 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **의의**: 단일 웹 검색→생성 파이프라인의 조기 근거화 실패를 DAG 기반 점진적 추론으로 해결하는 에이전틱 RAG 아키텍처를 제시한다. 복잡한 멀티홉 웹 QA(연구 조사, 비교 질문, 다단계 추론)에서 에이전틱 검색의 정확도를 체계적으로 향상시키는 패턴이며, BrowseComp-Plus·WebWalkerQA 두 최신 웹 에이전트 벤치마크에서 동시에 선도 기준선을 초과한 점이 주목된다.
 - **출처**: [arXiv:2611.11113 — PCG-RAG: Progressive Compositional Grounding for Retrieval-Augmented Generation in Complex Web Question Answering](https://arxiv.org/abs/2611.11113) (2026-11-08 제출; snippet-verified: arxiv.org/abs/2611.11113 + arxiv.org/html/2611.11113 + arxiv.org/pdf/2611.11113 + jyyang621/DailyArXiv issue #452 4개 이상 독립 출처; 직접 URL 접근 불가 — snippet-verified)
 
+---
+
+### GL-2026-11-13-01 | MCP Tool Poisoning in Agentic AI Frameworks — 12개 에이전트 프레임워크·18개 모델·45개 공격 시나리오 9,720셀 취약성 측정; 전체 공격 성공률 22.9%; 어떤 프레임워크도 의도적 방어 없음 (arXiv:2611.03555, AISec '26)
+
+> **"MCP Tool Poisoning in Agentic AI Frameworks: A Cross-Framework Measurement Study"**
+> arXiv:2611.03555 · Farooq Shaikh, Biagio Montaruli · 2026-11-02 제출 · cs.CR·cs.AI · AISec '26 (ACM CCS 2026, The Hague)
+
+- **문제**: Model Context Protocol(MCP)이 에이전틱 AI 프레임워크의 사실상 표준으로 자리잡으면서, 공격자가 MCP 툴 설명(tool description) 텍스트에 악성 명령을 삽입하여 에이전트가 의도치 않은 외부 호출·데이터 유출을 수행하도록 유도하는 "MCP 툴 중독(tool poisoning)" 공격이 대두됐다. 그러나 이를 12개 프레임워크 이상 체계적으로 측정한 연구는 없었다.
+- **핵심 기여**:
+  - **25-클래스 근본원인 분류체계(root-cause taxonomy)**: MCP 툴 중독 공격 벡터를 25개 범주로 체계적 분류
+  - **오픈소스 도구 `mcpvenom`**: 45개 공격 시나리오를 자동화하는 측정·침투 테스트 프레임워크
+  - **9,720셀 취약성 행렬**: 12개 에이전트 프레임워크 × 18개 LLM 모델 × 45개 공격 시나리오
+- **주요 결과 (저자 보고)**:
+  - **전체 공격 성공률 22.9%** (2,113 / 9,720 셀 취약)
+  - 성공 공격의 세분화: **64.9%** 공격자 툴 호출 발생, **23.0%** 공격자 엔드포인트 접촉, **12.1%** 비밀 정보 실제 유출 (canary HTTP 수신으로 이중 확인)
+  - **어떤 테스트 프레임워크도 MCP 툴 중독에 대한 의도적 방어 메커니즘을 보유하지 않음**
+- **의의**: MCP가 에이전틱 RAG 시스템의 핵심 도구 인프라로 자리잡은 현재, 외부 MCP 서버의 툴 설명을 신뢰하는 것이 보안 취약점임을 최초 대규모 체계 측정으로 증명했다. "MCP 보안 → server allow-list, OAuth 접근 통제, enterprise MCP registry"라는 기존 대응이 불충분하며 프레임워크 레벨의 의도적 방어 설계가 필요하다는 경보를 울린다. 오픈소스 `mcpvenom`은 에이전틱 RAG 보안 평가·침투 테스트에 즉시 활용 가능하다.
+- **출처**: [arXiv:2611.03555 — MCP Tool Poisoning in Agentic AI Frameworks: A Cross-Framework Measurement Study](https://arxiv.org/abs/2611.03555) (2026-11-02 제출; AISec '26 채택(ACM CCS 2026, The Hague); snippet-verified: arxiv.org/abs/2611.03555 + arxiv.org/html/2611.03555 + X/Twitter @FSFG_papers 2026-11-09 + DEV Community dev.to/mech_app_ai + theemergenceforum.substack.com 2026-11-09 5개 이상 독립 출처; 직접 URL 접근 불가 — snippet-verified)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.
