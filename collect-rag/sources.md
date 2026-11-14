@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-11-14 일일 누적 추가 출처 (2건, 루프 #150)
+
+### 글로벌 — 프로덕션아키텍처·귀속RAG·인용품질·쿼리분해·멀티모달QA·AAAI2026 (arXiv:2611.15538, 2026-11-11)
+- [arXiv:2611.15538 — Faithful in Steps: Improving Generalization and Citation in RAG via Query Decomposition](https://arxiv.org/abs/2611.15538) — 2026-11-11 제출 · AAAI 2026 채택(arXiv 코멘트 필드) · [architecture][attributable-rag][citation-quality][query-decomposition][atomic-subquestion][qd-c][qd-r][zero-shot][over-citation][reranking][multimodal-qa][generalization][faithfulness][cs.cl][cs.ai][yue-liu][zhongying-ru][shimin-di][jipeng-zhang][ruiyuan-zhang][xiaofang-zhou] · Yue Liu, Zhongying Ru, Shimin Di, Jipeng Zhang, Ruiyuan Zhang, Xiaofang Zhou. 귀속 RAG에서 과다 인용·일반화 실패를 쿼리 원자 분해(QDRAG)로 해결. 두 가지 제로샷 분해 방법(QD-C·QD-R)과 서브질문 기반 리랭킹으로 멀티모달 QA 4벤치마크에서 인용 품질·일반화 개선. (snippet-verified: arxiv.org/abs/2611.15538 + arxiv.org/pdf/2611.15538 + arxiv.org/html/2611.15538 + arxivsignals.io/papers/2611.15538 4개 이상 독립 출처; 직접 URL 접근 불가)
+
+### 글로벌 — 에이전트·툴유즈·MCP·TREC2026·연구에이전트·하이브리드검색·에이블레이션·오픈웨이트·RMIT (arXiv:2611.16425, 2026-11-12)
+- [arXiv:2611.16425 — RMIT-ADM+S at TREC RAG 2026: Research Agents, Retriever Ablations, and Open-Weight Replication](https://arxiv.org/abs/2611.16425) — 2026-11-12 제출 · TREC 2026 RAG Track 출품 시스템 보고서 · [agentic-rag][trec-rag-2026][climbbmix][staged-evidence-ledger][retriever-ablation][hybrid-retrieval][rrf][adjacent-chunk-expansion][writer-selection][open-weight][report-generation][citation][rubric][nugget][batch-evaluation][cs.ir][oleg-zendel][kun-ran][chenglong-ma][nguyen-khoi-vo][shuai-wang][rmit] · Oleg Zendel, Kun Ran, Chenglong Ma, Nguyen Khoi Vo, Shuai Wang (RMIT University). TREC 2026 RAG 트랙 7개 에이전틱 연구 RAG 출품작 보고서. 단계적 증거 수집 아키텍처; 작성자 선택·인접 청크 확장이 품질 핵심 인자; best run Batch-1 vital coverage 0.892(트랙 최대 동률; 저자 보고); 오픈웨이트 모델 경쟁력 부분 확인. 코드: github.com/rmit-ir/trec-rag-26. (snippet-verified: arxiv.org/abs/2611.16425 + arxiv.org/html/2611.16425 + arxiv.org/pdf/2611.16425 + arxivsignals.io/papers/2611.16425 + github.com/rmit-ir/trec-rag-26 5개 이상 독립 출처; 직접 URL 접근 불가)
+
 ## 2026-11-13 일일 누적 추가 출처 (2건, 루프 #149)
 
 ### 글로벌 — 에이전트·툴유즈·MCP·보안·툴중독·공격측정·AISec2026 (arXiv:2611.03555, 2026-11-02)

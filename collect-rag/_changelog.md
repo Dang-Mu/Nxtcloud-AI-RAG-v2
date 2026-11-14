@@ -1,5 +1,24 @@
 # 업데이트 로그
 
+## 2026-11-14 (일일 루프 #150)
+- **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — 2026-11-07~11-14 범위 내 신규 공개 한국 사례 미발굴 [목표 미달, 루프 #140~150 연속 11회])
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-11-14-01 | arXiv:2611.15538 — Faithful in Steps (QDRAG): 쿼리 원자 분해 기반 귀속 RAG 인용 품질·일반화 향상; 제로샷 QD-C/QD-R + 멀티모달 컨텍스트 리랭킹; AAAI 2026 채택 | 프로덕션아키텍처·귀속RAG·인용품질·쿼리분해·멀티모달QA·AAAI2026 | 02-프로덕션-아키텍처.md |
+| GL-2026-11-14-02 | arXiv:2611.16425 — RMIT-ADM+S at TREC RAG 2026: 단계적 증거 수집 아키텍처 7개 출품; 작성자 선택·인접 청크 확장이 품질 핵심 인자; best run Batch-1 vital coverage 0.892 트랙 최대 동률; 오픈웨이트 경쟁력 부분 확인 | 에이전트·툴유즈·MCP·TREC2026·연구에이전트·하이브리드검색·에이블레이션·오픈웨이트 | 03-에이전트-툴유즈-MCP.md |
+
+- **검증 결과**: 2건 5점 자가검증 전원 통과; snippet-verified 전건
+  1. **GL-2026-11-14-01 (arXiv:2611.15538, 2026-11-11)**: QDRAG — Yue Liu, Zhongying Ru, Shimin Di, Jipeng Zhang, Ruiyuan Zhang, Xiaofang Zhou. cs.CL·cs.AI. AAAI 2026 채택(arXiv 코멘트 필드 기준). 귀속 RAG의 과다 인용·일반화 실패 문제를 원자 서브질문 분해(QDRAG)로 접근. 제로샷 QD-C(컨텍스트 기반)·QD-R(검색 보상 기반) 두 분해 방법 + 서브질문 기반 멀티모달 컨텍스트 리랭킹. 4개 멀티모달 QA 벤치마크 평가(구체 수치 미독립검증). snippet-verified: arxiv.org/abs/2611.15538 + arxiv.org/pdf/2611.15538 + arxiv.org/html/2611.15538 + arxivsignals.io/papers/2611.15538 4개 이상 독립 출처. → `02-프로덕션-아키텍처.md` GL-2026-11-12-02(Two-Sided CES) 뒤에 추가.
+  2. **GL-2026-11-14-02 (arXiv:2611.16425, 2026-11-12)**: RMIT TREC RAG 2026 — Oleg Zendel, Kun Ran, Chenglong Ma, Nguyen Khoi Vo, Shuai Wang (RMIT University). cs.IR. TREC 2026 RAG 트랙 출품 보고서. ClimbMix 코퍼스; 7개 출품작(단계적 증거 수집 아키텍처); 작성자 선택·인접 청크 확장이 품질 최대 인자; best run(brief-hybrid) Batch-1 vital coverage 0.892(트랙 최대 동률; 저자 보고); 6/7 출품작 트랙 중앙값 초과. 오픈웨이트 모델 경쟁력 부분 확인. 코드: github.com/rmit-ir/trec-rag-26. snippet-verified: arxiv.org/abs/2611.16425 + arxiv.org/html/2611.16425 + arxiv.org/pdf/2611.16425 + arxivsignals.io/papers/2611.16425 + github.com/rmit-ir/trec-rag-26 5개 이상 독립 출처. → `03-에이전트-툴유즈-MCP.md` GL-2026-11-13-01(MCP Tool Poisoning) 뒤에 추가.
+  3. **한국 사례 발굴 경위**: 2026-11-07~11-14 범위 내 네이버·카카오·토스·우아한형제들·LY Corp·SKT·KT·금융권·의료기관·로펌 신규 RAG 기술블로그·발표 미발굴. 카카오테크 최근 게시물(Kanana-2-v-decide 등) RAG 미해당. 카카오페이 블로그 11월 3일·6일 AI 에이전트 글 — RAG 직접 활용 미확인. KT클라우드 RAG 스위트 2.0 — 2026년 4월 출시(탐색 범위 외). 10+ 검색 쿼리 시도. 목표(최소 1건) 미달 — 0건 기록 (루프 #140~150 연속 11회 미달).
+
+- `sources.md`에 2개 출처 추가 (## 2026-11-14 섹션 신설, 파일 최상단)
+- `02-프로덕션-아키텍처.md` GL-2026-11-14-01(QDRAG) 신규 항목 추가
+- `03-에이전트-툴유즈-MCP.md` GL-2026-11-14-02(RMIT TREC RAG 2026) 신규 항목 추가
+- **한국 사례**: 0건 (목표 1건 미달, 연속 11회)
+- **글로벌 사례**: 2건
+
 ## 2026-11-13 (일일 루프 #149)
 - **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — 2026-11-06~11-13 범위 내 신규 공개 한국 사례 미발굴 [목표 미달, 루프 #140~149 연속 10회])
 
