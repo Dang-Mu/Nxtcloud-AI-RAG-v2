@@ -1343,6 +1343,23 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **의의**: MCP가 에이전틱 RAG 시스템의 핵심 도구 인프라로 자리잡은 현재, 외부 MCP 서버의 툴 설명을 신뢰하는 것이 보안 취약점임을 최초 대규모 체계 측정으로 증명했다. "MCP 보안 → server allow-list, OAuth 접근 통제, enterprise MCP registry"라는 기존 대응이 불충분하며 프레임워크 레벨의 의도적 방어 설계가 필요하다는 경보를 울린다. 오픈소스 `mcpvenom`은 에이전틱 RAG 보안 평가·침투 테스트에 즉시 활용 가능하다.
 - **출처**: [arXiv:2611.03555 — MCP Tool Poisoning in Agentic AI Frameworks: A Cross-Framework Measurement Study](https://arxiv.org/abs/2611.03555) (2026-11-02 제출; AISec '26 채택(ACM CCS 2026, The Hague); snippet-verified: arxiv.org/abs/2611.03555 + arxiv.org/html/2611.03555 + X/Twitter @FSFG_papers 2026-11-09 + DEV Community dev.to/mech_app_ai + theemergenceforum.substack.com 2026-11-09 5개 이상 독립 출처; 직접 URL 접근 불가 — snippet-verified)
 
+---
+
+### GL-2026-11-14-02 | RMIT-ADM+S at TREC RAG 2026 — 연구 에이전트 기반 RAG 시스템 7개 출품; 하이브리드 검색·인접 청크 확장·오픈웨이트 모델의 실제 성능 비교 (arXiv:2611.16425, TREC 2026)
+
+> **"RMIT-ADM+S at TREC RAG 2026: Research Agents, Retriever Ablations, and Open-Weight Replication"**
+> arXiv:2611.16425 · Oleg Zendel, Kun Ran, Chenglong Ma, Nguyen Khoi Vo, Shuai Wang (RMIT University)
+> 2026-11-12 제출 · cs.IR · TREC 2026 RAG Track 출품 시스템 보고서
+
+- **배경**: TREC 2026 RAG 트랙은 ClimbMix 코퍼스 위에서 연구 에이전트가 출처 인용 포함 장문 보고서를 자동 생성하는 과제다. RMIT-ADM+S 팀은 7개 출품작(5가지 단계적 증거 수집 연구 아키텍처)을 제출하며 고유 모델·검색 방법·계획 단계·리뷰 메커니즘의 조합 효과를 체계적으로 비교했다.
+- **핵심 아키텍처**: 단계적 증거 수집(staged evidence ledger) — 에이전트가 검색 청크를 선택·보유하며 보고서를 생성하는 공유 증거 원장 구조. 7개 출품작 모두 이 아키텍처를 공유하고, 차이점(모델·검색 전략·인접 청크 확장 여부·리뷰 단계)으로 에이블레이션을 진행.
+- **주요 발견 (저자 보고)**:
+  - **작성자 모델 선택**과 **인접 청크 확장(adjacent-chunk expansion)**이 답변 품질에 가장 큰 영향을 미침. 단, 인접 청크 확장의 효과는 작성자 모델에 의존적.
+  - **best run(brief-hybrid)**: Batch-1 vital coverage 0.892로 트랙 최대치 동률(저자 보고). 7개 출품작 중 6개가 세 rubric/nugget 컬렉션 모두에서 트랙 중앙값 초과.
+  - **오픈웨이트 에이전트**: 일부 측정 지표에서 경쟁력 있으나 선도 독점 모델과의 커버리지 격차는 일관되지 않음.
+- **의의**: TREC RAG 2026에서 에이전틱 연구 RAG 시스템의 실제 운영 성능을 공식 평가한 1차 자료. 하이브리드 검색(RRF 포함)이 순수 dense 검색 대비 우위임을 실증하고, 오픈웨이트 모델의 실용 가능성과 한계를 동시에 확인했다는 점에서 프로덕션 에이전틱 RAG 설계 참조 사례로 가치 있다. 코드: [github.com/rmit-ir/trec-rag-26](https://github.com/rmit-ir/trec-rag-26).
+- **출처**: [arXiv:2611.16425 — RMIT-ADM+S at TREC RAG 2026: Research Agents, Retriever Ablations, and Open-Weight Replication](https://arxiv.org/abs/2611.16425) (2026-11-12 제출; snippet-verified: arxiv.org/abs/2611.16425 + arxiv.org/html/2611.16425 + arxiv.org/pdf/2611.16425 + arxivsignals.io/papers/2611.16425 + github.com/rmit-ir/trec-rag-26 5개 이상 독립 출처; 직접 URL 접근 불가 — snippet-verified)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.
