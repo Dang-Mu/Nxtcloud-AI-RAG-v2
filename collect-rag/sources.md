@@ -1,5 +1,10 @@
 # 출처 목록
 
+## 2026-11-15 일일 누적 추가 출처 (1건, 루프 #151)
+
+### 글로벌 — 프로덕션아키텍처·세밀증거선택·결정모델·컨텍스트예산·스팬선택 (arXiv:2611.16366, 2026-11-12)
+- [arXiv:2611.16366 — CURATOR: Scalable Fine-grained Evidence Selection for Retrieval-Augmented Generation using Decision Models](https://arxiv.org/abs/2611.16366) — 2026-11-12 제출 · [architecture][evidence-selection][span-level][decision-model][scalable][context-budget][joint-decision][fine-grained][pplx-decider-flash-v1.2][qwen3.5-4b][musique][multihiertt][cross-domain][shib-dasgupta][bandish-parikh][rashmi-gangadharaiah][cs.cl] · Shib Dasgupta, Bandish Parikh, Rashmi Gangadharaiah. 패시지 단위를 넘어 증거 스팬 단위로 RAG 컨텍스트를 세밀하게 선택하는 결정 모델 기반 프레임워크. pplx-decider-flash-v1.2(Qwen3.5-4B 기반)를 파인튜닝해 후보 풀 확장에도 정확도 하락 없이 공동 결정 유지. 컨텍스트 예산 제약 시 하위 RAG 성능 향상 폭 증가. MuSiQue·MultiHiertt 평가. (snippet-verified: arxiv.org/abs/2611.16366 + arxiv.org/pdf/2611.16366 + arxiv.org/html/2611.16366 + arxivsignals.io/papers/2611.16366 4개 이상 독립 출처; 직접 URL 접근 불가)
+
 ## 2026-11-14 일일 누적 추가 출처 (2건, 루프 #150)
 
 ### 글로벌 — 프로덕션아키텍처·귀속RAG·인용품질·쿼리분해·멀티모달QA·AAAI2026 (arXiv:2611.15538, 2026-11-11)
