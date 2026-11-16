@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-11-16 일일 누적 추가 출처 (2건, 루프 #152)
+
+### 글로벌 — 과학·학술·의료·ECG·임상RAG품질·검증기반검색제한 (arXiv:2611.01409, 2026-11-01)
+- [arXiv:2611.01409 — RAG-TRACE: Tracing Measurement Evidence and Diagnostic Completeness in AI-Generated ECG Reports](https://arxiv.org/abs/2611.01409) — 2026-11-01 제출 · cs.CL · [medical][ecg][rag-quality][measurement-verification][diagnostic-completeness][retrieval-scoping][testable-criteria][ptb-xl][marquette-12sl][gpt-4.1-mini][qwen3-8b][uni-g][elyas-irankhah][shahed-salehzehi][parisa-hosseini] · Elyas Irankhah, Shahed Salehzehi, Parisa Hosseini. AI 생성 ECG 보고서에서 RAG 검색 기준의 측정 근거 추적. GPT-4.1-mini 46.8%→14개 검증 가능 기준 제한 시 13.8%. PTB-XL 1,083명, Marquette 12SL 결정론적 검증. 코드: github.com/Elyasirankhah/RAG-TRACE. (snippet-verified: arxiv.org/abs/2611.01409 + arxiv.org/html/2611.01409 + github.com/Elyasirankhah/RAG-TRACE 3개 이상 독립 출처; 직접 URL 접근 불가)
+
+### 글로벌 — 과학·학술·의료·EHR·약물예측·집단사전·ICML2026 (arXiv:2611.17341, ICML 2026)
+- [arXiv:2611.17341 — Tabular Population Priors as Structured Retrieval for EHR Medication Set Prediction](https://arxiv.org/abs/2611.17341) — ICML 2026 (icml.cc/virtual/2026/71731) · [medical][ehr][medication-set-prediction][structured-retrieval][tabular-population-prior][condition-medication-cooccurrence][fixed-vocabulary][pace-rag][mimic-iv][drop-in][auditable][icml2026][저자미확인] · 저자 미확인. EHR 약물 집합 예측에서 환자 단위 최근접이웃 대신 조건-약물 동시출현 테이블 기반 집단 사전으로 PACE-RAG 검색 소스 교체. F1 0.303→0.338(+11.5%), Jaccard 0.218→0.237, MIMIC-IV 1,004건. (snippet-verified: arxiv.org/pdf/2611.17341 + icml.cc/virtual/2026/71731 2개 이상 독립 출처; 직접 URL 접근 불가)
+
 ## 2026-11-15 일일 누적 추가 출처 (1건, 루프 #151)
 
 ### 글로벌 — 프로덕션아키텍처·세밀증거선택·결정모델·컨텍스트예산·스팬선택 (arXiv:2611.16366, 2026-11-12)

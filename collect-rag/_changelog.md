@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-11-16 (일일 루프 #152)
+- **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — 2026-11-09~11-16 범위 내 신규 공개 한국 사례 미발굴 [목표 미달, 루프 #140~152 연속 13회])
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-11-16-01 | arXiv:2611.01409 — RAG-TRACE: AI 생성 ECG 보고서의 RAG 기준 측정증거 추적; GPT-4.1-mini 46.8% 미지원 → 14개 검증 가능 기준 제한 시 13.8%; PTB-XL 1,083명; Elyas Irankhah·Shahed Salehzehi·Parisa Hosseini | 과학·학술·의료·ECG·임상RAG품질·검증기반검색제한 | 04-산업별-사례.md |
+| GL-2026-11-16-02 | arXiv:2611.17341 — Tabular Population Priors (ICML 2026): EHR 약물 집합 예측 구조화 RAG; 조건-약물 동시출현 테이블 집단 사전 검색으로 PACE-RAG 대비 F1 +11.5%(0.303→0.338), Jaccard 0.218→0.237; MIMIC-IV 1,004건 | 과학·학술·의료·EHR·약물예측·집단사전·ICML2026 | 04-산업별-사례.md |
+
+- **검증 결과**: 2건 5점 자가검증 전원 통과; snippet-verified 전건
+  1. **GL-2026-11-16-01 (arXiv:2611.01409, 2026-11-01)**: RAG-TRACE — Elyas Irankhah, Shahed Salehzehi, Parisa Hosseini. cs.CL. PTB-XL 1,083명 환자 ECG, Marquette 12SL 결정론적 검증. GPT-4.1-mini RAG 보고서 46.8%가 측정 불일치·검증 불가 기준 포함. 14개 검증 가능 기준으로 검색 범위 제한 시 13.8%로 감소. Qwen3-8B 모델 특이적 실패 패턴. 코드: github.com/Elyasirankhah/RAG-TRACE. snippet-verified: arxiv.org/abs/2611.01409 + arxiv.org/html/2611.01409 + github.com/Elyasirankhah/RAG-TRACE 3개 이상 독립 출처. → `04-산업별-사례.md` GL-2026-11-13-02(임상 CDS) 뒤에 추가.
+  2. **GL-2026-11-16-02 (arXiv:2611.17341, ICML 2026)**: Tabular Population Priors — 저자 미확인(ICML 2026 virtual listing arXiv URL에서 존재 확인; 세부 접근 불가). EHR 약물 집합 예측을 고정 어휘 구조화 예측으로 재정의. 조건-약물 동시출현 테이블 기반 집단 사전으로 PACE-RAG 검색 소스 교체 → F1 0.303→0.338(+11.5%), Jaccard 0.218→0.237. MIMIC-IV 1,004건 홀드아웃. snippet-verified: arxiv.org/pdf/2611.17341 + icml.cc/virtual/2026/71731 2개 이상 독립 출처. → `04-산업별-사례.md` GL-2026-11-16-01(RAG-TRACE) 뒤에 추가.
+  3. **한국 사례 발굴 경위**: 2026-11-09~11-16 범위 내 네이버·카카오·토스·우아한형제들·LY Corp·SKT·KT·금융권·의료기관·로펌 신규 RAG 발표 미발굴. 우아한형제들 블로그(techblog.woowahan.com) 403 차단. velopers.kr 검색 결과 한국 RAG 11월 사례 미발굴. 10+ 검색 쿼리 시도. 목표(최소 1건) 미달 — 0건 기록 (루프 #140~152 연속 13회 미달).
+
+- `sources.md`에 2개 출처 추가 (## 2026-11-16 섹션 신설, 파일 최상단)
+- `04-산업별-사례.md` GL-2026-11-16-01(RAG-TRACE), GL-2026-11-16-02(Tabular Population Priors) 신규 항목 추가
+- **한국 사례**: 0건 (목표 1건 미달, 연속 13회)
+- **글로벌 사례**: 2건
+
 ## 2026-11-15 (일일 루프 #151)
 - **신규 사례 1건** (WebFetch 직접 접근 불가, snippet-verified; 한국 사례: 0건 — 2026-11-08~11-15 범위 내 신규 공개 한국 사례 미발굴 [목표 미달, 루프 #140~151 연속 12회])
 
