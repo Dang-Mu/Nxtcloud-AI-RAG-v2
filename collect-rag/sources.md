@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-11-17 일일 누적 추가 출처 (2건, 루프 #153)
+
+### 글로벌 — 에이전트·쿼리재작성·블랙박스최적화·FGO (arXiv:2611.17788, 2026-11-13)
+- [arXiv:2611.17788 — RAG-FGO: Dynamic Optimization of Query-Rewriting Agents for Generative RAG](https://arxiv.org/abs/2611.17788) — 2026-11-13 제출 · cs.CL · [agentic-rag][query-rewriting][black-box-optimization][fungal-growth-optimizer][fgo][prompt-template][decoding-parameter][global-exploration][local-refinement][closed-source][api-rag][qigan-sun][cs.cl] · Qigan Sun 외 11인. 쿼리 재작성을 블랙박스 최적화 문제로 재정의하고 FGO 알고리즘으로 프롬프트 템플릿·디코딩 파라미터를 동시 최적화. 전역 탐색과 국소 정제 균형. 12페이지, 6그림, 8표(구체 수치 미독립검증). (snippet-verified: arxiv.org/abs/2611.17788 + arxiv.org/html/2611.17788 + arxiv.org/pdf/2611.17788 + github.com/Ep11phany/DailyArXiv/issues/407 4개 이상 독립 출처; 직접 URL 접근 불가)
+
+### 글로벌 — 프로덕션아키텍처·KV캐시재사용·오프라인RAG·배치추론·MLSys2026 (arXiv:2611.19253, 2026-11-14)
+- [arXiv:2611.19253 — KaleidoKV: Rearranging Evidence for Efficient KV Cache Reuse in Offline RAG Inference](https://arxiv.org/abs/2611.19253) — 2026-11-14 제출 · cs.DB · MLSys 8 (2026) 채택 · [architecture][offline-rag][kv-cache-reuse][evidence-rearrangement][batch-inference][throughput][scheduling][non-invasive][context-pilot][4-qa-datasets][4-llms][peiting-xie][mlsys2026] · Peiting Xie 외 5인. 오프라인 배치 RAG 추론에서 검색 증거 출현 순서를 사전 계획해 KV 캐시 프리픽스 공유 최대화. ContextPilot 대비 1.24–1.75배 처리량 향상(저자 보고). 모델·파이프라인 무수정 비침습 적용 가능. (snippet-verified: arxiv.org/abs/2611.19253 + arxiv.org/html/2611.19253 + arxiv.org/pdf/2611.19253 + github.com/Ep11phany/DailyArXiv/issues/407 4개 이상 독립 출처; 직접 URL 접근 불가)
+
 ## 2026-11-16 일일 누적 추가 출처 (2건, 루프 #152)
 
 ### 글로벌 — 과학·학술·의료·ECG·임상RAG품질·검증기반검색제한 (arXiv:2611.01409, 2026-11-01)

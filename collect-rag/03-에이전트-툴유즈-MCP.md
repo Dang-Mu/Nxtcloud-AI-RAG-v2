@@ -1360,6 +1360,20 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **의의**: TREC RAG 2026에서 에이전틱 연구 RAG 시스템의 실제 운영 성능을 공식 평가한 1차 자료. 하이브리드 검색(RRF 포함)이 순수 dense 검색 대비 우위임을 실증하고, 오픈웨이트 모델의 실용 가능성과 한계를 동시에 확인했다는 점에서 프로덕션 에이전틱 RAG 설계 참조 사례로 가치 있다. 코드: [github.com/rmit-ir/trec-rag-26](https://github.com/rmit-ir/trec-rag-26).
 - **출처**: [arXiv:2611.16425 — RMIT-ADM+S at TREC RAG 2026: Research Agents, Retriever Ablations, and Open-Weight Replication](https://arxiv.org/abs/2611.16425) (2026-11-12 제출; snippet-verified: arxiv.org/abs/2611.16425 + arxiv.org/html/2611.16425 + arxiv.org/pdf/2611.16425 + arxivsignals.io/papers/2611.16425 + github.com/rmit-ir/trec-rag-26 5개 이상 독립 출처; 직접 URL 접근 불가 — snippet-verified)
 
+### GL-2026-11-17-01 | RAG-FGO — 쿼리 재작성 에이전트를 블랙박스 최적화로 동적 개선: 프롬프트 템플릿·디코딩 파라미터 동시 탐색 (arXiv:2611.17788, 2026-11-13)
+
+> **"RAG-FGO: Dynamic Optimization of Query-Rewriting Agents for Generative RAG"**
+> arXiv:2611.17788 · Qigan Sun 외 11인
+> 2026-11-13 제출 · cs.CL
+
+- **문제**: 생성형 RAG에서 쿼리 재작성(query rewriting)은 검색 품질을 크게 좌우하지만, 프롬프트 템플릿과 디코딩 파라미터를 수동으로 튜닝하는 것은 비용이 높고 최적 조합을 찾기 어렵다. 기존 접근법은 대부분 화이트박스(기울기 접근 가능) 가정에 기반하거나 개별 파라미터만 최적화해 전체적 조합 탐색에 한계가 있다.
+- **핵심 기여 — RAG-FGO(Fungal Growth Optimizer 적용)**:
+  - **블랙박스 최적화**: 쿼리 재작성을 목적 함수 평가만 가능한 블랙박스 최적화 문제로 재정의해, 모델 내부 접근 없이 프롬프트 템플릿과 디코딩 파라미터를 동시에 최적화.
+  - **FGO 기반 탐색**: 균류 성장 최적화(Fungal Growth Optimizer) 알고리즘을 적용해 전역 탐색(global exploration)과 국소 정제(local refinement)를 균형 있게 수행 — 단순 무작위 탐색이나 그리디 방법 대비 탐색 효율 향상.
+- **결과**: 12페이지, 6개 그림, 8개 표의 충분한 실험 체계(구체 수치 미독립검증; 저자 보고).
+- **의의**: 화이트박스 접근이 불가능한 상용 RAG API·클로즈드 소스 모델 환경에서도 쿼리 재작성 에이전트를 체계적으로 개선할 수 있는 블랙박스 최적화 경로를 제시한다. 프롬프트 엔지니어링을 자동화하는 AutoPrompt·OPRO 흐름과 연결되며, 실무 RAG 파이프라인에서 쿼리 재작성 모듈의 반복적 개선에 적용 가능.
+- **출처**: [arXiv:2611.17788 — RAG-FGO: Dynamic Optimization of Query-Rewriting Agents for Generative RAG](https://arxiv.org/abs/2611.17788) (2026-11-13 제출; snippet-verified: arxiv.org/abs/2611.17788 + arxiv.org/html/2611.17788 + arxiv.org/pdf/2611.17788 + github.com/Ep11phany/DailyArXiv/issues/407 4개 이상 독립 출처; 직접 URL 접근 불가 — snippet-verified)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.
