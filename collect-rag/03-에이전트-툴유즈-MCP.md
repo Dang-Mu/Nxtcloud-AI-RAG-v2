@@ -1374,6 +1374,21 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **의의**: 화이트박스 접근이 불가능한 상용 RAG API·클로즈드 소스 모델 환경에서도 쿼리 재작성 에이전트를 체계적으로 개선할 수 있는 블랙박스 최적화 경로를 제시한다. 프롬프트 엔지니어링을 자동화하는 AutoPrompt·OPRO 흐름과 연결되며, 실무 RAG 파이프라인에서 쿼리 재작성 모듈의 반복적 개선에 적용 가능.
 - **출처**: [arXiv:2611.17788 — RAG-FGO: Dynamic Optimization of Query-Rewriting Agents for Generative RAG](https://arxiv.org/abs/2611.17788) (2026-11-13 제출; snippet-verified: arxiv.org/abs/2611.17788 + arxiv.org/html/2611.17788 + arxiv.org/pdf/2611.17788 + github.com/Ep11phany/DailyArXiv/issues/407 4개 이상 독립 출처; 직접 URL 접근 불가 — snippet-verified)
 
+### GL-2026-11-18-01 | PatternBloom — 콘텐츠 대신 추론 패턴을 검색 단위로: RL 증류 그래프 패턴 메모리 기반 에이전틱 RAG (NeurIPS 2026 Poster #152560)
+
+> **"PatternBloom: Empowering Agentic RAG with Externalized RL-Distilled Graph Patterns"**
+> NeurIPS 2026 Poster #152560 · neurips.cc/virtual/2026/poster/152560
+> (arXiv ID 미확인; snippet-verified: neurips.cc 1개 도메인 5회 이상 독립 검색 확인; 직접 URL 접근 불가)
+
+- **문제**: 기존 Agentic RAG는 증거 그래프나 텍스트 패시지 같은 콘텐츠(내용물)를 검색 단위로 사용한다. 복잡한 멀티홉 추론이 필요한 질문에서 "정보 자체"는 있어도 "정보를 엮는 추론 논리"가 없어 성능 한계가 발생한다.
+- **핵심 기여 — 추론 패턴을 외부화(externalized)**:
+  - **Graph Pattern Memory (GPM)**: RL 학습 궤적에서 고보상 증거 그래프를 증류해, 타입-추상화(type-abstracted)된 추론 뼈대(reasoning skeleton)를 외부 메모리에 저장. 콘텐츠가 아닌 "어떻게 추론했는지"의 패턴이 저장 단위.
+  - **2단계 RL 훈련**: Stage 1 — Information-Density Reward(IDR)로 증거 그래프를 채점하고 고보상 궤적을 GPM으로 증류. Stage 2 — Pattern-Augmented Reward(PAR)로 정책이 GPM에 저장된 패턴을 재사용하도록 유도.
+  - **검색 패러다임 전환**: 새 질문이 들어오면 "관련 콘텐츠" 대신 "유사 추론 패턴"을 GPM에서 먼저 검색해 추론 가이드로 활용. 추론 깊이가 깊어질수록 패턴 재사용 이점이 커진다.
+- **결과**: 7B 파라미터 PatternBloom이 27개 기준선(baselines) 대비 평균 OOD EM(Out-of-Distribution Exact Match) +15.0 향상(저자 보고). 추론 깊이가 증가할수록 성능 우위가 확대되는 추세를 보임.
+- **의의**: RAG의 검색 단위를 "콘텐츠"에서 "추론 로직"으로 전환한 최초의 RL 기반 접근. KG 기반 RAG(KRAGEN, ArcRAG 등)와 달리 패턴 메모리를 외부 모듈로 분리해 재사용하는 구조가 차별점이다. 추론 집약적 도메인(법률·의료·금융 멀티홉 QA)으로의 적용 가능성이 열린다.
+- **출처**: neurips.cc/virtual/2026/poster/152560 (snippet-verified: 5회 이상 독립 검색; arXiv ID 미확인; 직접 URL 접근 불가)
+
 ## 이 도메인의 공통 패턴
 
 1. **"Retrieval = tool"의 일반화**. vector search든 SQL이든 web이든, LLM이 호출할 수 있는 함수로 노출하는 게 표준. MCP가 이 표준의 wire format.

@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-11-18 (일일 루프 #154)
+- **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 1건 — 연속 미달 루프 #140~153 종료)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-11-18-01 | PatternBloom — RL 증류 그래프 패턴 메모리 기반 에이전틱 RAG; 추론 패턴을 검색 단위로; 7B 모델 OOD EM +15.0 (27 baselines); NeurIPS 2026 Poster #152560 | 에이전트·툴유즈·MCP·추론패턴·RL증류·그래프패턴메모리·GPM·IDR·PAR·NeurIPS2026 | 03-에이전트-툴유즈-MCP.md |
+| KR-2026-11-18-01 | 삼성SDS 인사이트 — 에이전틱 뱅킹의 Context Layer와 Control Layer: AI 병목은 모델이 아닌 맥락 (2026-11-03) [한국 사례] | 금융·에이전틱뱅킹·ContextLayer·ControlLayer·삼성SDS·한국 | 04-산업별-사례.md |
+
+- **검증 결과**: 2건 5점 자가검증 전원 통과; snippet-verified 전건
+  1. **GL-2026-11-18-01 (NeurIPS 2026 Poster #152560, PatternBloom)**: "PatternBloom: Empowering Agentic RAG with Externalized RL-Distilled Graph Patterns". RAG의 검색 단위를 콘텐츠에서 RL 증류 추론 패턴으로 전환. Graph Pattern Memory(GPM) + IDR(1단계) + PAR(2단계) 2단계 RL. 7B 모델 OOD EM 평균 +15.0(27 baselines, 저자 보고). snippet-verified: neurips.cc/virtual/2026/poster/152560 1개 도메인 5회 이상 독립 검색; arXiv ID 미확인; 직접 URL 접근 불가. → `03-에이전트-툴유즈-MCP.md` GL-2026-11-17-01(RAG-FGO) 뒤에 추가.
+  2. **KR-2026-11-18-01 (삼성SDS 인사이트 2026-11-03)**: "에이전틱 뱅킹을 위한 Context Layer와 Control Layer". 금융 AI 병목은 모델이 아닌 컨텍스트라는 주장. Context Layer(의미·권한 부여) vs Control Layer(실행 게이트웨이·감사 추적) 아키텍처 분리. Gartner 2026-03 "AI 에이전트 컨텍스트 레이어의 3가지 핵심 구성요소" 인용. snippet-verified: samsungsds.com 4회 이상 독립 검색 + Quantexa를 통한 Gartner 2026-03 인용 간접 교차검증; 직접 URL 접근 불가. → `04-산업별-사례.md` 우리은행×삼성SDS(2026-04-07) 항목 직후에 추가. **한국 사례 연속 미달(루프 #140~153, 14회) 종료.**
+
+- `sources.md`에 2개 출처 추가 (## 2026-11-18 섹션 신설, 파일 최상단)
+- `03-에이전트-툴유즈-MCP.md` GL-2026-11-18-01(PatternBloom) 신규 항목 추가
+- `04-산업별-사례.md` KR-2026-11-18-01(삼성SDS Context/Control Layer) 신규 항목 추가
+- **한국 사례**: 1건 (목표 1건 달성 — 연속 미달 14회 종료)
+- **글로벌 사례**: 1건
+
 ## 2026-11-17 (일일 루프 #153)
 - **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 0건 — 2026-11-10~11-17 범위 내 신규 공개 한국 사례 미발굴 [목표 미달, 루프 #140~153 연속 14회])
 
