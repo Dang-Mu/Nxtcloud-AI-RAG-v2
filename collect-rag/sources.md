@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-11-18 일일 누적 추가 출처 (2건, 루프 #154)
+
+### 글로벌 — 에이전트·툴유즈·MCP·추론패턴·RL증류·그래프패턴메모리·GPM·IDR·PAR·NeurIPS2026 (NeurIPS 2026 Poster #152560)
+- neurips.cc/virtual/2026/poster/152560 — PatternBloom: Empowering Agentic RAG with Externalized RL-Distilled Graph Patterns · NeurIPS 2026 Poster #152560 · [agentic-rag][reasoning-pattern][externalized-memory][rl-distillation][graph-pattern-memory][gpm][information-density-reward][idr][pattern-augmented-reward][par][type-abstracted][retrieval-unit][ood-em][27-baselines][7b-model][neurips2026] · RAG 검색 단위를 콘텐츠에서 RL 증류 추론 패턴으로 전환. 2단계 RL: Stage 1 IDR로 증거 그래프 채점·GPM 증류, Stage 2 PAR로 패턴 재사용 유도. 7B 모델 OOD EM +15.0(27 baselines, 저자 보고). (snippet-verified: neurips.cc 1개 도메인 5회 이상 독립 검색; arXiv ID 미확인; 직접 URL 접근 불가)
+
+### 한국 — 금융·에이전틱뱅킹·ContextLayer·ControlLayer·삼성SDS (삼성SDS 인사이트 2026-11-03)
+- samsungsds.com/kr/insights/context-layer-and-control-layer-for-agentic-banking.html — 삼성SDS 인사이트 "에이전틱 뱅킹을 위한 Context Layer와 Control Layer" · 2026-11-03 · [korean][financial][agentic-banking][context-layer][control-layer][rag][semantics][permissions][audit-trail][gartner-2026-03][samsung-sds][fabrix][enterprise] · 금융 AI 병목은 모델이 아닌 컨텍스트. Context Layer(의미·권한 부여)와 Control Layer(실행 게이트웨이·감사 추적) 분리 아키텍처. Gartner 2026-03 "AI 에이전트 컨텍스트 레이어의 3가지 핵심 구성요소" 인용. (snippet-verified: samsungsds.com 4회 이상 독립 검색 + Quantexa 통한 Gartner 2026-03 간접 교차검증; 직접 URL 접근 불가)
+
 ## 2026-11-17 일일 누적 추가 출처 (2건, 루프 #153)
 
 ### 글로벌 — 에이전트·쿼리재작성·블랙박스최적화·FGO (arXiv:2611.17788, 2026-11-13)
