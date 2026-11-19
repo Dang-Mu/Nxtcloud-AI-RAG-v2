@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-11-19 일일 누적 추가 출처 (2건, 루프 #155)
+
+### 글로벌 — 프로덕션아키텍처·레거시시스템·소급적용·침습성정량화·사이드카·SDK임베드·아키텍처패턴 (arXiv:2611.23931, 2026-11-18)
+- [arXiv:2611.23931 — Quantifying the Intrusiveness of Retrofitting Retrieval-Augmented Generation onto Legacy Software Systems](https://arxiv.org/abs/2611.23931) — 2026-11-18 제출 · cs.SE · [architecture][legacy-systems][rag-retrofitting][intrusiveness][sidecar][sdk-embed][naive-invasive][inline-http][latency][staleness][silent-failure][enterprise][tahlil-mahfuz-faruk][rakib-abdullah] · K. M. Tahlil Mahfuz Faruk, Rakib Abdullah. 레거시 소프트웨어 시스템에 RAG 소급 적용 시 침습성을 사이드카(무감지 지연)·SDK임베드(475–569 ms 추가)·나이브-인바시브(475–569 ms 추가, RAG 부하 시 레거시 1.5배 저하, 무음 소실) 3패턴으로 정량화. 코드: github.com/TahlilMahfuz. (snippet-verified: arxiv.org/abs/2611.23931 + arxiv.org/html/2611.23931 + arxiv.org/pdf/2611.23931 + arxivsignals.io/papers/2611.23931 4개 이상 독립 출처; 직접 URL 접근 불가)
+
+### 글로벌 — 산업별사례·커머스·가짜리뷰탐지·하이브리드RAG·RoBERTa-LoRA·FAISS·Llama3.1·이커머스 (arXiv:2611.24049, 2026-11-18)
+- [arXiv:2611.24049 — A Hybrid RAG Framework for Deceptive Review Detection: Integrating RoBERTa-LoRA, FAISS-Based Retrieval, and LLM Reasoning](https://arxiv.org/abs/2611.24049) — 2026-11-18 제출 · cs.CL · [commerce][deceptive-review-detection][hybrid-rag][roberta-lora][faiss][llama-3.1][explainability][precision][balanced][imbalanced][yelp][andrei-kostin][jose-angel-diaz-garcia][karel-gutierrez-batista] · Andrei Kostin, José Ángel Diaz-Garcia, Karel Gutiérrez-Batista. RoBERTa-LoRA 1차 분류기 + FAISS 유사 리뷰 검색(유사도 점수+텍스트 반환) + Llama 3.1 최종 판정·설명 3단 하이브리드 RAG. Yelp 가짜 리뷰 데이터셋 균형·불균형 두 시나리오에서 통계적 유의 정밀도 향상(저자 보고). (snippet-verified: arxiv.org/abs/2611.24049 + arxiv.org/pdf/2611.24049 + arxiv.org/html/2611.24049 + arxiv.org/list/cs.CL/new + arxivsignals.io/papers/2611.24049 5개 이상 독립 출처; 직접 URL 접근 불가)
+
 ## 2026-11-18 일일 누적 추가 출처 (2건, 루프 #154)
 
 ### 글로벌 — 에이전트·툴유즈·MCP·추론패턴·RL증류·그래프패턴메모리·GPM·IDR·PAR·NeurIPS2026 (NeurIPS 2026 Poster #152560)
