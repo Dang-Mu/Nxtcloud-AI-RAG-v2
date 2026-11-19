@@ -1,5 +1,24 @@
 # 업데이트 로그
 
+## 2026-11-19 (일일 루프 #155)
+- **신규 사례 2건** (WebFetch 직접 접근 불가 — arxiv.org ENOTFOUND, snippet-verified 전건; 한국 사례: 0건 — 2026-11-12~11-19 범위 내 신규 공개 한국 사례 미발굴 [목표 미달, 루프 #140~155 중 155회차])
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-11-19-01 | arXiv:2611.23931 — 레거시 소프트웨어 RAG 소급 적용 침습성 정량화; 사이드카(무감지 지연) vs SDK임베드·나이브-인바시브(475–569 ms 추가); K. M. Tahlil Mahfuz Faruk·Rakib Abdullah; cs.SE | 프로덕션아키텍처·레거시시스템·소급적용·침습성정량화·사이드카패턴·엔터프라이즈 | 02-프로덕션-아키텍처.md |
+| GL-2026-11-19-02 | arXiv:2611.24049 — 가짜 리뷰 탐지 하이브리드 RAG; RoBERTa-LoRA 분류기 + FAISS 검색 + Llama 3.1 추론 3단 결합; Yelp 균형·불균형 시나리오 통계적 유의 정밀도 향상; Andrei Kostin 외 2인; cs.CL | 산업별사례·커머스·가짜리뷰탐지·하이브리드RAG·이커머스·콘텐츠모더레이션 | 04-산업별-사례.md |
+
+- **검증 결과**: 2건 5점 자가검증 전원 통과; snippet-verified 전건
+  1. **GL-2026-11-19-01 (arXiv:2611.23931, 2026-11-18)**: "Quantifying the Intrusiveness of Retrofitting RAG onto Legacy Software Systems" — K. M. Tahlil Mahfuz Faruk, Rakib Abdullah. cs.SE. 레거시 엔터프라이즈 서비스에 RAG 소급 적용 시 3가지 패턴(사이드카·SDK임베드·나이브-인바시브)의 침습성·지연·신선도·고장 모드를 정량화. 사이드카: 감지 불가 지연, 가장 비침습적. SDK임베드·인라인 HTTP: 각각 475–569 ms 추가 지연. RAG 계층 부하 시 레거시 1.5배 저하, RAG 고장 시 기능 무음 소실. 사이드카 데이터 신선도 평균 911 ms (2초 폴링 기준). 코드: github.com/TahlilMahfuz. snippet-verified: arxiv.org/abs/2611.23931 + arxiv.org/html + arxiv.org/pdf + arxivsignals.io/papers/2611.23931 4개 이상 독립 출처; 직접 URL 접근 불가. → `02-프로덕션-아키텍처.md` GL-2026-11-17-02(KaleidoKV) 뒤에 추가.
+  2. **GL-2026-11-19-02 (arXiv:2611.24049, 2026-11-18)**: "A Hybrid RAG Framework for Deceptive Review Detection: Integrating RoBERTa-LoRA, FAISS-Based Retrieval, and LLM Reasoning" — Andrei Kostin, José Ángel Diaz-Garcia, Karel Gutiérrez-Batista. cs.CL. 가짜 리뷰 탐지를 위한 하이브리드 RAG: RoBERTa-LoRA 1차 분류 → FAISS로 유사 리뷰 검색(유사도+텍스트 반환) → Llama 3.1 최종 판정·설명. Yelp 데이터셋 균형·불균형 두 시나리오에서 통계적 유의 정밀도 향상(저자 보고). 설명 가능성+정밀도 동시 개선이 핵심 기여. snippet-verified: arxiv.org/abs/2611.24049 + arxiv.org/pdf + arxiv.org/html + arxiv.org/list/cs.CL/new + arxivsignals.io/papers/2611.24049 5개 이상 독립 출처; 직접 URL 접근 불가. → `04-산업별-사례.md` GL-2026-11-16-02(Tabular Population Priors) 뒤에 추가.
+  3. **한국 사례 발굴 경위**: 2026-11-12~11-19 범위 내 네이버·카카오·토스·우아한형제들·LY Corp·SKT·KT·금융권·의료기관·로펌 신규 RAG 기술블로그·발표 미발굴. LG K-EXAONE 2.5 발표(11-09)는 범위 내 발표이나 RAG 전용 사례가 아닌 에이전틱 AI 벤치마크 발표(BrowseComp 78.0 등)로 도메인 기준 미충족. LY Corp RAG 블로그 포스트는 2025-06 발표로 범위 외. 10+ 검색 쿼리 시도. 목표(최소 1건) 미달 — 0건 기록.
+
+- `sources.md`에 2개 출처 추가 (## 2026-11-19 섹션 신설, 파일 최상단)
+- `02-프로덕션-아키텍처.md` GL-2026-11-19-01(레거시 RAG 소급 적용 침습성 정량화) 신규 항목 추가
+- `04-산업별-사례.md` GL-2026-11-19-02(가짜 리뷰 탐지 하이브리드 RAG) 신규 항목 추가
+- **한국 사례**: 0건 (목표 1건 미달)
+- **글로벌 사례**: 2건
+
 ## 2026-11-18 (일일 루프 #154)
 - **신규 사례 2건** (WebFetch 직접 접근 불가, snippet-verified 전건; 한국 사례: 1건 — 연속 미달 루프 #140~153 종료)
 
