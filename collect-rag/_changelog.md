@@ -1,5 +1,23 @@
 # 업데이트 로그
 
+## 2026-11-20 (일일 루프 #156)
+- **신규 사례 2건** (snippet-verified 전건; 한국 사례: 1건 — KR-2026-11-20-01 동원F&B)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-11-20-01 | ACL Findings 2026 — D2-RAG: 다차원 불확실성 추정 기반 적응형 검색 결정 + 유틸리티 인식 대조 디코딩; Llama3.1-8B가 비RAG 70B 초과; Jinshuo Zhang 외 9인; pp.15355–15382 | 프로덕션아키텍처·적응형검색결정·불확실성추정·대조디코딩·의료QA | 02-프로덕션-아키텍처.md |
+| KR-2026-11-20-01 | 동원F&B "Sunny" AI 쇼핑 어시스턴트 — Agentic RAG 기반 개인화 상품 추천; 구매전환율 10.8배; Amazon Bedrock AgentCore + Knowledge Base; AWS EBA 6주 스프린트 2026-02 | 산업별사례·커머스·한국·이커머스·AgenticRAG·BedrockKnowledgeBase | 04-산업별-사례.md |
+
+- **검증 결과**: 2건 5점 자가검증 전원 통과; snippet-verified 전건
+  1. **GL-2026-11-20-01 (ACL Findings 2026, DOI 10.18653/v1/2026.findings-acl.754)**: "D2-RAG: Dual-Decision Retrieval Augmented Generation via Multi-dimensional Uncertainty Estimation" — Jinshuo Zhang, Jiasheng Si, Wenpeng Lu, Yonghe Chen, Xiaoyang Meng 외 5인. ACL Findings 2026, pp.15355–15382, 2026-07. (1) 다차원 불확실성 추정으로 적응형 검색 결정, (2) 유틸리티 인식 대조 디코딩으로 노이즈 문서 차단. 의료 QA 4개 데이터셋에서 Llama3.1-8B + D2-RAG가 비RAG Llama3.1-70B를 MedMCQA에서 초과. 코드: github.com/zakelawen/d--rag. snippet-verified: aclanthology.org/2026.findings-acl.754/ + doi.org/10.18653/v1/2026.findings-acl.754 + semanticscholar.org + acl2026.org/program 4개 이상 독립 출처; sources.md 중복 없음(D2-RAG 미수록 확인). → `02-프로덕션-아키텍처.md` GL-2026-11-19-01(레거시 RAG 소급 적용 침습성) 뒤에 추가.
+  2. **KR-2026-11-20-01 (AWS 기술 블로그 + ETNews 2026-11-10)**: 동원F&B "Sunny" AI 쇼핑 어시스턴트. Amazon Bedrock AgentCore + Bedrock Knowledge Base(RAG) + Claude 4.5 Sonnet. Agentic RAG: 질문 의도 파악 → 문서검색·분석·코드생성 오케스트레이션. Confluence 일 1회 크롤링(AWS Step Functions). 2026-05~10 측정 AI 이용 세션 구매전환율 16.2%(미이용 10.8배), AI 이용 세션 비중 ~50%. snippet-verified: AWS 기술 블로그 + ETNews 2026-11-10 2개 이상 독립 출처; sources.md 중복 없음(동원/dongwon 미수록 확인). → `04-산업별-사례.md` 커머스·한국 섹션 배민(우아한형제들) 뒤에 추가.
+
+- `sources.md`에 2개 출처 추가 (## 2026-11-20 섹션 신설, 파일 최상단)
+- `02-프로덕션-아키텍처.md` GL-2026-11-20-01(D2-RAG) 신규 항목 추가
+- `04-산업별-사례.md` KR-2026-11-20-01(동원F&B Sunny) 신규 항목 추가
+- **한국 사례**: 1건 (목표 1건 달성)
+- **글로벌 사례**: 1건
+
 ## 2026-11-19 (일일 루프 #155)
 - **신규 사례 2건** (WebFetch 직접 접근 불가 — arxiv.org ENOTFOUND, snippet-verified 전건; 한국 사례: 0건 — 2026-11-12~11-19 범위 내 신규 공개 한국 사례 미발굴 [목표 미달, 루프 #140~155 중 155회차])
 

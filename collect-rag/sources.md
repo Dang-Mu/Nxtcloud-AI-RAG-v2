@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-11-20 일일 누적 추가 출처 (2건, 루프 #156)
+
+### 글로벌 — 프로덕션아키텍처·적응형검색결정·다차원불확실성추정·유틸리티인식대조디코딩·의료QA·ACLFindings2026 (DOI 10.18653/v1/2026.findings-acl.754, 2026-07)
+- [ACL Anthology — 2026.findings-acl.754](https://aclanthology.org/2026.findings-acl.754/) · DOI: [10.18653/v1/2026.findings-acl.754](https://doi.org/10.18653/v1/2026.findings-acl.754) — ACL Findings 2026, pp. 15355–15382 · [architecture][adaptive-retrieval][multi-dimensional-uncertainty][utility-aware][contrastive-decoding][dual-decision][d2-rag][medical-qa][medqa][medmcqa][pubmedqa][usmle][llama3.1][jinshuo-zhang][jiasheng-si][wenpeng-lu][yonghe-chen][xiaoyang-meng] · Jinshuo Zhang, Jiasheng Si, Wenpeng Lu, Yonghe Chen, Xiaoyang Meng 외 5인. 다차원 불확실성 추정 기반 적응형 검색 결정 + 유틸리티 인식 대조 디코딩으로 노이즈 문서의 올바른 추론 방해 차단. 의료 QA 4개 데이터셋 평가: Llama3.1-8B + D2-RAG가 비RAG Llama3.1-70B를 MedMCQA에서 초과. 코드: github.com/zakelawen/d--rag. (snippet-verified: aclanthology.org/2026.findings-acl.754/ + doi.org/10.18653/v1/2026.findings-acl.754 + semanticscholar.org + acl2026.org/program 4개 이상 독립 출처; 직접 URL 접근 미시도)
+
+### 한국 — 커머스·이커머스·AgenticRAG·BedrockKnowledgeBase·개인화추천·동원F&B·AWS EBA 2026 (AWS 기술 블로그 + ETNews 2026-11-10)
+- [AWS Korea 기술 블로그 — 동원F&B AI 쇼핑 어시스턴트](https://aws.amazon.com/ko/blogs/tech/dongwon-ai-shopping-assistant/) · [ETNews 2026-11-10](https://www.etnews.com/20261110000321) — 2026 · [korean][commerce][e-commerce][agentic-rag][bedrock-agentcore][bedrock-knowledge-base][claude-4-5-sonnet][personalized-recommendation][dongwon-fb][dongwonmall][aws-eba][step-functions][confluence-crawling][metadata-filtering][conversion-rate] · 동원F&B 동원몰. Amazon Bedrock AgentCore + Bedrock Knowledge Base(RAG) + Claude 4.5 Sonnet. AWS EBA 6주 스프린트(2026-02-25~04-08). Agentic RAG: 질문 의도 파악 → 검색·분석·코드생성 오케스트레이션. Confluence 일 1회 크롤링(AWS Step Functions). 2026-05~10 측정 AI 이용 세션 구매전환율 16.2%(미이용 대비 10.8배), AI 이용 세션 ~50%. (snippet-verified: AWS 기술 블로그 + ETNews 2026-11-10 2개 이상 독립 출처; 직접 URL 접근 미시도)
+
 ## 2026-11-19 일일 누적 추가 출처 (2건, 루프 #155)
 
 ### 글로벌 — 프로덕션아키텍처·레거시시스템·소급적용·침습성정량화·사이드카·SDK임베드·아키텍처패턴 (arXiv:2611.23931, 2026-11-18)
