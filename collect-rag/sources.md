@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-11-21 일일 누적 추가 출처 (2건, 루프 #157)
+
+### 글로벌 — 프로덕션아키텍처·지식그래프RAG·멀티홉검색·잠재스코어링퍼스펙티브·소프트프롬프트·경량LM (arXiv:2611.25229, 2026-11-20)
+- [arXiv:2611.25229 — LSP-RAG: Latent Scoring Perspectives for Knowledge Graph Retrieval-Augmented Generation](https://arxiv.org/abs/2611.25229) — 2026-11-20 제출 · cs.IR · [architecture][knowledge-graph-rag][multi-hop][latent-scoring-perspectives][soft-prompt][perspective-specific][contextual-soft-prompt][adaptive-aggregation][lightweight-lm][hop-wise][triplet-scoring][heterogeneous-relevance][haochen-liu][guanghui-min][song-wang][yada-zhu][chen-chen][jundong-li] · Haochen Liu, Guanghui Min, Song Wang, Yada Zhu, Chen Chen, Jundong Li. 멀티홉 KG-RAG 검색에서 K=3 잠재 스코어링 퍼스펙티브로 후보 트리플렛 평가·집계. 퍼스펙티브-특화 소프트 프롬프트 + 홉별 갱신 문맥 소프트 프롬프트의 2중 소프트 프롬프트 쌍. 경량 언어 모델로도 정확하고 강건한 KG-RAG 멀티홉 검색 가능. (snippet-verified: arxiv.org/abs/2611.25229 + arxiv.org/html/2611.25229 + arxiv.org/pdf/2611.25229 + arxivsignals.io/papers/2611.25229 + github.com/JyiHUO/arxiv_daily_recommendation_system/releases/tag/2611.25229 5개 이상 독립 출처; 직접 URL 접근 불가)
+
+### 글로벌 — 에이전트·Self-RAG·SOC·보안·IDS·IPS·위협분류·완화대응·훈련불필요·Qwen3 (arXiv:2611.25832, 2026-11-19)
+- [arXiv:2611.25832 — RAVEN: A Self-RAG Based Agent for Threat Classification and Response](https://arxiv.org/abs/2611.25832) — 2026-11-19 제출 · cs.CR · 진행 중 논문 · [agentic-rag][self-rag][soc][security][ids][ips][suricata][snort][alert-triage][threat-classification][mitigation-response][training-free][llm-judge][query-reformulation][qwen3-32b][context-filtering][ablation][pironti-francesco-aurelio][arena-luigi][blefari-francesco][lupinacci-matteo][romeo-francesco][furfaro-angelo] · Pironti Francesco Aurelio, Arena Luigi, Blefari Francesco, Lupinacci Matteo, Romeo Francesco, Furfaro Angelo. IDS/IPS(Suricata·Snort) 경보 트리아지 자동화. 훈련 불필요 Self-RAG: LLM 판사가 검색 컨텍스트 평가 → 불충분 시 쿼리 재형성 → 재검색 루프. Qwen3:32B LLM-only vs RAG vs Self-RAG 에이블레이션으로 Self-RAG 접근 경보 분류 개선 검증. (snippet-verified: arxiv.org/abs/2611.25832 + arxiv.org/html/2611.25832 + arxiv.org/pdf/2611.25832 3개 이상 독립 출처; 직접 URL 접근 불가)
+
 ## 2026-11-20 일일 누적 추가 출처 (2건, 루프 #156)
 
 ### 글로벌 — 프로덕션아키텍처·적응형검색결정·다차원불확실성추정·유틸리티인식대조디코딩·의료QA·ACLFindings2026 (DOI 10.18653/v1/2026.findings-acl.754, 2026-07)

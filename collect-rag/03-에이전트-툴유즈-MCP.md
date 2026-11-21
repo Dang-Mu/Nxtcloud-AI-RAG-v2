@@ -1360,6 +1360,22 @@ RAG 기반 과학 문헌 탐색에서 검색·리랭킹·평가·필터링 단�
 - **의의**: TREC RAG 2026에서 에이전틱 연구 RAG 시스템의 실제 운영 성능을 공식 평가한 1차 자료. 하이브리드 검색(RRF 포함)이 순수 dense 검색 대비 우위임을 실증하고, 오픈웨이트 모델의 실용 가능성과 한계를 동시에 확인했다는 점에서 프로덕션 에이전틱 RAG 설계 참조 사례로 가치 있다. 코드: [github.com/rmit-ir/trec-rag-26](https://github.com/rmit-ir/trec-rag-26).
 - **출처**: [arXiv:2611.16425 — RMIT-ADM+S at TREC RAG 2026: Research Agents, Retriever Ablations, and Open-Weight Replication](https://arxiv.org/abs/2611.16425) (2026-11-12 제출; snippet-verified: arxiv.org/abs/2611.16425 + arxiv.org/html/2611.16425 + arxiv.org/pdf/2611.16425 + arxivsignals.io/papers/2611.16425 + github.com/rmit-ir/trec-rag-26 5개 이상 독립 출처; 직접 URL 접근 불가 — snippet-verified)
 
+### GL-2026-11-21-02 | RAVEN — IDS/IPS 경보 트리아지 자동화를 위한 Self-RAG 기반 에이전트: 훈련 불필요 LLM 판사 기반 컨텍스트 필터링·쿼리 재형성 (arXiv:2611.25832, 2026-11-19)
+
+> **"RAVEN: A Self-RAG Based Agent for Threat Classification and Response"**
+> arXiv:2611.25832 · Pironti Francesco Aurelio, Arena Luigi, Blefari Francesco, Lupinacci Matteo, Romeo Francesco, Furfaro Angelo
+> 2026-11-19 제출 · cs.CR (진행 중 논문)
+
+- **배경**: SOC(Security Operations Center)에서 Suricata·Snort 등 IDS/IPS가 생성하는 경보(alert)의 수동 트리아지는 분석가 피로·오탐(false positive) 과부하를 초래한다. 기존 LLM·RAG 기반 접근은 검색된 컨텍스트의 품질 편차를 걸러내지 못해 분류 신뢰도가 낮다.
+- **RAVEN (Retrieval-Augmented Vulnerability & Event ANalysis) 핵심 설계**:
+  - **훈련 불필요 Self-RAG 워크플로**: LLM 판사(LLM judge)가 검색된 컨텍스트의 관련성·충분성을 평가하고, 불충분하면 쿼리를 재형성해 추가 검색 → 검색-평가-재검색 루프로 경보 분류 근거를 점진적으로 강화. 별도 파인튜닝 없이 프롬프트만으로 Self-RAG 패턴 구현.
+  - **3단계 에이블레이션 비교**: 동일 LLM(Qwen3:32B) 기반으로 (1) LLM-only, (2) 전통적 RAG, (3) RAVEN(Self-RAG) 세 설정을 비교해 Self-RAG 접근의 경보 분류 정확도·신뢰도 개선 여부를 검증.
+  - **완화 대응 생성**: 경보 분류 후 대응 행동(mitigation response) 자동 생성 기능 포함.
+- **연구 질문**: "Self-RAG 기반 접근이 전통적 RAG 대비 SOC 경보 분류 정확도·신뢰도를 개선하는가?"
+- **의의**: 에이전틱 RAG의 Self-correcting 패턴을 사이버보안 운영 자동화에 적용한 사례. 훈련 불필요 프롬프트 기반 Self-RAG 구현은 도메인 특화 모델 없이 기존 SOC 도구 출력을 LLM+RAG로 보강하는 실용적 경로를 제시한다. IDS/IPS 경보가 많고 분석 인력이 한정된 엔터프라이즈 보안 환경에서 1차 트리아지 자동화에 직접 적용 가능.
+- **저자**: Pironti Francesco Aurelio, Arena Luigi, Blefari Francesco, Lupinacci Matteo, Romeo Francesco, Furfaro Angelo
+- **출처**: [arXiv:2611.25832 — RAVEN: A Self-RAG Based Agent for Threat Classification and Response](https://arxiv.org/abs/2611.25832) (2026-11-19 제출; snippet-verified: arxiv.org/abs/2611.25832 + arxiv.org/html/2611.25832 + arxiv.org/pdf/2611.25832 3개 이상 독립 출처; 직접 URL 접근 불가 — snippet-verified)
+
 ### GL-2026-11-17-01 | RAG-FGO — 쿼리 재작성 에이전트를 블랙박스 최적화로 동적 개선: 프롬프트 템플릿·디코딩 파라미터 동시 탐색 (arXiv:2611.17788, 2026-11-13)
 
 > **"RAG-FGO: Dynamic Optimization of Query-Rewriting Agents for Generative RAG"**

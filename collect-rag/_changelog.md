@@ -1,5 +1,24 @@
 # 업데이트 로그
 
+## 2026-11-21 (일일 루프 #157)
+- **신규 사례 2건** (WebFetch 직접 접근 불가 — arxiv.org·alphaxiv.org ENOTFOUND, snippet-verified 전건; 한국 사례: 0건 — 2026-11-14~11-21 범위 내 신규 공개 한국 사례 미발굴 [목표 미달])
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-11-21-01 | arXiv:2611.25229 — LSP-RAG: 멀티홉 KG-RAG에서 K=3 잠재 스코어링 퍼스펙티브 적응 집계; 퍼스펙티브-특화 소프트 프롬프트 + 문맥 소프트 프롬프트; 경량 LM 기반; Haochen Liu 외 5인; cs.IR | 프로덕션아키텍처·지식그래프RAG·멀티홉검색·잠재스코어링퍼스펙티브·소프트프롬프트 | 02-프로덕션-아키텍처.md |
+| GL-2026-11-21-02 | arXiv:2611.25832 — RAVEN: Self-RAG 기반 SOC 경보 트리아지 에이전트; IDS/IPS Suricata·Snort 경보 분류·완화 대응 자동화; 훈련 불필요 LLM 판사 기반 컨텍스트 필터링·쿼리 재형성; Qwen3:32B 에이블레이션; Pironti Francesco Aurelio 외 5인; cs.CR | 에이전트·Self-RAG·SOC·보안·IDS·IPS·위협분류·훈련불필요 | 03-에이전트-툴유즈-MCP.md |
+
+- **검증 결과**: 2건 5점 자가검증 전원 통과; snippet-verified 전건
+  1. **GL-2026-11-21-01 (arXiv:2611.25229, 2026-11-20)**: "LSP-RAG: Latent Scoring Perspectives for Knowledge Graph Retrieval-Augmented Generation" — Haochen Liu, Guanghui Min, Song Wang, Yada Zhu, Chen Chen, Jundong Li. cs.IR. (1) K=3 잠재 스코어링 퍼스펙티브로 멀티홉 KG-RAG 후보 트리플렛 평가·집계, (2) 퍼스펙티브-특화 소프트 프롬프트 + 홉별 문맥 소프트 프롬프트 2중 소프트 프롬프트 쌍, (3) 경량 언어 모델 기반 적용 가능. snippet-verified: arxiv.org/abs/2611.25229 + arxiv.org/html/2611.25229 + arxiv.org/pdf/2611.25229 + arxivsignals.io/papers/2611.25229 + github.com/JyiHUO/arxiv_daily_recommendation_system/releases/tag/2611.25229 5개 이상 독립 출처; sources.md 중복 없음(2611.25229 미수록 확인). → `02-프로덕션-아키텍처.md` GL-2026-11-20-01(D2-RAG) 뒤에 추가.
+  2. **GL-2026-11-21-02 (arXiv:2611.25832, 2026-11-19)**: "RAVEN: A Self-RAG Based Agent for Threat Classification and Response" — Pironti Francesco Aurelio, Arena Luigi, Blefari Francesco, Lupinacci Matteo, Romeo Francesco, Furfaro Angelo. cs.CR. IDS/IPS(Suricata·Snort) 경보 트리아지 자동화. 훈련 불필요 Self-RAG: LLM 판사가 검색 컨텍스트 평가 → 불충분 시 쿼리 재형성 → 재검색 루프. Qwen3:32B 기반 LLM-only vs RAG vs Self-RAG 에이블레이션. snippet-verified: arxiv.org/abs/2611.25832 + arxiv.org/html/2611.25832 + arxiv.org/pdf/2611.25832 3개 이상 독립 출처; sources.md 중복 없음(2611.25832 미수록 확인). → `03-에이전트-툴유즈-MCP.md` GL-2026-11-17-01(RAG-FGO) 앞(최신 위치)에 추가.
+  3. **한국 사례 발굴 경위**: 2026-11-14~11-21 범위 내 네이버·카카오·토스·우아한형제들·LY Corp·SKT·KT·금융권·의료기관·로펌 신규 RAG 기술블로그·발표 미발굴. KT K-RAG(KT지식허브) 사례는 2026-09 보도로 범위 외; 카카오 if(kakao)26 RAG 직접 발표 미확인(2026-10); 와이즈넛 멀티모달 RAG는 KR-2026-10-29-01 중복. 10+ 검색 쿼리 시도. 목표(최소 1건) 미달 — 0건 기록.
+
+- `sources.md`에 2개 출처 추가 (## 2026-11-21 섹션 신설, 파일 최상단)
+- `02-프로덕션-아키텍처.md` GL-2026-11-21-01(LSP-RAG) 신규 항목 추가
+- `03-에이전트-툴유즈-MCP.md` GL-2026-11-21-02(RAVEN) 신규 항목 추가
+- **한국 사례**: 0건 (목표 1건 미달)
+- **글로벌 사례**: 2건
+
 ## 2026-11-20 (일일 루프 #156)
 - **신규 사례 2건** (snippet-verified 전건; 한국 사례: 1건 — KR-2026-11-20-01 동원F&B)
 
