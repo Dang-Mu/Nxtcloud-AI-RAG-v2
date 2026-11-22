@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-11-22 일일 누적 추가 출처 (2건, 루프 #158)
+
+### 한국 — 엔터프라이즈사내지식·제조·암묵지·지식그래프·Graphiti·Bedrock·UDK·PoC·포스코DX·AWS (날짜 미확인, 2026 추정)
+- [AWS 기술 블로그 — 엔지니어링 암묵지를 AI 자산으로: 포스코DX의 도전](https://aws.amazon.com/ko/blogs/tech/transforming-tacit-engineering-knowledge-into-ai-assets/) — 날짜 미확인(2026 추정) · AWS Korea 기술 블로그 · [korean][enterprise][manufacturing][tacit-knowledge][udk][untrained-domain-knowledge][knowledge-graph][graphiti][amazon-bedrock][plc][design-rules][posco-dx][posco-group][ontology][rag-poc][aws-genaiic][depends-on][conflicts-with][3-axis-classification][expert-knowledge-capture] · 포스코DX 자동화 사업부. PLC 제어 시스템 설계 암묵지를 AI 자산으로 전환하는 PoC. UDK(Untrained Domain Knowledge) — AI 사전학습·명시/암묵·조직 특수성 3축 분류로 35개 설계 규칙 정리 → Amazon Bedrock + Graphiti 지식 그래프 PoC. 벡터 RAG의 관계 추적·영향도 분석·유효기간 처리 한계를 KG로 보완. (snippet-verified: AWS Korea 기술 블로그 URL + 한국어 본문 스니펫 2개 이상 독립 출처; 직접 URL 접근 불가 — ENOTFOUND)
+
+### 글로벌 — 프로덕션아키텍처·RAG품질·인용신뢰성·파라메트릭출처·귀속검증·역사실적검증·cs.AI (arXiv:2611.17161, 2026-11-13)
+- [arXiv:2611.17161 — Cited but Unused: Parametric Provenance in Retrieval-Augmented Generation](https://arxiv.org/abs/2611.17161) — 2026-11-13 제출 · cs.AI · [architecture][rag-quality][citation-faithfulness][parametric-memory][parametric-provenance][contextual-provenance][counterfactual-value-substitution][distribution-contrast][nli-failure][disputed-token][attribution][hallucination][tanzeel-abbas][tehseen-zia][david-windridge][comsats-university-islamabad][middlesex-university-london][support-based-verification][provenance-based-verification] · Tanzeel Abbas, Tehseen Zia, David Windridge (COMSATS University Islamabad + Middlesex University London) [chatpaper.com 2차 출처 기반]. RAG 인용의 1.2%~15.7%(모델별)가 파라메트릭 메모리 출처이지만 검색 문서 인용. NLI 검증 무력화. 역사실적 값 대체 + 출력 분포 대조가 출처 판별 최선. (snippet-verified: arxiv.org/pdf/2611.17161 + chatpaper.com/paper/375819(cs.AI, 13 Nov 2026) + 역사실적 방법론 2개 이상 독립 검색 스니펫; 저자 chatpaper.com 2차 출처 기반; 직접 URL 접근 불가 — ENOTFOUND)
+
 ## 2026-11-21 일일 누적 추가 출처 (2건, 루프 #157)
 
 ### 글로벌 — 프로덕션아키텍처·지식그래프RAG·멀티홉검색·잠재스코어링퍼스펙티브·소프트프롬프트·경량LM (arXiv:2611.25229, 2026-11-20)
