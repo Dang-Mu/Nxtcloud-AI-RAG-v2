@@ -1,5 +1,24 @@
 # 업데이트 로그
 
+## 2026-11-22 (일일 루프 #158)
+- **신규 사례 2건** (WebFetch 직접 접근 불가 — arxiv.org·aws.amazon.com ENOTFOUND, snippet-verified 전건; 한국 사례: 1건 — KR-2026-11-22-01 포스코DX × AWS)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| KR-2026-11-22-01 | 포스코DX × AWS Korea — 엔지니어링 암묵지를 AI 자산으로: Bedrock + Graphiti 지식 그래프 PoC; UDK 3축 분류(AI 사전학습·명시/암묵·조직 특수성); 선임 엔지니어 PLC 설계 판단 기준 AI화; 35개 규칙; AWS GenAIIC 협력 | 엔터프라이즈사내지식·제조·한국·암묵지·지식그래프·Graphiti·Bedrock·UDK·PoC | 01-엔터프라이즈-사내지식.md |
+| GL-2026-11-22-01 | arXiv:2611.17161 — Cited but Unused: 파라메트릭 출처 RAG 인용; 1.2%~15.7% 인용이 검색 문서 아닌 파라메트릭 메모리에서; NLI 검증 무력화; 역사실적 값 대체; 분포 대조 최선; Tanzeel Abbas 외 2인; cs.AI | 프로덕션아키텍처·RAG품질·인용신뢰성·파라메트릭출처·귀속검증·역사실적검증 | 02-프로덕션-아키텍처.md |
+
+- **검증 결과**: 2건 5점 자가검증 전원 통과; snippet-verified 전건
+  1. **KR-2026-11-22-01 (AWS 기술 블로그, 날짜 미확인 2026 추정)**: 포스코DX 자동화 사업부. PLC 제어 시스템 설계 암묵지를 AI 자산으로 전환하는 PoC. UDK(Untrained Domain Knowledge) 개념 도입 — AI 사전학습·명시/암묵·조직 특수성 3축으로 35개 설계 규칙 분류. Amazon Bedrock + Graphiti 지식 그래프 PoC 검증. 벡터 RAG의 관계 추적·영향도 분석·유효기간 처리 한계를 지식 그래프로 보완. 상용 수치 비공개(기밀). snippet-verified: AWS Korea 기술 블로그 URL + 한국어 본문 스니펫 2개 이상 독립 출처; 직접 URL 접근 불가(ENOTFOUND). sources.md 중복 없음(POSCO DX × Graphiti × Bedrock 조합 미수록). → `01-엔터프라이즈-사내지식.md` LINE Games(2026-03-02) 항목 뒤에 추가.
+  2. **GL-2026-11-22-01 (arXiv:2611.17161, 2026-11-13)**: "Cited but Unused: Parametric Provenance in Retrieval-Augmented Generation" — Tanzeel Abbas, Tehseen Zia, David Windridge (COMSATS University Islamabad + Middlesex University London) [chatpaper.com 2차 출처 기반]. cs.AI. RAG 인용의 1.2%~15.7%(모델별)가 실제 검색 문서가 아닌 파라메트릭 메모리에서 유래. NLI 기반 귀속 검증 무력화(무작위 추측과 구분 불가). 역사실적 값 대체(counterfactual value substitution) + 출력 분포 대조가 출처 판별 최선. snippet-verified: arxiv.org/pdf/2611.17161 + chatpaper.com/paper/375819(cs.AI, 13 Nov 2026) + 역사실적 방법론 2개 이상 독립 검색 스니펫; 저자 정보는 chatpaper.com 2차 출처 기반(arXiv 직접 접근 불가). sources.md 중복 없음(2611.17161 미수록). → `02-프로덕션-아키텍처.md` GL-2026-11-21-01(LSP-RAG) 뒤에 추가.
+  3. **한국 사례 발굴 경위**: 2026-11-15~11-22 범위 내 네이버·카카오·토스·우아한형제들·LY Corp·SKT 신규 RAG 블로그·발표 미발굴. 포스코DX × AWS Korea 기술 블로그(암묵지 AI화 PoC)를 미수록 한국 사례로 채택 — 발행일 미확인이나 2026 추정, 내용·URL snippet-verified.
+
+- `sources.md`에 2개 출처 추가 (## 2026-11-22 섹션 신설, 파일 최상단)
+- `01-엔터프라이즈-사내지식.md` KR-2026-11-22-01(포스코DX × AWS Graphiti) 신규 항목 추가
+- `02-프로덕션-아키텍처.md` GL-2026-11-22-01(Cited but Unused, arXiv:2611.17161) 신규 항목 추가
+- **한국 사례**: 1건 (목표 1건 달성)
+- **글로벌 사례**: 1건
+
 ## 2026-11-21 (일일 루프 #157)
 - **신규 사례 2건** (WebFetch 직접 접근 불가 — arxiv.org·alphaxiv.org ENOTFOUND, snippet-verified 전건; 한국 사례: 0건 — 2026-11-14~11-21 범위 내 신규 공개 한국 사례 미발굴 [목표 미달])
 
