@@ -1,5 +1,24 @@
 # 업데이트 로그
 
+## 2026-11-23 (일일 루프 #159)
+- **신규 사례 2건** (WebFetch 직접 접근 불가 — arxiv.org·d2.naver.com·papers.cool·slashpage.com ENOTFOUND, snippet-verified 전건; 한국 사례: 0건 — 2026-11-16~11-23 범위 내 한국 RAG 사례 미발굴 [목표 미달])
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-11-23-01 | arXiv:2611.14061 — Isolation Is Not Confidentiality: RAG 기하학적 접근 제어 4가지 보안 속성 분석; 정책 격리 ≠ 기밀성; Steve Nouyep·Maxime Puys·Sébastien Salva; cs.CR; 2026-11-10 | 프로덕션아키텍처·RAG보안·기하학적접근제어·정책격리·기밀성·위조저항성·멀티테넌트 | 02-프로덕션-아키텍처.md |
+| GL-2026-11-23-02 | arXiv:2611.14924 — Edge-Native Multimodal RAG: 소비자급 GPU 양자화 최적화; GPTQ vs NF4 트레이드오프; Tesla T4; 8.37GB 시스템; Zahraa Selim 외 5인; Egypt-Japan Univ; 2026-11-11 | 프로덕션아키텍처·엣지배포·멀티모달RAG·양자화·GPTQ·NF4·소비자GPU | 02-프로덕션-아키텍처.md |
+
+- **검증 결과**: 2건 5점 자가검증 전원 통과; snippet-verified 전건
+  1. **GL-2026-11-23-01 (arXiv:2611.14061, 2026-11-10)**: "Isolation Is Not Confidentiality: Security Boundaries of Geometric Access Control in RAG" — Steve Nouyep, Maxime Puys, Sébastien Salva (cs.CR). 엔터프라이즈 RAG의 검색 보존 기하학적 변환 접근 제어를 4가지 보안 속성(정책 격리·표현 기밀성·쿼리 위조 저항성·정책 멤버십 은닉성)으로 분류해 형식·실증 분석. 세 임베딩 모델 대상 평가: 정책 격리 ✓, 표현 기밀성·위조 저항성 ✗. snippet-verified: arxiv.org/abs/2611.14061 + arxiv.org/html/2611.14061 + arxiv.org/pdf/2611.14061 + vulners.com/packetstormnews/PACKETSTORMNEWS:240495 + jyyang621/DailyArXiv issues #453·#456 5개 이상 독립 출처; 직접 URL 접근 불가. sources.md 중복 없음(2611.14061 미수록 확인). → `02-프로덕션-아키텍처.md` GL-2026-11-22-01(Cited but Unused) 뒤에 추가.
+  2. **GL-2026-11-23-02 (arXiv:2611.14924, 2026-11-11)**: "Edge-Native Multimodal RAG: Hardware-Aware Quantization and Architectural Optimization for Consumer GPUs" — Zahraa Selim 외 5인 (Egypt-Japan University of Science and Technology). GPTQ(51.6 tok/s, Turing 2048+ 토큰 불안정) vs NF4(~81ms/token, 안정) 트레이드오프; Florence-2 비전 분리(+430MB); 전체 8.37GB; 구조화된 퓨샷으로 양자화 열화 보상(수학 35%→92%). snippet-verified: arxiv.org/pdf/2611.14924(초록 직접 확인, 저자·기관·수치 포함) + jyyang621/DailyArXiv issue #457 2개 이상 독립 출처; 직접 URL 접근 불가. sources.md 중복 없음(2611.14924 미수록 확인). → `02-프로덕션-아키텍처.md` GL-2026-11-23-01 뒤에 추가.
+  3. **한국 사례 발굴 경위**: Naver D2 "뇌를 닮은 세컨드 브레인: 토큰 낭비 없는 RAG" (d2.naver.com/helloworld/5087915, 2026-11-23) 후보 발굴 — URL 직접 접근 불가(ENOTFOUND), 집계 사이트(mzd-minahKim/tech-blogs issue #10) 단독 확인으로 "최소 2개 이상 독립 출처" 요건 미충족, 본문 내용 미확인 → 폐기. 카카오·SKT·토스 11월 RAG 블로그 10+ 쿼리 미발굴. 목표(최소 1건) 미달.
+
+- `sources.md`에 2개 출처 추가 (## 2026-11-23 섹션 신설, 파일 최상단)
+- `02-프로덕션-아키텍처.md` GL-2026-11-23-01(Isolation Is Not Confidentiality) 신규 항목 추가
+- `02-프로덕션-아키텍처.md` GL-2026-11-23-02(Edge-Native Multimodal RAG) 신규 항목 추가
+- **한국 사례**: 0건 (목표 1건 미달)
+- **글로벌 사례**: 2건
+
 ## 2026-11-22 (일일 루프 #158)
 - **신규 사례 2건** (WebFetch 직접 접근 불가 — arxiv.org·aws.amazon.com ENOTFOUND, snippet-verified 전건; 한국 사례: 1건 — KR-2026-11-22-01 포스코DX × AWS)
 

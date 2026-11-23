@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-11-23 일일 누적 추가 출처 (2건, 루프 #159)
+
+### 글로벌 — 프로덕션아키텍처·RAG보안·기하학적접근제어·정책격리·기밀성·쿼리위조저항성·멀티테넌트·cs.CR (arXiv:2611.14061, 2026-11-10)
+- [arXiv:2611.14061 — Isolation Is Not Confidentiality: Security Boundaries of Geometric Access Control in RAG](https://arxiv.org/abs/2611.14061) — 2026-11-10 제출 · cs.CR · [architecture][security][geometric-access-control][search-preserving-transformation][policy-isolation][representation-confidentiality][query-forgery-resistance][policy-membership-hiding][4-security-properties][3-encoders][enterprise-rag][multi-tenant][formal-analysis][steve-nouyep][maxime-puys][sebastien-salva] · Steve Nouyep, Maxime Puys, Sébastien Salva. 검색 보존 기하학적 변환으로 접근 정책을 RAG 벡터 공간에 집행하는 방식의 4가지 보안 속성 체계적 분석. 세 임베딩 모델 평가: 정책 격리는 유지하나 표현 기밀성·위조 저항성 한계 — "격리 ≠ 기밀성" 형식·실증 증명. (snippet-verified: arxiv.org/abs/2611.14061 + arxiv.org/html/2611.14061 + arxiv.org/pdf/2611.14061 + vulners.com/packetstormnews/PACKETSTORMNEWS:240495 + jyyang621/DailyArXiv issues #453·#456 5개 이상 독립 출처; 직접 URL 접근 불가)
+
+### 글로벌 — 프로덕션아키텍처·엣지배포·멀티모달RAG·하드웨어인식양자화·GPTQ·NF4·소비자GPU·Florence-2 (arXiv:2611.14924, 2026-11-11)
+- [arXiv:2611.14924 — Edge-Native Multimodal RAG: Hardware-Aware Quantization and Architectural Optimization for Consumer GPUs](https://arxiv.org/abs/2611.14924) — 2026-11-11 제출 · [architecture][edge-deployment][multimodal-rag][hardware-aware][quantization][gptq][nf4][consumer-gpu][tesla-t4][turing][florence-2][vram][throughput][context-stability][few-shot-prompting][zahraa-selim][egypt-japan-university] · Zahraa Selim 외 5인 (Egypt-Japan University of Science and Technology). NVIDIA Tesla T4 기준 GPTQ(51.6 tok/s, Turing 2048+ 불안정) vs NF4(~81ms/token, 안정) 트레이드오프 실증. Florence-2 비전 컴포넌트 분리(+430MB). 전체 시스템 8.37GB(12-16GB GPU 대응). 구조화된 퓨샷 프롬프트로 양자화 열화 보상: 수학 정확도 35.0%→92.0%(200회 시험). (snippet-verified: arxiv.org/pdf/2611.14924(초록 직접 확인, 저자·기관·수치 포함) + jyyang621/DailyArXiv issue #457 2개 이상 독립 출처; 직접 URL 접근 불가)
+
 ## 2026-11-22 일일 누적 추가 출처 (2건, 루프 #158)
 
 ### 한국 — 엔터프라이즈사내지식·제조·암묵지·지식그래프·Graphiti·Bedrock·UDK·PoC·포스코DX·AWS (날짜 미확인, 2026 추정)
