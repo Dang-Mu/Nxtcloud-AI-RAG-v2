@@ -1,5 +1,24 @@
 # 업데이트 로그
 
+## 2026-11-24 (일일 루프 #160)
+- **신규 사례 2건** (WebFetch 직접 접근 불가 — arxiv.org·fnnews.com·d2.naver.com ENOTFOUND, snippet-verified 전건; 한국 사례: 0건 — 2026-11-17~11-24 범위 내 한국 RAG 사례 미발굴 [목표 미달])
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-11-24-01 | arXiv:2611.30181 — Retrieval-Augmented Generation in the Agentic Era: 에이전틱 RAG 종합 서베이; "검색 제어 흐름 결정자"로 Agentic RAG 정의; 현행 Agentic 벤치마크가 non-agentic 계승 → 평가 기준 공백; Chenming Tang 외 7인; 텍스트 RAG 한정 | 프로덕션아키텍처·에이전틱RAG·서베이·RAG생명주기·오케스트레이션·벤치마크한계 | 02-프로덕션-아키텍처.md |
+| GL-2026-11-24-02 | arXiv:2604.25928 — CogRAG: 인지 부하 계층적 검색·추론; Bloom's Taxonomy 기반 훈련 불필요; 등록 영양사 RD 시험 Qwen3-8B 단답형 73.4%→85.8%, 사례형 63.3%→80.5%; 2026-11-22 v3 개정 | 산업별사례·교육·전문직자격시험·인지부하·Bloom분류·훈련불필요 | 04-산업별-사례.md |
+
+- **검증 결과**: 2건 5점 자가검증 전원 통과; snippet-verified 전건
+  1. **GL-2026-11-24-01 (arXiv:2611.30181, 2026-11-23)**: "Retrieval-Augmented Generation in the Agentic Era: Tradition, Present, and Prospect" — Chenming Tang 외 7인. 에이전틱 AI 전환기의 RAG 생명주기 전체를 조망하는 종합 서베이. Agentic RAG 정의(검색 제어 흐름 결정자), pre-agentic 기술의 연속·단절, 현행 평가 기준 공백 지적. 텍스트 RAG 한정. snippet-verified: arxiv.org/abs/2611.30181 + arxiv.org/pdf/2611.30181 + arxiv.org/html/2611.30181 + arxivsignals.io/papers/2611.30181 4개 이상 독립 출처. sources.md 중복 없음(2611.30181 미수록 확인). → `02-프로덕션-아키텍처.md` GL-2026-11-23-02 뒤에 추가.
+  2. **GL-2026-11-24-02 (arXiv:2604.25928, 2026-04 제출·2026-11-22 v3)**: "CogRAG: Tackling Heterogeneous Cognitive Demands in RAG via Stratified Retrieval and Reasoning". Bloom's Taxonomy 기반 쿼리 인지 부하 예측 → 훈련 불필요 계층적 검색(증거 보완) + 구조적 추론 템플릿. 등록 영양사(RD) 자격시험 Qwen3-8B 단답형 73.4%→85.8%, 사례형 63.3%→80.5%. snippet-verified: arxiv.org/pdf/2604.25928 + awesomepapers.io/papers/2604.25928 2개 이상 독립 출처. sources.md 중복 없음(2604.25928 미수록 확인). → `04-산업별-사례.md` 교육 섹션 Beacon 뒤에 추가.
+  3. **한국 사례 발굴 경위**: 글램앤507 말로온 AI 키오스크(파이낸셜뉴스 2026-11-24) 1출처 미달 폐기. Naver D2 "세컨드 브레인: 토큰 낭비 없는 RAG" 1출처 미달 폐기(이전 루프 동일 결과). 목표(최소 1건) 미달.
+
+- `sources.md`에 2개 출처 추가 (## 2026-11-24 섹션 신설, 파일 최상단)
+- `02-프로덕션-아키텍처.md` GL-2026-11-24-01(Agentic Era 서베이) 신규 항목 추가
+- `04-산업별-사례.md` GL-2026-11-24-02(CogRAG) 신규 항목 추가
+- **한국 사례**: 0건 (목표 1건 미달)
+- **글로벌 사례**: 2건
+
 ## 2026-11-23 (일일 루프 #159)
 - **신규 사례 2건** (WebFetch 직접 접근 불가 — arxiv.org·d2.naver.com·papers.cool·slashpage.com ENOTFOUND, snippet-verified 전건; 한국 사례: 0건 — 2026-11-16~11-23 범위 내 한국 RAG 사례 미발굴 [목표 미달])
 

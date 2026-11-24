@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-11-24 일일 누적 추가 출처 (2건, 루프 #160)
+
+### 글로벌 — 프로덕션아키텍처·에이전틱RAG·서베이·RAG생명주기·오케스트레이션·검색제어흐름·pre-agentic·벤치마크한계 (arXiv:2611.30181, 2026-11-23)
+- [arXiv:2611.30181 — Retrieval-Augmented Generation in the Agentic Era: Tradition, Present, and Prospect](https://arxiv.org/abs/2611.30181) — 2026-11-23 제출 · [architecture][agentic-rag][survey][rag-lifecycle][indexing][orchestration][retrieval-control-flow][pre-agentic][query-rewriting][reranking][chunking][benchmark-gap][textual-rag][chenming-tang] · Chenming Tang 외 7인. 색인(indexing)부터 오케스트레이션까지 RAG 생명주기 전체를 커버하는 종합 서베이. 에이전틱 RAG의 정의를 "검색 제어 흐름을 누가 결정하는가"로 정립. 현행 Agentic RAG 벤치마크가 non-agentic 시스템에서 계승됨을 한계로 지적. 텍스트 중심 RAG 한정. (snippet-verified: arxiv.org/abs/2611.30181 + arxiv.org/pdf/2611.30181 + arxiv.org/html/2611.30181 + arxivsignals.io/papers/2611.30181 4개 이상 독립 출처; 직접 URL 접근 불가)
+
+### 글로벌 — 산업별사례·교육·전문직자격시험·인지부하·Bloom분류·계층적검색·추론템플릿·훈련불필요·영양사RD·Qwen3 (arXiv:2604.25928, 2026-04 → 2026-11-22 v3)
+- [arXiv:2604.25928 — CogRAG: Tackling Heterogeneous Cognitive Demands in RAG via Stratified Retrieval and Reasoning](https://arxiv.org/abs/2604.25928) — 2026-04 제출·2026-11-22 v3 개정 · [education][professional-exam][cognitive-demand][bloom-taxonomy][stratified-retrieval][evidence-supplement][reasoning-template][training-free][domain-agnostic][registered-dietitian][qwen3-8b][fact-centric][option-centric][chain-of-thought][cognitive-load-prediction] · CogRAG 저자 팀. 쿼리 인지 부하를 Bloom's Taxonomy 기반으로 분류해 검색·추론을 계층적으로 차별화하는 훈련 불필요 프레임워크. 등록 영양사(RD) 자격시험 Qwen3-8B 단답형 73.4%→85.8%, 사례형 63.3%→80.5% 개선. (snippet-verified: arxiv.org/pdf/2604.25928 + awesomepapers.io/papers/2604.25928 2개 이상 독립 출처; 직접 URL 접근 불가)
+
 ## 2026-11-23 일일 누적 추가 출처 (2건, 루프 #159)
 
 ### 글로벌 — 프로덕션아키텍처·RAG보안·기하학적접근제어·정책격리·기밀성·쿼리위조저항성·멀티테넌트·cs.CR (arXiv:2611.14061, 2026-11-10)
