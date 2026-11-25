@@ -1,5 +1,24 @@
 # 업데이트 로그
 
+## 2026-11-25 (일일 루프 #161)
+- **신규 사례 2건** (WebFetch 직접 접근 불가 — arxiv.org·syncai.news·mlsanity.com ENOTFOUND, snippet-verified 전건; 한국 사례: 0건 — LG AI Research CUA 경험 기반 RAG 1출처 미달 폐기 [목표 미달])
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-11-25-01 | arXiv:2611.31656 — BRAG: Bayesian Retrieval Augmented Generation; 각 청크를 쿼리 생성원으로 모델링, von Mises-Fisher 혼합·EM 적응 키; 갱신 충돌 케이스 Recall@5 0.80–0.86 vs 기준선 0.67–0.71; Javier Movellan 외 5인; cs.AI; 2026-11-23 | 프로덕션아키텍처·베이지안검색·생성모델·EM갱신·갱신충돌·온라인적응 | 02-프로덕션-아키텍처.md |
+| GL-2026-11-25-02 | arXiv:2611.30335 — MH-RAG-DIVE: 트리 캐시 대화 시뮬레이션 멀티홉 RAG 평가; Context Discoverer+Conversation Cacher; RAG-DIVE 대비 70%+ 토큰 절감; Lorenz Brehme·Daniel Hillebrand·Thomas Ströhle·Ruth Breu; ICAART 2027; 2026-11-23 | 프로덕션아키텍처·멀티홉RAG·평가·트리캐시·토큰절감·ICAART2027 | 02-프로덕션-아키텍처.md |
+
+- **검증 결과**: 2건 5점 자가검증 전원 통과; snippet-verified 전건
+  1. **GL-2026-11-25-01 (arXiv:2611.31656, 2026-11-23)**: "BRAG: Bayesian Retrieval Augmented Generation" — Javier Movellan 외 5인 (cs.AI). RAG 검색을 베이지안 생성 모델로 재정의. 각 청크가 von Mises-Fisher 혼합 성분 기반으로 "자신이 답할 수 있는 쿼리의 생성원"으로 동작하며, EM으로 갱신되는 적응 키로 갱신 충돌(supersession) 케이스를 처리. Recall@5 0.80–0.86 vs 기준선 0.67–0.71. 재인덱싱 없이 온라인 적응 가능. snippet-verified: arxiv.org/abs/2611.31656 + arxiv.org/pdf/2611.31656 + arxiv.org/html/2611.31656 + arcxiv.org/abs/2611.31656 + syncai.news + mlsanity.com/paper/2611.31656 6개 이상 독립 출처; 직접 URL 접근 불가. sources.md 중복 없음(2611.31656 미수록 확인). → `02-프로덕션-아키텍처.md` GL-2026-11-24-01 뒤에 추가.
+  2. **GL-2026-11-25-02 (arXiv:2611.30335, 2026-11-23)**: "MH-RAG-DIVE: Dynamic and Cost-Efficient Multi-Hop RAG Evaluation via Tree-Cached Dialogue Simulation" — Lorenz Brehme, Daniel Hillebrand, Thomas Ströhle, Ruth Breu. ICAART 2027 채택. 선행 RAG-DIVE 프레임워크를 멀티홉으로 확장. Context Discoverer(대화 중 멀티홉 가능 문서 동적 식별) + Conversation Cacher(트리 구조 캐시)로 RAG-DIVE 기준선 233,330+ 토큰 대비 70%+ 절감. 코드: github.com/Daniel-Innsbruck/MH-RAG-DIVE. snippet-verified: arxiv.org/abs/2611.30335v1 + arxiv.org/html/2611.30335v1 + arxiv.org/pdf/2611.30335 + github.com/Daniel-Innsbruck/MH-RAG-DIVE + arxivsignals.io/papers/2611.30335 + Ep11phany/DailyArXiv issue #411 6개 이상 독립 출처; 직접 URL 접근 불가. sources.md 중복 없음(2611.30335 미수록 확인). → `02-프로덕션-아키텍처.md` GL-2026-11-25-01 뒤에 추가.
+  3. **한국 사례 발굴 경위**: LG AI Research CUA "경험 기반 RAG(Experiential RAG)" (뉴스핌 2026-11-20) 후보 발굴 — 뉴스핌 1차 출처 + 네이트뉴스 2차 출처 확인 시도; 네이트뉴스(m.news.nate.com)가 뉴스핌 기사 재게시(미러)임을 확인해 독립 출처로 불인정 → 2개 독립 출처 미달 폐기. 목표(최소 1건) 미달.
+
+- `sources.md`에 2개 출처 추가 (## 2026-11-25 섹션 신설, 파일 최상단)
+- `02-프로덕션-아키텍처.md` GL-2026-11-25-01(BRAG) 신규 항목 추가
+- `02-프로덕션-아키텍처.md` GL-2026-11-25-02(MH-RAG-DIVE) 신규 항목 추가
+- **한국 사례**: 0건 (목표 1건 미달)
+- **글로벌 사례**: 2건
+
 ## 2026-11-24 (일일 루프 #160)
 - **신규 사례 2건** (WebFetch 직접 접근 불가 — arxiv.org·fnnews.com·d2.naver.com ENOTFOUND, snippet-verified 전건; 한국 사례: 0건 — 2026-11-17~11-24 범위 내 한국 RAG 사례 미발굴 [목표 미달])
 
