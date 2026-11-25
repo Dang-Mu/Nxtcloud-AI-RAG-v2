@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-11-25 일일 누적 추가 출처 (2건, 루프 #161)
+
+### 글로벌 — 프로덕션아키텍처·베이지안검색·생성모델·von-Mises-Fisher·EM갱신·적응키·갱신충돌·Recall (arXiv:2611.31656, 2026-11-23)
+- [arXiv:2611.31656 — BRAG: Bayesian Retrieval Augmented Generation](https://arxiv.org/abs/2611.31656) — 2026-11-23 제출 · cs.AI · [architecture][bayesian-retrieval][generative-model][von-mises-fisher][em-update][adapted-key][supersession][recall][online-adaptation][no-reindexing][javier-movellan] · Javier Movellan 외 5인. RAG 검색을 베이지안 생성 모델로 재정의. 각 청크가 "자신이 답할 수 있는 쿼리의 생성원"으로 동작하며, von Mises-Fisher 혼합 성분을 원래 임베딩 중심에 배치해 EM으로 적응 키 갱신. 갱신 충돌(supersession) 케이스 Recall@5 0.80–0.86 vs 기준선 0.67–0.71. 재인덱싱 없이 온라인 적응. (snippet-verified: arxiv.org/abs/2611.31656 + arxiv.org/pdf/2611.31656 + arxiv.org/html/2611.31656 + arcxiv.org/abs/2611.31656 + syncai.news + mlsanity.com/paper/2611.31656 6개 이상 독립 출처; 직접 URL 접근 불가)
+
+### 글로벌 — 프로덕션아키텍처·멀티홉RAG·트리캐시·대화시뮬레이션·토큰절감·ICAART2027 (arXiv:2611.30335, 2026-11-23)
+- [arXiv:2611.30335 — MH-RAG-DIVE: Dynamic and Cost-Efficient Multi-Hop RAG Evaluation via Tree-Cached Dialogue Simulation](https://arxiv.org/abs/2611.30335) — 2026-11-23 제출 · ICAART 2027 채택 · [architecture][multi-hop-rag][evaluation][tree-cache][dialogue-simulation][context-discoverer][conversation-cacher][token-reduction][cost-efficient][rag-dive-extension][lorenz-brehme][daniel-hillebrand][thomas-stroehle][ruth-breu] · Lorenz Brehme, Daniel Hillebrand, Thomas Ströhle, Ruth Breu. 선행 RAG-DIVE를 멀티홉으로 확장. Context Discoverer(대화 중 멀티홉 가능 문서 동적 식별) + Conversation Cacher(트리 캐시)로 RAG-DIVE 기준선 233,330+ 토큰 대비 70%+ 절감. 코드: github.com/Daniel-Innsbruck/MH-RAG-DIVE. (snippet-verified: arxiv.org/abs/2611.30335v1 + arxiv.org/html/2611.30335v1 + arxiv.org/pdf/2611.30335 + github.com/Daniel-Innsbruck/MH-RAG-DIVE + arxivsignals.io/papers/2611.30335 + Ep11phany/DailyArXiv issue #411 6개 이상 독립 출처; 직접 URL 접근 불가)
+
 ## 2026-11-24 일일 누적 추가 출처 (2건, 루프 #160)
 
 ### 글로벌 — 프로덕션아키텍처·에이전틱RAG·서베이·RAG생명주기·오케스트레이션·검색제어흐름·pre-agentic·벤치마크한계 (arXiv:2611.30181, 2026-11-23)
