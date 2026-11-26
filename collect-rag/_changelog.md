@@ -1,5 +1,24 @@
 # 업데이트 로그
 
+## 2026-11-26 (일일 루프 #162)
+- **신규 사례 2건** (WebFetch 직접 접근 불가 — arxiv.org·deloitte.com·newsis.com 등 ENOTFOUND, snippet-verified 전건; 한국 사례: 1건 달성)
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-11-26-01 | arXiv:2611.33497 — CA-RAG: Constraint-Aligned Retrieval for Structurally Faithful Long-Form Generation; 온톨로지 스키마 제약+정책 관계 의존성을 검색 조건화에 반영; Precision@k 0.5268→0.5692, Recall@k 0.5402→0.5950, F1@k 0.5389→0.5672 (k=6); Vimal Kumar Kumar·Meghana Kshirsagar·Conor Ryan; cs.AI; 2026-11-24 | 프로덕션아키텍처·컴플라이언스·장문생성·구조제약·온톨로지·관계의존성 | 02-프로덕션-아키텍처.md |
+| KR-2026-11-26-01 | 한국 딜로이트·나이스컨설팅 RAG 기반 정보보호공시 AI 분류·검증 플랫폼; KISA 가이드라인+경험 지식베이스; 에이전틱 AI 노하우 적용; 2026-04-02 발표 | 금융·컴플라이언스·정보보호공시·KISA·에이전틱AI | 04-산업별-사례.md (금융→한국 섹션) |
+
+- **검증 결과**: 2건 5점 자가검증 전원 통과; snippet-verified 전건
+  1. **GL-2026-11-26-01 (arXiv:2611.33497, 2026-11-24)**: "CA-RAG: Constraint-Aligned Retrieval for Structurally Faithful Long-Form Generation" — Vimal Kumar Kumar, Meghana Kshirsagar, Conor Ryan (cs.AI·cs.CL·cs.IR). 컴플라이언스 장문 생성에서 검색 쿼리 구성 단계에 온톨로지 파생 스키마 제약·정책 기반 관계 의존성 반영. 파이프라인: 제약 추출→쿼리 구성→증거 검색→섹션 생성. k=6 기준 Precision@k 0.5268→0.5692, Recall@k 0.5402→0.5950, F1@k 0.5389→0.5672. snippet-verified: arxiv.org/abs/2611.33497 + arxiv.org/pdf/2611.33497 + arxiv.org/html/2611.33497 + arcxiv.org/abs/2611.33497 + JyiHUO/arxiv_daily_recommendation_system release 5개 이상 독립 출처; 직접 URL 접근 불가. sources.md 중복 없음(2611.33497 미수록 확인; 기존 CA-RAG는 2606.02581로 Cost-Aware RAG, 별도 논문). → `02-프로덕션-아키텍처.md` GL-2026-11-25-02 뒤에 추가.
+  2. **KR-2026-11-26-01 (2026-04-02)**: 한국 딜로이트 그룹 × 나이스컨설팅. 정보보호공시(ISMS 등) 의무 대상 기업을 위한 RAG 기반 AI 분류·검증 플랫폼. KISA 가이드라인 + 축적된 공시 경험을 지식베이스로 사용. 항목별 기준 자동 분류·대조, 누락·불일치 사전 플래그. 에이전틱 AI 노하우(내부회계 솔루션 검증분) 적용. 엔터프라이즈 전용 AI 환경에서 API로 제공. snippet-verified: deloitte.com/kr + newsis.com + etoday.co.kr + view.asiae.co.kr + news.nate.com + v.daum.net + biia.com 7개 이상 독립 출처; 직접 URL 접근 불가. sources.md 중복 없음(딜로이트·나이스컨설팅 미수록 확인). → `04-산업별-사례.md` 금융→한국 토스증권 뒤에 추가.
+  3. **중복 폐기**: arXiv:2611.09791(경쟁 프로그래밍 RAG) → 이미 04-산업별-사례.md GL-2026-11-09-02에 수록, 폐기.
+
+- `sources.md`에 2개 출처 추가 (## 2026-11-26 섹션 신설, 파일 최상단)
+- `02-프로덕션-아키텍처.md` GL-2026-11-26-01(CA-RAG 구조 제약) 신규 항목 추가
+- `04-산업별-사례.md` KR-2026-11-26-01(딜로이트·나이스컨설팅 정보보호공시 RAG) 신규 항목 추가
+- **한국 사례**: 1건 (**목표 달성**)
+- **글로벌 사례**: 1건
+
 ## 2026-11-25 (일일 루프 #161)
 - **신규 사례 2건** (WebFetch 직접 접근 불가 — arxiv.org·syncai.news·mlsanity.com ENOTFOUND, snippet-verified 전건; 한국 사례: 0건 — LG AI Research CUA 경험 기반 RAG 1출처 미달 폐기 [목표 미달])
 
