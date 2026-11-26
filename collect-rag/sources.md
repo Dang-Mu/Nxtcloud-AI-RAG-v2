@@ -1,5 +1,13 @@
 # 출처 목록
 
+## 2026-11-26 일일 누적 추가 출처 (2건, 루프 #162)
+
+### 글로벌 — 프로덕션아키텍처·컴플라이언스·장문생성·구조제약·온톨로지·관계의존성·Precision·Recall·F1 (arXiv:2611.33497, 2026-11-24)
+- [arXiv:2611.33497 — CA-RAG: Constraint-Aligned Retrieval for Structurally Faithful Long-Form Generation](https://arxiv.org/abs/2611.33497) — 2026-11-24 제출 · cs.AI · cs.CL · cs.IR · [architecture][compliance][long-form-generation][structural-constraint][ontology-schema][policy-grounded][relational-dependency][constraint-extraction][query-conditioning][evidence-retrieval][section-generation][precision-recall-f1][vimal-kumar-kumar][meghana-kshirsagar][conor-ryan] · Vimal Kumar Kumar, Meghana Kshirsagar, Conor Ryan. 컴플라이언스 장문 생성에서 의미적 유사도 외에 온톨로지 파생 스키마 제약·정책 기반 관계 의존성을 검색 쿼리 구성 단계에 반영. k=6 기준 표준 RAG 대비 Precision@k 0.5268→0.5692, Recall@k 0.5402→0.5950, F1@k 0.5389→0.5672 향상; Self-RAG·Flare-RAG 대비 유의미한 개선. (snippet-verified: arxiv.org/abs/2611.33497 + arxiv.org/pdf/2611.33497 + arxiv.org/html/2611.33497 + arcxiv.org/abs/2611.33497 + JyiHUO/arxiv_daily_recommendation_system release 5개 이상 독립 출처; 직접 URL 접근 불가)
+
+### 한국 — 금융·컴플라이언스·정보보호공시·KISA가이드라인·에이전틱AI·딜로이트·나이스컨설팅 (2026-04-02)
+- [한국 딜로이트 그룹 보도자료 — AI 기반 공시 분류·검증 서비스 선보여](https://www.deloitte.com/kr/ko/about/press-room/2026/press-2026-04-02.html) · [뉴시스](https://www.newsis.com/view/NISX20260402_0003575528) · [이투데이](https://www.etoday.co.kr/news/view/2571951) · [아시아경제](https://view.asiae.co.kr/article/2026040209482169781) — 2026-04-02 발표 · [korean][financial][compliance][information-security-disclosure][isms][kisa][rag-based-ai][generative-ai-platform][agentic-ai][enterprise-api][classification][verification][missing-item-detection][deloitte-korea][nice-consulting][정관훈][b2b-service] · 한국 딜로이트 그룹 × 나이스컨설팅. KISA 가이드라인 + 과거 공시 경험을 지식베이스로 한 RAG 기반 정보보호공시 AI 플랫폼 출시. 공시 항목별 기준 자동 분류·대조, 누락·불일치 사전 플래그. 에이전틱 AI 노하우 적용, API 기반 엔터프라이즈 전용 환경 제공. (snippet-verified: deloitte.com + newsis.com + etoday.co.kr + view.asiae.co.kr + news.nate.com + v.daum.net + biia.com 7개 이상 독립 출처; 직접 URL 접근 불가)
+
 ## 2026-11-25 일일 누적 추가 출처 (2건, 루프 #161)
 
 ### 글로벌 — 프로덕션아키텍처·베이지안검색·생성모델·von-Mises-Fisher·EM갱신·적응키·갱신충돌·Recall (arXiv:2611.31656, 2026-11-23)
