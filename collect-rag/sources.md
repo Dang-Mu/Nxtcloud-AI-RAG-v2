@@ -1,5 +1,10 @@
 # 출처 목록
 
+## 2026-11-27 일일 누적 추가 출처 (1건, 루프 #163)
+
+### 글로벌 — 산업별사례·제조·생산라인·하이브리드그래프RAG·서브그래프유사성·유지보수·보쉬·IEEE-ICKG-2026 (arXiv:2611.30588, 2026-11-23)
+- [arXiv:2611.30588 — SuSi-RAG: A Hybrid Graph RAG for Equipment Maintenance](https://arxiv.org/abs/2611.30588) — 2026-11-23 제출 · cs.IR · [manufacturing][production-line][hybrid-graph-rag][subgraph-similarity][equipment-maintenance][bosch][ieee-ickg-2026][feedback-loop][knowledge-graph][hansi-zhang][evgeny-kharlamov][adrian-paschke][10664-interactions][96.25-accuracy] · Hansi Zhang, Evgeny Kharlamov, Adrian Paschke 외 (Bosch / Freie Universität Berlin). 보쉬 생산 라인 장비 유지보수 Q&A를 위한 하이브리드 그래프 RAG. SuSi(Subgraph Similarity) 모듈이 과거 유지보수 기록에서 유사 서브그래프를 그래프+벡터 하이브리드로 검색. 8개월+ 프로덕션 10,664건 Q&A, 답변 정확도 상한 96.25%. IEEE ICKG 2026 DOI:10.1109/ICKG70389.2026.00009. (snippet-verified: arxiv.org/abs/2611.30588 + arxiv.org/pdf/2611.30588 + arxiv.org/html/2611.30588 + arcxiv.org/abs/2611.30588 + JyiHUO/arxiv_daily_recommendation_system + Ep11phany/DailyArXiv #411 + syncai.news 7개 이상 독립 출처; 직접 URL 접근 불가)
+
 ## 2026-11-26 일일 누적 추가 출처 (2건, 루프 #162)
 
 ### 글로벌 — 프로덕션아키텍처·컴플라이언스·장문생성·구조제약·온톨로지·관계의존성·Precision·Recall·F1 (arXiv:2611.33497, 2026-11-24)

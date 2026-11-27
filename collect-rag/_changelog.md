@@ -1,5 +1,21 @@
 # 업데이트 로그
 
+## 2026-11-27 (일일 루프 #163)
+- **신규 사례 1건** (WebFetch 직접 접근 불가 — arxiv.org ENOTFOUND, snippet-verified 전건; 한국 사례: 0건 — 2026-11-20 ~ 11-27 범위 내 한국 RAG 사례 미발굴 [목표 미달])
+
+| ID | 제목 | 도메인 | 파일 |
+|----|------|--------|------|
+| GL-2026-11-27-01 | arXiv:2611.30588 — SuSi-RAG: 보쉬 생산 라인 하이브리드 그래프 RAG; SuSi(서브그래프 유사성 매칭) + 벡터 하이브리드 검색; 8개월+ 프로덕션 10,664건 Q&A; 답변 정확도 상한 96.25%; Hansi Zhang·Evgeny Kharlamov·Adrian Paschke; Bosch / Freie Universität Berlin; IEEE ICKG 2026; 2026-11-23 | 산업별사례·제조·생산라인·하이브리드그래프RAG·서브그래프유사성·유지보수·보쉬·IEEE-ICKG-2026 | 04-산업별-사례.md (제조·자동차 → 글로벌) |
+
+- **검증 결과**: 1건 5점 자가검증 통과; snippet-verified
+  1. **GL-2026-11-27-01 (arXiv:2611.30588, 2026-11-23)**: "SuSi-RAG: A Hybrid Graph RAG for Equipment Maintenance" — Hansi Zhang, Evgeny Kharlamov, Adrian Paschke 외 (Bosch / Freie Universität Berlin; cs.IR). 보쉬 생산 라인 장비 유지보수 Q&A를 위한 하이브리드 그래프 RAG 시스템. SuSi(Subgraph Similarity) 모듈이 과거 유지보수 기록에서 유사 서브그래프를 그래프+벡터 하이브리드로 검색, 통합 피드백 루프 포함. 8개월+ 프로덕션 10,664건 Q&A. 답변 정확도 상한 96.25% (확인 오류율 3.75%). top-1 검색 61.5%→96.2%, 전문가 품질 44.9%→84.1% (aggregator 보고). IEEE ICKG 2026 DOI:10.1109/ICKG70389.2026.00009. snippet-verified: arxiv.org/abs/2611.30588 + arxiv.org/pdf/2611.30588 + arxiv.org/html/2611.30588 + arcxiv.org/abs/2611.30588 + JyiHUO/arxiv_daily_recommendation_system + Ep11phany/DailyArXiv #411 + syncai.news 7개 이상 독립 출처; 직접 URL 접근 불가. sources.md 중복 없음(2611.30588 미수록 확인). → `04-산업별-사례.md` Cessna 172 항목(arXiv:2608.18465) 뒤에 추가.
+  2. **한국 사례 발굴 경위**: 2026-11-20 ~ 11-27 범위 내 네이버·카카오·토스·LG·SK·KT·우아한형제들·DEVIEW·if(kakao)26·올거나이즈·KTDS ASA 등 15건 이상 타겟 검색 수행. 2개 이상 독립 출처로 검증된 한국 RAG 사례 없음. 루프 #140–#152·#159–#161과 동일한 한국 사례 미발굴 패턴. 목표(최소 1건) 미달.
+
+- `sources.md`에 1개 출처 추가 (## 2026-11-27 섹션 신설, 파일 최상단)
+- `04-산업별-사례.md` GL-2026-11-27-01(SuSi-RAG) 신규 항목 추가 (제조·자동차 → 글로벌)
+- **한국 사례**: 0건 (목표 1건 미달)
+- **글로벌 사례**: 1건
+
 ## 2026-11-26 (일일 루프 #162)
 - **신규 사례 2건** (WebFetch 직접 접근 불가 — arxiv.org·deloitte.com·newsis.com 등 ENOTFOUND, snippet-verified 전건; 한국 사례: 1건 달성)
 
